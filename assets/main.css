@@ -204,3 +204,5 @@ button { cursor: pointer; }
 @media (max-width: 760px) { .card-grid { grid-template-columns: 1fr; } }
 
 .card-specimen--media .card-stack { padding: 16px 0 0; }
+/* Image cards are shown at phone width (360dp), the width of the Material reference, so the 12dp corners read at the same proportion. */
+.card-specimen--media .m3-card { max-width: 360px; margin: 0 auto; }

@@ -67,6 +67,22 @@ Raw data: [`card-samples.json`](card-samples.json). Screenshot: [`card-section.p
   text were inline spans, so "Media card" and its supporting text sat on one line. Both are now
   blocks. Measured: the text starts 4px below the title, as the margin sets.
 
+## 3e. Visible corners and the elevated margin (follow-up)
+
+Two things were reported as still wrong: the image corners did not look rounded, and the
+elevated image card looked padded.
+
+- **Corners.** Pixel sampling at 3x (`card-E-3x.png`) shows the bottom-left corner of the image
+  curving to the card background, so the 12px radius is applied. The corners were hard to see
+  because the demo card was 520px wide. The Material reference card is about 360dp wide, so the
+  12dp radius reads smaller there. The image cards are now shown at 360px wide, and the corners
+  read at the reference's proportion: `docs/card-media-elevated-360.png`.
+- **Elevated margin.** Inside the card the image is flush (0px on the left and top edges, as
+  measured in 3c). The thin light band above the image is the elevated card's level-1 shadow,
+  drawn outside the card edge, together with a half-pixel offset from the card's position.
+  It is not padding. If the band should not show, the media example can use a card without
+  elevation. This is not changed.
+
 ## 3d. Image corners
 
 The Material reference with a headline, subhead and supporting text (fourth reference) rounds
