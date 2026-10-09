@@ -1,0 +1,139 @@
+.m3-button {
+  --button-height: 40px;
+  --button-inline-space: 16px;
+  --button-icon-size: 20px;
+  --button-icon-gap: 8px;
+  --button-type-size: 14px;
+  --button-square-radius: 12px;
+  --button-pressed-radius: 8px;
+  /* A finite radius lets short presses interpolate visibly from the first frame. */
+  --button-round-radius: calc(var(--button-height) / 2);
+  --button-rest-radius: var(--button-round-radius);
+  /* Material DefaultEffects spring, as used by shadcn-m3e transition-shape. */
+  --button-shape-easing: linear(0, .0616, .1912, .3374, .4751, .594, .6916, .7689, .8288, .8743, .9084, .9337, .9523, .9658, .9756, .9826, .9877, .9913, .9939, .9957, .997, .9979, .9985, .999, 1);
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-width: max-content;
+  height: var(--button-height);
+  padding-inline: var(--button-inline-space);
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: var(--button-rest-radius);
+  color: var(--button-foreground);
+  background: var(--button-background);
+  box-shadow: var(--button-elevation, none);
+  font: 600 var(--button-type-size)/1.25 Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .01em;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 200ms cubic-bezier(.2, 0, 0, 1),
+    color 200ms cubic-bezier(.2, 0, 0, 1),
+    border-radius 240ms var(--button-shape-easing),
+    box-shadow 200ms cubic-bezier(.2, 0, 0, 1),
+    transform 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+.m3-button::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: currentColor;
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+.m3-button__content { display: inline-flex; align-items: center; justify-content: center; gap: var(--button-icon-gap); }
+.m3-button__content { position: relative; z-index: 1; }
+.m3-button__ripple {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: var(--ripple-size);
+  height: var(--ripple-size);
+  border-radius: 50%;
+  background: radial-gradient(closest-side, currentColor max(calc(100% - 70px), 65%), transparent 100%);
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: center;
+  transition: opacity 375ms linear;
+  animation: m3-button-ripple-grow 450ms cubic-bezier(.2, 0, 0, 1) forwards;
+}
+.m3-button--pressed .m3-button__ripple {
+  opacity: .10;
+  transition-duration: 105ms;
+  animation: m3-button-ripple-grow 450ms cubic-bezier(.2, 0, 0, 1) forwards, m3-button-ripple-in 105ms linear;
+}
+@keyframes m3-button-ripple-grow {
+  from { transform: translate(var(--ripple-from-x), var(--ripple-from-y)) scale(1); }
+  to { transform: translate(var(--ripple-to-x), var(--ripple-to-y)) scale(var(--ripple-scale)); }
+}
+@keyframes m3-button-ripple-in { from { opacity: 0; } to { opacity: .10; } }
+.m3-button__label { display: inline; }
+.m3-button__icon { display: inline-flex; width: var(--button-icon-size); height: var(--button-icon-size); flex: 0 0 var(--button-icon-size); align-items: center; justify-content: center; font-size: var(--button-icon-size); line-height: 1; }
+
+.m3-button--filled { --button-background: var(--md-sys-color-primary); --button-foreground: var(--md-sys-color-on-primary); }
+.m3-button--elevated { --button-background: var(--md-sys-color-surface-container-low); --button-foreground: var(--md-sys-color-primary); --button-elevation: 0 1px 2px color-mix(in srgb, var(--md-sys-color-shadow) 24%, transparent), 0 1px 3px 1px color-mix(in srgb, var(--md-sys-color-shadow) 14%, transparent); }
+.m3-button--tonal { --button-background: var(--md-sys-color-secondary-container); --button-foreground: var(--md-sys-color-on-secondary-container); }
+.m3-button--outlined { --button-background: transparent; --button-foreground: var(--md-sys-color-on-surface-variant); border-color: var(--md-sys-color-outline-variant); }
+.m3-button--text { --button-background: transparent; --button-foreground: var(--md-sys-color-primary); }
+
+.m3-button--elevated:hover:not(:disabled) { --button-elevation: 0 2px 3px color-mix(in srgb, var(--md-sys-color-shadow) 24%, transparent), 0 1px 5px 2px color-mix(in srgb, var(--md-sys-color-shadow) 14%, transparent); }
+.m3-button--elevated:active:not(:disabled) { --button-elevation: 0 1px 2px color-mix(in srgb, var(--md-sys-color-shadow) 20%, transparent); }
+.m3-button--outlined:hover:not(:disabled) { border-color: var(--md-sys-color-outline); }
+.m3-button--text:hover:not(:disabled) { background: color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent); }
+
+.m3-button:hover:not(:disabled)::before { opacity: .08; }
+.m3-button:focus-visible { outline: 3px solid var(--md-sys-color-primary); outline-offset: 3px; }
+.m3-button:focus-visible::before { opacity: .10; }
+.m3-button:active:not(:disabled),
+.m3-button--pressed:not(:disabled) { border-radius: var(--button-pressed-radius); }
+/* Press feedback comes from the ripple; retain the hover/focus state layer. */
+
+.m3-button--toggle.m3-button--selected { --button-rest-radius: var(--button-square-radius); }
+.m3-button--toggle.m3-button--selected.m3-button--square { --button-rest-radius: var(--button-round-radius); }
+.m3-button--elevated.m3-button--toggle.m3-button--selected,
+.m3-button--filled.m3-button--toggle.m3-button--selected { --button-background: var(--md-sys-color-primary); --button-foreground: var(--md-sys-color-on-primary); }
+.m3-button--tonal.m3-button--toggle.m3-button--selected { --button-background: var(--md-sys-color-secondary); --button-foreground: var(--md-sys-color-on-secondary); }
+.m3-button--outlined.m3-button--toggle.m3-button--selected { --button-background: var(--md-sys-color-inverse-surface); --button-foreground: var(--md-sys-color-inverse-on-surface); border-color: transparent; }
+
+.m3-button--square { --button-rest-radius: var(--button-square-radius); }
+.m3-button--xs { --button-height: 32px; --button-inline-space: 16px; --button-icon-size: 18px; --button-icon-gap: 6px; --button-type-size: 12px; --button-square-radius: 12px; --button-pressed-radius: 8px; }
+.m3-button--s { --button-height: 40px; --button-inline-space: 16px; --button-icon-size: 20px; --button-icon-gap: 8px; --button-type-size: 14px; --button-square-radius: 12px; --button-pressed-radius: 8px; }
+.m3-button--m { --button-height: 56px; --button-inline-space: 24px; --button-icon-size: 24px; --button-icon-gap: 8px; --button-type-size: 16px; --button-square-radius: 16px; --button-pressed-radius: 12px; }
+.m3-button--l { --button-height: 96px; --button-inline-space: 48px; --button-icon-size: 32px; --button-icon-gap: 12px; --button-type-size: 22px; --button-square-radius: 28px; --button-pressed-radius: 16px; }
+.m3-button--xl { --button-height: 136px; --button-inline-space: 48px; --button-icon-size: 40px; --button-icon-gap: 16px; --button-type-size: 28px; --button-square-radius: 28px; --button-pressed-radius: 16px; }
+.m3-button--square.m3-button--l, .m3-button--square.m3-button--xl { --button-square-radius: 28px; }
+.m3-button--outlined.m3-button--l, .m3-button--outlined.m3-button--xl { border-width: 2px; }
+.m3-button.m3-button--pressed:not(:disabled),
+.m3-button.m3-button--round:active:not(:disabled),
+.m3-button.m3-button--square:active:not(:disabled),
+.m3-button.m3-button--toggle:active:not(:disabled) { border-radius: var(--button-pressed-radius); }
+
+.m3-button:disabled { --button-elevation: none; cursor: not-allowed; }
+.m3-button--filled:disabled,
+.m3-button--elevated:disabled,
+.m3-button--tonal:disabled { --button-background: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, var(--md-sys-color-surface)); --button-foreground: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, var(--md-sys-color-surface)); }
+.m3-button--outlined:disabled { --button-foreground: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, var(--md-sys-color-surface)); border-color: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent); }
+.m3-button--text:disabled { --button-foreground: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, var(--md-sys-color-surface)); }
+
+@media (max-width: 760px) {
+  .button-demo-grid { grid-template-columns: 1fr !important; }
+  .variant-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .m3-button--l, .m3-button--xl { --button-inline-space: 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m3-button, .m3-button::before { transition-duration: .01ms; }
+  .m3-button__ripple, .m3-button--pressed .m3-button__ripple { animation-duration: .01ms; transition-duration: .01ms; }
+}

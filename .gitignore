@@ -1,0 +1,7 @@
+/target/
+/.idea/
+/.dx/
+.DS_Store
+.env
+.env.*
+!.env.example
