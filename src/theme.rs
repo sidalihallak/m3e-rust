@@ -65,6 +65,7 @@ pub fn css_variables(scheme: &Scheme) -> String {
         ("surface-container-low", scheme.surface_container_low),
         ("surface-container", scheme.surface_container),
         ("surface-container-high", scheme.surface_container_high),
+        ("surface-container-highest", scheme.surface_container_highest),
         ("outline", scheme.outline),
         ("outline-variant", scheme.outline_variant),
         ("inverse-surface", scheme.inverse_surface),

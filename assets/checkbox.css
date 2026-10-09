@@ -1,0 +1,139 @@
+/*
+ * M3 checkbox. Copy with src/components/checkbox.rs.
+ * Sources: Material Web tokens md.comp.checkbox (18dp container, 2px
+ * outline, 2dp corners, 40dp state layer, 18dp icon); shadcn-m3e checkbox.tsx
+ * for the stroke-draw check mark.
+ */
+.m3-checkbox {
+  --checkbox-outline: var(--md-sys-color-on-surface-variant);
+  --checkbox-container: transparent;
+  --checkbox-icon: var(--md-sys-color-on-primary);
+  --checkbox-state: var(--md-sys-color-on-surface);
+  --checkbox-state-opacity: 0;
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* The 40dp circular state layer, centred on the 18dp container. */
+.m3-checkbox__state {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--checkbox-state);
+  opacity: var(--checkbox-state-opacity);
+  pointer-events: none;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1), background-color 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+.m3-checkbox__box {
+  position: relative;
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--checkbox-outline);
+  border-radius: 2px;
+  background: var(--checkbox-container);
+  color: var(--checkbox-icon);
+  transition:
+    background-color 200ms cubic-bezier(.2, 0, 0, 1),
+    border-color 200ms cubic-bezier(.2, 0, 0, 1),
+    color 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+/* The mark spans the full 18dp box, including the 2px border. */
+.m3-checkbox__mark {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: square;
+  overflow: visible;
+}
+.m3-checkbox__check {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 240ms cubic-bezier(.05, .7, .1, 1);
+}
+.m3-checkbox__dash {
+  opacity: 0;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+/* Selected and indeterminate share the filled container. */
+.m3-checkbox--checked {
+  --checkbox-outline: var(--md-sys-color-primary);
+  --checkbox-container: var(--md-sys-color-primary);
+  --checkbox-icon: var(--md-sys-color-on-primary);
+  --checkbox-state: var(--md-sys-color-primary);
+}
+.m3-checkbox--checked .m3-checkbox__check { stroke-dashoffset: 0; }
+.m3-checkbox--indeterminate .m3-checkbox__check { stroke-dashoffset: 1; }
+.m3-checkbox--indeterminate .m3-checkbox__dash { opacity: 1; }
+
+/* Hover, focus and pressed. Hover and focus use state-layer opacity 0.08 and 0.10. */
+.m3-checkbox:not(:disabled):not(.m3-checkbox--checked):hover {
+  --checkbox-outline: var(--md-sys-color-on-surface);
+  --checkbox-state-opacity: .08;
+}
+.m3-checkbox:not(:disabled):hover { --checkbox-state-opacity: .08; }
+.m3-checkbox:not(:disabled):focus-visible { --checkbox-state-opacity: .10; }
+.m3-checkbox--pressed:not(:disabled) { --checkbox-state-opacity: .10; }
+.m3-checkbox--pressed:not(:disabled):not(.m3-checkbox--checked) {
+  --checkbox-outline: var(--md-sys-color-on-surface);
+  --checkbox-state: var(--md-sys-color-primary);
+}
+.m3-checkbox--pressed:not(:disabled).m3-checkbox--checked {
+  --checkbox-state: var(--md-sys-color-on-surface);
+}
+
+.m3-checkbox:focus-visible .m3-checkbox__box {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 11px;
+}
+
+/* Error: Material Web sets the outline and container to the error role. */
+.m3-checkbox--error:not(:disabled) {
+  --checkbox-outline: var(--md-sys-color-error);
+  --checkbox-state: var(--md-sys-color-error);
+}
+.m3-checkbox--error:not(:disabled).m3-checkbox--checked {
+  --checkbox-outline: var(--md-sys-color-error);
+  --checkbox-container: var(--md-sys-color-error);
+  --checkbox-icon: var(--md-sys-color-on-error);
+}
+
+/* Disabled: 38% outline and container, no state layer. */
+.m3-checkbox--disabled {
+  --checkbox-outline: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  --checkbox-state-opacity: 0;
+  cursor: not-allowed;
+}
+.m3-checkbox--checked.m3-checkbox--disabled {
+  --checkbox-container: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  --checkbox-outline: transparent;
+  --checkbox-icon: var(--md-sys-color-surface);
+}
+
+.m3-checkbox:focus-visible { outline: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .m3-checkbox,
+  .m3-checkbox *,
+  .m3-checkbox__state {
+    transition-duration: .01ms !important;
+  }
+}

@@ -1,3 +1,5 @@
 pub mod components;
 
-pub use components::{Button, ButtonShape, ButtonSize, ButtonType, ButtonVariant};
+pub use components::{
+    Button, ButtonShape, ButtonSize, ButtonType, ButtonVariant, Checkbox, Switch,
+};

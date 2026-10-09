@@ -1,0 +1,161 @@
+/*
+ * M3 switch. Copy with src/components/switch.rs.
+ * Sources: Material Web tokens md.comp.switch (52×32 track, 2px outline,
+ * 16/24/28dp handles, 40dp state layer); shadcn-m3e switch.tsx for the
+ * spatial spring that moves and resizes the handle.
+ */
+.m3-switch {
+  /* Material DefaultEffects spring, as used by shadcn-m3e transition-shape. */
+  --switch-spring: linear(0, .0616, .1912, .3374, .4751, .594, .6916, .7689, .8288, .8743, .9084, .9337, .9523, .9658, .9756, .9826, .9877, .9913, .9939, .9957, .997, .9979, .9985, .999, 1);
+  --switch-track: var(--md-sys-color-surface-container-highest);
+  --switch-outline: var(--md-sys-color-outline);
+  --switch-handle: var(--md-sys-color-outline);
+  --switch-handle-active: var(--md-sys-color-on-surface-variant);
+  --switch-handle-size: 16px;
+  --switch-handle-left: 6px;
+  --switch-icon-color: var(--md-sys-color-surface-container-highest);
+  --switch-state: var(--md-sys-color-on-surface);
+  --switch-state-opacity: 0;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 52px;
+  height: 32px;
+  padding: 0;
+  border: 2px solid var(--switch-outline);
+  border-radius: 16px;
+  background: var(--switch-track);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 200ms cubic-bezier(.2, 0, 0, 1),
+    border-color 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+/* 48dp touch target around the 32dp track. */
+.m3-switch::after {
+  position: absolute;
+  inset: -10px 0;
+  content: "";
+}
+
+.m3-switch__handle {
+  position: absolute;
+  top: 50%;
+  left: var(--switch-handle-left);
+  display: flex;
+  z-index: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--switch-handle-size);
+  height: var(--switch-handle-size);
+  translate: 0 -50%;
+  isolation: isolate;
+  border-radius: 50%;
+  color: var(--switch-icon-color);
+  background: var(--switch-handle);
+  transition:
+    left 240ms var(--switch-spring),
+    width 240ms var(--switch-spring),
+    height 240ms var(--switch-spring),
+    background-color 200ms cubic-bezier(.2, 0, 0, 1),
+    color 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+/* The 40dp state layer stays centred on the handle as it resizes. */
+.m3-switch__handle::before {
+  position: absolute;
+  z-index: -1;
+  inset: calc((40px - var(--switch-handle-size)) / -2);
+  border-radius: 50%;
+  background: var(--switch-state);
+  content: "";
+  opacity: var(--switch-state-opacity);
+  pointer-events: none;
+  transition:
+    opacity 200ms cubic-bezier(.2, 0, 0, 1),
+    inset 240ms var(--switch-spring);
+}
+
+.m3-switch__icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+.m3-switch__icon > * { width: 16px; height: 16px; }
+.m3-switch__icon--checked { opacity: 0; }
+.m3-switch__icon--unchecked { opacity: 1; }
+.m3-switch--checked .m3-switch__icon--checked { opacity: 1; }
+.m3-switch--checked .m3-switch__icon--unchecked { opacity: 0; }
+
+/* Unselected: 16dp handle, 6px from the padding edge (8px from the outer edge). */
+/* With an unchecked icon the handle is 24dp, centred in the track. */
+.m3-switch--unchecked-icon { --switch-handle-size: 24px; --switch-handle-left: 2px; }
+
+/* Selected: 24dp handle at the end of the track. */
+.m3-switch--checked {
+  --switch-track: var(--md-sys-color-primary);
+  --switch-outline: var(--md-sys-color-primary);
+  --switch-handle: var(--md-sys-color-on-primary);
+  --switch-handle-active: var(--md-sys-color-primary-container);
+  --switch-handle-size: 24px;
+  --switch-handle-left: 22px;
+  --switch-icon-color: var(--md-sys-color-primary);
+  --switch-state: var(--md-sys-color-primary);
+}
+
+/* Pressed: the handle grows to 28dp. */
+.m3-switch--pressed {
+  --switch-handle-size: 28px;
+  --switch-handle-left: 0px;
+}
+.m3-switch--checked.m3-switch--pressed { --switch-handle-left: 20px; }
+
+/* Hover, focus and pressed share the handle colour and state layer tokens. */
+.m3-switch:not(:disabled):hover { --switch-state-opacity: .08; }
+.m3-switch:not(:disabled):focus-visible { --switch-state-opacity: .10; }
+.m3-switch--pressed:not(:disabled) { --switch-state-opacity: .10; }
+.m3-switch:not(:disabled):hover .m3-switch__handle,
+.m3-switch:not(:disabled):focus-visible .m3-switch__handle,
+.m3-switch--pressed:not(:disabled) .m3-switch__handle {
+  background: var(--switch-handle-active);
+}
+
+.m3-switch:focus-visible {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 2px;
+}
+
+/* Error is an upstream extension; Material Web defines no switch error tokens. */
+.m3-switch--error { --switch-outline: var(--md-sys-color-error); }
+
+/* Disabled: 12% track and outline, 38% handle and icon. */
+.m3-switch--disabled {
+  --switch-track: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 12%, transparent);
+  --switch-outline: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent);
+  --switch-handle: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  --switch-icon-color: color-mix(in srgb, var(--md-sys-color-surface-container-highest) 38%, transparent);
+  cursor: not-allowed;
+}
+.m3-switch--disabled .m3-switch__handle::before { opacity: 0; }
+.m3-switch--checked.m3-switch--disabled {
+  --switch-track: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent);
+  --switch-outline: var(--switch-track);
+  --switch-handle: var(--md-sys-color-surface);
+  --switch-icon-color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m3-switch,
+  .m3-switch *,
+  .m3-switch__handle::before {
+    transition-duration: .01ms !important;
+  }
+}

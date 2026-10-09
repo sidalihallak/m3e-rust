@@ -1,5 +1,5 @@
 use dioxus::prelude::*;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Switch};
 
 mod theme;
 
@@ -20,6 +20,36 @@ fn CreateButton() -> Element {
     }
 }"#;
 
+const SWITCH_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::Switch;
+
+#[component]
+fn NotificationsToggle() -> Element {
+    let mut enabled = use_signal(|| false);
+    rsx! {
+        Switch {
+            checked: enabled(),
+            aria_label: Some("Enable notifications".to_string()),
+            onchange: move |value| enabled.set(value),
+        }
+    }
+}"#;
+
+const CHECKBOX_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::Checkbox;
+
+#[component]
+fn TermsCheckbox() -> Element {
+    let mut accepted = use_signal(|| false);
+    rsx! {
+        Checkbox {
+            checked: accepted(),
+            aria_label: Some("Accept terms".to_string()),
+            onchange: move |value| accepted.set(value),
+        }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -29,6 +59,12 @@ fn App() -> Element {
     let mut seed = use_signal(|| theme::SEEDS[0].1);
     let mut dark = use_signal(|| false);
     let mut selected = use_signal(|| false);
+    let mut switch_on = use_signal(|| true);
+    let mut switch_icon_on = use_signal(|| false);
+    let mut check_a = use_signal(|| false);
+    let mut check_b = use_signal(|| true);
+    // (indeterminate, checked): the mixed box resolves to checked when activated.
+    let mut check_mixed = use_signal(|| (true, false));
     let theme = theme::ThemePreview::from_seed(seed());
     let scheme = if dark() {
         theme.dark
@@ -36,12 +72,13 @@ fn App() -> Element {
         theme.light
     };
     let theme_style = theme::css_variables(&scheme);
-    let mut copied_code = use_signal(|| false);
 
     rsx! {
         document::Stylesheet { href: asset!("/assets/main.css") }
         document::Stylesheet { href: asset!("/assets/tailwind.css") }
         document::Stylesheet { href: asset!("/assets/button.css") }
+        document::Stylesheet { href: asset!("/assets/switch.css") }
+        document::Stylesheet { href: asset!("/assets/checkbox.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -153,30 +190,112 @@ fn App() -> Element {
                         }
                     }
                 }
-                article { class: "code-card",
-                    div { class: "code-card-header",
-                        div {
-                            p { class: "eyebrow", "COPY INTO YOUR DIOXUS APP" }
-                            h3 { "Button usage" }
+                CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Button usage", code: BUTTON_USAGE }
+            }
+
+            section { class: "wrap roles-section control-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "03 — SELECTION CONTROLS" }
+                        h2 { "Switch and checkbox" }
+                        p { class: "section-description", "Native buttons with switch and checkbox roles. Space toggles them from the keyboard; the pressed state follows pointer and Space input." }
+                    }
+                    span { class: "token-note", "M3 · MATERIAL WEB TOKENS" }
+                }
+                div { class: "control-grid",
+                    article { class: "demo-card control-specimen",
+                        div { class: "card-topline", span { "SWITCH" } span { class: "component-index", "A" } }
+                        div { class: "control-row",
+                            span { class: "control-label", if switch_on() { "On" } else { "Off" } }
+                            Switch { checked: switch_on(), aria_label: Some("Notifications".to_string()), onchange: move |value| switch_on.set(value) }
                         }
-                        button {
-                            class: "copy-code",
-                            aria_label: if copied_code() { "Code copied" } else { "Copy Rust code" },
-                            onclick: move |_| async move {
-                                let script = format!(
-                                    "await navigator.clipboard.writeText({:?}); return true;",
-                                    BUTTON_USAGE
-                                );
-                                copied_code.set(document::eval(&script).join::<bool>().await.unwrap_or(false));
-                            },
-                            span { class: "copy-icon", if copied_code() { "✓" } else { "▢" } }
-                            if copied_code() { "Copied" } else { "Copy code" }
+                        div { class: "control-row",
+                            span { class: "control-label", "With icons" }
+                            Switch {
+                                checked: switch_icon_on(),
+                                aria_label: Some("Wi-Fi".to_string()),
+                                checked_icon: Some(rsx! { span { "✓" } }),
+                                unchecked_icon: Some(rsx! { span { "×" } }),
+                                onchange: move |value| switch_icon_on.set(value),
+                            }
+                        }
+                        div { class: "control-row",
+                            span { class: "control-label", "Disabled" }
+                            div { class: "control-pair",
+                                Switch { disabled: true, aria_label: Some("Disabled off".to_string()) }
+                                Switch { disabled: true, checked: true, aria_label: Some("Disabled on".to_string()) }
+                            }
+                        }
+                        div { class: "control-row",
+                            span { class: "control-label", "Error" }
+                            Switch { error: true, aria_label: Some("Error".to_string()) }
                         }
                     }
-                    pre { class: "code-sample", code { "{BUTTON_USAGE}" } }
+                    article { class: "demo-card control-specimen",
+                        div { class: "card-topline", span { "CHECKBOX" } span { class: "component-index", "B" } }
+                        div { class: "control-row",
+                            span { class: "control-label", "Unchecked" }
+                            Checkbox { checked: check_a(), aria_label: Some("Unchecked".to_string()), onchange: move |value| check_a.set(value) }
+                        }
+                        div { class: "control-row",
+                            span { class: "control-label", "Checked" }
+                            Checkbox { checked: check_b(), aria_label: Some("Checked".to_string()), onchange: move |value| check_b.set(value) }
+                        }
+                        div { class: "control-row",
+                            span { class: "control-label", "Indeterminate" }
+                            Checkbox {
+                                checked: check_mixed().1,
+                                indeterminate: check_mixed().0,
+                                aria_label: Some("Select all".to_string()),
+                                onchange: move |value| check_mixed.set((false, value)),
+                            }
+                        }
+                        div { class: "control-row",
+                            span { class: "control-label", "Disabled" }
+                            div { class: "control-pair",
+                                Checkbox { disabled: true, aria_label: Some("Disabled unchecked".to_string()) }
+                                Checkbox { disabled: true, checked: true, aria_label: Some("Disabled checked".to_string()) }
+                            }
+                        }
+                        div { class: "control-row",
+                            span { class: "control-label", "Error" }
+                            Checkbox { error: true, aria_label: Some("Error".to_string()) }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Switch usage", code: SWITCH_USAGE }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Checkbox usage", code: CHECKBOX_USAGE }
                 }
             }
-            footer { class: "wrap footer", span { "M3E · BUTTON COMPONENT PILOT" } span { "Aligned with Material 3 Expressive button guidance" } }
+            footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
+        }
+    }
+}
+
+#[component]
+fn CodeCard(eyebrow: &'static str, title: &'static str, code: &'static str) -> Element {
+    let mut copied = use_signal(|| false);
+    rsx! {
+        article { class: "code-card",
+            div { class: "code-card-header",
+                div {
+                    p { class: "eyebrow", "{eyebrow}" }
+                    h3 { "{title}" }
+                }
+                button {
+                    class: "copy-code",
+                    aria_label: if copied() { "Code copied" } else { "Copy Rust code" },
+                    onclick: move |_| async move {
+                        let script = format!(
+                            "await navigator.clipboard.writeText({:?}); return true;",
+                            code
+                        );
+                        copied.set(document::eval(&script).join::<bool>().await.unwrap_or(false));
+                    },
+                    span { class: "copy-icon", if copied() { "✓" } else { "▢" } }
+                    if copied() { "Copied" } else { "Copy code" }
+                }
+            }
+            pre { class: "code-sample", code { "{code}" } }
         }
     }
 }
