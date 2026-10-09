@@ -1,0 +1,72 @@
+{
+  "dot": [
+    {
+      "text": "",
+      "role": "img",
+      "label": "New notification",
+      "w": 6,
+      "h": 6,
+      "bg": "rgb(186, 26, 26)",
+      "color": "rgb(255, 255, 255)",
+      "font": "16px / 24px / 400",
+      "radius": "999px",
+      "dxFromIconRight": 0,
+      "dyFromIconTop": 0
+    },
+    {
+      "text": "",
+      "role": "img",
+      "label": "New notification",
+      "w": 6,
+      "h": 6,
+      "bg": "rgb(186, 26, 26)",
+      "color": "rgb(255, 255, 255)",
+      "font": "16px / 24px / 400",
+      "radius": "999px",
+      "dxFromIconRight": 0,
+      "dyFromIconTop": 0
+    }
+  ],
+  "counts": [
+    {
+      "text": "3",
+      "role": "status",
+      "label": "3 notifications",
+      "w": 16,
+      "h": 16,
+      "bg": "rgb(186, 26, 26)",
+      "color": "rgb(255, 255, 255)",
+      "font": "11px / 16px / 500",
+      "radius": "999px",
+      "dxFromIconRight": 8,
+      "dyFromIconTop": -6
+    },
+    {
+      "text": "99",
+      "role": "status",
+      "label": "99 notifications",
+      "w": 22.86,
+      "h": 16,
+      "bg": "rgb(186, 26, 26)",
+      "color": "rgb(255, 255, 255)",
+      "font": "11px / 16px / 500",
+      "radius": "999px",
+      "dxFromIconRight": 8,
+      "dyFromIconTop": -6
+    },
+    {
+      "text": "999+",
+      "role": "status",
+      "label": "999+ notifications",
+      "w": 38.14,
+      "h": 16,
+      "bg": "rgb(186, 26, 26)",
+      "color": "rgb(255, 255, 255)",
+      "font": "11px / 16px / 500",
+      "radius": "999px",
+      "dxFromIconRight": 8,
+      "dyFromIconTop": -6
+    }
+  ],
+  "pageErrors": []
+}

@@ -71,6 +71,8 @@ Segmented buttons are verified in [`docs/segmented-button-verification.md`](docs
 
 Tabs are verified in [`docs/tabs-verification.md`](docs/tabs-verification.md).
 
+Notification badges are verified in [`docs/badge-verification.md`](docs/badge-verification.md).
+
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
 

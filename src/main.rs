@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, BadgeAnchor, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -264,6 +264,21 @@ fn TripTabs() -> Element {
     }
 }"#;
 
+const BADGE_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{BadgeAnchor, Icon, NotificationBadge};
+use m3e_rust_ui::icons;
+
+#[component]
+fn Inbox(unread: u32) -> Element {
+    rsx! {
+        BadgeAnchor {
+            Icon { icon: icons::INFO }
+            // Omit `count` for the dot; a count above 999 shows as 999+.
+            NotificationBadge { count: unread }
+        }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -323,6 +338,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/slider.css") }
         document::Stylesheet { href: asset!("/assets/segmented-button.css") }
         document::Stylesheet { href: asset!("/assets/tabs.css") }
+        document::Stylesheet { href: asset!("/assets/badge.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -971,6 +987,34 @@ fn App() -> Element {
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Tabs usage", code: TABS_USAGE }
+                }
+            }
+            section { class: "wrap roles-section badge-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "13 — BADGE" }
+                        h2 { "Notification badges" }
+                        p { class: "section-description", "A 6dp error dot, or a 16dp count pill with label-small text. Counts above 999 show as 999+. Place the badge over an icon with a BadgeAnchor." }
+                    }
+                    span { class: "token-note", "MATERIAL WEB TOKENS" }
+                }
+                div { class: "badge-grid",
+                    article { class: "demo-card badge-specimen",
+                        div { class: "card-topline", span { "DOT" } span { class: "component-index", "A" } }
+                        div { class: "badge-row",
+                            BadgeAnchor { Icon { icon: icons::FAVORITE } NotificationBadge {} }
+                            BadgeAnchor { Icon { icon: icons::INFO } NotificationBadge {} }
+                        }
+                    }
+                    article { class: "demo-card badge-specimen",
+                        div { class: "card-topline", span { "COUNT" } span { class: "component-index", "B" } }
+                        div { class: "badge-row",
+                            BadgeAnchor { Icon { icon: icons::FAVORITE } NotificationBadge { count: 3 } }
+                            BadgeAnchor { Icon { icon: icons::INFO } NotificationBadge { count: 99 } }
+                            BadgeAnchor { Icon { icon: icons::ADD } NotificationBadge { count: 1000 } }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Badge usage", code: BADGE_USAGE }
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }

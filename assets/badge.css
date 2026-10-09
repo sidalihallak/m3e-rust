@@ -1,0 +1,40 @@
+/*
+ * M3 notification badge. Copy with src/components/badge.rs.
+ * Sources: Material Web badge tokens (revision 47adb65): 6dp error dot, 16dp large
+ * badge, error and on-error colours, full corner shape, and the label-small text
+ * (11/16, weight 500, 0.5px tracking) for counts. The spec has no motion for badges.
+ * The top-right offset of the badge from its anchor is not in the tokens: it is a
+ * copyable choice, set in `.m3-badge-anchor .m3-badge` below.
+ */
+.m3-badge-anchor {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.m3-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 999px;
+  background: var(--md-sys-color-error);
+  color: var(--md-sys-color-on-error);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.m3-badge--dot { width: 6px; height: 6px; }
+.m3-badge--large {
+  height: 16px;
+  min-width: 16px;
+  padding: 0 4px;
+  font: 500 11px/16px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .5px;
+}
+
+/* Offset from the anchor's top-right corner, so the badge overlaps the icon's corner. */
+.m3-badge-anchor .m3-badge--dot { top: 0; right: 0; }
+.m3-badge-anchor .m3-badge--large { top: -6px; right: -8px; }

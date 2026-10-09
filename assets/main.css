@@ -188,3 +188,10 @@ button { cursor: pointer; }
 .tabs-panel { margin: 0; color: var(--md-sys-color-on-surface-variant); font: 400 14px/20px Inter, ui-sans-serif, system-ui, sans-serif; }
 .tabs-grid .code-card { grid-column: 1 / -1; }
 @media (max-width: 760px) { .tabs-grid { grid-template-columns: 1fr; } }
+
+.badge-section { min-width: 0; }
+.badge-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.badge-specimen { min-width: 0; }
+.badge-row { display: flex; align-items: center; gap: 32px; padding: 24px 16px 16px; }
+.badge-grid .code-card { grid-column: 1 / -1; }
+@media (max-width: 760px) { .badge-grid { grid-template-columns: 1fr; } }

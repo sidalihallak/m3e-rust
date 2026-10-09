@@ -1,3 +1,4 @@
+pub mod badge;
 pub mod button;
 pub mod chip;
 pub mod checkbox;
@@ -14,6 +15,7 @@ pub mod slider;
 pub mod switch;
 pub mod tabs;
 
+pub use badge::{BadgeAnchor, NotificationBadge};
 pub use button::{Button, ButtonShape, ButtonSize, ButtonType, ButtonVariant};
 pub use chip::{Chip, ChipVariant};
 pub use checkbox::Checkbox;
