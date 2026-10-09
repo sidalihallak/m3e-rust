@@ -30,6 +30,7 @@
   color: var(--fab-icon);
   background: var(--fab-container);
   box-shadow: var(--fab-shadow);
+  overflow: hidden;
   cursor: pointer;
   white-space: nowrap;
   -webkit-tap-highlight-color: transparent;
@@ -55,6 +56,35 @@
   position: relative;
   z-index: 1;
 }
+
+/* Ripple from the pointer, with the Button pilot's timings: growth 450ms
+   standard easing, fade-in 105ms linear while pressed, fade-out 375ms after
+   release. The pressed opacity is 0.10. */
+.m3-fab__ripple {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: var(--ripple-size);
+  height: var(--ripple-size);
+  border-radius: 50%;
+  background: radial-gradient(closest-side, currentColor max(calc(100% - 70px), 65%), transparent 100%);
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: center;
+  transition: opacity 375ms linear;
+  animation: m3-fab-ripple-grow 450ms cubic-bezier(.2, 0, 0, 1) forwards;
+}
+.m3-fab.m3-fab--pressed .m3-fab__ripple {
+  opacity: .10;
+  transition-duration: 105ms;
+  animation: m3-fab-ripple-grow 450ms cubic-bezier(.2, 0, 0, 1) forwards, m3-fab-ripple-in 105ms linear;
+}
+@keyframes m3-fab-ripple-grow {
+  from { transform: translate(var(--ripple-from-x), var(--ripple-from-y)) scale(1); }
+  to { transform: translate(var(--ripple-to-x), var(--ripple-to-y)) scale(var(--ripple-scale)); }
+}
+@keyframes m3-fab-ripple-in { from { opacity: 0; } to { opacity: .10; } }
 
 /* Sizes. */
 .m3-fab--small { --fab-size: 40px; --fab-radius: 12px; --fab-icon-size: 24px; }
