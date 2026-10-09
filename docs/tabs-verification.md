@@ -32,7 +32,7 @@ Android Chrome has not been tested.
 | Tab height and inset | 40px with 4px vertical margin (56px with icon) | Tokens |
 | Label | title-small, 14/20, weight 500 | Tokens |
 | Icon | 24px, above the label when the tabs have icons | Tokens |
-| Primary indicator | 3px, top radii 3px, width max(24px, tab − 32px), centred in the tab | Tokens and upstream |
+| Primary indicator | 3px, top radii 3px, the width of the selected label (minimum 24px), centred under the label | Material primary tab reference (supplied screenshot) |
 | Secondary indicator | 2px, full tab width | Secondary tokens |
 | Indicator motion | Left and width, 360ms expressive fast spatial spring | Upstream duration; kit curve |
 | Selected label | Primary (primary variant); on-surface (secondary variant) | Tokens |
@@ -45,16 +45,16 @@ Android Chrome has not been tested.
 
 ## 3. Input, state and platform matrix
 
-Raw data: [`tabs-samples.json`](tabs-samples.json). Screenshot: [`tabs-primary.png`](tabs-primary.png).
+Raw data: [`tabs-samples.json`](tabs-samples.json). Screenshot: [`tabs-primary.png`](tabs-primary.png), taken after the fix.
 
 | Check | Result |
 | --- | --- |
 | Tab widths, 3 tabs in a 504px bar | 168px each, equal |
 | Bar height, plain / icon tabs | 48px / 64px |
 | Icon size and tab height (icon tabs) | 24px; 56px |
-| Primary indicator, initial | left 16px, width 136px; offset 0px from the expected position |
-| Indicator mid-slide (90ms after click) | 185.6px, between 16px and 184px: it moves rather than jumping |
-| Indicator after click on Hotels (790ms) | left 184px, width 136px; offset 0px |
+| Primary indicator, initial | left 158px, width 45px; within 0.4px of the label's left edge and width |
+| Indicator mid-slide (90ms after click) | 524.6px, moving from 158px toward 521px; it overshoots by about 3px from the expressive spring before it settles |
+| Indicator after click on Hotels (790ms) | left 521px, width 43px; within 0.4px of the label |
 | Mouse click selects | Hotels selected, Flights unselected |
 | Press and hold (150ms) on an unselected tab | State layer 0.10; not selected while held |
 | Release after press | Selected |
@@ -73,6 +73,11 @@ Raw data: [`tabs-samples.json`](tabs-samples.json). Screenshot: [`tabs-primary.p
 | Page errors | 0 |
 
 ## 4. Diagnosed defects
+
+- **Primary indicator spanned the tab.** The first version used the upstream shadcn-m3e
+  rule (tab width minus 32dp). The Material primary tab reference shows the indicator under
+  the label only. The indicator now uses the label's measured width, with the 24dp minimum.
+  The secondary indicator still spans the full tab, as the reference shows.
 
 - **Indicator slid in from the left edge on mount.** The indicator is hidden until the script
   has placed it. The list's `data-ready` attribute then enables the transition, so the first

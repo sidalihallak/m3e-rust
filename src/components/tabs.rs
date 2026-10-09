@@ -120,7 +120,7 @@ pub fn Tabs(
     }
 }
 
-/// Places the indicator under the selected tab, then keeps it in place. The
+/// Places the indicator under the selected label, then keeps it in place. The
 /// list's `data-ready` attribute reveals the indicator after the first placement,
 /// so it does not slide in from the left edge on mount.
 fn indicator_script(id: &str) -> String {
@@ -131,8 +131,12 @@ if (!list) return false;
 const place = () => {{
   const tab = list.querySelector('[aria-selected="true"]');
   if (!tab) return;
+  const label = tab.querySelector(".m3-tabs__label");
   list.style.setProperty("--tabs-left", tab.offsetLeft + "px");
   list.style.setProperty("--tabs-width", tab.offsetWidth + "px");
+  // The tab is positioned, so the label's offsetLeft is relative to the tab.
+  list.style.setProperty("--tabs-label-left", tab.offsetLeft + label.offsetLeft + "px");
+  list.style.setProperty("--tabs-label-width", label.offsetWidth + "px");
 }};
 place();
 list.setAttribute("data-ready", "");

@@ -5,48 +5,54 @@
       {
         "label": "Flights",
         "left": 0,
-        "w": 168,
+        "w": 362,
         "h": 40,
+        "labelLeft": 158.34,
+        "labelW": 45.3,
         "sel": "true",
         "tabindex": "0",
         "color": "rgb(101, 85, 143)"
       },
       {
         "label": "Hotels",
-        "left": 168,
-        "w": 168,
+        "left": 362,
+        "w": 362,
         "h": 40,
+        "labelLeft": 521.3,
+        "labelW": 43.41,
         "sel": "false",
         "tabindex": "-1",
         "color": "rgb(73, 69, 78)"
       },
       {
         "label": "Cars",
-        "left": 336,
-        "w": 168,
+        "left": 724,
+        "w": 362,
         "h": 40,
+        "labelLeft": 889.2,
+        "labelW": 31.58,
         "sel": "false",
         "tabindex": "-1",
         "color": "rgb(73, 69, 78)"
       }
     ],
     "ind": {
-      "left": 16,
-      "w": 136,
+      "left": 158,
+      "w": 45,
       "h": 3
     }
   },
   "A_expectedSelected": {
-    "left": 16,
-    "w": 136
+    "left": 158.34,
+    "w": 45.3
   },
   "A_indicatorOffset": {
-    "left": 0,
-    "w": 0
+    "left": -0.34,
+    "w": -0.3
   },
   "A_midSlide": {
-    "left": 185.63,
-    "w": 136,
+    "left": 524.61,
+    "w": 42.97,
     "h": 3
   },
   "A_afterClick": {
@@ -55,44 +61,50 @@
       {
         "label": "Flights",
         "left": 0,
-        "w": 168,
+        "w": 362,
         "h": 40,
+        "labelLeft": 158.34,
+        "labelW": 45.3,
         "sel": "false",
         "tabindex": "-1",
         "color": "rgb(73, 69, 78)"
       },
       {
         "label": "Hotels",
-        "left": 168,
-        "w": 168,
+        "left": 362,
+        "w": 362,
         "h": 40,
+        "labelLeft": 521.3,
+        "labelW": 43.41,
         "sel": "true",
         "tabindex": "0",
         "color": "rgb(101, 85, 143)"
       },
       {
         "label": "Cars",
-        "left": 336,
-        "w": 168,
+        "left": 724,
+        "w": 362,
         "h": 40,
+        "labelLeft": 889.2,
+        "labelW": 31.58,
         "sel": "false",
         "tabindex": "-1",
         "color": "rgb(73, 69, 78)"
       }
     ],
     "ind": {
-      "left": 184,
-      "w": 136,
+      "left": 521,
+      "w": 43,
       "h": 3
     }
   },
   "A_afterClickExpected": {
-    "left": 184,
-    "w": 136
+    "left": 521.3,
+    "w": 43.41
   },
   "A_afterClickOffset": {
-    "left": 0,
-    "w": 0
+    "left": -0.3,
+    "w": -0.41
   },
   "keyRight": {
     "selected": [
@@ -142,7 +154,7 @@
   "selectedColor": "rgb(101, 85, 143)",
   "unselectedColor": "rgb(73, 69, 78)",
   "hoverOpacity": "0.08",
-  "heldOpacity": "0.0995101",
+  "heldOpacity": "0.0990692",
   "heldSelectedDuringPress": "false",
   "afterPressSelected": "true",
   "B": {
@@ -151,34 +163,40 @@
       {
         "label": "Favourites",
         "left": 0,
-        "w": 168,
+        "w": 362,
         "h": 56,
+        "labelLeft": 145.59,
+        "labelW": 70.8,
         "sel": "false",
         "tabindex": "-1",
         "color": "rgb(73, 69, 78)"
       },
       {
         "label": "Details",
-        "left": 168,
-        "w": 168,
+        "left": 362,
+        "w": 362,
         "h": 56,
+        "labelLeft": 519.8,
+        "labelW": 46.41,
         "sel": "true",
         "tabindex": "0",
         "color": "rgb(101, 85, 143)"
       },
       {
         "label": "Add",
-        "left": 336,
-        "w": 168,
+        "left": 724,
+        "w": 362,
         "h": 56,
+        "labelLeft": 891.28,
+        "labelW": 27.44,
         "sel": "false",
         "tabindex": "-1",
         "color": "rgb(73, 69, 78)"
       }
     ],
     "ind": {
-      "left": 184,
-      "w": 136,
+      "left": 520,
+      "w": 46,
       "h": 3
     }
   },
@@ -189,26 +207,32 @@
       {
         "label": "Overview",
         "left": 0,
-        "w": 168,
+        "w": 362,
         "h": 40,
+        "labelLeft": 148.83,
+        "labelW": 64.34,
         "sel": "true",
         "tabindex": "0",
         "color": "rgb(29, 27, 32)"
       },
       {
         "label": "Specs",
-        "left": 168,
-        "w": 168,
+        "left": 362,
+        "w": 362,
         "h": 40,
+        "labelLeft": 521.97,
+        "labelW": 42.05,
         "sel": "false",
         "tabindex": "-1",
         "color": "rgb(73, 69, 78)"
       },
       {
         "label": "Reviews",
-        "left": 336,
-        "w": 168,
+        "left": 724,
+        "w": 362,
         "h": 40,
+        "labelLeft": 876.88,
+        "labelW": 56.25,
         "sel": "false",
         "tabindex": "-1",
         "color": "color(srgb 0.113725 0.105882 0.12549 / 0.38)"
@@ -216,13 +240,13 @@
     ],
     "ind": {
       "left": 0,
-      "w": 168,
+      "w": 362,
       "h": 2
     }
   },
   "C_expectedSelected": {
     "left": 0,
-    "w": 168
+    "w": 362
   },
   "C_afterSpecs": {
     "listH": 48,
@@ -230,40 +254,46 @@
       {
         "label": "Overview",
         "left": 0,
-        "w": 168,
+        "w": 362,
         "h": 40,
+        "labelLeft": 148.83,
+        "labelW": 64.34,
         "sel": "false",
         "tabindex": "-1",
         "color": "rgb(73, 69, 78)"
       },
       {
         "label": "Specs",
-        "left": 168,
-        "w": 168,
+        "left": 362,
+        "w": 362,
         "h": 40,
+        "labelLeft": 521.97,
+        "labelW": 42.05,
         "sel": "true",
         "tabindex": "0",
         "color": "rgb(29, 27, 32)"
       },
       {
         "label": "Reviews",
-        "left": 336,
-        "w": 168,
+        "left": 724,
+        "w": 362,
         "h": 40,
+        "labelLeft": 876.88,
+        "labelW": 56.25,
         "sel": "false",
         "tabindex": "-1",
         "color": "color(srgb 0.113725 0.105882 0.12549 / 0.38)"
       }
     ],
     "ind": {
-      "left": 168,
-      "w": 168,
+      "left": 362,
+      "w": 362,
       "h": 2
     }
   },
   "C_afterSpecsExpected": {
-    "left": 168,
-    "w": 168
+    "left": 362,
+    "w": 362
   },
   "C_disabledClickSelected": [
     "false",

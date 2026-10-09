@@ -4,9 +4,9 @@
  * container, 1dp divider in surface-variant, 3dp active indicator with rounded top
  * corners, title-small text, 24dp icon, active label primary, inactive on-surface-variant,
  * state layers hover 0.08 and focus/pressed 0.10, disabled 38%. Upstream shadcn-m3e
- * `tabs.tsx` (revision 8f1b3fb) for equal-width tabs, the indicator inset 16dp from the
- * tab edges (minimum 24dp wide), the 2dp full-width secondary indicator, and the 16dp
- * state-layer shape. Icon-and-label tabs are 64dp high, as the token file defines.
+ * `tabs.tsx` (revision 8f1b3fb) for equal-width tabs, the 2dp full-width secondary
+ * indicator, and the 16dp state-layer shape. The primary indicator is the label's
+ * width, as the Material primary tab reference shows; the upstream 16dp inset is not used. Icon-and-label tabs are 64dp high, as the token file defines.
  * Indicator motion uses the kit's expressive fast spatial spring (360ms).
  */
 :root {
@@ -16,7 +16,9 @@
 .m3-tabs {
   --tabs-left: 0px;
   --tabs-width: 0px;
-  --tabs-indicator-width: max(24px, calc(var(--tabs-width) - 32px));
+  --tabs-label-left: 0px;
+  --tabs-label-width: 0px;
+  --tabs-indicator-width: max(24px, var(--tabs-label-width));
   position: relative;
   display: flex;
   align-items: stretch;
@@ -95,12 +97,12 @@
   cursor: default;
 }
 
-/* Indicator: 3dp for primary, under the label with a 16dp inset. */
+/* Indicator: 3dp for primary, the width of the selected label, centred under it. */
 .m3-tabs__indicator {
   position: absolute;
   z-index: 0;
   bottom: 0;
-  left: calc(var(--tabs-left) + (var(--tabs-width) - var(--tabs-indicator-width)) / 2);
+  left: calc(var(--tabs-label-left) + (var(--tabs-label-width) - var(--tabs-indicator-width)) / 2);
   width: var(--tabs-indicator-width);
   height: 3px;
   border-radius: 3px 3px 0 0;
