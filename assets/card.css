@@ -34,9 +34,14 @@
     background-color 200ms cubic-bezier(.2, 0, 0, 1);
 }
 
-/* A card with media: the image is edge to edge and the text keeps a 24dp inset. */
+/* A card with media: the image is edge to edge, clipped to the card's 12dp corners, and the text keeps a 24dp inset. */
 .m3-card:has(> .m3-card__media:first-child),
-.m3-card:has(> .m3-card__content > .m3-card__media:first-child) { padding: 0; }
+.m3-card:has(> .m3-card__content > .m3-card__media:first-child) { padding: 0; overflow: hidden; }
+/* Filled and elevated cards have no outline, so the image sits flush with the card edge. */
+.m3-card--filled:has(> .m3-card__media:first-child),
+.m3-card--elevated:has(> .m3-card__media:first-child),
+.m3-card--filled:has(> .m3-card__content > .m3-card__media:first-child),
+.m3-card--elevated:has(> .m3-card__content > .m3-card__media:first-child) { border-width: 0; }
 .m3-card__media {
   display: block;
   width: 100%;

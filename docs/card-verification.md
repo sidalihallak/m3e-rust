@@ -67,6 +67,21 @@ Raw data: [`card-samples.json`](card-samples.json). Screenshot: [`card-section.p
   text were inline spans, so "Media card" and its supporting text sat on one line. Both are now
   blocks. Measured: the text starts 4px below the title, as the margin sets.
 
+## 3c. Image flush to the card edge
+
+The reference images show the image flush with the card's top and sides, with no padding, and
+with its top corners rounded. The first version had a 1px gap: the card's 1px transparent
+border pushed the image in from the top and sides. Filled and elevated cards with media now drop
+the border, and the card clips the image to its 12px corners.
+
+Measured (`card-flush.json`): media inset 0px left, top and right for elevated and filled cards;
+card and image top radius both 12px; card `overflow: hidden`.
+
+Outlined cards keep their 1dp outline, so an outlined card with media has the image inside the
+outline. The reference shows no outlined media card, so this is not verified against it.
+
+Raw data: [`card-flush.json`](card-flush.json); screenshot: [`card-flush-section.png`](card-flush-section.png).
+
 ## 3b. Card anatomy (Material layout, revised)
 
 The earlier media example put a title and one line of text under the image, and the Material
@@ -82,7 +97,7 @@ the "Glass Souls' World Tour" reference). The card now follows that anatomy.
 | Supporting text | 14/20, weight 400 (body-medium), 16px above it | 14px / 20px / 400 |
 | Action row | 24px inset on all sides, buttons aligned to the end, 8dp gap | Right inset 25px; 8px gap; row height 88px (24 + 40 + 24) |
 | Start-aligned actions | Buttons aligned to the start | Left inset 25px |
-| Media | Full width, 16:9, 12px top corners | 518px of 518px inner width |
+| Media | Flush with the card's top, left and right edges; 16:9; 12px top corners, clipped by the card | Insets 0px / 0px / 0px; top radius 12px = card radius |
 
 The 4px subhead margin and the 16px supporting margin are read from the reference screenshot
 (distances between the text lines). They are not token values.

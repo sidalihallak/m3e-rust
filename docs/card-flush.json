@@ -1,0 +1,22 @@
+[
+  {
+    "variant": "elevated",
+    "borderTop": "0px",
+    "mediaInsetLeft": 0,
+    "mediaInsetTop": 0,
+    "mediaInsetRight": 0,
+    "cardRadius": "12px",
+    "mediaTopRadius": "12px",
+    "overflow": "hidden"
+  },
+  {
+    "variant": "filled",
+    "borderTop": "0px",
+    "mediaInsetLeft": 0,
+    "mediaInsetTop": 0,
+    "mediaInsetRight": 0,
+    "cardRadius": "12px",
+    "mediaTopRadius": "12px",
+    "overflow": "hidden"
+  }
+]
