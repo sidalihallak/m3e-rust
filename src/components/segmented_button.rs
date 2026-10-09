@@ -3,14 +3,13 @@ use dioxus::prelude::*;
 use super::{Icon, IconData};
 use crate::icons;
 
-/// A group of connected segmented buttons built on native inputs. Single select
-/// uses `<input type="radio">` (arrow keys move the selection within `name`);
-/// multi select uses `<input type="checkbox">` (Space toggles each button).
+/// A group of segmented buttons built on native inputs. Single select uses
+/// `<input type="radio">` (arrow keys move the selection within `name`); multi
+/// select uses `<input type="checkbox">` (Space toggles each button).
 ///
-/// Visuals follow Material Web's outlined segmented button tokens: 40dp high,
-/// 1dp outline, label-large text, 18dp icons, and a 2dp gap between items. The
-/// outer corners are full, the inner corners are small, and a selected button
-/// turns fully round on the secondary-container fill, as in the reference.
+/// Visuals follow the Material 3 segmented button: one 40dp pill with a 1dp
+/// outline, 1dp dividers between items and no gaps. A selected item is filled
+/// with secondary-container and shows a check unless it has its own icon.
 #[component]
 pub fn SegmentedButtonSet(
     #[props(default)] aria_label: Option<String>,

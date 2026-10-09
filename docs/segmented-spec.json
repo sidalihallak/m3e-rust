@@ -1,0 +1,125 @@
+{
+  "container": {
+    "height": 40,
+    "borderWidth": "1px",
+    "borderColor": "rgb(122, 117, 127)",
+    "radius": "20px",
+    "overflow": "hidden"
+  },
+  "items": [
+    {
+      "x": 106,
+      "w": 148.34,
+      "h": 38,
+      "radius": "0px",
+      "dividerLeft": "0px"
+    },
+    {
+      "x": 254.34,
+      "w": 187.16,
+      "h": 38,
+      "radius": "0px",
+      "dividerLeft": "1px"
+    },
+    {
+      "x": 441.5,
+      "w": 166.5,
+      "h": 38,
+      "radius": "0px",
+      "dividerLeft": "1px"
+    }
+  ],
+  "gapBetweenItems": 0,
+  "initial": [
+    {
+      "label": "Day",
+      "checked": false,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(29, 27, 32)",
+      "radius": "0px",
+      "hasCheck": false
+    },
+    {
+      "label": "Week",
+      "checked": true,
+      "bg": "rgb(232, 222, 248)",
+      "color": "rgb(74, 68, 88)",
+      "radius": "0px",
+      "hasCheck": true
+    },
+    {
+      "label": "Month",
+      "checked": false,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(29, 27, 32)",
+      "radius": "0px",
+      "hasCheck": false
+    }
+  ],
+  "hoverOpacity": "0.08",
+  "heldMonth": {
+    "radius": "0px",
+    "stateOpacity": "0.1",
+    "selectedWhileHeld": false,
+    "containerRadius": "20px"
+  },
+  "afterRelease": [
+    {
+      "label": "Day",
+      "checked": false,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(29, 27, 32)",
+      "radius": "0px",
+      "hasCheck": false
+    },
+    {
+      "label": "Week",
+      "checked": false,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(29, 27, 32)",
+      "radius": "0px",
+      "hasCheck": false
+    },
+    {
+      "label": "Month",
+      "checked": true,
+      "bg": "rgb(232, 222, 248)",
+      "color": "rgb(74, 68, 88)",
+      "radius": "0px",
+      "hasCheck": true
+    }
+  ],
+  "arrowLeft": [
+    false,
+    true,
+    false
+  ],
+  "focusShadow": "rgb(98, 91, 113) 0px 0px 0px 3px inset",
+  "arrowRight": [
+    false,
+    false,
+    true
+  ],
+  "multiAfterClick": [
+    true,
+    true,
+    true
+  ],
+  "multiAfterSpace": [
+    false,
+    true,
+    true
+  ],
+  "disabledAfterClick": [
+    true,
+    false
+  ],
+  "disabledLabelColor": "color(srgb 0.113725 0.105882 0.12549 / 0.38)",
+  "disabledContainerColor": "color(srgb 0.113725 0.105882 0.12549 / 0.12)",
+  "dragOffKeepsSelection": [
+    false,
+    false,
+    true
+  ],
+  "pageErrors": []
+}
