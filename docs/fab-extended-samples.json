@@ -1,0 +1,75 @@
+{
+  "rows": [
+    {
+      "size": "small",
+      "height": 56,
+      "radius": "16px",
+      "padL": "16px",
+      "padR": "16px",
+      "gap": "8px",
+      "icon": 24,
+      "font": "500 14px/20px",
+      "letterSpacing": "0.1px",
+      "iconToLeft": 16,
+      "labelToIcon": 8,
+      "rightGap": 16
+    },
+    {
+      "size": "standard",
+      "height": 56,
+      "radius": "16px",
+      "padL": "16px",
+      "padR": "20px",
+      "gap": "12px",
+      "icon": 24,
+      "font": "500 16px/24px",
+      "letterSpacing": "0.15px",
+      "iconToLeft": 16,
+      "labelToIcon": 12,
+      "rightGap": 20
+    },
+    {
+      "size": "medium",
+      "height": 80,
+      "radius": "20px",
+      "padL": "26px",
+      "padR": "26px",
+      "gap": "12px",
+      "icon": 28,
+      "font": "400 22px/28px",
+      "letterSpacing": "normal",
+      "iconToLeft": 26,
+      "labelToIcon": 12,
+      "rightGap": 26
+    },
+    {
+      "size": "large",
+      "height": 96,
+      "radius": "28px",
+      "padL": "28px",
+      "padR": "28px",
+      "gap": "16px",
+      "icon": 36,
+      "font": "400 24px/32px",
+      "letterSpacing": "normal",
+      "iconToLeft": 28,
+      "labelToIcon": 16,
+      "rightGap": 28
+    },
+    {
+      "size": "medium",
+      "height": 80,
+      "radius": "20px",
+      "padL": "26px",
+      "padR": "26px",
+      "gap": "12px",
+      "icon": 28,
+      "font": "400 22px/28px",
+      "letterSpacing": "normal",
+      "iconToLeft": 26,
+      "labelToIcon": 12,
+      "rightGap": 26
+    }
+  ],
+  "pageErrors": []
+}

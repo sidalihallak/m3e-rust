@@ -38,7 +38,7 @@ Desktop only. Android Chrome has **not** been tested.
 | Elevation pressed | level 3 (back from hover) | Material Web `pressed-container-elevation` |
 | Lowered rest / hover / pressed | level 1 / level 2 / level 1 | Material Web `lowered-*-elevation` |
 | Disabled | container 12% on-surface, icon 38% on-surface, no shadow | **Upstream fab.tsx.** The Material Web FAB token files do not define disabled values. |
-| Extended FAB | standard height 56px, 16px leading, 20px trailing, 12px icon-label gap, label 16/24 weight 500 | Standard extended values from Material Web's extended FAB tokens. The label typography is **upstream**. |
+| Extended FAB S / standard / M / L | Heights 56 / 56 / 80 / 96px. Corners 16 / 16 / 20 / 28px. Icons 24 / 24 / 28 / 36px. Leading and trailing space 16 / 20 / 26 / 28px. Icon-label gap 8 / 12 / 12 / 16px. Labels: label-large 14/20 (500), title-medium 16/24 (500), title-large 22/28 (400), headline-small 24/32 (400). | Material Web extended FAB tokens and the Material Web type-scale tokens. The label typography in the upstream reference differs; the official values are used. |
 | Focus ring | 3px `secondary`, 2px offset | Upstream `focus-ring`. The Button uses `primary`. |
 | Press model | Pointer and Space set the pressed class. No minimum press time. | Same as switch and checkbox |
 | Touch target | Container size (40dp minimum for small) | Material size |
@@ -50,8 +50,8 @@ Deliberate differences from the upstream reference:
   Upstream uses its own rounded scale.
 - **No ripple.** Feedback is the state layer and elevation.
 - **No pressed shape morph.** The FAB keeps its corner radius while pressed.
-- **Extended FAB is standard size only.** Small, medium and large extended
-  variants are not implemented yet. The official token files exist for them.
+- **Extended heights.** An extended small FAB is 56px tall, not 40px. Upstream
+  does not specify a separate extended small size.
 
 ## 3. Input, state and platform matrix
 
@@ -70,6 +70,7 @@ Raw data: [`fab-motion-samples.json`](fab-motion-samples.json).
 | Lowered at rest | shadow level 1 |
 | Lowered hover | shadow level 2 |
 | Disabled | no shadow; pointer press does not set the pressed class |
+| Extended S / standard / M / L | Measured in the browser: heights, corners, icon sizes, paddings, icon-label gaps and label type all match the tokens. Raw data: [`fab-extended-samples.json`](fab-extended-samples.json). |
 | Pointer click calling `onclick` | **Not tested.** The preview has no handler, and the handler wiring is not asserted. |
 | Enter key | Not tested |
 | Focus via Tab | Not tested beyond `focus()` |
@@ -96,6 +97,7 @@ needed. Each state was checked with live computed styles.
 ## 6. Evidence
 
 - Raw measurements: [`fab-motion-samples.json`](fab-motion-samples.json)
+- Extended measurements: [`fab-extended-samples.json`](fab-extended-samples.json)
 - Section screenshot: [`fab-section.png`](fab-section.png). A resting state, not
   a mid-animation capture.
 
@@ -104,7 +106,7 @@ needed. Each state was checked with live computed styles.
 - **Official Material pages not read.** Check the FAB spec and guidelines
   text once `m3.material.io` is reachable.
 - **Click handler not tested.** The `onclick` path needs an assertion.
-- **Extended S, M and L** are not implemented.
+- **Branded FAB, FAB menu and toolbar floating FAB** are separate Material Web variants and are not implemented.
 - **Shadow transition not sampled mid-animation.** The transition is 200ms, but the
   intermediate shadow values were not captured.
 - **Android touch and reduced motion** have not been tested.

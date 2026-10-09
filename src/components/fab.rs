@@ -3,8 +3,9 @@ use dioxus::prelude::*;
 
 use super::{Icon, IconData};
 
-/// Floating action button size. Container and icon sizes follow Material Web's
-/// FAB tokens: 40/56/80/96dp containers with 24/24/28/36dp icons.
+/// Floating action button size. Icon-only containers follow Material Web's FAB
+/// tokens: 40/56/80/96dp with 24/24/28/36dp icons. An extended FAB (a label is
+/// given) uses 56/56/80/96dp heights, so its small size differs from the icon-only one.
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
 pub enum FabSize {
     Small,

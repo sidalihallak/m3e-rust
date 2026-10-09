@@ -62,15 +62,54 @@
 .m3-fab--medium { --fab-size: 80px; --fab-radius: 20px; --fab-icon-size: 28px; }
 .m3-fab--large { --fab-size: 96px; --fab-radius: 28px; --fab-icon-size: 36px; }
 
-/* Extended: standard height, icon and label. */
+/* Extended FAB: the label sets the width. Heights, spacing and label type
+   follow Material Web's extended FAB tokens for each size, and differ from
+   the icon-only sizes above (for example, extended small is 56px tall). */
 .m3-fab--extended {
-  gap: 12px;
+  --fab-gap: 12px;
+  --fab-lead: 16px;
+  --fab-trail: 20px;
   width: auto;
-  height: 56px;
-  padding-inline: 16px 20px;
-  border-radius: 16px;
+  height: var(--fab-size);
+  gap: var(--fab-gap);
+  padding-inline: var(--fab-lead) var(--fab-trail);
   font: 500 16px/24px Inter, ui-sans-serif, system-ui, sans-serif;
-  letter-spacing: .01em;
+  letter-spacing: .009375rem;
+}
+.m3-fab--extended.m3-fab--small {
+  --fab-size: 56px;
+  --fab-radius: 16px;
+  --fab-icon-size: 24px;
+  --fab-gap: 8px;
+  --fab-lead: 16px;
+  --fab-trail: 16px;
+  font: 500 14px/20px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .00625rem;
+}
+.m3-fab--extended.m3-fab--standard {
+  --fab-size: 56px;
+  --fab-radius: 16px;
+  --fab-icon-size: 24px;
+}
+.m3-fab--extended.m3-fab--medium {
+  --fab-size: 80px;
+  --fab-radius: 20px;
+  --fab-icon-size: 28px;
+  --fab-gap: 12px;
+  --fab-lead: 26px;
+  --fab-trail: 26px;
+  font: 400 22px/28px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0;
+}
+.m3-fab--extended.m3-fab--large {
+  --fab-size: 96px;
+  --fab-radius: 28px;
+  --fab-icon-size: 36px;
+  --fab-gap: 16px;
+  --fab-lead: 28px;
+  --fab-trail: 28px;
+  font: 400 24px/32px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0;
 }
 
 /* Colour roles: container, then the paired icon colour. */

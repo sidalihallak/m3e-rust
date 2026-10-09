@@ -348,10 +348,17 @@ fn App() -> Element {
                     }
                     article { class: "demo-card fab-specimen",
                         div { class: "card-topline", span { "EXTENDED · LOWERED · DISABLED" } span { class: "component-index", "C" } }
+                        div { class: "fab-row fab-row-wrap",
+                            Fab { icon: icons::ADD, size: FabSize::Small, label: Some("Compose".to_string()), aria_label: Some("Compose".to_string()) }
+                            Fab { icon: icons::ADD, size: FabSize::Standard, label: Some("Create".to_string()), aria_label: Some("Create".to_string()) }
+                            Fab { icon: icons::ADD, size: FabSize::Medium, label: Some("New item".to_string()), aria_label: Some("New item".to_string()) }
+                            Fab { icon: icons::ADD, size: FabSize::Large, label: Some("New".to_string()), aria_label: Some("New".to_string()) }
+                        }
                         div { class: "fab-row",
-                            Fab { icon: icons::ADD, label: Some("Compose".to_string()), aria_label: Some("Compose".to_string()) }
                             Fab { icon: icons::FAVORITE, lowered: true, aria_label: Some("Favourite, lowered".to_string()) }
+                            Fab { icon: icons::FAVORITE, size: FabSize::Large, lowered: true, aria_label: Some("Favourite large, lowered".to_string()) }
                             Fab { icon: icons::ADD, disabled: true, aria_label: Some("Disabled".to_string()) }
+                            Fab { icon: icons::ADD, size: FabSize::Medium, label: Some("Disabled".to_string()), disabled: true, aria_label: Some("Disabled extended".to_string()) }
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "FAB usage", code: FAB_USAGE }
