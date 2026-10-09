@@ -51,6 +51,16 @@ fn TermsCheckbox() -> Element {
     }
 }"#;
 
+const ICON_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{icons, Icon};
+
+#[component]
+fn SavedBadge() -> Element {
+    rsx! {
+        Icon { icon: icons::CHECK, aria_label: Some("Saved".to_string()) }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -264,7 +274,20 @@ fn App() -> Element {
                             Checkbox { error: true, aria_label: Some("Error".to_string()) }
                         }
                     }
-                    article { class: "demo-card control-specimen icon-specimen",
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Switch usage", code: SWITCH_USAGE }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Checkbox usage", code: CHECKBOX_USAGE }
+                }
+            }
+            section { class: "wrap roles-section icon-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "04 — ICONS" }
+                        h2 { "Material Symbols" }
+                        p { class: "section-description", "Official Material Symbols Rounded glyphs, generated from @material-symbols/svg-400@0.48.0. Icons fill with the current text colour and size through --m3-icon-size." }
+                    }
+                    span { class: "token-note", "APACHE-2.0 · GOOGLE" }
+                }
+                    article { class: "demo-card icon-specimen",
                         div { class: "card-topline", span { "ICON" } span { class: "component-index", "C" } }
                         div { class: "icon-grid",
                             for (label, icon) in [("add", icons::ADD), ("favorite", icons::FAVORITE), ("check", icons::CHECK), ("close", icons::CLOSE), ("info", icons::INFO), ("chevron_left", icons::CHEVRON_LEFT), ("arrow_back", icons::ARROW_BACK), ("remove", icons::REMOVE)] {
@@ -273,9 +296,7 @@ fn App() -> Element {
                         }
                         p { class: "icon-note", "Official Material Symbols Rounded paths, generated from @material-symbols/svg-400@0.48.0." }
                     }
-                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Switch usage", code: SWITCH_USAGE }
-                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Checkbox usage", code: CHECKBOX_USAGE }
-                }
+                CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Icon usage", code: ICON_USAGE }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
         }
