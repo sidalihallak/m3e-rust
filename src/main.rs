@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardActions, Divider, DividerInset, DividerOrientation, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardActions, Divider, DividerInset, DividerOrientation, TextField, TextFieldVariant, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -311,6 +311,26 @@ fn Settings() -> Element {
     }
 }"#;
 
+const TEXT_FIELD_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{TextField, TextFieldVariant};
+
+#[component]
+fn Signup() -> Element {
+    let mut email = use_signal(String::new);
+    let invalid = !email().contains('@') && !email().is_empty();
+    rsx! {
+        TextField {
+            variant: TextFieldVariant::Outlined,
+            label: "Email",
+            input_type: "email",
+            value: email(),
+            error: invalid,
+            supporting: if invalid { "Enter a valid email address".to_string() } else { "We never share it".to_string() },
+            oninput: move |value: String| email.set(value),
+        }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -346,6 +366,8 @@ fn App() -> Element {
     let mut card_taps = use_signal(|| 0_u32);
     let card_image = asset!("/assets/card-image.svg");
     let mut views = use_signal(|| [true, false, true]);
+    let mut name_value = use_signal(String::new);
+    let mut email_value = use_signal(|| String::from("not-an-email"));
     let mut menu_pick = use_signal(|| String::from("none"));
     let theme = theme::ThemePreview::from_seed(seed());
     let scheme = if dark() {
@@ -375,6 +397,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/badge.css") }
         document::Stylesheet { href: asset!("/assets/card.css") }
         document::Stylesheet { href: asset!("/assets/divider.css") }
+        document::Stylesheet { href: asset!("/assets/text-field.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -1164,6 +1187,38 @@ fn App() -> Element {
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Divider usage", code: DIVIDER_USAGE }
+                }
+            }
+            section { class: "wrap roles-section field-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "16 — TEXT FIELD" }
+                        h2 { "Text fields" }
+                        p { class: "section-description", "Native inputs with a label that floats above the text when the field is focused or filled. Outlined and filled variants, with supporting text, error and disabled states." }
+                    }
+                    span { class: "token-note", "MATERIAL WEB TOKENS" }
+                }
+                div { class: "field-grid",
+                    article { class: "demo-card field-specimen",
+                        div { class: "card-topline", span { "OUTLINED" } span { class: "component-index", "A" } }
+                        div { class: "field-stack",
+                            TextField { label: "Name", value: name_value(), supporting: "Used on your receipt", oninput: move |v: String| name_value.set(v) }
+                        }
+                    }
+                    article { class: "demo-card field-specimen",
+                        div { class: "card-topline", span { "FILLED · ERROR" } span { class: "component-index", "B" } }
+                        div { class: "field-stack",
+                            TextField { variant: TextFieldVariant::Filled, label: "Email", value: email_value(), error: true, supporting: "Enter a valid email address", oninput: move |v: String| email_value.set(v) }
+                        }
+                    }
+                    article { class: "demo-card field-specimen",
+                        div { class: "card-topline", span { "DISABLED" } span { class: "component-index", "C" } }
+                        div { class: "field-stack",
+                            TextField { label: "Account number", value: "1234 5678", disabled: true, supporting: "Read only" }
+                            TextField { variant: TextFieldVariant::Filled, label: "Filled disabled", disabled: true }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Text field usage", code: TEXT_FIELD_USAGE }
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }

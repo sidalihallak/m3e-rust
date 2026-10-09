@@ -77,6 +77,8 @@ Cards are verified in [`docs/card-verification.md`](docs/card-verification.md).
 
 Dividers are verified in [`docs/divider-verification.md`](docs/divider-verification.md).
 
+Text fields are verified in [`docs/text-field-verification.md`](docs/text-field-verification.md).
+
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
 

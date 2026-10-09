@@ -16,6 +16,7 @@ pub mod segmented_button;
 pub mod slider;
 pub mod switch;
 pub mod tabs;
+pub mod text_field;
 
 pub use badge::{BadgeAnchor, NotificationBadge};
 pub use divider::{Divider, DividerInset, DividerOrientation};
@@ -33,4 +34,5 @@ pub use radio::{Radio, RadioGroup};
 pub use segmented_button::{SegmentedButton, SegmentedButtonSet};
 pub use slider::Slider;
 pub use switch::Switch;
+pub use text_field::{TextField, TextFieldVariant};
 pub use tabs::{TabItem, Tabs, TabsVariant};

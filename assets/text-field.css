@@ -1,0 +1,148 @@
+/*
+ * M3 text field. Copy with src/components/text_field.rs.
+ * Sources: Material Web filled and outlined text field tokens (revision 47adb65): 56dp
+ * container, body-large input and label text, body-small label when floated, 1dp outline,
+ * hover 1dp on-surface, focus primary, error colours, disabled 38% text and 12% outline,
+ * 4dp corner (corner-extra-small), filled container surface-container-highest with a 1dp
+ * active indicator and a 2dp focused indicator. The focused outline is 3dp in the outlined token
+ * file; it is drawn here as a 1dp outline plus a 2dp inset ring.
+ * The label float (200ms standard easing) is a choice; the token file gives no duration.
+ */
+.m3-field { display: inline-flex; flex-direction: column; width: 280px; max-width: 100%; box-sizing: border-box; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+
+.m3-field__container {
+  --field-caret: var(--md-sys-color-primary);
+  --field-label: var(--md-sys-color-on-surface-variant);
+  --field-text: var(--md-sys-color-on-surface);
+  --field-outline: var(--md-sys-color-outline);
+  --field-outline-width: 1px;
+  position: relative;
+  height: 56px;
+  box-sizing: border-box;
+}
+
+/* Filled: the surface and the bottom indicator. */
+.m3-field__surface { display: none; }
+.m3-field__indicator { display: none; }
+.m3-field--filled .m3-field__surface {
+  position: absolute; inset: 0;
+  display: block;
+  border-radius: 4px 4px 0 0;
+  background: var(--md-sys-color-surface-container-highest);
+  pointer-events: none;
+}
+.m3-field--filled .m3-field__indicator {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  display: block;
+  height: 1px;
+  background: var(--md-sys-color-on-surface-variant);
+  pointer-events: none;
+}
+.m3-field--filled .m3-field__container:hover .m3-field__indicator { background: var(--md-sys-color-on-surface); }
+.m3-field--filled .m3-field__input:focus ~ .m3-field__indicator { height: 2px; background: var(--md-sys-color-primary); }
+
+/* Outlined: a 1dp outline around the field, 4dp corners. */
+.m3-field__outline { display: none; }
+.m3-field--outlined .m3-field__outline {
+  position: absolute; inset: 0;
+  display: block;
+  box-sizing: border-box;
+  border: var(--field-outline-width) solid var(--field-outline);
+  border-radius: 4px;
+  pointer-events: none;
+}
+.m3-field--outlined .m3-field__container:hover .m3-field__outline { --field-outline: var(--md-sys-color-on-surface); }
+.m3-field--outlined .m3-field__input:focus ~ .m3-field__outline {
+  --field-outline: var(--md-sys-color-primary);
+  box-shadow: inset 0 0 0 2px var(--md-sys-color-primary);
+}
+
+/* Input: fills the container, with a 16dp inset. The top inset leaves room for a floated label. */
+.m3-field__input {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 16px;
+  border: 0;
+  background: transparent;
+  color: var(--field-text);
+  font: 400 16px/24px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .03125rem;
+  outline: none;
+  caret-color: var(--field-caret);
+}
+.m3-field--filled .m3-field__input { padding-top: 24px; padding-bottom: 8px; }
+
+/* Label: sits in the middle at rest; floats to body-small when focused or filled. */
+.m3-field__label {
+  position: absolute;
+  z-index: 2;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: calc(100% - 32px);
+  padding: 0 4px;
+  margin-left: -4px;
+  color: var(--field-label);
+  font: 400 16px/24px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .03125rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  transition:
+    top 200ms cubic-bezier(.2, 0, 0, 1),
+    font-size 200ms cubic-bezier(.2, 0, 0, 1),
+    line-height 200ms cubic-bezier(.2, 0, 0, 1),
+    color 200ms cubic-bezier(.2, 0, 0, 1);
+}
+/* The floated label masks the outline, as the outlined notch does: it takes the page surface. */
+.m3-field--outlined .m3-field__label { background: var(--md-sys-color-surface); }
+.m3-field--filled .m3-field__label { margin-left: 0; padding: 0; }
+
+.m3-field__input:focus ~ .m3-field__label,
+.m3-field__input:not(:placeholder-shown) ~ .m3-field__label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: .025rem;
+}
+.m3-field--outlined .m3-field__input:not(:placeholder-shown) ~ .m3-field__label,
+.m3-field--outlined .m3-field__input:focus ~ .m3-field__label { top: 0; }
+.m3-field--filled .m3-field__input:focus ~ .m3-field__label,
+.m3-field--filled .m3-field__input:not(:placeholder-shown) ~ .m3-field__label { top: 8px; transform: none; }
+
+.m3-field__input:focus ~ .m3-field__label { color: var(--md-sys-color-primary); }
+
+/* Supporting text: body-small, 16dp inset. */
+.m3-field__supporting {
+  margin: 4px 16px 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font: 400 12px/16px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .025rem;
+}
+
+/* Error: error outline or indicator, label and supporting text in error. */
+.m3-field--error .m3-field__label,
+.m3-field--error .m3-field__input:focus ~ .m3-field__label { color: var(--md-sys-color-error); }
+.m3-field--error .m3-field__supporting { color: var(--md-sys-color-error); }
+.m3-field--outlined.m3-field--error .m3-field__outline { --field-outline: var(--md-sys-color-error); }
+.m3-field--outlined.m3-field--error .m3-field__input:focus ~ .m3-field__outline { box-shadow: inset 0 0 0 2px var(--md-sys-color-error); }
+.m3-field--filled.m3-field--error .m3-field__indicator { background: var(--md-sys-color-error); }
+.m3-field--filled.m3-field--error .m3-field__input:focus ~ .m3-field__indicator { background: var(--md-sys-color-error); }
+
+/* Disabled: 38% text and label, 12% outline and indicator, 4% filled container. */
+.m3-field--disabled .m3-field__input { color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); cursor: default; }
+.m3-field--disabled .m3-field__label { color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
+.m3-field--disabled .m3-field__supporting { color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
+.m3-field--outlined.m3-field--disabled .m3-field__outline { --field-outline: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent); }
+.m3-field--filled.m3-field--disabled .m3-field__surface { background: color-mix(in srgb, var(--md-sys-color-on-surface) 4%, transparent); }
+.m3-field--filled.m3-field--disabled .m3-field__indicator { background: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .m3-field__label { transition-duration: .01ms !important; }
+}

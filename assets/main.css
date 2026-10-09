@@ -214,3 +214,10 @@ button { cursor: pointer; }
 .divider-row { display: flex; align-items: stretch; gap: 16px; height: 120px; padding: 16px 8px; }
 .divider-grid .code-card { grid-column: 1 / -1; }
 @media (max-width: 760px) { .divider-grid { grid-template-columns: 1fr; } }
+
+.field-section { min-width: 0; }
+.field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.field-specimen { min-width: 0; }
+.field-stack { display: flex; flex-direction: column; gap: 20px; padding: 16px 8px 8px; }
+.field-grid .code-card { grid-column: 1 / -1; }
+@media (max-width: 760px) { .field-grid { grid-template-columns: 1fr; } }
