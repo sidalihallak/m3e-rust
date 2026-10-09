@@ -1,0 +1,42 @@
+[
+  {
+    "badge": "dot",
+    "badgeW": 6,
+    "badgeH": 6,
+    "dxRight": 3,
+    "dyTop": -3,
+    "iconCoveredPct": 1.6
+  },
+  {
+    "badge": "dot",
+    "badgeW": 6,
+    "badgeH": 6,
+    "dxRight": 3,
+    "dyTop": -3,
+    "iconCoveredPct": 1.6
+  },
+  {
+    "badge": "3",
+    "badgeW": 16,
+    "badgeH": 16,
+    "dxRight": 8,
+    "dyTop": -12,
+    "iconCoveredPct": 5.6
+  },
+  {
+    "badge": "99",
+    "badgeW": 22.9,
+    "badgeH": 16,
+    "dxRight": 11.4,
+    "dyTop": -12,
+    "iconCoveredPct": 7.9
+  },
+  {
+    "badge": "999+",
+    "badgeW": 38.1,
+    "badgeH": 16,
+    "dxRight": 19.1,
+    "dyTop": -12,
+    "iconCoveredPct": 13.2
+  }
+]

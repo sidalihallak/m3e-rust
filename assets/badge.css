@@ -3,8 +3,8 @@
  * Sources: Material Web badge tokens (revision 47adb65): 6dp error dot, 16dp large
  * badge, error and on-error colours, full corner shape, and the label-small text
  * (11/16, weight 500, 0.5px tracking) for counts. The spec has no motion for badges.
- * The top-right offset of the badge from its anchor is not in the tokens: it is a
- * copyable choice, set in `.m3-badge-anchor .m3-badge` below.
+ * The placement is not in the tokens: the badge's centre is set on the anchor's
+ * top-right corner, a copyable choice, in `.m3-badge-anchor .m3-badge` below.
  */
 .m3-badge-anchor {
   position: relative;
@@ -35,6 +35,8 @@
   letter-spacing: .5px;
 }
 
-/* Offset from the anchor's top-right corner, so the badge overlaps the icon's corner. */
-.m3-badge-anchor .m3-badge--dot { top: 0; right: 0; }
-.m3-badge-anchor .m3-badge--large { top: -6px; right: -8px; }
+/* The dot is centred on the anchor's top-right corner. A count pill is raised so its
+   bottom edge reaches only 4px into the icon, and its right edge sits on the corner:
+   a count wider than the icon then extends outwards instead of across the glyph. */
+.m3-badge-anchor .m3-badge--dot { transform: translate(50%, -50%); }
+.m3-badge-anchor .m3-badge--large { top: -12px; transform: translateX(50%); }

@@ -28,7 +28,7 @@ shadcn-m3e source is not implemented in this round.
 | Count text | label-small, 11/16, weight 500, 0.5px tracking, on-error | Tokens |
 | Shape | Full (999px radius) | Tokens |
 | Cap | Counts above `max` (default 999) show as `999+` | Upstream |
-| Placement | Top-right of a `BadgeAnchor`: dot on the corner; count offset 8px right and 6px up | Choice, not in the tokens |
+| Placement | Top-right of a `BadgeAnchor`: the dot is centred on the corner; a count's right edge sits on the corner and its bottom edge reaches 4px into the icon | Choice, not in the tokens |
 | Accessibility | Count: `role="status"` with an aria-label such as "3 notifications". Dot: `role="img"` labelled "New notification" | ARIA |
 | Motion | None in the spec | Tokens |
 
@@ -45,13 +45,17 @@ Raw data: [`badge-samples.json`](badge-samples.json). Screenshot:
 | Count "1000" with default max | Shows "999+", 38.1px wide, aria-label "999+ notifications" |
 | Count role | `status` (live region) |
 | Dot role | `img` with aria-label "New notification" |
-| Placement, count badge | 8px right of and 6px above the icon's top-right corner |
-| Placement, dot | Top-right corner of the icon (0px offset) |
+| Placement, dot | Centred on the icon's top-right corner (3px right, 3px above the icon box) |
+| Placement, count | Raised 12px above the icon top; right edge 8px / 11px / 19px beyond the icon (for 3 / 99 / 999+). Icon area covered: 5.6% / 7.9% / 13.2% |
 | Page errors | 0 |
 
 ## 4. Diagnosed defects
 
-None recorded in this round.
+- **999+ covered the icon.** The first placement put the badge's right edge 8px past the icon and
+  its top 6px above the icon's top. The 38px pill then covered most of the 24px icon, and the
+  "+" was hidden. Measured coverage was 40%. The count is now raised 12px above the icon, with
+  its right edge on the corner. Coverage is 13.2% for 999+, and the icon is fully visible.
+  Raw data: [`badge-cover.json`](badge-cover.json); screenshot: [`badge-section.png`](badge-section.png).
 
 ## 5. Build and checks
 
@@ -63,9 +67,9 @@ None recorded in this round.
 
 ## 6. Unresolved differences and untested behaviour
 
-- The placement offsets are choices. The token file does not give the offset of the badge from its
-  anchor. The dot sits on the corner and the count sits outside it. These should be checked
-  against the Material badge spec image when it is available.
+- The placement is a choice. The token file does not give the offset of the badge from its
+  anchor. A 999+ pill is wider than a 24px icon, so some overlap with the icon is unavoidable. It
+  is kept to the pill's bottom 4px. Check this against the Material badge spec image when it is available.
 - A count of zero is shown as "0". The spec does not define hiding the badge at zero; the consumer
   should omit the badge instead.
 - The compact label badge from shadcn-m3e is not implemented.
