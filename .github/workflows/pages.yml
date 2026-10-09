@@ -1,0 +1,75 @@
+name: Deploy preview to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Install Rust and WebAssembly target
+        run: |
+          rustup toolchain install 1.99.0 --profile minimal --target wasm32-unknown-unknown
+          rustup default 1.99.0
+      - name: Cache Rust build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: pages-${{ runner.os }}-rust-1.99.0-${{ hashFiles('Cargo.lock') }}
+          restore-keys: pages-${{ runner.os }}-rust-1.99.0-
+      - name: Install Dioxus CLI
+        env:
+          DX_VERSION: 0.7.10
+        run: |
+          release="https://github.com/DioxusLabs/dioxus/releases/download/v${DX_VERSION}"
+          archive=dx-x86_64-unknown-linux-gnu.tar.gz
+          curl --fail --location --retry 3 "${release}/${archive}" -o "$archive"
+          curl --fail --location --retry 3 "${release}/dx-x86_64-unknown-linux-gnu.sha256" -o dx.sha256
+          grep " ${archive}$" dx.sha256 | sha256sum --check -
+          mkdir -p "$RUNNER_TEMP/dioxus"
+          tar -xzf "$archive" -C "$RUNNER_TEMP/dioxus"
+          echo "$RUNNER_TEMP/dioxus" >> "$GITHUB_PATH"
+      - name: Build web preview
+        env:
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: dx build --platform web --release --locked --base-path "$PAGES_BASE_PATH" --debug-symbols false
+      - name: Prepare static site
+        run: |
+          site=target/dx/m3e-rust-ui/release/web/public
+          test -f "$site/index.html"
+          cp "$site/index.html" "$site/404.html"
+          touch "$site/.nojekyll"
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: target/dx/m3e-rust-ui/release/web/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
