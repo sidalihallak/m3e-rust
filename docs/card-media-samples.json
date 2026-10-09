@@ -1,0 +1,29 @@
+{
+  "elevatedMedia": {
+    "cardPadding": "0px",
+    "cardRadius": "12px",
+    "mediaWidth": 518,
+    "cardWidth": 520,
+    "mediaTopOffset": 1,
+    "mediaRatio": 1.7778,
+    "mediaTopRadius": "12px",
+    "mediaBottomRadius": "0px",
+    "bodyInsetLeft": 1,
+    "bodyInsetTop": 0
+  },
+  "outlinedMedia": {
+    "cardPadding": "0px",
+    "cardRadius": "12px",
+    "mediaWidth": 518,
+    "cardWidth": 520,
+    "mediaTopOffset": 1,
+    "mediaRatio": 1.7778,
+    "mediaTopRadius": "12px",
+    "mediaBottomRadius": "0px",
+    "bodyInsetLeft": 1,
+    "bodyInsetTop": 0
+  },
+  "tapsBefore": "Image at the top, edge to edge. Tapped 0 times.",
+  "tapsAfter": "Image at the top, edge to edge. Tapped 1 times.",
+  "pageErrors": []
+}

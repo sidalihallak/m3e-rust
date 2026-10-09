@@ -55,3 +55,21 @@ pub fn Card(
         }
     }
 }
+
+/// A full-width image at the top of a card, with 12dp top corners and a 16:9 frame.
+/// Put it first in the card; the card then drops its padding so the image is edge to edge.
+#[component]
+pub fn CardMedia(src: String, alt: String, #[props(default)] class: String) -> Element {
+    rsx! {
+        img { class: "m3-card__media {class}", src, alt }
+    }
+}
+
+/// The padded text area of a card, below any [`CardMedia`]. It is a span so it is
+/// valid inside an interactive card's button.
+#[component]
+pub fn CardBody(#[props(default)] class: String, children: Element) -> Element {
+    rsx! {
+        span { class: "m3-card__body {class}", {children} }
+    }
+}

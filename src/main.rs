@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -280,19 +280,23 @@ fn Inbox(unread: u32) -> Element {
 }"#;
 
 const CARD_USAGE: &str = r#"use dioxus::prelude::*;
-use m3e_rust_ui::{Card, CardVariant};
+use m3e_rust_ui::{Card, CardBody, CardMedia, CardVariant};
 
 #[component]
 fn TripCard() -> Element {
     let mut opened = use_signal(|| 0_u32);
     rsx! {
-        // Non-interactive: any content.
+        // Non-interactive card with an image on top.
         Card { variant: CardVariant::Outlined,
-            p { "Paris, 12 nights" }
+            CardMedia { src: "/assets/trip.jpg", alt: "Paris rooftops at dusk" }
+            CardBody {
+                span { class: "m3-card__title", "Paris, 12 nights" }
+                span { class: "m3-card__text", "Opened {opened()} times" }
+            }
         }
-        // Interactive: phrasing content, and a click handler.
+        // Interactive card: phrasing content only, and a click handler.
         Card { variant: CardVariant::Elevated, interactive: true, onclick: move |_| opened += 1,
-            span { "Opened {opened()} times" }
+            span { "Open trip" }
         }
     }
 }"#;
@@ -330,6 +334,7 @@ fn App() -> Element {
     let mut detail = use_signal(|| 1_usize);
     let mut spec = use_signal(|| 0_usize);
     let mut card_taps = use_signal(|| 0_u32);
+    let card_image = asset!("/assets/card-image.svg");
     let mut views = use_signal(|| [true, false, true]);
     let mut menu_pick = use_signal(|| String::from("none"));
     let theme = theme::ThemePreview::from_seed(seed());
@@ -1080,6 +1085,30 @@ fn App() -> Element {
                             Card { variant: CardVariant::Filled, interactive: true, disabled: true,
                                 span { class: "m3-card__title", "Disabled card" }
                                 span { class: "m3-card__text", "38% opacity; not focusable." }
+                            }
+                        }
+                    }
+                    article { class: "demo-card card-specimen card-specimen--media",
+                        div { class: "card-topline", span { "WITH IMAGE · INTERACTIVE" } span { class: "component-index", "E" } }
+                        div { class: "card-stack",
+                            Card { variant: CardVariant::Elevated, interactive: true, onclick: move |_| card_taps += 1,
+                                CardMedia { src: card_image.to_string(), alt: "A pale sky over purple hills".to_string() }
+                                CardBody {
+                                    span { class: "m3-card__title", "Media card" }
+                                    span { class: "m3-card__text", "Image at the top, edge to edge. Tapped {card_taps()} times." }
+                                }
+                            }
+                        }
+                    }
+                    article { class: "demo-card card-specimen card-specimen--media",
+                        div { class: "card-topline", span { "WITH IMAGE · OUTLINED" } span { class: "component-index", "F" } }
+                        div { class: "card-stack",
+                            Card { variant: CardVariant::Outlined,
+                                CardMedia { src: card_image.to_string(), alt: "A pale sky over purple hills".to_string() }
+                                CardBody {
+                                    span { class: "m3-card__title", "Outlined media card" }
+                                    span { class: "m3-card__text", "The same image on a non-interactive card." }
+                                }
                             }
                         }
                     }

@@ -34,6 +34,19 @@
     background-color 200ms cubic-bezier(.2, 0, 0, 1);
 }
 
+/* A card with media: the image is edge to edge and the text keeps a 16dp inset. */
+.m3-card:has(> .m3-card__media:first-child),
+.m3-card:has(> .m3-card__content > .m3-card__media:first-child) { padding: 0; }
+.m3-card__media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+.m3-card__body { display: block; padding: 16px; }
+.m3-card__title,
+.m3-card__text { display: block; }
 .m3-card__title { margin: 0 0 4px; font: 500 16px/24px Inter, ui-sans-serif, system-ui, sans-serif; }
 .m3-card__text { margin: 0; color: var(--md-sys-color-on-surface-variant); }
 

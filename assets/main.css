@@ -202,3 +202,5 @@ button { cursor: pointer; }
 .card-stack { display: flex; flex-direction: column; gap: 18px; padding: 16px 8px 8px; }
 .card-grid .code-card { grid-column: 1 / -1; }
 @media (max-width: 760px) { .card-grid { grid-template-columns: 1fr; } }
+
+.card-specimen--media .card-stack { padding: 16px 0 0; }

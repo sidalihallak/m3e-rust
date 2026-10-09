@@ -32,6 +32,7 @@ headless Chromium 1194, using real pointer and keyboard input, at device scale 2
 | Disabled | 38% opacity for the whole card; no state layer, no focus | Tokens |
 | Interactive semantics | A native `<button>`; Enter and Space activate it | Native |
 | Non-interactive | A `<div>` with any content | — |
+| Media | Full-width 16:9 image at the top, 12px top corners; card padding removed | Choice; the M3 card media slot is not in the token files |
 | Motion | Box-shadow and background transitions, 200ms standard easing | Choice; the token file gives no duration |
 
 ## 3. Input, state and platform matrix
@@ -58,7 +59,28 @@ Raw data: [`card-samples.json`](card-samples.json). Screenshot: [`card-section.p
 
 ## 4. Diagnosed defects
 
-None recorded in this round.
+- **Title and text ran together in image cards.** `CardBody` is a block, but the title and
+  text were inline spans, so "Media card" and its supporting text sat on one line. Both are now
+  blocks. Measured: the text starts 4px below the title, as the margin sets.
+
+## 3a. Cards with media
+
+Added: `CardMedia` (an image at the top, edge to edge, 16:9, 12px top corners) and `CardBody`
+(16px text inset). A card that starts with `CardMedia` drops its padding.
+
+| Check | Result |
+| --- | --- |
+| Card padding with media | 0px |
+| Image width / card width (inner, excluding 1px border) | 518px / 520px |
+| Image aspect ratio | 1.7778 (16:9) |
+| Image top corners / bottom corners | 12px / 0px |
+| Text inset from card edge (1px border + 16px padding) | 17px |
+| Title and text order | Stacked; text 4px below title |
+| Interactive media card: tap | Counter increments (0 → 1) |
+
+Raw data: [`card-media-samples.json`](card-media-samples.json); screenshot:
+[`card-media-section.png`](card-media-section.png). The image is the bundled
+`assets/card-image.svg`, a generated illustration, not a photo.
 
 ## 5. Build and checks
 
