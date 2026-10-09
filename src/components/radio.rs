@@ -32,8 +32,11 @@ pub fn Radio(
                 onchange: move |_| onchange.call(()),
             }
             span { class: "m3-radio__state", aria_hidden: "true" }
-            span { class: "m3-radio__ring", aria_hidden: "true",
-                span { class: "m3-radio__dot" }
+            // Ring and dot are SVG circles on a 20-unit grid: the centre stays exact
+            // at any browser zoom, unlike boxes whose edges round to device pixels.
+            svg { class: "m3-radio__ring", view_box: "0 0 20 20", "aria-hidden": "true",
+                circle { class: "m3-radio__outline", cx: "10", cy: "10", r: "9" }
+                circle { class: "m3-radio__dot", cx: "10", cy: "10", r: "5" }
             }
         }
     }
