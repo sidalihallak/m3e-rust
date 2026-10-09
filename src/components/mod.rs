@@ -9,6 +9,7 @@ pub(crate) mod motion;
 pub mod icon_button;
 pub mod progress;
 pub mod radio;
+pub mod segmented_button;
 pub mod slider;
 pub mod switch;
 
@@ -22,5 +23,6 @@ pub use icon_button::{IconButton, IconButtonShape, IconButtonSize, IconButtonVar
 pub use loading_indicator::{LoadingIndicator, LoadingIndicatorVariant};
 pub use progress::{CircularProgress, LinearProgress};
 pub use radio::{Radio, RadioGroup};
+pub use segmented_button::{SegmentedButton, SegmentedButtonSet};
 pub use slider::Slider;
 pub use switch::Switch;

@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, Slider, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -223,6 +223,29 @@ fn PriceRange() -> Element {
     }
 }"#;
 
+const SEGMENTED_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{SegmentedButton, SegmentedButtonSet};
+
+#[component]
+fn PeriodPicker() -> Element {
+    let mut period = use_signal(|| 1_usize);
+    let labels = ["Day", "Week", "Month"];
+    rsx! {
+        SegmentedButtonSet { aria_label: "Period".to_string(),
+            for (index, label) in labels.into_iter().enumerate() {
+                SegmentedButton {
+                    key: "{label}",
+                    label: label.to_string(),
+                    name: "period".to_string(),
+                    value: label.to_string(),
+                    checked: period() == index,
+                    onchange: move |checked: bool| if checked { period.set(index) },
+                }
+            }
+        }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -251,6 +274,8 @@ fn App() -> Element {
     let mut price = use_signal(|| (20.0_f64, 70.0_f64));
     let mut level = use_signal(|| 60.0_f64);
     let mut tick_value = use_signal(|| 40.0_f64);
+    let mut period = use_signal(|| 1_usize);
+    let mut views = use_signal(|| [true, false, true]);
     let mut menu_pick = use_signal(|| String::from("none"));
     let theme = theme::ThemePreview::from_seed(seed());
     let scheme = if dark() {
@@ -275,6 +300,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/loading-indicator.css") }
         document::Stylesheet { href: asset!("/assets/radio.css") }
         document::Stylesheet { href: asset!("/assets/slider.css") }
+        document::Stylesheet { href: asset!("/assets/segmented-button.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -793,6 +819,78 @@ fn App() -> Element {
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Range, ticks and vertical usage", code: RANGE_USAGE }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Slider usage", code: SLIDER_USAGE }
+                }
+            }
+            section { class: "wrap roles-section segmented-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "11 — SEGMENTED BUTTON" }
+                        h2 { "Segmented buttons" }
+                        p { class: "section-description", "Connected native inputs: radios for single select, so arrow keys move the selection, and checkboxes for multi select, so Space toggles each button. Selected buttons show a check unless they have an icon." }
+                    }
+                    span { class: "token-note", "M3 EXPRESSIVE · MATERIAL WEB TOKENS" }
+                }
+                div { class: "segmented-grid",
+                    article { class: "demo-card segmented-specimen",
+                        div { class: "card-topline", span { "SINGLE SELECT" } span { class: "component-index", "A" } }
+                        div { class: "segmented-stack",
+                            SegmentedButtonSet { aria_label: "Period".to_string(),
+                                for (index, label) in ["Day", "Week", "Month"].into_iter().enumerate() {
+                                    SegmentedButton {
+                                        key: "{label}",
+                                        label: label.to_string(),
+                                        name: "period".to_string(),
+                                        value: label.to_string(),
+                                        checked: period() == index,
+                                        onchange: move |checked: bool| if checked { period.set(index) },
+                                    }
+                                }
+                            }
+                            span { class: "control-label", "Selected: {[\"Day\", \"Week\", \"Month\"][period()]}" }
+                        }
+                    }
+                    article { class: "demo-card segmented-specimen",
+                        div { class: "card-topline", span { "MULTI SELECT · ICONS" } span { class: "component-index", "B" } }
+                        div { class: "segmented-stack",
+                            SegmentedButtonSet { aria_label: "Show".to_string(),
+                                SegmentedButton {
+                                    label: "Favourite".to_string(),
+                                    name: "show".to_string(),
+                                    value: "favourite".to_string(),
+                                    icon: icons::FAVORITE,
+                                    multiple: true,
+                                    checked: views()[0],
+                                    onchange: move |checked: bool| views.write()[0] = checked,
+                                }
+                                SegmentedButton {
+                                    label: "Details".to_string(),
+                                    name: "show".to_string(),
+                                    value: "details".to_string(),
+                                    multiple: true,
+                                    checked: views()[1],
+                                    onchange: move |checked: bool| views.write()[1] = checked,
+                                }
+                                SegmentedButton {
+                                    label: "Add".to_string(),
+                                    name: "show".to_string(),
+                                    value: "add".to_string(),
+                                    multiple: true,
+                                    checked: views()[2],
+                                    onchange: move |checked: bool| views.write()[2] = checked,
+                                }
+                            }
+                        }
+                    }
+                    article { class: "demo-card segmented-specimen",
+                        div { class: "card-topline", span { "DISABLED" } span { class: "component-index", "C" } }
+                        div { class: "segmented-stack",
+                            SegmentedButtonSet { aria_label: "Layout".to_string(),
+                                SegmentedButton { label: "List".to_string(), name: "layout-off".to_string(), value: "list".to_string(), checked: true, disabled: true }
+                                SegmentedButton { label: "Grid".to_string(), name: "layout-off".to_string(), value: "grid".to_string(), disabled: true }
+                            }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Segmented button usage", code: SEGMENTED_USAGE }
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }

@@ -1,0 +1,47 @@
+{
+  "pressSamples": [
+    {
+      "label": "held 400ms",
+      "t": 2090,
+      "radius": "4px",
+      "opacity": "0.1"
+    }
+  ],
+  "releaseSamples": [
+    {
+      "label": "after release 0",
+      "t": 2164,
+      "radius": "6.36931px",
+      "opacity": "0.0980072"
+    },
+    {
+      "label": "after release 60",
+      "t": 2237,
+      "radius": "17.4991px",
+      "opacity": "0.0836645"
+    },
+    {
+      "label": "after release 120",
+      "t": 2312,
+      "radius": "19.8416px",
+      "opacity": "0.0802054"
+    },
+    {
+      "label": "after release 240",
+      "t": 2387,
+      "radius": "19.9894px",
+      "opacity": "0.08"
+    },
+    {
+      "label": "after release 480",
+      "t": 2463,
+      "radius": "20px",
+      "opacity": "0.08"
+    }
+  ],
+  "dragOffAfterPressSelectedStillWeek": [
+    true,
+    false,
+    false
+  ]
+}

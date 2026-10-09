@@ -1,0 +1,139 @@
+/*
+ * M3 segmented button set. Copy with src/components/segmented_button.rs and icon.css.
+ * Sources: Material Web outlined segmented button tokens (labs, revision 47adb65):
+ * 40dp height, 1dp outline, label-large, 18dp icon, 12dp inset, state layers
+ * hover 0.08 and focus/pressed 0.10, disabled 38% label and icon, 12% outline and
+ * selected container. Upstream shadcn-m3e `toggle-group` (revision 8f1b3fb) for the
+ * connected layout: 2dp gaps, 8dp inner corners, full outer corners, and a selected
+ * button that turns fully round. Pressed corners use the 4dp extra-small corner.
+ */
+:root {
+  /* Material DefaultEffects spring for shape changes, as in button.css (transition-shape). */
+  --segmented-shape-easing: linear(0, .0616, .1912, .3374, .4751, .594, .6916, .7689, .8288, .8743, .9084, .9337, .9523, .9658, .9756, .9826, .9877, .9913, .9939, .9957, .997, .9979, .9985, .999, 1);
+}
+
+.m3-segmented {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 2px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.m3-segmented__item {
+  --seg-state: var(--md-sys-color-on-surface);
+  --seg-state-opacity: 0;
+  --seg-container: transparent;
+  --seg-outline: var(--md-sys-color-outline);
+  --seg-label: var(--md-sys-color-on-surface);
+  --m3-icon-size: 18px;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 48px;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border: 1px solid var(--seg-outline);
+  border-radius: 8px;
+  background: var(--seg-container);
+  color: var(--seg-label);
+  font: 500 14px/20px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .00625rem;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    border-radius 240ms var(--segmented-shape-easing),
+    background-color 200ms cubic-bezier(.2, 0, 0, 1),
+    color 200ms cubic-bezier(.2, 0, 0, 1),
+    border-color 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+/* Outer corners are full at rest. Inner corners stay at 8dp. */
+.m3-segmented__item:first-child { border-radius: 20px 8px 8px 20px; }
+.m3-segmented__item:last-child { border-radius: 8px 20px 20px 8px; }
+.m3-segmented__item:first-child:last-child { border-radius: 20px; }
+
+/* Selected: secondary-container, no outline, fully round. */
+.m3-segmented__item.m3-segmented__item--checked {
+  --seg-container: var(--md-sys-color-secondary-container);
+  --seg-outline: transparent;
+  --seg-label: var(--md-sys-color-on-secondary-container);
+  --seg-state: var(--md-sys-color-on-secondary-container);
+}
+/* Qualified so the selected corners outrank the first-child and last-child rules. */
+.m3-segmented__item.m3-segmented__item--checked { border-radius: 20px; }
+
+/* State layer behind the item. Its radius follows the item's radius. */
+.m3-segmented__item::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--seg-state);
+  content: "";
+  opacity: var(--seg-state-opacity);
+  pointer-events: none;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+.m3-segmented__item:not(.m3-segmented__item--disabled):hover { --seg-state-opacity: .08; }
+.m3-segmented__item:not(.m3-segmented__item--disabled):has(.m3-segmented__input:focus-visible) { --seg-state-opacity: .10; }
+
+/* Pressed: the corners morph to 4dp, and the state layer is 0.10. */
+.m3-segmented__item.m3-segmented__item:not(.m3-segmented__item--disabled):has(.m3-segmented__input:active) {
+  --seg-state-opacity: .10;
+  border-radius: 4px;
+}
+
+/* Native input covers the item, so pointer and keyboard input reach it. */
+.m3-segmented__input {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+  appearance: none;
+}
+.m3-segmented__input:disabled { cursor: not-allowed; }
+
+/* Keyboard focus: 3dp secondary outline, 2dp outside the item. */
+.m3-segmented__item:has(.m3-segmented__input:focus-visible) {
+  z-index: 1;
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 2px;
+}
+
+.m3-segmented__content {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
+.m3-segmented__icon { --m3-icon-size: 18px; flex: 0 0 auto; color: inherit; }
+
+/* Disabled: 38% label and icon, 12% outline, and a 12% container when selected. */
+.m3-segmented__item--disabled {
+  --seg-label: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  --seg-outline: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent);
+  cursor: default;
+}
+.m3-segmented__item--disabled.m3-segmented__item--checked {
+  --seg-container: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent);
+  --seg-label: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m3-segmented__item,
+  .m3-segmented__item::before { transition-duration: .01ms !important; }
+}

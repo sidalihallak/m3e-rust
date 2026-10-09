@@ -170,6 +170,12 @@ button { cursor: pointer; }
 .slider-stack { display: flex; flex-direction: column; gap: 18px; padding: 16px 8px 8px; }
 .slider-row { display: flex; flex-direction: column; gap: 6px; }
 .slider-grid .code-card { grid-column: 1 / -1; }
+.segmented-section { min-width: 0; }
+.segmented-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.segmented-specimen { min-width: 0; }
+.segmented-stack { display: flex; flex-direction: column; gap: 18px; padding: 16px 8px 8px; }
+.segmented-grid .code-card { grid-column: 1 / -1; }
+@media (max-width: 760px) { .segmented-grid { grid-template-columns: 1fr; } }
 @media (max-width: 760px) { .slider-grid { grid-template-columns: 1fr; } }
 .slider-vertical-card { min-height: 320px; }
 .slider-vertical-row { display: flex; align-items: center; justify-content: center; gap: 64px; padding: 24px 8px 8px; min-height: 280px; }

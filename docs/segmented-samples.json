@@ -1,0 +1,103 @@
+{
+  "geometry": [
+    {
+      "w": 148.34,
+      "h": 40
+    },
+    {
+      "w": 186.16,
+      "h": 40
+    },
+    {
+      "w": 165.5,
+      "h": 40
+    }
+  ],
+  "gap": 2,
+  "initial": [
+    {
+      "label": "Day",
+      "checked": false,
+      "radius": "20px 8px 8px 20px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "label": "Week",
+      "checked": true,
+      "radius": "20px",
+      "bg": "rgb(232, 222, 248)"
+    },
+    {
+      "label": "Month",
+      "checked": false,
+      "radius": "8px 20px 20px 8px",
+      "bg": "rgba(0, 0, 0, 0)"
+    }
+  ],
+  "restRadii": {
+    "first": "20px 8px 8px 20px",
+    "middle": "20px",
+    "last": "8px 20px 20px 8px"
+  },
+  "hoverOpacity": "0.08",
+  "pressedHeld": {
+    "radius": "4.0696px 4.2784px 4.2784px 4.0696px",
+    "stateOpacity": "0.0997557",
+    "checkedWhileHeld": false
+  },
+  "afterRelease": {
+    "checked": [
+      {
+        "label": "Day",
+        "checked": false,
+        "radius": "20px 8px 8px 20px",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Week",
+        "checked": false,
+        "radius": "8px",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Month",
+        "checked": true,
+        "radius": "20px",
+        "bg": "rgb(232, 222, 248)"
+      }
+    ],
+    "monthRadius": "20px",
+    "monthBg": "rgb(232, 222, 248)",
+    "weekRadius": "8px"
+  },
+  "arrowLeft": [
+    false,
+    true,
+    false
+  ],
+  "focusOutline": "solid 3px",
+  "arrowRight": [
+    false,
+    false,
+    true
+  ],
+  "multiAfterClick": [
+    true,
+    true,
+    true
+  ],
+  "multiAfterSpace": [
+    false,
+    true,
+    true
+  ],
+  "favouriteIcon": "m3-icon m3-segmented__icon",
+  "favouriteIconName": "<svg viewBox=\"0 -960 960 960\" class=\"m3-icon m3-segmented__icon\" aria-hidden=\"tr",
+  "multiFavouriteOnNoIcon": "icon",
+  "disabledAfterClick": [
+    true,
+    false
+  ],
+  "disabledLabelColor": "color(srgb 0.113725 0.105882 0.12549 / 0.38)",
+  "pageErrors": []
+}
