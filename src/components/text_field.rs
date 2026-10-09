@@ -1,6 +1,7 @@
 use dioxus::prelude::*;
 
 use super::motion::next_id;
+use super::{Icon, IconData};
 
 /// Text field style. `Outlined` has a 1dp outline. `Filled` has a
 /// surface-container-highest container and a bottom active indicator.
@@ -20,8 +21,15 @@ impl TextFieldVariant {
     }
 }
 
-/// A 56dp text field on a native `<input>`, with a label that floats above the
-/// text once the field is focused or has a value.
+/// A 56dp text field on a native `<input>` (or `<textarea>` when `multiline`),
+/// with a label that floats above the text once the field is focused or has a value.
+///
+/// - `leading_icon` and `trailing_icon` are 24dp icons at the field's edges.
+/// - `prefix` and `suffix` are text inside the field. As in Material, they show only
+///   while the label is floated, so the resting label stays centred.
+/// - `max_length` shows a counter (`count/max`) under the field. Going over the
+///   limit shows the error state.
+/// - `multiline` uses a textarea of three lines that grows with its content.
 ///
 /// `supporting` is helper text below the field. When `error` is set, the field
 /// shows the error colours, sets `aria-invalid`, and the supporting text is the
@@ -36,40 +44,90 @@ pub fn TextField(
     #[props(default)] supporting: Option<String>,
     #[props(default)] error: bool,
     #[props(default)] disabled: bool,
+    #[props(default)] leading_icon: Option<IconData>,
+    #[props(default)] trailing_icon: Option<IconData>,
+    #[props(default)] prefix: Option<String>,
+    #[props(default)] suffix: Option<String>,
+    #[props(default)] max_length: Option<usize>,
+    #[props(default)] multiline: bool,
     #[props(default)] class: String,
     #[props(default)] oninput: EventHandler<String>,
 ) -> Element {
     let id = use_hook(|| next_id("m3-field"));
     let support_id = format!("{id}-support");
     let input_type = if input_type.is_empty() { "text".to_string() } else { input_type };
-    let error_class = if error { " m3-field--error" } else { "" };
+    let length = value.chars().count();
+    let over_limit = max_length.is_some_and(|max| length > max);
+    let invalid = error || over_limit;
+    let error_class = if invalid { " m3-field--error" } else { "" };
     let disabled_class = if disabled { " m3-field--disabled" } else { "" };
-    let class = format!("m3-field m3-field--{}{error_class}{disabled_class} {class}", variant.class());
-    let has_support = supporting.is_some();
+    let leading_class = if leading_icon.is_some() { " m3-field--leading" } else { "" };
+    let trailing_class = if trailing_icon.is_some() { " m3-field--trailing" } else { "" };
+    let multiline_class = if multiline { " m3-field--multiline" } else { "" };
+    let class = format!(
+        "m3-field m3-field--{}{error_class}{disabled_class}{leading_class}{trailing_class}{multiline_class} {class}",
+        variant.class()
+    );
+    let has_support = supporting.is_some() || max_length.is_some();
+    let counter = max_length.map(|max| format!("{length}/{max}"));
 
     rsx! {
         div { class,
             div { class: "m3-field__container",
                 span { class: "m3-field__surface", aria_hidden: "true" }
-                // A single space placeholder lets CSS detect an empty field with :placeholder-shown.
-                input {
-                    id: "{id}",
-                    class: "m3-field__input",
-                    r#type: input_type,
-                    placeholder: " ",
-                    value,
-                    disabled,
-                    "aria-invalid": if error { "true" } else { "false" },
-                    "aria-describedby": if has_support { support_id.clone() } else { String::new() },
-                    oninput: move |event| oninput.call(event.value()),
+                div { class: "m3-field__row",
+                    if let Some(icon) = leading_icon {
+                        Icon { icon, class: "m3-field__icon m3-field__icon--leading" }
+                    }
+                    if let Some(text) = prefix {
+                        span { class: "m3-field__affix m3-field__prefix", "{text}" }
+                    }
+                    if multiline {
+                        textarea {
+                            id: "{id}",
+                            class: "m3-field__input",
+                            rows: "3",
+                            placeholder: " ",
+                            value: "{value}",
+                            disabled,
+                            "aria-invalid": if invalid { "true" } else { "false" },
+                            "aria-describedby": if has_support { support_id.clone() } else { String::new() },
+                            oninput: move |event| oninput.call(event.value()),
+                        }
+                    } else {
+                        input {
+                            id: "{id}",
+                            class: "m3-field__input",
+                            r#type: input_type,
+                            placeholder: " ",
+                            value,
+                            disabled,
+                            "aria-invalid": if invalid { "true" } else { "false" },
+                            "aria-describedby": if has_support { support_id.clone() } else { String::new() },
+                            oninput: move |event| oninput.call(event.value()),
+                        }
+                    }
+                    // These follow the input inside the row, so `input:focus ~ …` matches.
+                    span { class: "m3-field__outline", aria_hidden: "true" }
+                    label { class: "m3-field__label", r#for: "{id}", "{label}" }
+                    span { class: "m3-field__indicator", aria_hidden: "true" }
+                    if let Some(text) = suffix {
+                        span { class: "m3-field__affix m3-field__suffix", "{text}" }
+                    }
+                    if let Some(icon) = trailing_icon {
+                        Icon { icon, class: "m3-field__icon m3-field__icon--trailing" }
+                    }
                 }
-                // The outline follows the input so that `input:focus ~ .m3-field__outline` matches.
-                span { class: "m3-field__outline", aria_hidden: "true" }
-                label { class: "m3-field__label", r#for: "{id}", "{label}" }
-                span { class: "m3-field__indicator", aria_hidden: "true" }
             }
-            if let Some(text) = supporting {
-                p { id: "{support_id}", class: "m3-field__supporting", "{text}" }
+            if has_support {
+                div { class: "m3-field__support-row", id: "{support_id}",
+                    if let Some(text) = supporting {
+                        p { class: "m3-field__supporting", "{text}" }
+                    }
+                    if let Some(text) = counter {
+                        span { class: "m3-field__counter", "{text}" }
+                    }
+                }
             }
         }
     }

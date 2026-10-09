@@ -1,14 +1,16 @@
 /*
- * M3 text field. Copy with src/components/text_field.rs.
+ * M3 text field. Copy with src/components/text_field.rs and icon.css.
  * Sources: Material Web filled and outlined text field tokens (revision 47adb65): 56dp
  * container, body-large input and label text, body-small label when floated, 1dp outline,
  * hover 1dp on-surface, focus primary, error colours, disabled 38% text and 12% outline,
  * 4dp corner (corner-extra-small), filled container surface-container-highest with a 1dp
- * active indicator and a 2dp focused indicator. The focused outline is 3dp in the outlined token
- * file; it is drawn here as a 1dp outline plus a 2dp inset ring.
- * The label float (200ms standard easing) is a choice; the token file gives no duration.
+ * active indicator and a 2dp focused indicator. Leading and trailing icons are 24dp, as the
+ * tokens define. The focused outline is 3dp in the outlined token file; it is drawn as a 1dp
+ * outline plus a 2dp inset ring. The label float (200ms) is a choice; the token file gives no duration.
+ * Prefix and suffix show only while the label is floated, as in Material. Counters and
+ * multi-line fields follow the Material layout; their exact spacing is a choice.
  */
-.m3-field { display: inline-flex; flex-direction: column; width: 280px; max-width: 100%; box-sizing: border-box; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+.m3-field { --field-label-x: 16px; --field-notch: var(--md-sys-color-surface); display: inline-flex; flex-direction: column; width: 280px; max-width: 100%; box-sizing: border-box; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
 
 .m3-field__container {
   --field-caret: var(--md-sys-color-primary);
@@ -20,8 +22,45 @@
   height: 56px;
   box-sizing: border-box;
 }
+.m3-field--leading { --field-label-x: 52px; }
+.m3-field--multiline .m3-field__container { height: auto; min-height: 56px; }
 
-/* Filled: the surface and the bottom indicator. */
+/* Row: the leading icon, prefix, input, suffix and trailing icon in one line. */
+.m3-field__row {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+.m3-field--filled .m3-field__row { padding: 24px 16px 8px; }
+.m3-field--multiline .m3-field__row { position: relative; align-items: flex-start; padding: 16px; }
+.m3-field--multiline.m3-field--filled .m3-field__row { padding: 24px 16px 16px; }
+.m3-field--leading .m3-field__row { padding-left: 12px; }
+.m3-field--trailing .m3-field__row { padding-right: 12px; }
+
+.m3-field__icon { --m3-icon-size: 24px; flex: 0 0 auto; color: var(--md-sys-color-on-surface-variant); pointer-events: none; }
+.m3-field__icon--leading { margin-right: 16px; }
+.m3-field__icon--trailing { margin-left: 12px; }
+.m3-field--disabled .m3-field__icon { color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
+
+/* Prefix and suffix: body-large, on-surface-variant, shown only while the label is floated. */
+.m3-field__affix {
+  display: none;
+  flex: 0 0 auto;
+  color: var(--md-sys-color-on-surface-variant);
+  font: 400 16px/24px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .03125rem;
+  white-space: nowrap;
+}
+.m3-field__prefix { margin-right: 2px; }
+.m3-field__suffix { margin-left: 2px; }
+.m3-field:has(.m3-field__input:focus) .m3-field__affix,
+.m3-field:has(.m3-field__input:not(:placeholder-shown)) .m3-field__affix { display: block; }
+.m3-field--disabled .m3-field__affix { color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
+
 .m3-field__surface { display: none; }
 .m3-field__indicator { display: none; }
 .m3-field--filled .m3-field__surface {
@@ -41,7 +80,6 @@
 .m3-field--filled .m3-field__container:hover .m3-field__indicator { background: var(--md-sys-color-on-surface); }
 .m3-field--filled .m3-field__input:focus ~ .m3-field__indicator { height: 2px; background: var(--md-sys-color-primary); }
 
-/* Outlined: a 1dp outline around the field, 4dp corners. */
 .m3-field__outline { display: none; }
 .m3-field--outlined .m3-field__outline {
   position: absolute; inset: 0;
@@ -57,15 +95,16 @@
   box-shadow: inset 0 0 0 2px var(--md-sys-color-primary);
 }
 
-/* Input: fills the container, with a 16dp inset. The top inset leaves room for a floated label. */
+/* Input: fills the row; no own padding, so the row supplies the 16dp inset. */
 .m3-field__input {
   position: relative;
   z-index: 1;
-  width: 100%;
-  height: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 24px;
   box-sizing: border-box;
   margin: 0;
-  padding: 16px;
+  padding: 0;
   border: 0;
   background: transparent;
   color: var(--field-text);
@@ -74,16 +113,25 @@
   outline: none;
   caret-color: var(--field-caret);
 }
-.m3-field--filled .m3-field__input { padding-top: 24px; padding-bottom: 8px; }
+.m3-field--filled .m3-field__input { height: 24px; }
+.m3-field--multiline .m3-field__input {
+  flex: 1 1 auto;
+  height: auto;
+  min-height: 72px;
+  resize: none;
+  overflow: hidden;
+}
+/* Three lines at rest; `field-sizing: content` grows the textarea with its text. */
+.m3-field--multiline .m3-field__input { field-sizing: content; }
 
-/* Label: sits in the middle at rest; floats to body-small when focused or filled. */
+/* Label: centred at rest, floated to body-small when focused or filled. */
 .m3-field__label {
   position: absolute;
   z-index: 2;
-  left: 16px;
+  left: var(--field-label-x);
   top: 50%;
   transform: translateY(-50%);
-  max-width: calc(100% - 32px);
+  max-width: calc(100% - var(--field-label-x) - 16px);
   padding: 0 4px;
   margin-left: -4px;
   color: var(--field-label);
@@ -99,9 +147,12 @@
     line-height 200ms cubic-bezier(.2, 0, 0, 1),
     color 200ms cubic-bezier(.2, 0, 0, 1);
 }
-/* The floated label masks the outline, as the outlined notch does: it takes the page surface. */
-.m3-field--outlined .m3-field__label { background: var(--md-sys-color-surface); }
+/* The floated label masks the outline. It takes --field-notch, the surface behind the field (the page surface by default). */
+.m3-field--outlined .m3-field__label { background: var(--field-notch); }
 .m3-field--filled .m3-field__label { margin-left: 0; padding: 0; }
+
+/* Multi-line: the label sits beside the first line at rest, and floats to the top edge. */
+.m3-field--multiline .m3-field__label { top: 28px; transform: translateY(-50%); }
 
 .m3-field__input:focus ~ .m3-field__label,
 .m3-field__input:not(:placeholder-shown) ~ .m3-field__label {
@@ -111,34 +162,49 @@
   line-height: 16px;
   letter-spacing: .025rem;
 }
-.m3-field--outlined .m3-field__input:not(:placeholder-shown) ~ .m3-field__label,
-.m3-field--outlined .m3-field__input:focus ~ .m3-field__label { top: 0; }
 .m3-field--filled .m3-field__input:focus ~ .m3-field__label,
 .m3-field--filled .m3-field__input:not(:placeholder-shown) ~ .m3-field__label { top: 8px; transform: none; }
+.m3-field--multiline.m3-field--filled .m3-field__input:focus ~ .m3-field__label,
+.m3-field--multiline.m3-field--filled .m3-field__input:not(:placeholder-shown) ~ .m3-field__label { top: 8px; }
 
 .m3-field__input:focus ~ .m3-field__label { color: var(--md-sys-color-primary); }
 
-/* Supporting text: body-small, 16dp inset. */
-.m3-field__supporting {
+/* Supporting text and counter: body-small, 16dp inset, the counter on the trailing edge. */
+.m3-field__support-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
   margin: 4px 16px 0;
+}
+.m3-field__supporting {
+  margin: 0;
   color: var(--md-sys-color-on-surface-variant);
   font: 400 12px/16px Inter, ui-sans-serif, system-ui, sans-serif;
   letter-spacing: .025rem;
 }
+.m3-field__counter {
+  margin-left: auto;
+  color: var(--md-sys-color-on-surface-variant);
+  font: 400 12px/16px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .025rem;
+  white-space: nowrap;
+}
 
-/* Error: error outline or indicator, label and supporting text in error. */
+/* Error: error outline or indicator, label, supporting text and counter in error. */
 .m3-field--error .m3-field__label,
 .m3-field--error .m3-field__input:focus ~ .m3-field__label { color: var(--md-sys-color-error); }
-.m3-field--error .m3-field__supporting { color: var(--md-sys-color-error); }
+.m3-field--error .m3-field__supporting,
+.m3-field--error .m3-field__counter { color: var(--md-sys-color-error); }
 .m3-field--outlined.m3-field--error .m3-field__outline { --field-outline: var(--md-sys-color-error); }
 .m3-field--outlined.m3-field--error .m3-field__input:focus ~ .m3-field__outline { box-shadow: inset 0 0 0 2px var(--md-sys-color-error); }
 .m3-field--filled.m3-field--error .m3-field__indicator { background: var(--md-sys-color-error); }
 .m3-field--filled.m3-field--error .m3-field__input:focus ~ .m3-field__indicator { background: var(--md-sys-color-error); }
 
-/* Disabled: 38% text and label, 12% outline and indicator, 4% filled container. */
+/* Disabled: 38% text, label and supporting text; 12% outline and indicator; 4% filled container. */
 .m3-field--disabled .m3-field__input { color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); cursor: default; }
-.m3-field--disabled .m3-field__label { color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
-.m3-field--disabled .m3-field__supporting { color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
+.m3-field--disabled .m3-field__label,
+.m3-field--disabled .m3-field__supporting,
+.m3-field--disabled .m3-field__counter { color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
 .m3-field--outlined.m3-field--disabled .m3-field__outline { --field-outline: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent); }
 .m3-field--filled.m3-field--disabled .m3-field__surface { background: color-mix(in srgb, var(--md-sys-color-on-surface) 4%, transparent); }
 .m3-field--filled.m3-field--disabled .m3-field__indicator { background: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }

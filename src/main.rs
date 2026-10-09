@@ -313,6 +313,7 @@ fn Settings() -> Element {
 
 const TEXT_FIELD_USAGE: &str = r#"use dioxus::prelude::*;
 use m3e_rust_ui::{TextField, TextFieldVariant};
+use m3e_rust_ui::icons;
 
 #[component]
 fn Signup() -> Element {
@@ -322,6 +323,8 @@ fn Signup() -> Element {
         TextField {
             variant: TextFieldVariant::Outlined,
             label: "Email",
+            leading_icon: icons::INFO,
+            max_length: 80,
             input_type: "email",
             value: email(),
             error: invalid,
@@ -368,6 +371,9 @@ fn App() -> Element {
     let mut views = use_signal(|| [true, false, true]);
     let mut name_value = use_signal(String::new);
     let mut email_value = use_signal(|| String::from("not-an-email"));
+    let mut note_value = use_signal(String::new);
+    let mut search_value = use_signal(String::new);
+    let mut price_value = use_signal(String::new);
     let mut menu_pick = use_signal(|| String::from("none"));
     let theme = theme::ThemePreview::from_seed(seed());
     let scheme = if dark() {
@@ -1216,6 +1222,14 @@ fn App() -> Element {
                         div { class: "field-stack",
                             TextField { label: "Account number", value: "1234 5678", disabled: true, supporting: "Read only" }
                             TextField { variant: TextFieldVariant::Filled, label: "Filled disabled", disabled: true }
+                        }
+                    }
+                    article { class: "demo-card field-specimen",
+                        div { class: "card-topline", span { "ICONS · PREFIX · COUNTER · MULTI-LINE" } span { class: "component-index", "D" } }
+                        div { class: "field-stack",
+                            TextField { label: "Search", value: search_value(), leading_icon: icons::FAVORITE, trailing_icon: icons::CLOSE, oninput: move |v: String| search_value.set(v) }
+                            TextField { label: "Price", value: price_value(), input_type: "number", prefix: "$".to_string(), suffix: "USD".to_string(), supporting: "Before tax".to_string(), oninput: move |v: String| price_value.set(v) }
+                            TextField { label: "Note", value: note_value(), multiline: true, max_length: 60, supporting: "Shown to the recipient".to_string(), oninput: move |v: String| note_value.set(v) }
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Text field usage", code: TEXT_FIELD_USAGE }

@@ -1,0 +1,59 @@
+{
+  "fieldNames": [
+    "Name",
+    "Email",
+    "Account number",
+    "Filled disabled",
+    "Search",
+    "Price",
+    "Note"
+  ],
+  "search": {
+    "inputLeftInContainer": 52,
+    "icons": [
+      {
+        "side": "leading",
+        "left": 12,
+        "right": 244,
+        "w": 24
+      },
+      {
+        "side": "trailing",
+        "left": 244,
+        "right": 12,
+        "w": 24
+      }
+    ],
+    "labelX": "52px"
+  },
+  "priceRestAffix": [
+    "none",
+    "none"
+  ],
+  "priceFocusedAffix": [
+    "block",
+    "block"
+  ],
+  "priceSupportCounter": false,
+  "priceTyped": {
+    "value": "12",
+    "affix": [
+      "block",
+      "block"
+    ]
+  },
+  "noteIsTextarea": 1,
+  "noteCounterAtStart": "0/60",
+  "noteContainerHeightEmpty": 104,
+  "noteCounterAt10": "10/60",
+  "noteErrorAt10": false,
+  "noteCounterAt70": "70/60",
+  "noteAriaInvalidAt70": "true",
+  "noteCounterColorAt70": "rgb(186, 26, 26)",
+  "noteContainerHeightAt70": 104,
+  "noteContainerHeightManyLines": 176,
+  "fieldSizingSupported": true,
+  "emailCounter": null,
+  "emailLeadingIcon": 0,
+  "pageErrors": []
+}

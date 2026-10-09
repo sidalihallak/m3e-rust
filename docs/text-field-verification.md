@@ -37,9 +37,11 @@ Desktop only.
 | Supporting text | body-small, 16px inset, `aria-describedby` on the input | Tokens and ARIA |
 | Label association | `<label for>` linked to the input | ARIA |
 | Keyboard | Native input: Tab moves focus; typing edits the value | Native |
-
-Not implemented: leading and trailing icons, prefix and suffix text, character counters, and
-multi-line text areas.
+| Leading icon | 24dp icon 12dp from the start edge; text starts 16dp after the icon (52dp) | Tokens (24dp icon) and Material layout |
+| Trailing icon | 24dp icon 12dp from the end edge | Tokens and Material layout |
+| Prefix and suffix | Body-large, on-surface-variant; shown only while the label is floated, as in Material | Material layout |
+| Counter | `count/max` on the trailing edge of the supporting row; over the limit, the field shows the error state and `aria-invalid="true"` | Material layout |
+| Multi-line | Three lines at rest, growing with the text (`field-sizing: content`); label beside the first line at rest, floated to the top edge | Material layout; growth is a choice |
 
 ## 3. Input, state and platform matrix
 
@@ -57,9 +59,24 @@ Raw data: [`field-samples.json`](field-samples.json). Screenshot: [`field-sectio
 | Error supporting text | Linked with `aria-describedby` |
 | Label association | `for` matches the input id on every field |
 | Disabled field, click | Not focused; text and label 38% |
+| Leading icon, input and label positions | Icon at 12px; input and floated label at 52px (measured) |
+| Prefix and suffix | Hidden at rest; shown on focus or with a value (measured) |
+| Counter | `0/60` at start; `10/60` after 10 characters; `70/60` with the error colour and `aria-invalid="true"` over 60 |
+| Multi-line | 104px container with three lines; 176px with six lines |
 | Page errors | 0 |
 
 ## 4. Diagnosed defects
+
+- **Floated labels stopped floating (regression).** Moving the input into a row element broke the
+  `input:focus ~ label` sibling selectors. The outline, label and indicator now sit inside the row,
+  after the input. Measured again: the outlined label floats to 12px on focus and when filled,
+  and the multi-line note floats too.
+- **Filled floated label overlapped the text.** The filled row's top padding was 16px, which is
+  not enough for a floated label. It is now 24px at the top and 8px at the bottom. Measured: the
+  label and the input text no longer overlap.
+- **Outlined notch showed as a box.** The label's background was the page surface, which is
+  lighter than the card the preview field sits on. The notch colour is now `--field-notch`, which
+  the preview sets to the card surface. Consumers on another surface should set it too.
 
 - **Focused outline never applied on outlined fields.** The outline element came before the input in
   the DOM, so `input:focus ~ outline` never matched. The outline now follows the input. Measured:
@@ -78,10 +95,12 @@ Raw data: [`field-samples.json`](field-samples.json). Screenshot: [`field-sectio
 
 ## 6. Unresolved differences and untested behaviour
 
-- Leading and trailing icons, prefix and suffix text, counters and multi-line fields are not implemented.
+- Multi-line growth needs `field-sizing: content`. Chromium 1194 supports it; browsers without it keep
+  the three-line height and scroll.
+- The counter does not stop input at the limit: it counts and shows the error state, as Material does.
 - The label float duration (200ms) is a choice. The Material spec was not read (blocked host).
-- The label notch on the outline is an approximation: the label takes the surface colour rather than
-  being cut from the outline path, so it looks right only on the surface colour it is placed on.
+- The label notch on the outline is an approximation: the label takes `--field-notch` rather than
+  being cut from the outline path, so it looks right only where that colour matches the surface behind it.
 - Touch input, Android, the on-screen keyboard, reduced motion and screen-reader announcements are not measured.
 - Autofill and validation timing (when the error appears) are left to the consumer.
 
