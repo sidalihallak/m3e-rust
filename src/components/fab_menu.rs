@@ -1,7 +1,10 @@
 use dioxus::prelude::*;
+use std::sync::atomic::{AtomicUsize, Ordering};
 
 use super::{Icon, IconData};
 use crate::icons;
+
+static NEXT_MENU_ID: AtomicUsize = AtomicUsize::new(0);
 
 /// Colour role for the FAB menu. The open trigger and the items use the
 /// matching role: primary, secondary or tertiary.
@@ -66,8 +69,46 @@ pub fn FabMenu(
     let label = aria_label.unwrap_or_else(|| "Actions".to_string());
     let expanded = if open { "true" } else { "false" };
 
+    // Each menu gets an id so a document-level pointer listener can tell whether a
+    // press landed outside it. The listener only reports; the consumer decides.
+    let menu_id = use_hook(|| format!("m3-fab-menu-{}", NEXT_MENU_ID.fetch_add(1, Ordering::Relaxed)));
+    let listener_id = menu_id.clone();
+    use_hook(move || {
+        spawn(async move {
+            let mut events = document::eval(&format!(
+                r#"
+                const root = document.getElementById("{listener_id}");
+                const handler = (e) => {{
+                    if (root && root.classList.contains("m3-fab-menu--open") && !root.contains(e.target)) {{
+                        dioxus.send(true);
+                    }}
+                }};
+                window.__m3FabMenuListeners = window.__m3FabMenuListeners || {{}};
+                window.__m3FabMenuListeners["{listener_id}"] = handler;
+                document.addEventListener("pointerdown", handler, true);
+                "#
+            ));
+            while events.recv::<bool>().await.is_ok() {
+                onchange.call(false);
+            }
+        });
+    });
+    let drop_id = menu_id.clone();
+    use_drop(move || {
+        spawn(async move {
+            let _ = document::eval(&format!(
+                r#"
+                const handler = window.__m3FabMenuListeners && window.__m3FabMenuListeners["{drop_id}"];
+                if (handler) document.removeEventListener("pointerdown", handler, true);
+                "#
+            ))
+            .await;
+        });
+    });
+
     rsx! {
         div {
+            id: "{menu_id}",
             class,
             onkeydown: move |event| {
                 if open && event.key() == Key::Escape {
