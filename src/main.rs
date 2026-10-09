@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -157,6 +157,27 @@ fn Saving() -> Element {
     }
 }"#;
 
+const RADIO_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{Radio, RadioGroup};
+
+#[component]
+fn SizePicker() -> Element {
+    let mut size = use_signal(|| "medium".to_string());
+    rsx! {
+        RadioGroup { aria_label: Some("Size".to_string()),
+            for (value, label) in [("small", "Small"), ("medium", "Medium"), ("large", "Large")] {
+                Radio {
+                    name: "size".to_string(),
+                    value: value.to_string(),
+                    checked: size() == value,
+                    aria_label: Some(label.to_string()),
+                    onchange: move |_| size.set(value.to_string()),
+                }
+            }
+        }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -179,6 +200,7 @@ fn App() -> Element {
     let mut filter_b = use_signal(|| true);
     let mut input_shown = use_signal(|| true);
     let mut progress = use_signal(|| 0.4_f64);
+    let mut radio = use_signal(|| 1_usize);
     let mut menu_pick = use_signal(|| String::from("none"));
     let theme = theme::ThemePreview::from_seed(seed());
     let scheme = if dark() {
@@ -201,6 +223,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/chip.css") }
         document::Stylesheet { href: asset!("/assets/progress.css") }
         document::Stylesheet { href: asset!("/assets/loading-indicator.css") }
+        document::Stylesheet { href: asset!("/assets/radio.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -608,6 +631,57 @@ fn App() -> Element {
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Progress usage", code: PROGRESS_USAGE }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Loading indicator usage", code: LOADING_USAGE }
+                }
+            }
+            section { class: "wrap roles-section radio-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "09 — RADIO" }
+                        h2 { "Radio buttons" }
+                        p { class: "section-description", "Native radio inputs, so arrow keys move and select within a group. The dot scales in on the expressive fast spatial spring." }
+                    }
+                    span { class: "token-note", "M3 EXPRESSIVE · MATERIAL WEB TOKENS" }
+                }
+                div { class: "radio-grid",
+                    article { class: "demo-card radio-specimen",
+                        div { class: "card-topline", span { "GROUP" } span { class: "component-index", "A" } }
+                        RadioGroup { aria_label: Some("Size".to_string()), class: "radio-list",
+                            for (index, label) in ["Small", "Medium", "Large"].iter().enumerate() {
+                                div { class: "radio-row",
+                                    Radio {
+                                        name: "size-preview".to_string(),
+                                        value: label.to_string(),
+                                        checked: radio() == index,
+                                        aria_label: Some(label.to_string()),
+                                        onchange: move |_| radio.set(index),
+                                    }
+                                    span { class: "control-label", "{label}" }
+                                }
+                            }
+                        }
+                    }
+                    article { class: "demo-card radio-specimen",
+                        div { class: "card-topline", span { "STATES" } span { class: "component-index", "B" } }
+                        div { class: "radio-list",
+                            div { class: "radio-row",
+                                Radio { name: "state-a".to_string(), value: "unselected".to_string(), aria_label: Some("Unselected".to_string()) }
+                                span { class: "control-label", "Unselected" }
+                            }
+                            div { class: "radio-row",
+                                Radio { name: "state-b".to_string(), value: "selected".to_string(), checked: true, aria_label: Some("Selected".to_string()) }
+                                span { class: "control-label", "Selected" }
+                            }
+                            div { class: "radio-row",
+                                Radio { name: "state-c".to_string(), value: "disabled".to_string(), disabled: true, aria_label: Some("Disabled".to_string()) }
+                                span { class: "control-label", "Disabled" }
+                            }
+                            div { class: "radio-row",
+                                Radio { name: "state-d".to_string(), value: "disabled-selected".to_string(), checked: true, disabled: true, aria_label: Some("Disabled selected".to_string()) }
+                                span { class: "control-label", "Disabled, selected" }
+                            }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Radio usage", code: RADIO_USAGE }
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }

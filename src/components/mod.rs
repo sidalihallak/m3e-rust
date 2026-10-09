@@ -8,6 +8,7 @@ pub mod loading_indicator;
 pub(crate) mod motion;
 pub mod icon_button;
 pub mod progress;
+pub mod radio;
 pub mod switch;
 
 pub use button::{Button, ButtonShape, ButtonSize, ButtonType, ButtonVariant};
@@ -19,4 +20,5 @@ pub use icon::{Icon, IconData};
 pub use icon_button::{IconButton, IconButtonShape, IconButtonSize, IconButtonVariant};
 pub use loading_indicator::{LoadingIndicator, LoadingIndicatorVariant};
 pub use progress::{CircularProgress, LinearProgress};
+pub use radio::{Radio, RadioGroup};
 pub use switch::Switch;

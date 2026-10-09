@@ -157,3 +157,10 @@ button { cursor: pointer; }
 .progress-circles { display: flex; align-items: center; justify-content: space-around; gap: 16px; padding: 18px 0 8px; }
 .progress-grid .code-card { grid-column: 1 / -1; }
 @media (max-width: 760px) { .progress-grid { grid-template-columns: 1fr; } }
+.radio-section { min-width: 0; }
+.radio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.radio-specimen { min-width: 0; }
+.radio-list { display: flex; flex-direction: column; gap: 4px; padding: 12px 4px; }
+.radio-row { display: flex; align-items: center; gap: 8px; }
+.radio-grid .code-card { grid-column: 1 / -1; }
+@media (max-width: 760px) { .radio-grid { grid-template-columns: 1fr; } }

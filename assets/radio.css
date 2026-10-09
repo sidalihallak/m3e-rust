@@ -1,0 +1,103 @@
+/*
+ * M3 expressive radio button. Copy with src/components/radio.rs.
+ * Sources: Material Web radio tokens (20dp icon, 40dp state layer, colours,
+ * state layers 0.08/0.10, disabled 0.38); upstream radio-group.tsx for the
+ * 20dp ring with a 2dp outline and the 10dp dot that scales on the expressive
+ * fast spatial spring (360ms).
+ */
+.m3-radio-group { display: grid; gap: 4px; }
+
+.m3-radio {
+  --radio-ring: var(--md-sys-color-on-surface-variant);
+  --radio-dot: var(--md-sys-color-primary);
+  --radio-state: var(--md-sys-color-on-surface);
+  --radio-state-opacity: 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* The native input covers the 40dp target and carries the semantics. It is
+   transparent, so the drawn ring and dot show. */
+.m3-radio__input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+/* 40dp circular state layer, behind the ring. */
+.m3-radio__state {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--radio-state);
+  opacity: var(--radio-state-opacity);
+  pointer-events: none;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+.m3-radio__ring {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--radio-ring);
+  border-radius: 50%;
+  transition: border-color 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+/* The dot scales in on the expressive fast spatial spring. */
+.m3-radio__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--radio-dot);
+  transform: scale(0);
+  transition: transform 360ms var(--radio-spring);
+}
+.m3-radio--checked .m3-radio__dot { transform: scale(1); }
+.m3-radio--checked {
+  --radio-ring: var(--md-sys-color-primary);
+  --radio-state: var(--md-sys-color-primary);
+}
+
+/* Hover: ring on-surface (unselected); state layer 0.08. */
+.m3-radio:not(.m3-radio--disabled):hover { --radio-state-opacity: .08; }
+.m3-radio:not(.m3-radio--disabled):not(.m3-radio--checked):hover { --radio-ring: var(--md-sys-color-on-surface); --radio-state: var(--md-sys-color-on-surface); }
+
+/* Focus ring and state layer 0.10. */
+.m3-radio:not(.m3-radio--disabled):has(.m3-radio__input:focus-visible) { --radio-state-opacity: .10; }
+.m3-radio__input:focus-visible + .m3-radio__state + .m3-radio__ring {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 10px;
+}
+
+/* Pressed: state layer 0.10. Unselected pressed uses primary; selected uses on-surface. */
+.m3-radio:not(.m3-radio--disabled):active { --radio-state-opacity: .10; }
+.m3-radio:not(.m3-radio--disabled):not(.m3-radio--checked):active { --radio-state: var(--md-sys-color-primary); --radio-ring: var(--md-sys-color-on-surface); }
+.m3-radio.m3-radio--checked:not(.m3-radio--disabled):active { --radio-state: var(--md-sys-color-on-surface); }
+
+/* Disabled: 38% ring and dot, no state layer. */
+.m3-radio--disabled {
+  --radio-ring: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  --radio-dot: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  cursor: not-allowed;
+}
+.m3-radio--disabled .m3-radio__input { cursor: not-allowed; }
+
+@media (prefers-reduced-motion: reduce) {
+  .m3-radio__dot, .m3-radio__ring, .m3-radio__state { transition-duration: .01ms !important; }
+}
+:root { --radio-spring: linear(0, 0.0206, 0.0754, 0.1544, 0.2492, 0.3524, 0.458, 0.5613, 0.6588, 0.7479, 0.8269, 0.895, 0.952, 0.9981, 1.0338, 1.0603, 1.0783, 1.0893, 1.0942, 1.0943, 1.0906, 1.0842, 1.0759, 1.0665, 1.0565, 1.0465, 1.037, 1.0281, 1.0201, 1.0131, 1.0072, 1.0023, 0.9984, 0.9955, 0.9934, 0.992, 0.9912, 0.991, 0.9912, 0.9917, 0.9924, 0.9932, 0.9942, 0.9951, 0.996, 0.9969, 0.9977, 0.9984, 1); }

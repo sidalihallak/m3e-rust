@@ -63,6 +63,8 @@ The chip is verified in [`docs/chip-verification.md`](docs/chip-verification.md)
 
 Progress indicators are verified in [`docs/progress-verification.md`](docs/progress-verification.md).
 
+Radio buttons are verified in [`docs/radio-verification.md`](docs/radio-verification.md).
+
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
 
