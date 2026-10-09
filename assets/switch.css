@@ -89,7 +89,8 @@
   line-height: 1;
   transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
 }
-.m3-switch__icon > * { width: 16px; height: 16px; }
+/* Icon sizes through its own variable, so the Icon stylesheet's width rule does not override it. */
+.m3-switch__icon > * { --m3-icon-size: 16px; }
 .m3-switch__icon--checked { opacity: 0; }
 .m3-switch__icon--unchecked { opacity: 1; }
 .m3-switch--checked .m3-switch__icon--checked { opacity: 1; }
