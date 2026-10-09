@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardActions, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardActions, Divider, DividerInset, DividerOrientation, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -299,6 +299,18 @@ fn EventCard() -> Element {
     }
 }"#;
 
+const DIVIDER_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{Divider, DividerInset};
+
+#[component]
+fn Settings() -> Element {
+    rsx! {
+        span { "Wi-Fi" }
+        Divider { inset: DividerInset::Start }
+        span { "Bluetooth" }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -362,6 +374,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/tabs.css") }
         document::Stylesheet { href: asset!("/assets/badge.css") }
         document::Stylesheet { href: asset!("/assets/card.css") }
+        document::Stylesheet { href: asset!("/assets/divider.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -1119,6 +1132,38 @@ fn App() -> Element {
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Card usage", code: CARD_USAGE }
+                }
+            }
+            section { class: "wrap roles-section divider-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "15 — DIVIDER" }
+                        h2 { "Dividers" }
+                        p { class: "section-description", "A 1dp outline-variant line, horizontal or vertical, with an optional 16dp list inset. Dividers are role separator elements." }
+                    }
+                    span { class: "token-note", "MATERIAL WEB TOKENS" }
+                }
+                div { class: "divider-grid",
+                    article { class: "demo-card divider-specimen",
+                        div { class: "card-topline", span { "HORIZONTAL" } span { class: "component-index", "A" } }
+                        div { class: "divider-stack",
+                            span { class: "control-label", "Full width" }
+                            Divider {}
+                            span { class: "control-label", "Inset at start" }
+                            Divider { inset: DividerInset::Start }
+                            span { class: "control-label", "Inset on both sides" }
+                            Divider { inset: DividerInset::Middle }
+                        }
+                    }
+                    article { class: "demo-card divider-specimen",
+                        div { class: "card-topline", span { "VERTICAL" } span { class: "component-index", "B" } }
+                        div { class: "divider-row",
+                            span { class: "control-label", "Left" }
+                            Divider { orientation: DividerOrientation::Vertical }
+                            span { class: "control-label", "Right" }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Divider usage", code: DIVIDER_USAGE }
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }

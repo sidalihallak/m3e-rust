@@ -75,6 +75,8 @@ Notification badges are verified in [`docs/badge-verification.md`](docs/badge-ve
 
 Cards are verified in [`docs/card-verification.md`](docs/card-verification.md).
 
+Dividers are verified in [`docs/divider-verification.md`](docs/divider-verification.md).
+
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
 

@@ -1,0 +1,50 @@
+{
+  "count": 4,
+  "items": [
+    {
+      "cls": "m3-divider m3-divider--horizontal ",
+      "role": "separator",
+      "orientation": "horizontal",
+      "thickness": 1,
+      "width": 504,
+      "height": 1,
+      "color": "rgb(202, 196, 207)",
+      "insetLeft": 8,
+      "insetRight": 8
+    },
+    {
+      "cls": "m3-divider m3-divider--horizontal m3-divider--inset-start ",
+      "role": "separator",
+      "orientation": "horizontal",
+      "thickness": 1,
+      "width": 488,
+      "height": 1,
+      "color": "rgb(202, 196, 207)",
+      "insetLeft": 24,
+      "insetRight": 8
+    },
+    {
+      "cls": "m3-divider m3-divider--horizontal m3-divider--inset-middle ",
+      "role": "separator",
+      "orientation": "horizontal",
+      "thickness": 1,
+      "width": 472,
+      "height": 1,
+      "color": "rgb(202, 196, 207)",
+      "insetLeft": 24,
+      "insetRight": 24
+    },
+    {
+      "cls": "m3-divider m3-divider--vertical ",
+      "role": "separator",
+      "orientation": "vertical",
+      "thickness": 1,
+      "width": 1,
+      "height": 88,
+      "color": "rgb(202, 196, 207)",
+      "insetLeft": 46.23,
+      "insetRight": 472.77
+    }
+  ],
+  "pageErrors": []
+}

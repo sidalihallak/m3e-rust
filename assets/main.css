@@ -206,3 +206,11 @@ button { cursor: pointer; }
 .card-specimen--media .card-stack { padding: 16px 0 0; }
 /* Image cards are shown at phone width (360dp), the width of the Material reference, so the 12dp corners read at the same proportion. */
 .card-specimen--media .m3-card { max-width: 360px; margin: 0 auto; }
+
+.divider-section { min-width: 0; }
+.divider-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.divider-specimen { min-width: 0; }
+.divider-stack { display: flex; flex-direction: column; gap: 14px; padding: 16px 8px 8px; }
+.divider-row { display: flex; align-items: stretch; gap: 16px; height: 120px; padding: 16px 8px; }
+.divider-grid .code-card { grid-column: 1 / -1; }
+@media (max-width: 760px) { .divider-grid { grid-template-columns: 1fr; } }

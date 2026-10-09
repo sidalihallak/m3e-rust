@@ -1,6 +1,7 @@
 pub mod badge;
 pub mod button;
 pub mod card;
+pub mod divider;
 pub mod chip;
 pub mod checkbox;
 pub mod fab;
@@ -17,6 +18,7 @@ pub mod switch;
 pub mod tabs;
 
 pub use badge::{BadgeAnchor, NotificationBadge};
+pub use divider::{Divider, DividerInset, DividerOrientation};
 pub use card::{Card, CardActions, CardBody, CardMedia, CardVariant};
 pub use button::{Button, ButtonShape, ButtonSize, ButtonType, ButtonVariant};
 pub use chip::{Chip, ChipVariant};
