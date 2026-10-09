@@ -1,0 +1,13 @@
+{
+  "rest": {
+    "notchTextW": "34.890625px",
+    "outlineNotchW": "0px",
+    "labelBg": "rgba(0, 0, 0, 0)"
+  },
+  "focused": {
+    "notchTextW": "34.890625px",
+    "outlineNotchW": "42.8906px",
+    "labelBg": "rgba(0, 0, 0, 0)"
+  },
+  "pageErrors": []
+}

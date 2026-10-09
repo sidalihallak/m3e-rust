@@ -71,8 +71,21 @@ pub fn TextField(
     let has_support = supporting.is_some() || max_length.is_some();
     let counter = max_length.map(|max| format!("{length}/{max}"));
 
+    // The notch is cut to the width of the floated label. A script measures that width once.
+    use_effect({
+        let id = id.clone();
+        move || {
+            let script = notch_script(&id);
+            spawn(async move {
+                if let Err(err) = document::eval(&script).join::<bool>().await {
+                    let _ = document::eval(&format!("console.error({:?})", format!("text field: {err}"))).await;
+                }
+            });
+        }
+    });
+
     rsx! {
-        div { class,
+        div { id: "{id}-root", class,
             div { class: "m3-field__container",
                 span { class: "m3-field__surface", aria_hidden: "true" }
                 div { class: "m3-field__row",
@@ -119,6 +132,8 @@ pub fn TextField(
                     }
                 }
             }
+            // Hidden copy of the label at its floated size, used only to measure the notch width.
+            span { class: "m3-field__measure", aria_hidden: "true", "{label}" }
             if has_support {
                 div { class: "m3-field__support-row", id: "{support_id}",
                     if let Some(text) = supporting {
@@ -131,4 +146,21 @@ pub fn TextField(
             }
         }
     }
+}
+
+/// Sets `--notch-text-w` on the field to the floated label's width, once the font has loaded.
+fn notch_script(id: &str) -> String {
+    format!(
+        r#"
+const root = document.getElementById("{id}-root");
+if (!root) return false;
+const measure = () => {{
+  const m = root.querySelector(".m3-field__measure");
+  if (m) root.style.setProperty("--notch-text-w", m.getBoundingClientRect().width + "px");
+}};
+measure();
+if (document.fonts) document.fonts.ready.then(measure);
+return true;
+"#
+    )
 }

@@ -30,6 +30,7 @@ Desktop only.
 | Label floated | body-small, 12/16, on the outline (outlined) or 8px from the top (filled) | Tokens and Material layout |
 | Float transition | 200ms standard easing | Choice; the token file gives no duration |
 | Outlined outline | 1dp outline; hover on-surface; focus primary, 3dp total | Tokens |
+| Outlined notch | A cut in the top outline, the floated label's width plus 4dp either side; no painted colour | Material layout; the cut is drawn with a mask |
 | Filled container | surface-container-highest, 4dp top corners | Tokens |
 | Filled indicator | 1dp on-surface-variant; hover on-surface; focus 2dp primary | Tokens |
 | Error | error outline or indicator, error label and supporting text, `aria-invalid="true"` | Tokens |
@@ -74,9 +75,12 @@ Raw data: [`field-samples.json`](field-samples.json). Screenshot: [`field-sectio
 - **Filled floated label overlapped the text.** The filled row's top padding was 16px, which is
   not enough for a floated label. It is now 24px at the top and 8px at the bottom. Measured: the
   label and the input text no longer overlap.
-- **Outlined notch showed as a box.** The label's background was the page surface, which is
-  lighter than the card the preview field sits on. The notch colour is now `--field-notch`, which
-  the preview sets to the card surface. Consumers on another surface should set it too.
+- **Outlined notch was a painted background.** The label's background was the page surface. It
+  showed as a box on any other surface. The notch is now a real cut in the outline: a CSS mask removes
+  a band from the top edge, the width of the floated label plus 4dp either side. No colour is
+  painted, so the notch works on any surface. Measured: the notch is 42.9px for the 34.9px "Name"
+  label, and the outline is cut on the light card and the dark card alike (`notch-light.png`,
+  `notch-dark.png`).
 
 - **Focused outline never applied on outlined fields.** The outline element came before the input in
   the DOM, so `input:focus ~ outline` never matched. The outline now follows the input. Measured:
@@ -99,8 +103,9 @@ Raw data: [`field-samples.json`](field-samples.json). Screenshot: [`field-sectio
   the three-line height and scroll.
 - The counter does not stop input at the limit: it counts and shows the error state, as Material does.
 - The label float duration (200ms) is a choice. The Material spec was not read (blocked host).
-- The label notch on the outline is an approximation: the label takes `--field-notch` rather than
-  being cut from the outline path, so it looks right only where that colour matches the surface behind it.
+- The notch width is measured once, when the field mounts, from a hidden copy of the label. If the
+  label text changes later, the notch keeps the old width. Browsers without CSS mask composition
+  (`mask-composite`) show the full outline.
 - Touch input, Android, the on-screen keyboard, reduced motion and screen-reader announcements are not measured.
 - Autofill and validation timing (when the error appears) are left to the consumer.
 

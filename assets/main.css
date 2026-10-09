@@ -222,5 +222,3 @@ button { cursor: pointer; }
 .field-grid .code-card { grid-column: 1 / -1; }
 @media (max-width: 760px) { .field-grid { grid-template-columns: 1fr; } }
 
-/* Text fields sit on the card surface, so their floated labels mask the outline with that colour. */
-.field-section .m3-field { --field-notch: var(--md-sys-color-surface-container-low); }
