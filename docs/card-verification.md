@@ -67,6 +67,18 @@ Raw data: [`card-samples.json`](card-samples.json). Screenshot: [`card-section.p
   text were inline spans, so "Media card" and its supporting text sat on one line. Both are now
   blocks. Measured: the text starts 4px below the title, as the margin sets.
 
+## 3d. Image corners
+
+The Material reference with a headline, subhead and supporting text (fourth reference) rounds
+all four corners of the image, not only the top two. The image now has a 12px radius on each
+corner. Measured (`card-media-corners.json`): 12px on all four corners, flush with the card's
+top, left and right edges, and the text body starts directly below the image, with its own 24px inset.
+
+Action alignment: the references differ. One shows the actions at the end of the row, and the
+fourth shows them at the start, on the filled and outlined cards. Both are supported
+(`CardActions`, with `start: true` for start alignment). The default is end, as before; this
+has not been changed for the references that show start alignment.
+
 ## 3c. Image flush to the card edge
 
 The reference images show the image flush with the card's top and sides, with no padding, and

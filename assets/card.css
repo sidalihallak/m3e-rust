@@ -47,7 +47,8 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 12px 12px 0 0;
+  /* Rounded on all four corners, as in the Material reference; the card clips the top edge. */
+  border-radius: 12px;
 }
 .m3-card__body { display: block; padding: 24px; }
 /* A body followed by an action row leaves the bottom inset to the action row. */
