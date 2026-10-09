@@ -1,0 +1,12 @@
+/*
+ * Material Symbols glyph. Copy with src/components/icon.rs and src/icons.rs.
+ * Glyphs are official Material Symbols Rounded paths; the grid is 960 units.
+ */
+.m3-icon {
+  --m3-icon-size: 24px;
+  display: inline-block;
+  flex: 0 0 auto;
+  width: var(--m3-icon-size);
+  height: var(--m3-icon-size);
+  fill: currentColor;
+}

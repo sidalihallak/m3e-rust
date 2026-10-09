@@ -1,5 +1,6 @@
 use dioxus::prelude::*;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Switch};
+use m3e_rust_ui::icons;
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Icon, Switch};
 
 mod theme;
 
@@ -79,6 +80,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/button.css") }
         document::Stylesheet { href: asset!("/assets/switch.css") }
         document::Stylesheet { href: asset!("/assets/checkbox.css") }
+        document::Stylesheet { href: asset!("/assets/icon.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -214,12 +216,8 @@ fn App() -> Element {
                             Switch {
                                 checked: switch_icon_on(),
                                 aria_label: Some("Wi-Fi".to_string()),
-                                checked_icon: Some(rsx! {
-                                    svg { view_box: "0 0 24 24", fill: "currentColor", path { d: "M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" } }
-                                }),
-                                unchecked_icon: Some(rsx! {
-                                    svg { view_box: "0 0 24 24", fill: "currentColor", path { d: "M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" } }
-                                }),
+                                checked_icon: Some(rsx! { Icon { icon: icons::CHECK } }),
+                                unchecked_icon: Some(rsx! { Icon { icon: icons::CLOSE } }),
                                 onchange: move |value| switch_icon_on.set(value),
                             }
                         }
@@ -265,6 +263,15 @@ fn App() -> Element {
                             span { class: "control-label", "Error" }
                             Checkbox { error: true, aria_label: Some("Error".to_string()) }
                         }
+                    }
+                    article { class: "demo-card control-specimen icon-specimen",
+                        div { class: "card-topline", span { "ICON" } span { class: "component-index", "C" } }
+                        div { class: "icon-grid",
+                            for (label, icon) in [("add", icons::ADD), ("favorite", icons::FAVORITE), ("check", icons::CHECK), ("close", icons::CLOSE), ("info", icons::INFO), ("chevron_left", icons::CHEVRON_LEFT), ("arrow_back", icons::ARROW_BACK), ("remove", icons::REMOVE)] {
+                                div { class: "icon-cell", Icon { icon, class: "icon-glyph" } span { "{label}" } }
+                            }
+                        }
+                        p { class: "icon-note", "Official Material Symbols Rounded paths, generated from @material-symbols/svg-400@0.48.0." }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Switch usage", code: SWITCH_USAGE }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Checkbox usage", code: CHECKBOX_USAGE }
