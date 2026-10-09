@@ -137,3 +137,10 @@ button { cursor: pointer; }
 @media (max-width: 760px) { .fab-grid { grid-template-columns: 1fr; } }
 .fab-menu-row { display: flex; align-items: flex-end; justify-content: center; gap: 56px; min-height: 280px; padding-top: 12px; }
 .fab-menu-specimen .icon-note { text-align: center; }
+.icon-button-section { min-width: 0; }
+.icon-button-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.icon-button-specimen { min-width: 0; }
+.ib-row { display: flex; align-items: flex-end; justify-content: center; gap: 22px; min-height: 110px; padding-top: 14px; }
+.ib-row-wrap { flex-wrap: wrap; row-gap: 14px; }
+.icon-button-grid .code-card { grid-column: 1 / -1; }
+@media (max-width: 760px) { .icon-button-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,142 @@
+/*
+ * M3 expressive icon button. Copy with src/components/icon_button.rs and icon.css.
+ * Sources: Material Web icon button tokens (sizes 32/40/56/96/136dp, icons
+ * 20/24/24/32/40dp, corners, state layers 0.08/0.10/0.10, disabled 0.10 and
+ * 0.38). The press morph uses the expressive fast spatial spring, from the
+ * shadcn-m3e motion tokens (360ms).
+ */
+.m3-icon-button {
+  --ib-spring: linear(0, 0.0206, 0.0754, 0.1544, 0.2492, 0.3524, 0.458, 0.5613, 0.6588, 0.7479, 0.8269, 0.895, 0.952, 0.9981, 1.0338, 1.0603, 1.0783, 1.0893, 1.0942, 1.0943, 1.0906, 1.0842, 1.0759, 1.0665, 1.0565, 1.0465, 1.037, 1.0281, 1.0201, 1.0131, 1.0072, 1.0023, 0.9984, 0.9955, 0.9934, 0.992, 0.9912, 0.991, 0.9912, 0.9917, 0.9924, 0.9932, 0.9942, 0.9951, 0.996, 0.9969, 0.9977, 0.9984, 1);
+  --ib-size: 40px;
+  --ib-icon: 24px;
+  --ib-round: calc(var(--ib-size) / 2);
+  --ib-corner-square: 12px;
+  --ib-corner-pressed: 8px;
+  --ib-corner-selected-round: 12px;
+  --ib-container: transparent;
+  --ib-icon-color: var(--md-sys-color-on-surface-variant);
+  --ib-border: transparent;
+  --ib-state: var(--md-sys-color-on-surface-variant);
+  --ib-state-opacity: 0;
+  --m3-icon-size: var(--ib-icon);
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: var(--ib-size);
+  height: var(--ib-size);
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--ib-border);
+  border-radius: var(--ib-radius, var(--ib-round));
+  color: var(--ib-icon-color);
+  background: var(--ib-container);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    border-radius 360ms var(--ib-spring),
+    background-color 200ms cubic-bezier(.2, 0, 0, 1),
+    color 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+/* State layer: the icon colour, at 0.08 hover, 0.10 focus and pressed. */
+.m3-icon-button::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--ib-state);
+  content: "";
+  opacity: var(--ib-state-opacity);
+  pointer-events: none;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+/* Sizes. */
+.m3-icon-button--xs { --ib-size: 32px; --ib-icon: 20px; --ib-corner-square: 12px; --ib-corner-pressed: 8px; --ib-corner-selected-round: 12px; }
+.m3-icon-button--s { --ib-size: 40px; --ib-icon: 24px; --ib-corner-square: 12px; --ib-corner-pressed: 8px; --ib-corner-selected-round: 12px; }
+.m3-icon-button--m { --ib-size: 56px; --ib-icon: 24px; --ib-corner-square: 16px; --ib-corner-pressed: 12px; --ib-corner-selected-round: 16px; }
+.m3-icon-button--l { --ib-size: 96px; --ib-icon: 32px; --ib-corner-square: 28px; --ib-corner-pressed: 16px; --ib-corner-selected-round: 28px; }
+.m3-icon-button--xl { --ib-size: 136px; --ib-icon: 40px; --ib-corner-square: 28px; --ib-corner-pressed: 16px; --ib-corner-selected-round: 28px; }
+
+/* Shape: round is a circle; square uses the size's medium corner. A selected
+   toggle swaps them: a selected round is the medium corner, a selected square is
+   a circle. */
+.m3-icon-button--round { --ib-radius: var(--ib-round); }
+.m3-icon-button--square { --ib-radius: var(--ib-corner-square); }
+.m3-icon-button--round.m3-icon-button--selected { --ib-radius: var(--ib-corner-selected-round); }
+.m3-icon-button--square.m3-icon-button--selected { --ib-radius: var(--ib-round); }
+
+/* Pressed corner. Qualified so it outranks the selected rules above. */
+.m3-icon-button.m3-icon-button--pressed { --ib-radius: var(--ib-corner-pressed); }
+
+/* Variants: unselected and selected colours. */
+.m3-icon-button--standard {
+  --ib-container: transparent;
+  --ib-icon-color: var(--md-sys-color-on-surface-variant);
+  --ib-state: var(--md-sys-color-on-surface-variant);
+}
+.m3-icon-button--standard.m3-icon-button--selected {
+  --ib-icon-color: var(--md-sys-color-primary);
+  --ib-state: var(--md-sys-color-primary);
+}
+.m3-icon-button--filled {
+  --ib-container: var(--md-sys-color-primary);
+  --ib-icon-color: var(--md-sys-color-on-primary);
+  --ib-state: var(--md-sys-color-on-primary);
+}
+.m3-icon-button--tonal {
+  --ib-container: var(--md-sys-color-secondary-container);
+  --ib-icon-color: var(--md-sys-color-on-secondary-container);
+  --ib-state: var(--md-sys-color-on-secondary-container);
+}
+.m3-icon-button--tonal.m3-icon-button--selected {
+  --ib-container: var(--md-sys-color-secondary);
+  --ib-icon-color: var(--md-sys-color-on-secondary);
+  --ib-state: var(--md-sys-color-on-secondary);
+}
+.m3-icon-button--outlined {
+  --ib-container: transparent;
+  --ib-border: var(--md-sys-color-outline-variant);
+  --ib-icon-color: var(--md-sys-color-on-surface-variant);
+  --ib-state: var(--md-sys-color-on-surface-variant);
+}
+.m3-icon-button--outlined.m3-icon-button--selected {
+  --ib-container: var(--md-sys-color-inverse-surface);
+  --ib-border: var(--md-sys-color-inverse-surface);
+  --ib-icon-color: var(--md-sys-color-inverse-on-surface);
+  --ib-state: var(--md-sys-color-inverse-on-surface);
+}
+
+/* Hover and focus change only the state layer. */
+.m3-icon-button:not(:disabled):hover { --ib-state-opacity: .08; }
+.m3-icon-button:not(:disabled):focus-visible { --ib-state-opacity: .10; }
+.m3-icon-button:focus-visible {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 2px;
+}
+
+/* Pressed: state layer 0.10. Qualified so it outranks the hover rule. */
+.m3-icon-button.m3-icon-button--pressed:not(:disabled) { --ib-state-opacity: .10; }
+
+/* Disabled: 10% container, 38% icon. */
+.m3-icon-button:disabled {
+  --ib-container: color-mix(in srgb, var(--md-sys-color-on-surface) 10%, transparent);
+  --ib-icon-color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  cursor: not-allowed;
+}
+.m3-icon-button:disabled.m3-icon-button--outlined {
+  --ib-container: transparent;
+  --ib-border: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m3-icon-button,
+  .m3-icon-button *,
+  .m3-icon-button::before {
+    transition-duration: .01ms !important;
+  }
+}

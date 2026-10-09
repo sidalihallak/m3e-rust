@@ -1,0 +1,527 @@
+{
+  "captured": "2026-10-09",
+  "sizes": [
+    {
+      "cls": "m3-icon-button--xs",
+      "w": 32,
+      "h": 32,
+      "radius": "16px",
+      "icon": 20
+    },
+    {
+      "cls": "m3-icon-button--s",
+      "w": 40,
+      "h": 40,
+      "radius": "20px",
+      "icon": 24
+    },
+    {
+      "cls": "m3-icon-button--m",
+      "w": 56,
+      "h": 56,
+      "radius": "28px",
+      "icon": 24
+    },
+    {
+      "cls": "m3-icon-button--l",
+      "w": 96,
+      "h": 96,
+      "radius": "48px",
+      "icon": 32
+    },
+    {
+      "cls": "m3-icon-button--xl",
+      "w": 136,
+      "h": 136,
+      "radius": "68px",
+      "icon": 40
+    },
+    {
+      "cls": "m3-icon-button--s",
+      "w": 40,
+      "h": 40,
+      "radius": "12px",
+      "icon": 24
+    },
+    {
+      "cls": "m3-icon-button--s",
+      "w": 40,
+      "h": 40,
+      "radius": "12px",
+      "icon": 24
+    },
+    {
+      "cls": "m3-icon-button--s",
+      "w": 40,
+      "h": 40,
+      "radius": "20px",
+      "icon": 24
+    },
+    {
+      "cls": "m3-icon-button--s",
+      "w": 40,
+      "h": 40,
+      "radius": "20px",
+      "icon": 24
+    }
+  ],
+  "colours": [
+    {
+      "variant": "standard",
+      "bg": "#000000",
+      "icon": "#49454e",
+      "expectBg": null
+    },
+    {
+      "variant": "filled",
+      "bg": "#65558f",
+      "icon": "#ffffff",
+      "expectBg": "#65558f"
+    },
+    {
+      "variant": "tonal",
+      "bg": "#e8def8",
+      "icon": "#4a4458",
+      "expectBg": "#e8def8"
+    },
+    {
+      "variant": "outlined",
+      "bg": "#000000",
+      "icon": "#49454e",
+      "expectBg": null
+    }
+  ],
+  "pressSamples": [
+    {
+      "ms": 1,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0"
+    },
+    {
+      "ms": 19,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0"
+    },
+    {
+      "ms": 36,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0"
+    },
+    {
+      "ms": 51,
+      "radius": "20px",
+      "pressed": true,
+      "stateOpacity": "0.0100044"
+    },
+    {
+      "ms": 69,
+      "radius": "18.8803px",
+      "pressed": true,
+      "stateOpacity": "0.0407378"
+    },
+    {
+      "ms": 85,
+      "radius": "16.4647px",
+      "pressed": true,
+      "stateOpacity": "0.060722"
+    },
+    {
+      "ms": 103,
+      "radius": "13.6941px",
+      "pressed": true,
+      "stateOpacity": "0.0731475"
+    },
+    {
+      "ms": 118,
+      "radius": "11.1535px",
+      "pressed": true,
+      "stateOpacity": "0.0816892"
+    },
+    {
+      "ms": 135,
+      "radius": "9.18704px",
+      "pressed": true,
+      "stateOpacity": "0.0877834"
+    },
+    {
+      "ms": 152,
+      "radius": "7.88571px",
+      "pressed": true,
+      "stateOpacity": "0.0921711"
+    },
+    {
+      "ms": 168,
+      "radius": "7.15832px",
+      "pressed": true,
+      "stateOpacity": "0.0953433"
+    },
+    {
+      "ms": 185,
+      "radius": "6.88293px",
+      "pressed": true,
+      "stateOpacity": "0.097548"
+    },
+    {
+      "ms": 201,
+      "radius": "6.9128px",
+      "pressed": true,
+      "stateOpacity": "0.0989748"
+    },
+    {
+      "ms": 218,
+      "radius": "7.11477px",
+      "pressed": true,
+      "stateOpacity": "0.0997587"
+    },
+    {
+      "ms": 235,
+      "radius": "7.3748px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 251,
+      "radius": "7.6272px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 268,
+      "radius": "7.83272px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 285,
+      "radius": "7.97739px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 301,
+      "radius": "8.0624px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 318,
+      "radius": "8.10125px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 335,
+      "radius": "8.10614px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 351,
+      "radius": "8.0912px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 368,
+      "radius": "8.0673px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 385,
+      "radius": "8.04325px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 401,
+      "radius": "8.022px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 418,
+      "radius": "8px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 435,
+      "radius": "8px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 451,
+      "radius": "8px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 468,
+      "radius": "8px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 485,
+      "radius": "8px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 502,
+      "radius": "8px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 518,
+      "radius": "8px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 535,
+      "radius": "8px",
+      "pressed": true,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 555,
+      "radius": "8px",
+      "pressed": false,
+      "stateOpacity": "0.1"
+    },
+    {
+      "ms": 568,
+      "radius": "9.1241px",
+      "pressed": false,
+      "stateOpacity": "0.0979886"
+    },
+    {
+      "ms": 585,
+      "radius": "11.5411px",
+      "pressed": false,
+      "stateOpacity": "0.0918729"
+    },
+    {
+      "ms": 602,
+      "radius": "14.3282px",
+      "pressed": false,
+      "stateOpacity": "0.0878491"
+    },
+    {
+      "ms": 618,
+      "radius": "16.8657px",
+      "pressed": false,
+      "stateOpacity": "0.0853541"
+    },
+    {
+      "ms": 635,
+      "radius": "18.8162px",
+      "pressed": false,
+      "stateOpacity": "0.0836592"
+    },
+    {
+      "ms": 651,
+      "radius": "20.122px",
+      "pressed": false,
+      "stateOpacity": "0.0824412"
+    },
+    {
+      "ms": 668,
+      "radius": "20.8427px",
+      "pressed": false,
+      "stateOpacity": "0.0815642"
+    },
+    {
+      "ms": 685,
+      "radius": "21.1173px",
+      "pressed": false,
+      "stateOpacity": "0.0809302"
+    },
+    {
+      "ms": 701,
+      "radius": "21.0868px",
+      "pressed": false,
+      "stateOpacity": "0.0804897"
+    },
+    {
+      "ms": 718,
+      "radius": "20.8862px",
+      "pressed": false,
+      "stateOpacity": "0.0802059"
+    },
+    {
+      "ms": 735,
+      "radius": "20.6246px",
+      "pressed": false,
+      "stateOpacity": "0.0800487"
+    },
+    {
+      "ms": 752,
+      "radius": "20.3723px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 769,
+      "radius": "20.1669px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 785,
+      "radius": "20.0224px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 801,
+      "radius": "19.9378px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 818,
+      "radius": "19.8986px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 836,
+      "radius": "19.8939px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 851,
+      "radius": "19.9087px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 868,
+      "radius": "19.9329px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 885,
+      "radius": "19.9568px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 901,
+      "radius": "19.978px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 918,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 935,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 951,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 970,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 985,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 1002,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 1018,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 1035,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 1051,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 1068,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 1085,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 1102,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 1118,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 1135,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    },
+    {
+      "ms": 1151,
+      "radius": "20px",
+      "pressed": false,
+      "stateOpacity": "0.08"
+    }
+  ],
+  "restRadius": "20px",
+  "squareUnselected": "12px",
+  "squareSelected": {
+    "radius": "20px",
+    "w": 40,
+    "pressed": "true"
+  },
+  "standardToggleAria": "false",
+  "standardToggleAriaAfter": "true",
+  "disabledPressedClass": false,
+  "pageErrors": []
+}
