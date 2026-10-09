@@ -63,6 +63,11 @@ pub fn Fab(
     #[props(default)] size: FabSize,
     #[props(default)] color: FabColor,
     #[props(default)] lowered: bool,
+    /// Branded FAB: surface container with a larger icon (36dp standard, 48dp large).
+    #[props(default)] branded: bool,
+    /// Toolbar floating FAB: elevation 1 at rest (2 when medium). Use the
+    /// secondary-container or tertiary-container colour.
+    #[props(default)] toolbar: bool,
     #[props(default)] disabled: bool,
     #[props(default)] label: Option<String>,
     #[props(default)] class: String,
@@ -72,13 +77,15 @@ pub fn Fab(
     let mut pressed = use_signal(|| false);
     let extended_class = if label.is_some() { " m3-fab--extended" } else { "" };
     let lowered_class = if lowered { " m3-fab--lowered" } else { "" };
+    let branded_class = if branded { " m3-fab--branded" } else { "" };
+    let toolbar_class = if toolbar { " m3-fab--toolbar" } else { "" };
     let pressed_class = if pressed() && !disabled {
         " m3-fab--pressed"
     } else {
         ""
     };
     let class = format!(
-        "m3-fab m3-fab--{} m3-fab--{}{extended_class}{lowered_class}{pressed_class} {class}",
+        "m3-fab m3-fab--{} m3-fab--{}{extended_class}{lowered_class}{branded_class}{toolbar_class}{pressed_class} {class}",
         size.class(),
         color.class(),
     );

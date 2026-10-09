@@ -166,3 +166,27 @@
     transition-duration: .01ms !important;
   }
 }
+
+/* Branded FAB: surface container, icon at 36dp (standard) or 48dp (large).
+   Material Web defines no icon colour for the branded container, so the icon
+   uses primary. Override --fab-icon for a brand colour. */
+.m3-fab--branded {
+  --fab-container: var(--md-sys-color-surface-container-high);
+  --fab-icon: var(--md-sys-color-primary);
+}
+.m3-fab--branded.m3-fab--standard { --fab-icon-size: 36px; }
+.m3-fab--branded.m3-fab--large { --fab-icon-size: 48px; }
+.m3-fab--branded.m3-fab--lowered { --fab-container: var(--md-sys-color-surface-container-low); }
+
+/* Toolbar floating FAB. Standard rests at elevation 1 and rises to 2 on hover.
+   Medium rests at elevation 2 and rises to 3. Hover and rest are set explicitly
+   for each size so the values do not depend on rule order. */
+.m3-fab--toolbar { --fab-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15); }
+.m3-fab--toolbar:not(:disabled):hover { --fab-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 2px 6px 2px rgb(0 0 0 / .15); }
+.m3-fab--toolbar.m3-fab--medium {
+  --fab-radius: 20px;
+  --fab-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 2px 6px 2px rgb(0 0 0 / .15);
+}
+.m3-fab--toolbar.m3-fab--medium:not(:disabled):hover {
+  --fab-shadow: 0 1px 3px 0 rgb(0 0 0 / .3), 0 4px 8px 3px rgb(0 0 0 / .15);
+}

@@ -54,6 +54,9 @@ The floating action button is verified in
 [`docs/fab-verification.md`](docs/fab-verification.md), with raw samples in
 [`docs/fab-motion-samples.json`](docs/fab-motion-samples.json).
 
+The FAB family (branded, toolbar and menu) is verified in
+[`docs/fab-family-verification.md`](docs/fab-family-verification.md).
+
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
 

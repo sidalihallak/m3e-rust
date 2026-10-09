@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Fab, FabColor, FabSize, Icon, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Fab, FabColor, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, Switch};
 
 mod theme;
 
@@ -77,6 +77,29 @@ fn ComposeButton() -> Element {
     }
 }"#;
 
+const FAB_MENU_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{icons, FabMenu, FabMenuColor, FabMenuItem};
+
+#[component]
+fn ActionsMenu() -> Element {
+    let mut open = use_signal(|| false);
+    let items = vec![
+        FabMenuItem { icon: icons::FAVORITE, label: "Favourite" },
+        FabMenuItem { icon: icons::INFO, label: "Details" },
+        FabMenuItem { icon: icons::ADD, label: "Add" },
+    ];
+    rsx! {
+        FabMenu {
+            items,
+            color: FabMenuColor::Primary,
+            open: open(),
+            aria_label: Some("Actions".to_string()),
+            onchange: move |value| open.set(value),
+            onselect: move |index: usize| println!("picked {index}"),
+        }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -92,6 +115,8 @@ fn App() -> Element {
     let mut check_b = use_signal(|| true);
     // (indeterminate, checked): the mixed box resolves to checked when activated.
     let mut check_mixed = use_signal(|| (true, false));
+    let mut menu_open = use_signal(|| false);
+    let mut menu_pick = use_signal(|| String::from("none"));
     let theme = theme::ThemePreview::from_seed(seed());
     let scheme = if dark() {
         theme.dark
@@ -108,6 +133,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/checkbox.css") }
         document::Stylesheet { href: asset!("/assets/icon.css") }
         document::Stylesheet { href: asset!("/assets/fab.css") }
+        document::Stylesheet { href: asset!("/assets/fab-menu.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -361,12 +387,45 @@ fn App() -> Element {
                             Fab { icon: icons::ADD, size: FabSize::Medium, label: Some("Disabled".to_string()), disabled: true, aria_label: Some("Disabled extended".to_string()) }
                         }
                     }
+                    article { class: "demo-card fab-specimen",
+                        div { class: "card-topline", span { "BRANDED · TOOLBAR" } span { class: "component-index", "D" } }
+                        div { class: "fab-row fab-row-wrap",
+                            div { class: "button-example", Fab { icon: icons::FAVORITE, branded: true, aria_label: Some("Branded standard".to_string()) } span { "BRANDED · 56" } }
+                            div { class: "button-example", Fab { icon: icons::FAVORITE, branded: true, size: FabSize::Large, aria_label: Some("Branded large".to_string()) } span { "BRANDED · 96" } }
+                            div { class: "button-example", Fab { icon: icons::ADD, toolbar: true, color: FabColor::SecondaryContainer, aria_label: Some("Toolbar standard".to_string()) } span { "TOOLBAR S" } }
+                            div { class: "button-example", Fab { icon: icons::ADD, toolbar: true, color: FabColor::TertiaryContainer, aria_label: Some("Toolbar vibrant".to_string()) } span { "VIBRANT" } }
+                            div { class: "button-example", Fab { icon: icons::ADD, toolbar: true, size: FabSize::Medium, color: FabColor::SecondaryContainer, aria_label: Some("Toolbar medium".to_string()) } span { "TOOLBAR M · 80" } }
+                        }
+                    }
+                    article { class: "demo-card fab-specimen fab-menu-specimen",
+                        div { class: "card-topline", span { "FAB MENU" } span { class: "component-index", "E" } }
+                        div { class: "fab-menu-row",
+                            FabMenu {
+                                items: menu_items(),
+                                open: menu_open(),
+                                aria_label: Some("Actions".to_string()),
+                                onchange: move |value| menu_open.set(value),
+                                onselect: move |index: usize| menu_pick.set(menu_items()[index].label.to_string()),
+                            }
+                            FabMenu { items: menu_items(), color: FabMenuColor::Tertiary, open: true, aria_label: Some("Open tertiary menu".to_string()) }
+                        }
+                        p { class: "icon-note", "Last picked: {menu_pick}. Escape closes the menu." }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "FAB menu usage", code: FAB_MENU_USAGE }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "FAB usage", code: FAB_USAGE }
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
         }
     }
+}
+
+fn menu_items() -> Vec<FabMenuItem> {
+    vec![
+        FabMenuItem { icon: icons::FAVORITE, label: "Favourite" },
+        FabMenuItem { icon: icons::INFO, label: "Details" },
+        FabMenuItem { icon: icons::ADD, label: "Add" },
+    ]
 }
 
 #[component]

@@ -1,0 +1,169 @@
+/*
+ * M3 FAB menu. Copy with src/components/fab_menu.rs, fab.css and icon.css.
+ * Sources: Material Web FAB menu tokens (close button 56dp, icon 20dp, items
+ * 56dp with 24dp side padding, 8dp icon-label space, 4dp between, title-medium
+ * label, elevation 0 items and 3 for the close button); shadcn-m3e fab-menu.tsx
+ * for the open trigger shape and the 35ms stagger.
+ */
+.m3-fab-menu {
+  --menu-spring: linear(0, .0616, .1912, .3374, .4751, .594, .6916, .7689, .8288, .8743, .9084, .9337, .9523, .9658, .9756, .9826, .9877, .9913, .9939, .9957, .997, .9979, .9985, .999, 1);
+  --menu-trigger-container: var(--md-sys-color-primary-container);
+  --menu-trigger-icon: var(--md-sys-color-on-primary-container);
+  --menu-item-container: var(--md-sys-color-primary-container);
+  --menu-item-on: var(--md-sys-color-on-primary-container);
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+/* Colour roles for the open trigger (close button tokens) and the items. */
+.m3-fab-menu--primary {
+  --menu-open-container: var(--md-sys-color-primary);
+  --menu-open-icon: var(--md-sys-color-on-primary);
+  --menu-item-container: var(--md-sys-color-primary-container);
+  --menu-item-on: var(--md-sys-color-on-primary-container);
+}
+.m3-fab-menu--secondary {
+  --menu-open-container: var(--md-sys-color-secondary);
+  --menu-open-icon: var(--md-sys-color-on-secondary);
+  --menu-item-container: var(--md-sys-color-secondary-container);
+  --menu-item-on: var(--md-sys-color-on-secondary-container);
+}
+.m3-fab-menu--tertiary {
+  --menu-open-container: var(--md-sys-color-tertiary);
+  --menu-open-icon: var(--md-sys-color-on-tertiary);
+  --menu-item-container: var(--md-sys-color-tertiary-container);
+  --menu-item-on: var(--md-sys-color-on-tertiary-container);
+}
+
+.m3-fab-menu__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+/* Items: hidden and scaled down while closed; the nearest item springs in first. */
+.m3-fab-menu__item {
+  --state-opacity: 0;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 56px;
+  margin: 0;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 28px;
+  color: var(--menu-item-on);
+  background: var(--menu-item-container);
+  font: 500 16px/24px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .009375rem;
+  white-space: nowrap;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px) scale(.75);
+  transform-origin: right center;
+  transition:
+    opacity 200ms cubic-bezier(.2, 0, 0, 1),
+    transform 240ms var(--menu-spring);
+  -webkit-tap-highlight-color: transparent;
+}
+.m3-fab-menu__item::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: currentColor;
+  content: "";
+  opacity: var(--state-opacity);
+  pointer-events: none;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+.m3-fab-menu__item-icon {
+  --m3-icon-size: 24px;
+  flex: 0 0 auto;
+}
+.m3-fab-menu--open .m3-fab-menu__item {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+  transition-delay: calc(var(--i, 0) * 35ms);
+}
+.m3-fab-menu--open .m3-fab-menu__item:hover { --state-opacity: .08; }
+.m3-fab-menu--open .m3-fab-menu__item:focus-visible { --state-opacity: .10; }
+.m3-fab-menu--open .m3-fab-menu__item:active { --state-opacity: .10; }
+.m3-fab-menu__item:focus-visible {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 2px;
+}
+
+/* Trigger: 56dp, corner 16dp closed and a circle while open, elevation 3. */
+.m3-fab-menu__trigger {
+  --state-opacity: 0;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  color: var(--menu-trigger-icon);
+  background: var(--menu-trigger-container);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / .3), 0 4px 8px 3px rgb(0 0 0 / .15);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    border-radius 240ms var(--menu-spring),
+    background-color 200ms cubic-bezier(.2, 0, 0, 1),
+    color 200ms cubic-bezier(.2, 0, 0, 1),
+    box-shadow 200ms cubic-bezier(.2, 0, 0, 1);
+}
+.m3-fab-menu__trigger::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: currentColor;
+  content: "";
+  opacity: var(--state-opacity);
+  pointer-events: none;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+.m3-fab-menu--open .m3-fab-menu__trigger {
+  border-radius: 28px;
+  color: var(--menu-open-icon);
+  background: var(--menu-open-container);
+}
+.m3-fab-menu__trigger:hover { --state-opacity: .08; }
+.m3-fab-menu__trigger:focus-visible {
+  --state-opacity: .10;
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 2px;
+}
+.m3-fab-menu__trigger:active { --state-opacity: .10; }
+.m3-fab-menu__glyph {
+  display: grid;
+  place-items: center;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+.m3-fab-menu__trigger-icon { --m3-icon-size: 24px; }
+.m3-fab-menu__glyph--close .m3-fab-menu__trigger-icon { --m3-icon-size: 20px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .m3-fab-menu,
+  .m3-fab-menu *,
+  .m3-fab-menu *::before {
+    transition-duration: .01ms !important;
+    transition-delay: 0ms !important;
+  }
+}

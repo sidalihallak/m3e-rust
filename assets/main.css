@@ -135,3 +135,5 @@ button { cursor: pointer; }
 .fab-row-wrap { flex-wrap: wrap; row-gap: 14px; }
 .fab-grid .code-card { grid-column: 1 / -1; }
 @media (max-width: 760px) { .fab-grid { grid-template-columns: 1fr; } }
+.fab-menu-row { display: flex; align-items: flex-end; justify-content: center; gap: 56px; min-height: 280px; padding-top: 12px; }
+.fab-menu-specimen .icon-note { text-align: center; }

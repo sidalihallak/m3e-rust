@@ -1,0 +1,503 @@
+{
+  "captured": "2026-10-09",
+  "checks": {},
+  "branded": [
+    {
+      "cls": "m3-fab--standard m3-fab--primary-container m3-fab--branded",
+      "w": 56,
+      "radius": "16px",
+      "icon": 36,
+      "bg": "#ece6ee",
+      "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 3px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 3px"
+    },
+    {
+      "cls": "m3-fab--large m3-fab--primary-container m3-fab--branded",
+      "w": 96,
+      "radius": "28px",
+      "icon": 48,
+      "bg": "#ece6ee",
+      "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 3px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 3px"
+    },
+    {
+      "cls": "m3-fab--standard m3-fab--secondary-container m3-fab--toolbar",
+      "w": 56,
+      "radius": "16px",
+      "icon": 24,
+      "bg": "#e8def8",
+      "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px"
+    },
+    {
+      "cls": "m3-fab--standard m3-fab--tertiary-container m3-fab--toolbar",
+      "w": 56,
+      "radius": "16px",
+      "icon": 24,
+      "bg": "#ffd9e3",
+      "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px"
+    },
+    {
+      "cls": "m3-fab--medium m3-fab--secondary-container m3-fab--toolbar",
+      "w": 80,
+      "radius": "20px",
+      "icon": 28,
+      "bg": "#e8def8",
+      "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px"
+    }
+  ],
+  "toolbarHover": null,
+  "toolbar": {
+    "stdRest": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+    "medRest": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+    "stdHover": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+    "medHover": "rgba(0, 0, 0, 0.3) 0px 1px 3px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 3px"
+  },
+  "closed": {
+    "expanded": "false",
+    "triggerBg": "rgb(233, 221, 255)",
+    "triggerRadius": "16px",
+    "itemOpacity": [
+      "0",
+      "0",
+      "0"
+    ],
+    "itemTabindex": [
+      "-1",
+      "-1",
+      "-1"
+    ]
+  },
+  "samples": [
+    {
+      "ms": 15,
+      "op": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "ms": 53,
+      "op": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "ms": 56,
+      "op": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "ms": 66,
+      "op": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "ms": 80,
+      "op": [
+        0,
+        0,
+        0.0997435
+      ]
+    },
+    {
+      "ms": 96,
+      "op": [
+        0,
+        0,
+        0.407063
+      ]
+    },
+    {
+      "ms": 113,
+      "op": [
+        0,
+        0.0761573,
+        0.607036
+      ]
+    },
+    {
+      "ms": 130,
+      "op": [
+        0,
+        0.379486,
+        0.731962
+      ]
+    },
+    {
+      "ms": 146,
+      "op": [
+        0.0575109,
+        0.591957,
+        0.817234
+      ]
+    },
+    {
+      "ms": 163,
+      "op": [
+        0.350232,
+        0.721427,
+        0.877772
+      ]
+    },
+    {
+      "ms": 185,
+      "op": [
+        0.574141,
+        0.809399,
+        0.921667
+      ]
+    },
+    {
+      "ms": 196,
+      "op": [
+        0.710474,
+        0.87243,
+        0.953401
+      ]
+    },
+    {
+      "ms": 213,
+      "op": [
+        0.802192,
+        0.918026,
+        0.975459
+      ]
+    },
+    {
+      "ms": 230,
+      "op": [
+        0.867241,
+        0.950815,
+        0.989735
+      ]
+    },
+    {
+      "ms": 246,
+      "op": [
+        0.914269,
+        0.973707,
+        0.997581
+      ]
+    },
+    {
+      "ms": 263,
+      "op": [
+        0.94797,
+        0.988595,
+        1
+      ]
+    },
+    {
+      "ms": 280,
+      "op": [
+        0.971767,
+        0.997045,
+        1
+      ]
+    },
+    {
+      "ms": 296,
+      "op": [
+        0.987387,
+        0.999975,
+        1
+      ]
+    },
+    {
+      "ms": 313,
+      "op": [
+        0.996452,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 330,
+      "op": [
+        0.999907,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 346,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 363,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 380,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 396,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 413,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 429,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 447,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 463,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 498,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 513,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 530,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 547,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 563,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 579,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 597,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 613,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 629,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 646,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 663,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 679,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 696,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 713,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 730,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "ms": 746,
+      "op": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "open": {
+    "expanded": "true",
+    "triggerBg": "rgb(101, 85, 143)",
+    "triggerRadius": "28px",
+    "triggerIconSize": 20,
+    "items": [
+      {
+        "label": "Favourite",
+        "h": 56,
+        "padL": "24px",
+        "padR": "24px",
+        "radius": "28px",
+        "font": "500 16px/24px",
+        "bg": "rgb(233, 221, 255)",
+        "color": "rgb(77, 61, 117)",
+        "iconSize": 24,
+        "iconToLabel": 8,
+        "delay": "0.07s",
+        "opacity": "1",
+        "top": 238
+      },
+      {
+        "label": "Details",
+        "h": 56,
+        "padL": "24px",
+        "padR": "24px",
+        "radius": "28px",
+        "font": "500 16px/24px",
+        "bg": "rgb(233, 221, 255)",
+        "color": "rgb(77, 61, 117)",
+        "iconSize": 24,
+        "iconToLabel": 8,
+        "delay": "0.035s",
+        "opacity": "1",
+        "top": 298
+      },
+      {
+        "label": "Add",
+        "h": 56,
+        "padL": "24px",
+        "padR": "24px",
+        "radius": "28px",
+        "font": "500 16px/24px",
+        "bg": "rgb(233, 221, 255)",
+        "color": "rgb(77, 61, 117)",
+        "iconSize": 24,
+        "iconToLabel": 8,
+        "delay": "0s",
+        "opacity": "1",
+        "top": 358
+      }
+    ],
+    "gapsBetween": [
+      4,
+      4
+    ]
+  },
+  "afterPick": {
+    "expanded": "false",
+    "status": "Last picked: Details. Escape closes the menu."
+  },
+  "beforeEscape": "true",
+  "afterEscape": "false",
+  "tertiaryOpen": {
+    "expanded": "true",
+    "triggerBg": "rgb(126, 82, 96)",
+    "triggerIcon": 20,
+    "itemBg": "rgb(255, 217, 227)",
+    "itemColor": "rgb(99, 59, 72)"
+  },
+  "tokens": {
+    "--md-sys-color-surface-container-high": "#ece6ee",
+    "--md-sys-color-secondary-container": "#e8def8",
+    "--md-sys-color-tertiary-container": "#ffd9e3",
+    "--md-sys-color-primary": "#65558f",
+    "--md-sys-color-primary-container": "#e9ddff",
+    "--md-sys-color-tertiary": "#7e5260",
+    "--md-sys-color-on-primary-container": "#4d3d75",
+    "--md-sys-color-on-primary": "#ffffff"
+  },
+  "pageErrors": []
+}
