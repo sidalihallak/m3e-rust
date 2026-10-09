@@ -1,0 +1,100 @@
+[
+ {
+  "dsf": 1,
+  "expectedCentreCss": [
+   547,
+   450
+  ],
+  "clip": {
+   "x": 533,
+   "y": 436,
+   "width": 28,
+   "height": 28
+  },
+  "file": "zoomfull-1.png"
+ },
+ {
+  "dsf": 1.1,
+  "expectedCentreCss": [
+   547,
+   450
+  ],
+  "clip": {
+   "x": 533,
+   "y": 436,
+   "width": 28,
+   "height": 28
+  },
+  "file": "zoomfull-1.1.png"
+ },
+ {
+  "dsf": 1.25,
+  "expectedCentreCss": [
+   547,
+   450
+  ],
+  "clip": {
+   "x": 533,
+   "y": 436,
+   "width": 28,
+   "height": 28
+  },
+  "file": "zoomfull-1.25.png"
+ },
+ {
+  "dsf": 1.5,
+  "expectedCentreCss": [
+   547,
+   450
+  ],
+  "clip": {
+   "x": 533,
+   "y": 436,
+   "width": 28,
+   "height": 28
+  },
+  "file": "zoomfull-1.5.png"
+ },
+ {
+  "dsf": 0.9,
+  "expectedCentreCss": [
+   547,
+   450
+  ],
+  "clip": {
+   "x": 533,
+   "y": 436,
+   "width": 28,
+   "height": 28
+  },
+  "file": "zoomfull-0.9.png"
+ },
+ {
+  "dsf": 0.8,
+  "expectedCentreCss": [
+   547,
+   450
+  ],
+  "clip": {
+   "x": 533,
+   "y": 436,
+   "width": 28,
+   "height": 28
+  },
+  "file": "zoomfull-0.8.png"
+ },
+ {
+  "dsf": 0.67,
+  "expectedCentreCss": [
+   547,
+   450
+  ],
+  "clip": {
+   "x": 533,
+   "y": 436,
+   "width": 28,
+   "height": 28
+  },
+  "file": "zoomfull-0.67.png"
+ }
+]
