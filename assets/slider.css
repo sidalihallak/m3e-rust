@@ -1,17 +1,21 @@
 /*
  * M3 expressive slider. Copy with src/components/slider.rs.
- * Sources: Material Web slider tokens (track 16dp, handle 4×44dp, pressed handle
- * 2dp wide, stop indicator 4dp with 4dp trailing space, state layer 40dp, colours,
- * disabled 0.38 handle and active track, 0.12 inactive track); upstream slider.tsx
- * for the 8dp gap (6dp plus half the handle) and the handle width spring.
+ * Sources: Material Web slider tokens (track 16dp, handle 4×44dp, pressed handle 2dp,
+ * stop indicator 4dp with 4dp trailing space, tick marks 2dp at 0.38, value indicator
+ * inverse-surface with inverse-on-surface label-large, state colours, disabled 0.38 and
+ * 0.12); upstream slider.tsx for the 8dp gap (6dp plus half the handle) and the handle
+ * width spring.
  *
- * The handle centre runs from 2dp to (width - 2dp), so the handle stays inside
- * the track at both ends. The native thumb is the same size as the drawn handle,
- * so pointer and keyboard positions match the drawing.
+ * Handle centre runs from 2dp to (width − 2dp) so the handle stays inside the track.
+ * The native thumb is the same size as the drawn handle, so the pointer and the value agree.
+ * Vertical sliders rotate a horizontal frame by −90°, so the native input and the drawn
+ * handle rotate together. Value indicators are placed outside the frame and stay upright.
  */
 .m3-slider {
   --p: 0;
-  --handle-x: calc(2px + (100% - 4px) * var(--p));
+  --q: 0;
+  --hx: calc(2px + (100% - 4px) * var(--p));
+  --hx2: calc(2px + (100% - 4px) * var(--q));
   --handle-w: 4px;
   --slider-spring: linear(0, .0206, .0754, .1544, .2492, .3524, .458, .5613, .6588, .7479, .8269, .895, .952, .9981, 1.0338, 1.0603, 1.0783, 1.0893, 1.0942, 1.0943, 1.0906, 1.0842, 1.0759, 1.0665, 1.0565, 1);
   position: relative;
@@ -20,6 +24,9 @@
   min-width: 120px;
 }
 
+.m3-slider__frame { position: absolute; inset: 0; }
+
+/* Track: 16dp, clipped to a full radius. */
 .m3-slider__track {
   position: absolute;
   left: 0;
@@ -38,19 +45,19 @@
   bottom: 0;
   transition: left 360ms var(--slider-spring), width 360ms var(--slider-spring);
 }
-.m3-slider__active {
-  left: 0;
-  width: max(0px, calc(var(--handle-x) - 8px));
-  background: var(--md-sys-color-primary);
-  border-radius: 0 2px 2px 0;
-}
-.m3-slider__inactive {
-  right: 0;
-  left: calc(var(--handle-x) + 8px);
-  background: var(--md-sys-color-secondary-container);
-  border-radius: 2px 0 0 2px;
-}
-/* Stop indicator: 4dp, 4dp from the end of the inactive track; hidden at the maximum. */
+.m3-slider__active { background: var(--md-sys-color-primary); border-radius: 0 2px 2px 0; }
+.m3-slider__inactive { background: var(--md-sys-color-secondary-container); }
+
+/* Single: active from the start to the handle; inactive from the handle to the end. */
+.m3-slider--single .m3-slider__active { left: 0; width: max(0px, calc(var(--hx) - 8px)); }
+.m3-slider--single .m3-slider__inactive--trail { right: 0; left: calc(var(--hx) + 8px); border-radius: 2px 0 0 2px; }
+
+/* Range: inactive at each end; active between the two handles. */
+.m3-slider--range .m3-slider__active { left: calc(var(--hx) + 8px); width: max(0px, calc(var(--hx2) - var(--hx) - 16px)); }
+.m3-slider--range .m3-slider__inactive--lead { left: 0; width: max(0px, calc(var(--hx) - 8px)); border-radius: 8px 0 0 8px; }
+.m3-slider--range .m3-slider__inactive--trail { right: 0; left: calc(var(--hx2) + 8px); border-radius: 0 8px 8px 0; }
+
+/* Stop indicator: 4dp, 4dp from the end; hidden at the maximum. */
 .m3-slider__stop {
   position: absolute;
   top: 50%;
@@ -63,7 +70,23 @@
 }
 .m3-slider--max .m3-slider__stop { display: none; }
 
-/* Native input over the whole control. Its thumb matches the drawn handle. */
+/* Tick marks: 2dp dots at each step, 0.38 opacity. Active ticks sit on the active track. */
+.m3-slider__tick {
+  position: absolute;
+  top: 50%;
+  left: calc(2px + (100% - 4px) * var(--f));
+  width: 2px;
+  height: 2px;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: var(--md-sys-color-on-surface-variant);
+  opacity: .38;
+  pointer-events: none;
+}
+.m3-slider__tick--active { background: var(--md-sys-color-on-primary); }
+
+/* Native inputs cover the control. Single: the whole control takes the pointer. Range:
+   only the two thumbs do, so each handle can be dragged. */
 .m3-slider__input {
   position: absolute;
   inset: 0;
@@ -84,18 +107,18 @@
   border: 0;
   background: transparent;
 }
-.m3-slider__input::-moz-range-thumb {
-  width: 4px;
-  height: 44px;
-  border: 0;
-  background: transparent;
-}
+.m3-slider__input::-moz-range-thumb { width: 4px; height: 44px; border: 0; background: transparent; }
+.m3-slider--range .m3-slider__input { pointer-events: none; }
+.m3-slider--range .m3-slider__input::-webkit-slider-thumb { pointer-events: auto; }
+.m3-slider--range .m3-slider__input::-moz-range-thumb { pointer-events: auto; }
+.m3-slider--range .m3-slider__input--end { z-index: 3; }
 .m3-slider__input:focus-visible { outline: none; }
 
+/* Handles. */
 .m3-slider__handle {
   position: absolute;
   top: 0;
-  left: var(--handle-x);
+  left: var(--hx);
   width: var(--handle-w);
   height: 44px;
   translate: -50% 0;
@@ -104,32 +127,87 @@
   pointer-events: none;
   transition: width 360ms var(--slider-spring);
 }
-
-/* Hover and pressed show no highlight on the handle. Focus keeps an outline on the
-   handle for keyboard users. Pressed narrows the handle to 2dp. */
-.m3-slider:not(.m3-slider--disabled):has(.m3-slider__input:active) { --handle-w: 2px; }
-.m3-slider__input:focus-visible ~ .m3-slider__handle {
+.m3-slider--range .m3-slider__handle--end { left: var(--hx2); }
+.m3-slider__handle--start { }
+.m3-slider__input--start:focus-visible ~ .m3-slider__handle--start,
+.m3-slider__input--end:focus-visible ~ .m3-slider__handle--end {
   outline: 3px solid var(--md-sys-color-secondary);
   outline-offset: 2px;
 }
-
-/* While the pointer is down, the track and handle follow the pointer with no
-   transition. A spring here would trail the value during a drag. */
+/* Pressed narrows the pressed handle to 2dp, and the track and handle follow the pointer
+   with no transition. */
+.m3-slider:has(.m3-slider__input--start:active) .m3-slider__handle--start,
+.m3-slider:has(.m3-slider__input--end:active) .m3-slider__handle--end { width: 2px; }
 .m3-slider:has(.m3-slider__input:active) .m3-slider__active,
-.m3-slider:has(.m3-slider__input:active) .m3-slider__inactive {
-  transition: none;
-}
-.m3-slider:has(.m3-slider__input:active) .m3-slider__handle {
-  transition: width 360ms var(--slider-spring);
-}
+.m3-slider:has(.m3-slider__input:active) .m3-slider__inactive { transition: none; }
+.m3-slider:has(.m3-slider__input:active) .m3-slider__handle { transition: width 360ms var(--slider-spring); }
 
-/* Disabled: 38% handle and active track, 12% inactive track. */
+/* Value indicator: inverse-surface bubble, 12dp above the handle. Shown while pressed or focused. */
+.m3-slider__label {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: var(--hx);
+  min-width: 28px;
+  height: 28px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--md-sys-color-inverse-surface);
+  color: var(--md-sys-color-inverse-on-surface);
+  font: 400 14px/20px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .00625rem;
+  white-space: nowrap;
+  translate: -50% 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+.m3-slider--range .m3-slider__label--end { left: var(--hx2); }
+.m3-slider--labelled:has(.m3-slider__input--start:active) .m3-slider__label--start,
+.m3-slider--labelled:has(.m3-slider__input--start:focus-visible) .m3-slider__label--start,
+.m3-slider--labelled:has(.m3-slider__input--end:active) .m3-slider__label--end,
+.m3-slider--labelled:has(.m3-slider__input--end:focus-visible) .m3-slider__label--end,
+.m3-slider--single.m3-slider--labelled:has(.m3-slider__input:active) .m3-slider__label--start { opacity: 1; }
+
+/* Disabled: 38% handle and active track, 12% inactive track, 38% stop and ticks. */
 .m3-slider--disabled .m3-slider__handle { background: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
 .m3-slider--disabled .m3-slider__active { background: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
 .m3-slider--disabled .m3-slider__inactive { background: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent); }
 .m3-slider--disabled .m3-slider__stop { background: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
 .m3-slider--disabled .m3-slider__input { cursor: not-allowed; }
 
+/* Vertical: a horizontal frame rotated −90°, so value increases upward. Labels sit
+   beside the handle and are placed on the vertical axis. */
+.m3-slider--vertical {
+  width: 44px;
+  height: var(--len, 240px);
+  min-width: 0;
+  min-height: 120px;
+}
+.m3-slider--vertical .m3-slider__frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 44px;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  transform-origin: center;
+}
+.m3-slider--vertical .m3-slider__frame { width: var(--len, 240px); left: 50%; top: 50%; }
+.m3-slider--vertical .m3-slider__label {
+  bottom: calc(2px + (100% - 4px) * var(--p));
+  left: 100%;
+  margin-left: 12px;
+  translate: 0 50%;
+  bottom: auto;
+  top: calc(100% - 2px - (100% - 4px) * var(--p));
+}
+.m3-slider--vertical.m3-slider--range .m3-slider__label--end { top: calc(100% - 2px - (100% - 4px) * var(--q)); }
+.m3-slider--vertical .m3-slider__label { left: 100%; }
+
 @media (prefers-reduced-motion: reduce) {
-  .m3-slider__active, .m3-slider__inactive, .m3-slider__handle { transition-duration: .01ms !important; }
+  .m3-slider__active, .m3-slider__inactive, .m3-slider__handle, .m3-slider__label { transition-duration: .01ms !important; }
 }

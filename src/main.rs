@@ -195,6 +195,34 @@ fn VolumeControl() -> Element {
     }
 }"#;
 
+const RANGE_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::Slider;
+
+#[component]
+fn PriceRange() -> Element {
+    let mut range = use_signal(|| (20.0_f64, 70.0_f64));
+    rsx! {
+        Slider {
+            min: 0.0,
+            max: 100.0,
+            step: 10.0,
+            ticks: true,
+            label: true,
+            value: range().0,
+            value_end: Some(range().1),
+            onchange_range: move |(start, end): (f64, f64)| range.set((start, end)),
+        }
+        Slider {
+            min: 0.0,
+            max: 100.0,
+            value: 60.0,
+            vertical: true,
+            label: true,
+            aria_label: Some("Level".to_string()),
+        }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -220,6 +248,9 @@ fn App() -> Element {
     let mut radio = use_signal(|| 1_usize);
     let mut volume = use_signal(|| 40.0_f64);
     let mut stepped = use_signal(|| 50.0_f64);
+    let mut price = use_signal(|| (20.0_f64, 70.0_f64));
+    let mut level = use_signal(|| 60.0_f64);
+    let mut tick_value = use_signal(|| 40.0_f64);
     let mut menu_pick = use_signal(|| String::from("none"));
     let theme = theme::ThemePreview::from_seed(seed());
     let scheme = if dark() {
@@ -740,6 +771,27 @@ fn App() -> Element {
                             }
                         }
                     }
+                    article { class: "demo-card slider-specimen",
+                        div { class: "card-topline", span { "RANGE · TICKS · VALUE LABEL" } span { class: "component-index", "C" } }
+                        div { class: "slider-stack",
+                            div { class: "slider-row",
+                                span { class: "control-label", "Price {price().0.round()} to {price().1.round()}" }
+                                Slider { min: 0.0, max: 100.0, step: 10.0, ticks: true, label: true, value: price().0, value_end: Some(price().1), aria_label: Some("Price".to_string()), onchange_range: move |(a, b): (f64, f64)| price.set((a, b)) }
+                            }
+                            div { class: "slider-row",
+                                span { class: "control-label", "Ticks · value {tick_value().round()}" }
+                                Slider { min: 0.0, max: 100.0, step: 10.0, ticks: true, label: true, value: tick_value(), aria_label: Some("Ticks".to_string()), onchange: move |v: f64| tick_value.set(v) }
+                            }
+                        }
+                    }
+                    article { class: "demo-card slider-specimen slider-vertical-card",
+                        div { class: "card-topline", span { "VERTICAL" } span { class: "component-index", "D" } }
+                        div { class: "slider-vertical-row",
+                            Slider { min: 0.0, max: 100.0, value: level(), vertical: true, label: true, aria_label: Some("Level".to_string()), onchange: move |v: f64| level.set(v) }
+                            Slider { min: 0.0, max: 100.0, value: 30.0, value_end: Some(80.0), vertical: true, label: true, aria_label: Some("Vertical range".to_string()) }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Range, ticks and vertical usage", code: RANGE_USAGE }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Slider usage", code: SLIDER_USAGE }
                 }
             }

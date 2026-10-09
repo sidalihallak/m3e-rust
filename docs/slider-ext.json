@@ -1,0 +1,50 @@
+{
+  "rangeStart": {
+    "inputs": [
+      20,
+      70
+    ],
+    "startOffset": 0,
+    "endOffset": 0,
+    "activeWidthMinusSpan": 0
+  },
+  "ticks": {
+    "total": 11,
+    "active": 6
+  },
+  "endLabelWhileDragging": "1",
+  "endLabelWhileDragText": "90",
+  "afterEndDrag": {
+    "inputs": [
+      20,
+      90
+    ],
+    "startOffset": 0,
+    "endOffset": -0.02,
+    "activeWidthMinusSpan": 0.02
+  },
+  "endLabelAfter": "0",
+  "endLabelText": "90",
+  "vertical": {
+    "value": 60,
+    "p": 0.6,
+    "handleYOffset": 0.01,
+    "handleW": 44,
+    "handleH": 4,
+    "rootH": 240,
+    "rootW": 44
+  },
+  "verticalPointerValueBeforeDown": "60",
+  "verticalDuringUpDrag": "80.34",
+  "verticalAfterUpDrag": {
+    "value": 80.34,
+    "p": 0.8033633474576269,
+    "handleYOffset": 0.02,
+    "handleW": 44,
+    "handleH": 4.19,
+    "rootH": 240,
+    "rootW": 44
+  },
+  "verticalLabelRotation": "none",
+  "pageErrors": []
+}

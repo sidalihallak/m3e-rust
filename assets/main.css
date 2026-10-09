@@ -171,3 +171,6 @@ button { cursor: pointer; }
 .slider-row { display: flex; flex-direction: column; gap: 6px; }
 .slider-grid .code-card { grid-column: 1 / -1; }
 @media (max-width: 760px) { .slider-grid { grid-template-columns: 1fr; } }
+.slider-vertical-card { min-height: 320px; }
+.slider-vertical-row { display: flex; align-items: center; justify-content: center; gap: 64px; padding: 24px 8px 8px; min-height: 280px; }
+.slider-vertical-row .m3-slider--vertical { --len: 240px; }

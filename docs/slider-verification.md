@@ -58,15 +58,19 @@ Raw data: [`slider-samples.json`](slider-samples.json).
   below the fold. The mouse events landed outside the viewport. The test now scrolls the
   control into view first. This was a test error, not a component error.
 
-## 5. Not implemented
+## 5. Value label, ticks, range and vertical
 
-- **Value label** (the upstream and reference value bubble) and **tick marks**.
-- **Range sliders** (two handles).
-- **Vertical orientation.**
+Added in this round. Each item is measured in section 9.
+
+- **Value label:** shown above the handle while it is pressed or focused. Hidden at rest.
+- **Tick marks:** one per `step`, inside the track. Ticks in the active range use the on-primary colour.
+- **Range slider:** `value_end` adds a second native input and handle. The active track runs between the handles.
+- **Vertical:** `vertical: true` rotates the control. The value still increases upward. Labels stay upright.
 
 ## 6. Unresolved
 
 - Touch, Android Chrome, reduced motion, and screen-reader announcements are not measured.
+- Range and vertical drag are measured with the mouse only. Keyboard use of the second handle is not measured.
 - Visual check is not recorded in this round; the handle position, gap and pressed width were measured.
 - Official Material slider pages not read.
 
@@ -76,6 +80,7 @@ Raw data: [`slider-samples.json`](slider-samples.json).
 | --- | --- |
 | `cargo check --locked --target wasm32-unknown-unknown` | Passed |
 | Slider usage snippet compiled against the public API | Passed |
+| Range and vertical usage snippet compiled against the public API | Passed |
 
 ## 8. Drag alignment and highlight (update)
 
@@ -90,3 +95,32 @@ the state-layer circle showed on the handle.
   within 0.02px of the expected position, and the active track stays exactly 8px from
   the handle centre.
 - **Not measured:** touch dragging, and the visual result on the user's device.
+
+## 9. Value label, ticks, range and vertical (measured)
+
+Raw data: [`slider-ext.json`](slider-ext.json). Script: the extended harness run against the
+preview at 1280×900, mouse input only.
+
+| Check | Expected | Measured |
+| --- | --- | --- |
+| Range, start handle centre | 2 + (W − 4) × 0.20 | 0px offset |
+| Range, end handle centre | 2 + (W − 4) × 0.70 | 0px offset |
+| Range, active track width | end − start − 16px | 0px difference |
+| Ticks at step 10 over 0–100 | 11 ticks | 11 ticks |
+| Ticks in active range 20–70 | 6 ticks active | 6 ticks active |
+| Drag end handle from 70 to about 90 | value 90 | value 90; handle offset −0.02px after release |
+| End value label while dragging | visible | opacity 1, reads "90" |
+| End value label at rest | hidden | opacity 0 |
+| Vertical handle centre, value 60 | 60% up from the bottom | 0.01px offset |
+| Vertical drag up 48px from value 60 | value about 80 | value 80.34; handle offset 0.02px |
+| Vertical label rotation | upright | none |
+| Page errors | 0 | 0 |
+
+- **Handle height in vertical mode:** a single read 300ms after release showed 4.19px.
+  A later probe showed 4px at 400ms, so this was the 360ms spring still settling, not a
+  steady-state offset. The probe is in the scratchpad (`slider-hcheck.mjs`).
+- **Visual:** the section screenshot shows the range track with its active segment
+  between the handles, ticks with the active ones highlighted, and both vertical forms.
+  The label is not shown at rest, as intended.
+- **Not measured:** label placement against the handle at the vertical extremes, touch
+  drag, and keyboard use of the second handle.
