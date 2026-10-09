@@ -76,3 +76,17 @@ Raw data: [`slider-samples.json`](slider-samples.json).
 | --- | --- |
 | `cargo check --locked --target wasm32-unknown-unknown` | Passed |
 | Slider usage snippet compiled against the public API | Passed |
+
+## 8. Drag alignment and highlight (update)
+
+Reported: during a drag the handle and track did not stay aligned with the pointer, and
+the state-layer circle showed on the handle.
+
+- **Cause:** the track and handle used a 360ms spring on position, so they trailed the
+  value while the pointer moved.
+- **Fix:** while the pointer is down, the track and handle update without transitions.
+  The state-layer circle is removed from the handle. The focus outline stays for keyboard users.
+- **Measured:** over 18 drag steps (value 44 to 88 and back), the handle centre stays
+  within 0.02px of the expected position, and the active track stays exactly 8px from
+  the handle centre.
+- **Not measured:** touch dragging, and the visual result on the user's device.
