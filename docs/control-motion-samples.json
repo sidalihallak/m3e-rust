@@ -19,7 +19,7 @@
           "borderColor": null
         },
         {
-          "ms": 15,
+          "ms": 8,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -31,91 +31,91 @@
           "borderColor": null
         },
         {
-          "ms": 31,
+          "ms": 23,
           "checked": "true",
           "pressed": true,
           "handleW": 24,
           "handleH": 24,
           "handleX": 585,
           "bg": "rgb(253, 252, 255)",
-          "stateOpacity": "0.0100044",
+          "stateOpacity": "0.0101555",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 48,
+          "ms": 40,
           "checked": "true",
           "pressed": true,
           "handleW": 24.58,
           "handleH": 24.58,
           "handleX": 584.7,
           "bg": "rgb(246, 241, 255)",
-          "stateOpacity": "0.0405802",
+          "stateOpacity": "0.0407378",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 66,
+          "ms": 57,
           "checked": "true",
           "pressed": true,
           "handleW": 25.53,
           "handleH": 25.53,
           "handleX": 584.22,
           "bg": "rgb(242, 234, 255)",
-          "stateOpacity": "0.060722",
+          "stateOpacity": "0.060814",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 83,
+          "ms": 74,
           "checked": "true",
           "pressed": true,
-          "handleW": 26.38,
-          "handleH": 26.38,
-          "handleX": 583.8,
+          "handleW": 26.36,
+          "handleH": 26.36,
+          "handleX": 583.81,
           "bg": "rgb(239, 230, 255)",
           "stateOpacity": "0.0732083",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 98,
+          "ms": 90,
           "checked": "true",
           "pressed": true,
           "handleW": 26.97,
           "handleH": 26.97,
           "handleX": 583.5,
           "bg": "rgb(237, 227, 255)",
-          "stateOpacity": "0.0816892",
+          "stateOpacity": "0.0817319",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 115,
+          "ms": 107,
           "checked": "true",
           "pressed": true,
           "handleW": 27.38,
           "handleH": 27.38,
           "handleX": 583.3,
           "bg": "rgb(236, 225, 255)",
-          "stateOpacity": "0.0877834",
+          "stateOpacity": "0.0878142",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 131,
+          "ms": 123,
           "checked": "true",
           "pressed": true,
           "handleW": 27.63,
           "handleH": 27.63,
           "handleX": 583.17,
           "bg": "rgb(235, 224, 255)",
-          "stateOpacity": "0.0921935",
+          "stateOpacity": "0.0922158",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 149,
+          "ms": 140,
           "checked": "true",
           "pressed": true,
           "handleW": 27.78,
@@ -127,31 +127,31 @@
           "borderColor": null
         },
         {
-          "ms": 164,
+          "ms": 157,
           "checked": "true",
           "pressed": true,
           "handleW": 27.88,
           "handleH": 27.88,
           "handleX": 583.05,
           "bg": "rgb(234, 222, 255)",
-          "stateOpacity": "0.097548",
+          "stateOpacity": "0.0975587",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 181,
+          "ms": 174,
           "checked": "true",
           "pressed": true,
           "handleW": 27.92,
           "handleH": 27.92,
           "handleX": 583.03,
           "bg": "rgb(233, 221, 255)",
-          "stateOpacity": "0.0989682",
+          "stateOpacity": "0.0989748",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 198,
+          "ms": 190,
           "checked": "true",
           "pressed": true,
           "handleW": 27.95,
@@ -163,7 +163,7 @@
           "borderColor": null
         },
         {
-          "ms": 215,
+          "ms": 207,
           "checked": "true",
           "pressed": true,
           "handleW": 27.97,
@@ -175,7 +175,7 @@
           "borderColor": null
         },
         {
-          "ms": 231,
+          "ms": 224,
           "checked": "true",
           "pressed": true,
           "handleW": 27.98,
@@ -187,7 +187,7 @@
           "borderColor": null
         },
         {
-          "ms": 248,
+          "ms": 240,
           "checked": "true",
           "pressed": true,
           "handleW": 27.98,
@@ -199,7 +199,7 @@
           "borderColor": null
         },
         {
-          "ms": 265,
+          "ms": 256,
           "checked": "true",
           "pressed": true,
           "handleW": 27.98,
@@ -211,7 +211,7 @@
           "borderColor": null
         },
         {
-          "ms": 281,
+          "ms": 274,
           "checked": "true",
           "pressed": true,
           "handleW": 28,
@@ -223,7 +223,7 @@
           "borderColor": null
         },
         {
-          "ms": 297,
+          "ms": 290,
           "checked": "true",
           "pressed": true,
           "handleW": 28,
@@ -235,7 +235,7 @@
           "borderColor": null
         },
         {
-          "ms": 314,
+          "ms": 306,
           "checked": "true",
           "pressed": true,
           "handleW": 28,
@@ -247,7 +247,7 @@
           "borderColor": null
         },
         {
-          "ms": 331,
+          "ms": 323,
           "checked": "true",
           "pressed": true,
           "handleW": 28,
@@ -259,7 +259,7 @@
           "borderColor": null
         },
         {
-          "ms": 348,
+          "ms": 339,
           "checked": "true",
           "pressed": true,
           "handleW": 28,
@@ -271,7 +271,7 @@
           "borderColor": null
         },
         {
-          "ms": 364,
+          "ms": 356,
           "checked": "true",
           "pressed": true,
           "handleW": 28,
@@ -283,7 +283,19 @@
           "borderColor": null
         },
         {
-          "ms": 399,
+          "ms": 373,
+          "checked": "true",
+          "pressed": true,
+          "handleW": 28,
+          "handleH": 28,
+          "handleX": 583,
+          "bg": "rgb(233, 221, 255)",
+          "stateOpacity": "0.1",
+          "checkDashOffset": null,
+          "borderColor": null
+        },
+        {
+          "ms": 398,
           "checked": "false",
           "pressed": false,
           "handleW": 28,
@@ -295,151 +307,139 @@
           "borderColor": null
         },
         {
-          "ms": 401,
+          "ms": 407,
           "checked": "false",
           "pressed": false,
-          "handleW": 28,
-          "handleH": 28,
-          "handleX": 583,
-          "bg": "rgb(233, 221, 255)",
-          "stateOpacity": "0.1",
-          "checkDashOffset": null,
-          "borderColor": null
-        },
-        {
-          "ms": 415,
-          "checked": "false",
-          "pressed": false,
-          "handleW": 26.22,
-          "handleH": 26.22,
-          "handleX": 580.92,
+          "handleW": 26.2,
+          "handleH": 26.2,
+          "handleX": 580.91,
           "bg": "rgb(217, 206, 237)",
-          "stateOpacity": "0.0980057",
+          "stateOpacity": "0.0979949",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 432,
+          "ms": 425,
           "checked": "false",
           "pressed": false,
-          "handleW": 23.41,
-          "handleH": 23.41,
-          "handleX": 577.64,
+          "handleW": 23.39,
+          "handleH": 23.39,
+          "handleX": 577.63,
           "bg": "rgb(168, 159, 183)",
-          "stateOpacity": "0.0918909",
+          "stateOpacity": "0.0918795",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 448,
+          "ms": 440,
           "checked": "false",
           "pressed": false,
-          "handleW": 20.88,
-          "handleH": 20.88,
-          "handleX": 574.69,
-          "bg": "rgb(136, 129, 148)",
-          "stateOpacity": "0.0878596",
+          "handleW": 20.86,
+          "handleH": 20.86,
+          "handleX": 574.67,
+          "bg": "rgb(136, 129, 147)",
+          "stateOpacity": "0.087853",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 465,
+          "ms": 457,
           "checked": "false",
           "pressed": false,
-          "handleW": 19.08,
-          "handleH": 19.08,
-          "handleX": 572.59,
+          "handleW": 19.06,
+          "handleH": 19.06,
+          "handleX": 572.58,
           "bg": "rgb(116, 110, 125)",
-          "stateOpacity": "0.085361",
+          "stateOpacity": "0.0853566",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 481,
+          "ms": 474,
           "checked": "false",
           "pressed": false,
           "handleW": 17.86,
           "handleH": 17.86,
           "handleX": 571.17,
           "bg": "rgb(102, 97, 110)",
-          "stateOpacity": "0.0836555",
+          "stateOpacity": "0.083661",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 498,
+          "ms": 490,
           "checked": "false",
           "pressed": false,
           "handleW": 17.09,
           "handleH": 17.09,
-          "handleX": 570.27,
+          "handleX": 570.28,
           "bg": "rgb(93, 88, 100)",
-          "stateOpacity": "0.0824385",
+          "stateOpacity": "0.0824425",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 515,
+          "ms": 507,
           "checked": "false",
           "pressed": false,
           "handleW": 16.64,
           "handleH": 16.64,
           "handleX": 569.75,
           "bg": "rgb(86, 81, 92)",
-          "stateOpacity": "0.0815668",
+          "stateOpacity": "0.0815651",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 532,
+          "ms": 524,
           "checked": "false",
           "pressed": false,
           "handleW": 16.36,
           "handleH": 16.36,
           "handleX": 569.42,
           "bg": "rgb(80, 76, 86)",
-          "stateOpacity": "0.080932",
+          "stateOpacity": "0.0809277",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 548,
+          "ms": 541,
           "checked": "false",
           "pressed": false,
           "handleW": 16.2,
           "handleH": 16.2,
           "handleX": 569.23,
           "bg": "rgb(77, 73, 82)",
-          "stateOpacity": "0.0804909",
+          "stateOpacity": "0.0804901",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 564,
+          "ms": 557,
           "checked": "false",
           "pressed": false,
           "handleW": 16.11,
           "handleH": 16.11,
           "handleX": 569.13,
           "bg": "rgb(75, 71, 80)",
-          "stateOpacity": "0.0802053",
+          "stateOpacity": "0.0802062",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 581,
+          "ms": 574,
           "checked": "false",
           "pressed": false,
           "handleW": 16.06,
           "handleH": 16.06,
           "handleX": 569.06,
           "bg": "rgb(73, 69, 78)",
-          "stateOpacity": "0.0800484",
+          "stateOpacity": "0.0800488",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 598,
+          "ms": 590,
           "checked": "false",
           "pressed": false,
           "handleW": 16.03,
@@ -451,7 +451,7 @@
           "borderColor": null
         },
         {
-          "ms": 615,
+          "ms": 607,
           "checked": "false",
           "pressed": false,
           "handleW": 16.02,
@@ -463,7 +463,7 @@
           "borderColor": null
         },
         {
-          "ms": 631,
+          "ms": 624,
           "checked": "false",
           "pressed": false,
           "handleW": 16,
@@ -475,7 +475,7 @@
           "borderColor": null
         },
         {
-          "ms": 648,
+          "ms": 642,
           "checked": "false",
           "pressed": false,
           "handleW": 16,
@@ -487,7 +487,7 @@
           "borderColor": null
         },
         {
-          "ms": 664,
+          "ms": 657,
           "checked": "false",
           "pressed": false,
           "handleW": 16,
@@ -499,7 +499,7 @@
           "borderColor": null
         },
         {
-          "ms": 681,
+          "ms": 673,
           "checked": "false",
           "pressed": false,
           "handleW": 16,
@@ -511,7 +511,7 @@
           "borderColor": null
         },
         {
-          "ms": 698,
+          "ms": 690,
           "checked": "false",
           "pressed": false,
           "handleW": 16,
@@ -523,7 +523,7 @@
           "borderColor": null
         },
         {
-          "ms": 714,
+          "ms": 706,
           "checked": "false",
           "pressed": false,
           "handleW": 16,
@@ -535,7 +535,7 @@
           "borderColor": null
         },
         {
-          "ms": 731,
+          "ms": 723,
           "checked": "false",
           "pressed": false,
           "handleW": 16,
@@ -547,7 +547,7 @@
           "borderColor": null
         },
         {
-          "ms": 748,
+          "ms": 740,
           "checked": "false",
           "pressed": false,
           "handleW": 16,
@@ -559,7 +559,7 @@
           "borderColor": null
         },
         {
-          "ms": 764,
+          "ms": 756,
           "checked": "false",
           "pressed": false,
           "handleW": 16,
@@ -571,7 +571,7 @@
           "borderColor": null
         },
         {
-          "ms": 781,
+          "ms": 774,
           "checked": "false",
           "pressed": false,
           "handleW": 16,
@@ -583,7 +583,7 @@
           "borderColor": null
         },
         {
-          "ms": 797,
+          "ms": 790,
           "checked": "false",
           "pressed": false,
           "handleW": 16,
@@ -614,7 +614,7 @@
           "borderColor": null
         },
         {
-          "ms": 9,
+          "ms": 11,
           "checked": "false",
           "pressed": false,
           "handleW": 16,
@@ -626,7 +626,7 @@
           "borderColor": null
         },
         {
-          "ms": 34,
+          "ms": 35,
           "checked": "true",
           "pressed": false,
           "handleW": 16,
@@ -638,19 +638,19 @@
           "borderColor": null
         },
         {
-          "ms": 43,
+          "ms": 45,
           "checked": "true",
           "pressed": false,
-          "handleW": 17.19,
-          "handleH": 17.19,
-          "handleX": 571.38,
+          "handleW": 17.17,
+          "handleH": 17.17,
+          "handleX": 571.36,
           "bg": "rgb(89, 84, 96)",
           "stateOpacity": "0.08",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 59,
+          "ms": 62,
           "checked": "true",
           "pressed": false,
           "handleW": 19.06,
@@ -662,31 +662,31 @@
           "borderColor": null
         },
         {
-          "ms": 76,
+          "ms": 78,
           "checked": "true",
           "pressed": false,
-          "handleW": 20.75,
-          "handleH": 20.75,
-          "handleX": 578.5,
+          "handleW": 20.73,
+          "handleH": 20.73,
+          "handleX": 578.48,
           "bg": "rgb(170, 161, 185)",
           "stateOpacity": "0.08",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 93,
+          "ms": 95,
           "checked": "true",
           "pressed": false,
           "handleW": 21.94,
           "handleH": 21.94,
-          "handleX": 580.89,
+          "handleX": 580.88,
           "bg": "rgb(190, 180, 208)",
           "stateOpacity": "0.08",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 110,
+          "ms": 112,
           "checked": "true",
           "pressed": false,
           "handleW": 22.75,
@@ -698,31 +698,31 @@
           "borderColor": null
         },
         {
-          "ms": 126,
+          "ms": 129,
           "checked": "true",
           "pressed": false,
-          "handleW": 23.27,
-          "handleH": 23.27,
-          "handleX": 583.53,
+          "handleW": 23.25,
+          "handleH": 23.25,
+          "handleX": 583.52,
           "bg": "rgb(213, 202, 233)",
           "stateOpacity": "0.08",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 143,
+          "ms": 146,
           "checked": "true",
           "pressed": false,
           "handleW": 23.56,
           "handleH": 23.56,
           "handleX": 584.13,
-          "bg": "rgb(221, 209, 241)",
+          "bg": "rgb(220, 209, 241)",
           "stateOpacity": "0.08",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 159,
+          "ms": 162,
           "checked": "true",
           "pressed": false,
           "handleW": 23.75,
@@ -746,7 +746,7 @@
           "borderColor": null
         },
         {
-          "ms": 193,
+          "ms": 195,
           "checked": "true",
           "pressed": false,
           "handleW": 23.91,
@@ -758,7 +758,7 @@
           "borderColor": null
         },
         {
-          "ms": 209,
+          "ms": 212,
           "checked": "true",
           "pressed": false,
           "handleW": 23.95,
@@ -770,7 +770,7 @@
           "borderColor": null
         },
         {
-          "ms": 226,
+          "ms": 229,
           "checked": "true",
           "pressed": false,
           "handleW": 23.97,
@@ -782,7 +782,7 @@
           "borderColor": null
         },
         {
-          "ms": 243,
+          "ms": 245,
           "checked": "true",
           "pressed": false,
           "handleW": 23.98,
@@ -794,7 +794,7 @@
           "borderColor": null
         },
         {
-          "ms": 259,
+          "ms": 262,
           "checked": "true",
           "pressed": false,
           "handleW": 23.98,
@@ -806,7 +806,7 @@
           "borderColor": null
         },
         {
-          "ms": 276,
+          "ms": 278,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -818,7 +818,7 @@
           "borderColor": null
         },
         {
-          "ms": 293,
+          "ms": 295,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -830,7 +830,7 @@
           "borderColor": null
         },
         {
-          "ms": 309,
+          "ms": 311,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -842,7 +842,7 @@
           "borderColor": null
         },
         {
-          "ms": 325,
+          "ms": 328,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -854,7 +854,7 @@
           "borderColor": null
         },
         {
-          "ms": 342,
+          "ms": 344,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -866,7 +866,7 @@
           "borderColor": null
         },
         {
-          "ms": 359,
+          "ms": 361,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -878,7 +878,7 @@
           "borderColor": null
         },
         {
-          "ms": 376,
+          "ms": 378,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -890,7 +890,7 @@
           "borderColor": null
         },
         {
-          "ms": 392,
+          "ms": 395,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -902,7 +902,7 @@
           "borderColor": null
         },
         {
-          "ms": 409,
+          "ms": 411,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -914,7 +914,7 @@
           "borderColor": null
         },
         {
-          "ms": 425,
+          "ms": 428,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -933,7 +933,7 @@
       "after": "true",
       "samples": [
         {
-          "ms": 10,
+          "ms": 8,
           "checked": "false",
           "pressed": true,
           "handleW": 24,
@@ -945,139 +945,139 @@
           "borderColor": null
         },
         {
-          "ms": 27,
+          "ms": 22,
           "checked": "false",
           "pressed": true,
-          "handleW": 24.59,
-          "handleH": 24.59,
-          "handleX": 564.69,
+          "handleW": 24.58,
+          "handleH": 24.58,
+          "handleX": 564.7,
           "bg": "rgb(117, 112, 122)",
-          "stateOpacity": "0.0100345",
+          "stateOpacity": "0.00993834",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 44,
+          "ms": 39,
           "checked": "false",
           "pressed": true,
           "handleW": 25.53,
           "handleH": 25.53,
           "handleX": 564.22,
           "bg": "rgb(102, 97, 107)",
-          "stateOpacity": "0.0407692",
+          "stateOpacity": "0.0406685",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 60,
+          "ms": 55,
           "checked": "false",
           "pressed": true,
           "handleW": 26.38,
           "handleH": 26.38,
           "handleX": 563.8,
           "bg": "rgb(92, 88, 97)",
-          "stateOpacity": "0.0607404",
+          "stateOpacity": "0.0607736",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 76,
+          "ms": 72,
           "checked": "false",
           "pressed": true,
           "handleW": 26.97,
           "handleH": 26.97,
           "handleX": 563.5,
           "bg": "rgb(86, 82, 91)",
-          "stateOpacity": "0.0732205",
+          "stateOpacity": "0.0732423",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 93,
+          "ms": 89,
           "checked": "false",
           "pressed": true,
           "handleW": 27.38,
           "handleH": 27.38,
           "handleX": 563.3,
           "bg": "rgb(82, 78, 87)",
-          "stateOpacity": "0.0816977",
+          "stateOpacity": "0.0817131",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 110,
+          "ms": 105,
           "checked": "false",
           "pressed": true,
           "handleW": 27.63,
           "handleH": 27.63,
           "handleX": 563.17,
           "bg": "rgb(79, 75, 84)",
-          "stateOpacity": "0.0877586",
+          "stateOpacity": "0.0877698",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 126,
+          "ms": 122,
           "checked": "false",
           "pressed": true,
           "handleW": 27.78,
           "handleH": 27.78,
           "handleX": 563.09,
           "bg": "rgb(77, 73, 82)",
-          "stateOpacity": "0.092198",
+          "stateOpacity": "0.0921837",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 143,
+          "ms": 139,
           "checked": "false",
           "pressed": true,
           "handleW": 27.88,
           "handleH": 27.88,
           "handleX": 563.05,
           "bg": "rgb(75, 71, 80)",
-          "stateOpacity": "0.0953464",
+          "stateOpacity": "0.0953521",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 160,
+          "ms": 155,
           "checked": "false",
           "pressed": true,
           "handleW": 27.92,
           "handleH": 27.92,
           "handleX": 563.03,
           "bg": "rgb(74, 70, 79)",
-          "stateOpacity": "0.0975394",
+          "stateOpacity": "0.0975433",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 177,
+          "ms": 172,
           "checked": "false",
           "pressed": true,
           "handleW": 27.95,
           "handleH": 27.95,
           "handleX": 563.02,
           "bg": "rgb(74, 69, 79)",
-          "stateOpacity": "0.0989761",
+          "stateOpacity": "0.0989719",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 193,
+          "ms": 191,
           "checked": "false",
           "pressed": true,
           "handleW": 27.97,
           "handleH": 27.97,
           "handleX": 563,
           "bg": "rgb(73, 69, 78)",
-          "stateOpacity": "0.0997563",
+          "stateOpacity": "0.0997573",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 210,
+          "ms": 207,
           "checked": "false",
           "pressed": true,
           "handleW": 27.98,
@@ -1089,7 +1089,7 @@
           "borderColor": null
         },
         {
-          "ms": 227,
+          "ms": 222,
           "checked": "false",
           "pressed": true,
           "handleW": 27.98,
@@ -1101,7 +1101,7 @@
           "borderColor": null
         },
         {
-          "ms": 243,
+          "ms": 238,
           "checked": "false",
           "pressed": true,
           "handleW": 27.98,
@@ -1113,11 +1113,11 @@
           "borderColor": null
         },
         {
-          "ms": 277,
-          "checked": "true",
-          "pressed": false,
-          "handleW": 27.98,
-          "handleH": 27.98,
+          "ms": 255,
+          "checked": "false",
+          "pressed": true,
+          "handleW": 28,
+          "handleH": 28,
           "handleX": 563,
           "bg": "rgb(73, 69, 78)",
           "stateOpacity": "0.1",
@@ -1125,11 +1125,11 @@
           "borderColor": null
         },
         {
-          "ms": 279,
+          "ms": 276,
           "checked": "true",
           "pressed": false,
-          "handleW": 27.98,
-          "handleH": 27.98,
+          "handleW": 28,
+          "handleH": 28,
           "handleX": 563,
           "bg": "rgb(73, 69, 78)",
           "stateOpacity": "0.1",
@@ -1137,11 +1137,11 @@
           "borderColor": null
         },
         {
-          "ms": 293,
+          "ms": 289,
           "checked": "true",
           "pressed": false,
-          "handleW": 27.39,
-          "handleH": 27.39,
+          "handleW": 27.41,
+          "handleH": 27.41,
           "handleX": 566.25,
           "bg": "rgb(89, 84, 96)",
           "stateOpacity": "0.1",
@@ -1149,43 +1149,43 @@
           "borderColor": null
         },
         {
-          "ms": 311,
+          "ms": 305,
           "checked": "true",
           "pressed": false,
           "handleW": 26.45,
           "handleH": 26.45,
-          "handleX": 571.44,
+          "handleX": 571.42,
           "bg": "rgb(138, 131, 150)",
           "stateOpacity": "0.1",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 327,
+          "ms": 322,
           "checked": "true",
           "pressed": false,
           "handleW": 25.61,
           "handleH": 25.61,
-          "handleX": 576.05,
+          "handleX": 576.06,
           "bg": "rgb(170, 161, 185)",
           "stateOpacity": "0.1",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 345,
+          "ms": 338,
           "checked": "true",
           "pressed": false,
           "handleW": 25.02,
           "handleH": 25.02,
-          "handleX": 579.34,
-          "bg": "rgb(190, 180, 208)",
+          "handleX": 579.33,
+          "bg": "rgb(190, 180, 207)",
           "stateOpacity": "0.1",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 362,
+          "ms": 355,
           "checked": "true",
           "pressed": false,
           "handleW": 24.61,
@@ -1197,7 +1197,7 @@
           "borderColor": null
         },
         {
-          "ms": 377,
+          "ms": 372,
           "checked": "true",
           "pressed": false,
           "handleW": 24.36,
@@ -1209,19 +1209,19 @@
           "borderColor": null
         },
         {
-          "ms": 393,
+          "ms": 389,
           "checked": "true",
           "pressed": false,
           "handleW": 24.2,
           "handleH": 24.2,
-          "handleX": 583.81,
+          "handleX": 583.8,
           "bg": "rgb(220, 209, 241)",
           "stateOpacity": "0.1",
           "checkDashOffset": null,
           "borderColor": null
         },
         {
-          "ms": 411,
+          "ms": 405,
           "checked": "true",
           "pressed": false,
           "handleW": 24.11,
@@ -1233,7 +1233,7 @@
           "borderColor": null
         },
         {
-          "ms": 427,
+          "ms": 422,
           "checked": "true",
           "pressed": false,
           "handleW": 24.06,
@@ -1245,7 +1245,7 @@
           "borderColor": null
         },
         {
-          "ms": 444,
+          "ms": 439,
           "checked": "true",
           "pressed": false,
           "handleW": 24.03,
@@ -1257,7 +1257,7 @@
           "borderColor": null
         },
         {
-          "ms": 462,
+          "ms": 459,
           "checked": "true",
           "pressed": false,
           "handleW": 24.02,
@@ -1269,7 +1269,7 @@
           "borderColor": null
         },
         {
-          "ms": 477,
+          "ms": 472,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1281,7 +1281,7 @@
           "borderColor": null
         },
         {
-          "ms": 495,
+          "ms": 488,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1293,7 +1293,7 @@
           "borderColor": null
         },
         {
-          "ms": 510,
+          "ms": 505,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1305,7 +1305,7 @@
           "borderColor": null
         },
         {
-          "ms": 527,
+          "ms": 522,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1317,7 +1317,7 @@
           "borderColor": null
         },
         {
-          "ms": 543,
+          "ms": 538,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1329,7 +1329,7 @@
           "borderColor": null
         },
         {
-          "ms": 559,
+          "ms": 555,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1341,7 +1341,7 @@
           "borderColor": null
         },
         {
-          "ms": 577,
+          "ms": 571,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1353,7 +1353,7 @@
           "borderColor": null
         },
         {
-          "ms": 593,
+          "ms": 588,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1365,7 +1365,7 @@
           "borderColor": null
         },
         {
-          "ms": 610,
+          "ms": 606,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1377,7 +1377,7 @@
           "borderColor": null
         },
         {
-          "ms": 626,
+          "ms": 621,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1389,7 +1389,7 @@
           "borderColor": null
         },
         {
-          "ms": 643,
+          "ms": 638,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1401,7 +1401,7 @@
           "borderColor": null
         },
         {
-          "ms": 660,
+          "ms": 655,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1413,7 +1413,7 @@
           "borderColor": null
         },
         {
-          "ms": 676,
+          "ms": 671,
           "checked": "true",
           "pressed": false,
           "handleW": 24,
@@ -1449,7 +1449,7 @@
           "borderColor": "rgb(73, 69, 78)"
         },
         {
-          "ms": 16,
+          "ms": 20,
           "checked": "false",
           "pressed": false,
           "handleW": 18,
@@ -1461,67 +1461,67 @@
           "borderColor": "rgb(73, 69, 78)"
         },
         {
-          "ms": 31,
+          "ms": 34,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(0, 0, 0, 0)",
-          "stateOpacity": "0.00985466",
+          "stateOpacity": "0.0100044",
           "checkDashOffset": "1px",
           "borderColor": "rgb(69, 65, 73)"
         },
         {
-          "ms": 48,
+          "ms": 54,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(0, 0, 0, 0)",
-          "stateOpacity": "0.0405802",
+          "stateOpacity": "0.0407378",
           "checkDashOffset": "1px",
           "borderColor": "rgb(55, 52, 59)"
         },
         {
-          "ms": 64,
+          "ms": 68,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(0, 0, 0, 0)",
-          "stateOpacity": "0.060722",
+          "stateOpacity": "0.060814",
           "checkDashOffset": "1px",
           "borderColor": "rgb(46, 43, 50)"
         },
         {
-          "ms": 81,
+          "ms": 84,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(0, 0, 0, 0)",
-          "stateOpacity": "0.0731475",
+          "stateOpacity": "0.0732083",
           "checkDashOffset": "1px",
           "borderColor": "rgb(41, 38, 44)"
         },
         {
-          "ms": 98,
+          "ms": 101,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(0, 0, 0, 0)",
-          "stateOpacity": "0.0816892",
+          "stateOpacity": "0.0817319",
           "checkDashOffset": "1px",
           "borderColor": "rgb(37, 35, 40)"
         },
         {
-          "ms": 114,
+          "ms": 118,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
@@ -1533,43 +1533,43 @@
           "borderColor": "rgb(34, 32, 38)"
         },
         {
-          "ms": 131,
+          "ms": 134,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(0, 0, 0, 0)",
-          "stateOpacity": "0.0921711",
+          "stateOpacity": "0.0921935",
           "checkDashOffset": "1px",
           "borderColor": "rgb(32, 30, 36)"
         },
         {
-          "ms": 148,
+          "ms": 151,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(0, 0, 0, 0)",
-          "stateOpacity": "0.0953433",
+          "stateOpacity": "0.0953591",
           "checkDashOffset": "1px",
           "borderColor": "rgb(31, 29, 34)"
         },
         {
-          "ms": 164,
+          "ms": 168,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(0, 0, 0, 0)",
-          "stateOpacity": "0.097548",
+          "stateOpacity": "0.0975587",
           "checkDashOffset": "1px",
           "borderColor": "rgb(30, 28, 33)"
         },
         {
-          "ms": 181,
+          "ms": 184,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
@@ -1581,31 +1581,19 @@
           "borderColor": "rgb(29, 27, 32)"
         },
         {
-          "ms": 197,
+          "ms": 201,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(0, 0, 0, 0)",
-          "stateOpacity": "0.0997587",
+          "stateOpacity": "0.0997557",
           "checkDashOffset": "1px",
           "borderColor": "rgb(29, 27, 32)"
         },
         {
-          "ms": 214,
-          "checked": "false",
-          "pressed": true,
-          "handleW": 18,
-          "handleH": 18,
-          "handleX": 1150,
-          "bg": "rgba(0, 0, 0, 0)",
-          "stateOpacity": "0.1",
-          "checkDashOffset": "1px",
-          "borderColor": "rgb(29, 27, 32)"
-        },
-        {
-          "ms": 231,
+          "ms": 218,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
@@ -1617,7 +1605,7 @@
           "borderColor": "rgb(29, 27, 32)"
         },
         {
-          "ms": 247,
+          "ms": 234,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
@@ -1629,7 +1617,7 @@
           "borderColor": "rgb(29, 27, 32)"
         },
         {
-          "ms": 264,
+          "ms": 251,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
@@ -1641,7 +1629,7 @@
           "borderColor": "rgb(29, 27, 32)"
         },
         {
-          "ms": 281,
+          "ms": 268,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
@@ -1653,7 +1641,7 @@
           "borderColor": "rgb(29, 27, 32)"
         },
         {
-          "ms": 297,
+          "ms": 284,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
@@ -1665,7 +1653,7 @@
           "borderColor": "rgb(29, 27, 32)"
         },
         {
-          "ms": 314,
+          "ms": 301,
           "checked": "false",
           "pressed": true,
           "handleW": 18,
@@ -1677,7 +1665,19 @@
           "borderColor": "rgb(29, 27, 32)"
         },
         {
-          "ms": 335,
+          "ms": 318,
+          "checked": "false",
+          "pressed": true,
+          "handleW": 18,
+          "handleH": 18,
+          "handleX": 1150,
+          "bg": "rgba(0, 0, 0, 0)",
+          "stateOpacity": "0.1",
+          "checkDashOffset": "1px",
+          "borderColor": "rgb(29, 27, 32)"
+        },
+        {
+          "ms": 343,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
@@ -1689,139 +1689,139 @@
           "borderColor": "rgb(29, 27, 32)"
         },
         {
-          "ms": 348,
+          "ms": 351,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(101, 85, 143, 0.098)",
-          "stateOpacity": "0.0980147",
-          "checkDashOffset": "0.470102px",
+          "stateOpacity": "0.0980039",
+          "checkDashOffset": "0.469558px",
           "borderColor": "rgb(36, 33, 43)"
         },
         {
-          "ms": 364,
+          "ms": 368,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
-          "bg": "rgba(101, 85, 143, 0.404)",
-          "stateOpacity": "0.0919004",
-          "checkDashOffset": "0.299584px",
-          "borderColor": "rgb(58, 50, 77)"
+          "bg": "rgba(101, 85, 143, 0.408)",
+          "stateOpacity": "0.0918575",
+          "checkDashOffset": "0.298618px",
+          "borderColor": "rgb(58, 51, 77)"
         },
         {
-          "ms": 381,
+          "ms": 384,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(101, 85, 143, 0.608)",
-          "stateOpacity": "0.0878468",
-          "checkDashOffset": "0.206593px",
+          "stateOpacity": "0.0878401",
+          "checkDashOffset": "0.206437px",
           "borderColor": "rgb(73, 62, 99)"
         },
         {
-          "ms": 397,
+          "ms": 401,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(101, 85, 143, 0.733)",
-          "stateOpacity": "0.0853647",
-          "checkDashOffset": "0.147483px",
+          "stateOpacity": "0.0853603",
+          "checkDashOffset": "0.147377px",
           "borderColor": "rgb(82, 69, 113)"
         },
         {
-          "ms": 414,
+          "ms": 418,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(101, 85, 143, 0.816)",
-          "stateOpacity": "0.0836581",
-          "checkDashOffset": "0.105982px",
+          "stateOpacity": "0.0836635",
+          "checkDashOffset": "0.106116px",
           "borderColor": "rgb(88, 74, 123)"
         },
         {
-          "ms": 431,
+          "ms": 435,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(101, 85, 143, 0.88)",
-          "stateOpacity": "0.0824404",
-          "checkDashOffset": "0.0758177px",
+          "stateOpacity": "0.0824443",
+          "checkDashOffset": "0.0759168px",
           "borderColor": "rgb(92, 78, 129)"
         },
         {
-          "ms": 448,
+          "ms": 451,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(101, 85, 143, 0.92)",
-          "stateOpacity": "0.0815636",
-          "checkDashOffset": "0.0535266px",
+          "stateOpacity": "0.081562",
+          "checkDashOffset": "0.0534849px",
           "borderColor": "rgb(95, 80, 134)"
         },
         {
-          "ms": 464,
+          "ms": 468,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(101, 85, 143, 0.953)",
-          "stateOpacity": "0.080933",
-          "checkDashOffset": "0.0368px",
+          "stateOpacity": "0.0809287",
+          "checkDashOffset": "0.0366818px",
           "borderColor": "rgb(98, 82, 138)"
         },
         {
-          "ms": 481,
+          "ms": 484,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(101, 85, 143, 0.976)",
-          "stateOpacity": "0.0804894",
-          "checkDashOffset": "0.0241542px",
+          "stateOpacity": "0.0804907",
+          "checkDashOffset": "0.0241955px",
           "borderColor": "rgb(99, 84, 140)"
         },
         {
-          "ms": 497,
+          "ms": 501,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(101, 85, 143, 0.99)",
-          "stateOpacity": "0.0802057",
-          "checkDashOffset": "0.0149587px",
+          "stateOpacity": "0.0802066",
+          "checkDashOffset": "0.0149888px",
           "borderColor": "rgb(100, 84, 142)"
         },
         {
-          "ms": 514,
+          "ms": 518,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
           "handleH": 18,
           "handleX": 1150,
           "bg": "rgba(101, 85, 143, 0.996)",
-          "stateOpacity": "0.0800486",
-          "checkDashOffset": "0.00835138px",
+          "stateOpacity": "0.080049",
+          "checkDashOffset": "0.0083723px",
           "borderColor": "rgb(101, 85, 143)"
         },
         {
-          "ms": 531,
+          "ms": 535,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
@@ -1829,11 +1829,11 @@
           "handleX": 1150,
           "bg": "rgb(101, 85, 143)",
           "stateOpacity": "0.08",
-          "checkDashOffset": "0.00392626px",
+          "checkDashOffset": "0.0039187px",
           "borderColor": "rgb(101, 85, 143)"
         },
         {
-          "ms": 548,
+          "ms": 551,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
@@ -1841,11 +1841,11 @@
           "handleX": 1150,
           "bg": "rgb(101, 85, 143)",
           "stateOpacity": "0.08",
-          "checkDashOffset": "0.00125987px",
+          "checkDashOffset": "0.00125584px",
           "borderColor": "rgb(101, 85, 143)"
         },
         {
-          "ms": 564,
+          "ms": 568,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
@@ -1853,23 +1853,11 @@
           "handleX": 1150,
           "bg": "rgb(101, 85, 143)",
           "stateOpacity": "0.08",
-          "checkDashOffset": "9.68307e-05px",
+          "checkDashOffset": "9.87229e-05px",
           "borderColor": "rgb(101, 85, 143)"
         },
         {
-          "ms": 581,
-          "checked": "true",
-          "pressed": false,
-          "handleW": 18,
-          "handleH": 18,
-          "handleX": 1150,
-          "bg": "rgb(101, 85, 143)",
-          "stateOpacity": "0.08",
-          "checkDashOffset": "0px",
-          "borderColor": "rgb(101, 85, 143)"
-        },
-        {
-          "ms": 597,
+          "ms": 584,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
@@ -1881,7 +1869,7 @@
           "borderColor": "rgb(101, 85, 143)"
         },
         {
-          "ms": 614,
+          "ms": 601,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
@@ -1893,7 +1881,7 @@
           "borderColor": "rgb(101, 85, 143)"
         },
         {
-          "ms": 631,
+          "ms": 618,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
@@ -1905,7 +1893,7 @@
           "borderColor": "rgb(101, 85, 143)"
         },
         {
-          "ms": 647,
+          "ms": 634,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
@@ -1917,7 +1905,7 @@
           "borderColor": "rgb(101, 85, 143)"
         },
         {
-          "ms": 664,
+          "ms": 651,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
@@ -1929,7 +1917,7 @@
           "borderColor": "rgb(101, 85, 143)"
         },
         {
-          "ms": 681,
+          "ms": 668,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
@@ -1941,7 +1929,7 @@
           "borderColor": "rgb(101, 85, 143)"
         },
         {
-          "ms": 697,
+          "ms": 684,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
@@ -1953,7 +1941,7 @@
           "borderColor": "rgb(101, 85, 143)"
         },
         {
-          "ms": 714,
+          "ms": 701,
           "checked": "true",
           "pressed": false,
           "handleW": 18,
@@ -1965,7 +1953,19 @@
           "borderColor": "rgb(101, 85, 143)"
         },
         {
-          "ms": 731,
+          "ms": 718,
+          "checked": "true",
+          "pressed": false,
+          "handleW": 18,
+          "handleH": 18,
+          "handleX": 1150,
+          "bg": "rgb(101, 85, 143)",
+          "stateOpacity": "0.08",
+          "checkDashOffset": "0px",
+          "borderColor": "rgb(101, 85, 143)"
+        },
+        {
+          "ms": 734,
           "checked": "true",
           "pressed": false,
           "handleW": 18,

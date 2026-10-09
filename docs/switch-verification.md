@@ -119,3 +119,23 @@ comes after the hover rule. Re-probing after the fix showed 0.10.
 3. Sample `.m3-switch__handle` width and `::before` opacity from
    `requestAnimationFrame` during each input.
 4. Compare against the table in section 2.
+
+## 9. Icon centring fix (2026-10-09)
+
+The unselected cross icon sat off-centre. The preview passed the `×` text
+character as the icon. Its ink is positioned by the font's line metrics, so
+it sat 1.9px below the handle centre (measured from a 4× screenshot, ink
+bounding box inside the handle disc). The preview now passes SVG icons on a
+24-unit grid. After the change the cross centre is 0.00px horizontally and
+0.5px vertically. The remaining 0.5px is sub-pixel, because the handle sits
+at a half-pixel top edge (y = 437.5).
+
+Text glyphs are not reliably centred in a flex box. Pass SVG icons to
+`checked_icon` and `unchecked_icon`. The component's own centring is correct:
+the glyph line box is centred on the handle.
+
+The check mark's ink sits about 0.6px low. That comes from the Material check
+path itself, whose bounding box spans y 7–19 of 24. It was left unchanged.
+
+Evidence: [`switch-icon-unchecked-handle.png`](switch-icon-unchecked-handle.png)
+(4× scale, unselected handle with cross).
