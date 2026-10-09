@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardActions, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -280,23 +280,21 @@ fn Inbox(unread: u32) -> Element {
 }"#;
 
 const CARD_USAGE: &str = r#"use dioxus::prelude::*;
-use m3e_rust_ui::{Card, CardBody, CardMedia, CardVariant};
+use m3e_rust_ui::{Button, ButtonVariant, Card, CardActions, CardBody, CardMedia, CardVariant};
 
 #[component]
-fn TripCard() -> Element {
-    let mut opened = use_signal(|| 0_u32);
+fn EventCard() -> Element {
     rsx! {
-        // Non-interactive card with an image on top.
-        Card { variant: CardVariant::Outlined,
-            CardMedia { src: "/assets/trip.jpg", alt: "Paris rooftops at dusk" }
+        Card { variant: CardVariant::Elevated,
+            CardMedia { src: "/assets/event.jpg", alt: "Crowd under balloons" }
             CardBody {
-                span { class: "m3-card__title", "Paris, 12 nights" }
-                span { class: "m3-card__text", "Opened {opened()} times" }
+                span { class: "m3-card__headline", "Glass Souls' World Tour" }
+                span { class: "m3-card__subhead", "From your recent favorites" }
+                span { class: "m3-card__supporting", "Tickets go on sale Friday at 10:00." }
             }
-        }
-        // Interactive card: phrasing content only, and a click handler.
-        Card { variant: CardVariant::Elevated, interactive: true, onclick: move |_| opened += 1,
-            span { "Open trip" }
+            CardActions { start: true,
+                Button { variant: ButtonVariant::Filled, "Buy tickets" }
+            }
         }
     }
 }"#;
@@ -1056,8 +1054,8 @@ fn App() -> Element {
                         div { class: "card-topline", span { "FILLED" } span { class: "component-index", "A" } }
                         div { class: "card-stack",
                             Card { variant: CardVariant::Filled,
-                                p { class: "m3-card__title", "Filled card" }
-                                p { class: "m3-card__text", "surface-container-highest, no elevation at rest." }
+                                p { class: "m3-card__headline", "Filled card" }
+                                p { class: "m3-card__supporting", "surface-container-highest, no elevation at rest." }
                             }
                         }
                     }
@@ -1065,8 +1063,8 @@ fn App() -> Element {
                         div { class: "card-topline", span { "ELEVATED · INTERACTIVE" } span { class: "component-index", "B" } }
                         div { class: "card-stack",
                             Card { variant: CardVariant::Elevated, interactive: true, onclick: move |_| card_taps += 1,
-                                span { class: "m3-card__title", "Elevated card" }
-                                span { class: "m3-card__text", "Tapped {card_taps()} times. Hover raises it to level 2." }
+                                span { class: "m3-card__headline", "Elevated card" }
+                                span { class: "m3-card__supporting", "Tapped {card_taps()} times. Hover raises it to level 2." }
                             }
                         }
                     }
@@ -1074,8 +1072,8 @@ fn App() -> Element {
                         div { class: "card-topline", span { "OUTLINED · INTERACTIVE" } span { class: "component-index", "C" } }
                         div { class: "card-stack",
                             Card { variant: CardVariant::Outlined, interactive: true, onclick: move |_| card_taps += 1,
-                                span { class: "m3-card__title", "Outlined card" }
-                                span { class: "m3-card__text", "1dp outline-variant. Press to change the count." }
+                                span { class: "m3-card__headline", "Outlined card" }
+                                span { class: "m3-card__supporting", "1dp outline-variant. Press to change the count." }
                             }
                         }
                     }
@@ -1083,31 +1081,39 @@ fn App() -> Element {
                         div { class: "card-topline", span { "DISABLED" } span { class: "component-index", "D" } }
                         div { class: "card-stack",
                             Card { variant: CardVariant::Filled, interactive: true, disabled: true,
-                                span { class: "m3-card__title", "Disabled card" }
-                                span { class: "m3-card__text", "38% opacity; not focusable." }
+                                span { class: "m3-card__headline", "Disabled card" }
+                                span { class: "m3-card__supporting", "38% opacity; not focusable." }
                             }
                         }
                     }
                     article { class: "demo-card card-specimen card-specimen--media",
-                        div { class: "card-topline", span { "WITH IMAGE · INTERACTIVE" } span { class: "component-index", "E" } }
+                        div { class: "card-topline", span { "WITH IMAGE · ACTIONS" } span { class: "component-index", "E" } }
                         div { class: "card-stack",
-                            Card { variant: CardVariant::Elevated, interactive: true, onclick: move |_| card_taps += 1,
+                            Card { variant: CardVariant::Elevated,
                                 CardMedia { src: card_image.to_string(), alt: "A pale sky over purple hills".to_string() }
                                 CardBody {
-                                    span { class: "m3-card__title", "Media card" }
-                                    span { class: "m3-card__text", "Image at the top, edge to edge. Tapped {card_taps()} times." }
+                                    span { class: "m3-card__headline", "Headline" }
+                                    span { class: "m3-card__subhead", "Subhead" }
+                                    span { class: "m3-card__supporting", "Explain more about the topic shown in the headline and subhead through supporting text." }
+                                }
+                                CardActions {
+                                    Button { variant: ButtonVariant::Text, "Action" }
+                                    Button { variant: ButtonVariant::Filled, "Action" }
                                 }
                             }
                         }
                     }
                     article { class: "demo-card card-specimen card-specimen--media",
-                        div { class: "card-topline", span { "WITH IMAGE · OUTLINED" } span { class: "component-index", "F" } }
+                        div { class: "card-topline", span { "WITH IMAGE · START ACTION" } span { class: "component-index", "F" } }
                         div { class: "card-stack",
-                            Card { variant: CardVariant::Outlined,
+                            Card { variant: CardVariant::Filled,
                                 CardMedia { src: card_image.to_string(), alt: "A pale sky over purple hills".to_string() }
                                 CardBody {
-                                    span { class: "m3-card__title", "Outlined media card" }
-                                    span { class: "m3-card__text", "The same image on a non-interactive card." }
+                                    span { class: "m3-card__headline", "Glass Souls' World Tour" }
+                                    span { class: "m3-card__subhead", "From your recent favorites" }
+                                }
+                                CardActions { start: true,
+                                    Button { variant: ButtonVariant::Filled, "Buy tickets" }
                                 }
                             }
                         }

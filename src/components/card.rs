@@ -65,11 +65,26 @@ pub fn CardMedia(src: String, alt: String, #[props(default)] class: String) -> E
     }
 }
 
-/// The padded text area of a card, below any [`CardMedia`]. It is a span so it is
-/// valid inside an interactive card's button.
+/// The padded text area of a card, below any [`CardMedia`]. It holds the headline,
+/// subhead and supporting text (see the classes below). It is a span so it is valid
+/// inside an interactive card's button.
+///
+/// Classes: `m3-card__headline` (headline-small), `m3-card__subhead` (title-medium),
+/// `m3-card__supporting` (body-medium, on-surface-variant). Each is a block.
 #[component]
 pub fn CardBody(#[props(default)] class: String, children: Element) -> Element {
     rsx! {
         span { class: "m3-card__body {class}", {children} }
+    }
+}
+
+/// The action row at the bottom of a card: buttons aligned to the end, or to the
+/// start with `start: true`. Put [`Button`](crate::Button)s inside it. Use it on
+/// non-interactive cards, because a button cannot be nested in an interactive card.
+#[component]
+pub fn CardActions(#[props(default)] start: bool, #[props(default)] class: String, children: Element) -> Element {
+    let align = if start { " m3-card__actions--start" } else { "" };
+    rsx! {
+        span { class: "m3-card__actions{align} {class}", {children} }
     }
 }

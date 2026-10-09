@@ -34,7 +34,7 @@
     background-color 200ms cubic-bezier(.2, 0, 0, 1);
 }
 
-/* A card with media: the image is edge to edge and the text keeps a 16dp inset. */
+/* A card with media: the image is edge to edge and the text keeps a 24dp inset. */
 .m3-card:has(> .m3-card__media:first-child),
 .m3-card:has(> .m3-card__content > .m3-card__media:first-child) { padding: 0; }
 .m3-card__media {
@@ -44,11 +44,25 @@
   object-fit: cover;
   border-radius: 12px 12px 0 0;
 }
-.m3-card__body { display: block; padding: 16px; }
-.m3-card__title,
-.m3-card__text { display: block; }
-.m3-card__title { margin: 0 0 4px; font: 500 16px/24px Inter, ui-sans-serif, system-ui, sans-serif; }
-.m3-card__text { margin: 0; color: var(--md-sys-color-on-surface-variant); }
+.m3-card__body { display: block; padding: 24px; }
+/* A body followed by an action row leaves the bottom inset to the action row. */
+.m3-card__body:has(+ .m3-card__actions) { padding-bottom: 0; }
+.m3-card__headline,
+.m3-card__subhead,
+.m3-card__supporting { display: block; margin: 0; }
+.m3-card__headline { font: 400 24px/32px Inter, ui-sans-serif, system-ui, sans-serif; color: var(--md-sys-color-on-surface); }
+.m3-card__subhead { margin-top: 4px; font: 500 16px/24px Inter, ui-sans-serif, system-ui, sans-serif; color: var(--md-sys-color-on-surface-variant); }
+.m3-card__supporting { margin-top: 16px; font: 400 14px/20px Inter, ui-sans-serif, system-ui, sans-serif; color: var(--md-sys-color-on-surface-variant); }
+
+/* Action row: buttons at the end with an 8dp gap, 24dp inset. */
+.m3-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 24px;
+}
+.m3-card__actions--start { justify-content: flex-start; }
 
 /* Variants at rest. */
 .m3-card--filled { --card-container: var(--md-sys-color-surface-container-highest); }

@@ -32,7 +32,8 @@ headless Chromium 1194, using real pointer and keyboard input, at device scale 2
 | Disabled | 38% opacity for the whole card; no state layer, no focus | Tokens |
 | Interactive semantics | A native `<button>`; Enter and Space activate it | Native |
 | Non-interactive | A `<div>` with any content | — |
-| Media | Full-width 16:9 image at the top, 12px top corners; card padding removed | Choice; the M3 card media slot is not in the token files |
+| Media | Full-width 16:9 image at the top, 12px top corners; card padding removed | Material card reference layout |
+| Actions | Row at the bottom, end-aligned by default, `start` option | Material card reference layout |
 | Motion | Box-shadow and background transitions, 200ms standard easing | Choice; the token file gives no duration |
 
 ## 3. Input, state and platform matrix
@@ -59,9 +60,35 @@ Raw data: [`card-samples.json`](card-samples.json). Screenshot: [`card-section.p
 
 ## 4. Diagnosed defects
 
+- **Image cards did not match the Material layout.** The first media card had a single title
+  and text under the image, with no actions and smaller text. It now uses the reference anatomy
+  (section 3b).
 - **Title and text ran together in image cards.** `CardBody` is a block, but the title and
   text were inline spans, so "Media card" and its supporting text sat on one line. Both are now
   blocks. Measured: the text starts 4px below the title, as the margin sets.
+
+## 3b. Card anatomy (Material layout, revised)
+
+The earlier media example put a title and one line of text under the image, and the Material
+reference does not. The reference layout is: media at the top, then a headline, a subhead,
+supporting text, and an action row at the bottom right (or a filled action at the start, as in
+the "Glass Souls' World Tour" reference). The card now follows that anatomy.
+
+| Element | Value | Measured |
+| --- | --- | --- |
+| Text inset | 24dp from the card edge | 25px (1px border + 24px) |
+| Headline | 24/32, weight 400 (headline-small) | 24px / 32px / 400 |
+| Subhead | 16/24, weight 500 (title-medium), 4px above it | 16px / 24px / 500 |
+| Supporting text | 14/20, weight 400 (body-medium), 16px above it | 14px / 20px / 400 |
+| Action row | 24px inset on all sides, buttons aligned to the end, 8dp gap | Right inset 25px; 8px gap; row height 88px (24 + 40 + 24) |
+| Start-aligned actions | Buttons aligned to the start | Left inset 25px |
+| Media | Full width, 16:9, 12px top corners | 518px of 518px inner width |
+
+The 4px subhead margin and the 16px supporting margin are read from the reference screenshot
+(distances between the text lines). They are not token values.
+
+Raw data: [`card-anatomy-samples.json`](card-anatomy-samples.json); screenshot:
+[`card-anatomy-section.png`](card-anatomy-section.png).
 
 ## 3a. Cards with media
 

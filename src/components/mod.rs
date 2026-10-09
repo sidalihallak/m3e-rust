@@ -17,7 +17,7 @@ pub mod switch;
 pub mod tabs;
 
 pub use badge::{BadgeAnchor, NotificationBadge};
-pub use card::{Card, CardBody, CardMedia, CardVariant};
+pub use card::{Card, CardActions, CardBody, CardMedia, CardVariant};
 pub use button::{Button, ButtonShape, ButtonSize, ButtonType, ButtonVariant};
 pub use chip::{Chip, ChipVariant};
 pub use checkbox::Checkbox;

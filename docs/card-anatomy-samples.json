@@ -1,0 +1,106 @@
+{
+  "elevatedWithActions": {
+    "cardPadding": "0px",
+    "headline": {
+      "left": 25,
+      "right": 25,
+      "top": 316.38,
+      "bottom": 173,
+      "w": 470,
+      "h": 32,
+      "font": "24px / 32px / 400",
+      "color": "rgb(29, 27, 32)"
+    },
+    "subhead": {
+      "left": 25,
+      "right": 25,
+      "top": 352.38,
+      "bottom": 145,
+      "w": 470,
+      "h": 24,
+      "font": "16px / 24px / 500",
+      "color": "rgb(73, 69, 78)"
+    },
+    "supporting": {
+      "left": 25,
+      "right": 25,
+      "top": 392.38,
+      "bottom": 89,
+      "w": 470,
+      "h": 40,
+      "font": "14px / 20px / 400",
+      "color": "rgb(73, 69, 78)"
+    },
+    "actions": {
+      "left": 1,
+      "right": 1,
+      "top": 432.38,
+      "bottom": 1,
+      "w": 518,
+      "h": 88,
+      "font": "14px / 20px / 400",
+      "color": "rgb(29, 27, 32)"
+    },
+    "buttons": [
+      {
+        "label": "Action",
+        "left": 329.66,
+        "right": 111.67,
+        "w": 78.67
+      },
+      {
+        "label": "Action",
+        "left": 416.33,
+        "right": 25,
+        "w": 78.67
+      }
+    ],
+    "mediaW": 518,
+    "cardInnerW": 518
+  },
+  "filledStartAction": {
+    "cardPadding": "0px",
+    "headline": {
+      "left": 25,
+      "right": 25,
+      "top": 316.38,
+      "bottom": 117,
+      "w": 470,
+      "h": 32,
+      "font": "24px / 32px / 400",
+      "color": "rgb(29, 27, 32)"
+    },
+    "subhead": {
+      "left": 25,
+      "right": 25,
+      "top": 352.38,
+      "bottom": 89,
+      "w": 470,
+      "h": 24,
+      "font": "16px / 24px / 500",
+      "color": "rgb(73, 69, 78)"
+    },
+    "supporting": null,
+    "actions": {
+      "left": 1,
+      "right": 1,
+      "top": 376.38,
+      "bottom": 1,
+      "w": 518,
+      "h": 88,
+      "font": "14px / 20px / 400",
+      "color": "rgb(29, 27, 32)"
+    },
+    "buttons": [
+      {
+        "label": "Buy tickets",
+        "left": 25,
+        "right": 384.67,
+        "w": 110.33
+      }
+    ],
+    "mediaW": 518,
+    "cardInnerW": 518
+  },
+  "pageErrors": []
+}
