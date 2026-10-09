@@ -1,0 +1,23 @@
+/*
+ * M3 expressive loading indicator. Copy with src/components/loading_indicator.rs
+ * and src/loading_shapes.rs. The shapes morph on a spring while the indicator
+ * turns; the browser runs that loop (see the component). Sizes: 48dp container,
+ * 38dp indicator. The contained variant sits on a primary-container disc, with
+ * the indicator in on-primary-container.
+ */
+.m3-loading {
+  position: relative;
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--md-sys-color-primary);
+}
+.m3-loading--contained {
+  background: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+}
+.m3-loading__svg { width: 100%; height: 100%; overflow: visible; }
+@media (prefers-reduced-motion: reduce) {
+  .m3-loading * { animation: none !important; }
+}

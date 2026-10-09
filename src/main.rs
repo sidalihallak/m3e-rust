@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -147,6 +147,16 @@ fn UploadProgress() -> Element {
     }
 }"#;
 
+const LOADING_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{LoadingIndicator, LoadingIndicatorVariant};
+
+#[component]
+fn Saving() -> Element {
+    rsx! {
+        LoadingIndicator { variant: LoadingIndicatorVariant::Contained }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -190,6 +200,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/icon-button.css") }
         document::Stylesheet { href: asset!("/assets/chip.css") }
         document::Stylesheet { href: asset!("/assets/progress.css") }
+        document::Stylesheet { href: asset!("/assets/loading-indicator.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -582,8 +593,21 @@ fn App() -> Element {
                             CircularProgress { aria_label: Some("Circular indeterminate".to_string()) }
                             CircularProgress { value: Some(progress()), thick: true, aria_label: Some("Circular thick".to_string()) }
                         }
+                        div { class: "progress-circles",
+                            CircularProgress { value: Some(progress()), wavy: true, aria_label: Some("Wavy determinate".to_string()) }
+                            CircularProgress { wavy: true, aria_label: Some("Wavy indeterminate".to_string()) }
+                            CircularProgress { value: Some(progress()), wavy: true, thick: true, aria_label: Some("Wavy thick".to_string()) }
+                        }
+                    }
+                    article { class: "demo-card progress-specimen",
+                        div { class: "card-topline", span { "LOADING INDICATOR" } span { class: "component-index", "C" } }
+                        div { class: "progress-circles",
+                            LoadingIndicator {}
+                            LoadingIndicator { variant: LoadingIndicatorVariant::Contained }
+                        }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Progress usage", code: PROGRESS_USAGE }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Loading indicator usage", code: LOADING_USAGE }
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }

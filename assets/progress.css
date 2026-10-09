@@ -110,33 +110,42 @@
   100% { left: 160%; width: 8%; }
 }
 
-/* Circular: a 40dp ring, rotated to start at 12 o'clock. Indeterminate spins
-   with a fixed arc; the arc-length animation of the official spinner is not
-   implemented. */
+/* Circular: 40dp flat, 48dp wavy and 52dp thick. Arcs start at 12 o'clock in the
+   component geometry, so the SVG is not rotated. The track is secondary-container,
+   as in the reference. Flat indeterminate spins its arc; wavy indeterminate spins
+   its SVG on a 1.575s loop (the sweep runs in the browser). The determinate wave
+   spins backwards over 8s, as the reference does. */
 .m3-circular {
-  --circular-thickness: 4px;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
-  flex: 0 0 auto;
+  color: var(--md-sys-color-primary);
 }
-.m3-circular--thick { --circular-thickness: 8px; width: 52px; height: 52px; }
-.m3-circular__svg { width: 100%; height: 100%; transform: rotate(-90deg); overflow: visible; }
-.m3-circular__track,
-.m3-circular__active { fill: none; stroke-width: var(--circular-thickness); }
-.m3-circular__track { stroke: var(--md-sys-color-surface-container-highest); }
-.m3-circular__active {
-  stroke: var(--md-sys-color-primary);
-  stroke-linecap: round;
-  transition: stroke-dashoffset 240ms cubic-bezier(.05, .7, .1, 1);
+.m3-circular--wavy { width: 48px; height: 48px; }
+.m3-circular--thick { width: 52px; height: 52px; }
+.m3-circular__svg { width: 100%; height: 100%; overflow: visible; }
+.m3-circular__active { fill: none; }
+.m3-circular__track-arc { fill: none; stroke: var(--md-sys-color-secondary-container); }
+.m3-circular__wave { transform-box: view-box; transform-origin: 50% 50%; }
+.m3-circular--wavy:not(.m3-circular--indeterminate) .m3-circular__wave {
+  animation: m3-circular-wave-reverse 8s linear infinite;
 }
-.m3-circular--indeterminate { animation: m3-circular-spin 1.4s linear infinite; }
-.m3-circular--indeterminate .m3-circular__active { stroke-dasharray: 85 113; stroke-dashoffset: 0; }
+.m3-circular--indeterminate:not(.m3-circular--wavy) { animation: m3-circular-spin 1.4s linear infinite; }
+.m3-circular--indeterminate.m3-circular--wavy .m3-circular__svg { animation: m3-circular-wavy-spin 1.575s linear infinite; }
 @keyframes m3-circular-spin { to { transform: rotate(360deg); } }
+@keyframes m3-circular-wave-reverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+@keyframes m3-circular-wavy-spin {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(90deg); }
+  100% { transform: rotate(360deg); }
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .m3-linear, .m3-linear *, .m3-circular, .m3-circular * {
+  .m3-linear, .m3-linear *, .m3-circular, .m3-circular *, .m3-loading, .m3-loading * {
     animation-play-state: paused !important;
   }
 }
