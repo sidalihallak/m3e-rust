@@ -1,0 +1,74 @@
+{
+  "captured": "2026-10-09",
+  "tokens": {
+    "secondaryContainer": "#e8def8",
+    "surfaceContainerLow": "#f8f2fa",
+    "onSecondaryContainer": "#4a4458"
+  },
+  "geometry": [
+    {
+      "cls": "m3-chip--assist",
+      "h": 32,
+      "radius": "8px",
+      "font": "500 14px/20px",
+      "shadow": "none",
+      "bg": "#000000",
+      "label": "#1d1b20"
+    },
+    {
+      "cls": "m3-chip--assist m3-chip--elevated",
+      "h": 32,
+      "radius": "8px",
+      "font": "500 14px/20px",
+      "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+      "bg": "#f8f2fa",
+      "label": "#1d1b20"
+    },
+    {
+      "cls": "m3-chip--suggestion",
+      "h": 32,
+      "radius": "8px",
+      "font": "500 14px/20px",
+      "shadow": "none",
+      "bg": "#000000",
+      "label": "#49454e"
+    },
+    {
+      "cls": "m3-chip--assist m3-chip--disabled",
+      "h": 32,
+      "radius": "8px",
+      "font": "500 14px/20px",
+      "shadow": "none",
+      "bg": "#001bc3d00",
+      "label": "#001bc3d00"
+    }
+  ],
+  "filterBefore": {
+    "aria": "false",
+    "checkIcon": 0,
+    "bg": "rgba(0, 0, 0, 0)"
+  },
+  "filterAfter": {
+    "aria": "true",
+    "checkIcon": 1,
+    "bg": "rgb(232, 222, 248)",
+    "expectBg": "#e8def8"
+  },
+  "filterBSelectedStart": "true",
+  "hoverOpacity": "0.08",
+  "pressedOpacity": {
+    "opacity": "0.1",
+    "pressed": true
+  },
+  "elevRest": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+  "elevHover": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+  "inputBefore": 1,
+  "inputAfterRemove": 0,
+  "inputAfterRestore": 1,
+  "disabled": {
+    "bg": "color(srgb 0.113725 0.105882 0.12549 / 0.12)",
+    "label": "color(srgb 0.113725 0.105882 0.12549 / 0.38)",
+    "pointerEvents": "not-allowed"
+  },
+  "pageErrors": []
+}

@@ -1,4 +1,5 @@
 pub mod button;
+pub mod chip;
 pub mod checkbox;
 pub mod fab;
 pub mod fab_menu;
@@ -7,6 +8,7 @@ pub mod icon_button;
 pub mod switch;
 
 pub use button::{Button, ButtonShape, ButtonSize, ButtonType, ButtonVariant};
+pub use chip::{Chip, ChipVariant};
 pub use checkbox::Checkbox;
 pub use fab::{Fab, FabColor, FabSize};
 pub use fab_menu::{FabMenu, FabMenuColor, FabMenuItem};

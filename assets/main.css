@@ -144,3 +144,9 @@ button { cursor: pointer; }
 .ib-row-wrap { flex-wrap: wrap; row-gap: 14px; }
 .icon-button-grid .code-card { grid-column: 1 / -1; }
 @media (max-width: 760px) { .icon-button-grid { grid-template-columns: 1fr; } }
+.chip-section { min-width: 0; }
+.chip-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.chip-specimen { min-width: 0; }
+.chip-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; min-height: 64px; padding: 10px 4px; }
+.chip-grid .code-card { grid-column: 1 / -1; }
+@media (max-width: 760px) { .chip-grid { grid-template-columns: 1fr; } }

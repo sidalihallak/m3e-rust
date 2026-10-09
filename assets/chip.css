@@ -1,0 +1,149 @@
+/*
+ * M3 chip. Copy with src/components/chip.rs and icon.css.
+ * Sources: Material Web assist, filter, input and suggestion chip tokens:
+ * 32dp height, 8dp corner (corner-small), label-large 14/20 weight 500, 18dp
+ * icons, 1dp flat outline, elevated style at elevation 1 (hover 2), state
+ * layers 0.08 hover and 0.10 pressed, disabled 12% container and outline and
+ * 38% label. The 16dp label inset and 8dp inset with a leading icon are M3
+ * spec values, not token values; the official token files do not define them.
+ */
+.m3-chip {
+  --chip-container: transparent;
+  --chip-outline: var(--md-sys-color-outline-variant);
+  --chip-outline-width: 1px;
+  --chip-label: var(--md-sys-color-on-surface);
+  --chip-icon: var(--md-sys-color-primary);
+  --chip-state: var(--md-sys-color-on-surface);
+  --chip-state-opacity: 0;
+  --chip-shadow: none;
+  --m3-icon-size: 18px;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: stretch;
+  box-sizing: border-box;
+  height: 32px;
+  border: var(--chip-outline-width) solid var(--chip-outline);
+  border-radius: 8px;
+  background: var(--chip-container);
+  box-shadow: var(--chip-shadow);
+  color: var(--chip-label);
+  font: 500 14px/20px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .00625rem;
+  white-space: nowrap;
+  transition:
+    background-color 200ms cubic-bezier(.2, 0, 0, 1),
+    box-shadow 200ms cubic-bezier(.2, 0, 0, 1),
+    color 200ms cubic-bezier(.2, 0, 0, 1),
+    border-color 200ms cubic-bezier(.2, 0, 0, 1);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* State layer behind the chip's buttons. */
+.m3-chip::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--chip-state);
+  content: "";
+  opacity: var(--chip-state-opacity);
+  pointer-events: none;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+.m3-chip__main,
+.m3-chip__remove {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+.m3-chip__main { padding-inline: 16px; }
+.m3-chip__main:has(> .m3-chip__icon) { padding-left: 8px; }
+.m3-chip__main:disabled,
+.m3-chip__remove:disabled { cursor: not-allowed; }
+.m3-chip__main:focus-visible,
+.m3-chip__remove:focus-visible {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 2px;
+}
+.m3-chip__icon,
+.m3-chip__remove-icon { --m3-icon-size: 18px; flex: 0 0 auto; color: var(--chip-icon); }
+.m3-chip__remove { padding-inline: 0 12px; color: var(--chip-icon); }
+
+/* Input chips keep the remove action and its inset. */
+.m3-chip--input .m3-chip__main { padding-right: 8px; }
+
+/* Variants: assist and input/suggestion share the flat outline. */
+.m3-chip--assist { --chip-icon: var(--md-sys-color-primary); }
+.m3-chip--input,
+.m3-chip--suggestion,
+.m3-chip--filter {
+  --chip-label: var(--md-sys-color-on-surface-variant);
+  --chip-icon: var(--md-sys-color-on-surface-variant);
+  --chip-state: var(--md-sys-color-on-surface-variant);
+}
+.m3-chip--assist { --chip-state: var(--md-sys-color-on-surface); }
+
+/* Hover and focus change only the state layer. */
+.m3-chip:not(.m3-chip--disabled):hover { --chip-state-opacity: .08; }
+.m3-chip:not(.m3-chip--disabled):focus-within { --chip-state-opacity: .10; }
+
+/* Pressed: state layer 0.10. Qualified so it outranks the hover rule. */
+.m3-chip.m3-chip--pressed:not(.m3-chip--disabled) { --chip-state-opacity: .10; }
+
+/* Filter chip, selected: secondary-container, no outline. */
+.m3-chip--filter.m3-chip--selected {
+  --chip-container: var(--md-sys-color-secondary-container);
+  --chip-outline: transparent;
+  --chip-outline-width: 0px;
+  --chip-label: var(--md-sys-color-on-secondary-container);
+  --chip-icon: var(--md-sys-color-on-secondary-container);
+  --chip-state: var(--md-sys-color-on-secondary-container);
+}
+.m3-chip--filter.m3-chip--selected.m3-chip--pressed:not(.m3-chip--disabled) {
+  --chip-state: var(--md-sys-color-on-surface-variant);
+}
+
+/* Elevated: surface-container-low at elevation 1, 2 on hover, 1 when pressed. */
+.m3-chip--elevated {
+  --chip-container: var(--md-sys-color-surface-container-low);
+  --chip-outline-width: 0px;
+  --chip-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15);
+}
+.m3-chip--elevated:not(.m3-chip--disabled):hover {
+  --chip-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 2px 6px 2px rgb(0 0 0 / .15);
+}
+.m3-chip--elevated.m3-chip--filter.m3-chip--selected {
+  --chip-container: var(--md-sys-color-secondary-container);
+}
+
+/* Disabled: 12% container and outline, 38% label and icon. */
+.m3-chip--disabled {
+  --chip-container: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent);
+  --chip-outline: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent);
+  --chip-label: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  --chip-icon: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  --chip-shadow: none;
+}
+.m3-chip--disabled.m3-chip--filter:not(.m3-chip--selected) { --chip-container: transparent; }
+.m3-chip--disabled.m3-chip--elevated:not(.m3-chip--selected) { --chip-container: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .m3-chip,
+  .m3-chip::before {
+    transition-duration: .01ms !important;
+  }
+}

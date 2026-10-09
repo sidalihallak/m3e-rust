@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Fab, FabColor, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, Fab, FabColor, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -118,6 +118,22 @@ fn FavoriteButton() -> Element {
     }
 }"#;
 
+const CHIP_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{Chip, ChipVariant};
+
+#[component]
+fn DietFilter() -> Element {
+    let mut vegan = use_signal(|| false);
+    rsx! {
+        Chip {
+            label: "Vegan".to_string(),
+            variant: ChipVariant::Filter,
+            selected: vegan(),
+            onclick: move |_| vegan.toggle(),
+        }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -136,6 +152,9 @@ fn App() -> Element {
     let mut menu_open = use_signal(|| false);
     let mut fav = use_signal(|| false);
     let mut bookmarked = use_signal(|| false);
+    let mut filter_a = use_signal(|| false);
+    let mut filter_b = use_signal(|| true);
+    let mut input_shown = use_signal(|| true);
     let mut menu_pick = use_signal(|| String::from("none"));
     let theme = theme::ThemePreview::from_seed(seed());
     let scheme = if dark() {
@@ -155,6 +174,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/fab.css") }
         document::Stylesheet { href: asset!("/assets/fab-menu.css") }
         document::Stylesheet { href: asset!("/assets/icon-button.css") }
+        document::Stylesheet { href: asset!("/assets/chip.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -478,6 +498,43 @@ fn App() -> Element {
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Icon button usage", code: ICON_BUTTON_USAGE }
+                }
+            }
+            section { class: "wrap roles-section chip-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "07 — CHIPS" }
+                        h2 { "Chips" }
+                        p { class: "section-description", "Assist, filter, input and suggestion chips in flat and elevated styles. Filter chips show a check when selected; input chips remove on their trailing action." }
+                    }
+                    span { class: "token-note", "M3 · MATERIAL WEB TOKENS" }
+                }
+                div { class: "chip-grid",
+                    article { class: "demo-card chip-specimen",
+                        div { class: "card-topline", span { "ASSIST · SUGGESTION" } span { class: "component-index", "A" } }
+                        div { class: "chip-row",
+                            Chip { label: "Add to calendar".to_string(), variant: ChipVariant::Assist, icon: Some(icons::ADD) }
+                            Chip { label: "Set reminder".to_string(), variant: ChipVariant::Assist, elevated: true }
+                            Chip { label: "Yes, thanks".to_string(), variant: ChipVariant::Suggestion }
+                            Chip { label: "Disabled".to_string(), variant: ChipVariant::Assist, disabled: true }
+                        }
+                    }
+                    article { class: "demo-card chip-specimen",
+                        div { class: "card-topline", span { "FILTER · INPUT" } span { class: "component-index", "B" } }
+                        div { class: "chip-row",
+                            Chip { label: "Vegan".to_string(), variant: ChipVariant::Filter, selected: filter_a(), onclick: move |_| filter_a.toggle() }
+                            Chip { label: "Gluten-free".to_string(), variant: ChipVariant::Filter, selected: filter_b(), onclick: move |_| filter_b.toggle() }
+                            Chip { label: "Elevated".to_string(), variant: ChipVariant::Filter, elevated: true, selected: filter_a(), onclick: move |_| filter_a.toggle() }
+                        }
+                        div { class: "chip-row",
+                            if input_shown() {
+                                Chip { label: "Design review".to_string(), variant: ChipVariant::Input, onremove: move |_| input_shown.set(false) }
+                            } else {
+                                button { class: "copy-code", onclick: move |_| input_shown.set(true), "Restore input chip" }
+                            }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Chip usage", code: CHIP_USAGE }
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }

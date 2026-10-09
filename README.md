@@ -59,6 +59,8 @@ The FAB family (branded, toolbar and menu) is verified in
 
 The icon button is verified in [`docs/icon-button-verification.md`](docs/icon-button-verification.md).
 
+The chip is verified in [`docs/chip-verification.md`](docs/chip-verification.md).
+
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
 
