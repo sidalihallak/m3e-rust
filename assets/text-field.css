@@ -1,12 +1,13 @@
 /*
+ * Runtime helpers: src/components/motion.rs. See docs/copy-components.md for all dependencies.
  * M3 text field. Copy with src/components/text_field.rs and icon.css.
  * Sources: Material Web filled and outlined text field tokens (revision 47adb65): 56dp
  * container, body-large input and label text, body-small label when floated, 1dp outline,
  * hover 1dp on-surface, focus primary, error colours, disabled 38% text and 12% outline,
  * 4dp corner (corner-extra-small), filled container surface-container-highest with a 1dp
  * active indicator and a 2dp focused indicator. Leading and trailing icons are 24dp, as the
- * tokens define. The focused outline is 3dp in the outlined token file; it is drawn as a 1dp
- * outline plus a 2dp inset ring. The label float (200ms) is a choice; the token file gives no duration.
+ * tokens define. The focused outline is a 3dp border, with a notch cut through its full thickness.
+ * The label float (200ms) is a choice; the token file gives no duration.
  * Prefix and suffix show only while the label is floated, as in Material. Counters and
  * multi-line fields follow the Material layout; their exact spacing is a choice.
  */
@@ -82,7 +83,7 @@
 
 .m3-field__outline { display: none; }
 /* The notch is cut from the outline with a mask, so it works on any surface. The mask keeps the
-   outline and removes a band (--notch-w wide, 2px tall) at the label's position on the top edge.
+   outline and removes a band (--notch-w wide, as tall as the border) at the label's position on the top edge.
    The notch width is the floated label's width plus 4dp either side, measured by the script. */
 @property --notch-w { syntax: "<length>"; inherits: true; initial-value: 0px; }
 .m3-field--outlined .m3-field__outline {
@@ -94,7 +95,7 @@
   pointer-events: none;
   --notch-w: 0px;
   mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
-  mask-size: 100% 100%, var(--notch-w) 2px;
+  mask-size: 100% 100%, var(--notch-w) var(--field-outline-width);
   mask-position: 0 0, calc(var(--field-label-x) - 4px) 0;
   mask-repeat: no-repeat;
   mask-composite: exclude;
@@ -108,7 +109,7 @@
 .m3-field--outlined .m3-field__container:hover .m3-field__outline { --field-outline: var(--md-sys-color-on-surface); }
 .m3-field--outlined .m3-field__input:focus ~ .m3-field__outline {
   --field-outline: var(--md-sys-color-primary);
-  box-shadow: inset 0 0 0 2px var(--md-sys-color-primary);
+  --field-outline-width: 3px;
 }
 
 /* Input: fills the row; no own padding, so the row supplies the 16dp inset. */
@@ -130,6 +131,11 @@
   caret-color: var(--field-caret);
 }
 .m3-field--filled .m3-field__input { height: 24px; }
+/* Numeric fields keep native number validation and ArrowUp/ArrowDown behavior,
+   but browser steppers are not part of the Material text-field surface. */
+.m3-field__input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
+.m3-field__input[type="number"]::-webkit-inner-spin-button,
+.m3-field__input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 .m3-field--multiline .m3-field__input {
   flex: 1 1 auto;
   height: auto;
@@ -156,7 +162,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  pointer-events: none;
+  cursor: text;
   transition:
     top 200ms cubic-bezier(.2, 0, 0, 1),
     font-size 200ms cubic-bezier(.2, 0, 0, 1),
@@ -210,7 +216,7 @@
 .m3-field--error .m3-field__supporting,
 .m3-field--error .m3-field__counter { color: var(--md-sys-color-error); }
 .m3-field--outlined.m3-field--error .m3-field__outline { --field-outline: var(--md-sys-color-error); }
-.m3-field--outlined.m3-field--error .m3-field__input:focus ~ .m3-field__outline { box-shadow: inset 0 0 0 2px var(--md-sys-color-error); }
+.m3-field--outlined.m3-field--error .m3-field__input:focus ~ .m3-field__outline { --field-outline: var(--md-sys-color-error); }
 .m3-field--filled.m3-field--error .m3-field__indicator { background: var(--md-sys-color-error); }
 .m3-field--filled.m3-field--error .m3-field__input:focus ~ .m3-field__indicator { background: var(--md-sys-color-error); }
 
@@ -224,7 +230,7 @@
 .m3-field--filled.m3-field--disabled .m3-field__indicator { background: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
 
 @media (prefers-reduced-motion: reduce) {
-  .m3-field__label { transition-duration: .01ms !important; }
+  .m3-field__label, .m3-field__outline { transition-duration: .01ms !important; }
 }
 
 /* Hidden label measure: the floated typography, never shown. */

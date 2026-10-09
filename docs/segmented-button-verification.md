@@ -1,3 +1,100 @@
+# Segmented-button centering correction — 2026-10-09
+
+## Scope and source contract
+
+Follow-up alignment fix in `src/components/segmented_button.rs` and
+`assets/segmented-button.css`. Read the official
+[overview](https://m3.material.io/components/segmented-buttons/overview),
+[specs](https://m3.material.io/components/segmented-buttons/specs),
+[guidelines](https://m3.material.io/components/segmented-buttons/guidelines), and
+[accessibility](https://m3.material.io/components/segmented-buttons/accessibility)
+in the browser on this date. Inspected the actual Material Web labs
+[shared layout source at 47adb65](https://github.com/material-components/material-web/blob/47adb655bd7a88c4d62e8faac2873084eed555dc/labs/segmentedbutton/internal/_shared.scss).
+There is no dedicated segmented-button file in shadcn-m3e c37c0d2.
+
+The current official site recommends connected button groups for new M3
+Expressive designs. This follow-up corrects the existing classic 40px connected
+segmented control. Its icon + 8px gap + label form **one centered group**;
+the label by itself is not centered when an icon precedes it.
+
+## Cause and fix
+
+An empty `m3-segmented__state` span remained in normal flex flow even though
+state rendering already used ::before. The parent gap inserted 8px before the
+visible content, shifting it 4px right. Removed the redundant span and parent
+flex gap. The inner icon/label gap stays 8px. Native 48px interaction targets,
+40px visual geometry, equal segment widths and selected check replacement
+remain intact. Divider placement now uses a logical start inset.
+
+## Actual checks
+
+| Check | Result |
+| --- | --- |
+| Before, with/without check/icon | Visible content center displaced +3.996..4px horizontally |
+| After, every initial example | Absolute center error ≤0.00390625px horizontally; 0px vertically |
+| Week ArrowRight | Month selects; content remains centered |
+| Favourite Space | Check becomes favourite glyph; content remains centered |
+| Details Space | Check appears; content remains centered |
+| Restore selection | Week/Favourite/Add again selected, all centered |
+| Disabled List/Grid | Centered; native disabled semantics retained |
+| Target / visual geometry | 48px native height, 38px item inside 40px outlined set |
+| Dark scheme | Same centering through the tested examples |
+
+Raw data: [alignment samples](badge-segmented-alignment-samples.json).
+Screenshot: [centered segmented buttons](segmented-button-alignment.png).
+Dioxus reported a successful 9.44s live build; the preview was reloaded and
+new markup measured. Locked offline Wasm check passed. Copy dependencies
+remain in [copy-components.md](copy-components.md).
+
+Android/touch and OS reduced-motion true remain untested. These measurements
+establish settled content centering, not new motion certification or complete
+keyboard/assistive-technology conformance. No motion timing changed in this fix.
+
+## Reproduce
+
+Run ./scripts/dev.sh, confirm successful build, reload. For each segment,
+compare the bounding-box center of .m3-segmented__content with its parent item.
+Toggle Favourite/Details with Space and Week/Month with arrows; repeat in dark
+mode. Keep the icon and label together for the centering comparison.
+
+## Historical reports before this correction
+
+# Segmented Button — current fidelity update
+
+Date: 2026-10-09. Desktop Codex in-app browser. Scope: component Rust/CSS
+changes in this fix, not complete platform certification.
+
+## Sources and implemented contract
+
+- [Material overview](https://m3.material.io/components/segmented-buttons/overview)
+- [Material specs](https://m3.material.io/components/segmented-buttons/specs)
+- [Material guidelines](https://m3.material.io/components/segmented-buttons/guidelines)
+- [Material accessibility](https://m3.material.io/components/segmented-buttons/accessibility)
+- No dedicated segmented-button upstream file exists at c37c0d2; native input behavior is implemented against the official contract.
+- [Pinned Material Web tokens](https://github.com/material-components/material-web/tree/47adb655bd7a88c4d62e8faac2873084eed555dc/tokens/versions/latest/sass)
+
+The four official sections were read in the preceding review on this date;
+actual upstream files/styles were inspected for these fixes. Current values
+and reference choices supersede historical measurements below.
+
+R3/R5 plus ripple; input height 48px around 40px connected set, selected supplied icon becomes check, all-disabled outline reduced. Week ArrowRight selects/focuses Month; selected Month/Favourite/Add glyphs are check. Set spacing reserves target extension.
+
+## Checks, dependencies and gaps
+
+- Locked offline Wasm check and fresh Dioxus web build passed; live preview
+  was restarted/reloaded and checked for one app-shell.
+- [Shared fix matrix, measured results and reproduction steps](component-fidelity-fixes.md)
+- [Raw runtime measurements](component-fidelity-fixes-samples.json)
+- [Copy dependencies and source export](copy-components.md); exported library
+  and all 19 current usage examples compile independently for Wasm.
+- Platform scope: desktop pointer/keyboard checks named above. Android remains
+  paused; touch, assistive technology and OS reduced-motion true are untested.
+  Source gating is not claimed as an OS-preference runtime measurement.
+- Historical screenshots/samples below establish only the state and version
+  in which they were captured. See the shared fix report for current gaps.
+
+## Historical report before this fix
+
 # Segmented button verification
 
 Scope: `SegmentedButtonSet` and `SegmentedButton` in
@@ -36,7 +133,7 @@ with it. This report covers only the current version.
 | Dividers | 1px between items, drawn as an overlay so widths stay equal | Reference |
 | Item widths | Equal: each item takes 1/n of the set, sized by the widest label (`flex: 1 1 0`) | Material guideline (equal-width segments) |
 | Item corners | Square; the pill clip gives the rounded ends | Reference |
-| Selected | secondary-container fill, on-secondary-container label, check unless an icon is given | Reference and tokens |
+| Selected | secondary-container fill, on-secondary-container label, check replacing a supplied icon | Reference and tokens |
 | Label | label-large, 14/20, weight 500 | Tokens |
 | Icon | 18px | Tokens |
 | State layer | hover 0.08; focus and pressed 0.10 | Tokens |

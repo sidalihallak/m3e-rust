@@ -1,0 +1,5 @@
+/* Copy with components/ripple.rs and motion.rs. Pointer-relative Material ripple:
+   450ms growth, 105ms fade in, 375ms fade out, 225ms minimum press.
+   The separate layer clips the ripple while leaving extended hit targets intact. */
+.m3-ripple { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; pointer-events: none; color: inherit; z-index: 0; }
+.m3-ripple__wave { position: absolute; top: 0; left: 0; border-radius: 50%; background: radial-gradient(closest-side, currentColor max(calc(100% - 70px), 65%), transparent 100%); opacity: 0; pointer-events: none; will-change: transform, opacity; }

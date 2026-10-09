@@ -43,6 +43,7 @@ pub fn Card(
     if interactive {
         rsx! {
             button { r#type: "button", class, disabled, onclick: move |event| onclick.call(event),
+                super::ripple::Ripple {}
                 span { class: "m3-card__state", aria_hidden: "true" }
                 span { class: "m3-card__content", {children} }
             }

@@ -1,4 +1,6 @@
 /*
+ * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
+ * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
  * M3 floating action button. Copy with src/components/fab.rs and icon.css.
  * Sources: Material Web FAB tokens (containers 40/56/80/96dp, corners
  * 12/16/20/28dp, icons 24/24/28/36dp, state layers 0.08/0.10/0.10); elevation
@@ -75,7 +77,7 @@
   transition: opacity 375ms linear;
   animation: m3-fab-ripple-grow 450ms cubic-bezier(.2, 0, 0, 1) forwards;
 }
-.m3-fab.m3-fab--pressed .m3-fab__ripple {
+.m3-fab.m3-fab[data-ripple-pressed="true"] .m3-fab__ripple {
   opacity: .10;
   transition-duration: 105ms;
   animation: m3-fab-ripple-grow 450ms cubic-bezier(.2, 0, 0, 1) forwards, m3-fab-ripple-in 105ms linear;
@@ -173,11 +175,11 @@
 
 /* Pressed: state layer 0.10, back to elevation 3 (1 when lowered). Qualified
    with the root class so it outranks the hover rule (0,3,0). */
-.m3-fab.m3-fab--pressed:not(:disabled) {
+.m3-fab.m3-fab[data-ripple-pressed="true"]:not(:disabled) {
   --fab-state-opacity: .10;
   --fab-shadow: 0 1px 3px 0 rgb(0 0 0 / .3), 0 4px 8px 3px rgb(0 0 0 / .15);
 }
-.m3-fab.m3-fab--lowered.m3-fab--pressed:not(:disabled) {
+.m3-fab.m3-fab--lowered.m3-fab[data-ripple-pressed="true"]:not(:disabled) {
   --fab-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15);
 }
 
@@ -220,3 +222,9 @@
 .m3-fab--toolbar.m3-fab--medium:not(:disabled):hover {
   --fab-shadow: 0 1px 3px 0 rgb(0 0 0 / .3), 0 4px 8px 3px rgb(0 0 0 / .15);
 }
+
+/* Keep visual geometry separate from the native interaction target. */
+.m3-fab--small:not(.m3-fab--extended) { margin: 4px; }
+.m3-fab--small:not(.m3-fab--extended)::after { content: ""; position: absolute; inset: -4px; }
+
+.m3-fab { overflow: visible; }

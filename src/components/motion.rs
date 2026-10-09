@@ -9,9 +9,22 @@ pub(crate) fn frame_loop(id: &str, body: &str) -> String {
   const id = {id:?};
   window.__m3Frames = window.__m3Frames || {{}};
   if (window.__m3Frames[id]) cancelAnimationFrame(window.__m3Frames[id]);
-  const tick = (ts) => {{
-    if (!document.getElementById(id)) {{ delete window.__m3Frames[id]; return; }}
-    {body}
+  const media = matchMedia('(prefers-reduced-motion: reduce)');
+  let previous = null, elapsed = 0;
+  const tick = (now) => {{
+    const root = document.getElementById(id);
+    if (!root || root.dataset.m3FrameLoop !== 'true') {{
+      delete window.__m3Frames[id];
+      if (window.__m3SweepT0) delete window.__m3SweepT0[id];
+      if (!root && window.__m3LoadingState) delete window.__m3LoadingState[id];
+      return;
+    }}
+    if (previous !== null && !media.matches) elapsed += now - previous;
+    previous = now;
+    if (!media.matches) {{
+      const ts = elapsed;
+      {body}
+    }}
     window.__m3Frames[id] = requestAnimationFrame(tick);
   }};
   window.__m3Frames[id] = requestAnimationFrame(tick);

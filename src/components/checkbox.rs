@@ -72,6 +72,7 @@ pub fn Checkbox(
             },
             onblur: move |_| pressed.set(false),
             onclick: move |_| onchange.call(indeterminate || !checked),
+            super::ripple::Ripple {}
             span { class: "m3-checkbox__state", aria_hidden: "true" }
             span { class: "m3-checkbox__box", aria_hidden: "true",
                 svg { class: "m3-checkbox__mark", view_box: "0 0 18 18",

@@ -1,4 +1,3 @@
-use dioxus::html::input_data::MouseButton;
 use dioxus::prelude::*;
 
 use super::{Icon, IconData};
@@ -64,6 +63,11 @@ impl IconButtonShape {
     }
 }
 
+/// Container width at each Expressive size, from current Material Web tokens.
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
+pub enum IconButtonWidth { Narrow, #[default] Default, Wide }
+impl IconButtonWidth { const fn class(self) -> &'static str { match self { Self::Narrow => "narrow", Self::Default => "default", Self::Wide => "wide" } } }
+
 /// An icon button built on a native `<button>`.
 ///
 /// The button needs an `aria_label` because the icon is hidden from assistive
@@ -76,6 +80,8 @@ pub fn IconButton(
     #[props(default)] variant: IconButtonVariant,
     #[props(default)] size: IconButtonSize,
     #[props(default)] shape: IconButtonShape,
+    #[props(default)] width: IconButtonWidth,
+    #[props(default)] selected_icon: Option<IconData>,
     #[props(default)] toggle: bool,
     #[props(default)] selected: bool,
     #[props(default)] disabled: bool,
@@ -83,24 +89,20 @@ pub fn IconButton(
     #[props(default)] aria_label: Option<String>,
     #[props(default)] onclick: EventHandler<MouseEvent>,
 ) -> Element {
-    let mut pressed = use_signal(|| false);
+    let icon = if toggle && selected { selected_icon.unwrap_or(icon) } else { icon };
     let toggle_class = if toggle { " m3-icon-button--toggle" } else { "" };
     let selected_class = if toggle && selected {
         " m3-icon-button--selected"
     } else {
         ""
     };
-    let pressed_class = if pressed() && !disabled {
-        " m3-icon-button--pressed"
-    } else {
-        ""
-    };
     let disabled_class = if disabled { " m3-icon-button--disabled" } else { "" };
     let class = format!(
-        "m3-icon-button m3-icon-button--{} m3-icon-button--{} m3-icon-button--{}{toggle_class}{selected_class}{pressed_class}{disabled_class} {class}",
+        "m3-icon-button m3-icon-button--{} m3-icon-button--{} m3-icon-button--{} m3-icon-button--width-{}{toggle_class}{selected_class}{disabled_class} {class}",
         variant.class(),
         size.class(),
         shape.class(),
+        width.class(),
     );
     let aria_pressed = if toggle {
         Some(if selected { "true" } else { "false" })
@@ -115,26 +117,8 @@ pub fn IconButton(
             disabled,
             "aria-pressed": aria_pressed,
             aria_label,
-            onpointerdown: move |event| {
-                if !disabled && event.is_primary() && event.trigger_button() == Some(MouseButton::Primary) {
-                    pressed.set(true);
-                }
-            },
-            onpointerup: move |_| pressed.set(false),
-            onpointercancel: move |_| pressed.set(false),
-            onpointerleave: move |_| pressed.set(false),
-            onkeydown: move |event| {
-                if !disabled && event.code() == Code::Space && !event.is_auto_repeating() {
-                    pressed.set(true);
-                }
-            },
-            onkeyup: move |event| {
-                if event.code() == Code::Space {
-                    pressed.set(false);
-                }
-            },
-            onblur: move |_| pressed.set(false),
             onclick: move |event| onclick.call(event),
+            super::ripple::Ripple {}
             Icon { icon, class: "m3-icon-button__icon" }
         }
     }

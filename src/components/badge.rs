@@ -23,7 +23,9 @@ pub fn NotificationBadge(
 
     rsx! {
         if let Some(text) = text {
-            span { class, role: "status", "aria-label": label, "{text}" }
+            span { class, role: "status", "aria-label": label,
+                bdi { dir: "ltr", "{text}" }
+            }
         } else {
             span { class, role: "img", "aria-label": label }
         }
@@ -31,7 +33,8 @@ pub fn NotificationBadge(
 }
 
 /// Positions its children as the anchor for a [`NotificationBadge`]. The badge
-/// sits at the top-right corner of the anchor.
+/// sits at the upper trailing edge, using the official icon-corner offsets.
+/// Count pills grow toward that edge without moving their leading anchor; RTL mirrors it.
 #[component]
 pub fn BadgeAnchor(#[props(default)] class: String, children: Element) -> Element {
     rsx! {

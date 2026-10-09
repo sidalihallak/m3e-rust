@@ -1,3 +1,67 @@
+# Badge alignment correction — 2026-10-09
+
+## Scope and sources
+
+Corrected NotificationBadge / BadgeAnchor in `src/components/badge.rs` and
+`assets/badge.css`, with LTR, RTL and standalone gallery examples. Read the
+current official [overview](https://m3.material.io/components/badges/overview),
+[specs](https://m3.material.io/components/badges/specs),
+[guidelines](https://m3.material.io/components/badges/guidelines), and
+[accessibility](https://m3.material.io/components/badges/accessibility) in the
+browser on this date, including the loaded Measurements diagram. Inspected
+[actual upstream badge.tsx at c37c0d2](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/badge.tsx).
+Upstream defines size/colors/text and leaves positioning to its consumer.
+
+## Cause and corrected contract
+
+The previous percentage translation centered each count pill on the icon
+corner: as the text widened, its leading edge moved left. It also raised
+counts 12px above the icon. Those offsets were arbitrary. Current official
+specs place badges inside the upper trailing part of the icon bounds, with
+fixed offsets to the badge's bottom-leading corner.
+
+| Property | Current value / measured result |
+| --- | --- |
+| Icon anchor | 24×24px in these examples |
+| Small dot | 6×6px; x=18, y=0 relative to LTR anchor |
+| Small bottom-leading offset from icon top-trailing | 6px inward, 6px down |
+| Large count | 16px high; x=12, y=−2 for **all** 3/99/999+ examples |
+| Large bottom-leading offset | 12px inward, 14px down |
+| Count widths | 16 / 22.859 / 38.133px with current Inter typography |
+| RTL | Dot x=0; count's right edge remains at x=12; growth extends left |
+| Numeric text in RTL | `bdi dir=ltr` isolates 999+ without changing badge placement |
+| Standalone badges | Relative/in-flow, separated; no absolute overlap |
+| Semantics | Dot img/New notification; counts status with their count label |
+| Colors / motion | error/on-error; no badge animation added |
+
+The declared fixed anchor replaces the earlier choice below. Count width
+adapts to the existing kit font; the official maximum-count illustration is
+34px wide, whereas Inter renders 999+ at 38.133px. This fix establishes
+placement rather than claiming font/pixel parity.
+
+## Verification and build
+
+- Actual desktop DOM measurements before/after, default and dark schemes;
+  one-digit, two-digit and capped counts; RTL mirroring; standalone flow.
+- Dioxus reported a successful 9.44s live build; preview reloaded and current
+  gallery confirmed. Locked offline Wasm check passed.
+- Screenshot: [badge alignment](badge-alignment.png).
+- Raw data: [badge/segment alignment samples](badge-segmented-alignment-samples.json).
+- Copy sources/CSS remain listed in [copy-components.md](copy-components.md).
+- Not tested: Android/touch, screen-reader announcements, navigation-host
+  dismissal behavior. OS reduced-motion true was not exercised; this component
+  has no animation. Android remains paused.
+
+## Reproduce
+
+Run ./scripts/dev.sh, confirm build success and reload. In Badges, compare
+3, 99 and 999+: their leading badge edges must share the same fixed position
+relative to their icons. The RTL card mirrors placement and preserves 999+
+text order. Inline badges must occupy separate flow positions. Repeat in dark
+mode and compare the raw measurements.
+
+## Historical report before this correction
+
 # Notification badge verification
 
 Scope: `NotificationBadge` and `BadgeAnchor` in

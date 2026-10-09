@@ -1,4 +1,5 @@
 /*
+ * Runtime helpers: src/components/motion.rs. See docs/copy-components.md for all dependencies.
  * M3 expressive linear and circular progress. Copy with src/components/progress.rs.
  * Sources: Material Web progress indicator tokens (flat 4dp, thick 8dp, track
  * surface-container-highest, stop dot 4dp, 4dp gap, wave amplitude 3dp,
@@ -134,7 +135,7 @@
 .m3-circular--wavy:not(.m3-circular--indeterminate) .m3-circular__wave {
   animation: m3-circular-wave-reverse 8s linear infinite;
 }
-.m3-circular--indeterminate:not(.m3-circular--wavy) { animation: m3-circular-spin 1.4s linear infinite; }
+
 .m3-circular--indeterminate.m3-circular--wavy .m3-circular__svg { animation: m3-circular-wavy-spin 1.575s linear infinite; }
 @keyframes m3-circular-spin { to { transform: rotate(360deg); } }
 @keyframes m3-circular-wave-reverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
@@ -155,3 +156,81 @@
   --wave-thick-40: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2214%22 viewBox=%220 0 40 14%22%3E%3Cpolyline points=%220.00,7.00 0.50,7.24 1.00,7.47 1.50,7.70 2.00,7.93 2.50,8.15 3.00,8.36 3.50,8.57 4.00,8.76 4.50,8.95 5.00,9.12 5.50,9.28 6.00,9.43 6.50,9.56 7.00,9.67 7.50,9.77 8.00,9.85 8.50,9.92 9.00,9.96 9.50,9.99 10.00,10.00 10.50,9.99 11.00,9.96 11.50,9.92 12.00,9.85 12.50,9.77 13.00,9.67 13.50,9.56 14.00,9.43 14.50,9.28 15.00,9.12 15.50,8.95 16.00,8.76 16.50,8.57 17.00,8.36 17.50,8.15 18.00,7.93 18.50,7.70 19.00,7.47 19.50,7.24 20.00,7.00 20.50,6.76 21.00,6.53 21.50,6.30 22.00,6.07 22.50,5.85 23.00,5.64 23.50,5.43 24.00,5.24 24.50,5.05 25.00,4.88 25.50,4.72 26.00,4.57 26.50,4.44 27.00,4.33 27.50,4.23 28.00,4.15 28.50,4.08 29.00,4.04 29.50,4.01 30.00,4.00 30.50,4.01 31.00,4.04 31.50,4.08 32.00,4.15 32.50,4.23 33.00,4.33 33.50,4.44 34.00,4.57 34.50,4.72 35.00,4.88 35.50,5.05 36.00,5.24 36.50,5.43 37.00,5.64 37.50,5.85 38.00,6.07 38.50,6.30 39.00,6.53 39.50,6.76 40.00,7.00%22 fill=%22none%22 stroke=%22black%22 stroke-width=%228%22 stroke-linecap=%22round%22/%3E%3C/svg%3E");
   --wave-thick-20: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2214%22 viewBox=%220 0 20 14%22%3E%3Cpolyline points=%220.00,7.00 0.50,7.47 1.00,7.93 1.50,8.36 2.00,8.76 2.50,9.12 3.00,9.43 3.50,9.67 4.00,9.85 4.50,9.96 5.00,10.00 5.50,9.96 6.00,9.85 6.50,9.67 7.00,9.43 7.50,9.12 8.00,8.76 8.50,8.36 9.00,7.93 9.50,7.47 10.00,7.00 10.50,6.53 11.00,6.07 11.50,5.64 12.00,5.24 12.50,4.88 13.00,4.57 13.50,4.33 14.00,4.15 14.50,4.04 15.00,4.00 15.50,4.04 16.00,4.15 16.50,4.33 17.00,4.57 17.50,4.88 18.00,5.24 18.50,5.64 19.00,6.07 19.50,6.53 20.00,7.00%22 fill=%22none%22 stroke=%22black%22 stroke-width=%228%22 stroke-linecap=%22round%22/%3E%3C/svg%3E");
 }
+
+.m3-linear--indeterminate .m3-linear__track { position: absolute; inset: 0; margin: 0; }
+.m3-cp-rotate, .m3-cp-spinner, .m3-cp-circle { position: absolute; inset: 0; }
+.m3-cp-left, .m3-cp-right { position: absolute; top: 0; bottom: 0; width: 50%; overflow: hidden; }
+.m3-cp-left { left: 0; } .m3-cp-right { right: 0; }
+.m3-cp-rotate {
+  animation: m3-cp-linear-rotate calc(1333ms * 360 / 306) linear infinite;
+}
+.m3-cp-spinner {
+  animation: m3-cp-rotate-arc calc(4 * 1333ms) cubic-bezier(0.4, 0, 0.2, 1)
+    infinite both;
+}
+.m3-cp-circle {
+  animation: m3-cp-expand-arc 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+}
+.m3-cp-left .m3-cp-circle {
+  rotate: 135deg;
+  right: -100%;
+  width: 200%;
+}
+.m3-cp-right .m3-cp-circle {
+  rotate: 100deg;
+  left: -100%;
+  width: 200%;
+  animation-delay: calc(-0.5 * 1333ms);
+}
+@keyframes m3-cp-expand-arc {
+  0% {
+    transform: rotate(265deg);
+  }
+  50% {
+    transform: rotate(130deg);
+  }
+  100% {
+    transform: rotate(265deg);
+  }
+}
+@keyframes m3-cp-rotate-arc {
+  12.5% {
+    transform: rotate(135deg);
+  }
+  25% {
+    transform: rotate(270deg);
+  }
+  37.5% {
+    transform: rotate(405deg);
+  }
+  50% {
+    transform: rotate(540deg);
+  }
+  62.5% {
+    transform: rotate(675deg);
+  }
+  75% {
+    transform: rotate(810deg);
+  }
+  87.5% {
+    transform: rotate(945deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+@keyframes m3-cp-linear-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) { .m3-cp-rotate, .m3-cp-spinner, .m3-cp-circle { animation-play-state: paused !important; } }
+
+/* The wave needs its full amplitude above and below the stroke. Paint only the
+   masked wave in moving bars; a solid background would hide its shape. */
+.m3-linear--wavy { height: calc(var(--linear-thickness) + 6px); }
+.m3-linear--wavy.m3-linear--determinate { height: calc(var(--linear-thickness) + 6px); }
+.m3-linear--indeterminate .m3-linear__track { top: 50%; bottom: auto; translate: 0 -50%; }
+.m3-linear--indeterminate.m3-linear--wavy .m3-linear__bar { top: 0; height: 100%; background: none; }
+.m3-linear--indeterminate.m3-linear--wavy .m3-linear__bar .m3-linear__wave { top: 0; }

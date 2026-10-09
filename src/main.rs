@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardActions, Divider, DividerInset, DividerOrientation, TextField, TextFieldVariant, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, ChipSize, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, SliderSize, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardActions, Divider, DividerInset, DividerOrientation, TextField, TextFieldVariant, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, IconButtonWidth, Switch};
 
 mod theme;
 
@@ -119,7 +119,7 @@ fn FavoriteButton() -> Element {
 }"#;
 
 const CHIP_USAGE: &str = r#"use dioxus::prelude::*;
-use m3e_rust_ui::{Chip, ChipVariant};
+use m3e_rust_ui::{Chip, ChipVariant, ChipSize};
 
 #[component]
 fn DietFilter() -> Element {
@@ -257,10 +257,14 @@ fn TripTabs() -> Element {
         Tabs {
             items: labels.iter().map(|label| TabItem::new(*label)).collect::<Vec<_>>(),
             selected: selected(),
+            tab_ids: (0..3).map(|i| format!("trip-tab-{i}")).collect::<Vec<_>>(),
+            panel_ids: (0..3).map(|i| format!("trip-panel-{i}")).collect::<Vec<_>>(),
             aria_label: Some("Trip type".to_string()),
             onchange: move |index: usize| selected.set(index),
         }
-        // Render the panel for the selected tab here.
+        for (index, label) in labels.into_iter().enumerate() {
+            div { id: "trip-panel-{index}", role: "tabpanel", aria_labelledby: "trip-tab-{index}", hidden: selected() != index, "{label} content" }
+        }
     }
 }"#;
 
@@ -349,6 +353,7 @@ fn App() -> Element {
     let mut check_b = use_signal(|| true);
     // (indeterminate, checked): the mixed box resolves to checked when activated.
     let mut check_mixed = use_signal(|| (true, false));
+    let mut tertiary_menu_open = use_signal(|| true);
     let mut menu_open = use_signal(|| false);
     let mut fav = use_signal(|| false);
     let mut bookmarked = use_signal(|| false);
@@ -361,7 +366,10 @@ fn App() -> Element {
     let mut stepped = use_signal(|| 50.0_f64);
     let mut price = use_signal(|| (20.0_f64, 70.0_f64));
     let mut level = use_signal(|| 60.0_f64);
-    let mut tick_value = use_signal(|| 40.0_f64);
+    let mut balance = use_signal(|| 30.0_f64);
+    let mut dynamic_progress = use_signal(|| false);
+    let mut renamed_field = use_signal(|| false);
+    let mut tick_value = use_signal(|| 30.0_f64);
     let mut period = use_signal(|| 1_usize);
     let mut trip = use_signal(|| 0_usize);
     let mut detail = use_signal(|| 1_usize);
@@ -387,6 +395,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/main.css") }
         document::Stylesheet { href: asset!("/assets/tailwind.css") }
         document::Stylesheet { href: asset!("/assets/button.css") }
+        document::Stylesheet { href: asset!("/assets/ripple.css") }
         document::Stylesheet { href: asset!("/assets/switch.css") }
         document::Stylesheet { href: asset!("/assets/checkbox.css") }
         document::Stylesheet { href: asset!("/assets/icon.css") }
@@ -677,7 +686,7 @@ fn App() -> Element {
                                 onchange: move |value| menu_open.set(value),
                                 onselect: move |index: usize| menu_pick.set(menu_items()[index].label.to_string()),
                             }
-                            FabMenu { items: menu_items(), color: FabMenuColor::Tertiary, open: true, aria_label: Some("Open tertiary menu".to_string()) }
+                            FabMenu { items: menu_items(), color: FabMenuColor::Tertiary, open: tertiary_menu_open(), aria_label: Some("Open tertiary menu".to_string()), onchange: move |v| tertiary_menu_open.set(v), onselect: move |index: usize| menu_pick.set(menu_items()[index].label.to_string()) }
                         }
                         p { class: "icon-note", "Last picked: {menu_pick}. Escape closes the menu." }
                     }
@@ -704,8 +713,8 @@ fn App() -> Element {
                             div { class: "button-example", IconButton { icon: icons::FAVORITE, variant: IconButtonVariant::Outlined, aria_label: Some("Outlined".to_string()) } span { "OUTLINED" } }
                         }
                         div { class: "ib-row",
-                            div { class: "button-example", IconButton { icon: icons::FAVORITE, variant: IconButtonVariant::Standard, toggle: true, selected: fav(), aria_label: Some("Standard toggle".to_string()), onclick: move |_| fav.toggle() } span { "STANDARD · TOGGLE" } }
-                            div { class: "button-example", IconButton { icon: icons::FAVORITE, variant: IconButtonVariant::Filled, toggle: true, selected: fav(), aria_label: Some("Filled toggle".to_string()), onclick: move |_| fav.toggle() } span { "FILLED · TOGGLE" } }
+                            div { class: "button-example", IconButton { icon: icons::FAVORITE, variant: IconButtonVariant::Standard, toggle: true, selected: fav(), selected_icon: icons::FAVORITE_FILL, aria_label: Some("Standard toggle".to_string()), onclick: move |_| fav.toggle() } span { "STANDARD · TOGGLE" } }
+                            div { class: "button-example", IconButton { icon: icons::FAVORITE, variant: IconButtonVariant::Filled, toggle: true, selected: fav(), selected_icon: icons::FAVORITE_FILL, aria_label: Some("Filled toggle".to_string()), onclick: move |_| fav.toggle() } span { "FILLED · TOGGLE" } }
                             div { class: "button-example", IconButton { icon: icons::FAVORITE, variant: IconButtonVariant::Tonal, toggle: true, selected: fav(), aria_label: Some("Tonal toggle".to_string()), onclick: move |_| fav.toggle() } span { "TONAL · TOGGLE" } }
                             div { class: "button-example", IconButton { icon: icons::FAVORITE, variant: IconButtonVariant::Outlined, toggle: true, selected: fav(), aria_label: Some("Outlined toggle".to_string()), onclick: move |_| fav.toggle() } span { "OUTLINED · TOGGLE" } }
                         }
@@ -724,6 +733,14 @@ fn App() -> Element {
                             div { class: "button-example", IconButton { icon: icons::INFO, shape: IconButtonShape::Square, variant: IconButtonVariant::Filled, toggle: true, selected: bookmarked(), aria_label: Some("Square toggle".to_string()), onclick: move |_| bookmarked.toggle() } span { "SQUARE · TOGGLE" } }
                             div { class: "button-example", IconButton { icon: icons::CHECK, variant: IconButtonVariant::Filled, disabled: true, aria_label: Some("Disabled".to_string()) } span { "DISABLED" } }
                             div { class: "button-example", IconButton { icon: icons::CHECK, variant: IconButtonVariant::Outlined, disabled: true, aria_label: Some("Disabled outlined".to_string()) } span { "DISABLED · OUTLINED" } }
+                        }
+                    }
+                    article { class: "demo-card icon-button-specimen",
+                        div { class: "card-topline", span { "WIDTHS · 40DP" } }
+                        div { class: "icon-button-row",
+                            IconButton { icon: icons::ADD, width: IconButtonWidth::Narrow, aria_label: "Narrow icon button" }
+                            IconButton { icon: icons::ADD, width: IconButtonWidth::Default, aria_label: "Default width icon button" }
+                            IconButton { icon: icons::ADD, width: IconButtonWidth::Wide, aria_label: "Wide icon button" }
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Icon button usage", code: ICON_BUTTON_USAGE }
@@ -763,6 +780,13 @@ fn App() -> Element {
                             }
                         }
                     }
+                    article { class: "demo-card chip-specimen",
+                        div { class: "card-topline", span { "EXPRESSIVE SIZES" } }
+                        div { class: "chip-row",
+                            Chip { label: "Medium chip", size: ChipSize::Medium, icon: icons::ADD }
+                            Chip { label: "Large chip", size: ChipSize::Large, icon: icons::ADD }
+                        }
+                    }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Chip usage", code: CHIP_USAGE }
                 }
             }
@@ -771,7 +795,7 @@ fn App() -> Element {
                     div {
                         p { class: "eyebrow", "08 — PROGRESS" }
                         h2 { "Progress indicators" }
-                        p { class: "section-description", "Flat and wavy linear tracks, thick tracks, determinate and indeterminate. The circular indicator is flat for now; wavy circular is not implemented." }
+                        p { class: "section-description", "Flat and wavy linear tracks, thick tracks, determinate and indeterminate. Circular indicators support flat two-half spinners and wavy sweeps." }
                     }
                     span { class: "token-note", "M3 EXPRESSIVE · MATERIAL WEB TOKENS" }
                 }
@@ -808,6 +832,11 @@ fn App() -> Element {
                             LoadingIndicator {}
                             LoadingIndicator { variant: LoadingIndicatorVariant::Contained }
                         }
+                    }
+                    article { class: "demo-card progress-specimen",
+                        div { class: "card-topline", span { "SWITCHING MODES" } }
+                        CircularProgress { value: if dynamic_progress() { None } else { Some(progress()) }, wavy: true, aria_label: "Dynamic circular" }
+                        button { class: "copy-code", onclick: move |_| dynamic_progress.toggle(), "Toggle progress mode" }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Progress usage", code: PROGRESS_USAGE }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Loading indicator usage", code: LOADING_USAGE }
@@ -909,7 +938,7 @@ fn App() -> Element {
                             }
                             div { class: "slider-row",
                                 span { class: "control-label", "Ticks · value {tick_value().round()}" }
-                                Slider { min: 0.0, max: 100.0, step: 10.0, ticks: true, label: true, value: tick_value(), aria_label: Some("Ticks".to_string()), onchange: move |v: f64| tick_value.set(v) }
+                                Slider { min: 0.0, max: 100.0, step: 30.0, ticks: true, label: true, value: tick_value(), aria_label: Some("Ticks".to_string()), onchange: move |v: f64| tick_value.set(v) }
                             }
                         }
                     }
@@ -921,6 +950,16 @@ fn App() -> Element {
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Range, ticks and vertical usage", code: RANGE_USAGE }
+                    article { class: "demo-card slider-specimen",
+                        div { class: "card-topline", span { "EXPRESSIVE SIZES · CENTERED · ICONS" } }
+                        div { class: "slider-stack",
+                            Slider { value: volume(), size: SliderSize::Small, aria_label: "Small slider", onchange: move |v| volume.set(v) }
+                            Slider { value: volume(), size: SliderSize::Medium, leading_icon: icons::REMOVE, trailing_icon: icons::ADD, aria_label: "Medium slider", onchange: move |v| volume.set(v) }
+                            Slider { value: volume(), size: SliderSize::Large, aria_label: "Large slider", onchange: move |v| volume.set(v) }
+                            Slider { value: volume(), size: SliderSize::ExtraLarge, aria_label: "Extra large slider", onchange: move |v| volume.set(v) }
+                            Slider { min: -100.0, max: 100.0, value: balance(), centered: true, aria_label: "Balance", onchange: move |v| balance.set(v) }
+                        }
+                    }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Slider usage", code: SLIDER_USAGE }
                 }
             }
@@ -929,7 +968,7 @@ fn App() -> Element {
                     div {
                         p { class: "eyebrow", "11 — SEGMENTED BUTTON" }
                         h2 { "Segmented buttons" }
-                        p { class: "section-description", "Connected native inputs: radios for single select, so arrow keys move the selection, and checkboxes for multi select, so Space toggles each button. Selected buttons show a check unless they have an icon." }
+                        p { class: "section-description", "Connected native inputs: radios for single select, so arrow keys move the selection, and checkboxes for multi select, so Space toggles each button. Selected buttons replace their leading icon with a check." }
                     }
                     span { class: "token-note", "M3 EXPRESSIVE · MATERIAL WEB TOKENS" }
                 }
@@ -1012,10 +1051,14 @@ fn App() -> Element {
                             Tabs {
                                 items: vec![TabItem::new("Flights"), TabItem::new("Hotels"), TabItem::new("Cars")],
                                 selected: trip(),
+                                tab_ids: (0..3).map(|i| format!("trip-tab-{i}")).collect::<Vec<_>>(),
+                                panel_ids: (0..3).map(|i| format!("trip-panel-{i}")).collect::<Vec<_>>(),
                                 aria_label: Some("Trip type".to_string()),
                                 onchange: move |index: usize| trip.set(index),
                             }
-                            p { class: "tabs-panel", "Panel: {[\"Flights\", \"Hotels\", \"Cars\"][trip()]}" }
+                            for (index, label) in ["Flights", "Hotels", "Cars"].into_iter().enumerate() {
+                                div { class: "tabs-panel", id: "trip-panel-{index}", role: "tabpanel", aria_labelledby: "trip-tab-{index}", hidden: trip() != index, "Panel: {label}" }
+                            }
                         }
                     }
                     article { class: "demo-card tabs-specimen",
@@ -1028,10 +1071,14 @@ fn App() -> Element {
                                     TabItem { label: "Add".to_string(), icon: Some(icons::ADD), disabled: false },
                                 ],
                                 selected: detail(),
+                                tab_ids: (0..3).map(|i| format!("detail-tab-{i}")).collect::<Vec<_>>(),
+                                panel_ids: (0..3).map(|i| format!("detail-panel-{i}")).collect::<Vec<_>>(),
                                 aria_label: Some("Item view".to_string()),
                                 onchange: move |index: usize| detail.set(index),
                             }
-                            p { class: "tabs-panel", "Panel: {[\"Favourites\", \"Details\", \"Add\"][detail()]}" }
+                            for (index, label) in ["Favourites", "Details", "Add"].into_iter().enumerate() {
+                                div { class: "tabs-panel", id: "detail-panel-{index}", role: "tabpanel", aria_labelledby: "detail-tab-{index}", hidden: detail() != index, "Panel: {label}" }
+                            }
                         }
                     }
                     article { class: "demo-card tabs-specimen",
@@ -1045,10 +1092,14 @@ fn App() -> Element {
                                     TabItem { label: "Reviews".to_string(), icon: None, disabled: true },
                                 ],
                                 selected: spec(),
+                                tab_ids: (0..3).map(|i| format!("spec-tab-{i}")).collect::<Vec<_>>(),
+                                panel_ids: (0..3).map(|i| format!("spec-panel-{i}")).collect::<Vec<_>>(),
                                 aria_label: Some("Product".to_string()),
                                 onchange: move |index: usize| spec.set(index),
                             }
-                            p { class: "tabs-panel", "Panel: {[\"Overview\", \"Specs\", \"Reviews\"][spec()]}" }
+                            for (index, label) in ["Overview", "Specs", "Reviews"].into_iter().enumerate() {
+                                div { class: "tabs-panel", id: "spec-panel-{index}", role: "tabpanel", aria_labelledby: "spec-tab-{index}", hidden: spec() != index, "Panel: {label}" }
+                            }
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Tabs usage", code: TABS_USAGE }
@@ -1077,6 +1128,23 @@ fn App() -> Element {
                             BadgeAnchor { Icon { icon: icons::FAVORITE } NotificationBadge { count: 3 } }
                             BadgeAnchor { Icon { icon: icons::INFO } NotificationBadge { count: 99 } }
                             BadgeAnchor { Icon { icon: icons::ADD } NotificationBadge { count: 1000 } }
+                        }
+                    }
+                    article { class: "demo-card badge-specimen", dir: "rtl",
+                        div { class: "card-topline", span { "RTL · FIXED ANCHOR" } }
+                        div { class: "badge-row badge-row--rtl",
+                            BadgeAnchor { Icon { icon: icons::FAVORITE } NotificationBadge {} }
+                            BadgeAnchor { Icon { icon: icons::INFO } NotificationBadge { count: 99 } }
+                            BadgeAnchor { Icon { icon: icons::ADD } NotificationBadge { count: 1000 } }
+                        }
+                    }
+                    article { class: "demo-card badge-specimen",
+                        div { class: "card-topline", span { "INLINE BADGES" } }
+                        div { class: "badge-row badge-row--inline",
+                            NotificationBadge {}
+                            NotificationBadge { count: 3 }
+                            NotificationBadge { count: 99 }
+                            NotificationBadge { count: 1000 }
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Badge usage", code: BADGE_USAGE }
@@ -1192,6 +1260,10 @@ fn App() -> Element {
                             span { class: "control-label", "Right" }
                         }
                     }
+                    article { class: "demo-card divider-specimen", dir: "rtl",
+                        div { class: "card-topline", span { "RIGHT TO LEFT" } }
+                        div { class: "divider-stack", Divider { inset: DividerInset::Start } }
+                    }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Divider usage", code: DIVIDER_USAGE }
                 }
             }
@@ -1231,6 +1303,11 @@ fn App() -> Element {
                             TextField { label: "Price", value: price_value(), input_type: "number", prefix: "$".to_string(), suffix: "USD".to_string(), supporting: "Before tax".to_string(), oninput: move |v: String| price_value.set(v) }
                             TextField { label: "Note", value: note_value(), multiline: true, max_length: 60, supporting: "Shown to the recipient".to_string(), oninput: move |v: String| note_value.set(v) }
                         }
+                    }
+                    article { class: "demo-card text-field-specimen",
+                        div { class: "card-topline", span { "READ ONLY · CHANGING LABEL" } }
+                        TextField { label: if renamed_field() { "Longer account reference" } else { "Reference" }, value: "REF-123", read_only: true }
+                        button { class: "copy-code", onclick: move |_| renamed_field.toggle(), "Change field label" }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Text field usage", code: TEXT_FIELD_USAGE }
                 }

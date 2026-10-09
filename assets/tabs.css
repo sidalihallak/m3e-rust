@@ -1,16 +1,19 @@
 /*
+ * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
+ * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
  * M3 tabs. Copy with src/components/tabs.rs and icon.css.
  * Sources: Material Web primary navigation tab tokens (revision 47adb65): 48dp
- * container, 1dp divider in surface-variant, 3dp active indicator with rounded top
+ * container, 1dp divider in outline-variant (current official color role), 3dp active indicator with rounded top
  * corners, title-small text, 24dp icon, active label primary, inactive on-surface-variant,
  * state layers hover 0.08 and focus/pressed 0.10, disabled 38%. Upstream shadcn-m3e
- * `tabs.tsx` (revision 8f1b3fb) for equal-width tabs, the 2dp full-width secondary
- * indicator, and the 16dp state-layer shape. The primary indicator is the label's
- * width, as the Material primary tab reference shows; the upstream 16dp inset is not used. Icon-and-label tabs are 64dp high, as the token file defines.
- * Indicator motion uses the kit's expressive fast spatial spring (360ms).
+ * `tabs.tsx` (revision c37c0d2) for equal-width tabs, the 2dp full-width secondary
+ * indicator, and the 16dp state-layer shape. The primary indicator is inset
+ * 2dp from each label edge (minimum 24dp), as the current official diagram shows;
+ * the upstream 16dp tab-container inset is not used. Icon-and-label tabs are 64dp high, as the token file defines.
+ * Indicator motion uses the kit's upstream expressive DefaultSpatial spring (440ms).
  */
 :root {
-  --tabs-spring: linear(0, .0206, .0754, .1544, .2492, .3524, .458, .5613, .6588, .7479, .8269, .895, .952, .9981, 1.0338, 1.0603, 1.0783, 1.0893, 1.0942, 1.0943, 1.0906, 1.0842, 1.0759, 1.0665, 1.0565, 1.0465, 1.037, 1.0281, 1.0201, 1.0131, 1.0072, 1.0023, .9984, .9955, .9934, .992, .9912, .991, .9912, .9917, .9924, .9932, .9942, .9951, .996, .9969, .9977, .9984, 1);
+  --tabs-spring: linear(     0,     0.0145,     0.0527,     0.1076,     0.1736,     0.2461,     0.3214,     0.3968,     0.4702,     0.54,     0.6051,     0.665,     0.7193,     0.7679,     0.8108,     0.8483,     0.8807,     0.9083,     0.9316,     0.951,     0.9669,     0.9798,     0.99,     0.998,     1.004,     1.0085,     1.0116,     1.0136,     1.0147,     1.0151,     1.0151,     1.0146,     1.0138,     1.0128,     1.0118,     1.0106,     1.0095,     1.0084,     1.0073,     1.0063,     1.0053,     1.0045,     1.0037,     1.0031,     1.0025,     1.002,     1.0015,     1.0011,     1   );
 }
 
 .m3-tabs {
@@ -18,14 +21,14 @@
   --tabs-width: 0px;
   --tabs-label-left: 0px;
   --tabs-label-width: 0px;
-  --tabs-indicator-width: max(24px, var(--tabs-label-width));
+  --tabs-indicator-width: max(24px, calc(var(--tabs-label-width) - 4px));
   position: relative;
   display: flex;
   align-items: stretch;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  border-bottom: 1px solid var(--md-sys-color-surface-variant);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
   color: var(--md-sys-color-on-surface-variant);
 }
 .m3-tabs--icons { height: 64px; }
@@ -97,30 +100,32 @@
   cursor: default;
 }
 
-/* Indicator: 3dp for primary, the width of the selected label, centred under it. */
+/* Primary: label width minus 2dp at each side, minimum 24dp, flush with divider. */
 .m3-tabs__indicator {
   position: absolute;
   z-index: 0;
   bottom: 0;
   left: calc(var(--tabs-label-left) + (var(--tabs-label-width) - var(--tabs-indicator-width)) / 2);
   width: var(--tabs-indicator-width);
+  min-width: 24px;
   height: 3px;
   border-radius: 3px 3px 0 0;
   background: var(--md-sys-color-primary);
   opacity: 0;
   pointer-events: none;
 }
-.m3-tabs[data-ready] .m3-tabs__indicator {
-  opacity: 1;
+.m3-tabs[data-ready] .m3-tabs__indicator { opacity: 1; }
+.m3-tabs[data-motion] .m3-tabs__indicator {
   transition:
-    left 360ms var(--tabs-spring),
-    width 360ms var(--tabs-spring);
+    left 440ms var(--tabs-spring),
+    width 440ms var(--tabs-spring);
 }
 
 /* Secondary: 2dp across the full tab width, with an on-surface selected label. */
 .m3-tabs--secondary .m3-tabs__indicator {
   left: var(--tabs-left);
   width: var(--tabs-width);
+  min-width: 0;
   height: 2px;
   border-radius: 0;
 }
@@ -130,6 +135,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .m3-tabs[data-ready] .m3-tabs__indicator,
+  .m3-tabs[data-motion] .m3-tabs__indicator,
   .m3-tabs__tab::before { transition-duration: .01ms !important; }
 }
+
+/* Keep visual geometry separate from the native interaction target. */
+.m3-tabs__tab { height: 48px; margin: 0; }
+.m3-tabs--icons .m3-tabs__tab { height: 64px; }

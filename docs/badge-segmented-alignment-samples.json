@@ -1,0 +1,774 @@
+{
+  "date": "2026-10-09",
+  "platform": "Codex in-app desktop browser",
+  "before": {
+    "segments": [
+      {
+        "checked": false,
+        "contentWidth": 26.1953125,
+        "label": "Day",
+        "offsetX": 3.99609375,
+        "offsetY": 0,
+        "width": 111.828125
+      },
+      {
+        "checked": true,
+        "contentWidth": 64.0078125,
+        "label": "Week",
+        "offsetX": 4,
+        "offsetY": 0,
+        "width": 111.8359375
+      },
+      {
+        "checked": false,
+        "contentWidth": 43.359375,
+        "label": "Month",
+        "offsetX": 3.99609375,
+        "offsetY": 0,
+        "width": 111.8359375
+      },
+      {
+        "checked": true,
+        "contentWidth": 89.140625,
+        "label": "Favourite",
+        "offsetX": 4,
+        "offsetY": 0,
+        "width": 111.828125
+      },
+      {
+        "checked": false,
+        "contentWidth": 46.40625,
+        "label": "Details",
+        "offsetX": 3.99609375,
+        "offsetY": 0,
+        "width": 111.8359375
+      },
+      {
+        "checked": true,
+        "contentWidth": 53.4296875,
+        "label": "Add",
+        "offsetX": 4,
+        "offsetY": 0,
+        "width": 111.8359375
+      },
+      {
+        "checked": true,
+        "contentWidth": 50.1484375,
+        "label": "List",
+        "offsetX": 3.99609375,
+        "offsetY": 0,
+        "width": 167.75
+      },
+      {
+        "checked": false,
+        "contentWidth": 28.578125,
+        "label": "Grid",
+        "offsetX": 4,
+        "offsetY": 0,
+        "width": 167.75
+      }
+    ],
+    "badges": [
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "height": 6,
+        "text": "",
+        "width": 6,
+        "x": 21,
+        "y": -3
+      },
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "height": 6,
+        "text": "",
+        "width": 6,
+        "x": 21,
+        "y": -3
+      },
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "height": 16,
+        "text": "3",
+        "width": 16,
+        "x": 16,
+        "y": -12
+      },
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "height": 16,
+        "text": "99",
+        "width": 22.859375,
+        "x": 12.5703125,
+        "y": -12
+      },
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "height": 16,
+        "text": "999+",
+        "width": 38.1328125,
+        "x": 4.93359375,
+        "y": -12
+      }
+    ]
+  },
+  "after": {
+    "segments": [
+      {
+        "state": "initial",
+        "items": [
+          {
+            "checked": false,
+            "disabled": false,
+            "height": 38,
+            "label": "Day",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.828125
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "height": 38,
+            "icon": "check",
+            "label": "Week",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "height": 38,
+            "label": "Month",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "height": 38,
+            "icon": "check",
+            "label": "Favourite",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.828125
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "height": 38,
+            "label": "Details",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "height": 38,
+            "icon": "check",
+            "label": "Add",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": true,
+            "disabled": true,
+            "height": 38,
+            "icon": "check",
+            "label": "List",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 167.75
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "height": 38,
+            "label": "Grid",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 167.75
+          }
+        ]
+      },
+      {
+        "state": "Month selected; Favourite icon unselected; Details check selected",
+        "items": [
+          {
+            "checked": false,
+            "disabled": false,
+            "height": 38,
+            "label": "Day",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.828125
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "height": 38,
+            "label": "Week",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "height": 38,
+            "icon": "check",
+            "label": "Month",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "height": 38,
+            "icon": "favorite",
+            "label": "Favourite",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.828125
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "height": 38,
+            "icon": "check",
+            "label": "Details",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "height": 38,
+            "icon": "check",
+            "label": "Add",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": true,
+            "disabled": true,
+            "height": 38,
+            "icon": "check",
+            "label": "List",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 167.75
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "height": 38,
+            "label": "Grid",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 167.75
+          }
+        ]
+      },
+      {
+        "state": "initial restored",
+        "items": [
+          {
+            "checked": false,
+            "disabled": false,
+            "height": 38,
+            "label": "Day",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.828125
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "height": 38,
+            "icon": "check",
+            "label": "Week",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "height": 38,
+            "label": "Month",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "height": 38,
+            "icon": "check",
+            "label": "Favourite",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.828125
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "height": 38,
+            "label": "Details",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "height": 38,
+            "icon": "check",
+            "label": "Add",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": true,
+            "disabled": true,
+            "height": 38,
+            "icon": "check",
+            "label": "List",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 167.75
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "height": 38,
+            "label": "Grid",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 167.75
+          }
+        ]
+      },
+      {
+        "state": "dark theme",
+        "items": [
+          {
+            "checked": false,
+            "disabled": false,
+            "height": 38,
+            "label": "Day",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.828125
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "height": 38,
+            "icon": "check",
+            "label": "Week",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "height": 38,
+            "label": "Month",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "height": 38,
+            "icon": "check",
+            "label": "Favourite",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.828125
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "height": 38,
+            "label": "Details",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "height": 38,
+            "icon": "check",
+            "label": "Add",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 111.8359375
+          },
+          {
+            "checked": true,
+            "disabled": true,
+            "height": 38,
+            "icon": "check",
+            "label": "List",
+            "offsetX": -0.00390625,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 167.75
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "height": 38,
+            "label": "Grid",
+            "offsetX": 0,
+            "offsetY": 0,
+            "targetHeight": 48,
+            "width": 167.75
+          }
+        ]
+      }
+    ],
+    "badges": [
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "direction": "ltr",
+        "height": 6,
+        "role": "img",
+        "text": "",
+        "width": 6,
+        "x": 18,
+        "y": 0
+      },
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "direction": "ltr",
+        "height": 6,
+        "role": "img",
+        "text": "",
+        "width": 6,
+        "x": 18,
+        "y": 0
+      },
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "direction": "ltr",
+        "height": 16,
+        "role": "status",
+        "text": "3",
+        "width": 16,
+        "x": 12,
+        "y": -2
+      },
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "direction": "ltr",
+        "height": 16,
+        "role": "status",
+        "text": "99",
+        "width": 22.859375,
+        "x": 12,
+        "y": -2
+      },
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "direction": "ltr",
+        "height": 16,
+        "role": "status",
+        "text": "999+",
+        "width": 38.1328125,
+        "x": 12,
+        "y": -2
+      },
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "direction": "rtl",
+        "height": 6,
+        "role": "img",
+        "text": "",
+        "width": 6,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "direction": "rtl",
+        "height": 16,
+        "role": "status",
+        "text": "99",
+        "width": 22.859375,
+        "x": -10.859375,
+        "y": -2
+      },
+      {
+        "anchorHeight": 24,
+        "anchorWidth": 24,
+        "direction": "rtl",
+        "height": 16,
+        "role": "status",
+        "text": "999+",
+        "width": 38.1328125,
+        "x": -26.1328125,
+        "y": -2
+      }
+    ],
+    "inline": [
+      {
+        "height": 6,
+        "position": "relative",
+        "text": "",
+        "width": 6,
+        "x": 464.5
+      },
+      {
+        "height": 16,
+        "position": "relative",
+        "text": "3",
+        "width": 16,
+        "x": 502.5
+      },
+      {
+        "height": 16,
+        "position": "relative",
+        "text": "99",
+        "width": 22.859375,
+        "x": 550.5
+      },
+      {
+        "height": 16,
+        "position": "relative",
+        "text": "999+",
+        "width": 38.1328125,
+        "x": 605.359375
+      }
+    ],
+    "darkBadges": [
+      {
+        "direction": "ltr",
+        "height": 6,
+        "text": "",
+        "width": 6,
+        "x": 18,
+        "y": 0
+      },
+      {
+        "direction": "ltr",
+        "height": 6,
+        "text": "",
+        "width": 6,
+        "x": 18,
+        "y": 0
+      },
+      {
+        "direction": "ltr",
+        "height": 16,
+        "text": "3",
+        "width": 16,
+        "x": 12,
+        "y": -2
+      },
+      {
+        "direction": "ltr",
+        "height": 16,
+        "text": "99",
+        "width": 22.859375,
+        "x": 12,
+        "y": -2
+      },
+      {
+        "direction": "ltr",
+        "height": 16,
+        "text": "999+",
+        "width": 38.1328125,
+        "x": 12,
+        "y": -2
+      },
+      {
+        "direction": "rtl",
+        "height": 6,
+        "text": "",
+        "width": 6,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "direction": "rtl",
+        "height": 16,
+        "text": "99",
+        "width": 22.859375,
+        "x": -10.859375,
+        "y": -2
+      },
+      {
+        "direction": "rtl",
+        "height": 16,
+        "text": "999+",
+        "width": 38.1328125,
+        "x": -26.1328125,
+        "y": -2
+      }
+    ],
+    "countDirections": [
+      {
+        "badgeDirection": "ltr",
+        "text": "3",
+        "textDirection": "ltr"
+      },
+      {
+        "badgeDirection": "ltr",
+        "text": "99",
+        "textDirection": "ltr"
+      },
+      {
+        "badgeDirection": "ltr",
+        "text": "999+",
+        "textDirection": "ltr"
+      },
+      {
+        "badgeDirection": "rtl",
+        "text": "99",
+        "textDirection": "ltr"
+      },
+      {
+        "badgeDirection": "rtl",
+        "text": "999+",
+        "textDirection": "ltr"
+      },
+      {
+        "badgeDirection": "ltr",
+        "text": "3",
+        "textDirection": "ltr"
+      },
+      {
+        "badgeDirection": "ltr",
+        "text": "99",
+        "textDirection": "ltr"
+      },
+      {
+        "badgeDirection": "ltr",
+        "text": "999+",
+        "textDirection": "ltr"
+      }
+    ],
+    "finalBadges": [
+      {
+        "direction": "ltr",
+        "height": 6,
+        "text": "",
+        "width": 6,
+        "x": 18,
+        "y": 0
+      },
+      {
+        "direction": "ltr",
+        "height": 6,
+        "text": "",
+        "width": 6,
+        "x": 18,
+        "y": 0
+      },
+      {
+        "direction": "ltr",
+        "height": 16,
+        "text": "3",
+        "width": 16,
+        "x": 12,
+        "y": -2
+      },
+      {
+        "direction": "ltr",
+        "height": 16,
+        "text": "99",
+        "width": 22.859375,
+        "x": 12,
+        "y": -2
+      },
+      {
+        "direction": "ltr",
+        "height": 16,
+        "text": "999+",
+        "width": 38.1328125,
+        "x": 12,
+        "y": -2
+      },
+      {
+        "direction": "rtl",
+        "height": 6,
+        "text": "",
+        "width": 6,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "direction": "rtl",
+        "height": 16,
+        "text": "99",
+        "width": 22.859375,
+        "x": -10.859375,
+        "y": -2
+      },
+      {
+        "direction": "rtl",
+        "height": 16,
+        "text": "999+",
+        "width": 38.1328125,
+        "x": -26.1328125,
+        "y": -2
+      }
+    ]
+  }
+}

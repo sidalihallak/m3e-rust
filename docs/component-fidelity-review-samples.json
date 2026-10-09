@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-09",
+  "revision": "ce26469",
+  "platform": "Codex in-app desktop browser",
+  "url": "http://127.0.0.1:8080/",
+  "method": "Real pointer/keyboard inputs; read-only DOM and computed-style polling. Motion rows are losslessly encoded as sample timestamps plus their common observed values.",
+  "motion": {
+    "icon_xs_enter": {
+      "sample_ms": [0,39,70,101,133,160,188,218,248,273,300,328,354,380,405,432,458,484,511,539,565,591,619,645,671,698],
+      "every_sample": {"radius":"16px", "pressed":false}
+    },
+    "icon_xs_pointer_click": {
+      "sample_ms": [0,32,60,87,114,140,168,194,222,248,274,300,326,354,379,404,430,458,486,513,540,567,595,624,653,680],
+      "every_sample": {"radius":"16px", "pressed":false}
+    },
+    "fab_standard_enter": {
+      "sample_ms": [0,37,62,87,113,141,166,193,220,246,275,301,328,353,383,411,437,462,487,513,541,567,594,619,645,671,696],
+      "every_sample": {"opacity":"0", "pressed":false, "ripple":true}
+    },
+    "fab_standard_pointer_click": {
+      "sample_ms": [0,26,56,86,110,147,171,196,225,254,280,306,332,360,388,413,438,464,493,522,547,575,600,626,653,678],
+      "every_sample": {"opacity":"0", "pressed":false, "ripple":true}
+    }
+  },
+  "disabled_tab_arrow_right": {
+    "focused": "Specs",
+    "tabs": [
+      {"text":"Overview", "disabled":false, "selected":"false", "tabIndex":-1},
+      {"text":"Specs", "disabled":false, "selected":"false", "tabIndex":-1},
+      {"text":"Reviews", "disabled":true, "selected":"true", "tabIndex":0}
+    ]
+  },
+  "range_start_end_key_after_settling": {"start":"100", "end":"70", "activeWidth":"0px"},
+  "input_chip_delete": {"inputChipRemains":1},
+  "filled_toggle_unselected": {
+    "pressed":"false", "background":"rgb(101, 85, 143)", "icon":"rgb(255, 255, 255)",
+    "primary":"#65558f", "surfaceContainer":"#f2ecf4"
+  },
+  "fab_focus_after_open_enter_then_tab": {"openedId":"m3-fab-menu-1", "focusedMenuId":"m3-fab-menu-0", "focusedLabel":"Favourite"},
+  "fab_menus_rendered": {"three_item_root_height_px":240, "itemShadow":"none"},
+  "email_floated_label_pointer_click": {"focused":false, "inputHeight":24, "containerHeight":56},
+  "flat_linear_indeterminate": {
+    "background":"rgba(0, 0, 0, 0)", "height":4,
+    "children":["m3-linear__bar m3-linear__bar--1", "m3-linear__bar m3-linear__bar--2"]
+  },
+  "native_selection_checks": {
+    "unchecked_checkbox_after_space":"true", "wifi_switch_after_space":"true",
+    "size_after_medium_arrow_right":["Large"], "period_after_week_arrow_right":["Month"],
+    "switch_after_inset":"-10px 0px"
+  },
+  "target_measurements_px": [
+    {"control":"Small FAB", "width":40, "height":40, "afterContent":"none"},
+    {"control":"XS IconButton", "width":32, "height":32, "afterContent":"none"},
+    {"control":"S IconButton", "width":40, "height":40, "afterContent":"none"},
+    {"control":"Vegan chip main", "width":74.9296875, "height":30, "afterContent":"none"},
+    {"control":"Design review chip main", "width":119.78125, "height":30, "afterContent":"none"},
+    {"control":"Remove Design review", "width":30, "height":30, "afterContent":"none"},
+    {"control":"Day segmented label", "width":167.328125, "height":38, "afterContent":"none"},
+    {"control":"Specs tab", "width":168, "height":40, "afterContent":"none"}
+  ],
+  "limitations": [
+    "Polls are not frame-perfect event traces; instantaneous intermediate state may be missed.",
+    "Default light scheme only; no complete contrast matrix.",
+    "No Android, touch, assistive technology, RTL, or OS reduced-motion runtime result.",
+    "Tick arithmetic and wavy-sweep reduced-motion findings are source analysis."
+  ]
+}

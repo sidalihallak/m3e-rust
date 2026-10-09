@@ -45,6 +45,7 @@ pub fn LinearProgress(
                 class: "{class} m3-linear--indeterminate",
                 role: "progressbar",
                 "aria-label": aria_label,
+                div { class: "m3-linear__track", aria_hidden: "true" }
                 div { class: "m3-linear__bar m3-linear__bar--1",
                     div { class: "m3-linear__wave" }
                 }
@@ -60,7 +61,7 @@ pub fn LinearProgress(
 /// with a 1.6dp-amplitude, 15dp-wavelength wave. Thick rings use an 8dp stroke.
 ///
 /// `value` is 0.0 to 1.0, or `None` for indeterminate. Flat indeterminate is a
-/// rotating arc. Wavy indeterminate sweeps a wave arc (hold, grow, hold, shrink)
+/// two-half expanding/contracting spinner. Wavy indeterminate sweeps a wave arc (hold, grow, hold, shrink)
 /// in the browser, and wavy determinate is a full wave masked to the active arc.
 #[component]
 pub fn CircularProgress(
@@ -112,10 +113,10 @@ pub fn CircularProgress(
     } else {
         None
     };
-    use_effect({
-        let script = sweep_script.clone();
-        move || {
-            if let Some(script) = script.clone() {
+    let mut sweep_config = use_signal(|| None::<String>);
+    if *sweep_config.peek() != sweep_script { sweep_config.set(sweep_script.clone()); }
+    use_effect(move || {
+            if let Some(script) = sweep_config() {
                 // Keep the eval handle alive: dropping it cancels the script.
                 spawn(async move {
                     if let Err(err) = document::eval(&script).join::<bool>().await {
@@ -123,18 +124,34 @@ pub fn CircularProgress(
                     }
                 });
             }
-        }
     });
 
     rsx! {
         div {
             id: "{id}",
+            "data-m3-frame-loop": if indeterminate && wavy { "true" } else { "false" },
             class,
             role: "progressbar",
             "aria-label": aria_label,
             "aria-valuemin": "0",
             "aria-valuemax": "1",
             "aria-valuenow": now,
+            if indeterminate && !wavy {
+                div { class: "m3-cp-rotate",
+                    div { class: "m3-cp-spinner",
+                        div { class: "m3-cp-left",
+                            svg { class: "m3-cp-circle", view_box: "{vb}",
+                                path { d: geo.arc(-45.0, 90.0 + geo.stroke, 0.0), fill: "none", stroke: "currentColor", stroke_width: "{geo.stroke}", stroke_linecap: "round" }
+                            }
+                        }
+                        div { class: "m3-cp-right",
+                            svg { class: "m3-cp-circle", view_box: "{vb}",
+                                path { d: geo.arc(-geo.stroke, 135.0, 0.0), fill: "none", stroke: "currentColor", stroke_width: "{geo.stroke}", stroke_linecap: "round" }
+                            }
+                        }
+                    }
+                }
+            } else {
             svg { class: "m3-circular__svg", view_box: "{vb}",
                 if indeterminate && wavy {
                     path {
@@ -154,15 +171,6 @@ pub fn CircularProgress(
                         stroke_width: "{geo.stroke}",
                         stroke_linecap: "round",
                         d: geo.arc(sweep_min, 360.0, geo.stroke),
-                    }
-                } else if indeterminate {
-                    path {
-                        class: "m3-circular__active",
-                        fill: "none",
-                        stroke: "currentColor",
-                        stroke_width: "{geo.stroke}",
-                        stroke_linecap: "round",
-                        d: geo.arc(0.0, 270.0, 0.0),
                     }
                 } else if wavy && amplitude > 0.0 {
                     defs {
@@ -208,6 +216,7 @@ pub fn CircularProgress(
                         stroke_linecap: "round",
                     }
                 }
+            }
             }
         }
     }

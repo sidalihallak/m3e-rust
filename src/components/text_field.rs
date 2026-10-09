@@ -44,6 +44,7 @@ pub fn TextField(
     #[props(default)] supporting: Option<String>,
     #[props(default)] error: bool,
     #[props(default)] disabled: bool,
+    #[props(default)] read_only: bool,
     #[props(default)] leading_icon: Option<IconData>,
     #[props(default)] trailing_icon: Option<IconData>,
     #[props(default)] prefix: Option<String>,
@@ -71,7 +72,7 @@ pub fn TextField(
     let has_support = supporting.is_some() || max_length.is_some();
     let counter = max_length.map(|max| format!("{length}/{max}"));
 
-    // The notch is cut to the width of the floated label. A script measures that width once.
+    // The notch is cut to the width of the floated label. A ResizeObserver tracks label and font changes.
     use_effect({
         let id = id.clone();
         move || {
@@ -87,6 +88,9 @@ pub fn TextField(
     rsx! {
         div { id: "{id}-root", class,
             div { class: "m3-field__container",
+                onclick: { let id = id.clone(); move |_| {
+                    if !disabled { let script = format!("document.getElementById({id:?})?.focus();"); spawn(async move { let _ = document::eval(&script).await; }); }
+                }},
                 span { class: "m3-field__surface", aria_hidden: "true" }
                 div { class: "m3-field__row",
                     if let Some(icon) = leading_icon {
@@ -103,6 +107,7 @@ pub fn TextField(
                             placeholder: " ",
                             value: "{value}",
                             disabled,
+                            readonly: read_only,
                             "aria-invalid": if invalid { "true" } else { "false" },
                             "aria-describedby": if has_support { support_id.clone() } else { String::new() },
                             oninput: move |event| oninput.call(event.value()),
@@ -115,6 +120,7 @@ pub fn TextField(
                             placeholder: " ",
                             value,
                             disabled,
+                            readonly: read_only,
                             "aria-invalid": if invalid { "true" } else { "false" },
                             "aria-describedby": if has_support { support_id.clone() } else { String::new() },
                             oninput: move |event| oninput.call(event.value()),
@@ -148,7 +154,7 @@ pub fn TextField(
     }
 }
 
-/// Sets `--notch-text-w` on the field to the floated label's width, once the font has loaded.
+/// Sets `--notch-text-w` on the field to the floated label's width, after font loading and whenever its size changes.
 fn notch_script(id: &str) -> String {
     format!(
         r#"
@@ -159,6 +165,8 @@ const measure = () => {{
   if (m) root.style.setProperty("--notch-text-w", m.getBoundingClientRect().width + "px");
 }};
 measure();
+const m = root.querySelector(".m3-field__measure");
+if (m) new ResizeObserver(measure).observe(m);
 if (document.fonts) document.fonts.ready.then(measure);
 return true;
 "#

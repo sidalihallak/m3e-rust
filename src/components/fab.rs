@@ -1,6 +1,4 @@
-use dioxus::html::input_data::MouseButton;
 use dioxus::prelude::*;
-use std::rc::Rc;
 
 use super::{Icon, IconData};
 
@@ -54,33 +52,6 @@ impl FabColor {
     }
 }
 
-/// Starts a ripple at the pointer (or the centre for keyboard input). Mirrors
-/// the Button pilot: the ripple is measured against the control, not the icon.
-fn start_ripple(
-    mut press: Signal<(u64, bool)>,
-    mut ripple: Signal<(u64, f64, f64, f64, f64)>,
-    mounted: Option<Rc<MountedData>>,
-    x: f64,
-    y: f64,
-) {
-    let next_id = press().0.wrapping_add(1);
-    press.set((next_id, true));
-    spawn(async move {
-        if let Some(mounted) = mounted
-            && let Ok(rect) = mounted.get_client_rect().await
-            && press.peek().0 == next_id
-        {
-            let (width, height) = (rect.size.width, rect.size.height);
-            let (x, y) = if x.is_finite() && y.is_finite() {
-                (x - rect.origin.x, y - rect.origin.y)
-            } else {
-                (width / 2.0, height / 2.0)
-            };
-            ripple.set((next_id, x, y, width, height));
-        }
-    });
-}
-
 /// A floating action button built on a native `<button>`.
 ///
 /// Pass `label` to make it an extended FAB. Icon-only buttons need `aria_label`,
@@ -103,39 +74,14 @@ pub fn Fab(
     #[props(default)] aria_label: Option<String>,
     #[props(default)] onclick: EventHandler<MouseEvent>,
 ) -> Element {
-    // (press id, pointer or Space held)
-    let press = use_signal(|| (0_u64, false));
-    // (ripple id, x, y, width, height) relative to the control
-    let ripple = use_signal(|| (0_u64, 0.0_f64, 0.0_f64, 0.0_f64, 0.0_f64));
-    let mut mounted = use_signal(|| None::<Rc<MountedData>>);
-    let mut suppress_click_ripple = use_signal(|| false);
-    let (_, held) = press();
     let extended_class = if label.is_some() { " m3-fab--extended" } else { "" };
     let lowered_class = if lowered { " m3-fab--lowered" } else { "" };
     let branded_class = if branded { " m3-fab--branded" } else { "" };
     let toolbar_class = if toolbar { " m3-fab--toolbar" } else { "" };
-    let pressed_class = if held && !disabled {
-        " m3-fab--pressed"
-    } else {
-        ""
-    };
     let class = format!(
-        "m3-fab m3-fab--{} m3-fab--{}{extended_class}{lowered_class}{branded_class}{toolbar_class}{pressed_class} {class}",
+        "m3-fab m3-fab--{} m3-fab--{}{extended_class}{lowered_class}{branded_class}{toolbar_class} {class}",
         size.class(),
         color.class(),
-    );
-
-    let (ripple_id, ripple_x, ripple_y, ripple_width, ripple_height) = ripple();
-    let max_dimension = ripple_width.max(ripple_height);
-    let initial_size = (max_dimension * 0.2).floor().max(1.0);
-    let soft_edge = (max_dimension * 0.35).max(75.0);
-    let ripple_scale = (ripple_width.hypot(ripple_height) + 10.0 + soft_edge) / initial_size;
-    let ripple_style = format!(
-        "--ripple-size: {initial_size}px; --ripple-from-x: {}px; --ripple-from-y: {}px; --ripple-to-x: {}px; --ripple-to-y: {}px; --ripple-scale: {ripple_scale};",
-        ripple_x - initial_size / 2.0,
-        ripple_y - initial_size / 2.0,
-        (ripple_width - initial_size) / 2.0,
-        (ripple_height - initial_size) / 2.0,
     );
 
     rsx! {
@@ -144,64 +90,8 @@ pub fn Fab(
             class,
             disabled,
             aria_label,
-            onmounted: move |event| mounted.set(Some(event.data())),
-            onpointerdown: move |event| {
-                if !disabled && event.is_primary() && event.trigger_button() == Some(MouseButton::Primary) {
-                    let point = event.client_coordinates();
-                    start_ripple(press, ripple, mounted(), point.x, point.y);
-                    suppress_click_ripple.set(true);
-                }
-            },
-            onpointerup: move |_| {
-                let (id, _) = press();
-                press.clone().set((id, false));
-            },
-            onpointercancel: move |_| {
-                let (id, _) = press();
-                press.clone().set((id, false));
-                suppress_click_ripple.set(false);
-            },
-            onpointerleave: move |_| {
-                let (id, _) = press();
-                press.clone().set((id, false));
-                suppress_click_ripple.set(false);
-            },
-            onkeydown: move |event| {
-                if !disabled && event.code() == Code::Space && !event.is_auto_repeating() {
-                    start_ripple(press, ripple, mounted(), f64::NAN, f64::NAN);
-                    suppress_click_ripple.set(true);
-                }
-            },
-            onkeyup: move |event| {
-                if event.code() == Code::Space {
-                    let (id, _) = press();
-                    press.clone().set((id, false));
-                }
-            },
-            onblur: move |_| {
-                let (id, _) = press();
-                press.clone().set((id, false));
-                suppress_click_ripple.set(false);
-            },
-            onclick: move |event| {
-                if suppress_click_ripple() {
-                    suppress_click_ripple.set(false);
-                } else {
-                    // Keyboard activation (Enter) produces a click without pointer events.
-                    start_ripple(press, ripple, mounted(), f64::NAN, f64::NAN);
-                    let (id, _) = press();
-                    press.clone().set((id, false));
-                }
-                onclick.call(event);
-            },
-            if ripple_id > 0 {
-                span {
-                    key: "{ripple_id}",
-                    class: "m3-fab__ripple",
-                    style: ripple_style,
-                    aria_hidden: "true"
-                }
-            }
+            onclick: move |event| onclick.call(event),
+            super::ripple::Ripple {}
             Icon { icon, class: "m3-fab__icon" }
             if let Some(text) = label {
                 span { class: "m3-fab__label", "{text}" }

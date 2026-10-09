@@ -1,3 +1,39 @@
+# Progress — current fidelity update
+
+Date: 2026-10-09. Desktop Codex in-app browser. Scope: component Rust/CSS
+changes in this fix, not complete platform certification.
+
+## Sources and implemented contract
+
+- [Material overview](https://m3.material.io/components/progress-indicators/overview)
+- [Material specs](https://m3.material.io/components/progress-indicators/specs)
+- [Material guidelines](https://m3.material.io/components/progress-indicators/guidelines)
+- [Material accessibility](https://m3.material.io/components/progress-indicators/accessibility)
+- [Actual upstream source at c37c0d2](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/circular-progress.tsx)
+- [Pinned Material Web tokens](https://github.com/material-components/material-web/tree/47adb655bd7a88c4d62e8faac2873084eed555dc/tokens/versions/latest/sass)
+
+The four official sections were read in the preceding review on this date;
+actual upstream files/styles were inspected for these fixes. Current values
+and reference choices supersede historical measurements below.
+
+R10/R11; inactive linear tracks; wave containers 10/14px and transparent moving backgrounds; exact two-half flat spinner. 1.333s expansion, 5.332s arc and 1.56824s outer rotation observed. Dynamic wavy sweep has 9 distinct paths/19 transforms in ~4s; determinate mode removes sweep path and sets loop false. Frame loop gates path writes and elapsed time for matchMedia changes; OS preference true remains untested.
+
+## Checks, dependencies and gaps
+
+- Locked offline Wasm check and fresh Dioxus web build passed; live preview
+  was restarted/reloaded and checked for one app-shell.
+- [Shared fix matrix, measured results and reproduction steps](component-fidelity-fixes.md)
+- [Raw runtime measurements](component-fidelity-fixes-samples.json)
+- [Copy dependencies and source export](copy-components.md); exported library
+  and all 19 current usage examples compile independently for Wasm.
+- Platform scope: desktop pointer/keyboard checks named above. Android remains
+  paused; touch, assistive technology and OS reduced-motion true are untested.
+  Source gating is not claimed as an OS-preference runtime measurement.
+- Historical screenshots/samples below establish only the state and version
+  in which they were captured. See the shared fix report for current gaps.
+
+## Historical report before this fix
+
 # Progress indicator verification
 
 Scope: `LinearProgress` and `CircularProgress` in
@@ -30,7 +66,7 @@ Scope: `LinearProgress` and `CircularProgress` in
 | Wave slide | one wavelength per 1.5s | upstream `m3e.css` `m3-wave-slide` |
 | Circular size | 40px, 4px stroke | tokens: `size`, `active-indicator-thickness` |
 | Circular thick | 52px, 8px stroke | tokens: `thick-size`, `thick-active-indicator-thickness` |
-| Circular wave | 1.6px amplitude, 15px wavelength, 48px wavy size | tokens. **Not implemented.** |
+| Circular wave | 1.6px amplitude, 15px wavelength, 48px wavy size | implemented; current sweep and spinner evidence is above. |
 
 ## 3. Input, state and platform matrix
 
@@ -62,9 +98,8 @@ position. The screenshot confirms the primary colour.
 
 ## 5. Unresolved
 
-- **Wavy circular is not implemented.** Upstream uses a masked full-circle wave
-  with a counter-rotation and an arc that grows and shrinks.
-- **Circular indeterminate** rotates a fixed 85-unit arc. The official arc-length animation is not implemented.
+- Wavy circular is implemented; see the current update above.
+- The former fixed arc was replaced by upstream’s two-half spinner; see the current update above.
 - **Linear wave slide duration** (1.5s) comes from upstream, not from the official tokens.
 - **Official Material pages** not read.
 - **Android and reduced motion** not measured. Reduced motion pauses the animations.

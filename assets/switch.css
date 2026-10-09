@@ -1,4 +1,6 @@
 /*
+ * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
+ * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
  * M3 switch. Copy with src/components/switch.rs.
  * Sources: Material Web tokens md.comp.switch (52×32 track, 2px outline,
  * 16/24/28dp handles, 40dp state layer); shadcn-m3e switch.tsx for the

@@ -1,3 +1,39 @@
+# Card — current fidelity update
+
+Date: 2026-10-09. Desktop Codex in-app browser. Scope: component Rust/CSS
+changes in this fix, not complete platform certification.
+
+## Sources and implemented contract
+
+- [Material overview](https://m3.material.io/components/cards/overview)
+- [Material specs](https://m3.material.io/components/cards/specs)
+- [Material guidelines](https://m3.material.io/components/cards/guidelines)
+- [Material accessibility](https://m3.material.io/components/cards/accessibility)
+- [Actual upstream source at c37c0d2](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/card.tsx)
+- [Pinned Material Web tokens](https://github.com/material-components/material-web/tree/47adb655bd7a88c4d62e8faac2873084eed555dc/tokens/versions/latest/sass)
+
+The four official sections were read in the preceding review on this date;
+actual upstream files/styles were inspected for these fixes. Current values
+and reference choices supersede historical measurements below.
+
+R4; interactive card now has expanding ripple while retaining native button semantics, elevation and media/body/action slots. Enter increments the elevated example and reaches ripple .10 at unchanged 337.5×102px. Drag state remains outside implemented scope.
+
+## Checks, dependencies and gaps
+
+- Locked offline Wasm check and fresh Dioxus web build passed; live preview
+  was restarted/reloaded and checked for one app-shell.
+- [Shared fix matrix, measured results and reproduction steps](component-fidelity-fixes.md)
+- [Raw runtime measurements](component-fidelity-fixes-samples.json)
+- [Copy dependencies and source export](copy-components.md); exported library
+  and all 19 current usage examples compile independently for Wasm.
+- Platform scope: desktop pointer/keyboard checks named above. Android remains
+  paused; touch, assistive technology and OS reduced-motion true are untested.
+  Source gating is not claimed as an OS-preference runtime measurement.
+- Historical screenshots/samples below establish only the state and version
+  in which they were captured. See the shared fix report for current gaps.
+
+## Historical report before this fix
+
 # Card verification
 
 Scope: `Card` and `CardVariant` in [`src/components/card.rs`](../src/components/card.rs) and
@@ -169,7 +205,7 @@ Raw data: [`card-media-samples.json`](card-media-samples.json); screenshot:
   is in place and is not verified.
 - Screen-reader announcements of interactive cards are not measured.
 - The Material card's drag and dragged elevation states are not implemented.
-- The Material card's media and headline slots are not implemented; the content is free-form.
+- Media, body and action slots and headline/subhead/supporting classes are implemented; current ripple behavior is recorded above.
 
 ## 7. Steps to reproduce
 

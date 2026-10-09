@@ -66,6 +66,7 @@ pub fn LoadingIndicator(
     rsx! {
         div {
             id: "{id}",
+            "data-m3-frame-loop": "true",
             class,
             role: "progressbar",
             "aria-label": "Loading",

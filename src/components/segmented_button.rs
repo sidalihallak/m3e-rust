@@ -9,7 +9,7 @@ use crate::icons;
 ///
 /// Visuals follow the Material 3 segmented button: one 40dp pill with a 1dp
 /// outline, 1dp dividers between items and no gaps. A selected item is filled
-/// with secondary-container and shows a check unless it has its own icon.
+/// with secondary-container and shows a check replacing its supplied icon.
 #[component]
 pub fn SegmentedButtonSet(
     #[props(default)] aria_label: Option<String>,
@@ -26,7 +26,7 @@ pub fn SegmentedButtonSet(
 /// One button in a [`SegmentedButtonSet`].
 ///
 /// Give every button in a single-select set the same `name`. A selected button
-/// shows a check unless it has its own `icon`, as filter chips do. `onchange`
+/// shows a check replacing its supplied `icon`, as filter chips do. `onchange`
 /// reports the new checked state.
 #[component]
 pub fn SegmentedButton(
@@ -44,10 +44,10 @@ pub fn SegmentedButton(
     let disabled_class = if disabled { " m3-segmented__item--disabled" } else { "" };
     let class = format!("m3-segmented__item{checked_class}{disabled_class} {class}");
     let input_type = if multiple { "checkbox" } else { "radio" };
-    // A selected button shows a check, unless the caller gave it an icon.
+    // A selected button shows a check, replacing the caller’s icon.
     let leading = match (icon, checked) {
-        (Some(icon), _) => Some(icon),
-        (None, true) => Some(icons::CHECK),
+        (_, true) => Some(icons::CHECK),
+        (Some(icon), false) => Some(icon),
         (None, false) => None,
     };
 
@@ -63,7 +63,7 @@ pub fn SegmentedButton(
                 // A radio's change event only fires when it becomes checked, so report true.
                 onchange: move |event| onchange.call(!multiple || event.checked()),
             }
-            span { class: "m3-segmented__state", aria_hidden: "true" }
+            super::ripple::Ripple {}
             span { class: "m3-segmented__content",
                 if let Some(icon) = leading {
                     Icon { icon, class: "m3-segmented__icon" }

@@ -48,13 +48,16 @@ pub fn Tabs(
     #[props(default)] variant: TabsVariant,
     #[props(default)] aria_label: Option<String>,
     #[props(default)] class: String,
+    #[props(default)] panel_ids: Vec<String>,
+    #[props(default)] tab_ids: Vec<String>,
     #[props(default)] onchange: EventHandler<usize>,
 ) -> Element {
     let id = use_hook(|| next_id("m3-tabs"));
     let has_icon = items.iter().any(|item| item.icon.is_some());
     let icons_class = if has_icon { " m3-tabs--icons" } else { "" };
     let class = format!("m3-tabs m3-tabs--{}{icons_class} {class}", variant.class());
-    let count = items.len();
+    let enabled: Vec<usize> = items.iter().enumerate().filter(|(_, item)| !item.disabled).map(|(i, _)| i).collect();
+    let selected = enabled.iter().copied().find(|&i| i == selected).or_else(|| enabled.first().copied());
 
     // The indicator's position follows the selected tab's `aria-selected`. The
     // script is installed once per tab bar, so it survives every re-render.
@@ -70,12 +73,22 @@ pub fn Tabs(
         }
     });
 
+    use_drop({
+        let id = id.clone();
+        move || {
+            let script = format!("window.__m3TabIndicators?.[{id:?}]?.(); if (window.__m3TabIndicators) delete window.__m3TabIndicators[{id:?}];");
+            spawn(async move { let _ = document::eval(&script).await; });
+        }
+    });
+
     rsx! {
         div { id: "{id}", class, role: "tablist", "aria-label": aria_label,
             for (index, item) in items.into_iter().enumerate() {
                 {
-                    let is_selected = index == selected;
-                    let tab_id = format!("{id}-{index}");
+                    let is_selected = Some(index) == selected;
+                    let available = enabled.clone();
+                    let panel_id = panel_ids.get(index).cloned();
+                    let tab_id = tab_ids.get(index).cloned().unwrap_or_else(|| format!("{id}-{index}"));
                     let tab_class = if is_selected { "m3-tabs__tab m3-tabs__tab--selected" } else { "m3-tabs__tab" };
                     let focus_id = id.clone();
                     rsx! {
@@ -87,26 +100,30 @@ pub fn Tabs(
                             "aria-selected": if is_selected { "true" } else { "false" },
                             tabindex: if is_selected { "0" } else { "-1" },
                             disabled: item.disabled,
+                            aria_controls: panel_id,
                             onclick: move |_| onchange.call(index),
                             onkeydown: move |event| {
-                                let target = match event.key().to_string().as_str() {
-                                    "ArrowRight" => Some((index + 1) % count),
-                                    "ArrowLeft" => Some((index + count - 1) % count),
-                                    "Home" => Some(0),
-                                    "End" => Some(count - 1),
+                                let pos = available.iter().position(|&i| i == index).unwrap_or(0);
+                                let n = available.len();
+                                let target = if n == 0 { None } else { match event.key().to_string().as_str() {
+                                    "ArrowRight" => Some(available[(pos + 1) % n]),
+                                    "ArrowLeft" => Some(available[(pos + n - 1) % n]),
+                                    "Home" => available.first().copied(),
+                                    "End" => available.last().copied(),
                                     _ => None,
-                                };
+                                }};
                                 if let Some(target) = target {
                                     event.prevent_default();
                                     onchange.call(target);
                                     let script = format!(
-                                        "document.getElementById('{focus_id}-{target}')?.focus();"
+                                        "document.getElementById('{focus_id}')?.querySelectorAll('[role=tab]')[{target}]?.focus();"
                                     );
                                     spawn(async move {
                                         let _ = document::eval(&script).await;
                                     });
                                 }
                             },
+                            super::ripple::Ripple {}
                             if let Some(icon) = item.icon {
                                 Icon { icon, class: "m3-tabs__icon" }
                             }
@@ -128,20 +145,51 @@ fn indicator_script(id: &str) -> String {
         r#"
 const list = document.getElementById("{id}");
 if (!list) return false;
+window.__m3TabIndicators = window.__m3TabIndicators || {{}};
+window.__m3TabIndicators["{id}"]?.();
+let motionFrame = 0;
 const place = () => {{
+  if (!list.isConnected) return;
   const tab = list.querySelector('[aria-selected="true"]');
-  if (!tab) return;
+  if (!tab) {{ list.removeAttribute("data-ready"); return; }}
   const label = tab.querySelector(".m3-tabs__label");
-  list.style.setProperty("--tabs-left", tab.offsetLeft + "px");
-  list.style.setProperty("--tabs-width", tab.offsetWidth + "px");
-  // The tab is positioned, so the label's offsetLeft is relative to the tab.
-  list.style.setProperty("--tabs-label-left", tab.offsetLeft + label.offsetLeft + "px");
-  list.style.setProperty("--tabs-label-width", label.offsetWidth + "px");
+  if (!label) return;
+  const rootRect = list.getBoundingClientRect();
+  const tabRect = tab.getBoundingClientRect();
+  const labelRect = label.getBoundingClientRect();
+  // Keep fractional CSS pixels: offsetLeft/offsetWidth round the label geometry.
+  const origin = rootRect.left + list.clientLeft - list.scrollLeft;
+  list.style.setProperty("--tabs-left", (tabRect.left - origin) + "px");
+  list.style.setProperty("--tabs-width", tabRect.width + "px");
+  list.style.setProperty("--tabs-label-left", (labelRect.left - origin) + "px");
+  list.style.setProperty("--tabs-label-width", labelRect.width + "px");
+  list.setAttribute("data-ready", "");
 }};
+const resize = new ResizeObserver(place);
+const observed = new WeakSet();
+const observeTargets = () => {{
+  for (const target of [list, ...list.querySelectorAll('.m3-tabs__tab, .m3-tabs__label')]) {{
+    if (!observed.has(target)) {{ resize.observe(target); observed.add(target); }}
+  }}
+}};
+const changes = new MutationObserver(() => {{ observeTargets(); place(); }});
+changes.observe(list, {{ attributes: true, subtree: true, childList: true,
+  characterData: true, attributeFilter: ["aria-selected"] }});
+observeTargets();
 place();
-list.setAttribute("data-ready", "");
-new MutationObserver(place).observe(list, {{ attributes: true, subtree: true, attributeFilter: ["aria-selected"] }});
-new ResizeObserver(place).observe(list);
+const enableMotion = () => {{
+  place();
+  // Paint initial geometry before enabling transitions, so mount never slides from x=0.
+  motionFrame = requestAnimationFrame(() => {{
+    motionFrame = requestAnimationFrame(() => {{
+      if (list.isConnected) list.setAttribute("data-motion", "");
+    }});
+  }});
+}};
+if (document.fonts) document.fonts.ready.then(enableMotion); else enableMotion();
+window.__m3TabIndicators["{id}"] = () => {{
+  resize.disconnect(); changes.disconnect(); cancelAnimationFrame(motionFrame);
+}};
 return true;
 "#
     )

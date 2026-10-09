@@ -1,4 +1,5 @@
 /*
+ * Runtime helpers: src/components/motion.rs. See docs/copy-components.md for all dependencies.
  * M3 expressive loading indicator. Copy with src/components/loading_indicator.rs
  * and src/loading_shapes.rs. The shapes morph on a spring while the indicator
  * turns; the browser runs that loop (see the component). Sizes: 48dp container,

@@ -55,16 +55,6 @@ pub fn FabMenu(
         "m3-fab-menu m3-fab-menu--{}{open_class} {class}",
         color.class()
     );
-    let trigger_icon = if open {
-        icons::CLOSE
-    } else {
-        icon.unwrap_or(icons::ADD)
-    };
-    let trigger_glyph_class = if open {
-        "m3-fab-menu__glyph m3-fab-menu__glyph--close"
-    } else {
-        "m3-fab-menu__glyph"
-    };
     let count = items.len().min(6);
     let label = aria_label.unwrap_or_else(|| "Actions".to_string());
     let expanded = if open { "true" } else { "false" };
@@ -100,6 +90,7 @@ pub fn FabMenu(
                 r#"
                 const handler = window.__m3FabMenuListeners && window.__m3FabMenuListeners["{drop_id}"];
                 if (handler) document.removeEventListener("pointerdown", handler, true);
+                if (window.__m3FabMenuListeners) delete window.__m3FabMenuListeners["{drop_id}"];
                 "#
             ))
             .await;
@@ -110,13 +101,44 @@ pub fn FabMenu(
         div {
             id: "{menu_id}",
             class,
-            onkeydown: move |event| {
-                if open && event.key() == Key::Escape {
-                    onchange.call(false);
+            onkeydown: { let menu_id = menu_id.clone(); move |event| {
+                let key = event.key().to_string();
+                if key == "Escape" && open {
+                    event.prevent_default(); onchange.call(false);
+                    focus_trigger(&menu_id);
+                } else if matches!(key.as_str(), "ArrowDown" | "ArrowUp" | "Home" | "End") {
+                    event.prevent_default();
+                    if !open { onchange.call(true); }
+                    let script = format!(r#"await new Promise(requestAnimationFrame);
+const root = document.getElementById({menu_id:?});
+const items = [...root.querySelectorAll('[role="menuitem"]')];
+const pos = items.indexOf(document.activeElement);
+const key = {key:?};
+const n = items.length;
+if (n) {{ const next = key === 'Home' ? 0 : key === 'End' ? n-1 : key === 'ArrowDown' ? (pos+1)%n : (pos <= 0 ? n-1 : pos-1); items[next].focus(); }}"#);
+                    spawn(async move { let _ = document::eval(&script).await; });
                 }
-            },
+            }},
+            button {
+                r#type: "button",
+                class: "m3-fab-menu__trigger",
+                "aria-haspopup": "menu",
+                "aria-controls": "{menu_id}-items",
+                "aria-expanded": expanded,
+                aria_label: label,
+                onclick: move |_| onchange.call(!open),
+                super::ripple::Ripple {}
+                span { class: "m3-fab-menu__glyph m3-fab-menu__glyph--original",
+                    Icon { icon: icon.unwrap_or(icons::ADD), class: "m3-fab-menu__trigger-icon" }
+                }
+                span { class: "m3-fab-menu__glyph m3-fab-menu__glyph--close",
+                    Icon { icon: icons::CLOSE, class: "m3-fab-menu__trigger-icon" }
+                }
+            }
             div {
+                id: "{menu_id}-items",
                 class: "m3-fab-menu__items",
+                aria_label: "Actions",
                 role: "menu",
                 "aria-hidden": if open { None } else { Some("true") },
                 for (index, item) in items.iter().take(count).enumerate() {
@@ -127,26 +149,23 @@ pub fn FabMenu(
                         class: "m3-fab-menu__item",
                         tabindex: if open { "0" } else { "-1" },
                         style: "--i: {count - 1 - index};",
-                        onclick: move |_| {
+                        onclick: { let menu_id = menu_id.clone(); move |_| {
                             onselect.call(index);
                             onchange.call(false);
-                        },
+                            focus_trigger(&menu_id);
+                        }},
+                        super::ripple::Ripple {}
                         Icon { icon: item.icon, class: "m3-fab-menu__item-icon" }
                         span { class: "m3-fab-menu__item-label", "{item.label}" }
                     }
                 }
             }
-            button {
-                r#type: "button",
-                class: "m3-fab-menu__trigger",
-                "aria-haspopup": "menu",
-                "aria-expanded": expanded,
-                aria_label: label,
-                onclick: move |_| onchange.call(!open),
-                span { class: trigger_glyph_class,
-                    Icon { icon: trigger_icon, class: "m3-fab-menu__trigger-icon" }
-                }
-            }
+
         }
     }
+}
+
+fn focus_trigger(id: &str) {
+    let script = format!("document.getElementById({id:?})?.querySelector('.m3-fab-menu__trigger')?.focus();");
+    spawn(async move { let _ = document::eval(&script).await; });
 }

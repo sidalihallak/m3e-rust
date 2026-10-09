@@ -50,34 +50,34 @@ Switch and checkbox interaction and motion checks are recorded in
 [`docs/checkbox-verification.md`](docs/checkbox-verification.md), with raw
 samples in [`docs/control-motion-samples.json`](docs/control-motion-samples.json).
 
-The floating action button is verified in
+The floating action button evidence and scope are recorded in
 [`docs/fab-verification.md`](docs/fab-verification.md), with raw samples in
 [`docs/fab-motion-samples.json`](docs/fab-motion-samples.json).
 
-The FAB family (branded, toolbar and menu) is verified in
+The FAB family (branded, toolbar and menu) evidence and scope are recorded in
 [`docs/fab-family-verification.md`](docs/fab-family-verification.md).
 
-The icon button is verified in [`docs/icon-button-verification.md`](docs/icon-button-verification.md).
+The icon button evidence and scope are recorded in [`docs/icon-button-verification.md`](docs/icon-button-verification.md).
 
-The chip is verified in [`docs/chip-verification.md`](docs/chip-verification.md).
+The chip evidence and scope are recorded in [`docs/chip-verification.md`](docs/chip-verification.md).
 
-Progress indicators are verified in [`docs/progress-verification.md`](docs/progress-verification.md).
+Progress indicators evidence and scope are recorded in [`docs/progress-verification.md`](docs/progress-verification.md).
 
-Radio buttons are verified in [`docs/radio-verification.md`](docs/radio-verification.md).
+Radio buttons evidence and scope are recorded in [`docs/radio-verification.md`](docs/radio-verification.md).
 
-The slider is verified in [`docs/slider-verification.md`](docs/slider-verification.md).
+The slider evidence and scope are recorded in [`docs/slider-verification.md`](docs/slider-verification.md).
 
-Segmented buttons are verified in [`docs/segmented-button-verification.md`](docs/segmented-button-verification.md).
+Segmented buttons evidence and scope are recorded in [`docs/segmented-button-verification.md`](docs/segmented-button-verification.md).
 
-Tabs are verified in [`docs/tabs-verification.md`](docs/tabs-verification.md).
+Tabs evidence and scope are recorded in [`docs/tabs-verification.md`](docs/tabs-verification.md).
 
-Notification badges are verified in [`docs/badge-verification.md`](docs/badge-verification.md).
+Notification badges evidence and scope are recorded in [`docs/badge-verification.md`](docs/badge-verification.md).
 
-Cards are verified in [`docs/card-verification.md`](docs/card-verification.md).
+Cards evidence and scope are recorded in [`docs/card-verification.md`](docs/card-verification.md).
 
-Dividers are verified in [`docs/divider-verification.md`](docs/divider-verification.md).
+Dividers evidence and scope are recorded in [`docs/divider-verification.md`](docs/divider-verification.md).
 
-Text fields are verified in [`docs/text-field-verification.md`](docs/text-field-verification.md).
+Text fields evidence and scope are recorded in [`docs/text-field-verification.md`](docs/text-field-verification.md).
 
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
@@ -102,3 +102,18 @@ dx build --platform web --release --locked --base-path /m3e-rust --debug-symbols
 
 Static files are emitted to `target/dx/m3e-rust-ui/release/web/public` and are
 uploaded as a Pages artifact; generated build files are excluded from Git.
+
+## Fidelity fixes and source copying
+
+Current desktop fixes and platform scope are in
+[the fidelity fix report](docs/component-fidelity-fixes.md).
+[Loading indicator evidence](docs/loading-indicator-verification.md) is recorded
+separately. Follow [the copy guide](docs/copy-components.md) for complete Rust,
+CSS, icon, shape and motion dependencies, or export an editable local library:
+
+```sh
+python3 scripts/export-kit.py /path/to/my-project/ui-kit
+```
+
+Current verification gaps, optional behaviors and the suggested port order are
+listed in [remaining work](docs/remaining-work.md).

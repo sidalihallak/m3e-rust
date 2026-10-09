@@ -63,6 +63,7 @@ pub fn Switch(
             },
             onblur: move |_| pressed.set(false),
             onclick: move |_| onchange.call(!checked),
+            super::ripple::Ripple {}
             span { class: "m3-switch__handle",
                 span { class: "m3-switch__icon m3-switch__icon--checked", aria_hidden: "true",
                     if let Some(icon) = checked_icon.clone() {

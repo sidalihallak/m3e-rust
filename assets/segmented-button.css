@@ -1,4 +1,6 @@
 /*
+ * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
+ * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
  * M3 segmented button set. Copy with src/components/segmented_button.rs and icon.css.
  * Sources: the Material 3 segmented button reference (one pill with a 1dp outline,
  * 1dp dividers between items, no gaps, flat selected segments with a check) and the
@@ -6,6 +8,7 @@
  * label-large text, 18dp icon, secondary-container when selected, state layers
  * hover 0.08 and focus/pressed 0.10, disabled 38% label and icon, 12% outline.
  */
+.m3-segmented:has(.m3-segmented__input):not(:has(.m3-segmented__input:not(:disabled))) { border-color: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent); }
 .m3-segmented {
   --seg-outline: var(--md-sys-color-outline);
   position: relative;
@@ -32,7 +35,6 @@
   flex: 1 1 0;
   align-items: center;
   justify-content: center;
-  gap: 8px;
   min-width: 0;
   height: 100%;
   box-sizing: border-box;
@@ -58,7 +60,7 @@
   z-index: 0;
   top: 0;
   bottom: 0;
-  left: 0;
+  inset-inline-start: 0;
   width: 1px;
   background: var(--seg-outline);
   content: "";
@@ -133,3 +135,11 @@
 @media (prefers-reduced-motion: reduce) {
   .m3-segmented__item { transition-duration: .01ms !important; }
 }
+
+/* Keep visual geometry separate from the native interaction target. */
+.m3-segmented { margin-block: 4px; }
+.m3-segmented__input { top: -5px; height: 48px; }
+
+.m3-segmented { overflow: visible; }
+.m3-segmented__item:first-child { border-start-start-radius: 20px; border-end-start-radius: 20px; }
+.m3-segmented__item:last-child { border-start-end-radius: 20px; border-end-end-radius: 20px; }

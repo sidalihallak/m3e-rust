@@ -1,12 +1,14 @@
 /*
+ * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
+ * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
  * M3 expressive icon button. Copy with src/components/icon_button.rs and icon.css.
  * Sources: Material Web icon button tokens (sizes 32/40/56/96/136dp, icons
  * 20/24/24/32/40dp, corners, state layers 0.08/0.10/0.10, disabled 0.10 and
- * 0.38). The press morph uses the expressive fast spatial spring, from the
- * shadcn-m3e motion tokens (360ms).
+ * 0.38). The press morph uses the DefaultEffects spring, from the
+ * shadcn-m3e motion tokens (240ms).
  */
 .m3-icon-button {
-  --ib-spring: linear(0, 0.0206, 0.0754, 0.1544, 0.2492, 0.3524, 0.458, 0.5613, 0.6588, 0.7479, 0.8269, 0.895, 0.952, 0.9981, 1.0338, 1.0603, 1.0783, 1.0893, 1.0942, 1.0943, 1.0906, 1.0842, 1.0759, 1.0665, 1.0565, 1.0465, 1.037, 1.0281, 1.0201, 1.0131, 1.0072, 1.0023, 0.9984, 0.9955, 0.9934, 0.992, 0.9912, 0.991, 0.9912, 0.9917, 0.9924, 0.9932, 0.9942, 0.9951, 0.996, 0.9969, 0.9977, 0.9984, 1);
+  --ib-spring: linear(     0,     0.0616,     0.1912,     0.3374,     0.4751,     0.594,     0.6916,     0.7689,     0.8288,     0.8743,     0.9084,     0.9337,     0.9523,     0.9658,     0.9756,     0.9826,     0.9877,     0.9913,     0.9939,     0.9957,     0.997,     0.9979,     0.9985,     0.999,     1   );
   --ib-size: 40px;
   --ib-icon: 24px;
   --ib-round: calc(var(--ib-size) / 2);
@@ -37,7 +39,7 @@
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition:
-    border-radius 360ms var(--ib-spring),
+    border-radius 240ms var(--ib-spring),
     background-color 200ms cubic-bezier(.2, 0, 0, 1),
     color 200ms cubic-bezier(.2, 0, 0, 1);
 }
@@ -71,7 +73,7 @@
 .m3-icon-button--square.m3-icon-button--selected { --ib-radius: var(--ib-round); }
 
 /* Pressed corner. Qualified so it outranks the selected rules above. */
-.m3-icon-button.m3-icon-button--pressed { --ib-radius: var(--ib-corner-pressed); }
+.m3-icon-button.m3-icon-button[data-ripple-pressed="true"] { --ib-radius: var(--ib-corner-pressed); }
 
 /* Variants: unselected and selected colours. */
 .m3-icon-button--standard {
@@ -120,7 +122,7 @@
 }
 
 /* Pressed: state layer 0.10. Qualified so it outranks the hover rule. */
-.m3-icon-button.m3-icon-button--pressed:not(:disabled) { --ib-state-opacity: .10; }
+.m3-icon-button.m3-icon-button[data-ripple-pressed="true"]:not(:disabled) { --ib-state-opacity: .10; }
 
 /* Disabled: 10% container, 38% icon. */
 .m3-icon-button:disabled {
@@ -140,3 +142,20 @@
     transition-duration: .01ms !important;
   }
 }
+
+/* Current filled-toggle tokens distinguish unselected from a filled action. */
+.m3-icon-button--filled.m3-icon-button--toggle:not(.m3-icon-button--selected):not(:disabled) { --ib-container: var(--md-sys-color-surface-container); --ib-icon-color: var(--md-sys-color-on-surface-variant); --ib-state: var(--md-sys-color-on-surface-variant); }
+/* 48dp interaction area around the unchanged XS/S container. Margin reserves it. */
+.m3-icon-button--xs { margin: 8px; }
+.m3-icon-button--s { margin: 4px; }
+.m3-icon-button::after { content: ""; position: absolute; width: max(100%, 48px); height: max(100%, 48px); left: 50%; top: 50%; translate: -50% -50%; }
+
+.m3-icon-button--xs { --ib-narrow: 28px; --ib-wide: 40px; }
+.m3-icon-button--s { --ib-narrow: 32px; --ib-wide: 52px; }
+.m3-icon-button--m { --ib-narrow: 48px; --ib-wide: 72px; }
+.m3-icon-button--l { --ib-narrow: 64px; --ib-wide: 128px; }
+.m3-icon-button--xl { --ib-narrow: 104px; --ib-wide: 184px; }
+.m3-icon-button--width-narrow { width: var(--ib-narrow); }
+.m3-icon-button--width-wide { width: var(--ib-wide); }
+.m3-icon-button--xs.m3-icon-button--width-narrow { margin-inline: 10px; }
+.m3-icon-button--s.m3-icon-button--width-narrow { margin-inline: 8px; }

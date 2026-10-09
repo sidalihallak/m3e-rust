@@ -211,3 +211,39 @@
 @media (prefers-reduced-motion: reduce) {
   .m3-slider__active, .m3-slider__inactive, .m3-slider__handle, .m3-slider__label { transition-duration: .01ms !important; }
 }
+
+/* Keep visual geometry separate from the native interaction target. */
+/* 48dp thumbs on extended native tracks retain the drawn 4dp handle centers. */
+.m3-slider { height: 48px; }
+.m3-slider__handle { top: 2px; }
+.m3-slider__input { left: -22px; right: auto; width: calc(100% + 44px); }
+.m3-slider__input::-webkit-slider-thumb { width: 48px; height: 48px; }
+.m3-slider__input::-moz-range-thumb { width: 48px; height: 48px; }
+.m3-slider--range .m3-slider__input--start { width: calc(48px + (100% - 4px) * var(--q)); }
+.m3-slider--range .m3-slider__input--end { left: calc(-22px + (100% - 4px) * var(--p)); width: calc(48px + (100% - 4px) * (1 - var(--p))); }
+.m3-slider__label { min-width: 48px; }
+
+
+.m3-slider--vertical { width: 48px; height: var(--len, 240px); }
+.m3-slider--vertical .m3-slider__frame { height: 48px; }
+
+/* Official Expressive size geometry; native hit height follows the tallest part. */
+.m3-slider:not(.m3-slider--vertical) { height: var(--hit-h); }
+.m3-slider__track { height: var(--track-h); border-radius: var(--track-corner); }
+.m3-slider__handle { top: 50%; height: var(--handle-h); translate: -50% -50%; }
+.m3-slider__input::-webkit-slider-thumb { height: var(--hit-h); }
+.m3-slider__input::-moz-range-thumb { height: var(--hit-h); }
+.m3-slider--vertical { width: var(--hit-h); }
+.m3-slider--vertical .m3-slider__frame { height: var(--hit-h); }
+.m3-slider__icon { --m3-icon-size: var(--slider-icon); position: absolute; top: 50%; translate: 0 -50%; pointer-events: none; color: var(--md-sys-color-on-secondary-container); }
+.m3-slider__icon--leading { left: var(--icon-pad); color: var(--md-sys-color-on-primary); }
+.m3-slider__icon--trailing { right: var(--icon-pad); }
+.m3-slider__active, .m3-slider__inactive { overflow: hidden; }
+.m3-slider__inactive .m3-slider__icon--leading { color: var(--md-sys-color-on-secondary-container); }
+.m3-slider--centered .m3-slider__active { left: calc(2px + (100% - 4px) * var(--center-lo) + var(--center-start-gap)); width: max(0px, calc((100% - 4px) * (var(--center-hi) - var(--center-lo)) - 8px)); border-radius: 2px; }
+.m3-slider--centered .m3-slider__inactive--lead { left: 0; width: max(0px, calc(2px + (100% - 4px) * var(--center-lo) - var(--center-start-gap))); }
+.m3-slider--centered .m3-slider__inactive--trail { left: calc(2px + (100% - 4px) * var(--center-hi) + var(--center-end-gap)); }
+
+/* Reserve the 22dp extension at track endpoints so neighboring targets do not overlap. */
+.m3-slider:not(.m3-slider--vertical) { margin-inline: 22px; width: calc(100% - 44px); }
+.m3-slider--vertical { margin-block: 22px; }

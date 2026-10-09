@@ -1,4 +1,6 @@
 /*
+ * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
+ * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
  * M3 expressive radio button. Copy with src/components/radio.rs.
  * Sources: Material Web radio tokens (20dp icon, 40dp state layer, colours,
  * state layers 0.08/0.10, disabled 0.38); upstream radio-group.tsx for the
@@ -106,3 +108,9 @@
   .m3-radio__dot, .m3-radio__outline, .m3-radio__ring, .m3-radio__state { transition-duration: .01ms !important; }
 }
 :root { --radio-spring: linear(0, 0.0206, 0.0754, 0.1544, 0.2492, 0.3524, 0.458, 0.5613, 0.6588, 0.7479, 0.8269, 0.895, 0.952, 0.9981, 1.0338, 1.0603, 1.0783, 1.0893, 1.0942, 1.0943, 1.0906, 1.0842, 1.0759, 1.0665, 1.0565, 1.0465, 1.037, 1.0281, 1.0201, 1.0131, 1.0072, 1.0023, 0.9984, 0.9955, 0.9934, 0.992, 0.9912, 0.991, 0.9912, 0.9917, 0.9924, 0.9932, 0.9942, 0.9951, 0.996, 0.9969, 0.9977, 0.9984, 1); }
+
+/* Keep visual geometry separate from the native interaction target. */
+.m3-radio { margin: 4px; }
+.m3-radio__input { inset: -4px; width: 48px; height: 48px; }
+
+.m3-radio { border-radius: 50%; }

@@ -38,7 +38,11 @@ attributed to that source, rather than presented as a universal Material rule.
 
 ## 3. Verify runtime behavior
 
-Build the actual target and confirm the preview serves the new build. A cached
+Build the actual target and confirm the preview serves the new build. Use the
+successful `dx serve` build when the preview is running. Do not run a separate
+`dx build` into the same output concurrently: Dioxus can append its startup
+loader twice and mount two galleries. For a separate bundle check, stop serve,
+build, then restart `./scripts/dev.sh` and reload. Verify one `.app-shell`. A cached
 static preview and a host-only Rust check cannot establish that the current
 Wasm component works.
 

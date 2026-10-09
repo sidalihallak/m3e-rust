@@ -1,3 +1,123 @@
+# Primary tab indicator correction — 2026-10-09
+
+## Scope and source reading
+
+Corrected the primary indicator in `assets/tabs.css` and its geometry observer
+in `src/components/tabs.rs`. Read the current official
+[overview](https://m3.material.io/components/tabs/overview),
+[specs](https://m3.material.io/components/tabs/specs),
+[guidelines](https://m3.material.io/components/tabs/guidelines), and
+[accessibility](https://m3.material.io/components/tabs/accessibility) in the
+browser on this date. Inspected the loaded **Primary tab active indicator
+measurements** diagram, not just its caption.
+
+Sources inspected alongside the site:
+
+- [Actual shadcn-m3e tabs.tsx at c37c0d2](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/tabs.tsx)
+- [Generated upstream motion tokens](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/styles/m3e.generated.css)
+- [Material Web primary tab tokens at 47adb65](https://github.com/material-components/material-web/blob/47adb655bd7a88c4d62e8faac2873084eed555dc/tokens/versions/latest/sass/_md-comp-primary-navigation-tab.scss)
+
+## Diagnosis and reference choice
+
+The previous follow-up misread the 2dp inset as a gap **above the divider**.
+It also kept the full label width and rounded all four corners. Actual prior
+measurements: 2px divider gap, 45px indicator over a 45.281px Flights label,
+and rounded bottom corners.
+
+The official diagram's Search example insets the indicator horizontally from
+the label edges; its All example demonstrates the 24dp minimum. The width is
+therefore max(24px, label width − 4px). The line meets the divider. The prose
+caption calls the corners fully rounded, while the same page's explicit shape
+table, its drawn profile and Material Web tokens specify **3,3,0,0**. This fix
+follows that explicit table and diagram: rounded top corners and square bottom
+corners. The earlier documentation's claimed official 2px bottom inset was wrong.
+
+Upstream uses a 16px inset from the **tab container**, so that width rule is
+not copied. Current official label-relative geometry takes precedence. Motion
+uses the actual upstream 440ms expressive DefaultSpatial curve; the previous
+360ms FastSpatial attribution was inaccurate.
+
+## Implemented and measured contract
+
+| Property / check | Actual result |
+| --- | --- |
+| Primary height | 3px |
+| Flights label / indicator | 45.28125 / 41.28125px; 2px each horizontal inset |
+| Hotels label / indicator | 43.3984375 / 39.3984375px; 2px each inset |
+| Cars label / indicator | 31.578125 / 27.578125px; 2px each inset |
+| Stacked-icon Details | 46.40625 / 42.40625px; 2px each inset |
+| Stacked-icon Favourites | 70.78125 / 66.78125px; 2px each inset |
+| Short Add label | 27.4296875px label; centered 24px indicator (minimum overrides full inset) |
+| Indicator center error | 0px for above full-inset examples; ≤0.00390625px at minimum |
+| Vertical placement | Indicator bottom meets divider top: 0px gap |
+| Corners | 3px 3px 0px 0px |
+| Secondary | 2px high; full 112.5px selected tab width; square corners; flush divider |
+| Motion | 440ms DefaultSpatial; 13 distinct positions in actual pointer-click sampling |
+| Minimum during Add animation | 24px throughout samples; explicit min-width prevents spring undershoot |
+| Keyboard | Hotels ArrowRight → Cars; Add Home → Favourites; Specs ArrowRight → Overview; Reviews stays disabled/unselected/tabindex −1 |
+| Dark scheme | Same geometry and alignment |
+| Initial load | 16 polling samples spanning mount; every observed visible/ready indicator had ≤0.00390625px center error |
+
+Measurements retain fractional CSS pixels rather than rounded offsetLeft and
+offsetWidth. ResizeObserver tracks tabs and labels; character/child changes
+trigger new measurements. Font readiness is handled. Motion is enabled only
+after the initial coordinates are painted, preventing an initial slide from
+x=0. Observers and the pending frame are cleaned up on unmount.
+
+## Build, evidence, copyability and gaps
+
+- Locked offline Wasm check: passed.
+- Updated tab sources in the independent exported kit: all 19 existing usage
+  examples passed the locked offline Wasm check (1.85s).
+- ./scripts/dev.sh reported a fresh successful 12.57s build; subsequent component
+  rebuild passed in 6.52s. Reloaded the actual preview before measurement.
+- [Raw measurements and motion polls](tabs-indicator-verification-samples.json).
+  Poll times are not exact event/frame timestamps. The earlier initial-slide
+  observation is retained separately from the final mount samples.
+- [Corrected desktop screenshot](tabs-indicator-corrected.png).
+- Existing Rust usage and [copy dependencies](copy-components.md) remain valid;
+  no public API changed in this fix.
+- Desktop pointer, keyboard and light/dark geometry were checked. Android
+  remains paused. OS reduced-motion true, screen readers, dynamic font/label
+  replacement, transformed ancestors and touch/swipe behavior were not tested.
+  Reduced-motion CSS remains in place; no runtime certification is inferred.
+- This API does not currently expose inline tab badges; the official badge+
+  label width example is a future API scope, not a tested configuration here.
+
+## Reproduce
+
+Run ./scripts/dev.sh, confirm build success, reload. Compare selected primary
+label and indicator rectangles: width max(24, label width −4), common center,
+3px height and zero gap to the divider. Click Hotels, use arrows to Cars, and
+select Add in the icon example to exercise the minimum. Check first load,
+secondary tabs, disabled Reviews and dark mode. Keep primary and secondary
+width rules distinct when comparing the source.
+
+## Historical reports before this correction
+
+# Tabs — current fidelity update
+
+2026-10-09, desktop Codex in-app browser. R1/R3/R4: enabled-only navigation,
+48px/64px native target height, shared ripple, optional stable tab_ids/panel_ids
+and associated gallery panels. That update incorrectly interpreted the horizontal 2dp label inset as a
+vertical bottom inset. The correction above supersedes this claim.
+
+Read official [overview](https://m3.material.io/components/tabs/overview),
+[specs](https://m3.material.io/components/tabs/specs),
+[guidelines](https://m3.material.io/components/tabs/guidelines), and
+[accessibility](https://m3.material.io/components/tabs/accessibility) in the
+preceding review on this date; inspected actual tabs.tsx at upstream c37c0d2.
+Specs ArrowRight selects/focuses Overview; End selects/focuses Specs; disabled
+Reviews remains unselected/tabindex −1. aria-controls targets exist. Fresh
+web build/Wasm check and isolated usage compile passed.
+
+See [fix evidence/reproduction/gaps](component-fidelity-fixes.md),
+[raw samples](component-fidelity-fixes-samples.json), and
+[copy dependencies](copy-components.md). Android, touch, assistive technology,
+OS reduced-motion true and full RTL key navigation remain untested.
+
+## Historical report before this fix
+
 # Tabs verification
 
 Scope: `Tabs`, `TabItem` and `TabsVariant` in

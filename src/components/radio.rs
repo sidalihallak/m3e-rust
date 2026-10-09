@@ -31,6 +31,7 @@ pub fn Radio(
                 "aria-label": aria_label,
                 onchange: move |_| onchange.call(()),
             }
+            super::ripple::Ripple {}
             span { class: "m3-radio__state", aria_hidden: "true" }
             // Ring and dot are SVG circles on a 20-unit grid: the centre stays exact
             // at any browser zoom, unlike boxes whose edges round to device pixels.

@@ -1,4 +1,6 @@
 /*
+ * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
+ * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
  * M3 chip. Copy with src/components/chip.rs and icon.css.
  * Sources: Material Web assist, filter, input and suggestion chip tokens:
  * 32dp height, 8dp corner (corner-small), label-large 14/20 weight 500, 18dp
@@ -147,3 +149,26 @@
     transition-duration: .01ms !important;
   }
 }
+
+/* Keep visual geometry separate from the native interaction target. */
+.m3-chip { margin-block: 8px; }
+.m3-chip__main, .m3-chip__remove { position: relative; }
+.m3-chip__main::after, .m3-chip__remove::after { content: ""; position: absolute; inset: -9px 0; }
+.m3-chip--input { margin-inline-end: 18px; }
+.m3-chip--input .m3-chip__remove::after { inset-inline-start: 0; inset-inline-end: -18px; }
+
+.m3-chip--m { height: 40px; margin-block: 4px; --m3-icon-size: 20px; }
+.m3-chip--m .m3-chip__main { padding-inline: 20px; }
+.m3-chip--m .m3-chip__main:has(> svg) { padding-inline-start: 12px; }
+.m3-chip--m .m3-chip__main::after, .m3-chip--m .m3-chip__remove::after { inset-block: -5px; }
+.m3-chip--m .m3-chip__icon, .m3-chip--m .m3-chip__remove-icon { --m3-icon-size: 20px; }
+.m3-chip--l { height: 56px; margin-block: 0; font-size: 16px; line-height: 24px; }
+.m3-chip--l .m3-chip__main { padding-inline: 24px; }
+.m3-chip--l .m3-chip__main:has(> svg) { padding-inline-start: 16px; }
+.m3-chip--l .m3-chip__main::after, .m3-chip--l .m3-chip__remove::after { inset-block: 0; }
+.m3-chip--l .m3-chip__icon, .m3-chip--l .m3-chip__remove-icon { --m3-icon-size: 24px; }
+.m3-chip__main { border-radius: inherit; }
+.m3-chip--input .m3-chip__main { border-start-end-radius: 0; border-end-end-radius: 0; }
+.m3-chip__remove { border-start-end-radius: inherit; border-end-end-radius: inherit; }
+
+.m3-chip__main { min-width: 48px; }

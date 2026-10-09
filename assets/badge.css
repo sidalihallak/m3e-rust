@@ -3,8 +3,9 @@
  * Sources: Material Web badge tokens (revision 47adb65): 6dp error dot, 16dp large
  * badge, error and on-error colours, full corner shape, and the label-small text
  * (11/16, weight 500, 0.5px tracking) for counts. The spec has no motion for badges.
- * The placement is not in the tokens: the badge's centre is set on the anchor's
- * top-right corner, a copyable choice, in `.m3-badge-anchor .m3-badge` below.
+ * Placement follows current official badge specs: small bottom-leading corner
+ * is 6dp inward/6dp down from icon top-trailing; large is 12dp inward/14dp down.
+ * Logical insets mirror the placement for right-to-left layouts.
  */
 .m3-badge-anchor {
   position: relative;
@@ -13,9 +14,7 @@
 }
 
 .m3-badge {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -35,8 +34,17 @@
   letter-spacing: .5px;
 }
 
-/* The dot is centred on the anchor's top-right corner. A count pill is raised so its
-   bottom edge reaches only 4px into the icon, and its right edge sits on the corner:
-   a count wider than the icon then extends outwards instead of across the glyph. */
-.m3-badge-anchor .m3-badge--dot { transform: translate(50%, -50%); }
-.m3-badge-anchor .m3-badge--large { top: -12px; transform: translateX(50%); }
+/* Badge width grows toward the trailing edge, preserving its leading anchor. */
+.m3-badge-anchor > .m3-badge {
+  position: absolute;
+  inset-inline-end: auto;
+  transform: none;
+}
+.m3-badge-anchor > .m3-badge--dot {
+  inset-inline-start: calc(100% - 6px);
+  inset-block-start: 0;
+}
+.m3-badge-anchor > .m3-badge--large {
+  inset-inline-start: calc(100% - 12px);
+  inset-block-start: -2px;
+}

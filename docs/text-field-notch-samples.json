@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-09",
+  "platform": "desktop Codex in-app browser",
+  "input": "actual pointer click on initially empty Name",
+  "timing": "milliseconds since polling start; includes action setup; not frame-perfect",
+  "samples": [
+    {"ms":0,"border":"1px","font":"16px","maskSize":"100% 100%, 0px 1px","shadow":"none"},
+    {"ms":43,"border":"1px","font":"16px","maskSize":"100% 100%, 0px 1px","shadow":"none"},
+    {"ms":84,"border":"1px","font":"16px","maskSize":"100% 100%, 0px 1px","shadow":"none"},
+    {"ms":124,"border":"3px","font":"16px","maskSize":"100% 100%, 0px 3px","shadow":"none"},
+    {"ms":166,"border":"3px","font":"14.3705px","maskSize":"100% 100%, 18.8221px 3px","shadow":"none"},
+    {"ms":206,"border":"3px","font":"13.0717px","maskSize":"100% 100%, 33.8245px 3px","shadow":"none"},
+    {"ms":246,"border":"3px","font":"12.4887px","maskSize":"100% 100%, 40.5587px 3px","shadow":"none"},
+    {"ms":286,"border":"3px","font":"12.1856px","maskSize":"100% 100%, 44.0589px 3px","shadow":"none"},
+    {"ms":327,"border":"3px","font":"12px","maskSize":"100% 100%, 46.2031px 3px","shadow":"none"},
+    {"ms":370,"border":"3px","font":"12px","maskSize":"100% 100%, 46.2031px 3px","shadow":"none"},
+    {"ms":409,"border":"3px","font":"12px","maskSize":"100% 100%, 46.2031px 3px","shadow":"none"},
+    {"ms":449,"border":"3px","font":"12px","maskSize":"100% 100%, 46.2031px 3px","shadow":"none"},
+    {"ms":490,"border":"3px","font":"12px","maskSize":"100% 100%, 46.2031px 3px","shadow":"none"},
+    {"ms":530,"border":"3px","font":"12px","maskSize":"100% 100%, 46.2031px 3px","shadow":"none"}
+  ],
+  "price": {
+    "type":"number", "appearance":"textfield", "typed":"125", "afterArrowUp":"126", "afterArrowDown":"125",
+    "focused":{"border":"3px","maskSize":"100% 100%, 40.875px 3px","shadow":"none","containerHeight":56},
+    "blurred":{"border":"1px","maskSize":"100% 100%, 40.875px 1px","shadow":"none","value":"125"}
+  },
+  "disabledAccountNumber":{"disabled":true,"focusedAfterPointerClick":false},
+  "limitations":["No Android/touch result", "Firefox not exercised", "OS reduced-motion preference not exercised", "No isolated copy-consumer build"]
+}

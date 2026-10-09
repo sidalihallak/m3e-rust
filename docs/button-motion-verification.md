@@ -93,3 +93,11 @@ the minimum press ends.
 
 A screenshot taken after a click has completed cannot establish whether motion
 ran. Keep measurements or capture during the press when diagnosing animation.
+
+## Regression check during the component fidelity fixes — 2026-10-09
+
+Button source/CSS remained unchanged. A real quick click in the current desktop
+preview measured Filled at minimum radius 8.0367px, peak ripple opacity .10,
+and constant 71.078125×40px dimensions. Raw samples are in
+[the shared fidelity fix evidence](component-fidelity-fixes-samples.json).
+This is a focused regression check; the original platform limitations remain.

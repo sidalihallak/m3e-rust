@@ -1,10 +1,74 @@
+# Text field surface and dynamic-label follow-up — 2026-10-09
+
+R9: the native label and 56px surface focus the input; disabled surface does
+not forward focus. Added native read_only and ResizeObserver notch tracking.
+Email label click focuses Email. Readonly REF-123 remains unchanged after x;
+changing Reference to Longer account reference increases measured floated text
+width 61.492 → 156.711px. Previous full-depth notch and hidden number steppers
+remain in place. Current build/check pass and copy dependencies are in the
+[fix report](component-fidelity-fixes.md), with
+[raw evidence](component-fidelity-fixes-samples.json).
+
+Official four-section source readings and pinned upstream text-field.tsx are
+listed below. Desktop checks establish the named behavior; Android, autofill,
+screen readers and OS reduced-motion true remain untested.
+
+## Earlier notch/spinner evidence
+
 # Text field verification
 
 Scope: `TextField` and `TextFieldVariant` in
 [`src/components/text_field.rs`](../src/components/text_field.rs) and
 [`assets/text-field.css`](../assets/text-field.css). Verified in the Dioxus preview on
 2026-10-09 with headless Chromium 1194, using real pointer and keyboard input, at device scale 2.
-Desktop only.
+Desktop only. Those measurements are historical. The most recent targeted follow-up below was
+performed in the desktop Codex in-app browser on 2026-10-09; it supersedes the old notch rendering
+and blocked-source notes. It does not re-certify all of the historical matrix.
+
+## Latest follow-up: full-depth notch and numeric appearance
+
+The user identified a line crossing the outlined label and native stepper arrows on Price.
+The focused outline combined a 1px border with a 2px inset shadow, but its mask removed only a
+2px band. The cut did not remove the full visible edge. `assets/text-field.css` now draws the
+focused outline as a single 3px border and derives the cut's depth from that border width.
+The cut is 1px deep at rest and 3px deep on focus; no surface-colored patch is painted behind
+the label. Container dimensions and the existing 200ms float timing are preserved.
+
+Numeric inputs keep `type="number"`, native numeric editing/validation and accessible spinbutton
+semantics. The component stylesheet uses `appearance: textfield` and suppresses WebKit spin-button
+appearance to remove browser chrome from this Material field. This is a kit presentation choice
+requested by the user; the current upstream TextField does not explicitly suppress native steppers.
+See [MDN appearance](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/appearance).
+
+| Current desktop check | Result |
+| --- | --- |
+| Focused Price | Border 3px, no inset shadow, notch `40.875px 3px`, container 56px |
+| Populated Price after blur | Border 1px, no inset shadow, notch `40.875px 1px`; value retained |
+| Price typing | Typed 125; value 125 |
+| Price ArrowUp / ArrowDown | 125 → 126 → 125 with the visible steppers suppressed |
+| Numeric appearance | Computed `appearance: textfield`; screenshot showed no arrows |
+| Focused Name | Border 3px; settled notch width 46.2031px; label 12px |
+| Name filled then blurred | Ada retained; label stays floated; outline returns to 1px |
+| Name cleared then blurred | Screenshot confirmed closed notch and resting label |
+| Disabled Account number | Pointer click did not focus the disabled input |
+| Light and dark surfaces | Visually inspected the focused Price cut and absence of arrows in both |
+| Motion while Name focused | Samples from 0–530ms; first focused sample 124ms, font/notch settled by 327ms; border/cut depth 3px throughout focus |
+| Reduced motion | Rule now shortens both label and notch transitions; OS preference not exercised |
+| Rust/Wasm check | `cargo check --locked --offline --target wasm32-unknown-unknown` passed |
+| Dioxus web build | `dx build --platform web --locked --offline` passed; live server reported CSS hot reload, then browser reloaded |
+
+Current screenshot: [text-field-price-fixed.jpg](text-field-price-fixed.jpg), showing the focused
+Price field without browser arrows and with a full-depth label cut on the light surface.
+
+Motion timestamps are relative to polling start, including the pointer action's setup; they are
+not exact event timestamps. Raw samples: [text-field-notch-samples.json](text-field-notch-samples.json).
+No Android, Firefox, screen-reader or numeric-autofill result is claimed. The native number step
+remains the browser default; decimal currency policy is a separate consumer/API decision.
+
+Copy dependencies: `src/components/text_field.rs`, `assets/text-field.css`, the `next_id` helper
+from `src/components/motion.rs`, and `Icon`/`IconData` plus `assets/icon.css` when using icons.
+Consumers also need the existing semantic color variables. The Rust API and gallery snippet
+were not changed in this follow-up.
 
 ## 1. References
 
@@ -16,10 +80,18 @@ Desktop only.
   ([`_md-comp-outlined-text-field.scss`](https://github.com/material-components/material-web/blob/47adb65/tokens/versions/latest/sass/_md-comp-outlined-text-field.scss)):
   56dp container, 1dp outline, hover on-surface, focus primary, 4dp corner (corner-extra-small),
   body-large input and label text, body-small floated label, 12% disabled outline.
-- **Note on focus width.** The outlined token file lists a 3dp focus outline. It is drawn here as a
-  1dp outline plus a 2dp inset ring, which totals 3dp.
-- **Not read:** the official `m3.material.io` text field page. The egress proxy blocks that host.
-- shadcn-m3e `input.tsx` and `text-field.tsx` (revision `8f1b3fb`) were checked for structure only.
+- **Note on focus width.** The outlined token file lists a 3dp focus outline. It is now drawn as
+  one 3px border, with the notch cut through the full border thickness. Current upstream uses 2px
+  on focus; this kit retains its existing official Material Web 3px token contract.
+- Official text field [overview](https://m3.material.io/components/text-fields/overview),
+  [specs](https://m3.material.io/components/text-fields/specs),
+  [guidelines](https://m3.material.io/components/text-fields/guidelines) and
+  [accessibility](https://m3.material.io/components/text-fields/accessibility) were read in the
+  browser on 2026-10-09. The specs describe 56dp containers/targets, 4dp padding beside the populated
+  outlined label, and floating label/input/support roles. The former blocked-host note is superseded.
+- Actual [shadcn-m3e text-field.tsx at c37c0d2](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/text-field.tsx)
+  was inspected. It uses three outline pieces with no top edge over the floated label. The kit uses
+  a transparent CSS mask to produce the same cut, including on non-page-colored surfaces.
 
 ## 2. Values and behaviour
 
@@ -29,8 +101,8 @@ Desktop only.
 | Label at rest | body-large, 16/24, centred vertically, 16px inset | Tokens |
 | Label floated | body-small, 12/16, on the outline (outlined) or 8px from the top (filled) | Tokens and Material layout |
 | Float transition | 200ms standard easing | Choice; the token file gives no duration |
-| Outlined outline | 1dp outline; hover on-surface; focus primary, 3dp total | Tokens |
-| Outlined notch | A cut in the top outline, the floated label's width plus 4dp either side; no painted colour | Material layout; the cut is drawn with a mask |
+| Outlined outline | 1dp outline; hover on-surface; focus primary, one 3dp border | Tokens |
+| Outlined notch | A cut through the full top border, the floated label's width plus 4dp either side; no painted colour | Material layout; the cut is drawn with a mask |
 | Filled container | surface-container-highest, 4dp top corners | Tokens |
 | Filled indicator | 1dp on-surface-variant; hover on-surface; focus 2dp primary | Tokens |
 | Error | error outline or indicator, error label and supporting text, `aria-invalid="true"` | Tokens |
@@ -85,9 +157,10 @@ Raw data: [`field-samples.json`](field-samples.json). Screenshot: [`field-sectio
 - **Focused outline never applied on outlined fields.** The outline element came before the input in
   the DOM, so `input:focus ~ outline` never matched. The outline now follows the input. Measured:
   the outline is primary on focus.
-- **Floated label crossed the outline.** The label background was transparent, so the outline ran
-  through the floated label. The label now takes the page surface as its background, which masks
-  the outline behind it.
+- **Focused notch left a residual stroke.** The old 2px mask did not remove the complete 3px
+  focused edge. The current border and mask use the same thickness, with no inset shadow.
+- **Native numeric steppers appeared in Price.** The component CSS now suppresses their visual
+  appearance while retaining number semantics and the tested ArrowUp/ArrowDown behavior.
 
 ## 5. Build and checks
 
@@ -102,17 +175,22 @@ Raw data: [`field-samples.json`](field-samples.json). Screenshot: [`field-sectio
 - Multi-line growth needs `field-sizing: content`. Chromium 1194 supports it; browsers without it keep
   the three-line height and scroll.
 - The counter does not stop input at the limit: it counts and shows the error state, as Material does.
-- The label float duration (200ms) is a choice. The Material spec was not read (blocked host).
+- The label float duration (200ms) is a kit choice, not a universal Material timing requirement.
 - The notch width is measured once, when the field mounts, from a hidden copy of the label. If the
   label text changes later, the notch keeps the old width. Browsers without CSS mask composition
   (`mask-composite`) show the full outline.
 - Touch input, Android, the on-screen keyboard, reduced motion and screen-reader announcements are not measured.
 - Autofill and validation timing (when the error appears) are left to the consumer.
+- Surface/label click forwarding (the 56px surface versus the 24px native input) remains the
+  separate R9 finding in [the fidelity review](component-fidelity-review.md); it was not changed here.
 
 ## 7. Steps to reproduce
 
 1. `./scripts/dev.sh`, then open `http://127.0.0.1:8080/` and wait for the build to report success.
-2. Run a Playwright script against the text field section with the Chromium at
-   `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`. It clicks into and types in the outlined
-   field, tabs out, clears it, checks the error field, and clicks the disabled field.
-3. Compare the output with [`field-samples.json`](field-samples.json).
+2. Focus Name and Price. Inspect the full notch on focus, then type and Tab out. Verify that the
+   populated label stays floated and the outline becomes 1px.
+3. In Price type 125, press ArrowUp and ArrowDown, and verify 126 then 125 without visible steppers.
+4. Clear Name and blur it; verify the notch closes. Check disabled Account number does not focus.
+5. Repeat focused Price in dark mode. Compare current motion with
+   [text-field-notch-samples.json](text-field-notch-samples.json). Older
+   [field-samples.json](field-samples.json) and screenshots are historical evidence.
