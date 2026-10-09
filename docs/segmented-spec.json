@@ -9,24 +9,24 @@
   "items": [
     {
       "x": 106,
-      "w": 148.34,
+      "w": 167.33,
       "h": 38,
       "radius": "0px",
       "dividerLeft": "0px"
     },
     {
-      "x": 254.34,
-      "w": 187.16,
+      "x": 273.33,
+      "w": 167.33,
       "h": 38,
       "radius": "0px",
-      "dividerLeft": "1px"
+      "dividerLeft": "0px"
     },
     {
-      "x": 441.5,
-      "w": 166.5,
+      "x": 440.66,
+      "w": 167.33,
       "h": 38,
       "radius": "0px",
-      "dividerLeft": "1px"
+      "dividerLeft": "0px"
     }
   ],
   "gapBetweenItems": 0,

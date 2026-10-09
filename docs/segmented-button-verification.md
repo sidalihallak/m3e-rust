@@ -33,7 +33,8 @@ with it. This report covers only the current version.
 | --- | --- | --- |
 | Set height | 40px, including the 1px outline | Tokens |
 | Set outline | 1px outline, full pill (20px radius), clipped content | Reference |
-| Dividers | 1px between items, no gaps | Reference |
+| Dividers | 1px between items, drawn as an overlay so widths stay equal | Reference |
+| Item widths | Equal: each item takes 1/n of the set, sized by the widest label (`flex: 1 1 0`) | Material guideline (equal-width segments) |
 | Item corners | Square; the pill clip gives the rounded ends | Reference |
 | Selected | secondary-container fill, on-secondary-container label, check unless an icon is given | Reference and tokens |
 | Label | label-large, 14/20, weight 500 | Tokens |
@@ -46,7 +47,8 @@ with it. This report covers only the current version.
 
 ## 4. Input, state and platform matrix
 
-Raw data: [`segmented-spec.json`](segmented-spec.json). Screenshot:
+Raw data: [`segmented-spec.json`](segmented-spec.json) (behaviour) and
+[`segmented-widths.json`](segmented-widths.json) (widths). Screenshot:
 [`segmented-single.png`](segmented-single.png).
 
 | Check | Result |
@@ -54,7 +56,10 @@ Raw data: [`segmented-spec.json`](segmented-spec.json). Screenshot:
 | Set height and outline | 40px, 1px outline, 20px radius, overflow hidden |
 | Item height | 38px inside the outline |
 | Gap between items | 0px |
-| Divider | 1px left border on items 2 and 3 |
+| Item widths, single and multi (504px set) | 167.33px each, 3 items; 0px difference |
+| Item widths, disabled (504px set) | 251px each, 2 items |
+| Labels clipped | None |
+| Divider | 1px overlay at the left edge of items 2 and 3 |
 | Item corner radius | 0px for every item |
 | Hover state layer | 0.08 |
 | Held press, unselected item, 200ms | State layer 0.10; corner 0px; not selected while held |
@@ -71,10 +76,14 @@ Raw data: [`segmented-spec.json`](segmented-spec.json). Screenshot:
 | Page errors | 0 |
 
 Visual comparison: the screenshot has the same structure as the reference: one outlined pill,
-flat 1dp dividers, and a lavender selected segment with a check. Segment widths size to their
-content, as in the reference.
+flat 1dp dividers, and a lavender selected segment with a check. Segments are equal width, as
+the guideline requires.
 
 ## 5. Diagnosed defects
+
+- **Unequal widths.** The first fix sized items to content, so the segments differed in width.
+  The guideline requires equal widths. Items now use `flex: 1 1 0`. A border divider had made
+  items 2 and 3 1px wider, so dividers are an overlay instead. Measured widths are equal.
 
 - **Wrong shape.** See section 1. The first version used gaps, pills per item and corner
   morphs. The current version follows the reference.
@@ -102,6 +111,8 @@ content, as in the reference.
   reference is a screenshot, so exact segment widths and text positions are not measured against it.
 - Disabled outline is applied to the divider on each item's left only. The set's outer outline
   stays at full strength when every item is disabled. The reference does not show a disabled state.
+- Equal widths follow the guideline. The longest label sets the width, so a set with long labels
+  is wider than one with short labels. Text is not truncated or wrapped.
 - Corner clipping relies on `overflow: hidden` on the set. The focus ring is inset for that reason.
 
 ## 8. Steps to reproduce
@@ -110,4 +121,5 @@ content, as in the reference.
 2. Run a Playwright script with the Chromium at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`
    against the preview. It sets the section's items, dispatches real mouse and keyboard
    actions, and reads computed styles. The script is kept in the scratchpad and is not committed.
-3. Compare the output with [`segmented-spec.json`](segmented-spec.json).
+3. Compare the output with [`segmented-spec.json`](segmented-spec.json) and
+[`segmented-widths.json`](segmented-widths.json).

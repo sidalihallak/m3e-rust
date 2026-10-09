@@ -1,0 +1,57 @@
+{
+  "single": {
+    "width": 504,
+    "items": [
+      {
+        "label": "Day",
+        "w": 167.33,
+        "clipped": false
+      },
+      {
+        "label": "Week",
+        "w": 167.33,
+        "clipped": false
+      },
+      {
+        "label": "Month",
+        "w": 167.33,
+        "clipped": false
+      }
+    ]
+  },
+  "multi": {
+    "width": 504,
+    "items": [
+      {
+        "label": "Favourite",
+        "w": 167.33,
+        "clipped": false
+      },
+      {
+        "label": "Details",
+        "w": 167.33,
+        "clipped": false
+      },
+      {
+        "label": "Add",
+        "w": 167.33,
+        "clipped": false
+      }
+    ]
+  },
+  "disabled": {
+    "width": 504,
+    "items": [
+      {
+        "label": "List",
+        "w": 251,
+        "clipped": false
+      },
+      {
+        "label": "Grid",
+        "w": 251,
+        "clipped": false
+      }
+    ]
+  }
+}
