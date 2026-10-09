@@ -69,6 +69,8 @@ The slider is verified in [`docs/slider-verification.md`](docs/slider-verificati
 
 Segmented buttons are verified in [`docs/segmented-button-verification.md`](docs/segmented-button-verification.md).
 
+Tabs are verified in [`docs/tabs-verification.md`](docs/tabs-verification.md).
+
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
 

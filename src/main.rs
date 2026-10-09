@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -246,6 +246,24 @@ fn PeriodPicker() -> Element {
     }
 }"#;
 
+const TABS_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{TabItem, Tabs};
+
+#[component]
+fn TripTabs() -> Element {
+    let mut selected = use_signal(|| 0_usize);
+    let labels = ["Flights", "Hotels", "Cars"];
+    rsx! {
+        Tabs {
+            items: labels.iter().map(|label| TabItem::new(*label)).collect::<Vec<_>>(),
+            selected: selected(),
+            aria_label: Some("Trip type".to_string()),
+            onchange: move |index: usize| selected.set(index),
+        }
+        // Render the panel for the selected tab here.
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -275,6 +293,9 @@ fn App() -> Element {
     let mut level = use_signal(|| 60.0_f64);
     let mut tick_value = use_signal(|| 40.0_f64);
     let mut period = use_signal(|| 1_usize);
+    let mut trip = use_signal(|| 0_usize);
+    let mut detail = use_signal(|| 1_usize);
+    let mut spec = use_signal(|| 0_usize);
     let mut views = use_signal(|| [true, false, true]);
     let mut menu_pick = use_signal(|| String::from("none"));
     let theme = theme::ThemePreview::from_seed(seed());
@@ -301,6 +322,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/radio.css") }
         document::Stylesheet { href: asset!("/assets/slider.css") }
         document::Stylesheet { href: asset!("/assets/segmented-button.css") }
+        document::Stylesheet { href: asset!("/assets/tabs.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -891,6 +913,64 @@ fn App() -> Element {
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Segmented button usage", code: SEGMENTED_USAGE }
+                }
+            }
+            section { class: "wrap roles-section tabs-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "12 — TABS" }
+                        h2 { "Tabs" }
+                        p { class: "section-description", "Native buttons with role tab. Arrow keys, Home and End move focus and select the tab; only the selected tab is in the tab order. The indicator slides to the selected tab." }
+                    }
+                    span { class: "token-note", "M3 EXPRESSIVE · MATERIAL WEB TOKENS" }
+                }
+                div { class: "tabs-grid",
+                    article { class: "demo-card tabs-specimen",
+                        div { class: "card-topline", span { "PRIMARY" } span { class: "component-index", "A" } }
+                        div { class: "tabs-stack",
+                            Tabs {
+                                items: vec![TabItem::new("Flights"), TabItem::new("Hotels"), TabItem::new("Cars")],
+                                selected: trip(),
+                                aria_label: Some("Trip type".to_string()),
+                                onchange: move |index: usize| trip.set(index),
+                            }
+                            p { class: "tabs-panel", "Panel: {[\"Flights\", \"Hotels\", \"Cars\"][trip()]}" }
+                        }
+                    }
+                    article { class: "demo-card tabs-specimen",
+                        div { class: "card-topline", span { "PRIMARY · ICONS" } span { class: "component-index", "B" } }
+                        div { class: "tabs-stack",
+                            Tabs {
+                                items: vec![
+                                    TabItem { label: "Favourites".to_string(), icon: Some(icons::FAVORITE), disabled: false },
+                                    TabItem { label: "Details".to_string(), icon: Some(icons::INFO), disabled: false },
+                                    TabItem { label: "Add".to_string(), icon: Some(icons::ADD), disabled: false },
+                                ],
+                                selected: detail(),
+                                aria_label: Some("Item view".to_string()),
+                                onchange: move |index: usize| detail.set(index),
+                            }
+                            p { class: "tabs-panel", "Panel: {[\"Favourites\", \"Details\", \"Add\"][detail()]}" }
+                        }
+                    }
+                    article { class: "demo-card tabs-specimen",
+                        div { class: "card-topline", span { "SECONDARY · DISABLED TAB" } span { class: "component-index", "C" } }
+                        div { class: "tabs-stack",
+                            Tabs {
+                                variant: TabsVariant::Secondary,
+                                items: vec![
+                                    TabItem::new("Overview"),
+                                    TabItem::new("Specs"),
+                                    TabItem { label: "Reviews".to_string(), icon: None, disabled: true },
+                                ],
+                                selected: spec(),
+                                aria_label: Some("Product".to_string()),
+                                onchange: move |index: usize| spec.set(index),
+                            }
+                            p { class: "tabs-panel", "Panel: {[\"Overview\", \"Specs\", \"Reviews\"][spec()]}" }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Tabs usage", code: TABS_USAGE }
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }

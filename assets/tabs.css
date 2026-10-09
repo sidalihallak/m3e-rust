@@ -1,0 +1,133 @@
+/*
+ * M3 tabs. Copy with src/components/tabs.rs and icon.css.
+ * Sources: Material Web primary navigation tab tokens (revision 47adb65): 48dp
+ * container, 1dp divider in surface-variant, 3dp active indicator with rounded top
+ * corners, title-small text, 24dp icon, active label primary, inactive on-surface-variant,
+ * state layers hover 0.08 and focus/pressed 0.10, disabled 38%. Upstream shadcn-m3e
+ * `tabs.tsx` (revision 8f1b3fb) for equal-width tabs, the indicator inset 16dp from the
+ * tab edges (minimum 24dp wide), the 2dp full-width secondary indicator, and the 16dp
+ * state-layer shape. Icon-and-label tabs are 64dp high, as the token file defines.
+ * Indicator motion uses the kit's expressive fast spatial spring (360ms).
+ */
+:root {
+  --tabs-spring: linear(0, .0206, .0754, .1544, .2492, .3524, .458, .5613, .6588, .7479, .8269, .895, .952, .9981, 1.0338, 1.0603, 1.0783, 1.0893, 1.0942, 1.0943, 1.0906, 1.0842, 1.0759, 1.0665, 1.0565, 1.0465, 1.037, 1.0281, 1.0201, 1.0131, 1.0072, 1.0023, .9984, .9955, .9934, .992, .9912, .991, .9912, .9917, .9924, .9932, .9942, .9951, .996, .9969, .9977, .9984, 1);
+}
+
+.m3-tabs {
+  --tabs-left: 0px;
+  --tabs-width: 0px;
+  --tabs-indicator-width: max(24px, calc(var(--tabs-width) - 32px));
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  border-bottom: 1px solid var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+}
+.m3-tabs--icons { height: 64px; }
+
+.m3-tabs__tab {
+  --tabs-state: var(--md-sys-color-on-surface);
+  --tabs-state-opacity: 0;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 40px;
+  margin: 4px 0;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  color: var(--md-sys-color-on-surface-variant);
+  font: 500 14px/20px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .00625rem;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  -webkit-tap-highlight-color: transparent;
+}
+.m3-tabs--icons .m3-tabs__tab {
+  flex-direction: column;
+  gap: 0;
+  height: 56px;
+}
+.m3-tabs__icon { --m3-icon-size: 24px; flex: 0 0 auto; color: inherit; pointer-events: none; }
+.m3-tabs__label { pointer-events: none; }
+
+/* State layer, clipped to the tab's 16dp shape. */
+.m3-tabs__tab::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--tabs-state);
+  content: "";
+  opacity: var(--tabs-state-opacity);
+  pointer-events: none;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+.m3-tabs__tab:not(:disabled):hover { --tabs-state-opacity: .08; }
+.m3-tabs__tab:not(:disabled):focus-visible { --tabs-state-opacity: .10; }
+.m3-tabs__tab.m3-tabs__tab:not(:disabled):active { --tabs-state-opacity: .10; }
+
+/* Selected: primary label, state layer in primary. */
+.m3-tabs__tab--selected {
+  --tabs-state: var(--md-sys-color-primary);
+  color: var(--md-sys-color-primary);
+}
+
+/* Keyboard focus: 3dp secondary outline inside the tab. */
+.m3-tabs__tab:focus-visible {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: -3px;
+}
+
+/* Disabled: 38% label and icon. */
+.m3-tabs__tab:disabled {
+  color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  cursor: default;
+}
+
+/* Indicator: 3dp for primary, under the label with a 16dp inset. */
+.m3-tabs__indicator {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: calc(var(--tabs-left) + (var(--tabs-width) - var(--tabs-indicator-width)) / 2);
+  width: var(--tabs-indicator-width);
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: var(--md-sys-color-primary);
+  opacity: 0;
+  pointer-events: none;
+}
+.m3-tabs[data-ready] .m3-tabs__indicator {
+  opacity: 1;
+  transition:
+    left 360ms var(--tabs-spring),
+    width 360ms var(--tabs-spring);
+}
+
+/* Secondary: 2dp across the full tab width, with an on-surface selected label. */
+.m3-tabs--secondary .m3-tabs__indicator {
+  left: var(--tabs-left);
+  width: var(--tabs-width);
+  height: 2px;
+  border-radius: 0;
+}
+.m3-tabs--secondary .m3-tabs__tab--selected {
+  --tabs-state: var(--md-sys-color-on-surface);
+  color: var(--md-sys-color-on-surface);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m3-tabs[data-ready] .m3-tabs__indicator,
+  .m3-tabs__tab::before { transition-duration: .01ms !important; }
+}

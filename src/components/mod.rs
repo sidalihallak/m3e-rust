@@ -12,6 +12,7 @@ pub mod radio;
 pub mod segmented_button;
 pub mod slider;
 pub mod switch;
+pub mod tabs;
 
 pub use button::{Button, ButtonShape, ButtonSize, ButtonType, ButtonVariant};
 pub use chip::{Chip, ChipVariant};
@@ -26,3 +27,4 @@ pub use radio::{Radio, RadioGroup};
 pub use segmented_button::{SegmentedButton, SegmentedButtonSet};
 pub use slider::Slider;
 pub use switch::Switch;
+pub use tabs::{TabItem, Tabs, TabsVariant};
