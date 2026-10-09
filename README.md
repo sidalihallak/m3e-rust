@@ -50,6 +50,10 @@ Switch and checkbox interaction and motion checks are recorded in
 [`docs/checkbox-verification.md`](docs/checkbox-verification.md), with raw
 samples in [`docs/control-motion-samples.json`](docs/control-motion-samples.json).
 
+The floating action button is verified in
+[`docs/fab-verification.md`](docs/fab-verification.md), with raw samples in
+[`docs/fab-motion-samples.json`](docs/fab-motion-samples.json).
+
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
 

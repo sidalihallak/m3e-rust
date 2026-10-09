@@ -128,3 +128,10 @@ button { cursor: pointer; }
 .icon-glyph { --m3-icon-size: 28px; color: var(--md-sys-color-primary); }
 .icon-cell > span { color: var(--muted); font-size: 9px; font-family: ui-monospace, monospace; }
 .icon-note { margin: 14px 0 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.fab-section { min-width: 0; }
+.fab-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.fab-specimen { min-width: 0; }
+.fab-row { display: flex; align-items: flex-end; justify-content: center; gap: 18px; min-height: 130px; padding-top: 16px; }
+.fab-row-wrap { flex-wrap: wrap; row-gap: 14px; }
+.fab-grid .code-card { grid-column: 1 / -1; }
+@media (max-width: 760px) { .fab-grid { grid-template-columns: 1fr; } }

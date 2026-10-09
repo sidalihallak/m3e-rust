@@ -1,0 +1,129 @@
+/*
+ * M3 floating action button. Copy with src/components/fab.rs and icon.css.
+ * Sources: Material Web FAB tokens (containers 40/56/80/96dp, corners
+ * 12/16/20/28dp, icons 24/24/28/36dp, state layers 0.08/0.10/0.10); elevation
+ * levels from the Material elevation spec, with the ambient shadow from
+ * shadcn-m3e's m3e.css.
+ */
+.m3-fab {
+  --fab-container: var(--md-sys-color-primary-container);
+  --fab-icon: var(--md-sys-color-on-primary-container);
+  --fab-size: 56px;
+  --fab-radius: 16px;
+  --fab-icon-size: 24px;
+  --fab-shadow: 0 1px 3px 0 rgb(0 0 0 / .3), 0 4px 8px 3px rgb(0 0 0 / .15);
+  --fab-state-opacity: 0;
+  --m3-icon-size: var(--fab-icon-size);
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: var(--fab-size);
+  height: var(--fab-size);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--fab-radius);
+  color: var(--fab-icon);
+  background: var(--fab-container);
+  box-shadow: var(--fab-shadow);
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    box-shadow 200ms cubic-bezier(.2, 0, 0, 1),
+    background-color 200ms cubic-bezier(.2, 0, 0, 1),
+    color 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+/* State layer uses the icon colour, as the Material Web tokens do. */
+.m3-fab::before {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: currentColor;
+  content: "";
+  opacity: var(--fab-state-opacity);
+  pointer-events: none;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+.m3-fab__icon,
+.m3-fab__label {
+  position: relative;
+  z-index: 1;
+}
+
+/* Sizes. */
+.m3-fab--small { --fab-size: 40px; --fab-radius: 12px; --fab-icon-size: 24px; }
+.m3-fab--standard { --fab-size: 56px; --fab-radius: 16px; --fab-icon-size: 24px; }
+.m3-fab--medium { --fab-size: 80px; --fab-radius: 20px; --fab-icon-size: 28px; }
+.m3-fab--large { --fab-size: 96px; --fab-radius: 28px; --fab-icon-size: 36px; }
+
+/* Extended: standard height, icon and label. */
+.m3-fab--extended {
+  gap: 12px;
+  width: auto;
+  height: 56px;
+  padding-inline: 16px 20px;
+  border-radius: 16px;
+  font: 500 16px/24px Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .01em;
+}
+
+/* Colour roles: container, then the paired icon colour. */
+.m3-fab--primary-container { --fab-container: var(--md-sys-color-primary-container); --fab-icon: var(--md-sys-color-on-primary-container); }
+.m3-fab--primary { --fab-container: var(--md-sys-color-primary); --fab-icon: var(--md-sys-color-on-primary); }
+.m3-fab--secondary-container { --fab-container: var(--md-sys-color-secondary-container); --fab-icon: var(--md-sys-color-on-secondary-container); }
+.m3-fab--secondary { --fab-container: var(--md-sys-color-secondary); --fab-icon: var(--md-sys-color-on-secondary); }
+.m3-fab--tertiary-container { --fab-container: var(--md-sys-color-tertiary-container); --fab-icon: var(--md-sys-color-on-tertiary-container); }
+.m3-fab--tertiary { --fab-container: var(--md-sys-color-tertiary); --fab-icon: var(--md-sys-color-on-tertiary); }
+.m3-fab--surface { --fab-container: var(--md-sys-color-surface-container-high); --fab-icon: var(--md-sys-color-primary); }
+
+/* Elevation 3 at rest. Lowered rests at elevation 1. */
+.m3-fab--lowered { --fab-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15); }
+
+/* Hover raises one level (elevation 4, or 2 when lowered). Qualified so it
+   stays above the pressed rules below. */
+.m3-fab:not(:disabled):hover {
+  --fab-state-opacity: .08;
+  --fab-shadow: 0 2px 3px 0 rgb(0 0 0 / .3), 0 6px 10px 4px rgb(0 0 0 / .15);
+}
+.m3-fab.m3-fab--lowered:not(:disabled):hover {
+  --fab-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 2px 6px 2px rgb(0 0 0 / .15);
+}
+
+/* Focus: state layer 0.10 and the focus ring. */
+.m3-fab:not(:disabled):focus-visible { --fab-state-opacity: .10; }
+.m3-fab:focus-visible {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 2px;
+}
+
+/* Pressed: state layer 0.10, back to elevation 3 (1 when lowered). Qualified
+   with the root class so it outranks the hover rule (0,3,0). */
+.m3-fab.m3-fab--pressed:not(:disabled) {
+  --fab-state-opacity: .10;
+  --fab-shadow: 0 1px 3px 0 rgb(0 0 0 / .3), 0 4px 8px 3px rgb(0 0 0 / .15);
+}
+.m3-fab.m3-fab--lowered.m3-fab--pressed:not(:disabled) {
+  --fab-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15);
+}
+
+/* Disabled: 12% container, 38% icon, no elevation. */
+.m3-fab:disabled {
+  --fab-container: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent);
+  --fab-icon: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  --fab-shadow: none;
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m3-fab,
+  .m3-fab *,
+  .m3-fab::before {
+    transition-duration: .01ms !important;
+  }
+}

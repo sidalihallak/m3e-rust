@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Icon, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Fab, FabColor, FabSize, Icon, Switch};
 
 mod theme;
 
@@ -61,6 +61,22 @@ fn SavedBadge() -> Element {
     }
 }"#;
 
+const FAB_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{icons, Fab, FabColor, FabSize};
+
+#[component]
+fn ComposeButton() -> Element {
+    rsx! {
+        Fab {
+            icon: icons::ADD,
+            size: FabSize::Standard,
+            color: FabColor::PrimaryContainer,
+            aria_label: Some("Compose".to_string()),
+            onclick: move |_| {},
+        }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -91,6 +107,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/switch.css") }
         document::Stylesheet { href: asset!("/assets/checkbox.css") }
         document::Stylesheet { href: asset!("/assets/icon.css") }
+        document::Stylesheet { href: asset!("/assets/fab.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -297,6 +314,48 @@ fn App() -> Element {
                         p { class: "icon-note", "Official Material Symbols Rounded paths, generated from @material-symbols/svg-400@0.48.0." }
                     }
                 CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Icon usage", code: ICON_USAGE }
+            }
+            section { class: "wrap roles-section fab-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "05 — FLOATING ACTION BUTTON" }
+                        h2 { "Floating action button" }
+                        p { class: "section-description", "Four sizes, seven colour roles, lowered elevation, and extended labels. Elevation rises on hover and returns to rest while pressed." }
+                    }
+                    span { class: "token-note", "M3 · MATERIAL WEB TOKENS" }
+                }
+                div { class: "fab-grid",
+                    article { class: "demo-card fab-specimen",
+                        div { class: "card-topline", span { "SIZES" } span { class: "component-index", "A" } }
+                        div { class: "fab-row",
+                            div { class: "button-example", Fab { icon: icons::ADD, size: FabSize::Small, aria_label: Some("Small".to_string()) } span { "S · 40" } }
+                            div { class: "button-example", Fab { icon: icons::ADD, size: FabSize::Standard, aria_label: Some("Standard".to_string()) } span { "STANDARD · 56" } }
+                            div { class: "button-example", Fab { icon: icons::ADD, size: FabSize::Medium, aria_label: Some("Medium".to_string()) } span { "M · 80" } }
+                            div { class: "button-example", Fab { icon: icons::ADD, size: FabSize::Large, aria_label: Some("Large".to_string()) } span { "L · 96" } }
+                        }
+                    }
+                    article { class: "demo-card fab-specimen",
+                        div { class: "card-topline", span { "COLOUR ROLES" } span { class: "component-index", "B" } }
+                        div { class: "fab-row fab-row-wrap",
+                            div { class: "button-example", Fab { icon: icons::ADD, color: FabColor::PrimaryContainer, aria_label: Some("Primary container".to_string()) } span { "PRIMARY C." } }
+                            div { class: "button-example", Fab { icon: icons::ADD, color: FabColor::Primary, aria_label: Some("Primary".to_string()) } span { "PRIMARY" } }
+                            div { class: "button-example", Fab { icon: icons::ADD, color: FabColor::SecondaryContainer, aria_label: Some("Secondary container".to_string()) } span { "SECOND. C." } }
+                            div { class: "button-example", Fab { icon: icons::ADD, color: FabColor::Secondary, aria_label: Some("Secondary".to_string()) } span { "SECONDARY" } }
+                            div { class: "button-example", Fab { icon: icons::ADD, color: FabColor::TertiaryContainer, aria_label: Some("Tertiary container".to_string()) } span { "TERT. C." } }
+                            div { class: "button-example", Fab { icon: icons::ADD, color: FabColor::Tertiary, aria_label: Some("Tertiary".to_string()) } span { "TERTIARY" } }
+                            div { class: "button-example", Fab { icon: icons::ADD, color: FabColor::Surface, aria_label: Some("Surface".to_string()) } span { "SURFACE" } }
+                        }
+                    }
+                    article { class: "demo-card fab-specimen",
+                        div { class: "card-topline", span { "EXTENDED · LOWERED · DISABLED" } span { class: "component-index", "C" } }
+                        div { class: "fab-row",
+                            Fab { icon: icons::ADD, label: Some("Compose".to_string()), aria_label: Some("Compose".to_string()) }
+                            Fab { icon: icons::FAVORITE, lowered: true, aria_label: Some("Favourite, lowered".to_string()) }
+                            Fab { icon: icons::ADD, disabled: true, aria_label: Some("Disabled".to_string()) }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "FAB usage", code: FAB_USAGE }
+                }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
         }
