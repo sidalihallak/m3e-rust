@@ -1,0 +1,37 @@
+{
+  "captured": "2026-10-09",
+  "flat": {
+    "ratio": 0.4,
+    "now": "0.40",
+    "stopDot": true,
+    "height": 4
+  },
+  "flatAfterAdvance": {
+    "ratio": 0.6,
+    "now": "0.60"
+  },
+  "waveMoves": {
+    "first": "calc(0% - 28.0011px)",
+    "later": "calc(0% - 1.77835px)",
+    "changed": true
+  },
+  "waveHeight": 4,
+  "thickHeight": 8,
+  "indeterminateBar": {
+    "first": "373px",
+    "later": "-687.062px",
+    "changed": true
+  },
+  "circularDeterminate": {
+    "now": "0.60",
+    "offset": 45.24,
+    "expectedOffset": 45.24
+  },
+  "spin": {
+    "changed": true,
+    "first": "matrix(-0.826252, -0.5633, 0.5633, -0.826252, 0, 0)",
+    "later": "matrix(0.433811, -0.901004, 0.901004, 0.433811, 0, 0)"
+  },
+  "thickCircularSize": 52,
+  "pageErrors": []
+}

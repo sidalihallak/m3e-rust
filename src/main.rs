@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, Fab, FabColor, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -134,6 +134,19 @@ fn DietFilter() -> Element {
     }
 }"#;
 
+const PROGRESS_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{LinearProgress, CircularProgress};
+
+#[component]
+fn UploadProgress() -> Element {
+    let mut fraction = use_signal(|| 0.0_f64);
+    rsx! {
+        LinearProgress { value: Some(fraction()), wavy: true, aria_label: Some("Upload".to_string()) }
+        CircularProgress { value: None, aria_label: Some("Saving".to_string()) }
+        button { onclick: move |_| fraction.set((fraction() + 0.1).min(1.0)), "Advance" }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -155,6 +168,7 @@ fn App() -> Element {
     let mut filter_a = use_signal(|| false);
     let mut filter_b = use_signal(|| true);
     let mut input_shown = use_signal(|| true);
+    let mut progress = use_signal(|| 0.4_f64);
     let mut menu_pick = use_signal(|| String::from("none"));
     let theme = theme::ThemePreview::from_seed(seed());
     let scheme = if dark() {
@@ -175,6 +189,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/fab-menu.css") }
         document::Stylesheet { href: asset!("/assets/icon-button.css") }
         document::Stylesheet { href: asset!("/assets/chip.css") }
+        document::Stylesheet { href: asset!("/assets/progress.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -535,6 +550,40 @@ fn App() -> Element {
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Chip usage", code: CHIP_USAGE }
+                }
+            }
+            section { class: "wrap roles-section progress-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "08 — PROGRESS" }
+                        h2 { "Progress indicators" }
+                        p { class: "section-description", "Flat and wavy linear tracks, thick tracks, determinate and indeterminate. The circular indicator is flat for now; wavy circular is not implemented." }
+                    }
+                    span { class: "token-note", "M3 EXPRESSIVE · MATERIAL WEB TOKENS" }
+                }
+                div { class: "progress-grid",
+                    article { class: "demo-card progress-specimen",
+                        div { class: "card-topline", span { "LINEAR · DETERMINATE" } span { class: "component-index", "A" } }
+                        div { class: "progress-stack",
+                            LinearProgress { value: Some(progress()), aria_label: Some("Flat progress".to_string()) }
+                            LinearProgress { value: Some(progress()), wavy: true, aria_label: Some("Wavy progress".to_string()) }
+                            LinearProgress { value: Some(progress()), wavy: true, thick: true, aria_label: Some("Thick wavy progress".to_string()) }
+                            button { class: "copy-code", onclick: move |_| progress.set(if progress() >= 1.0 { 0.0 } else { (progress() + 0.2).min(1.0) }), "Advance · {(progress() * 100.0).round()}%" }
+                        }
+                    }
+                    article { class: "demo-card progress-specimen",
+                        div { class: "card-topline", span { "INDETERMINATE · CIRCULAR" } span { class: "component-index", "B" } }
+                        div { class: "progress-stack",
+                            LinearProgress { aria_label: Some("Flat indeterminate".to_string()) }
+                            LinearProgress { wavy: true, aria_label: Some("Wavy indeterminate".to_string()) }
+                        }
+                        div { class: "progress-circles",
+                            CircularProgress { value: Some(progress()), aria_label: Some("Circular determinate".to_string()) }
+                            CircularProgress { aria_label: Some("Circular indeterminate".to_string()) }
+                            CircularProgress { value: Some(progress()), thick: true, aria_label: Some("Circular thick".to_string()) }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Progress usage", code: PROGRESS_USAGE }
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }

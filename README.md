@@ -61,6 +61,8 @@ The icon button is verified in [`docs/icon-button-verification.md`](docs/icon-bu
 
 The chip is verified in [`docs/chip-verification.md`](docs/chip-verification.md).
 
+Progress indicators are verified in [`docs/progress-verification.md`](docs/progress-verification.md).
+
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
 
