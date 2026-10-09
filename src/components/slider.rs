@@ -49,7 +49,6 @@ pub fn Slider(
                     }
                 },
             }
-            span { class: "m3-slider__state", aria_hidden: "true" }
             span { class: "m3-slider__handle", aria_hidden: "true" }
         }
     }

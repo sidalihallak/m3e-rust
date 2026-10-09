@@ -13,7 +13,6 @@
   --p: 0;
   --handle-x: calc(2px + (100% - 4px) * var(--p));
   --handle-w: 4px;
-  --state-opacity: 0;
   --slider-spring: linear(0, .0206, .0754, .1544, .2492, .3524, .458, .5613, .6588, .7479, .8269, .895, .952, .9981, 1.0338, 1.0603, 1.0783, 1.0893, 1.0942, 1.0943, 1.0906, 1.0842, 1.0759, 1.0665, 1.0565, 1);
   position: relative;
   height: 44px;
@@ -106,32 +105,25 @@
   transition: width 360ms var(--slider-spring);
 }
 
-/* State layer: 40dp circle centred on the handle. */
-.m3-slider__state {
-  position: absolute;
-  top: 50%;
-  left: var(--handle-x);
-  width: 40px;
-  height: 40px;
-  translate: -50% -50%;
-  border-radius: 50%;
-  background: var(--md-sys-color-primary);
-  opacity: var(--state-opacity);
-  pointer-events: none;
-  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+/* Hover and pressed show no highlight on the handle. Focus keeps an outline on the
+   handle for keyboard users. Pressed narrows the handle to 2dp. */
+.m3-slider:not(.m3-slider--disabled):has(.m3-slider__input:active) { --handle-w: 2px; }
+.m3-slider__input:focus-visible ~ .m3-slider__handle {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 2px;
 }
 
-/* Hover 0.08; focus and pressed 0.10. Pressed narrows the handle to 2dp. */
-.m3-slider:not(.m3-slider--disabled):hover { --state-opacity: .08; }
-.m3-slider:not(.m3-slider--disabled):has(.m3-slider__input:focus-visible) { --state-opacity: .10; }
-.m3-slider:not(.m3-slider--disabled):has(.m3-slider__input:active) { --state-opacity: .10; --handle-w: 2px; }
-.m3-slider__input:focus-visible ~ .m3-slider__state {
-  outline: 3px solid var(--md-sys-color-secondary);
-  outline-offset: 0;
+/* While the pointer is down, the track and handle follow the pointer with no
+   transition. A spring here would trail the value during a drag. */
+.m3-slider:has(.m3-slider__input:active) .m3-slider__active,
+.m3-slider:has(.m3-slider__input:active) .m3-slider__inactive {
+  transition: none;
+}
+.m3-slider:has(.m3-slider__input:active) .m3-slider__handle {
+  transition: width 360ms var(--slider-spring);
 }
 
 /* Disabled: 38% handle and active track, 12% inactive track. */
-.m3-slider--disabled { --state-opacity: 0; }
 .m3-slider--disabled .m3-slider__handle { background: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
 .m3-slider--disabled .m3-slider__active { background: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
 .m3-slider--disabled .m3-slider__inactive { background: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent); }
@@ -139,5 +131,5 @@
 .m3-slider--disabled .m3-slider__input { cursor: not-allowed; }
 
 @media (prefers-reduced-motion: reduce) {
-  .m3-slider__active, .m3-slider__inactive, .m3-slider__handle, .m3-slider__state { transition-duration: .01ms !important; }
+  .m3-slider__active, .m3-slider__inactive, .m3-slider__handle { transition-duration: .01ms !important; }
 }
