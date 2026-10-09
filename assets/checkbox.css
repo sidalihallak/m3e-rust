@@ -87,16 +87,16 @@
 /* Hover, focus and pressed. Hover and focus use state-layer opacity 0.08 and 0.10. */
 .m3-checkbox:not(:disabled):not(.m3-checkbox--checked):hover {
   --checkbox-outline: var(--md-sys-color-on-surface);
-  --checkbox-state-opacity: .08;
 }
 .m3-checkbox:not(:disabled):hover { --checkbox-state-opacity: .08; }
 .m3-checkbox:not(:disabled):focus-visible { --checkbox-state-opacity: .10; }
-.m3-checkbox--pressed:not(:disabled) { --checkbox-state-opacity: .10; }
-.m3-checkbox--pressed:not(:disabled):not(.m3-checkbox--checked) {
+/* Class-qualified so it outranks the :hover rule above (0,3,0). */
+.m3-checkbox.m3-checkbox--pressed:not(:disabled) { --checkbox-state-opacity: .10; }
+.m3-checkbox.m3-checkbox--pressed:not(:disabled):not(.m3-checkbox--checked) {
   --checkbox-outline: var(--md-sys-color-on-surface);
   --checkbox-state: var(--md-sys-color-primary);
 }
-.m3-checkbox--pressed:not(:disabled).m3-checkbox--checked {
+.m3-checkbox.m3-checkbox--pressed:not(:disabled).m3-checkbox--checked {
   --checkbox-state: var(--md-sys-color-on-surface);
 }
 

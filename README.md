@@ -45,6 +45,11 @@ cargo install dioxus-cli
 dx serve
 ```
 
+Switch and checkbox interaction and motion checks are recorded in
+[`docs/switch-verification.md`](docs/switch-verification.md) and
+[`docs/checkbox-verification.md`](docs/checkbox-verification.md), with raw
+samples in [`docs/control-motion-samples.json`](docs/control-motion-samples.json).
+
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
 

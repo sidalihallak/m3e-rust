@@ -121,10 +121,11 @@
 /* Hover, focus and pressed share the handle colour and state layer tokens. */
 .m3-switch:not(:disabled):hover { --switch-state-opacity: .08; }
 .m3-switch:not(:disabled):focus-visible { --switch-state-opacity: .10; }
-.m3-switch--pressed:not(:disabled) { --switch-state-opacity: .10; }
+/* Class-qualified so it outranks the :hover rule above (0,3,0). */
+.m3-switch.m3-switch--pressed:not(:disabled) { --switch-state-opacity: .10; }
 .m3-switch:not(:disabled):hover .m3-switch__handle,
 .m3-switch:not(:disabled):focus-visible .m3-switch__handle,
-.m3-switch--pressed:not(:disabled) .m3-switch__handle {
+.m3-switch.m3-switch--pressed:not(:disabled) .m3-switch__handle {
   background: var(--switch-handle-active);
 }
 
