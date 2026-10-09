@@ -1,0 +1,97 @@
+{
+  "A_rest": {
+    "radius": "12px",
+    "bg": "rgb(230, 224, 233)",
+    "border": "1px rgba(0, 0, 0, 0)",
+    "shadow": "none",
+    "opacity": "1",
+    "stateOpacity": null,
+    "outline": "none 0px"
+  },
+  "B_rest": {
+    "radius": "12px",
+    "bg": "rgb(248, 242, 250)",
+    "border": "1px rgba(0, 0, 0, 0)",
+    "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+    "opacity": "1",
+    "stateOpacity": "0",
+    "outline": "none 0px"
+  },
+  "C_rest": {
+    "radius": "12px",
+    "bg": "rgb(253, 247, 255)",
+    "border": "1px rgb(202, 196, 207)",
+    "shadow": "none",
+    "opacity": "1",
+    "stateOpacity": "0",
+    "outline": "none 0px"
+  },
+  "B_bbox": {
+    "x": 671,
+    "y": 408.5,
+    "width": 504,
+    "height": 82
+  },
+  "B_hover": {
+    "radius": "12px",
+    "bg": "rgb(248, 242, 250)",
+    "border": "1px rgba(0, 0, 0, 0)",
+    "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+    "opacity": "1",
+    "stateOpacity": "0.08",
+    "outline": "none 0px"
+  },
+  "B_pressed": {
+    "radius": "12px",
+    "bg": "rgb(248, 242, 250)",
+    "border": "1px rgba(0, 0, 0, 0)",
+    "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+    "opacity": "1",
+    "stateOpacity": "0.1",
+    "outline": "none 0px"
+  },
+  "B_afterRelease": {
+    "radius": "12px",
+    "bg": "rgb(248, 242, 250)",
+    "border": "1px rgba(0, 0, 0, 0)",
+    "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+    "opacity": "1",
+    "stateOpacity": "0.08",
+    "outline": "none 0px"
+  },
+  "B_tapsAfterClick": "Tapped 1 times. Hover raises it to level 2.",
+  "A_hoverNonInteractive": {
+    "radius": "12px",
+    "bg": "rgb(230, 224, 233)",
+    "border": "1px rgba(0, 0, 0, 0)",
+    "shadow": "none",
+    "opacity": "1",
+    "stateOpacity": null,
+    "outline": "none 0px"
+  },
+  "C_hover": {
+    "radius": "12px",
+    "bg": "rgb(253, 247, 255)",
+    "border": "1px rgb(202, 196, 207)",
+    "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+    "opacity": "1",
+    "stateOpacity": "0.08",
+    "outline": "none 0px"
+  },
+  "C_focusedOutline": "solid 3px",
+  "C_tapsAfterEnter": "Tapped 2 times. Hover raises it to level 2.",
+  "C_tapsAfterSpace": "Tapped 3 times. Hover raises it to level 2.",
+  "C_focusedInDocument": "Outlined card1dp out",
+  "D_disabled": {
+    "radius": "12px",
+    "bg": "rgb(230, 224, 233)",
+    "border": "1px rgba(0, 0, 0, 0)",
+    "shadow": "none",
+    "opacity": "0.38",
+    "stateOpacity": "0",
+    "outline": "none 0px"
+  },
+  "D_disabledTapsUnchanged": true,
+  "D_disabledIsDisabled": true,
+  "pageErrors": []
+}

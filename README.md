@@ -73,6 +73,8 @@ Tabs are verified in [`docs/tabs-verification.md`](docs/tabs-verification.md).
 
 Notification badges are verified in [`docs/badge-verification.md`](docs/badge-verification.md).
 
+Cards are verified in [`docs/card-verification.md`](docs/card-verification.md).
+
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
 

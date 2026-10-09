@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, BadgeAnchor, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -279,6 +279,24 @@ fn Inbox(unread: u32) -> Element {
     }
 }"#;
 
+const CARD_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{Card, CardVariant};
+
+#[component]
+fn TripCard() -> Element {
+    let mut opened = use_signal(|| 0_u32);
+    rsx! {
+        // Non-interactive: any content.
+        Card { variant: CardVariant::Outlined,
+            p { "Paris, 12 nights" }
+        }
+        // Interactive: phrasing content, and a click handler.
+        Card { variant: CardVariant::Elevated, interactive: true, onclick: move |_| opened += 1,
+            span { "Opened {opened()} times" }
+        }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -311,6 +329,7 @@ fn App() -> Element {
     let mut trip = use_signal(|| 0_usize);
     let mut detail = use_signal(|| 1_usize);
     let mut spec = use_signal(|| 0_usize);
+    let mut card_taps = use_signal(|| 0_u32);
     let mut views = use_signal(|| [true, false, true]);
     let mut menu_pick = use_signal(|| String::from("none"));
     let theme = theme::ThemePreview::from_seed(seed());
@@ -339,6 +358,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/segmented-button.css") }
         document::Stylesheet { href: asset!("/assets/tabs.css") }
         document::Stylesheet { href: asset!("/assets/badge.css") }
+        document::Stylesheet { href: asset!("/assets/card.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -1015,6 +1035,55 @@ fn App() -> Element {
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Badge usage", code: BADGE_USAGE }
+                }
+            }
+            section { class: "wrap roles-section card-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "14 — CARD" }
+                        h2 { "Cards" }
+                        p { class: "section-description", "Filled, elevated and outlined cards with 12dp corners. Interactive cards are native buttons: they respond to hover, press and keyboard focus, and disabled cards show at 38%." }
+                    }
+                    span { class: "token-note", "MATERIAL WEB TOKENS" }
+                }
+                div { class: "card-grid",
+                    article { class: "demo-card card-specimen",
+                        div { class: "card-topline", span { "FILLED" } span { class: "component-index", "A" } }
+                        div { class: "card-stack",
+                            Card { variant: CardVariant::Filled,
+                                p { class: "m3-card__title", "Filled card" }
+                                p { class: "m3-card__text", "surface-container-highest, no elevation at rest." }
+                            }
+                        }
+                    }
+                    article { class: "demo-card card-specimen",
+                        div { class: "card-topline", span { "ELEVATED · INTERACTIVE" } span { class: "component-index", "B" } }
+                        div { class: "card-stack",
+                            Card { variant: CardVariant::Elevated, interactive: true, onclick: move |_| card_taps += 1,
+                                span { class: "m3-card__title", "Elevated card" }
+                                span { class: "m3-card__text", "Tapped {card_taps()} times. Hover raises it to level 2." }
+                            }
+                        }
+                    }
+                    article { class: "demo-card card-specimen",
+                        div { class: "card-topline", span { "OUTLINED · INTERACTIVE" } span { class: "component-index", "C" } }
+                        div { class: "card-stack",
+                            Card { variant: CardVariant::Outlined, interactive: true, onclick: move |_| card_taps += 1,
+                                span { class: "m3-card__title", "Outlined card" }
+                                span { class: "m3-card__text", "1dp outline-variant. Press to change the count." }
+                            }
+                        }
+                    }
+                    article { class: "demo-card card-specimen",
+                        div { class: "card-topline", span { "DISABLED" } span { class: "component-index", "D" } }
+                        div { class: "card-stack",
+                            Card { variant: CardVariant::Filled, interactive: true, disabled: true,
+                                span { class: "m3-card__title", "Disabled card" }
+                                span { class: "m3-card__text", "38% opacity; not focusable." }
+                            }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Card usage", code: CARD_USAGE }
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
