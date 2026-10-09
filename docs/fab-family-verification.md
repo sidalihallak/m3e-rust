@@ -51,8 +51,31 @@ shows a resting state, not a mid-animation capture.
 
 - Branded icon colour: the token set defines no icon colour for the branded
   container. The kit uses primary. Override `--fab-icon` for a brand colour.
-- Outside-click dismissal is not implemented. Escape and item selection close the menu.
 - The trigger swaps its icon instantly. Upstream cross-fades the icon.
 - Medium and large toolbar elevations were measured at rest and on hover only.
 - Android touch and reduced motion have not been tested.
 - The official Material pages were not read.
+
+## Update: press ripple and outside-click dismissal
+
+Both were added after the first round, and both were checked in the browser on the fresh build.
+
+| Check | Result |
+| --- | --- |
+| FAB pointer press | Ripple starts at the pointer, grows to full size (scale about 14.9 for the 11px start), opacity 0.10 while held, fades to 0 after release. Raw: [`fab-ripple-samples.json`](fab-ripple-samples.json) |
+| FAB Space press | Ripple starts at the centre, opacity 0.10 while held |
+| Disabled FAB press | No ripple |
+| Menu: press on the top bar while open | Closes |
+| Menu: press on the page body while open | Closes |
+| Menu: trigger press | Opens, then closes on the next press |
+| Menu: item press | Reports the item and closes |
+| Page errors | 0 |
+
+Raw outside-click results: [`fab-menu-outside-samples.json`](fab-menu-outside-samples.json).
+
+The FAB menu listens for pointer presses at document level while it is mounted.
+The listener is removed when the menu unmounts.
+
+Not yet measured: the expressive shape morph. The upstream reference does not
+morph the FAB corner on press. I have not added one, because I could not confirm
+it from the official guidelines.
