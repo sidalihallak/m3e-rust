@@ -65,6 +65,8 @@ Progress indicators are verified in [`docs/progress-verification.md`](docs/progr
 
 Radio buttons are verified in [`docs/radio-verification.md`](docs/radio-verification.md).
 
+The slider is verified in [`docs/slider-verification.md`](docs/slider-verification.md).
+
 Button motion measurements and reference comparisons are recorded in
 [`docs/button-motion-verification.md`](docs/button-motion-verification.md).
 

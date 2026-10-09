@@ -1,0 +1,38 @@
+{
+  "start": {
+    "p": 0.4,
+    "handleCentre": 307,
+    "expected": 307,
+    "handleW": 4,
+    "handleH": 44,
+    "activeEnd": 299,
+    "activeGapToHandle": 8,
+    "value": "40"
+  },
+  "pressedHandleW": 2,
+  "draggingValue": "70.159375",
+  "afterDrag": {
+    "p": 0.70159375,
+    "handleCentre": 457.8,
+    "expected": 457.8,
+    "handleW": 4,
+    "handleH": 44,
+    "activeEnd": 449.8,
+    "activeGapToHandle": 8,
+    "value": "70.159375"
+  },
+  "releasedHandleW": 4,
+  "afterEnd": "100",
+  "afterHome": "0",
+  "afterTwoRight": "2",
+  "focusState": "0.1",
+  "maxStopDisplay": "none",
+  "maxHandleCentre": {
+    "handleRightInsideTrack": 0
+  },
+  "disabled": [
+    "30",
+    "30"
+  ],
+  "pageErrors": []
+}

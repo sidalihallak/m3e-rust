@@ -164,3 +164,10 @@ button { cursor: pointer; }
 .radio-row { display: flex; align-items: center; gap: 8px; }
 .radio-grid .code-card { grid-column: 1 / -1; }
 @media (max-width: 760px) { .radio-grid { grid-template-columns: 1fr; } }
+.slider-section { min-width: 0; }
+.slider-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.slider-specimen { min-width: 0; }
+.slider-stack { display: flex; flex-direction: column; gap: 18px; padding: 16px 8px 8px; }
+.slider-row { display: flex; flex-direction: column; gap: 6px; }
+.slider-grid .code-card { grid-column: 1 / -1; }
+@media (max-width: 760px) { .slider-grid { grid-template-columns: 1fr; } }

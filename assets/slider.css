@@ -1,0 +1,143 @@
+/*
+ * M3 expressive slider. Copy with src/components/slider.rs.
+ * Sources: Material Web slider tokens (track 16dp, handle 4×44dp, pressed handle
+ * 2dp wide, stop indicator 4dp with 4dp trailing space, state layer 40dp, colours,
+ * disabled 0.38 handle and active track, 0.12 inactive track); upstream slider.tsx
+ * for the 8dp gap (6dp plus half the handle) and the handle width spring.
+ *
+ * The handle centre runs from 2dp to (width - 2dp), so the handle stays inside
+ * the track at both ends. The native thumb is the same size as the drawn handle,
+ * so pointer and keyboard positions match the drawing.
+ */
+.m3-slider {
+  --p: 0;
+  --handle-x: calc(2px + (100% - 4px) * var(--p));
+  --handle-w: 4px;
+  --state-opacity: 0;
+  --slider-spring: linear(0, .0206, .0754, .1544, .2492, .3524, .458, .5613, .6588, .7479, .8269, .895, .952, .9981, 1.0338, 1.0603, 1.0783, 1.0893, 1.0942, 1.0943, 1.0906, 1.0842, 1.0759, 1.0665, 1.0565, 1);
+  position: relative;
+  height: 44px;
+  width: 100%;
+  min-width: 120px;
+}
+
+.m3-slider__track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 16px;
+  translate: 0 -50%;
+  overflow: hidden;
+  border-radius: 8px;
+  pointer-events: none;
+}
+.m3-slider__active,
+.m3-slider__inactive {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: left 360ms var(--slider-spring), width 360ms var(--slider-spring);
+}
+.m3-slider__active {
+  left: 0;
+  width: max(0px, calc(var(--handle-x) - 8px));
+  background: var(--md-sys-color-primary);
+  border-radius: 0 2px 2px 0;
+}
+.m3-slider__inactive {
+  right: 0;
+  left: calc(var(--handle-x) + 8px);
+  background: var(--md-sys-color-secondary-container);
+  border-radius: 2px 0 0 2px;
+}
+/* Stop indicator: 4dp, 4dp from the end of the inactive track; hidden at the maximum. */
+.m3-slider__stop {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  width: 4px;
+  height: 4px;
+  translate: 0 -50%;
+  border-radius: 50%;
+  background: var(--md-sys-color-on-secondary-container);
+}
+.m3-slider--max .m3-slider__stop { display: none; }
+
+/* Native input over the whole control. Its thumb matches the drawn handle. */
+.m3-slider__input {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+}
+.m3-slider__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 4px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+}
+.m3-slider__input::-moz-range-thumb {
+  width: 4px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+}
+.m3-slider__input:focus-visible { outline: none; }
+
+.m3-slider__handle {
+  position: absolute;
+  top: 0;
+  left: var(--handle-x);
+  width: var(--handle-w);
+  height: 44px;
+  translate: -50% 0;
+  border-radius: 999px;
+  background: var(--md-sys-color-primary);
+  pointer-events: none;
+  transition: width 360ms var(--slider-spring);
+}
+
+/* State layer: 40dp circle centred on the handle. */
+.m3-slider__state {
+  position: absolute;
+  top: 50%;
+  left: var(--handle-x);
+  width: 40px;
+  height: 40px;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: var(--md-sys-color-primary);
+  opacity: var(--state-opacity);
+  pointer-events: none;
+  transition: opacity 200ms cubic-bezier(.2, 0, 0, 1);
+}
+
+/* Hover 0.08; focus and pressed 0.10. Pressed narrows the handle to 2dp. */
+.m3-slider:not(.m3-slider--disabled):hover { --state-opacity: .08; }
+.m3-slider:not(.m3-slider--disabled):has(.m3-slider__input:focus-visible) { --state-opacity: .10; }
+.m3-slider:not(.m3-slider--disabled):has(.m3-slider__input:active) { --state-opacity: .10; --handle-w: 2px; }
+.m3-slider__input:focus-visible ~ .m3-slider__state {
+  outline: 3px solid var(--md-sys-color-secondary);
+  outline-offset: 0;
+}
+
+/* Disabled: 38% handle and active track, 12% inactive track. */
+.m3-slider--disabled { --state-opacity: 0; }
+.m3-slider--disabled .m3-slider__handle { background: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
+.m3-slider--disabled .m3-slider__active { background: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
+.m3-slider--disabled .m3-slider__inactive { background: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent); }
+.m3-slider--disabled .m3-slider__stop { background: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent); }
+.m3-slider--disabled .m3-slider__input { cursor: not-allowed; }
+
+@media (prefers-reduced-motion: reduce) {
+  .m3-slider__active, .m3-slider__inactive, .m3-slider__handle, .m3-slider__state { transition-duration: .01ms !important; }
+}

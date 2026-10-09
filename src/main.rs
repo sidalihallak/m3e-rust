@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
+use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, Slider, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, Switch};
 
 mod theme;
 
@@ -178,6 +178,23 @@ fn SizePicker() -> Element {
     }
 }"#;
 
+const SLIDER_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::Slider;
+
+#[component]
+fn VolumeControl() -> Element {
+    let mut volume = use_signal(|| 40.0_f64);
+    rsx! {
+        Slider {
+            min: 0.0,
+            max: 100.0,
+            value: volume(),
+            aria_label: Some("Volume".to_string()),
+            onchange: move |value| volume.set(value),
+        }
+    }
+}"#;
+
 fn main() {
     dioxus::launch(App);
 }
@@ -201,6 +218,8 @@ fn App() -> Element {
     let mut input_shown = use_signal(|| true);
     let mut progress = use_signal(|| 0.4_f64);
     let mut radio = use_signal(|| 1_usize);
+    let mut volume = use_signal(|| 40.0_f64);
+    let mut stepped = use_signal(|| 50.0_f64);
     let mut menu_pick = use_signal(|| String::from("none"));
     let theme = theme::ThemePreview::from_seed(seed());
     let scheme = if dark() {
@@ -224,6 +243,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/progress.css") }
         document::Stylesheet { href: asset!("/assets/loading-indicator.css") }
         document::Stylesheet { href: asset!("/assets/radio.css") }
+        document::Stylesheet { href: asset!("/assets/slider.css") }
 
         main { class: "app-shell min-h-screen", style: theme_style,
             header { class: "topbar",
@@ -682,6 +702,45 @@ fn App() -> Element {
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Radio usage", code: RADIO_USAGE }
+                }
+            }
+            section { class: "wrap roles-section slider-section",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "10 — SLIDER" }
+                        h2 { "Sliders" }
+                        p { class: "section-description", "Native range inputs, so arrow keys, Home, End and page keys work. The handle is 4×44dp, narrows to 2dp while pressed, and keeps an 8dp gap to the active and inactive tracks." }
+                    }
+                    span { class: "token-note", "M3 EXPRESSIVE · MATERIAL WEB TOKENS" }
+                }
+                div { class: "slider-grid",
+                    article { class: "demo-card slider-specimen",
+                        div { class: "card-topline", span { "CONTINUOUS · STEPPED" } span { class: "component-index", "A" } }
+                        div { class: "slider-stack",
+                            div { class: "slider-row",
+                                span { class: "control-label", "Volume · {volume().round()}" }
+                                Slider { min: 0.0, max: 100.0, value: volume(), aria_label: Some("Volume".to_string()), onchange: move |v: f64| volume.set(v) }
+                            }
+                            div { class: "slider-row",
+                                span { class: "control-label", "Stepped · {stepped().round()}" }
+                                Slider { min: 0.0, max: 100.0, step: 10.0, value: stepped(), aria_label: Some("Stepped".to_string()), onchange: move |v: f64| stepped.set(v) }
+                            }
+                        }
+                    }
+                    article { class: "demo-card slider-specimen",
+                        div { class: "card-topline", span { "MAXIMUM · DISABLED" } span { class: "component-index", "B" } }
+                        div { class: "slider-stack",
+                            div { class: "slider-row",
+                                span { class: "control-label", "At maximum" }
+                                Slider { min: 0.0, max: 100.0, value: 100.0, aria_label: Some("Maximum".to_string()) }
+                            }
+                            div { class: "slider-row",
+                                span { class: "control-label", "Disabled" }
+                                Slider { min: 0.0, max: 100.0, value: 30.0, disabled: true, aria_label: Some("Disabled".to_string()) }
+                            }
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Slider usage", code: SLIDER_USAGE }
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
