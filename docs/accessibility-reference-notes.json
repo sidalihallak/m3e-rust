@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "method": "Read rendered official overview, specs, guidelines and accessibility pages in browser",
+  "components": ["tabs", "sliders", "badges", "button-groups"],
+  "pages": ["overview", "specs", "guidelines", "accessibility"],
+  "url_pattern": "https://m3.material.io/components/{component}/{page}",
+  "observations": {
+    "tabs": "Named destinations, keyboard navigation, 48 CSS pixel targets; support panel relationships using WAI ARIA tab pattern",
+    "sliders": "Named slider handles, arrow and Home/End adjustment, distinguish range handles",
+    "badges": "Expose numeric information and notification context to assistive technology",
+    "button-groups": "2dp gaps, 48x48 targets, arrows navigate, Space/Enter activates; container is not a focus stop"
+  }
+}

@@ -2,6 +2,7 @@
 """Export an editable Dioxus component library, including all runtime dependencies."""
 from pathlib import Path
 import argparse
+import re
 import shutil
 
 parser = argparse.ArgumentParser(description=__doc__)
@@ -23,5 +24,8 @@ for filename in ['Cargo.toml', 'Cargo.lock']:
 for file in (source / 'assets').glob('*.css'):
     if file.name not in ['main.css', 'tailwind.css']:
         shutil.copy2(file, destination / 'assets' / file.name)
-(destination / 'README.md').write_text((source / 'docs/copy-components.md').read_text().replace('(component-fidelity-fixes.md)', '(https://github.com/sidalihallak/m3e-rust/blob/main/docs/component-fidelity-fixes.md)'))
+guide = (source / 'docs/copy-components.md').read_text()
+guide = re.sub(r'\(([\w-]+\.md)\)',
+               r'(https://github.com/sidalihallak/m3e-rust/blob/main/docs/\1)', guide)
+(destination / 'README.md').write_text(guide)
 print(f'Exported editable Rust sources and component CSS to {destination}')

@@ -1,0 +1,32 @@
+/* Basic and full-screen geometry from official M3 specs; native modal behavior. */
+.m3-dialog { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: transparent; overflow: hidden; color: var(--md-sys-color-on-surface); }
+.m3-dialog[open] { display: flex; align-items: center; justify-content: center; }
+.m3-dialog::backdrop { background: transparent; }
+.m3-dialog__scrim { position: absolute; inset: 0; background: color-mix(in srgb, var(--md-sys-color-scrim, #000) 32%, transparent); pointer-events: auto; }
+.m3-dialog__surface { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box; width: 448px; min-width: min(280px, calc(100vw - 48px)); max-width: min(560px, calc(100vw - 48px)); max-height: calc(100dvh - 48px); padding: 24px; border-radius: 28px; background: var(--md-sys-color-surface-container-high); color: var(--md-sys-color-on-surface-variant); box-shadow: 0 1px 3px rgb(0 0 0 / .3), 0 4px 8px 3px rgb(0 0 0 / .15); }
+.m3-dialog__header { flex: 0 0 auto; display: flex; flex-direction: column; gap: 16px; }
+.m3-dialog__title { margin: 0; color: var(--md-sys-color-on-surface); font: 400 24px/32px Inter, ui-sans-serif, system-ui, sans-serif; overflow-wrap: anywhere; }
+.m3-dialog__icon { --m3-icon-size: 24px; align-self: center; color: var(--md-sys-color-secondary); }
+.m3-dialog__header:has(.m3-dialog__icon) .m3-dialog__title { text-align: center; }
+/* Reserve paint space for the 8px floating label and 6px outer focus ring.
+   Negative margins preserve the visible 24px content inset and body spacing. */
+.m3-dialog__body { min-height: 0; flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; display: flex; flex-direction: column; gap: 12px; padding: 8px; margin: -8px; border-block: 1px solid transparent; font: 400 14px/20px Inter, ui-sans-serif, system-ui, sans-serif; }
+.m3-dialog__body[data-more-above=true] { border-block-start-color: var(--md-sys-color-outline-variant); }
+.m3-dialog__body[data-more-below=true] { border-block-end-color: var(--md-sys-color-outline-variant); }
+.m3-dialog__body:focus-visible { outline: 2px solid var(--md-sys-color-primary); outline-offset: -2px; }
+.m3-dialog__description { margin: 0; }
+.m3-dialog__body > * { flex-shrink: 0; }
+.m3-dialog__body > .m3-action { align-self: flex-start; margin-block: 4px; }
+.m3-dialog__body > p { margin: 0; }
+.m3-dialog__actions { flex: 0 0 auto; display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.m3-dialog-action { margin-block: 4px; }
+.m3-dialog__close { --ac-height: 48px; --ac-icon: 24px; width: 48px; height: 48px; }
+.m3-dialog__close--corner { position: absolute; inset-block-start: 4px; inset-inline-end: 4px; }
+.m3-dialog--basic:has(.m3-dialog__close--corner) .m3-dialog__title { padding-inline-end: 28px; }
+.m3-dialog--fullscreen .m3-dialog__scrim { display: none; }
+.m3-dialog--fullscreen .m3-dialog__surface { width: 100%; min-width: 0; max-width: none; height: 100dvh; max-height: none; padding: 0; border-radius: 0; gap: 0; box-shadow: none; }
+.m3-dialog--fullscreen .m3-dialog__header { height: 56px; flex-direction: row; align-items: center; gap: 8px; padding-inline: 24px; box-sizing: border-box; border-bottom: 1px solid var(--md-sys-color-outline-variant); }
+.m3-dialog--fullscreen .m3-dialog__title { flex: 1; font-size: 22px; line-height: 28px; }
+.m3-dialog--fullscreen .m3-dialog__body { padding: 16px 24px; margin: 0; }
+.m3-dialog--fullscreen .m3-dialog__actions { min-height: 56px; box-sizing: border-box; margin: 0; padding-inline: 24px; border-top: 1px solid var(--md-sys-color-outline-variant); }
+@media (max-width: 400px) { .m3-dialog__actions { align-items: flex-end; flex-direction: column-reverse; } .m3-dialog--fullscreen .m3-dialog__actions { flex-direction: row; } }

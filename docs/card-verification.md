@@ -1,5 +1,122 @@
 # Card — current fidelity update
 
+## Current desktop verification — 2026-10-10
+
+Browser access is restored. This section supersedes the blocked source-only audit
+and older 24px padding measurements below. Scope: `card.rs`, `card.css`, and the
+card gallery in `main.rs`/`main.css`; macOS Codex in-app browser, pointer/keyboard.
+
+Freshly read all four rendered official sections: [overview](https://m3.material.io/components/cards/overview),
+[specs](https://m3.material.io/components/cards/specs), [guidelines](https://m3.material.io/components/cards/guidelines),
+[accessibility](https://m3.material.io/components/cards/accessibility).
+The specs show 12dp corners, 16dp left/right content padding, start-aligned text,
+and an 8dp maximum gap between cards. Corrected CardBody/CardActions from 24px
+to **16px**, and the showcase's stacked-card gap from 18px to **8px**. Structured
+cards keep root padding 0; body slots own the inset. Media remains edge-to-edge.
+The pinned upstream/token references in the audit below remain the source contract.
+Upstream also offers 12/16/24px size choices; this kit defaults to the official 16px inset.
+
+| Check | Actual result |
+| --- | --- |
+| Variants | All seven examples: 12px corners; filled/elevated border 0; outlined border 1px outline-variant; semantic filled/highest, elevated/low, outlined/surface roles |
+| Slot/media geometry | CardBody 16px, root 0; media 360×202.5 (16:9), inset 0; headline inset 16px, action padding 16px and gap 8px |
+| Pointer ripple | 28 computed-style frames: opacity 0→.0314→.0636→.0874→.10, expanding wave; card stayed 451.5×100px. Pressed elevation 1, released hover elevation 2 |
+| Keyboard | Enter count 1→2, Space 2→3; outlined focus layer .10, secondary 3px outline/2px offset, on-surface border, resting elevation |
+| Repeated/exit input | Double click 3→5; drag released inside 5→6, released outside stayed 6 |
+| Disabled | Native disabled attributes present; outlined click did not increment or focus. Outlined border outline at .12, content .38, opaque surface; filled root .38 |
+| Passive actions | Native div container, no nested actionable elements in interactive buttons; Tab visits two elevated-card actions then filled-card Buy tickets, skipping disabled cards |
+| Reduced motion | Actual macOS preference enabled with prior approval, media query true; first visible ripple already final scale/opacity .10, activation retained; preference restored OFF |
+| Dark mode | Roles switch to highest rgb(54,52,58), low rgb(29,27,32), surface rgb(20,18,24); divider/outline-variant rgb(73,69,78); disabled treatments retained. Light mode restored |
+
+Shared ripple reference values remain 225ms minimum press, 450ms growth,
+105ms fade-in, 375ms fade-out; the actual frames show progressive feedback and
+stable dimensions, but do not establish exact timing parity. The kit's 200ms
+state/elevation transition still differs from upstream FastEffects spring.
+[Raw desktop frames](resumed-browser-verification.json),
+[variant screenshot](cards-verified-preview.png),
+[media/action screenshot](card-media-verified-preview.png).
+Final live build and exported-example checks are in [the composite index](composite-verification.md).
+
+Gaps: the native drag action was too short to establish extended held-pointer
+behavior; release outside is not a touch pointer-cancel test. Android stays paused.
+Audible screen readers, forced colors, text enlargement, custom-seed state contrast,
+selectable/dragged cards and the complete upstream CardHeader/size API remain open.
+No full platform/pixel parity claim is made. Text/image content and image alt text
+remain consumer responsibilities; do not nest buttons/links in an interactive card.
+
+Reproduce: after successful `./scripts/dev.sh`, reload Cards; inspect 12/16/8px
+geometry, Tab/Enter/Space, disabled outlined click, inside/outside release and
+passive action order. Sample computed styles during real pointer input. Toggle
+preview dark mode and restore it. OS preferences require user authorization.
+
+## Historical source-only audit and earlier runtime evidence
+
+## Card source audit and follow-up — 2026-10-10
+
+Scope: filled, elevated, outlined, passive/interactive, disabled, text/media,
+CardBody/CardActions and focus/press styles. Re-read pinned upstream
+[card.tsx](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/card.tsx)
+and [state-layer rules](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/styles/m3e.css),
+plus all three [official card token files](https://github.com/material-components/material-web/tree/47adb655bd7a88c4d62e8faac2873084eed555dc/tokens/versions/latest/sass)
+and `_md-sys-state.scss` at `47adb655bd7a88c4d62e8faac2873084eed555dc`
+(version 34.0.21). All eight official card/divider overview/specs/guideline/
+accessibility URLs were requested, but returned JavaScript-only shells. Earlier
+rendered readings below remain the guideline evidence; no fresh browser reading
+or runtime certification is claimed.
+
+| Contract from source/tokens | Audit result and correction |
+| --- | --- |
+| 12px corners and three semantic surface roles | Retained |
+| Filled/elevated have no outline; outlined has 1px outline-variant | Removed the 1px transparent border from all filled/elevated cards, rather than only media cards |
+| Slot content should not accumulate parent padding | CardBody now owns its 24px inset; root padding becomes 0 when that slot is present, fixing the previous 16+24=40px inset |
+| Hover elevation filled/outlined 1, elevated 2; press returns to rest | Retained; quick clicks now retain pressed elevation for the existing Ripple press lifecycle |
+| Hover belongs to devices that support hovering | Wrapped hover styling in the same hover-capability media query used upstream; touch behavior remains untested |
+| Keyboard focus layer .10 and resting elevation | Added missing focus layer/rest elevation; outlined focus border uses on-surface as its official token specifies |
+| Pressed feedback via ripple when a Ripple is present | Removed the additional static .10 pressed overlay, matching upstream's explicit exclusion of ripple hosts |
+| Outlined disabled border: outline at .12 | Corrected former whole-card .38 fade: border now .12, content independently .38, surface remains opaque |
+| Filled/elevated disabled container roles | Filled uses surface-variant; elevated uses surface, with existing .38 fade and resting elevation |
+| Direction-aware text | Changed left alignment to logical start |
+| Native activation and semantics | Native button, disabled attribute, Enter/Space and Ripple code retained; passive cards permit separate actions |
+| Interactive target minimum | Added a 48px minimum height for unusually short content; ordinary card heights remain content-driven |
+
+The filled gallery example now exercises CardBody without media, and an outlined
+disabled example displays the corrected border/content treatment. Internal action
+controls belong in passive cards; do not nest buttons/links inside an interactive
+Card button.
+
+### Reference choices and remaining differences
+
+- The kit's structured body/action layout uses 24px padding, headline-small 24/32
+  and a 16:9 media frame from the previously inspected Material composition.
+  Upstream also offers 12/16/24px card sizes and uses title-large 22/28. These are
+  layout/type choices, not universal mandatory values for every Material card;
+  upstream's complete CardHeader/Action/size API is not ported here.
+- The existing 200ms elevation/state transition is a kit choice; upstream uses
+  its FastEffects spring for state layers. This follow-up does not retune motion.
+- Drag/dragged states and selectable-card composition remain unimplemented.
+- Browser inspection is blocked by the existing URL security policy. Post-fix
+  geometry, hover/focus precedence, quick/held/repeated/cancelled input, disabled
+  rendering, media corners and reduced-motion behavior are **pending runtime
+  verification**. Earlier samples below predate these corrections. A screenshot
+  was requested; none is inferred from source declarations.
+- Android is paused; audible screen-reader checks, forced colors, text enlargement,
+  custom-seed state contrast and native packaging remain unverified.
+
+Reproduce after a successful preview build: reload Cards, compare root/slot insets
+with and without media, verify the disabled outlined border, use Tab/Enter/Space
+and pointer presses to sample state/elevation, check light/dark and RTL, and confirm
+that passive card actions remain separate focus stops. Record actual samples
+before marking this follow-up verified.
+
+### Build and copy checks
+
+Locked offline Wasm check passed in **3.89s**. Fresh `./scripts/dev.sh` build
+succeeded in **6.55s**; the subsequent hover media-query stylesheet hot reload
+does not change Rust behavior. The separately exported Card and updated Divider
+examples compile for Wasm in **0.88s**. `git diff --check` passes. The preview is
+left running. [Source-audit notes](card-divider-source-audit.json) retain reference
+hashes and distinguish expected values from runtime measurements.
+
 Date: 2026-10-09. Desktop Codex in-app browser. Scope: component Rust/CSS
 changes in this fix, not complete platform certification.
 

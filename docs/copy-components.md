@@ -1,5 +1,12 @@
 # Copy components into a Dioxus project
 
+Desktop copy/paste checked on 2026-10-10: nine composite/card/divider controls
+showed success, and native paste exactly matched the 509-character Divider usage.
+The updated export includes 16px card slot padding and the dialog focus/label
+paint gutter. API/source completeness is checked separately by compiling all
+27 exported examples; runtime styling in a separate consuming app remains open.
+See [current browser evidence](resumed-browser-verification.json).
+
 The gallery's **Copy Rust code** buttons copy real usage examples. Component
 implementations remain editable Rust and CSS files in this repository.
 
@@ -46,6 +53,11 @@ If copying only selected files, retain the corresponding module declarations.
 
 | Component Rust file | CSS | Additional Rust source |
 | --- | --- | --- |
+| `standard_button_group.rs` | `standard-button-group.css`, `action-control.css`, `composite-motion.css`, `ripple.css`, `icon.css` | `action_control.rs`, `button.rs` enums, `icon.rs`, `icons.rs`, `ripple.rs`, `motion.rs` |
+| `split_button.rs` | `split-button.css` and all menu/shared action CSS below | `menu.rs` + `menu.js`, `action_control.rs`, `button.rs` enums, `icon.rs`, `icons.rs`, `ripple.rs`, `motion.rs` |
+| `menu.rs` | `menu.css`, `action-control.css`, `composite-motion.css`, `ripple.css`, `icon.css` | **`menu.js` in the same directory**, `action_control.rs`, `button.rs` enums, `icon.rs`, `icons.rs`, `ripple.rs`, `motion.rs` |
+| `dialog.rs` | `dialog.css`, `action-control.css`, `composite-motion.css`, `ripple.css`, `icon.css` | **`dialog.js` in the same directory**, `compact.rs`, `action_control.rs`, `button.rs` enums, `icon.rs`, `icons.rs`, `ripple.rs`, `motion.rs` |
+| `button_group.rs` | `button-group.css`, `ripple.css`, `icon.css` | `button.rs` enums, `icon.rs`, `icons.rs`, `ripple.rs`, `motion.rs` |
 | `button.rs` | `button.css` | None; leading icons may need Icon |
 | `icon.rs` | `icon.css` | `icons.rs` for supplied generated glyphs |
 | `icon_button.rs`, `fab.rs` | matching CSS, `icon.css`, `ripple.css` | `icon.rs`, `icons.rs`, `ripple.rs`, `motion.rs` |
@@ -60,10 +72,32 @@ Keep the existing notices on generated Material Symbols and shape data.
 
 ## Verification scope
 
-The exported library and all 19 gallery usage examples were compiled for
-`wasm32-unknown-unknown` in a separate directory on 2026-10-09. This establishes
+The exported library and all 27 gallery usage examples were compiled for
+`wasm32-unknown-unknown` in a separate directory on 2026-10-10. This establishes
 that the source bundle includes its Rust dependencies and that the examples
 use the current API. Runtime styling and interaction checks were performed in
 the original live gallery. A consumer still needs to include its chosen CSS,
 provide semantic color roles, and supply its own media assets and application
 state. See [the fidelity fix report](component-fidelity-fixes.md).
+
+`TextField` fills its parent width. Constrain the containing layout for narrower
+fields; dialog content automatically receives the full available field width.
+
+Menus and dialogs include their JavaScript runtime through Rust `include_str!`;
+retain those files when making a smaller copy. The complete exporter includes
+them automatically. The shared action styles use finite shape radii, semantic
+roles and native button semantics. Their motion stylesheet supplies the actual
+spring curves used by the popup runtime. See [composite evidence](composite-verification.md).
+
+`StandardButtonGroup`, `SplitButton`, `DropdownMenu`, `ContextMenu`, `Dialog` and
+`AlertDialog` expose controlled state: update it in `onchange`/`onopenchange`.
+For a bare `Menu`, supply a stable existing `anchor_id`. Menu selection reports a
+path through `MenuEntry` indices; checkbox selection stays open. Your app owns
+radio exclusivity, validation and side effects. Use `DialogVariant::Adaptive` for
+compact full-screen/desktop basic presentation. Intercept its `onopenchange`
+before discarding an unsaved draft. Include additional component CSS (for example
+TextField) when using those controls in dialog content.
+
+For text-only tab panels, include `tabindex: "0"` and a visible focus style.
+Give range sliders an `aria_label`. Badge `aria_label` supplies full announcement
+context; copy `badge.css` too so its announcement text is visually hidden.

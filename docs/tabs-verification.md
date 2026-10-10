@@ -1,5 +1,13 @@
 # Primary tab indicator correction — 2026-10-09
 
+## Accessibility follow-up — 2026-10-10
+
+See [the accessibility audit](accessibility-verification.md) and
+[raw samples](accessibility-samples.json) for tested behavior and remaining gaps.
+RTL arrows now follow rendered direction; text-only gallery panels and the copy
+example are keyboard-focusable. The indicator geometry is unchanged.
+
+
 ## Scope and source reading
 
 Corrected the primary indicator in `assets/tabs.css` and its geometry observer

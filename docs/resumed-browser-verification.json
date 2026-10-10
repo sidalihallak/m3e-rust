@@ -1,0 +1,2513 @@
+{
+  "date": "2026-10-10",
+  "platform": "macOS desktop Codex in-app browser",
+  "build": "Final ./scripts/dev.sh build successful 13.68s; browser reloaded. Wasm check 0.81s.",
+  "shellCount": 1,
+  "dividers": [
+    {
+      "color": "rgb(202, 196, 207)",
+      "height": 1,
+      "labelCenters": [
+        26408.5,
+        26455.5,
+        26502.5
+      ],
+      "lineCenter": 26432,
+      "marginEnd": "0px",
+      "marginStart": "0px",
+      "orientation": "horizontal",
+      "role": "separator",
+      "row": "divider-stack",
+      "width": 451.5
+    },
+    {
+      "color": "rgb(202, 196, 207)",
+      "height": 1,
+      "labelCenters": [
+        26408.5,
+        26455.5,
+        26502.5
+      ],
+      "lineCenter": 26479,
+      "marginEnd": "0px",
+      "marginStart": "16px",
+      "orientation": "horizontal",
+      "role": "separator",
+      "row": "divider-stack",
+      "width": 435.5
+    },
+    {
+      "color": "rgb(202, 196, 207)",
+      "height": 1,
+      "labelCenters": [
+        26408.5,
+        26455.5,
+        26502.5
+      ],
+      "lineCenter": 26526,
+      "marginEnd": "16px",
+      "marginStart": "16px",
+      "orientation": "horizontal",
+      "role": "separator",
+      "row": "divider-stack",
+      "width": 419.5
+    },
+    {
+      "color": "rgb(202, 196, 207)",
+      "height": 24,
+      "labelCenters": [
+        26407.5,
+        26407.5
+      ],
+      "lineCenter": 26407.5,
+      "marginEnd": "0px",
+      "marginStart": "0px",
+      "orientation": "vertical",
+      "role": "separator",
+      "row": "divider-row",
+      "width": 1
+    },
+    {
+      "color": "rgb(202, 196, 207)",
+      "height": 1,
+      "labelCenters": [],
+      "lineCenter": 26609,
+      "marginEnd": "0px",
+      "marginStart": "16px",
+      "orientation": "horizontal",
+      "role": "separator",
+      "row": "divider-stack",
+      "width": 435.5
+    }
+  ],
+  "cards": [
+    {
+      "background": "rgb(230, 224, 233)",
+      "body": {
+        "leftInset": 0,
+        "padding": "16px"
+      },
+      "borderColor": "rgba(0, 0, 0, 0)",
+      "borderWidth": "0px",
+      "contentOpacity": null,
+      "disabled": false,
+      "height": 100,
+      "media": null,
+      "nestedActions": null,
+      "opacity": "1",
+      "padding": "0px",
+      "radius": "12px",
+      "shadow": "none",
+      "tag": "DIV",
+      "variant": "m3-card m3-card--filled ",
+      "width": 451.5
+    },
+    {
+      "background": "rgb(248, 242, 250)",
+      "body": null,
+      "borderColor": "rgba(0, 0, 0, 0)",
+      "borderWidth": "0px",
+      "contentOpacity": "1",
+      "disabled": false,
+      "height": 100,
+      "media": null,
+      "nestedActions": 0,
+      "opacity": "1",
+      "padding": "16px",
+      "radius": "12px",
+      "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+      "tag": "BUTTON",
+      "variant": "m3-card m3-card--elevated m3-card--interactive ",
+      "width": 451.5
+    },
+    {
+      "background": "rgb(253, 247, 255)",
+      "body": null,
+      "borderColor": "rgb(202, 196, 207)",
+      "borderWidth": "1px",
+      "contentOpacity": "1",
+      "disabled": false,
+      "height": 102,
+      "media": null,
+      "nestedActions": 0,
+      "opacity": "1",
+      "padding": "16px",
+      "radius": "12px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "variant": "m3-card m3-card--outlined m3-card--interactive ",
+      "width": 451.5
+    },
+    {
+      "background": "rgb(231, 224, 235)",
+      "body": null,
+      "borderColor": "rgba(0, 0, 0, 0)",
+      "borderWidth": "0px",
+      "contentOpacity": "1",
+      "disabled": true,
+      "height": 100,
+      "media": null,
+      "nestedActions": 0,
+      "opacity": "0.38",
+      "padding": "16px",
+      "radius": "12px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "variant": "m3-card m3-card--filled m3-card--interactive m3-card--disabled ",
+      "width": 451.5
+    },
+    {
+      "background": "rgb(253, 247, 255)",
+      "body": null,
+      "borderColor": "color(srgb 0.478431 0.458824 0.498039 / 0.12)",
+      "borderWidth": "1px",
+      "contentOpacity": "0.38",
+      "disabled": true,
+      "height": 102,
+      "media": null,
+      "nestedActions": 0,
+      "opacity": "1",
+      "padding": "16px",
+      "radius": "12px",
+      "shadow": "none",
+      "tag": "BUTTON",
+      "variant": "m3-card m3-card--outlined m3-card--interactive m3-card--disabled ",
+      "width": 451.5
+    },
+    {
+      "background": "rgb(248, 242, 250)",
+      "body": {
+        "leftInset": 0,
+        "padding": "16px 16px 0px"
+      },
+      "borderColor": "rgba(0, 0, 0, 0)",
+      "borderWidth": "0px",
+      "contentOpacity": null,
+      "disabled": false,
+      "height": 406.5,
+      "media": {
+        "corners": "12px",
+        "height": 202.5,
+        "left": 0,
+        "width": 360
+      },
+      "nestedActions": null,
+      "opacity": "1",
+      "padding": "0px",
+      "radius": "12px",
+      "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+      "tag": "DIV",
+      "variant": "m3-card m3-card--elevated ",
+      "width": 360
+    },
+    {
+      "background": "rgb(230, 224, 233)",
+      "body": {
+        "leftInset": 0,
+        "padding": "16px 16px 0px"
+      },
+      "borderColor": "rgba(0, 0, 0, 0)",
+      "borderWidth": "0px",
+      "contentOpacity": null,
+      "disabled": false,
+      "height": 350.5,
+      "media": {
+        "corners": "12px",
+        "height": 202.5,
+        "left": 0,
+        "width": 360
+      },
+      "nestedActions": null,
+      "opacity": "1",
+      "padding": "0px",
+      "radius": "12px",
+      "shadow": "none",
+      "tag": "DIV",
+      "variant": "m3-card m3-card--filled ",
+      "width": 360
+    }
+  ],
+  "cardMotion": {
+    "pointer": [
+      {
+        "count": "Elevated cardTapped 0 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634155579,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.00792791",
+        "time": 1791634155623,
+        "wave": {
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 180.5, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.0483089",
+        "time": 1791634155656,
+        "wave": {
+          "opacity": "0.0313933",
+          "transform": "matrix(1.43258, 0, 0, 1.43258, 180.518, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.0653982",
+        "time": 1791634155687,
+        "wave": {
+          "opacity": "0.0635838",
+          "transform": "matrix(3.07034, 0, 0, 3.07034, 180.586, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.0721515",
+        "time": 1791634155718,
+        "wave": {
+          "opacity": "0.0873933",
+          "transform": "matrix(4.06065, 0, 0, 4.06065, 180.627, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.0772411",
+        "time": 1791634155750,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(4.93082, 0, 0, 4.93082, 180.664, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.0795479",
+        "time": 1791634155783,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(5.52384, 0, 0, 5.52384, 180.688, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.08",
+        "time": 1791634155817,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(5.94428, 0, 0, 5.94428, 180.706, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.08",
+        "time": 1791634155850,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(6.27125, 0, 0, 6.27125, 180.719, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.40206px 4.20618px 1.40206px",
+        "state": "0.08",
+        "time": 1791634155883,
+        "wave": {
+          "opacity": "0.0911829",
+          "transform": "matrix(6.50894, 0, 0, 6.50894, 180.729, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.73186px 5.19559px 1.73186px",
+        "state": "0.08",
+        "time": 1791634155917,
+        "wave": {
+          "opacity": "0.0822229",
+          "transform": "matrix(6.68912, 0, 0, 6.68912, 180.737, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.87803px 5.63409px 1.87803px",
+        "state": "0.08",
+        "time": 1791634155950,
+        "wave": {
+          "opacity": "0.0733163",
+          "transform": "matrix(6.81976, 0, 0, 6.81976, 180.742, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.95353px 5.8606px 1.95353px",
+        "state": "0.08",
+        "time": 1791634155984,
+        "wave": {
+          "opacity": "0.0644363",
+          "transform": "matrix(6.9107, 0, 0, 6.9107, 180.746, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.98926px 5.96779px 1.98926px",
+        "state": "0.08",
+        "time": 1791634156016,
+        "wave": {
+          "opacity": "0.0557429",
+          "transform": "matrix(6.96784, 0, 0, 6.96784, 180.748, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 5.99999px 2px",
+        "state": "0.08",
+        "time": 1791634156050,
+        "wave": {
+          "opacity": "0.0468629",
+          "transform": "matrix(6.99841, 0, 0, 6.99841, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156084,
+        "wave": {
+          "opacity": "0.0377963",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156117,
+        "wave": {
+          "opacity": "0.0288896",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156153,
+        "wave": {
+          "opacity": "0.0177696",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156189,
+        "wave": {
+          "opacity": "0.00910293",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156224,
+        "wave": {
+          "opacity": "9.6e-06",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156257,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156291,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156324,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156357,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156390,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156424,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156457,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634156491,
+        "wave": null,
+        "width": 451.5
+      }
+    ],
+    "dragInside": [
+      {
+        "count": "Elevated cardTapped 5 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634239468,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 5 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.0178362",
+        "time": 1791634239499,
+        "wave": {
+          "opacity": "0.0146524",
+          "transform": "matrix(1.07197, 0, 0, 1.07197, 184.455, 3.02397)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 5 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.0483438",
+        "time": 1791634239529,
+        "wave": {
+          "opacity": "0.0397",
+          "transform": "matrix(1.77852, 0, 0, 1.77852, 184.014, 3.25928)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.0652772",
+        "time": 1791634239562,
+        "wave": {
+          "opacity": "0.0715095",
+          "transform": "matrix(3.44365, 0, 0, 3.44365, 182.974, 3.81385)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.0734243",
+        "time": 1791634239593,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(4.50347, 0, 0, 4.50347, 182.312, 4.16682)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.0779502",
+        "time": 1791634239624,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(5.24189, 0, 0, 5.24189, 181.851, 4.41274)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.0795383",
+        "time": 1791634239654,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(5.6449, 0, 0, 5.6449, 181.599, 4.54696)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.08",
+        "time": 1791634239686,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(6.03218, 0, 0, 6.03218, 181.358, 4.67595)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.08",
+        "time": 1791634239718,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(6.32902, 0, 0, 6.32902, 181.172, 4.77481)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.40013px 4.2004px 1.40013px",
+        "state": "0.08",
+        "time": 1791634239751,
+        "wave": {
+          "opacity": "0.0912152",
+          "transform": "matrix(6.55119, 0, 0, 6.55119, 181.033, 4.8488)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.72991px 5.18972px 1.72991px",
+        "state": "0.08",
+        "time": 1791634239784,
+        "wave": {
+          "opacity": "0.0823085",
+          "transform": "matrix(6.7194, 0, 0, 6.7194, 180.928, 4.90482)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.87827px 5.63482px 1.87827px",
+        "state": "0.08",
+        "time": 1791634239816,
+        "wave": {
+          "opacity": "0.0732952",
+          "transform": "matrix(6.84257, 0, 0, 6.84257, 180.852, 4.94584)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.94004px 5.82013px 1.94004px",
+        "state": "0.08",
+        "time": 1791634239847,
+        "wave": {
+          "opacity": "0.0665219",
+          "transform": "matrix(6.9092, 0, 0, 6.9092, 180.81, 4.96803)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.98965px 5.96894px 1.98965px",
+        "state": "0.08",
+        "time": 1791634239883,
+        "wave": {
+          "opacity": "0.0555885",
+          "transform": "matrix(6.97729, 0, 0, 6.97729, 180.767, 4.99071)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.99958px 5.99873px 1.99958px",
+        "state": "0.08",
+        "time": 1791634239913,
+        "wave": {
+          "opacity": "0.0485485",
+          "transform": "matrix(6.99884, 0, 0, 6.99884, 180.754, 4.99789)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634239946,
+        "wave": {
+          "opacity": "0.0396152",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634239980,
+        "wave": {
+          "opacity": "0.0307885",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634240015,
+        "wave": {
+          "opacity": "0.0217752",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634240047,
+        "wave": {
+          "opacity": "0.0134285",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634240081,
+        "wave": {
+          "opacity": "0.00412187",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634240116,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634240149,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634240181,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634240216,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634240252,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634240287,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634240321,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634240358,
+        "wave": null,
+        "width": 451.5
+      }
+    ],
+    "insideCount": "Elevated card\nTapped 6 times. Hover raises it to level 2.",
+    "dragOutside": [
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634240768,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.98076px 5.94229px 1.98076px",
+        "state": "0.08",
+        "time": 1791634240797,
+        "wave": {
+          "opacity": "0.00803333",
+          "transform": "matrix(1.01961, 0, 0, 1.01961, 184.488, 3.00653)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.4801px 4.44031px 1.4801px",
+        "state": "0.0785901",
+        "time": 1791634240829,
+        "wave": {
+          "opacity": "0.0396524",
+          "transform": "matrix(1.77621, 0, 0, 1.77621, 184.015, 3.25851)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.22367px 3.67102px 1.22367px",
+        "state": "0.0389034",
+        "time": 1791634240862,
+        "wave": {
+          "opacity": "0.071081",
+          "transform": "matrix(3.42467, 0, 0, 3.42467, 182.986, 3.80753)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.09837px 3.29512px 1.09837px",
+        "state": "0.0178197",
+        "time": 1791634240895,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(4.54138, 0, 0, 4.54138, 182.289, 4.17944)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.03528px 3.10585px 1.03528px",
+        "state": "0.00804353",
+        "time": 1791634240928,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(5.24278, 0, 0, 5.24278, 181.851, 4.41304)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1.01023px 3.03069px 1.01023px",
+        "state": "0.00373594",
+        "time": 1791634240957,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(5.64559, 0, 0, 5.64559, 181.599, 4.54719)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.000829748",
+        "time": 1791634240989,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(6.04194, 0, 0, 6.04194, 181.352, 4.67919)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "5.21123e-07",
+        "time": 1791634241022,
+        "wave": {
+          "opacity": "0.0979768",
+          "transform": "matrix(6.3325, 0, 0, 6.3325, 181.17, 4.77597)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241055,
+        "wave": {
+          "opacity": "0.0888035",
+          "transform": "matrix(6.56247, 0, 0, 6.56247, 181.026, 4.85256)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241088,
+        "wave": {
+          "opacity": "0.0799768",
+          "transform": "matrix(6.72643, 0, 0, 6.72643, 180.924, 4.90716)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241122,
+        "wave": {
+          "opacity": "0.0710435",
+          "transform": "matrix(6.84664, 0, 0, 6.84664, 180.849, 4.9472)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241158,
+        "wave": {
+          "opacity": "0.0604035",
+          "transform": "matrix(6.94091, 0, 0, 6.94091, 180.79, 4.97859)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241194,
+        "wave": {
+          "opacity": "0.0514701",
+          "transform": "matrix(6.98586, 0, 0, 6.98586, 180.762, 4.99356)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241230,
+        "wave": {
+          "opacity": "0.0425101",
+          "transform": "matrix(7.00431, 0, 0, 7.00431, 180.751, 4.99971)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241275,
+        "wave": {
+          "opacity": "0.0311235",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241313,
+        "wave": {
+          "opacity": "0.0204301",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241347,
+        "wave": {
+          "opacity": "0.0111235",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241380,
+        "wave": {
+          "opacity": "0.0022168",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241413,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241446,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241479,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241511,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241545,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241577,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241609,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241637,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 6 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0",
+        "time": 1791634241665,
+        "wave": null,
+        "width": 451.5
+      }
+    ],
+    "outsideCount": "Elevated card\nTapped 6 times. Hover raises it to level 2."
+  },
+  "cardKeyboard": {
+    "afterEnter": "Elevated card\nTapped 2 times. Hover raises it to level 2.",
+    "outlinedFocus": {
+      "border": "rgb(29, 27, 32)",
+      "focus": true,
+      "offset": "2px",
+      "outline": "rgb(98, 91, 113) solid 3px",
+      "shadow": "none",
+      "state": "0.1"
+    },
+    "afterSpace": "Elevated card\nTapped 3 times. Hover raises it to level 2."
+  },
+  "cardRepeated": "Elevated card\nTapped 5 times. Hover raises it to level 2.",
+  "cardDisabled": {
+    "count": "Elevated card\nTapped 5 times. Hover raises it to level 2.",
+    "focusedDisabled": false
+  },
+  "dialog": {
+    "notchOpening": [
+      {
+        "bodyWidth": 0,
+        "border": "1px",
+        "fieldWidth": 0,
+        "focus": "",
+        "labelFont": "16px",
+        "labelWidth": 0,
+        "mask": "100% 100%, 0px 1px",
+        "measureLayout": 0,
+        "measureViewport": 0,
+        "notchText": "0px",
+        "time": 1791634309121,
+        "viewportWidth": 0
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "15.924px",
+        "labelWidth": 112,
+        "mask": "100% 100%, 1.66089px 3px",
+        "measureLayout": 79,
+        "measureViewport": 63.7109375,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309173,
+        "viewportWidth": 321.0618591308594
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "14.3774px",
+        "labelWidth": 102,
+        "mask": "100% 100%, 35.4445px 3px",
+        "measureLayout": 79,
+        "measureViewport": 65.8701171875,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309201,
+        "viewportWidth": 331.943603515625
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "13.0719px",
+        "labelWidth": 94,
+        "mask": "100% 100%, 63.961px 3px",
+        "measureLayout": 79,
+        "measureViewport": 70.1201171875,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309232,
+        "viewportWidth": 353.3610534667969
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12.4888px",
+        "labelWidth": 90,
+        "mask": "100% 100%, 76.6983px 3px",
+        "measureLayout": 79,
+        "measureViewport": 73.9697265625,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309267,
+        "viewportWidth": 372.7596740722656
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12.1876px",
+        "labelWidth": 89,
+        "mask": "100% 100%, 83.2771px 3px",
+        "measureLayout": 79,
+        "measureViewport": 76.6806640625,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309299,
+        "viewportWidth": 386.4210510253906
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12.0413px",
+        "labelWidth": 88,
+        "mask": "100% 100%, 86.473px 3px",
+        "measureLayout": 79,
+        "measureViewport": 78.3427734375,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309329,
+        "viewportWidth": 394.7973937988281
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12.0024px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.3235px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.0361328125,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309357,
+        "viewportWidth": 398.2929382324219
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.4775390625,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309389,
+        "viewportWidth": 400.51605224609375
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.609375,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309420,
+        "viewportWidth": 401.1792297363281
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.5966796875,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309454,
+        "viewportWidth": 401.115478515625
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.537109375,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309486,
+        "viewportWidth": 400.8166809082031
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.48828125,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309516,
+        "viewportWidth": 400.5695495605469
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.4365234375,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309548,
+        "viewportWidth": 400.3135070800781
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.4033203125,
+        "notchText": "79.375px",
+        "phase": "opening",
+        "time": 1791634309583,
+        "viewportWidth": 400.1416931152344
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634309618,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634309650,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634309683,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634309714,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634309746,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634309776,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634309808,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634309839,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634309873,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634309904,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634309935,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634309971,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634310003,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634310034,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634310067,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634310099,
+        "viewportWidth": 400
+      },
+      {
+        "bodyWidth": 400,
+        "border": "3px",
+        "fieldWidth": 400,
+        "focus": "m3-field-191",
+        "labelFont": "12px",
+        "labelWidth": 87,
+        "mask": "100% 100%, 87.375px 3px",
+        "measureLayout": 79,
+        "measureViewport": 79.375,
+        "notchText": "79.375px",
+        "phase": "open",
+        "time": 1791634310134,
+        "viewportWidth": 400
+      }
+    ],
+    "notchSettled": {
+      "bodyWidth": 400,
+      "border": "3px",
+      "fieldWidth": 400,
+      "focus": "m3-field-191",
+      "labelFont": "12px",
+      "labelWidth": 87,
+      "mask": "100% 100%, 87.375px 3px",
+      "measureLayout": 79,
+      "measureViewport": 79.375,
+      "notchText": "79.375px",
+      "phase": "open",
+      "time": 1791634310276,
+      "viewportWidth": 400
+    },
+    "afterInput": {
+      "bodyWidth": 400,
+      "border": "1px",
+      "fieldWidth": 400,
+      "focus": "m3-dropdown-192-trigger",
+      "labelFont": "12px",
+      "labelWidth": 87,
+      "mask": "100% 100%, 87.375px 1px",
+      "measureLayout": 79,
+      "measureViewport": 79.375,
+      "notchText": "79.375px",
+      "phase": "open",
+      "time": 1791634310473,
+      "viewportWidth": 400
+    },
+    "returnFocus": "Create project dialog",
+    "fullscreen": {
+      "class": "m3-dialog m3-dialog--fullscreen ",
+      "fieldWidth": 1046,
+      "focus": "Close dialog",
+      "headerHeight": 56,
+      "modal": true,
+      "radius": "0px",
+      "surface": {
+        "bottom": 980,
+        "height": 980,
+        "left": 0,
+        "right": 1094,
+        "top": 0,
+        "width": 1094,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 980,
+        "width": 1094
+      }
+    },
+    "paintGutter": {
+      "action": {
+        "bottom": 548,
+        "height": 40,
+        "left": 347,
+        "right": 491.7734375,
+        "top": 508,
+        "width": 144.7734375,
+        "x": 347,
+        "y": 508
+      },
+      "body": {
+        "bottom": 561,
+        "height": 166,
+        "left": 339,
+        "right": 755,
+        "top": 395,
+        "width": 416,
+        "x": 339,
+        "y": 395
+      },
+      "bodyPadding": "8px",
+      "client": 164,
+      "field": {
+        "bottom": 492,
+        "height": 56,
+        "left": 347,
+        "right": 747,
+        "top": 436,
+        "width": 400,
+        "x": 347,
+        "y": 436
+      },
+      "focus": true,
+      "offset": "3px",
+      "ring": "rgb(101, 85, 143) solid 3px",
+      "scroll": 164,
+      "surface": {
+        "bottom": 649,
+        "height": 318,
+        "left": 323,
+        "right": 771,
+        "top": 331,
+        "width": 448,
+        "x": 323,
+        "y": 331
+      }
+    },
+    "finalFullscreen": {
+      "class": "m3-dialog m3-dialog--fullscreen ",
+      "modal": true,
+      "surface": {
+        "height": 980,
+        "width": 1094,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 980,
+        "width": 1094
+      }
+    },
+    "fullscreenEscapeReturn": "Open full-screen editor",
+    "scrollable": {
+      "actionsTop": 884,
+      "bodyBottom": 868,
+      "clientHeight": 778,
+      "overflow": "auto",
+      "scrollHeight": 1252,
+      "surfaceBottom": 956,
+      "viewportHeight": 980
+    }
+  },
+  "copy": {
+    "Standard button group usage": "Clipboard write resolved; Copied state visible",
+    "Split button usage": "Clipboard write resolved; Copied state visible",
+    "Dialog usage": "Clipboard write resolved; Copied state visible",
+    "Alert dialog usage": "Clipboard write resolved; Copied state visible",
+    "Full-screen dialog usage": "Clipboard write resolved; Copied state visible",
+    "Menu usage": "Clipboard write resolved; Copied state visible",
+    "Context menu usage": "Clipboard write resolved; Copied state visible",
+    "Card usage": "Clipboard write resolved; Copied state visible",
+    "Divider usage": "Clipboard write resolved; Copied state visible",
+    "paste": {
+      "matches": true,
+      "expectedLength": 509,
+      "actualLength": 509
+    }
+  },
+  "reducedMotion": {
+    "osEnabled": true,
+    "media": true,
+    "card": [
+      {
+        "count": "Elevated cardTapped 0 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721083,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": "true",
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px",
+        "state": "0.08",
+        "time": 1791634721341,
+        "wave": {
+          "opacity": "0.1",
+          "transform": "matrix(7.00518, 0, 0, 7.00518, 180.75, 5)"
+        },
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721402,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721440,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721486,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721517,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721548,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721596,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721626,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721674,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721723,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721771,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721803,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721852,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721902,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634721955,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634722015,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634722053,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634722103,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634722162,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634722253,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634722690,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634722768,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634722874,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634722974,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634723030,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634723079,
+        "wave": null,
+        "width": 451.5
+      },
+      {
+        "count": "Elevated cardTapped 1 times. Hover raises it to level 2.",
+        "focus": false,
+        "height": 100,
+        "pressed": null,
+        "shadow": "rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px",
+        "state": "0.08",
+        "time": 1791634723335,
+        "wave": null,
+        "width": 451.5
+      }
+    ],
+    "dialog": {
+      "opacity": "1",
+      "phase": "open",
+      "transform": "none"
+    },
+    "restored": true
+  },
+  "cardTabOrder": [
+    {
+      "cardClass": "m3-card m3-card--elevated ",
+      "tag": "DIV",
+      "text": "Action"
+    },
+    {
+      "cardClass": "m3-card m3-card--elevated ",
+      "text": "Action"
+    },
+    {
+      "cardClass": "m3-card m3-card--filled ",
+      "text": "Buy tickets"
+    }
+  ],
+  "mediaCard": [
+    {
+      "actionGap": "8px",
+      "actionPadding": "16px",
+      "bodyPadding": "16px 16px 0px",
+      "headlineInset": 16,
+      "mediaInset": 0,
+      "padding": "0px",
+      "rippleCount": 0,
+      "tabindex": -1,
+      "tag": "DIV"
+    },
+    {
+      "actionGap": "8px",
+      "actionPadding": "16px",
+      "bodyPadding": "16px 16px 0px",
+      "headlineInset": 16,
+      "mediaInset": 0,
+      "padding": "0px",
+      "rippleCount": 0,
+      "tabindex": -1,
+      "tag": "DIV"
+    }
+  ],
+  "viewportOverride": {
+    "requested": {
+      "width": 360,
+      "height": 800
+    },
+    "actual": {
+      "width": 1094,
+      "height": 980
+    },
+    "outcome": "Override did not affect preview; desktop data only. Override reset."
+  },
+  "failedCompactAttempt": {
+    "cards": [
+      {
+        "bodyPadding": "16px",
+        "height": 100,
+        "viewport": 1094,
+        "width": 451.5
+      },
+      {
+        "bodyPadding": null,
+        "height": 100,
+        "viewport": 1094,
+        "width": 451.5
+      },
+      {
+        "bodyPadding": null,
+        "height": 102,
+        "viewport": 1094,
+        "width": 451.5
+      },
+      {
+        "bodyPadding": null,
+        "height": 100,
+        "viewport": 1094,
+        "width": 451.5
+      },
+      {
+        "bodyPadding": null,
+        "height": 102,
+        "viewport": 1094,
+        "width": 451.5
+      },
+      {
+        "bodyPadding": "16px 16px 0px",
+        "height": 406.5,
+        "viewport": 1094,
+        "width": 360
+      },
+      {
+        "bodyPadding": "16px 16px 0px",
+        "height": 350.5,
+        "viewport": 1094,
+        "width": 360
+      }
+    ],
+    "divider": {
+      "height": 24,
+      "width": 1
+    },
+    "dialog": {
+      "clientWidth": 1094,
+      "field": 1046,
+      "radius": "0px",
+      "scrollWidth": 1094,
+      "surface": {
+        "bottom": 980,
+        "height": 980,
+        "left": 0,
+        "right": 1094,
+        "top": 0,
+        "width": 1094,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "darkMode": {
+    "cards": [
+      {
+        "bg": "rgb(54, 52, 58)",
+        "border": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "radius": "12px",
+        "variant": "m3-card m3-card--filled "
+      },
+      {
+        "bg": "rgb(29, 27, 32)",
+        "border": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "radius": "12px",
+        "variant": "m3-card m3-card--elevated m3-card--interactive "
+      },
+      {
+        "bg": "rgb(20, 18, 24)",
+        "border": "rgb(73, 69, 78)",
+        "opacity": "1",
+        "radius": "12px",
+        "variant": "m3-card m3-card--outlined m3-card--interactive "
+      },
+      {
+        "bg": "rgb(73, 69, 78)",
+        "border": "rgba(0, 0, 0, 0)",
+        "opacity": "0.38",
+        "radius": "12px",
+        "variant": "m3-card m3-card--filled m3-card--interactive m3-card--disabled "
+      },
+      {
+        "bg": "rgb(20, 18, 24)",
+        "border": "color(srgb 0.580392 0.560784 0.6 / 0.12)",
+        "opacity": "1",
+        "radius": "12px",
+        "variant": "m3-card m3-card--outlined m3-card--interactive m3-card--disabled "
+      },
+      {
+        "bg": "rgb(29, 27, 32)",
+        "border": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "radius": "12px",
+        "variant": "m3-card m3-card--elevated "
+      },
+      {
+        "bg": "rgb(54, 52, 58)",
+        "border": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "radius": "12px",
+        "variant": "m3-card m3-card--filled "
+      }
+    ],
+    "divider": [
+      {
+        "color": "rgb(73, 69, 78)",
+        "height": 1,
+        "width": 451.5
+      },
+      {
+        "color": "rgb(73, 69, 78)",
+        "height": 1,
+        "width": 435.5
+      },
+      {
+        "color": "rgb(73, 69, 78)",
+        "height": 1,
+        "width": 419.5
+      },
+      {
+        "color": "rgb(73, 69, 78)",
+        "height": 24,
+        "width": 1
+      },
+      {
+        "color": "rgb(73, 69, 78)",
+        "height": 1,
+        "width": 435.5
+      }
+    ]
+  },
+  "console": [],
+  "finalReload": {
+    "bodyGutter": "8px",
+    "reducedMotion": false,
+    "shellCount": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "checks": {
+    "liveBuild": "passed 13.68s",
+    "wasmCheck": "passed 0.81s",
+    "export27Examples": "passed 3.08s; existing unused ChipSize import warning",
+    "diffCheck": "passed",
+    "preview": "running",
+    "android": "paused",
+    "heldPointer": "Extended hold unverified; inside/outside native release tested",
+    "audibleScreenReader": "unverified",
+    "compact": "override ineffective; reset; latest compact regression unverified"
+  }
+}

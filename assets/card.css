@@ -6,7 +6,8 @@
  * cards: 12dp corner (corner-medium), container colours surface-container-low,
  * surface-container-highest and surface, 1dp outline-variant for outlined, elevation
  * levels at rest, hover and pressed, state layers hover 0.08 and focus/pressed 0.10,
- * a 3dp secondary focus indicator, and disabled at 38% opacity.
+ * a 3dp secondary focus indicator, disabled filled/elevated containers at 38%,
+ * and an outlined disabled border at 12%.
  * Shadows follow the Material Web elevation mixins (key shadow 0.3, ambient 0.15),
  * for the levels 0, 1 and 2 used here.
  */
@@ -30,20 +31,21 @@
   box-shadow: var(--card-shadow);
   color: var(--md-sys-color-on-surface);
   font: 400 14px/20px Inter, ui-sans-serif, system-ui, sans-serif;
-  text-align: left;
+  text-align: start;
   transition:
     box-shadow 200ms cubic-bezier(.2, 0, 0, 1),
     background-color 200ms cubic-bezier(.2, 0, 0, 1);
 }
 
-/* A card with media: the image is edge to edge, clipped to the card's 12dp corners, and the text keeps a 24dp inset. */
+/* Structured slots own their 16dp padding, avoiding doubled container insets. */
+.m3-card:has(> .m3-card__body),
+.m3-card:has(> .m3-card__content > .m3-card__body) { padding: 0; }
+/* A card with media: the image is edge to edge, clipped to the card's 12dp corners, and the text keeps a 16dp inset. */
 .m3-card:has(> .m3-card__media:first-child),
 .m3-card:has(> .m3-card__content > .m3-card__media:first-child) { padding: 0; overflow: hidden; }
 /* Filled and elevated cards have no outline, so the image sits flush with the card edge. */
-.m3-card--filled:has(> .m3-card__media:first-child),
-.m3-card--elevated:has(> .m3-card__media:first-child),
-.m3-card--filled:has(> .m3-card__content > .m3-card__media:first-child),
-.m3-card--elevated:has(> .m3-card__content > .m3-card__media:first-child) { border-width: 0; }
+.m3-card--filled,
+.m3-card--elevated { border-width: 0; }
 .m3-card__media {
   display: block;
   width: 100%;
@@ -52,7 +54,7 @@
   /* Rounded on all four corners, as in the Material reference; the card clips the top edge. */
   border-radius: 12px;
 }
-.m3-card__body { display: block; padding: 24px; }
+.m3-card__body { display: block; padding: 16px; }
 /* A body followed by an action row leaves the bottom inset to the action row. */
 .m3-card__body:has(+ .m3-card__actions) { padding-bottom: 0; }
 .m3-card__headline,
@@ -62,13 +64,13 @@
 .m3-card__subhead { margin-top: 4px; font: 500 16px/24px Inter, ui-sans-serif, system-ui, sans-serif; color: var(--md-sys-color-on-surface-variant); }
 .m3-card__supporting { margin-top: 16px; font: 400 14px/20px Inter, ui-sans-serif, system-ui, sans-serif; color: var(--md-sys-color-on-surface-variant); }
 
-/* Action row: buttons at the end with an 8dp gap, 24dp inset. */
+/* Action row: buttons at the end with an 8dp gap, 16dp inset. */
 .m3-card__actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 8px;
-  padding: 24px;
+  padding: 16px;
 }
 .m3-card__actions--start { justify-content: flex-start; }
 
@@ -85,6 +87,7 @@
 
 /* Interactive cards are buttons: reset the button look and add the state layer. */
 .m3-card--interactive {
+  min-height: 48px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
@@ -103,25 +106,38 @@
 .m3-card__content { position: relative; z-index: 1; width: 100%; }
 
 /* Hover raises the elevated card to level 2 and the others to level 1. */
+@media (hover: hover) {
 .m3-card--interactive:not(:disabled):hover { --card-state-opacity: .08; }
 .m3-card--elevated.m3-card--interactive:not(:disabled):hover { --card-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 2px 6px 2px rgb(0 0 0 / .15); }
 .m3-card--filled.m3-card--interactive:not(:disabled):hover { --card-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15); }
 .m3-card--outlined.m3-card--interactive:not(:disabled):hover { --card-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15); }
-
-/* Pressed returns to the resting elevation, with a 0.10 state layer. Qualified so it outranks hover. */
-.m3-card--interactive.m3-card--interactive:not(:disabled):active { --card-state-opacity: .10; }
-.m3-card--elevated.m3-card--interactive.m3-card--interactive:not(:disabled):active { --card-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15); }
-.m3-card--filled.m3-card--interactive.m3-card--interactive:not(:disabled):active,
-.m3-card--outlined.m3-card--interactive.m3-card--interactive:not(:disabled):active { --card-shadow: none; }
+}
 
 /* Keyboard focus: 3dp secondary outline, 2dp outside the card. */
-.m3-card--interactive:focus-visible {
+.m3-card--interactive:not(:disabled):focus-visible {
+  --card-state-opacity: .10;
   outline: 3px solid var(--md-sys-color-secondary);
   outline-offset: 2px;
 }
+.m3-card--elevated.m3-card--interactive:not(:disabled):focus-visible { --card-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15); }
+.m3-card--filled.m3-card--interactive:not(:disabled):focus-visible,
+.m3-card--outlined.m3-card--interactive:not(:disabled):focus-visible { --card-shadow: none; }
+.m3-card--outlined.m3-card--interactive:not(:disabled):focus-visible { --card-outline: var(--md-sys-color-on-surface); }
 
-/* Disabled: the whole card at 38%, with no state layer or elevation change. */
+/* Ripple supplies the 10% pressed feedback, as upstream does; don't duplicate it
+   with a second full-card pressed overlay. Ripple state retains quick-click elevation. */
+.m3-card--elevated.m3-card--interactive.m3-card--interactive:not(:disabled):is(:active,[data-ripple-pressed=true]) { --card-shadow: 0 1px 2px 0 rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15); }
+.m3-card--filled.m3-card--interactive.m3-card--interactive:not(:disabled):is(:active,[data-ripple-pressed=true]),
+.m3-card--outlined.m3-card--interactive.m3-card--interactive:not(:disabled):is(:active,[data-ripple-pressed=true]) { --card-shadow: none; }
+.m3-card--outlined.m3-card--interactive.m3-card--interactive:not(:disabled):is(:active,[data-ripple-pressed=true]) { --card-outline: var(--md-sys-color-outline-variant); }
+
+/* Filled/elevated disabled containers retain 38%; outlined borders use their
+   separate 12% outline token, with content faded independently. */
 .m3-card--disabled { opacity: .38; cursor: default; }
+.m3-card--filled.m3-card--disabled { --card-container: var(--md-sys-color-surface-variant); }
+.m3-card--elevated.m3-card--disabled { --card-container: var(--md-sys-color-surface); }
+.m3-card--outlined.m3-card--disabled { opacity: 1; --card-outline: color-mix(in srgb, var(--md-sys-color-outline) 12%, transparent); }
+.m3-card--outlined.m3-card--disabled > :not(.m3-card__state,.m3-ripple) { opacity: .38; }
 
 @media (prefers-reduced-motion: reduce) {
   .m3-card, .m3-card__state { transition-duration: .01ms !important; }

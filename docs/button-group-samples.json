@@ -1,0 +1,5021 @@
+{
+  "geometry": [
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Day",
+          "pressed": "false",
+          "radius": "20px 8px 8px 20px",
+          "width": 108.078125
+        },
+        {
+          "disabled": false,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Week",
+          "pressed": "true",
+          "radius": "20px",
+          "width": 120.1796875
+        },
+        {
+          "disabled": false,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Month",
+          "pressed": "false",
+          "radius": "8px 20px 20px 8px",
+          "width": 125.7421875
+        }
+      ],
+      "direction": "ltr",
+      "gap": "2px",
+      "name": "Calendar period"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Save",
+          "pressed": "true",
+          "radius": "20px",
+          "width": 122.3046875
+        },
+        {
+          "disabled": false,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Info",
+          "pressed": "false",
+          "radius": "8px",
+          "width": 115.2265625
+        },
+        {
+          "disabled": false,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Add",
+          "pressed": "true",
+          "radius": "20px",
+          "width": 116.46875
+        }
+      ],
+      "direction": "ltr",
+      "gap": "2px",
+      "name": "Visible actions"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Daily",
+          "pressed": "false",
+          "radius": "8px 20px 20px 8px",
+          "width": 105.1796875
+        },
+        {
+          "disabled": false,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Weekly",
+          "pressed": "true",
+          "radius": "20px",
+          "width": 121.625
+        },
+        {
+          "disabled": true,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Monthly",
+          "pressed": "false",
+          "radius": "20px 8px 8px 20px",
+          "width": 127.1953125
+        }
+      ],
+      "direction": "rtl",
+      "gap": "2px",
+      "name": "RTL interval"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "height": 32,
+          "hitInsets": "-8px",
+          "label": "Favourite",
+          "pressed": "true",
+          "radius": "16px",
+          "width": 48
+        },
+        {
+          "disabled": false,
+          "height": 32,
+          "hitInsets": "-8px",
+          "label": "Details",
+          "pressed": "false",
+          "radius": "4px 16px 16px 4px",
+          "width": 48
+        }
+      ],
+      "direction": "ltr",
+      "gap": "2px",
+      "name": "XS connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Favourite",
+          "pressed": "true",
+          "radius": "20px",
+          "width": 48
+        },
+        {
+          "disabled": false,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Details",
+          "pressed": "false",
+          "radius": "8px 20px 20px 8px",
+          "width": 48
+        }
+      ],
+      "direction": "ltr",
+      "gap": "2px",
+      "name": "S connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "height": 56,
+          "hitInsets": "0px",
+          "label": "Favourite",
+          "pressed": "true",
+          "radius": "28px",
+          "width": 56
+        },
+        {
+          "disabled": false,
+          "height": 56,
+          "hitInsets": "0px",
+          "label": "Details",
+          "pressed": "false",
+          "radius": "8px 28px 28px 8px",
+          "width": 56
+        }
+      ],
+      "direction": "ltr",
+      "gap": "2px",
+      "name": "M connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "height": 96,
+          "hitInsets": "0px",
+          "label": "Favourite",
+          "pressed": "true",
+          "radius": "48px",
+          "width": 96
+        },
+        {
+          "disabled": false,
+          "height": 96,
+          "hitInsets": "0px",
+          "label": "Details",
+          "pressed": "false",
+          "radius": "16px 48px 48px 16px",
+          "width": 96
+        }
+      ],
+      "direction": "ltr",
+      "gap": "2px",
+      "name": "L connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "height": 136,
+          "hitInsets": "0px",
+          "label": "Favourite",
+          "pressed": "true",
+          "radius": "68px",
+          "width": 136
+        },
+        {
+          "disabled": false,
+          "height": 136,
+          "hitInsets": "0px",
+          "label": "Details",
+          "pressed": "false",
+          "radius": "20px 68px 68px 20px",
+          "width": 136
+        }
+      ],
+      "direction": "ltr",
+      "gap": "2px",
+      "name": "XL connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": true,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "List",
+          "pressed": "true",
+          "radius": "20px",
+          "width": 175.8359375
+        },
+        {
+          "disabled": true,
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Grid",
+          "pressed": "false",
+          "radius": "8px 20px 20px 8px",
+          "width": 180.1640625
+        }
+      ],
+      "direction": "ltr",
+      "gap": "2px",
+      "name": "Disabled display mode"
+    }
+  ],
+  "inputs": [
+    {
+      "action": "Required selected Week + Space",
+      "state": [
+        {
+          "focused": "Week",
+          "name": "Calendar period",
+          "selected": [
+            "Week"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Visible actions",
+          "selected": [
+            "Save",
+            "Add"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "RTL interval",
+          "selected": [
+            "Weekly"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XS connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "S connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "M connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "L connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XL connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Disabled display mode",
+          "selected": [
+            "List"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "ArrowRight moves focus without selecting",
+      "state": [
+        {
+          "focused": "Month",
+          "name": "Calendar period",
+          "selected": [
+            "Week"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Visible actions",
+          "selected": [
+            "Save",
+            "Add"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "RTL interval",
+          "selected": [
+            "Weekly"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XS connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "S connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "M connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "L connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XL connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Disabled display mode",
+          "selected": [
+            "List"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "Enter selects Month",
+      "state": [
+        {
+          "focused": "Month",
+          "name": "Calendar period",
+          "selected": [
+            "Month"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Visible actions",
+          "selected": [
+            "Save",
+            "Add"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "RTL interval",
+          "selected": [
+            "Weekly"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XS connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "S connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "M connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "L connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XL connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Disabled display mode",
+          "selected": [
+            "List"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "Tab from Day moves to Week",
+      "state": [
+        {
+          "focused": "Week",
+          "name": "Calendar period",
+          "selected": [
+            "Month"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Visible actions",
+          "selected": [
+            "Save",
+            "Add"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "RTL interval",
+          "selected": [
+            "Weekly"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XS connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "S connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "M connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "L connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XL connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Disabled display mode",
+          "selected": [
+            "List"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "RTL ArrowLeft Daily -> Weekly skips disabled",
+      "state": [
+        {
+          "focused": null,
+          "name": "Calendar period",
+          "selected": [
+            "Month"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Visible actions",
+          "selected": [
+            "Save",
+            "Add"
+          ]
+        },
+        {
+          "focused": "Weekly",
+          "name": "RTL interval",
+          "selected": [
+            "Weekly"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XS connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "S connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "M connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "L connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XL connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Disabled display mode",
+          "selected": [
+            "List"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "Optional selection clears",
+      "state": [
+        {
+          "focused": null,
+          "name": "Calendar period",
+          "selected": [
+            "Month"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Visible actions",
+          "selected": [
+            "Save",
+            "Add"
+          ]
+        },
+        {
+          "focused": "Weekly",
+          "name": "RTL interval",
+          "selected": []
+        },
+        {
+          "focused": null,
+          "name": "XS connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "S connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "M connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "L connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XL connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Disabled display mode",
+          "selected": [
+            "List"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "Multi-select adds Info",
+      "state": [
+        {
+          "focused": null,
+          "name": "Calendar period",
+          "selected": [
+            "Month"
+          ]
+        },
+        {
+          "focused": "Info",
+          "name": "Visible actions",
+          "selected": [
+            "Save",
+            "Info",
+            "Add"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "RTL interval",
+          "selected": []
+        },
+        {
+          "focused": null,
+          "name": "XS connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "S connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "M connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "L connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XL connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Disabled display mode",
+          "selected": [
+            "List"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "Multi-select removes Save only",
+      "state": [
+        {
+          "focused": null,
+          "name": "Calendar period",
+          "selected": [
+            "Month"
+          ]
+        },
+        {
+          "focused": "Save",
+          "name": "Visible actions",
+          "selected": [
+            "Info",
+            "Add"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "RTL interval",
+          "selected": []
+        },
+        {
+          "focused": null,
+          "name": "XS connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "S connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "M connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "L connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "XL connected icons",
+          "selected": [
+            "Favourite"
+          ]
+        },
+        {
+          "focused": null,
+          "name": "Disabled display mode",
+          "selected": [
+            "List"
+          ]
+        }
+      ]
+    }
+  ],
+  "motion": [
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584376559
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "17.7912px 20px 20px 17.7912px",
+          "ripple": {
+            "opacity": "0.0151419",
+            "transform": "matrix(1.10233, 0, 0, 1.10233, 49.7439, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584376622
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "7.2185px 20px 20px 7.2185px",
+          "ripple": {
+            "opacity": "0.0714276",
+            "transform": "matrix(4.22425, 0, 0, 4.22425, 49.7946, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584376676
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4.49547px 20px 20px 4.49547px",
+          "ripple": {
+            "opacity": "0.1",
+            "transform": "matrix(6.41696, 0, 0, 6.41696, 49.8302, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584376734
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4.08925px 20px 20px 4.08925px",
+          "ripple": {
+            "opacity": "0.1",
+            "transform": "matrix(7.41248, 0, 0, 7.41248, 49.8464, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584376788
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "4.91303px 20px 20px 4.91303px",
+          "ripple": {
+            "opacity": "0.0976032",
+            "transform": "matrix(8.13253, 0, 0, 8.13253, 49.8581, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584376842
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "14.9787px 20px 20px 14.9787px",
+          "ripple": {
+            "opacity": "0.0841899",
+            "transform": "matrix(8.51779, 0, 0, 8.51779, 49.8643, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584376893
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "18.9197px 20px 20px 18.9197px",
+          "ripple": {
+            "opacity": "0.0708565",
+            "transform": "matrix(8.75615, 0, 0, 8.75615, 49.8682, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584376947
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "19.8871px 20px 20px 19.8871px",
+          "ripple": {
+            "opacity": "0.0530699",
+            "transform": "matrix(8.91133, 0, 0, 8.91133, 49.8707, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377011
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "19.9914px 20px 20px 19.9914px",
+          "ripple": {
+            "opacity": "0.0375499",
+            "transform": "matrix(8.93523, 0, 0, 8.93523, 49.8711, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377068
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": {
+            "opacity": "0.0241899",
+            "transform": "matrix(8.93523, 0, 0, 8.93523, 49.8711, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377121
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": {
+            "opacity": "0.0044032",
+            "transform": "matrix(8.93523, 0, 0, 8.93523, 49.8711, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377191
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377251
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377303
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377371
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377428
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377480
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377531
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377583
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377633
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377683
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377738
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377821
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377875
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377920
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584377991
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584378038
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584378097
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584378144
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584378192
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584378237
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584378287
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584378335
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584378394
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584378446
+    }
+  ],
+  "repeat": [
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392255
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "15.7558px 20px 20px 15.7558px",
+          "ripple": {
+            "opacity": "0.0238724",
+            "transform": "matrix(1.29243, 0, 0, 1.29243, 49.7469, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392310
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "7.22166px 20px 20px 7.22166px",
+          "ripple": {
+            "opacity": "0.0713962",
+            "transform": "matrix(4.22241, 0, 0, 4.22241, 49.7945, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392363
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4.49599px 20px 20px 4.49599px",
+          "ripple": {
+            "opacity": "0.1",
+            "transform": "matrix(6.41612, 0, 0, 6.41612, 49.8302, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392417
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4.0905px 20px 20px 4.0905px",
+          "ripple": {
+            "opacity": "0.1",
+            "transform": "matrix(7.40566, 0, 0, 7.40566, 49.8462, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392471
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "4.85006px 20px 20px 4.85006px",
+          "ripple": {
+            "opacity": "0.0977973",
+            "transform": "matrix(8.05277, 0, 0, 8.05277, 49.8568, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392522
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4.51406px 20px 20px 4.51406px",
+          "ripple": {
+            "opacity": "0.0233648",
+            "transform": "matrix(1.27781, 0, 0, 1.27781, 49.7467, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392578
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4px 20px 20px 4px",
+          "ripple": {
+            "opacity": "0.0793648",
+            "transform": "matrix(4.65845, 0, 0, 4.65845, 49.8016, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392634
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4px 20px 20px 4px",
+          "ripple": {
+            "opacity": "0.1",
+            "transform": "matrix(6.39734, 0, 0, 6.39734, 49.8299, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392686
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4px 20px 20px 4px",
+          "ripple": {
+            "opacity": "0.1",
+            "transform": "matrix(7.41929, 0, 0, 7.41929, 49.8465, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392738
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "4.81824px 20px 20px 4.81824px",
+          "ripple": {
+            "opacity": "0.0977861",
+            "transform": "matrix(8.05243, 0, 0, 8.05243, 49.8568, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392789
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4.46356px 20px 20px 4.46356px",
+          "ripple": {
+            "opacity": "0.0238448",
+            "transform": "matrix(1.29162, 0, 0, 1.29162, 49.7469, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392843
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4px 20px 20px 4px",
+          "ripple": {
+            "opacity": "0.0714638",
+            "transform": "matrix(4.22636, 0, 0, 4.22636, 49.7946, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392896
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4px 20px 20px 4px",
+          "ripple": {
+            "opacity": "0.1",
+            "transform": "matrix(6.19345, 0, 0, 6.19345, 49.8266, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584392947
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4px 20px 20px 4px",
+          "ripple": {
+            "opacity": "0.1",
+            "transform": "matrix(7.42092, 0, 0, 7.42092, 49.8465, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393001
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "4.8284px 20px 20px 4.8284px",
+          "ripple": {
+            "opacity": "0.0977587",
+            "transform": "matrix(8.05247, 0, 0, 8.05247, 49.8568, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393051
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "14.8321px 20px 20px 14.8321px",
+          "ripple": {
+            "opacity": "0.0843987",
+            "transform": "matrix(8.46515, 0, 0, 8.46515, 49.8635, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393101
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "18.8503px 20px 20px 18.8503px",
+          "ripple": {
+            "opacity": "0.071252",
+            "transform": "matrix(8.72176, 0, 0, 8.72176, 49.8676, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393153
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "19.9125px 20px 20px 19.9125px",
+          "ripple": {
+            "opacity": "0.0510653",
+            "transform": "matrix(8.91125, 0, 0, 8.91125, 49.8707, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393226
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "19.989px 20px 20px 19.989px",
+          "ripple": {
+            "opacity": "0.0378387",
+            "transform": "matrix(8.93523, 0, 0, 8.93523, 49.8711, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393278
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": {
+            "opacity": "0.0243987",
+            "transform": "matrix(8.93523, 0, 0, 8.93523, 49.8711, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393330
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": {
+            "opacity": "0.00882533",
+            "transform": "matrix(8.93523, 0, 0, 8.93523, 49.8711, 7)"
+          },
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393384
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393437
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393488
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393539
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393592
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393639
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393693
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393750
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.078125
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.1796875
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.7421875
+        }
+      ],
+      "time": 1791584393800
+    }
+  ],
+  "cancel": {
+    "buttons": [
+      {
+        "height": 40,
+        "name": "Day",
+        "pressed": false,
+        "radius": "20px 8px 8px 20px",
+        "ripple": {
+          "opacity": "0.0222176",
+          "transform": "matrix(9.41329, 0, 0, 9.41329, 42.5391, 8.5)"
+        },
+        "selected": "false",
+        "width": 108.078125
+      },
+      {
+        "height": 40,
+        "name": "Week",
+        "pressed": false,
+        "radius": "8px",
+        "ripple": null,
+        "selected": "false",
+        "width": 120.1796875
+      },
+      {
+        "height": 40,
+        "name": "Month",
+        "pressed": false,
+        "radius": "20px",
+        "ripple": null,
+        "selected": "true",
+        "width": 125.7421875
+      }
+    ],
+    "time": 1791584394967
+  },
+  "extendedHit": {
+    "point": {
+      "height": 32,
+      "top": 478,
+      "width": 48,
+      "x": 575,
+      "y": 472
+    },
+    "state": [
+      {
+        "focused": null,
+        "name": "Calendar period",
+        "selected": [
+          "Month"
+        ]
+      },
+      {
+        "focused": null,
+        "name": "Visible actions",
+        "selected": [
+          "Info",
+          "Add"
+        ]
+      },
+      {
+        "focused": null,
+        "name": "RTL interval",
+        "selected": []
+      },
+      {
+        "focused": "Details",
+        "name": "XS connected icons",
+        "selected": [
+          "Details"
+        ]
+      },
+      {
+        "focused": null,
+        "name": "S connected icons",
+        "selected": [
+          "Details"
+        ]
+      },
+      {
+        "focused": null,
+        "name": "M connected icons",
+        "selected": [
+          "Details"
+        ]
+      },
+      {
+        "focused": null,
+        "name": "L connected icons",
+        "selected": [
+          "Details"
+        ]
+      },
+      {
+        "focused": null,
+        "name": "XL connected icons",
+        "selected": [
+          "Details"
+        ]
+      },
+      {
+        "focused": null,
+        "name": "Disabled display mode",
+        "selected": [
+          "List"
+        ]
+      }
+    ]
+  },
+  "reduced": {
+    "radius": "20px",
+    "selected": "true",
+    "transition": "1e-05s",
+    "waves": []
+  },
+  "initialFocus": {
+    "name": "Day",
+    "parent": "Calendar period"
+  },
+  "end": [
+    {
+      "focused": "Month",
+      "name": "Calendar period",
+      "selected": [
+        "Day"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "Visible actions",
+      "selected": [
+        "Info",
+        "Add"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "RTL interval",
+      "selected": []
+    },
+    {
+      "focused": null,
+      "name": "XS connected icons",
+      "selected": [
+        "Details"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "S connected icons",
+      "selected": [
+        "Details"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "M connected icons",
+      "selected": [
+        "Details"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "L connected icons",
+      "selected": [
+        "Details"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "XL connected icons",
+      "selected": [
+        "Details"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "Disabled display mode",
+      "selected": [
+        "List"
+      ]
+    }
+  ],
+  "rtlWrap": [
+    {
+      "focused": null,
+      "name": "Calendar period",
+      "selected": [
+        "Day"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "Visible actions",
+      "selected": [
+        "Info",
+        "Add"
+      ]
+    },
+    {
+      "focused": "Daily",
+      "name": "RTL interval",
+      "selected": []
+    },
+    {
+      "focused": null,
+      "name": "XS connected icons",
+      "selected": [
+        "Details"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "S connected icons",
+      "selected": [
+        "Details"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "M connected icons",
+      "selected": [
+        "Details"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "L connected icons",
+      "selected": [
+        "Details"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "XL connected icons",
+      "selected": [
+        "Details"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "Disabled display mode",
+      "selected": [
+        "List"
+      ]
+    }
+  ],
+  "disabled": [
+    {
+      "disabled": true,
+      "label": "List",
+      "tabIndex": 0
+    },
+    {
+      "disabled": true,
+      "label": "Grid",
+      "tabIndex": 0
+    }
+  ],
+  "elevated": {
+    "colors": [
+      {
+        "background": "rgb(248, 242, 250)",
+        "color": "rgb(101, 85, 143)",
+        "label": "List",
+        "shadow": "rgba(0, 0, 0, 0.267) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 1px 3px 1px"
+      },
+      {
+        "background": "rgb(101, 85, 143)",
+        "color": "rgb(255, 255, 255)",
+        "label": "Grid",
+        "shadow": "rgba(0, 0, 0, 0.267) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 1px 3px 1px"
+      }
+    ],
+    "selected": "Grid"
+  },
+  "copy": "COPY INTO YOUR DIOXUS APP\n\nConnected button group usage\n✓\nCopied\nuse dioxus::prelude::*;\nuse m3e_rust_ui::{ConnectedButtonGroup, ConnectedButtonItem, ConnectedButtonVariant};\n\n#[component]\nfn ConnectedPeriodPicker() -> Element {\n    let mut selected = use_signal(|| vec![1_usize]);\n    rsx! {\n        ConnectedButtonGroup {\n            items: [\"Day\", \"Week\", \"Month\"].into_iter().map(ConnectedButtonItem::new).collect::<Vec<_>>(),\n            selected: selected(),\n            selection_required: true,\n            variant: ConnectedButtonVariant::Tonal,\n            aria_label: \"Calendar period\",\n            onchange: move |next| selected.set(next),\n        }\n    }\n}",
+  "finalGeometry": [
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Day",
+          "lineHeight": "20px",
+          "pressed": "false",
+          "radius": "18.1411px 7.25645px 7.25645px 18.1411px",
+          "width": 108.3359375
+        },
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Week",
+          "lineHeight": "20px",
+          "pressed": "true",
+          "radius": "18.1411px",
+          "width": 120.15625
+        },
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Month",
+          "lineHeight": "20px",
+          "pressed": "false",
+          "radius": "7.25645px 18.1411px 18.1411px 7.25645px",
+          "width": 125.5078125
+        }
+      ],
+      "gap": "2px",
+      "name": "Calendar period"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Save",
+          "lineHeight": "20px",
+          "pressed": "true",
+          "radius": "18.1411px",
+          "width": 122.296875
+        },
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Info",
+          "lineHeight": "20px",
+          "pressed": "false",
+          "radius": "7.25645px",
+          "width": 115.15625
+        },
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Add",
+          "lineHeight": "20px",
+          "pressed": "true",
+          "radius": "18.1411px",
+          "width": 116.546875
+        }
+      ],
+      "gap": "2px",
+      "name": "Visible actions"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Daily",
+          "lineHeight": "20px",
+          "pressed": "false",
+          "radius": "7.25645px 18.1411px 18.1411px 7.25645px",
+          "width": 105.4609375
+        },
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Weekly",
+          "lineHeight": "20px",
+          "pressed": "true",
+          "radius": "18.1411px",
+          "width": 121.59375
+        },
+        {
+          "disabled": true,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Monthly",
+          "lineHeight": "20px",
+          "pressed": "false",
+          "radius": "18.1411px 7.25645px 7.25645px 18.1411px",
+          "width": 126.9453125
+        }
+      ],
+      "gap": "2px",
+      "name": "RTL interval"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 32,
+          "hitInsets": "-8px",
+          "label": "Favourite",
+          "lineHeight": "20px",
+          "pressed": "true",
+          "radius": "14.5129px",
+          "width": 48
+        },
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 32,
+          "hitInsets": "-8px",
+          "label": "Details",
+          "lineHeight": "20px",
+          "pressed": "false",
+          "radius": "3.62823px 14.5129px 14.5129px 3.62823px",
+          "width": 48
+        }
+      ],
+      "gap": "2px",
+      "name": "XS connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Favourite",
+          "lineHeight": "20px",
+          "pressed": "true",
+          "radius": "18.1411px",
+          "width": 48
+        },
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Details",
+          "lineHeight": "20px",
+          "pressed": "false",
+          "radius": "7.25645px 18.1411px 18.1411px 7.25645px",
+          "width": 48
+        }
+      ],
+      "gap": "2px",
+      "name": "S connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "fontSize": "16px",
+          "fontWeight": "500",
+          "height": 56,
+          "hitInsets": "0px",
+          "label": "Favourite",
+          "lineHeight": "24px",
+          "pressed": "true",
+          "radius": "25.3976px",
+          "width": 56
+        },
+        {
+          "disabled": false,
+          "fontSize": "16px",
+          "fontWeight": "500",
+          "height": 56,
+          "hitInsets": "0px",
+          "label": "Details",
+          "lineHeight": "24px",
+          "pressed": "false",
+          "radius": "7.25645px 25.3976px 25.3976px 7.25645px",
+          "width": 56
+        }
+      ],
+      "gap": "2px",
+      "name": "M connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "fontSize": "24px",
+          "fontWeight": "400",
+          "height": 96,
+          "hitInsets": "0px",
+          "label": "Favourite",
+          "lineHeight": "32px",
+          "pressed": "true",
+          "radius": "43.5387px",
+          "width": 96
+        },
+        {
+          "disabled": false,
+          "fontSize": "24px",
+          "fontWeight": "400",
+          "height": 96,
+          "hitInsets": "0px",
+          "label": "Details",
+          "lineHeight": "32px",
+          "pressed": "false",
+          "radius": "14.5129px 43.5387px 43.5387px 14.5129px",
+          "width": 96
+        }
+      ],
+      "gap": "2px",
+      "name": "L connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "fontSize": "32px",
+          "fontWeight": "400",
+          "height": 136,
+          "hitInsets": "0px",
+          "label": "Favourite",
+          "lineHeight": "40px",
+          "pressed": "true",
+          "radius": "61.6798px",
+          "width": 136
+        },
+        {
+          "disabled": false,
+          "fontSize": "32px",
+          "fontWeight": "400",
+          "height": 136,
+          "hitInsets": "0px",
+          "label": "Details",
+          "lineHeight": "40px",
+          "pressed": "false",
+          "radius": "18.1411px 61.6798px 61.6798px 18.1411px",
+          "width": 136
+        }
+      ],
+      "gap": "2px",
+      "name": "XL connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "List",
+          "lineHeight": "20px",
+          "pressed": "true",
+          "radius": "18.1411px",
+          "width": 175.78125
+        },
+        {
+          "disabled": false,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Grid",
+          "lineHeight": "20px",
+          "pressed": "false",
+          "radius": "7.25645px 18.1411px 18.1411px 7.25645px",
+          "width": 180.21875
+        }
+      ],
+      "gap": "2px",
+      "name": "Display mode"
+    },
+    {
+      "buttons": [
+        {
+          "disabled": true,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "List",
+          "lineHeight": "20px",
+          "pressed": "true",
+          "radius": "18.1411px",
+          "width": 175.78125
+        },
+        {
+          "disabled": true,
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "height": 40,
+          "hitInsets": "-4px",
+          "label": "Grid",
+          "lineHeight": "20px",
+          "pressed": "false",
+          "radius": "7.25645px 18.1411px 18.1411px 7.25645px",
+          "width": 180.21875
+        }
+      ],
+      "gap": "2px",
+      "name": "Disabled display mode"
+    }
+  ],
+  "finalMotion": [
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "19.9753px 7.99012px 7.99012px 19.9753px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "19.9753px",
+          "ripple": null,
+          "selected": "true",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "7.99012px 19.9753px 19.9753px 7.99012px",
+          "ripple": null,
+          "selected": "false",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584879807
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "16.9442px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "5.04759px 20px 20px 5.04759px",
+          "ripple": {
+            "opacity": "0.0628724",
+            "transform": "matrix(3.68522, 0, 0, 3.68522, 49.5912, 7)"
+          },
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584879950
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8.64516px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": true,
+          "radius": "4.05243px 20px 20px 4.05243px",
+          "ripple": {
+            "opacity": "0.1",
+            "transform": "matrix(6.97377, 0, 0, 6.97377, 49.6933, 7)"
+          },
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880042
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8.06793px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "4.00684px 20px 20px 4.00684px",
+          "ripple": {
+            "opacity": "0.1",
+            "transform": "matrix(7.94796, 0, 0, 7.94796, 49.7235, 7)"
+          },
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880108
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8.00871px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "11.9461px 20px 20px 11.9461px",
+          "ripple": {
+            "opacity": "0.0888552",
+            "transform": "matrix(8.39564, 0, 0, 8.39564, 49.7374, 7)"
+          },
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880157
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "18.1202px 20px 20px 18.1202px",
+          "ripple": {
+            "opacity": "0.0753619",
+            "transform": "matrix(8.68096, 0, 0, 8.68096, 49.7463, 7)"
+          },
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880208
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "19.6287px 20px 20px 19.6287px",
+          "ripple": {
+            "opacity": "0.0622152",
+            "transform": "matrix(8.84288, 0, 0, 8.84288, 49.7513, 7)"
+          },
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880261
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "19.952px 20px 20px 19.952px",
+          "ripple": {
+            "opacity": "0.0466685",
+            "transform": "matrix(8.92186, 0, 0, 8.92186, 49.7538, 7)"
+          },
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880315
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": {
+            "opacity": "0.0331219",
+            "transform": "matrix(8.92589, 0, 0, 8.92589, 49.7539, 7)"
+          },
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880366
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": {
+            "opacity": "0.0198152",
+            "transform": "matrix(8.92589, 0, 0, 8.92589, 49.7539, 7)"
+          },
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880416
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": {
+            "opacity": "0.00650853",
+            "transform": "matrix(8.92589, 0, 0, 8.92589, 49.7539, 7)"
+          },
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880466
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880516
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880566
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880616
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880666
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880715
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880765
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880816
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880866
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880915
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584880966
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881016
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881069
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881120
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881174
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881227
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881279
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881334
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881387
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881441
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881492
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881544
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881595
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881649
+    },
+    {
+      "buttons": [
+        {
+          "height": 40,
+          "name": "Day",
+          "pressed": false,
+          "radius": "20px 8px 8px 20px",
+          "ripple": null,
+          "selected": "false",
+          "width": 108.3359375
+        },
+        {
+          "height": 40,
+          "name": "Week",
+          "pressed": false,
+          "radius": "8px",
+          "ripple": null,
+          "selected": "false",
+          "width": 120.15625
+        },
+        {
+          "height": 40,
+          "name": "Month",
+          "pressed": false,
+          "radius": "20px",
+          "ripple": null,
+          "selected": "true",
+          "width": 125.5078125
+        }
+      ],
+      "time": 1791584881700
+    }
+  ],
+  "disabledClick": [
+    {
+      "focused": null,
+      "name": "Calendar period",
+      "selected": [
+        "Month"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "Visible actions",
+      "selected": [
+        "Save",
+        "Add"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "RTL interval",
+      "selected": [
+        "Weekly"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "XS connected icons",
+      "selected": [
+        "Favourite"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "S connected icons",
+      "selected": [
+        "Favourite"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "M connected icons",
+      "selected": [
+        "Favourite"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "L connected icons",
+      "selected": [
+        "Favourite"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "XL connected icons",
+      "selected": [
+        "Favourite"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "Display mode",
+      "selected": [
+        "List"
+      ]
+    },
+    {
+      "focused": null,
+      "name": "Disabled display mode",
+      "selected": [
+        "List"
+      ]
+    }
+  ],
+  "dark": [
+    {
+      "buttons": [
+        {
+          "background": "rgb(74, 68, 88)",
+          "color": "rgb(232, 222, 248)",
+          "label": "Day",
+          "radius": "20px 8px 8px 20px"
+        },
+        {
+          "background": "rgb(74, 68, 88)",
+          "color": "rgb(232, 222, 248)",
+          "label": "Week",
+          "radius": "8px"
+        },
+        {
+          "background": "rgb(203, 194, 219)",
+          "color": "rgb(51, 45, 65)",
+          "label": "Month",
+          "radius": "20px"
+        }
+      ],
+      "name": "Calendar period"
+    },
+    {
+      "buttons": [
+        {
+          "background": "rgb(207, 189, 254)",
+          "color": "rgb(54, 39, 93)",
+          "label": "Save",
+          "radius": "20px"
+        },
+        {
+          "background": "rgb(33, 31, 36)",
+          "color": "rgb(202, 196, 207)",
+          "label": "Info",
+          "radius": "8px"
+        },
+        {
+          "background": "rgb(207, 189, 254)",
+          "color": "rgb(54, 39, 93)",
+          "label": "Add",
+          "radius": "20px"
+        }
+      ],
+      "name": "Visible actions"
+    },
+    {
+      "buttons": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(202, 196, 207)",
+          "label": "Daily",
+          "radius": "8px 20px 20px 8px"
+        },
+        {
+          "background": "rgb(230, 224, 233)",
+          "color": "rgb(50, 47, 53)",
+          "label": "Weekly",
+          "radius": "20px"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "color(srgb 0.391373 0.377569 0.405569)",
+          "label": "Monthly",
+          "radius": "20px 8px 8px 20px"
+        }
+      ],
+      "name": "RTL interval"
+    },
+    {
+      "buttons": [
+        {
+          "background": "rgb(207, 189, 254)",
+          "color": "rgb(54, 39, 93)",
+          "label": "Favourite",
+          "radius": "16px"
+        },
+        {
+          "background": "rgb(33, 31, 36)",
+          "color": "rgb(202, 196, 207)",
+          "label": "Details",
+          "radius": "4px 16px 16px 4px"
+        }
+      ],
+      "name": "XS connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "background": "rgb(207, 189, 254)",
+          "color": "rgb(54, 39, 93)",
+          "label": "Favourite",
+          "radius": "20px"
+        },
+        {
+          "background": "rgb(33, 31, 36)",
+          "color": "rgb(202, 196, 207)",
+          "label": "Details",
+          "radius": "8px 20px 20px 8px"
+        }
+      ],
+      "name": "S connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "background": "rgb(207, 189, 254)",
+          "color": "rgb(54, 39, 93)",
+          "label": "Favourite",
+          "radius": "28px"
+        },
+        {
+          "background": "rgb(33, 31, 36)",
+          "color": "rgb(202, 196, 207)",
+          "label": "Details",
+          "radius": "8px 28px 28px 8px"
+        }
+      ],
+      "name": "M connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "background": "rgb(207, 189, 254)",
+          "color": "rgb(54, 39, 93)",
+          "label": "Favourite",
+          "radius": "48px"
+        },
+        {
+          "background": "rgb(33, 31, 36)",
+          "color": "rgb(202, 196, 207)",
+          "label": "Details",
+          "radius": "16px 48px 48px 16px"
+        }
+      ],
+      "name": "L connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "background": "rgb(207, 189, 254)",
+          "color": "rgb(54, 39, 93)",
+          "label": "Favourite",
+          "radius": "68px"
+        },
+        {
+          "background": "rgb(33, 31, 36)",
+          "color": "rgb(202, 196, 207)",
+          "label": "Details",
+          "radius": "20px 68px 68px 20px"
+        }
+      ],
+      "name": "XL connected icons"
+    },
+    {
+      "buttons": [
+        {
+          "background": "rgb(207, 189, 254)",
+          "color": "rgb(54, 39, 93)",
+          "label": "List",
+          "radius": "20px"
+        },
+        {
+          "background": "rgb(29, 27, 32)",
+          "color": "rgb(207, 189, 254)",
+          "label": "Grid",
+          "radius": "8px 20px 20px 8px"
+        }
+      ],
+      "name": "Display mode"
+    },
+    {
+      "buttons": [
+        {
+          "background": "color(srgb 0.177255 0.167529 0.192471)",
+          "color": "color(srgb 0.391373 0.377569 0.405569)",
+          "label": "List",
+          "radius": "20px"
+        },
+        {
+          "background": "color(srgb 0.177255 0.167529 0.192471)",
+          "color": "color(srgb 0.391373 0.377569 0.405569)",
+          "label": "Grid",
+          "radius": "8px 20px 20px 8px"
+        }
+      ],
+      "name": "Disabled display mode"
+    }
+  ],
+  "build": {
+    "finalServeSeconds": 7.22,
+    "wasmCheckSeconds": 4.37,
+    "exportExamples": 20,
+    "exportCheckSeconds": 2.95
+  },
+  "evidenceNote": "finalGeometry and finalMotion follow the final typography adjustment; earlier geometry/motion records precede it. Keyboard semantics are unchanged."
+}

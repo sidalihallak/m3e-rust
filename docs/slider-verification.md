@@ -1,5 +1,13 @@
 # Slider — current fidelity update
 
+## Accessibility follow-up — 2026-10-10
+
+See [the accessibility audit](accessibility-verification.md) and
+[raw samples](accessibility-samples.json) for tested behavior and remaining gaps.
+Native inputs now declare vertical/horizontal orientation. The copied range
+example includes an accessible name for both price handles.
+
+
 Date: 2026-10-09. Desktop Codex in-app browser. Scope: component Rust/CSS
 changes in this fix, not complete platform certification.
 

@@ -1,5 +1,14 @@
 # Badge alignment correction — 2026-10-09
 
+## Accessibility follow-up — 2026-10-10
+
+See [the accessibility audit](accessibility-verification.md) and
+[raw samples](accessibility-samples.json) for tested behavior and remaining gaps.
+Numeric status regions now expose polite, atomic announcement text with optional
+application context, while hiding duplicate visual digits from assistive technology.
+Visual geometry is unchanged. Actual spoken live announcements remain unverified.
+
+
 ## Scope and sources
 
 Corrected NotificationBadge / BadgeAnchor in `src/components/badge.rs` and

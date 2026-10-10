@@ -1,0 +1,51 @@
+/* Native controls for composites; upstream button/toggle type and shape tokens.
+   Copy with action_control.rs, icon.css and ripple.css. */
+.m3-action {
+  --ac-height: 40px; --ac-pad: 16px; --ac-icon: 20px; --ac-gap: 8px;
+  --ac-type: 14px; --ac-line: 20px; --ac-weight: 500; --ac-tracking: .1px;
+  --ac-square: 12px; --ac-pressed: 8px; --ac-round: calc(var(--ac-height) / 2);
+  --ac-rest: var(--ac-round); --ac-bg: var(--md-sys-color-primary); --ac-fg: var(--md-sys-color-on-primary);
+  position: relative; isolation: isolate; display: inline-flex; flex: 0 0 auto;
+  align-items: center; justify-content: center; box-sizing: border-box;
+  height: var(--ac-height); min-width: max-content; padding-inline: var(--ac-pad);
+  border: 1px solid transparent; border-radius: var(--ac-rest);
+  color: var(--ac-fg); background: var(--ac-bg); box-shadow: var(--ac-shadow, none);
+  font: var(--ac-weight) var(--ac-type)/var(--ac-line) Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: var(--ac-tracking); white-space: nowrap; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-radius 240ms var(--m3-effects-default), background-color 200ms cubic-bezier(.2,0,0,1), color 200ms cubic-bezier(.2,0,0,1), box-shadow 200ms cubic-bezier(.2,0,0,1);
+}
+.m3-action--xs { --ac-height: 32px; --ac-pad: 12px; --ac-icon: 20px; }
+.m3-action--m { --ac-height: 56px; --ac-pad: 24px; --ac-icon: 24px; --ac-type: 16px; --ac-line: 24px; --ac-tracking: .2px; --ac-square: 16px; --ac-pressed: 12px; }
+.m3-action--l { --ac-height: 96px; --ac-pad: 48px; --ac-icon: 32px; --ac-gap: 12px; --ac-type: 24px; --ac-line: 32px; --ac-weight: 400; --ac-tracking: 0px; --ac-square: 28px; --ac-pressed: 16px; }
+.m3-action--xl { --ac-height: 136px; --ac-pad: 64px; --ac-icon: 40px; --ac-gap: 16px; --ac-type: 32px; --ac-line: 40px; --ac-weight: 400; --ac-tracking: 0px; --ac-square: 28px; --ac-pressed: 16px; }
+.m3-action--square { --ac-rest: var(--ac-square); }
+.m3-action--icon-only { width: var(--ac-height); min-width: 0; padding-inline: 0; }
+.m3-action--icon-only.m3-action--s { --ac-icon: 24px; }
+.m3-action::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: currentColor; opacity: 0; pointer-events: none; }
+/* Only the ripple clips. Native hit targets remain at least 48x48 CSS pixels. */
+.m3-action::after { content: ""; position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; min-width: 48px; min-height: 48px; transform: translate(-50%, -50%); }
+.m3-action:hover:not(:disabled)::before { opacity: .08; }
+.m3-action:focus-visible { outline: 3px solid var(--md-sys-color-primary); outline-offset: 3px; z-index: 2; }
+.m3-action:focus-visible::before { opacity: .1; }
+.m3-action[data-ripple-pressed=true]:not(:disabled) { border-radius: var(--ac-pressed); }
+.m3-action__content { display: inline-flex; align-items: center; justify-content: center; gap: var(--ac-gap); position: relative; z-index: 1; pointer-events: none; }
+.m3-action__icon { --m3-icon-size: var(--ac-icon); flex: 0 0 auto; }
+.m3-action--tonal { --ac-bg: var(--md-sys-color-secondary-container); --ac-fg: var(--md-sys-color-on-secondary-container); }
+.m3-action--outlined { --ac-bg: transparent; --ac-fg: var(--md-sys-color-on-surface-variant); border-color: var(--md-sys-color-outline-variant); }
+.m3-action--outlined.m3-action--l { border-width: 2px; }
+.m3-action--outlined.m3-action--xl { border-width: 3px; }
+.m3-action--elevated { --ac-bg: var(--md-sys-color-surface-container-low); --ac-fg: var(--md-sys-color-primary); --ac-shadow: 0 1px 2px rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15); }
+.m3-action--elevated:hover:not(:disabled) { --ac-shadow: 0 1px 2px rgb(0 0 0 / .3), 0 2px 6px 2px rgb(0 0 0 / .15); }
+.m3-action--elevated[data-ripple-pressed=true]:not(:disabled) { --ac-shadow: 0 1px 2px rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15); }
+.m3-action--text { --ac-bg: transparent; --ac-fg: var(--md-sys-color-primary); }
+.m3-action--filled.m3-action--toggle { --ac-bg: var(--md-sys-color-surface-container); --ac-fg: var(--md-sys-color-on-surface-variant); }
+.m3-action--toggle[aria-pressed=true] { --ac-rest: var(--ac-square); }
+.m3-action--toggle.m3-action--square[aria-pressed=true] { --ac-rest: var(--ac-round); }
+.m3-action--filled.m3-action--toggle[aria-pressed=true], .m3-action--elevated.m3-action--toggle[aria-pressed=true] { --ac-bg: var(--md-sys-color-primary); --ac-fg: var(--md-sys-color-on-primary); }
+.m3-action--tonal.m3-action--toggle[aria-pressed=true] { --ac-bg: var(--md-sys-color-secondary); --ac-fg: var(--md-sys-color-on-secondary); }
+.m3-action--outlined.m3-action--toggle[aria-pressed=true] { --ac-bg: var(--md-sys-color-inverse-surface); --ac-fg: var(--md-sys-color-inverse-on-surface); border-color: transparent; }
+.m3-action:disabled { --ac-bg: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, var(--md-sys-color-surface)); --ac-fg: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, var(--md-sys-color-surface)); --ac-shadow: none; cursor: default; }
+.m3-action--outlined:disabled, .m3-action--text:disabled { --ac-bg: transparent; }
+.m3-action--outlined:disabled { border-color: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent); }
+@media (prefers-reduced-motion: reduce) { .m3-action { transition-duration: .01ms !important; } }

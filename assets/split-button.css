@@ -1,0 +1,20 @@
+/* Official split tokens v34.0.21 and upstream split-button.tsx. */
+.m3-split { --split-h: 40px; --split-inner: 4px; --split-active: 12px; --split-icon: 22px; --split-trail-width: 48px; --split-offset: -1px; --split-lead-start: 16px; --split-lead-end: 12px; display: inline-flex; align-items: center; gap: 2px; margin-block: max(0px, calc((48px - var(--split-h)) / 2)); isolation: isolate; }
+.m3-split--xs { --split-h: 32px; --split-active: 8px; --split-icon: 22px; --split-trail-width: 48px; --split-offset: -1px; --split-lead-start: 12px; --split-lead-end: 10px; }
+.m3-split--m { --split-h: 56px; --split-icon: 26px; --split-trail-width: 56px; --split-offset: -2px; --split-lead-start: 24px; --split-lead-end: 24px; }
+.m3-split--l { --split-h: 96px; --split-inner: 8px; --split-active: 20px; --split-icon: 38px; --split-trail-width: 96px; --split-offset: -3px; --split-lead-start: 48px; --split-lead-end: 48px; }
+.m3-split--xl { --split-h: 136px; --split-inner: 12px; --split-active: 20px; --split-icon: 50px; --split-trail-width: 136px; --split-offset: -6px; --split-lead-start: 64px; --split-lead-end: 64px; }
+.m3-split > .m3-action { min-width: 48px; }
+.m3-split > .m3-split__leading { border-radius: calc(var(--split-h) / 2); border-start-end-radius: var(--split-inner); border-end-end-radius: var(--split-inner); padding-inline-start: var(--split-lead-start); padding-inline-end: var(--split-lead-end); }
+.m3-split > .m3-split__leading.m3-action--icon-only { padding-inline: 0; }
+.m3-split > .m3-split__trailing { width: var(--split-trail-width); border-radius: calc(var(--split-h) / 2); border-start-start-radius: var(--split-inner); border-end-start-radius: var(--split-inner); --ac-icon: var(--split-icon); }
+.m3-split > .m3-split__leading:is(:hover,:focus,[data-ripple-pressed=true]):not(:disabled) { border-start-end-radius: var(--split-active); border-end-end-radius: var(--split-active); }
+.m3-split > .m3-split__trailing:is(:hover,:focus,[data-ripple-pressed=true]):not(:disabled) { border-start-start-radius: var(--split-active); border-end-start-radius: var(--split-active); }
+.m3-split > .m3-split__trailing[aria-expanded=true]:not(:disabled) { border-radius: calc(var(--split-h) / 2); }
+.m3-split__trailing[aria-expanded=true]::before { opacity: .1; }
+/* Inherited direction avoids the bundler's :dir() to :lang() lowering. */
+[dir=rtl] { --m3-split-direction: -1; }
+[dir=ltr] { --m3-split-direction: 1; }
+.m3-split__trailing .m3-action__icon { transform: translateX(calc(var(--split-offset) * var(--m3-split-direction, 1))) rotate(0deg); transition: transform var(--m3-standard-fast-spatial-duration) var(--m3-standard-fast-spatial); }
+.m3-split__trailing[aria-expanded=true] .m3-action__icon { transform: translateX(0) rotate(calc(180deg * var(--m3-split-direction, 1))); }
+@media (prefers-reduced-motion: reduce) { .m3-split__trailing .m3-action__icon { transition-duration: .01ms; } }

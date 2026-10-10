@@ -11,7 +11,8 @@
  * Prefix and suffix show only while the label is floated, as in Material. Counters and
  * multi-line fields follow the Material layout; their exact spacing is a choice.
  */
-.m3-field { --field-label-x: 16px; display: inline-flex; flex-direction: column; width: 280px; max-width: 100%; box-sizing: border-box; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+/* The containing layout owns the width, matching upstream w-full. */
+.m3-field { --field-label-x: 16px; display: inline-flex; flex-direction: column; width: 100%; min-width: 0; max-width: 100%; box-sizing: border-box; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
 
 .m3-field__container {
   --field-caret: var(--md-sys-color-primary);

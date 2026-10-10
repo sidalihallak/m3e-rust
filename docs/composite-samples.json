@@ -1,0 +1,348 @@
+{
+  "date": "2026-10-10",
+  "provenance": "Retained excerpts transcribed from actual CUA tool output before the runtime/session interruption. Complete in-memory buffers were lost. Observed summaries are not raw per-frame traces.",
+  "platform": "macOS desktop, Codex in-app browser. 360x800 is a desktop viewport override, not Android.",
+  "standard": {
+    "observed_summary": {
+      "samples": 35,
+      "container_width_px": 279.1015625,
+      "rest_widths_px": [
+        85.7578125,
+        97.578125,
+        71.765625
+      ],
+      "copy_target_width_px": 112.21484375,
+      "copy_peak_width_px": 113.4296875,
+      "final_widths_px": [
+        85.7578125,
+        97.578125,
+        71.765625
+      ],
+      "required_weekly_after_click": "true",
+      "rtl_arrow_left_from_save": "Info",
+      "rtl_next_skips_disabled": "Save"
+    }
+  },
+  "split": {
+    "retained_frames": {
+      "ltr_final": {
+        "time": 1791629214655,
+        "color": "rgb(101, 85, 143)",
+        "expanded": "true",
+        "icon": "matrix(-1, 0, 0, -1, 0, 0)",
+        "radius": "20px"
+      },
+      "rtl": [
+        {
+          "time": 1791629215470,
+          "expanded": "false",
+          "icon": "matrix(1, 0, 0, 1, 1, 0)",
+          "radius": "20px 4px 4px 20px"
+        },
+        {
+          "time": 1791629215505,
+          "expanded": "true",
+          "icon": "matrix(0.991182, -0.132507, 0.132507, 0.991182, 0.957697, 0)",
+          "radius": "20px 4.82367px 4.82367px 20px"
+        },
+        {
+          "time": 1791629215542,
+          "expanded": "true",
+          "icon": "matrix(-0.265668, -0.964064, 0.964064, -0.265668, 0.414407, 0)",
+          "radius": "20px 13.3817px 13.3817px 20px"
+        },
+        {
+          "time": 1791629215576,
+          "expanded": "true",
+          "icon": "matrix(-0.911416, -0.411486, 0.411486, -0.911416, 0.13499, 0)",
+          "radius": "20px 17.5052px 17.5052px 20px"
+        },
+        {
+          "time": 1791629216212,
+          "expanded": "true",
+          "icon": "matrix(-1, 0, 0, -1, 0, 0)",
+          "radius": "20px"
+        }
+      ]
+    },
+    "observed_summary": {
+      "gap_px": 2,
+      "trailing_widths_px": [
+        48,
+        48,
+        56,
+        96,
+        136
+      ],
+      "heights_px": [
+        32,
+        40,
+        56,
+        96,
+        136
+      ],
+      "trailing_icons_px": [
+        22,
+        22,
+        26,
+        38,
+        50
+      ],
+      "tab_from_leading": "More Filled save options",
+      "leading_click": {
+        "status_save_clicked_once": true,
+        "open_menus": 0
+      }
+    }
+  },
+  "dialog": {
+    "retained_frames": {
+      "open": [
+        {
+          "time": 1791629126494,
+          "opacity": "1",
+          "width": 0,
+          "height": 0,
+          "transform": "none"
+        },
+        {
+          "time": 1791629126602,
+          "opacity": "0.263949",
+          "phase": "opening",
+          "transform": "matrix(0.818497, 0, 0, 0.818497, 0, 0)"
+        },
+        {
+          "time": 1791629126639,
+          "opacity": "0.743205",
+          "phase": "opening",
+          "transform": "matrix(0.883379, 0, 0, 0.883379, 0, 0)"
+        },
+        {
+          "time": 1791629126673,
+          "opacity": "0.908318",
+          "phase": "opening",
+          "transform": "matrix(0.93188, 0, 0, 0.93188, 0, 0)"
+        },
+        {
+          "time": 1791629126706,
+          "opacity": "0.96901",
+          "phase": "opening",
+          "transform": "matrix(0.966204, 0, 0, 0.966204, 0, 0)"
+        },
+        {
+          "time": 1791629126736,
+          "opacity": "0.986872",
+          "phase": "opening",
+          "transform": "matrix(0.982953, 0, 0, 0.982953, 0, 0)"
+        }
+      ],
+      "exit_before_unit_fix_surface_fixed_150ms": [
+        {
+          "time": 1791629042889,
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "time": 1791629042926,
+          "opacity": "0.972133",
+          "transform": "matrix(0.997213, 0, 0, 0.997213, 0, 0)"
+        },
+        {
+          "time": 1791629042954,
+          "opacity": "0.910794",
+          "transform": "matrix(0.991079, 0, 0, 0.991079, 0, 0)"
+        },
+        {
+          "time": 1791629042985,
+          "opacity": "0.757683",
+          "transform": "matrix(0.975768, 0, 0, 0.975768, 0, 0)"
+        },
+        {
+          "time": 1791629043014,
+          "opacity": "0.552919",
+          "transform": "matrix(0.955292, 0, 0, 0.955292, 0, 0)"
+        }
+      ],
+      "final_close": [
+        {
+          "time": 1791629128422,
+          "phase": "closed",
+          "height": 0,
+          "width": 0,
+          "transform": "none"
+        },
+        {
+          "time": 1791629128456,
+          "phase": "closed",
+          "height": 0,
+          "width": 0,
+          "transform": "none"
+        }
+      ]
+    },
+    "observed_summary": {
+      "native_modal": true,
+      "form_body_client_height_px": 148,
+      "form_body_scroll_height_px": 148,
+      "form_body_tabindex": -1,
+      "initial_focus": "Project name input",
+      "surface_width_px": 448,
+      "surface_radius": "28px",
+      "padding": "24px",
+      "forward_trap": "Project name input",
+      "backward_trap": "Create",
+      "modal_menu_tab": {
+        "focus": "Cancel",
+        "expanded": "false"
+      },
+      "confirm": {
+        "focus": "Create project dialog",
+        "open": false,
+        "created_status": true
+      },
+      "escape": {
+        "focus": "Create project dialog",
+        "open": false
+      },
+      "basic_outside": {
+        "focus": "Create project dialog",
+        "open": false
+      },
+      "scroll_end": {
+        "above": "true",
+        "below": "false",
+        "client": 770,
+        "scroll": 1236,
+        "top": 466
+      },
+      "compact": {
+        "width": 360,
+        "height": 800,
+        "radius": "0px",
+        "header_height": 56,
+        "initial_focus": "Close dialog"
+      }
+    }
+  },
+  "menu": {
+    "retained_frames": {
+      "open": [
+        {
+          "time": 1791629128894,
+          "opacity": "1",
+          "height": 0,
+          "width": 0,
+          "transform": "none"
+        },
+        {
+          "time": 1791629128926,
+          "opacity": "0",
+          "phase": "opening",
+          "transform": "matrix(1, 0, 0, 0.6, 0, 0)"
+        },
+        {
+          "time": 1791629128957,
+          "opacity": "0.592692",
+          "phase": "opening",
+          "transform": "matrix(1, 0, 0, 0.657325, 0, 0)"
+        },
+        {
+          "time": 1791629128990,
+          "opacity": "0.914361",
+          "phase": "opening",
+          "transform": "matrix(1, 0, 0, 0.766065, 0, 0)"
+        },
+        {
+          "time": 1791629129022,
+          "opacity": "0.984107",
+          "phase": "opening",
+          "transform": "matrix(1, 0, 0, 0.861626, 0, 0)"
+        }
+      ]
+    },
+    "observed_summary": {
+      "checkbox_after_click": "false",
+      "checkbox_remained_open": true,
+      "rtl_focus": "PDF",
+      "rtl_parent": {
+        "x": 215,
+        "width": 192
+      },
+      "rtl_submenu": {
+        "x": 23,
+        "width": 192,
+        "side": "left"
+      },
+      "compact_parent": {
+        "x": 37,
+        "width": 192,
+        "right": 229
+      },
+      "compact_submenu": {
+        "x": 229,
+        "width": 123,
+        "right": 352
+      },
+      "compact_viewport": {
+        "width": 360,
+        "height": 800
+      }
+    }
+  },
+  "reduced_motion": {
+    "os_enabled_and_restored": true,
+    "browser_media_matched": true,
+    "dialog_phases": [
+      "open",
+      "open",
+      "open",
+      "open",
+      "open",
+      "open",
+      "open",
+      "open",
+      "open",
+      "open",
+      "open"
+    ],
+    "menu_transforms": [
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none"
+    ],
+    "standard_copy_widths_px": [
+      97.578125,
+      97.578125,
+      97.578125,
+      97.578125,
+      97.578125,
+      97.578125,
+      97.578125,
+      97.578125,
+      97.578125,
+      97.578125,
+      97.578125,
+      97.578125
+    ],
+    "split_result": "Functional end state reached without intermediate rotation; full sample buffer lost."
+  },
+  "final_build": {
+    "dx_seconds": 33.52,
+    "cargo_check_seconds": 3.24,
+    "export_examples": 27,
+    "export_check_seconds": 0.83,
+    "final_browser_reload": "Blocked by browser URL security policy after session interruption.",
+    "dx_after_formatting_seconds": 7.87,
+    "cargo_after_formatting_seconds": 2.28,
+    "export_check_after_formatting_seconds": 0.49
+  }
+}

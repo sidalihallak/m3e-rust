@@ -117,3 +117,26 @@ python3 scripts/export-kit.py /path/to/my-project/ui-kit
 
 Current verification gaps, optional behaviors and the suggested port order are
 listed in [remaining work](docs/remaining-work.md).
+
+## Accessibility and connected groups
+
+[Accessibility audit](docs/accessibility-verification.md) records keyboard, semantic
+contrast and actual macOS Reduce Motion results, fixes, and screen-reader gaps.
+[Connected button groups](docs/button-group-verification.md) now support single
+and multiple selection, required selection, disabled options, five sizes, two
+shapes, four container styles, icons and RTL-aware keyboard focus. The live gallery
+includes a copyable usage example. Android verification remains paused.
+
+## Groups, split buttons, dialogs and menus
+
+[Standard groups](docs/standard-button-group-verification.md),
+[split buttons](docs/split-button-verification.md),
+[dialogs and alerts](docs/dialog-verification.md), and
+[dropdown/context menus](docs/menu-verification.md) now have copyable Dioxus APIs
+and live examples. Their [verification index](docs/composite-verification.md)
+records reference choices, desktop motion and keyboard checks, build/export
+results and remaining platform gaps. All 27 usage examples compile independently.
+
+Current desktop follow-up: [card](docs/card-verification.md),
+[divider](docs/divider-verification.md), [dialog](docs/dialog-verification.md),
+[field](docs/text-field-verification.md) and [raw browser frames](docs/resumed-browser-verification.json).

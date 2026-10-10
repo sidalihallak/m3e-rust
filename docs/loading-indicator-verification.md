@@ -1,5 +1,14 @@
 # Loading Indicator — current fidelity update
 
+## Accessibility follow-up — 2026-10-10
+
+See [the accessibility audit](accessibility-verification.md) and
+[raw samples](accessibility-samples.json) for tested behavior and remaining gaps.
+Actual macOS Reduce Motion was enabled and restored. Sampled animations stopped
+or became effectively immediate, and indicator updates resumed after restoration.
+This supersedes the historical actual-OS-preference gap for these samples.
+
+
 Date: 2026-10-09. Desktop Codex in-app browser. Scope: component Rust/CSS
 changes in this fix, not complete platform certification.
 

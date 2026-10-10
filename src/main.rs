@@ -1,8 +1,10 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, ChipSize, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, SliderSize, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardActions, Divider, DividerInset, DividerOrientation, TextField, TextFieldVariant, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, IconButtonWidth, Switch};
+use m3e_rust_ui::{ConnectedButtonGroup, ConnectedButtonItem, ConnectedButtonVariant, ButtonGroupSelection, Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, ChipSize, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, SliderSize, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardActions, Divider, DividerInset, DividerOrientation, TextField, TextFieldVariant, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, IconButtonWidth, Switch};
 
 mod theme;
+mod composite_gallery;
+use composite_gallery::CompositeGallery;
 
 use material_colors::color::Rgb;
 
@@ -210,6 +212,7 @@ fn PriceRange() -> Element {
             label: true,
             value: range().0,
             value_end: Some(range().1),
+            aria_label: Some("Price".to_string()),
             onchange_range: move |(start, end): (f64, f64)| range.set((start, end)),
         }
         Slider {
@@ -246,6 +249,24 @@ fn PeriodPicker() -> Element {
     }
 }"#;
 
+const CONNECTED_USAGE: &str = r#"use dioxus::prelude::*;
+use m3e_rust_ui::{ConnectedButtonGroup, ConnectedButtonItem, ConnectedButtonVariant};
+
+#[component]
+fn ConnectedPeriodPicker() -> Element {
+    let mut selected = use_signal(|| vec![1_usize]);
+    rsx! {
+        ConnectedButtonGroup {
+            items: ["Day", "Week", "Month"].into_iter().map(ConnectedButtonItem::new).collect::<Vec<_>>(),
+            selected: selected(),
+            selection_required: true,
+            variant: ConnectedButtonVariant::Tonal,
+            aria_label: "Calendar period",
+            onchange: move |next| selected.set(next),
+        }
+    }
+}"#;
+
 const TABS_USAGE: &str = r#"use dioxus::prelude::*;
 use m3e_rust_ui::{TabItem, Tabs};
 
@@ -263,7 +284,7 @@ fn TripTabs() -> Element {
             onchange: move |index: usize| selected.set(index),
         }
         for (index, label) in labels.into_iter().enumerate() {
-            div { id: "trip-panel-{index}", role: "tabpanel", aria_labelledby: "trip-tab-{index}", hidden: selected() != index, "{label} content" }
+            div { id: "trip-panel-{index}", role: "tabpanel", tabindex: "0", aria_labelledby: "trip-tab-{index}", hidden: selected() != index, "{label} content" }
         }
     }
 }"#;
@@ -304,7 +325,7 @@ fn EventCard() -> Element {
 }"#;
 
 const DIVIDER_USAGE: &str = r#"use dioxus::prelude::*;
-use m3e_rust_ui::{Divider, DividerInset};
+use m3e_rust_ui::{Divider, DividerInset, DividerOrientation};
 
 #[component]
 fn Settings() -> Element {
@@ -312,6 +333,11 @@ fn Settings() -> Element {
         span { "Wi-Fi" }
         Divider { inset: DividerInset::Start }
         span { "Bluetooth" }
+        div { style: "display: flex; align-items: center; gap: 16px; height: 48px; padding-block: 12px; box-sizing: border-box;",
+            span { "Left" }
+            Divider { orientation: DividerOrientation::Vertical }
+            span { "Right" }
+        }
     }
 }"#;
 
@@ -370,6 +396,13 @@ fn App() -> Element {
     let mut dynamic_progress = use_signal(|| false);
     let mut renamed_field = use_signal(|| false);
     let mut tick_value = use_signal(|| 30.0_f64);
+    let mut connected_period = use_signal(|| vec![1_usize]);
+    let mut connected_modes = use_signal(|| vec![0_usize, 2]);
+    let mut connected_optional = use_signal(|| vec![1_usize]);
+    let mut connected_size = use_signal(|| vec![0_usize]);
+    let mut connected_elevation = use_signal(|| vec![0_usize]);
+    let mut badge_count = use_signal(|| 3_u32);
+    let mut rtl_tab = use_signal(|| 0_usize);
     let mut period = use_signal(|| 1_usize);
     let mut trip = use_signal(|| 0_usize);
     let mut detail = use_signal(|| 1_usize);
@@ -408,6 +441,13 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/radio.css") }
         document::Stylesheet { href: asset!("/assets/slider.css") }
         document::Stylesheet { href: asset!("/assets/segmented-button.css") }
+        document::Stylesheet { href: asset!("/assets/button-group.css") }
+        document::Stylesheet { href: asset!("/assets/composite-motion.css") }
+        document::Stylesheet { href: asset!("/assets/action-control.css") }
+        document::Stylesheet { href: asset!("/assets/standard-button-group.css") }
+        document::Stylesheet { href: asset!("/assets/split-button.css") }
+        document::Stylesheet { href: asset!("/assets/menu.css") }
+        document::Stylesheet { href: asset!("/assets/dialog.css") }
         document::Stylesheet { href: asset!("/assets/tabs.css") }
         document::Stylesheet { href: asset!("/assets/badge.css") }
         document::Stylesheet { href: asset!("/assets/card.css") }
@@ -424,7 +464,7 @@ fn App() -> Element {
                 button {
                     class: "mode-toggle",
                     onclick: move |_| dark.toggle(),
-                    span { class: "mode-icon", if dark() { "☼" } else { "◐" } }
+                    span { class: "mode-icon", aria_hidden: "true", if dark() { "☼" } else { "◐" } }
                     if dark() { "Light mode" } else { "Dark mode" }
                 }
             }
@@ -1035,6 +1075,79 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Segmented button usage", code: SEGMENTED_USAGE }
                 }
             }
+            section { class: "wrap roles-section connected-section", id: "connected-button-groups",
+                div { class: "section-heading roles-heading",
+                    div {
+                        p { class: "eyebrow", "17 — M3 EXPRESSIVE" }
+                        h2 { "Connected button groups" }
+                        p { class: "section-description", "Related options, connected by 2dp gaps. Selected buttons become round; pressing changes the shape without moving neighboring buttons. Arrow keys move focus, Space or Enter selects." }
+                    }
+                    span { class: "token-note", "SINGLE · MULTIPLE · REQUIRED" }
+                }
+                div { class: "connected-grid",
+                    article { class: "demo-card",
+                        div { class: "card-topline", span { "REQUIRED · ROUND · TONAL" } }
+                        ConnectedButtonGroup {
+                            items: ["Day", "Week", "Month"].into_iter().map(ConnectedButtonItem::new).collect::<Vec<_>>(),
+                            selected: connected_period(), selection_required: true, variant: ConnectedButtonVariant::Tonal,
+                            aria_label: "Calendar period", onchange: move |next| connected_period.set(next),
+                        }
+                        p { class: "control-label", {format!("Selected: {}", ["Day", "Week", "Month"][connected_period()[0]])} }
+                    }
+                    article { class: "demo-card",
+                        div { class: "card-topline", span { "MULTI SELECT · SQUARE · FILLED" } }
+                        ConnectedButtonGroup {
+                            items: vec![
+                                ConnectedButtonItem { icon: Some(icons::FAVORITE), ..ConnectedButtonItem::new("Save") },
+                                ConnectedButtonItem { icon: Some(icons::INFO), ..ConnectedButtonItem::new("Info") },
+                                ConnectedButtonItem { icon: Some(icons::ADD), ..ConnectedButtonItem::new("Add") },
+                            ],
+                            selected: connected_modes(), selection: ButtonGroupSelection::Multiple, shape: ButtonShape::Square,
+                            aria_label: "Visible actions", onchange: move |next| connected_modes.set(next),
+                        }
+                    }
+                    article { class: "demo-card", dir: "rtl",
+                        div { class: "card-topline", span { "RTL · OPTIONAL · DISABLED ITEM" } }
+                        ConnectedButtonGroup {
+                            items: vec![ConnectedButtonItem::new("Daily"), ConnectedButtonItem::new("Weekly"), ConnectedButtonItem { disabled: true, ..ConnectedButtonItem::new("Monthly") }],
+                            selected: connected_optional(), variant: ConnectedButtonVariant::Outlined,
+                            aria_label: "RTL interval", onchange: move |next| connected_optional.set(next),
+                        }
+                    }
+                    article { class: "demo-card",
+                        div { class: "card-topline", span { "ICON ONLY · ALL SIZES" } }
+                        div { class: "connected-sizes",
+                            for (size, label) in [(ButtonSize::ExtraSmall,"XS"),(ButtonSize::Small,"S"),(ButtonSize::Medium,"M"),(ButtonSize::Large,"L"),(ButtonSize::ExtraLarge,"XL")] {
+                                div { class: "connected-size-row",
+                                    span { class: "control-label", "{label}" }
+                                    ConnectedButtonGroup {
+                                        size,
+                                        items: vec![ConnectedButtonItem { icon: Some(icons::FAVORITE), icon_only: true, ..ConnectedButtonItem::new("Favourite") }, ConnectedButtonItem { icon: Some(icons::INFO), icon_only: true, ..ConnectedButtonItem::new("Details") }],
+                                        selected: connected_size(), selection_required: true,
+                                        aria_label: "{label} connected icons", onchange: move |next| connected_size.set(next),
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    article { class: "demo-card",
+                        div { class: "card-topline", span { "ELEVATED · ENABLED / DISABLED" } }
+                        ConnectedButtonGroup {
+                            items: ["List", "Grid"].into_iter().map(ConnectedButtonItem::new).collect::<Vec<_>>(),
+                            selected: connected_elevation(), variant: ConnectedButtonVariant::Elevated,
+                            aria_label: "Display mode", onchange: move |next| connected_elevation.set(next),
+                        }
+                        p { class: "control-label", "Disabled" }
+                        ConnectedButtonGroup {
+                            items: ["List", "Grid"].into_iter().map(ConnectedButtonItem::new).collect::<Vec<_>>(),
+                            selected: vec![0], disabled: true, variant: ConnectedButtonVariant::Elevated,
+                            aria_label: "Disabled display mode",
+                        }
+                    }
+                    CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Connected button group usage", code: CONNECTED_USAGE }
+                }
+            }
+            CompositeGallery {}
             section { class: "wrap roles-section tabs-section",
                 div { class: "section-heading roles-heading",
                     div {
@@ -1057,7 +1170,7 @@ fn App() -> Element {
                                 onchange: move |index: usize| trip.set(index),
                             }
                             for (index, label) in ["Flights", "Hotels", "Cars"].into_iter().enumerate() {
-                                div { class: "tabs-panel", id: "trip-panel-{index}", role: "tabpanel", aria_labelledby: "trip-tab-{index}", hidden: trip() != index, "Panel: {label}" }
+                                div { class: "tabs-panel", id: "trip-panel-{index}", role: "tabpanel", tabindex: "0", aria_labelledby: "trip-tab-{index}", hidden: trip() != index, "Panel: {label}" }
                             }
                         }
                     }
@@ -1077,7 +1190,7 @@ fn App() -> Element {
                                 onchange: move |index: usize| detail.set(index),
                             }
                             for (index, label) in ["Favourites", "Details", "Add"].into_iter().enumerate() {
-                                div { class: "tabs-panel", id: "detail-panel-{index}", role: "tabpanel", aria_labelledby: "detail-tab-{index}", hidden: detail() != index, "Panel: {label}" }
+                                div { class: "tabs-panel", id: "detail-panel-{index}", role: "tabpanel", tabindex: "0", aria_labelledby: "detail-tab-{index}", hidden: detail() != index, "Panel: {label}" }
                             }
                         }
                     }
@@ -1098,8 +1211,20 @@ fn App() -> Element {
                                 onchange: move |index: usize| spec.set(index),
                             }
                             for (index, label) in ["Overview", "Specs", "Reviews"].into_iter().enumerate() {
-                                div { class: "tabs-panel", id: "spec-panel-{index}", role: "tabpanel", aria_labelledby: "spec-tab-{index}", hidden: spec() != index, "Panel: {label}" }
+                                div { class: "tabs-panel", id: "spec-panel-{index}", role: "tabpanel", tabindex: "0", aria_labelledby: "spec-tab-{index}", hidden: spec() != index, "Panel: {label}" }
                             }
+                        }
+                    }
+                    article { class: "demo-card tabs-specimen", dir: "rtl",
+                        div { class: "card-topline", span { "RTL KEYBOARD" } }
+                        Tabs {
+                            items: vec![TabItem::new("One"),TabItem::new("Two"),TabItem::new("Three")], selected: rtl_tab(),
+                            tab_ids: (0..3).map(|i| format!("rtl-tab-{i}")).collect::<Vec<_>>(),
+                            panel_ids: (0..3).map(|i| format!("rtl-panel-{i}")).collect::<Vec<_>>(),
+                            aria_label: "RTL tab navigation", onchange: move |i| rtl_tab.set(i)
+                        }
+                        for (i, label) in ["One", "Two", "Three"].into_iter().enumerate() {
+                            div { class: "tabs-panel", id: "rtl-panel-{i}", role: "tabpanel", tabindex: "0", aria_labelledby: "rtl-tab-{i}", hidden: rtl_tab() != i, "Panel: {label}" }
                         }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Tabs usage", code: TABS_USAGE }
@@ -1147,6 +1272,11 @@ fn App() -> Element {
                             NotificationBadge { count: 1000 }
                         }
                     }
+                    article { class: "demo-card badge-specimen",
+                        div { class: "card-topline", span { "LIVE COUNT · ANNOUNCEMENT" } }
+                        NotificationBadge { count: badge_count(), aria_label: format!("{} unread messages in Inbox", badge_count()) }
+                        Button { variant: ButtonVariant::Text, onclick: move |_| badge_count += 1, "Add notification" }
+                    }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Badge usage", code: BADGE_USAGE }
                 }
             }
@@ -1155,7 +1285,7 @@ fn App() -> Element {
                     div {
                         p { class: "eyebrow", "14 — CARD" }
                         h2 { "Cards" }
-                        p { class: "section-description", "Filled, elevated and outlined cards with 12dp corners. Interactive cards are native buttons: they respond to hover, press and keyboard focus, and disabled cards show at 38%." }
+                        p { class: "section-description", "Filled, elevated and outlined cards with 12dp corners. Interactive cards are native buttons with ripple and keyboard focus. Disabled outlined cards use a lighter border and faded content." }
                     }
                     span { class: "token-note", "MATERIAL WEB TOKENS" }
                 }
@@ -1164,8 +1294,10 @@ fn App() -> Element {
                         div { class: "card-topline", span { "FILLED" } span { class: "component-index", "A" } }
                         div { class: "card-stack",
                             Card { variant: CardVariant::Filled,
-                                p { class: "m3-card__headline", "Filled card" }
-                                p { class: "m3-card__supporting", "surface-container-highest, no elevation at rest." }
+                                CardBody {
+                                    span { class: "m3-card__headline", "Filled card" }
+                                    span { class: "m3-card__supporting", "surface-container-highest, no elevation at rest." }
+                                }
                             }
                         }
                     }
@@ -1193,6 +1325,10 @@ fn App() -> Element {
                             Card { variant: CardVariant::Filled, interactive: true, disabled: true,
                                 span { class: "m3-card__headline", "Disabled card" }
                                 span { class: "m3-card__supporting", "38% opacity; not focusable." }
+                            }
+                            Card { variant: CardVariant::Outlined, interactive: true, disabled: true,
+                                span { class: "m3-card__headline", "Disabled outlined card" }
+                                span { class: "m3-card__supporting", "12% outline; 38% content; not focusable." }
                             }
                         }
                     }

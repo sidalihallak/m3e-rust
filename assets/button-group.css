@@ -1,0 +1,85 @@
+/* Official M3 connected group geometry; shared shadcn-m3e DefaultEffects
+   motion and Material ripple. See docs/button-group-verification.md. */
+.m3-connected {
+  --cg-height: 40px;
+  --cg-inner: 8px;
+  --cg-outer: calc(var(--cg-height) / 2);
+  --cg-pressed: 4px;
+  --cg-padding: 16px;
+  --cg-type: 14px;
+  --cg-line: 20px;
+  --cg-weight: 500;
+  --cg-tracking: .1px;
+  --cg-icon: 20px;
+  --cg-gap: 8px;
+  --cg-spring: linear(0, .0616, .1912, .3374, .4751, .594, .6916, .7689, .8288, .8743, .9084, .9337, .9523, .9658, .9756, .9826, .9877, .9913, .9939, .9957, .997, .9979, .9985, .999, 1);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+  margin-block: max(0px, calc((48px - var(--cg-height)) / 2));
+  isolation: isolate;
+}
+.m3-connected--xs { --cg-height: 32px; --cg-inner: 4px; --cg-type: 14px; --cg-icon: 20px; --cg-padding: 12px; --cg-gap: 6px; }
+.m3-connected--m { --cg-height: 56px; --cg-type: 16px; --cg-line: 24px; --cg-tracking: .2px; --cg-icon: 24px; --cg-padding: 24px; }
+.m3-connected--l { --cg-height: 96px; --cg-inner: 16px; --cg-type: 24px; --cg-line: 32px; --cg-weight: 400; --cg-tracking: 0px; --cg-icon: 32px; --cg-padding: 48px; --cg-gap: 12px; }
+.m3-connected--xl { --cg-height: 136px; --cg-inner: 20px; --cg-type: 32px; --cg-line: 40px; --cg-weight: 400; --cg-tracking: 0px; --cg-icon: 40px; --cg-padding: 64px; --cg-gap: 16px; }
+.m3-connected--square { --cg-outer: var(--cg-inner); }
+.m3-connected__button {
+  --cg-background: var(--md-sys-color-surface-container);
+  --cg-foreground: var(--md-sys-color-on-surface-variant);
+  --cg-border: transparent;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 48px;
+  height: var(--cg-height);
+  padding-inline: var(--cg-padding);
+  border: 1px solid var(--cg-border);
+  border-radius: var(--cg-inner);
+  background: var(--cg-background);
+  color: var(--cg-foreground);
+  font: var(--cg-weight) var(--cg-type)/var(--cg-line) Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: var(--cg-tracking);
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-radius 240ms var(--cg-spring), background-color 200ms cubic-bezier(.2,0,0,1), color 200ms cubic-bezier(.2,0,0,1);
+}
+/* Native hit extension: reserve matching group margins and clip only the ripple. */
+.m3-connected__button::after { content: ""; position: absolute; inset-inline: 0; inset-block: min(0px, calc((var(--cg-height) - 48px) / 2)); }
+.m3-connected__button::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: currentColor; opacity: 0; pointer-events: none; }
+.m3-connected__button:hover:not(:disabled)::before { opacity: .08; }
+.m3-connected__button:focus-visible { outline: 3px solid var(--md-sys-color-primary); outline-offset: 3px; z-index: 1; }
+.m3-connected__button:focus-visible::before { opacity: .1; }
+.m3-connected__content { display: inline-flex; align-items: center; justify-content: center; gap: var(--cg-gap); position: relative; z-index: 1; pointer-events: none; }
+.m3-connected__icon { --m3-icon-size: var(--cg-icon); }
+.m3-connected__button:first-child { border-start-start-radius: var(--cg-outer); border-end-start-radius: var(--cg-outer); }
+.m3-connected__button:last-child { border-start-end-radius: var(--cg-outer); border-end-end-radius: var(--cg-outer); }
+/* Official connected toggles use a fully round checked shape (Compose tokens).
+   This differs from upstream group CSS, which keeps the group's end corners. */
+.m3-connected .m3-connected__button[aria-pressed=true] { border-radius: calc(var(--cg-height) / 2); }
+.m3-connected .m3-connected__button[data-ripple-pressed=true]:not(:disabled) { border-radius: var(--cg-pressed); }
+.m3-connected .m3-connected__button[data-ripple-pressed=true]:first-child:not(:disabled) { border-start-start-radius: var(--cg-outer); border-end-start-radius: var(--cg-outer); }
+.m3-connected .m3-connected__button[data-ripple-pressed=true]:last-child:not(:disabled) { border-start-end-radius: var(--cg-outer); border-end-end-radius: var(--cg-outer); }
+.m3-connected--filled .m3-connected__button[aria-pressed=true],
+.m3-connected--elevated .m3-connected__button[aria-pressed=true] { --cg-background: var(--md-sys-color-primary); --cg-foreground: var(--md-sys-color-on-primary); }
+.m3-connected--tonal .m3-connected__button { --cg-background: var(--md-sys-color-secondary-container); --cg-foreground: var(--md-sys-color-on-secondary-container); }
+.m3-connected--tonal .m3-connected__button[aria-pressed=true] { --cg-background: var(--md-sys-color-secondary); --cg-foreground: var(--md-sys-color-on-secondary); }
+.m3-connected--outlined .m3-connected__button { --cg-background: transparent; --cg-border: var(--md-sys-color-outline-variant); }
+.m3-connected--outlined .m3-connected__button[aria-pressed=true] { --cg-background: var(--md-sys-color-inverse-surface); --cg-foreground: var(--md-sys-color-inverse-on-surface); --cg-border: transparent; }
+.m3-connected--elevated .m3-connected__button { --cg-background: var(--md-sys-color-surface-container-low); --cg-foreground: var(--md-sys-color-primary); box-shadow: 0 1px 2px rgb(0 0 0 / .24), 0 1px 3px 1px rgb(0 0 0 / .14); }
+.m3-connected .m3-connected__button:disabled { --cg-background: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, var(--md-sys-color-surface)); --cg-foreground: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, var(--md-sys-color-surface)); --cg-border: transparent; box-shadow: none; cursor: default; }
+.m3-connected--outlined .m3-connected__button:disabled { --cg-background: transparent; --cg-border: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent); }
+@media (prefers-reduced-motion: reduce) { .m3-connected__button { transition-duration: .01ms; } }
+
+/* Icon-only options retain the default icon-button width, with 48dp minimum. */
+.m3-connected__button--icon-only { flex: 0 0 max(48px, var(--cg-height)); width: max(48px, var(--cg-height)); padding-inline: 0; }
+.m3-connected:not(:has(> button:not(.m3-connected__button--icon-only))) { width: max-content; max-width: 100%; }
+
+.m3-connected--outlined.m3-connected--l .m3-connected__button { border-width: 2px; }
+.m3-connected--outlined.m3-connected--xl .m3-connected__button { border-width: 3px; }

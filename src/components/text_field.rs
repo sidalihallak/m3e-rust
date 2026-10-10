@@ -154,15 +154,20 @@ pub fn TextField(
     }
 }
 
-/// Sets `--notch-text-w` on the field to the floated label's width, after font loading and whenever its size changes.
+/// Sets the notch from the floated label's layout width. Viewport bounds include
+/// ancestor transforms (for example a dialog's entry scale) and under-size the gap.
 fn notch_script(id: &str) -> String {
     format!(
         r#"
 const root = document.getElementById("{id}-root");
 if (!root) return false;
-const measure = () => {{
+const measure = (entries) => {{
   const m = root.querySelector(".m3-field__measure");
-  if (m) root.style.setProperty("--notch-text-w", m.getBoundingClientRect().width + "px");
+  if (!m) return;
+  const entry = Array.isArray(entries) ? entries.find(e => e.target === m) : null;
+  const box = entry?.borderBoxSize;
+  const width = (Array.isArray(box) ? box[0]?.inlineSize : box?.inlineSize) ?? m.offsetWidth;
+  root.style.setProperty("--notch-text-w", width + "px");
 }};
 measure();
 const m = root.querySelector(".m3-field__measure");

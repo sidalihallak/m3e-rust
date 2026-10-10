@@ -153,6 +153,7 @@ pub fn Slider(
                     step: "{step_attr}",
                     value: fmt(lo),
                     disabled,
+                    "aria-orientation": if vertical { "vertical" } else { "horizontal" },
                     "aria-label": aria_label.clone().map(|l| if range { format!("{l} start") } else { l }),
                     oninput: move |event| {
                         if let Ok(v) = event.value().parse::<f64>() {
@@ -173,6 +174,7 @@ pub fn Slider(
                         step: "{step_attr}",
                         value: fmt(hi),
                         disabled,
+                        "aria-orientation": if vertical { "vertical" } else { "horizontal" },
                         "aria-label": aria_label.clone().map(|l| format!("{l} end")),
                         oninput: move |event| {
                             if let Ok(v) = event.value().parse::<f64>() {

@@ -199,7 +199,7 @@ button { cursor: pointer; }
 .card-section { min-width: 0; }
 .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
 .card-specimen { min-width: 0; }
-.card-stack { display: flex; flex-direction: column; gap: 18px; padding: 16px 8px 8px; }
+.card-stack { display: flex; flex-direction: column; gap: 8px; padding: 16px 8px 8px; }
 .card-grid .code-card { grid-column: 1 / -1; }
 @media (max-width: 760px) { .card-grid { grid-template-columns: 1fr; } }
 
@@ -211,7 +211,7 @@ button { cursor: pointer; }
 .divider-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
 .divider-specimen { min-width: 0; }
 .divider-stack { display: flex; flex-direction: column; gap: 14px; padding: 16px 8px 8px; }
-.divider-row { display: flex; align-items: stretch; gap: 16px; height: 120px; padding: 16px 8px; }
+.divider-row { display: flex; align-items: center; gap: 16px; height: 48px; padding: 12px 8px; }
 .divider-grid .code-card { grid-column: 1 / -1; }
 @media (max-width: 760px) { .divider-grid { grid-template-columns: 1fr; } }
 
@@ -222,3 +222,21 @@ button { cursor: pointer; }
 .field-grid .code-card { grid-column: 1 / -1; }
 @media (max-width: 760px) { .field-grid { grid-template-columns: 1fr; } }
 
+
+.connected-grid { align-items: start; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.connected-grid .demo-card { min-width: 0; }
+.connected-grid .code-card { grid-column: 1 / -1; }
+.connected-sizes { display: flex; flex-direction: column; gap: 16px; }
+.connected-size-row { display: flex; align-items: center; gap: 16px; }
+.connected-size-row > .control-label { width: 24px; flex: 0 0 24px; }
+.connected-size-row > .m3-connected { max-width: 340px; }
+.tabs-panel:focus-visible { outline: 3px solid var(--md-sys-color-primary); outline-offset: 3px; }
+@media (max-width: 760px) { .connected-grid { grid-template-columns: 1fr; } }
+
+.composite-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; align-items: start; }
+.composite-grid > .demo-card { min-width: 0; }
+.composite-grid > .code-card { grid-column: 1 / -1; }
+.composite-stack { display: flex; flex-direction: column; gap: 16px; }
+.composite-size-row { display: flex; align-items: center; gap: 16px; }
+.composite-size-row > .control-label { flex: 0 0 52px; }
+@media (max-width: 760px) { .composite-grid { grid-template-columns: 1fr; } }

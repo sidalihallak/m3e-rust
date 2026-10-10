@@ -1,5 +1,14 @@
 # Button motion verification
 
+## Accessibility follow-up — 2026-10-10
+
+See [the accessibility audit](accessibility-verification.md) and
+[raw samples](accessibility-samples.json) for tested behavior and remaining gaps.
+Actual macOS Reduce Motion was enabled and restored. Sampled animations stopped
+or became effectively immediate, and indicator updates resumed after restoration.
+This supersedes the historical actual-OS-preference gap for these samples.
+
+
 Verified in the Dioxus web preview on 2026-10-09 using real browser pointer
 clicks and keyboard activation. Computed styles were sampled concurrently with
 the input at approximately 30ms intervals. These samples measure the actual

@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-10",
+  "method": "Source audit only. No fresh browser runtime measurements. Official page requests returned JavaScript shells; earlier rendered readings are historical.",
+  "upstream_revision": "c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972",
+  "material_token_revision": "47adb655bd7a88c4d62e8faac2873084eed555dc",
+  "token_version": "34.0.21",
+  "source_hashes": {
+    "card": [
+      {
+        "file": "m3e-reference-card.tsx",
+        "sha256": "0d5784ec6bf886ae3fc51ee4fc610b22adc752f49d7a267f58f0a5773b6b4486"
+      },
+      {
+        "file": "m3e-reference-styles.css",
+        "sha256": "5d9d100a0624e6a38caeede62259063aeb160b776a838a75e739dc18d9898faa"
+      },
+      {
+        "file": "m3e-token-filled-card.scss",
+        "sha256": "1db98d1690f83b2f62ae880d7bdfeea72cff34208d060a37b84e115bd7aa625d"
+      },
+      {
+        "file": "m3e-token-elevated-card.scss",
+        "sha256": "1ba0c4b55e333927b80f170f4fdd2bff6be76cc97412d13cd5c98ff806da4c85"
+      },
+      {
+        "file": "m3e-token-outlined-card.scss",
+        "sha256": "d1f174b0160acb70abf1febadc8a5e4a82dc4d086ef9371cc52547bfbce0cb0e"
+      },
+      {
+        "file": "m3e-token-state.scss",
+        "sha256": "a06bd6e2db9052a15c5209f9dfa2b9e0ec471ce244836f20c47105237df9c9c0"
+      }
+    ],
+    "divider": [
+      {
+        "file": "m3e-reference-separator.tsx",
+        "sha256": "9bf7e6d691b0ae4f4cb331349783540bc263f98c50fa5cc39cd04769724574ba"
+      },
+      {
+        "file": "m3e-token-divider.scss",
+        "sha256": "41817e237075a8a82826fe696523d932ac3c978ebf6c80155fb9411f8d55e537"
+      }
+    ]
+  },
+  "expected_not_measured": {
+    "vertical_divider": {
+      "row_height": 48,
+      "padding_block": 12,
+      "line_width": 1,
+      "line_height": 24,
+      "label_alignment": "center"
+    },
+    "cards": {
+      "radius": 12,
+      "structured_body_padding": 24,
+      "filled_elevated_border": 0,
+      "outlined_border": 1,
+      "focus_state_opacity": 0.1,
+      "disabled_outlined_border_opacity": 0.12,
+      "disabled_content_opacity": 0.38,
+      "interactive_min_height": 48
+    }
+  },
+  "checks": {
+    "wasm_source_check": "passed 3.89s",
+    "independent_card_and_divider_examples": "passed 0.88s",
+    "browser_runtime": "blocked by existing localhost URL security policy",
+    "android": "paused",
+    "fresh_live_build": "passed 6.55s; hover capability CSS then hot reloaded"
+  },
+  "resumed_browser_followup": {
+    "date": "2026-10-10",
+    "method": "Rendered all eight official sections; actual pointer/keyboard/computed-style desktop checks. Earlier source-only section is historical.",
+    "current_card_slot_padding": 16,
+    "current_card_stack_gap": 8,
+    "vertical_divider_measured": {
+      "width": 1,
+      "height": 24,
+      "centers_equal": true
+    },
+    "raw_evidence": "resumed-browser-verification.json",
+    "android": "paused"
+  }
+}

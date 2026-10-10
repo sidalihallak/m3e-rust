@@ -103,23 +103,25 @@ pub fn Tabs(
                             aria_controls: panel_id,
                             onclick: move |_| onchange.call(index),
                             onkeydown: move |event| {
-                                let pos = available.iter().position(|&i| i == index).unwrap_or(0);
-                                let n = available.len();
-                                let target = if n == 0 { None } else { match event.key().to_string().as_str() {
-                                    "ArrowRight" => Some(available[(pos + 1) % n]),
-                                    "ArrowLeft" => Some(available[(pos + n - 1) % n]),
-                                    "Home" => available.first().copied(),
-                                    "End" => available.last().copied(),
-                                    _ => None,
-                                }};
-                                if let Some(target) = target {
+                                let key = event.key().to_string();
+                                if matches!(key.as_str(), "ArrowRight" | "ArrowLeft" | "Home" | "End") {
                                     event.prevent_default();
-                                    onchange.call(target);
-                                    let script = format!(
-                                        "document.getElementById('{focus_id}')?.querySelectorAll('[role=tab]')[{target}]?.focus();"
-                                    );
+                                    let available = available.clone();
+                                    let script = format!(r#"
+const list = document.getElementById({focus_id:?});
+const enabled = {available:?};
+const pos = enabled.indexOf({index});
+const rtl = getComputedStyle(list).direction === 'rtl';
+const key = {key:?};
+let target;
+if (key === 'Home') target = enabled[0];
+else if (key === 'End') target = enabled[enabled.length-1];
+else {{ const delta = (key === 'ArrowRight' ? 1 : -1) * (rtl ? -1 : 1); target = enabled[(pos + delta + enabled.length) % enabled.length]; }}
+if (target !== undefined) {{ list.querySelectorAll('[role=tab]')[target]?.focus(); dioxus.send(target); }}
+"#);
                                     spawn(async move {
-                                        let _ = document::eval(&script).await;
+                                        let mut evaluation = document::eval(&script);
+                                        if let Ok(target) = evaluation.recv::<usize>().await { onchange.call(target); }
                                     });
                                 }
                             },

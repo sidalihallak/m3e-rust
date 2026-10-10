@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-10",
+  "method": "Read rendered official pages through browser DOM. Factual summary only.",
+  "pages": [
+    "https://m3.material.io/components/cards/overview",
+    "https://m3.material.io/components/cards/specs",
+    "https://m3.material.io/components/cards/guidelines",
+    "https://m3.material.io/components/cards/accessibility",
+    "https://m3.material.io/components/divider/overview",
+    "https://m3.material.io/components/divider/specs",
+    "https://m3.material.io/components/divider/guidelines",
+    "https://m3.material.io/components/divider/accessibility"
+  ],
+  "cards": {
+    "geometry": "12dp corners,16dp side content inset,8dp maximum between-card gap,start-aligned text",
+    "semantics": "Whole-card actions use button/link semantics; passive cards expose separate actions. Do not nest actionable controls in an actionable card.",
+    "behavior": "Ripple for pointer and keyboard activation; passive cards have no hover/ripple. Optional dragging/swiping needs a single-pointer alternative.",
+    "mobile": "Avoid internal scrolling; desktop internal scrolling allowed."
+  },
+  "divider": {
+    "tokens": "1dp outline-variant; full width or logical16dp start/both insets",
+    "layout": "Separate groups; prefer whitespace over excessive lines. No universal vertical height given.",
+    "accessibility": "Decorative; no contrast minimum. Upstream separator role retained, nonfocusable."
+  }
+}

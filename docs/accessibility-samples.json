@@ -1,0 +1,1545 @@
+{
+  "keyboard": [
+    {
+      "role": "switch",
+      "name": "Notifications",
+      "key": "Space",
+      "state": {
+        "focus": "<button type=\"button\" role=\"switch\" class=\"m3-switch \" aria-checked=\"false\" aria-label=\"Notifications\" data-dioxus-id=\"1103\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-130\" data-ready=\"true\"><span class=\"m3-ripple__wave\" style=\"height: 9px; width: 9px;\"></span></span><span class=\"m3-switch__handle\"><span class=\"m3-switch__icon m3-switch__icon--checked\" aria-hidden=\"true\"><!--placeholder--></span><span class=\"m3-switch__icon m3-switch__icon--unchecked\" aria-hidden=\"true\"><!--placeholder--></span></span></button>",
+        "selected": [
+          "Flights",
+          "Details",
+          "Overview"
+        ]
+      }
+    },
+    {
+      "role": "checkbox",
+      "name": "Select all",
+      "key": "Space",
+      "state": {
+        "focus": "<button type=\"button\" role=\"checkbox\" class=\"m3-checkbox m3-checkbox--checked \" aria-checked=\"true\" aria-label=\"Select all\" data-dioxus-id=\"1079\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-123\" data-ready=\"true\"><span class=\"m3-ripple__wave\" style=\"height: 8px; width: 8px;\"></span></span><span class=\"m3-checkbox__state\" aria-hidden=\"true\"></span><span class=\"m3-checkbox__box\" aria-hidden=\"true\"><svg class=\"m3-checkbox__mark\" viewBox=\"0 0 18 18\"><path class=\"m3-checkbox__check\" d=\"M3.5 9.2 7.2 12.8 14.6 5.4\" pathLength=\"1\"></path><path class=\"m3-checkbox__dash\" d=\"M4 9h10\"></path></svg></span></button>",
+        "selected": [
+          "Flights",
+          "Details",
+          "Overview"
+        ]
+      }
+    },
+    {
+      "role": "radio",
+      "name": "Medium",
+      "key": "ArrowRight",
+      "state": {
+        "focus": "<input class=\"m3-radio__input\" type=\"radio\" name=\"size-preview\" value=\"Large\" aria-label=\"Large\" data-dioxus-id=\"596\">",
+        "selected": [
+          "Flights",
+          "Details",
+          "Overview"
+        ]
+      }
+    },
+    {
+      "role": "slider",
+      "name": "Volume",
+      "key": "ArrowRight",
+      "state": {
+        "focus": "<input class=\"m3-slider__input m3-slider__input--start\" type=\"range\" min=\"0\" max=\"100\" step=\"any\" aria-label=\"Volume\" data-dioxus-id=\"552\">",
+        "selected": [
+          "Flights",
+          "Details",
+          "Overview"
+        ]
+      }
+    },
+    {
+      "role": "tab",
+      "name": "Flights",
+      "key": "ArrowRight",
+      "state": {
+        "focus": "<button type=\"button\" role=\"tab\" id=\"trip-tab-1\" class=\"m3-tabs__tab m3-tabs__tab--selected\" aria-selected=\"true\" tabindex=\"0\" aria-controls=\"trip-panel-1\" data-dioxus-id=\"312\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-21\" data-ready=\"true\"></span><!--placeholder--><span class=\"m3-tabs__label\">Hotels</span></button>",
+        "selected": [
+          "Hotels",
+          "Details",
+          "Overview"
+        ]
+      }
+    }
+  ],
+  "contrast": [
+    {
+      "seed": "Violet",
+      "mode": "light",
+      "roles": {
+        "error": "#ba1a1a",
+        "inverse-on-surface": "#f5eff7",
+        "inverse-surface": "#322f35",
+        "on-error": "#ffffff",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#4d3d75",
+        "on-secondary": "#ffffff",
+        "on-secondary-container": "#4a4458",
+        "on-surface": "#1d1b20",
+        "on-surface-variant": "#49454e",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-container": "#633b48",
+        "outline": "#7a757f",
+        "outline-variant": "#cac4cf",
+        "primary": "#65558f",
+        "primary-container": "#e9ddff",
+        "secondary": "#625b71",
+        "secondary-container": "#e8def8",
+        "surface": "#fdf7ff",
+        "surface-container": "#f2ecf4",
+        "surface-container-high": "#ece6ee",
+        "surface-container-highest": "#e6e0e9",
+        "surface-container-low": "#f8f2fa",
+        "tertiary": "#7e5260",
+        "tertiary-container": "#ffd9e3"
+      },
+      "ratios": [
+        {
+          "foreground": "on-primary",
+          "background": "primary",
+          "ratio": 6.462782946416833
+        },
+        {
+          "foreground": "on-primary-container",
+          "background": "primary-container",
+          "ratio": 7.255293293159827
+        },
+        {
+          "foreground": "on-secondary",
+          "background": "secondary",
+          "ratio": 6.453160994106302
+        },
+        {
+          "foreground": "on-secondary-container",
+          "background": "secondary-container",
+          "ratio": 7.18707687678454
+        },
+        {
+          "foreground": "on-tertiary",
+          "background": "tertiary",
+          "ratio": 6.435899923399208
+        },
+        {
+          "foreground": "on-tertiary-container",
+          "background": "tertiary-container",
+          "ratio": 7.23937109269766
+        },
+        {
+          "foreground": "on-error",
+          "background": "error",
+          "ratio": 6.460555052499582
+        },
+        {
+          "foreground": "inverse-on-surface",
+          "background": "inverse-surface",
+          "ratio": 11.653961649700893
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface",
+          "ratio": 16.200735618286867
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface",
+          "ratio": 8.87696872342233
+        },
+        {
+          "foreground": "primary",
+          "background": "surface",
+          "ratio": 6.131899248782029
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-low",
+          "ratio": 15.507764827887854
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-low",
+          "ratio": 8.497264975545987
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-low",
+          "ratio": 5.86961319158107
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container",
+          "ratio": 14.70068211984295
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container",
+          "ratio": 8.055035182693704
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container",
+          "ratio": 5.564136331284721
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-high",
+          "ratio": 13.920070605401694
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-high",
+          "ratio": 7.627309913785752
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-high",
+          "ratio": 5.268678688386706
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-highest",
+          "ratio": 13.174944953764376
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-highest",
+          "ratio": 7.219028631969267
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-highest",
+          "ratio": 4.986652271119227
+        }
+      ]
+    },
+    {
+      "seed": "Violet",
+      "mode": "dark",
+      "roles": {
+        "error": "#ffb4ab",
+        "inverse-on-surface": "#322f35",
+        "inverse-surface": "#e6e0e9",
+        "on-error": "#690005",
+        "on-primary": "#36275d",
+        "on-primary-container": "#e9ddff",
+        "on-secondary": "#332d41",
+        "on-secondary-container": "#e8def8",
+        "on-surface": "#e6e0e9",
+        "on-surface-variant": "#cac4cf",
+        "on-tertiary": "#4a2532",
+        "on-tertiary-container": "#ffd9e3",
+        "outline": "#948f99",
+        "outline-variant": "#49454e",
+        "primary": "#cfbdfe",
+        "primary-container": "#4d3d75",
+        "secondary": "#cbc2db",
+        "secondary-container": "#4a4458",
+        "surface": "#141218",
+        "surface-container": "#211f24",
+        "surface-container-high": "#2b292f",
+        "surface-container-highest": "#36343a",
+        "surface-container-low": "#1d1b20",
+        "tertiary": "#efb8c8",
+        "tertiary-container": "#633b48"
+      },
+      "ratios": [
+        {
+          "foreground": "on-primary",
+          "background": "primary",
+          "ratio": 7.702375286210581
+        },
+        {
+          "foreground": "on-primary-container",
+          "background": "primary-container",
+          "ratio": 7.255293293159827
+        },
+        {
+          "foreground": "on-secondary",
+          "background": "secondary",
+          "ratio": 7.710720488979391
+        },
+        {
+          "foreground": "on-secondary-container",
+          "background": "secondary-container",
+          "ratio": 7.18707687678454
+        },
+        {
+          "foreground": "on-tertiary",
+          "background": "tertiary",
+          "ratio": 7.716286873712848
+        },
+        {
+          "foreground": "on-tertiary-container",
+          "background": "tertiary-container",
+          "ratio": 7.23937109269766
+        },
+        {
+          "foreground": "on-error",
+          "background": "error",
+          "ratio": 7.716637440809738
+        },
+        {
+          "foreground": "inverse-on-surface",
+          "background": "inverse-surface",
+          "ratio": 10.167626767791855
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface",
+          "ratio": 14.346278999304829
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface",
+          "ratio": 10.897524973264241
+        },
+        {
+          "foreground": "primary",
+          "background": "surface",
+          "ratio": 10.946210530628731
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-low",
+          "ratio": 13.174944953764376
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-low",
+          "ratio": 10.00777216600807
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-low",
+          "ratio": 10.052482682118315
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container",
+          "ratio": 12.598587411437341
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container",
+          "ratio": 9.569967303064695
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container",
+          "ratio": 9.612721891216843
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-high",
+          "ratio": 11.091140852144129
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-high",
+          "ratio": 8.42490128792899
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-high",
+          "ratio": 8.462540202815621
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-highest",
+          "ratio": 9.480452864268132
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-highest",
+          "ratio": 7.2014124255650325
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-highest",
+          "ratio": 7.2335853068945415
+        }
+      ]
+    },
+    {
+      "seed": "Teal",
+      "mode": "light",
+      "roles": {
+        "error": "#ba1a1a",
+        "inverse-on-surface": "#ecf2ef",
+        "inverse-surface": "#2b3230",
+        "on-error": "#ffffff",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#005048",
+        "on-secondary": "#ffffff",
+        "on-secondary-container": "#334b47",
+        "on-surface": "#161d1c",
+        "on-surface-variant": "#3f4947",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-container": "#2d4961",
+        "outline": "#6f7977",
+        "outline-variant": "#bec9c6",
+        "primary": "#006a60",
+        "primary-container": "#9ef2e4",
+        "secondary": "#4a635f",
+        "secondary-container": "#cce8e2",
+        "surface": "#f4fbf8",
+        "surface-container": "#e9efed",
+        "surface-container-high": "#e3eae7",
+        "surface-container-highest": "#dde4e1",
+        "surface-container-low": "#eff5f2",
+        "tertiary": "#466179",
+        "tertiary-container": "#cce5ff"
+      },
+      "ratios": [
+        {
+          "foreground": "on-primary",
+          "background": "primary",
+          "ratio": 6.5005028931181945
+        },
+        {
+          "foreground": "on-primary-container",
+          "background": "primary-container",
+          "ratio": 7.262234519897091
+        },
+        {
+          "foreground": "on-secondary",
+          "background": "secondary",
+          "ratio": 6.47918189908799
+        },
+        {
+          "foreground": "on-secondary-container",
+          "background": "secondary-container",
+          "ratio": 7.241743485718369
+        },
+        {
+          "foreground": "on-tertiary",
+          "background": "tertiary",
+          "ratio": 6.468721476325916
+        },
+        {
+          "foreground": "on-tertiary-container",
+          "background": "tertiary-container",
+          "ratio": 7.2497479554321265
+        },
+        {
+          "foreground": "on-error",
+          "background": "error",
+          "ratio": 6.460555052499582
+        },
+        {
+          "foreground": "inverse-on-surface",
+          "background": "inverse-surface",
+          "ratio": 11.559298082270026
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface",
+          "ratio": 16.305630846676653
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface",
+          "ratio": 8.868201618402331
+        },
+        {
+          "foreground": "primary",
+          "background": "surface",
+          "ratio": 6.191250319584976
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-low",
+          "ratio": 15.500427867060264
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-low",
+          "ratio": 8.430273001342304
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-low",
+          "ratio": 5.885514635283206
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container",
+          "ratio": 14.702260276588506
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container",
+          "ratio": 7.996170746474894
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container",
+          "ratio": 5.582450289226467
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-high",
+          "ratio": 14.013377862955318
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-high",
+          "ratio": 7.621505810606075
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-high",
+          "ratio": 5.320881540144169
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-highest",
+          "ratio": 13.255063193483318
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-highest",
+          "ratio": 7.209078506056834
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-highest",
+          "ratio": 5.0329493537809915
+        }
+      ]
+    },
+    {
+      "seed": "Teal",
+      "mode": "dark",
+      "roles": {
+        "error": "#ffb4ab",
+        "inverse-on-surface": "#2b3230",
+        "inverse-surface": "#dde4e1",
+        "on-error": "#690005",
+        "on-primary": "#003732",
+        "on-primary-container": "#9ef2e4",
+        "on-secondary": "#1c3531",
+        "on-secondary-container": "#cce8e2",
+        "on-surface": "#dde4e1",
+        "on-surface-variant": "#bec9c6",
+        "on-tertiary": "#153349",
+        "on-tertiary-container": "#cce5ff",
+        "outline": "#899390",
+        "outline-variant": "#3f4947",
+        "primary": "#82d5c8",
+        "primary-container": "#005048",
+        "secondary": "#b1ccc6",
+        "secondary-container": "#334b47",
+        "surface": "#0e1513",
+        "surface-container": "#1a2120",
+        "surface-container-high": "#252b2a",
+        "surface-container-highest": "#303635",
+        "surface-container-low": "#161d1c",
+        "tertiary": "#adcae6",
+        "tertiary-container": "#2d4961"
+      },
+      "ratios": [
+        {
+          "foreground": "on-primary",
+          "background": "primary",
+          "ratio": 7.7241035361187285
+        },
+        {
+          "foreground": "on-primary-container",
+          "background": "primary-container",
+          "ratio": 7.262234519897091
+        },
+        {
+          "foreground": "on-secondary",
+          "background": "secondary",
+          "ratio": 7.687004396649241
+        },
+        {
+          "foreground": "on-secondary-container",
+          "background": "secondary-container",
+          "ratio": 7.241743485718369
+        },
+        {
+          "foreground": "on-tertiary",
+          "background": "tertiary",
+          "ratio": 7.721969058481147
+        },
+        {
+          "foreground": "on-tertiary-container",
+          "background": "tertiary-container",
+          "ratio": 7.2497479554321265
+        },
+        {
+          "foreground": "on-error",
+          "background": "error",
+          "ratio": 7.716637440809738
+        },
+        {
+          "foreground": "inverse-on-surface",
+          "background": "inverse-surface",
+          "ratio": 10.151499907976929
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface",
+          "ratio": 14.320829866313552
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface",
+          "ratio": 10.886174161482922
+        },
+        {
+          "foreground": "primary",
+          "background": "surface",
+          "ratio": 10.834524816596469
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-low",
+          "ratio": 13.255063193483318
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-low",
+          "ratio": 10.076017087888644
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-low",
+          "ratio": 10.028211525168961
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container",
+          "ratio": 12.679374717713966
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container",
+          "ratio": 9.638399640541854
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container",
+          "ratio": 9.592670349442583
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-high",
+          "ratio": 11.154304210407075
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-high",
+          "ratio": 8.479096492186134
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-high",
+          "ratio": 8.43886750332796
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-highest",
+          "ratio": 9.537488612132561
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-highest",
+          "ratio": 7.250052061512411
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-highest",
+          "ratio": 7.215654261714692
+        }
+      ]
+    },
+    {
+      "seed": "Rose",
+      "mode": "light",
+      "roles": {
+        "error": "#ba1a1a",
+        "inverse-on-surface": "#ffedec",
+        "inverse-surface": "#382e2e",
+        "on-error": "#ffffff",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#733336",
+        "on-secondary": "#ffffff",
+        "on-secondary-container": "#5d3f3f",
+        "on-surface": "#221919",
+        "on-surface-variant": "#524343",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-container": "#5b421a",
+        "outline": "#857372",
+        "outline-variant": "#d7c1c1",
+        "primary": "#8f4a4c",
+        "primary-container": "#ffdad9",
+        "secondary": "#775656",
+        "secondary-container": "#ffdad9",
+        "surface": "#fff8f7",
+        "surface-container": "#fceae9",
+        "surface-container-high": "#f6e4e3",
+        "surface-container-highest": "#f0dede",
+        "surface-container-low": "#fff0f0",
+        "tertiary": "#755a2f",
+        "tertiary-container": "#ffddaf"
+      },
+      "ratios": [
+        {
+          "foreground": "on-primary",
+          "background": "primary",
+          "ratio": 6.457961297978001
+        },
+        {
+          "foreground": "on-primary-container",
+          "background": "primary-container",
+          "ratio": 7.218172727431605
+        },
+        {
+          "foreground": "on-secondary",
+          "background": "secondary",
+          "ratio": 6.461776605791011
+        },
+        {
+          "foreground": "on-secondary-container",
+          "background": "secondary-container",
+          "ratio": 7.242433256112477
+        },
+        {
+          "foreground": "on-tertiary",
+          "background": "tertiary",
+          "ratio": 6.441926272895793
+        },
+        {
+          "foreground": "on-tertiary-container",
+          "background": "tertiary-container",
+          "ratio": 7.241349733148397
+        },
+        {
+          "foreground": "on-error",
+          "background": "error",
+          "ratio": 6.460555052499582
+        },
+        {
+          "foreground": "inverse-on-surface",
+          "background": "inverse-surface",
+          "ratio": 11.622185026921308
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface",
+          "ratio": 16.39664471009601
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface",
+          "ratio": 8.927733185366733
+        },
+        {
+          "foreground": "primary",
+          "background": "surface",
+          "ratio": 6.157217342918962
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-low",
+          "ratio": 15.538609967682758
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-low",
+          "ratio": 8.460545819934362
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-low",
+          "ratio": 5.835010788454751
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container",
+          "ratio": 14.810225896817263
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container",
+          "ratio": 8.063951348557277
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container",
+          "ratio": 5.56149025344691
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-high",
+          "ratio": 14.024284332870335
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-high",
+          "ratio": 7.636017664180523
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-high",
+          "ratio": 5.266355906535362
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-highest",
+          "ratio": 13.273498883233263
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-highest",
+          "ratio": 7.2272259697622
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-highest",
+          "ratio": 4.984423275009218
+        }
+      ]
+    },
+    {
+      "seed": "Rose",
+      "mode": "dark",
+      "roles": {
+        "error": "#ffb4ab",
+        "inverse-on-surface": "#382e2e",
+        "inverse-surface": "#f0dede",
+        "on-error": "#690005",
+        "on-primary": "#561d21",
+        "on-primary-container": "#ffdad9",
+        "on-secondary": "#44292a",
+        "on-secondary-container": "#ffdad9",
+        "on-surface": "#f0dede",
+        "on-surface-variant": "#d7c1c1",
+        "on-tertiary": "#422c05",
+        "on-tertiary-container": "#ffddaf",
+        "outline": "#a08c8c",
+        "outline-variant": "#524343",
+        "primary": "#ffb3b3",
+        "primary-container": "#733336",
+        "secondary": "#e6bdbc",
+        "secondary-container": "#5d3f3f",
+        "surface": "#1a1111",
+        "surface-container": "#271d1d",
+        "surface-container-high": "#322827",
+        "surface-container-highest": "#3d3232",
+        "surface-container-low": "#221919",
+        "tertiary": "#e5c18d",
+        "tertiary-container": "#5b421a"
+      },
+      "ratios": [
+        {
+          "foreground": "on-primary",
+          "background": "primary",
+          "ratio": 7.7513637980378505
+        },
+        {
+          "foreground": "on-primary-container",
+          "background": "primary-container",
+          "ratio": 7.218172727431605
+        },
+        {
+          "foreground": "on-secondary",
+          "background": "secondary",
+          "ratio": 7.748575208502781
+        },
+        {
+          "foreground": "on-secondary-container",
+          "background": "secondary-container",
+          "ratio": 7.242433256112477
+        },
+        {
+          "foreground": "on-tertiary",
+          "background": "tertiary",
+          "ratio": 7.74361335253335
+        },
+        {
+          "foreground": "on-tertiary-container",
+          "background": "tertiary-container",
+          "ratio": 7.241349733148397
+        },
+        {
+          "foreground": "on-error",
+          "background": "error",
+          "ratio": 7.716637440809738
+        },
+        {
+          "foreground": "inverse-on-surface",
+          "background": "inverse-surface",
+          "ratio": 10.140358350438014
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface",
+          "ratio": 14.315849095060884
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface",
+          "ratio": 10.85275883780235
+        },
+        {
+          "foreground": "primary",
+          "background": "surface",
+          "ratio": 10.908864945275697
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-low",
+          "ratio": 13.273498883233263
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-low",
+          "ratio": 10.062559430251996
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-low",
+          "ratio": 10.1145804001536
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container",
+          "ratio": 12.665200709661683
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container",
+          "ratio": 9.601412254460262
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container",
+          "ratio": 9.651049206307775
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-high",
+          "ratio": 11.037836165542098
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-high",
+          "ratio": 8.367717010731171
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-high",
+          "ratio": 8.410976060059287
+        },
+        {
+          "foreground": "on-surface",
+          "background": "surface-container-highest",
+          "ratio": 9.530293842886659
+        },
+        {
+          "foreground": "on-surface-variant",
+          "background": "surface-container-highest",
+          "ratio": 7.224858270259772
+        },
+        {
+          "foreground": "primary",
+          "background": "surface-container-highest",
+          "ratio": 7.26220901956224
+        }
+      ]
+    }
+  ],
+  "fixedPanelFocus": "trip-panel-0",
+  "motionReduced": [
+    {
+      "animations": [
+        "paused",
+        "paused",
+        "paused",
+        "paused"
+      ],
+      "reduced": true,
+      "shells": 1,
+      "loadingHtmlSha256": [
+        "b154231934045a5b5fb8c41a74e75dfdc641c24948b33da659361b6840153a1d",
+        "1cae31efe25d1edf29b3a79477113629854fd919e1be35a96a3f0433cae95e34"
+      ],
+      "circularHtmlSha256": [
+        "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+        "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+        "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+        "f76806bf50a96669f85fed35035a340adfa8c96659cb2ca97d5fb233ea54a093",
+        "391100a44ef4d6280cf749583b30869d150e7b0f8a7ee1a2b1b2ee503ea7658d",
+        "6f86c0335bc3cdca8adc18685cc67c78c2ce3752a89e5d0f8da929473451f9a0",
+        "10890717349afe90f8efa8673e31a05028bf0efb06159c8d9e494ef395b691ac"
+      ]
+    },
+    {
+      "animations": [
+        "paused",
+        "paused",
+        "paused",
+        "paused"
+      ],
+      "reduced": true,
+      "shells": 1,
+      "loadingHtmlSha256": [
+        "b154231934045a5b5fb8c41a74e75dfdc641c24948b33da659361b6840153a1d",
+        "1cae31efe25d1edf29b3a79477113629854fd919e1be35a96a3f0433cae95e34"
+      ],
+      "circularHtmlSha256": [
+        "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+        "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+        "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+        "f76806bf50a96669f85fed35035a340adfa8c96659cb2ca97d5fb233ea54a093",
+        "391100a44ef4d6280cf749583b30869d150e7b0f8a7ee1a2b1b2ee503ea7658d",
+        "6f86c0335bc3cdca8adc18685cc67c78c2ce3752a89e5d0f8da929473451f9a0",
+        "10890717349afe90f8efa8673e31a05028bf0efb06159c8d9e494ef395b691ac"
+      ]
+    },
+    {
+      "animations": [
+        "paused",
+        "paused",
+        "paused",
+        "paused"
+      ],
+      "reduced": true,
+      "shells": 1,
+      "loadingHtmlSha256": [
+        "b154231934045a5b5fb8c41a74e75dfdc641c24948b33da659361b6840153a1d",
+        "1cae31efe25d1edf29b3a79477113629854fd919e1be35a96a3f0433cae95e34"
+      ],
+      "circularHtmlSha256": [
+        "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+        "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+        "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+        "f76806bf50a96669f85fed35035a340adfa8c96659cb2ca97d5fb233ea54a093",
+        "391100a44ef4d6280cf749583b30869d150e7b0f8a7ee1a2b1b2ee503ea7658d",
+        "6f86c0335bc3cdca8adc18685cc67c78c2ce3752a89e5d0f8da929473451f9a0",
+        "10890717349afe90f8efa8673e31a05028bf0efb06159c8d9e494ef395b691ac"
+      ]
+    },
+    {
+      "animations": [
+        "paused",
+        "paused",
+        "paused",
+        "paused"
+      ],
+      "reduced": true,
+      "shells": 1,
+      "loadingHtmlSha256": [
+        "b154231934045a5b5fb8c41a74e75dfdc641c24948b33da659361b6840153a1d",
+        "1cae31efe25d1edf29b3a79477113629854fd919e1be35a96a3f0433cae95e34"
+      ],
+      "circularHtmlSha256": [
+        "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+        "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+        "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+        "f76806bf50a96669f85fed35035a340adfa8c96659cb2ca97d5fb233ea54a093",
+        "391100a44ef4d6280cf749583b30869d150e7b0f8a7ee1a2b1b2ee503ea7658d",
+        "6f86c0335bc3cdca8adc18685cc67c78c2ce3752a89e5d0f8da929473451f9a0",
+        "10890717349afe90f8efa8673e31a05028bf0efb06159c8d9e494ef395b691ac"
+      ]
+    }
+  ],
+  "reducedPress": {
+    "ripple": "1e-05s",
+    "transition": "1e-05s"
+  },
+  "motionResumed": [
+    {
+      "animations": [
+        "running",
+        "running",
+        "running",
+        "running"
+      ],
+      "reduced": false,
+      "shells": 1,
+      "loadingHtmlSha256": [
+        "4425d80aed00570321dbc4aa3768e0f602a31463899b2462abfd3a4fe6f2f216",
+        "dabd93fa392a71ea6868d06ffbc3e4ef5d551096d3768b669106dba925ddbb61"
+      ],
+      "circularHtmlSha256": [
+        "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+        "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+        "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+        "f76806bf50a96669f85fed35035a340adfa8c96659cb2ca97d5fb233ea54a093",
+        "5cb4d177acd8d31da53952a063a4e5cc4a7a34b43de00224b7c20ff5b88bb968",
+        "6f86c0335bc3cdca8adc18685cc67c78c2ce3752a89e5d0f8da929473451f9a0",
+        "10890717349afe90f8efa8673e31a05028bf0efb06159c8d9e494ef395b691ac"
+      ]
+    },
+    {
+      "animations": [
+        "running",
+        "running",
+        "running",
+        "running"
+      ],
+      "reduced": false,
+      "shells": 1,
+      "loadingHtmlSha256": [
+        "ae5dfe7ca25088e9e104d7c4335330c664269cb02448d71f2c2f14cef75da800",
+        "03ea38d45dcd45155f14a1dc4f11f152e8d3b31c3926d8a84dd322ed8fc79caf"
+      ],
+      "circularHtmlSha256": [
+        "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+        "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+        "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+        "f76806bf50a96669f85fed35035a340adfa8c96659cb2ca97d5fb233ea54a093",
+        "8ab1640fb367800c4781441fef80e9b24f0185ebfdf3c4345896d4a374282fed",
+        "6f86c0335bc3cdca8adc18685cc67c78c2ce3752a89e5d0f8da929473451f9a0",
+        "10890717349afe90f8efa8673e31a05028bf0efb06159c8d9e494ef395b691ac"
+      ]
+    },
+    {
+      "animations": [
+        "running",
+        "running",
+        "running",
+        "running"
+      ],
+      "reduced": false,
+      "shells": 1,
+      "loadingHtmlSha256": [
+        "3d582cde2d03e572fb544a48858c1b6392340082ad396ff03d66bcad200b5395",
+        "2a5253ecc53e9d6c4e808e5d5e9c87211960344f085b9acb160795e5128adcf1"
+      ],
+      "circularHtmlSha256": [
+        "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+        "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+        "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+        "f76806bf50a96669f85fed35035a340adfa8c96659cb2ca97d5fb233ea54a093",
+        "2076a35b717f8df1c1f660bec125c05233f5f731e44fa4c4d1e96e4c43972359",
+        "6f86c0335bc3cdca8adc18685cc67c78c2ce3752a89e5d0f8da929473451f9a0",
+        "10890717349afe90f8efa8673e31a05028bf0efb06159c8d9e494ef395b691ac"
+      ]
+    },
+    {
+      "animations": [
+        "running",
+        "running",
+        "running",
+        "running"
+      ],
+      "reduced": false,
+      "shells": 1,
+      "loadingHtmlSha256": [
+        "e6469d3d32568b56f38e22c02ac6137cb2da5b3897bab54198c4fd8a16148232",
+        "8b5d82ed18bf1feaaa4316df6a470bbdc7ac0720a367e8f80c966d74d7a91590"
+      ],
+      "circularHtmlSha256": [
+        "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+        "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+        "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+        "f76806bf50a96669f85fed35035a340adfa8c96659cb2ca97d5fb233ea54a093",
+        "2f59a8128e958ee95553e04bd8d8017532964ec8cf4fa61717faa89d672e58de",
+        "6f86c0335bc3cdca8adc18685cc67c78c2ce3752a89e5d0f8da929473451f9a0",
+        "10890717349afe90f8efa8673e31a05028bf0efb06159c8d9e494ef395b691ac"
+      ]
+    },
+    {
+      "animations": [
+        "running",
+        "running",
+        "running",
+        "running"
+      ],
+      "reduced": false,
+      "shells": 1,
+      "loadingHtmlSha256": [
+        "784529965630d4392ff3a1f51372a2531299be7bb97304dd4194ce481916de63",
+        "b949d987773a496cae28c58040472460e7bf9fabffeb37065a803b1d8bada043"
+      ],
+      "circularHtmlSha256": [
+        "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+        "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+        "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+        "f76806bf50a96669f85fed35035a340adfa8c96659cb2ca97d5fb233ea54a093",
+        "6d339f9373ef47d32d6d8305f0913bfaa0bd0adc64ec4032c251947fb112268b",
+        "6f86c0335bc3cdca8adc18685cc67c78c2ce3752a89e5d0f8da929473451f9a0",
+        "10890717349afe90f8efa8673e31a05028bf0efb06159c8d9e494ef395b691ac"
+      ]
+    }
+  ],
+  "menuOpened": {
+    "expanded": "true",
+    "focused": "menuitem",
+    "name": "Favourite"
+  },
+  "menuClosed": {
+    "expanded": "false",
+    "focused": "Actions"
+  },
+  "chipDeletion": {
+    "focus": "Medium chip",
+    "remaining": false
+  },
+  "fields": [
+    {
+      "description": "Used on your receipt",
+      "invalid": "false",
+      "name": "Name",
+      "readOnly": false
+    },
+    {
+      "description": "Enter a valid email address",
+      "invalid": "true",
+      "name": "Email",
+      "readOnly": false
+    },
+    {
+      "description": "Read only",
+      "invalid": "false",
+      "name": "Account number",
+      "readOnly": false
+    },
+    {
+      "description": "",
+      "invalid": "false",
+      "name": "Filled disabled",
+      "readOnly": false
+    },
+    {
+      "description": "",
+      "invalid": "false",
+      "name": "Search",
+      "readOnly": false
+    },
+    {
+      "description": "Before tax",
+      "invalid": "false",
+      "name": "Price",
+      "readOnly": false
+    },
+    {
+      "description": "Shown to the recipient0/60",
+      "invalid": "false",
+      "name": "Note",
+      "readOnly": false
+    },
+    {
+      "description": "",
+      "invalid": "false",
+      "name": "Reference",
+      "readOnly": true
+    }
+  ],
+  "rtlTabs": {
+    "focus": "Two",
+    "selected": "Two"
+  },
+  "badge": {
+    "announcement": "44 unread messages in Inbox",
+    "atomic": "true",
+    "live": "polite",
+    "visual": "4"
+  },
+  "midRun": {
+    "before": [
+      {
+        "animations": [
+          "running",
+          "running",
+          "running",
+          "running"
+        ],
+        "reduced": false,
+        "shells": 1,
+        "loadingHtmlSha256": [
+          "1650c86b19e5202743e72ee596d6a23fdc8608a63a184f21597db755c5b1d036",
+          "7d57931e14e6020ec49556575f6d199a8f56d5097e5d53c3796517a50e6bb028"
+        ],
+        "circularHtmlSha256": [
+          "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+          "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+          "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+          "ebf9e7a382a6a512e5f5c98e5a6ffc6d6bc07b66c98a0b447e7a245b66917487",
+          "eef233c92ebd13ae6fba23b0010f27114324514a8a5876598b9d1a2990075d34",
+          "26d16ca491270b66471ec0080ca36be4522388a94cda0cd0ca79b15186c2d08f",
+          "ee0354f302310a808be443bb7c36de0b6b86761a3e467f5cf8f28c5ad5645b8f"
+        ]
+      },
+      {
+        "animations": [
+          "running",
+          "running",
+          "running",
+          "running"
+        ],
+        "reduced": false,
+        "shells": 1,
+        "loadingHtmlSha256": [
+          "36459b1549003e38e20bad75facf3ef34cec280b2cec8bdecdd402c5e4ec33cb",
+          "c5ae3aa1d239c88667189db15038c94963bbe9a916f3c6a2de6db7beb7e3d6de"
+        ],
+        "circularHtmlSha256": [
+          "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+          "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+          "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+          "ebf9e7a382a6a512e5f5c98e5a6ffc6d6bc07b66c98a0b447e7a245b66917487",
+          "31a8e98faec2a18de669db52002e3c474f4fdf2cb354ed6729ae0ab680c94b79",
+          "26d16ca491270b66471ec0080ca36be4522388a94cda0cd0ca79b15186c2d08f",
+          "ee0354f302310a808be443bb7c36de0b6b86761a3e467f5cf8f28c5ad5645b8f"
+        ]
+      },
+      {
+        "animations": [
+          "running",
+          "running",
+          "running",
+          "running"
+        ],
+        "reduced": false,
+        "shells": 1,
+        "loadingHtmlSha256": [
+          "66a53e9a9d33a2851ecafcae33428dfb8aaa93afdfe1b1b5da417017fac3fe52",
+          "a9942b6f8fbb22e0ade30ffad2254e97c9da8477900cb5f923c655f9e1ec382a"
+        ],
+        "circularHtmlSha256": [
+          "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+          "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+          "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+          "ebf9e7a382a6a512e5f5c98e5a6ffc6d6bc07b66c98a0b447e7a245b66917487",
+          "813a4e884de20fd75f935aac3d73bdcc845e6a833098bf11084c19bbe8c9580b",
+          "26d16ca491270b66471ec0080ca36be4522388a94cda0cd0ca79b15186c2d08f",
+          "ee0354f302310a808be443bb7c36de0b6b86761a3e467f5cf8f28c5ad5645b8f"
+        ]
+      }
+    ],
+    "paused": [
+      {
+        "animations": [
+          "paused",
+          "paused",
+          "paused",
+          "paused"
+        ],
+        "reduced": true,
+        "shells": 1,
+        "loadingHtmlSha256": [
+          "3b0c13c87a385aabada3a6d50f6aa156b91ead15ae23d00a5f74ccbaa0fe57b7",
+          "03dcdc79e461fa9f590a9ca3505d311571afced480994be6857577584b2070df"
+        ],
+        "circularHtmlSha256": [
+          "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+          "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+          "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+          "ebf9e7a382a6a512e5f5c98e5a6ffc6d6bc07b66c98a0b447e7a245b66917487",
+          "201219664965beed39ac6bc9a8372050db7055dc3eabe8d31f08da6b3bcc0311",
+          "26d16ca491270b66471ec0080ca36be4522388a94cda0cd0ca79b15186c2d08f",
+          "ee0354f302310a808be443bb7c36de0b6b86761a3e467f5cf8f28c5ad5645b8f"
+        ]
+      },
+      {
+        "animations": [
+          "paused",
+          "paused",
+          "paused",
+          "paused"
+        ],
+        "reduced": true,
+        "shells": 1,
+        "loadingHtmlSha256": [
+          "3b0c13c87a385aabada3a6d50f6aa156b91ead15ae23d00a5f74ccbaa0fe57b7",
+          "03dcdc79e461fa9f590a9ca3505d311571afced480994be6857577584b2070df"
+        ],
+        "circularHtmlSha256": [
+          "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+          "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+          "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+          "ebf9e7a382a6a512e5f5c98e5a6ffc6d6bc07b66c98a0b447e7a245b66917487",
+          "201219664965beed39ac6bc9a8372050db7055dc3eabe8d31f08da6b3bcc0311",
+          "26d16ca491270b66471ec0080ca36be4522388a94cda0cd0ca79b15186c2d08f",
+          "ee0354f302310a808be443bb7c36de0b6b86761a3e467f5cf8f28c5ad5645b8f"
+        ]
+      },
+      {
+        "animations": [
+          "paused",
+          "paused",
+          "paused",
+          "paused"
+        ],
+        "reduced": true,
+        "shells": 1,
+        "loadingHtmlSha256": [
+          "3b0c13c87a385aabada3a6d50f6aa156b91ead15ae23d00a5f74ccbaa0fe57b7",
+          "03dcdc79e461fa9f590a9ca3505d311571afced480994be6857577584b2070df"
+        ],
+        "circularHtmlSha256": [
+          "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+          "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+          "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+          "ebf9e7a382a6a512e5f5c98e5a6ffc6d6bc07b66c98a0b447e7a245b66917487",
+          "201219664965beed39ac6bc9a8372050db7055dc3eabe8d31f08da6b3bcc0311",
+          "26d16ca491270b66471ec0080ca36be4522388a94cda0cd0ca79b15186c2d08f",
+          "ee0354f302310a808be443bb7c36de0b6b86761a3e467f5cf8f28c5ad5645b8f"
+        ]
+      },
+      {
+        "animations": [
+          "paused",
+          "paused",
+          "paused",
+          "paused"
+        ],
+        "reduced": true,
+        "shells": 1,
+        "loadingHtmlSha256": [
+          "3b0c13c87a385aabada3a6d50f6aa156b91ead15ae23d00a5f74ccbaa0fe57b7",
+          "03dcdc79e461fa9f590a9ca3505d311571afced480994be6857577584b2070df"
+        ],
+        "circularHtmlSha256": [
+          "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+          "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+          "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+          "ebf9e7a382a6a512e5f5c98e5a6ffc6d6bc07b66c98a0b447e7a245b66917487",
+          "201219664965beed39ac6bc9a8372050db7055dc3eabe8d31f08da6b3bcc0311",
+          "26d16ca491270b66471ec0080ca36be4522388a94cda0cd0ca79b15186c2d08f",
+          "ee0354f302310a808be443bb7c36de0b6b86761a3e467f5cf8f28c5ad5645b8f"
+        ]
+      },
+      {
+        "animations": [
+          "paused",
+          "paused",
+          "paused",
+          "paused"
+        ],
+        "reduced": true,
+        "shells": 1,
+        "loadingHtmlSha256": [
+          "3b0c13c87a385aabada3a6d50f6aa156b91ead15ae23d00a5f74ccbaa0fe57b7",
+          "03dcdc79e461fa9f590a9ca3505d311571afced480994be6857577584b2070df"
+        ],
+        "circularHtmlSha256": [
+          "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+          "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+          "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+          "ebf9e7a382a6a512e5f5c98e5a6ffc6d6bc07b66c98a0b447e7a245b66917487",
+          "201219664965beed39ac6bc9a8372050db7055dc3eabe8d31f08da6b3bcc0311",
+          "26d16ca491270b66471ec0080ca36be4522388a94cda0cd0ca79b15186c2d08f",
+          "ee0354f302310a808be443bb7c36de0b6b86761a3e467f5cf8f28c5ad5645b8f"
+        ]
+      }
+    ],
+    "after": [
+      {
+        "animations": [
+          "running",
+          "running",
+          "running",
+          "running"
+        ],
+        "reduced": false,
+        "shells": 1,
+        "loadingHtmlSha256": [
+          "3b1232c32cbf706687df1aeb645cb7317dcc4cd8a478397f9d9d801d0df0803e",
+          "6d37a9231ab168d77d506e0c1ce7a9b71d5971903e527d9bceb63ce213df17b4"
+        ],
+        "circularHtmlSha256": [
+          "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+          "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+          "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+          "ebf9e7a382a6a512e5f5c98e5a6ffc6d6bc07b66c98a0b447e7a245b66917487",
+          "0a2a20c94c4b272dc2fe9fa284d4999c362482146ce7d86188bd81f6752a45dd",
+          "26d16ca491270b66471ec0080ca36be4522388a94cda0cd0ca79b15186c2d08f",
+          "ee0354f302310a808be443bb7c36de0b6b86761a3e467f5cf8f28c5ad5645b8f"
+        ]
+      },
+      {
+        "animations": [
+          "running",
+          "running",
+          "running",
+          "running"
+        ],
+        "reduced": false,
+        "shells": 1,
+        "loadingHtmlSha256": [
+          "4ebc759d94937f557b97cb9dcdf3c0e2fb7efbc0c9f6a496a66ebba6efafde8e",
+          "4c5a6e5d4c378d79a4b0b3bf079c337dd5a4615814fc71b5102297969058760a"
+        ],
+        "circularHtmlSha256": [
+          "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+          "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+          "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+          "ebf9e7a382a6a512e5f5c98e5a6ffc6d6bc07b66c98a0b447e7a245b66917487",
+          "0a2a20c94c4b272dc2fe9fa284d4999c362482146ce7d86188bd81f6752a45dd",
+          "26d16ca491270b66471ec0080ca36be4522388a94cda0cd0ca79b15186c2d08f",
+          "ee0354f302310a808be443bb7c36de0b6b86761a3e467f5cf8f28c5ad5645b8f"
+        ]
+      },
+      {
+        "animations": [
+          "running",
+          "running",
+          "running",
+          "running"
+        ],
+        "reduced": false,
+        "shells": 1,
+        "loadingHtmlSha256": [
+          "b0a72f0646406829dc14b6422d4802b91266070e9c357191599d3135e9e43690",
+          "7ff61b29d99801d206f033e7a7897746529471d2291e1c36a4bd43fd6f46677f"
+        ],
+        "circularHtmlSha256": [
+          "92b2cec95483863fd4ae29977e9adf59145b4649e4ab7827b89790f5e07b0801",
+          "51ec370f23030d49b1ea20ab5ce5e9f2a1a0205e2411524ed460457d3231b2f8",
+          "3c3bbdbd9c0d871bb6d9ab7164e9753818a377c8a574ebab974f7cfd70a9b596",
+          "ebf9e7a382a6a512e5f5c98e5a6ffc6d6bc07b66c98a0b447e7a245b66917487",
+          "0a2a20c94c4b272dc2fe9fa284d4999c362482146ce7d86188bd81f6752a45dd",
+          "26d16ca491270b66471ec0080ca36be4522388a94cda0cd0ca79b15186c2d08f",
+          "ee0354f302310a808be443bb7c36de0b6b86761a3e467f5cf8f28c5ad5645b8f"
+        ]
+      }
+    ]
+  },
+  "finalDom": {
+    "duplicateIds": [],
+    "missingReferences": [],
+    "reduced": false,
+    "shells": 1
+  },
+  "console": [],
+  "badgeAccessibleSnapshot": [
+    "    - code: \"use dioxus::prelude::*; use m3e_rust_ui::Switch; #[component] fn NotificationsToggle() -> Element { let mut enabled = use_signal(|| false); rsx! { Switch { checked: enabled(), aria_label: Some(\\\"Enable notifications\\\".to_string()), onchange: move |value| enabled.set(value), } } }\"",
+    "    - img \"New notification\"",
+    "    - img \"New notification\"",
+    "      - generic: 3 notifications",
+    "      - generic: 99 notifications",
+    "      - generic: 999+ notifications",
+    "    - img \"New notification\"",
+    "      - generic: 99 notifications",
+    "      - generic: 999+ notifications",
+    "    - img \"New notification\"",
+    "      - generic: 3 notifications",
+    "      - generic: 99 notifications",
+    "      - generic: 999+ notifications",
+    "      - generic: 4 unread messages in Inbox"
+  ],
+  "screenReader": {
+    "voiceOverTemporarilyEnabled": true,
+    "captionPreferenceAlreadyEnabled": true,
+    "spokenOutputVerified": false,
+    "reason": "Codex native app access disallowed; Chrome localhost showed another app; VoiceOver output inspection timed out",
+    "restoredOff": true
+  },
+  "build": {
+    "finalServeSeconds": 7.22,
+    "wasmCheckSeconds": 4.37,
+    "exportExamples": 20,
+    "exportCheckSeconds": 2.95
+  }
+}

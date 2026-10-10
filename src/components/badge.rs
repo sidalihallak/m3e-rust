@@ -4,27 +4,30 @@ use dioxus::prelude::*;
 /// high pill with a label-small count when it is given. Counts above `max` show
 /// as `{max}+`. Put it inside a [`BadgeAnchor`] to place it over an icon.
 ///
-/// The dot is decorative and labelled "New notification". A count is a live
+/// The dot is labelled "New notification". A count is a live
 /// status, so screen readers announce changes to it.
 #[component]
 pub fn NotificationBadge(
     #[props(default)] count: Option<u32>,
     #[props(default = 999)] max: u32,
+    /// Override the full announcement, for example "3 unread messages in Inbox".
+    #[props(default)] aria_label: Option<String>,
     #[props(default)] class: String,
 ) -> Element {
     let large = count.is_some();
     let text = count.map(|value| if value > max { format!("{max}+") } else { value.to_string() });
     let size_class = if large { "m3-badge--large" } else { "m3-badge--dot" };
     let class = format!("m3-badge {size_class} {class}");
-    let label = match &text {
+    let label = aria_label.unwrap_or_else(|| match &text {
         Some(text) => format!("{text} notifications"),
         None => "New notification".to_string(),
-    };
+    });
 
     rsx! {
         if let Some(text) = text {
-            span { class, role: "status", "aria-label": label,
-                bdi { dir: "ltr", "{text}" }
+            span { class, role: "status", aria_live: "polite", aria_atomic: "true",
+                bdi { dir: "ltr", aria_hidden: "true", "{text}" }
+                span { class: "m3-badge__announcement", "{label}" }
             }
         } else {
             span { class, role: "img", "aria-label": label }

@@ -1,4 +1,98 @@
-# Text field surface and dynamic-label follow-up — 2026-10-09
+# Text field verification — current and historical evidence
+
+## Current dialog field verification — 2026-10-10
+
+Browser access is restored; the blocked width/notch notes below are historical.
+Source: `text_field.rs`/`text-field.css`, reused in `dialog.rs`/`dialog.css`.
+Pinned upstream and the previously rendered four official field sections remain
+linked below. Width follows upstream `w-full`, not a universal fixed M3 field width.
+
+Opening Create project was sampled in **32 actual frames**. Field layout width
+stays 400px while its viewport width grows from 321.06px to 400px. The hidden
+label has layout width 79px rounded (observer fractional value **79.375px**) while
+its early viewport width is 63.71px. The notch stores **79.375px**, proving the
+new layout measurement ignores the ancestor's .8→1 transform. The former
+`getBoundingClientRect()` value would have stored the scaled width without a new
+ResizeObserver event on transform completion.
+
+Settled: field/body content 400px; label font 12px; mask **87.375px×3px** focused,
+**87.375px×1px** after typing `Fidelity check` and Tab. Label padding adds 4px on
+each side. The visible label fits the opening in the screenshot. The full-screen
+field is 1046px at viewport 1094px, matching the 24px body side insets. The dialog
+paint gutter protects a first-child floating label and neighboring focus rings
+without changing visible field width; see [dialog verification](dialog-verification.md).
+
+[Full raw trace](resumed-browser-verification.json),
+[settled field screenshot](dialog-field-verified-preview.png).
+Successful final build, source-copy compilation and copy/paste are recorded in
+[the composite index](composite-verification.md).
+This targeted run verifies normal outlined Project name under the actual dialog
+entry transform. It does not re-certify every disabled/filled/multiline/autofill
+state. Android stays paused; compact override failed in this run, so final phone
+width is not claimed. Audible assistive technology and live font/prop permutations
+remain open.
+
+Reproduce: reload, open Create project while sampling field layout/viewport bounds,
+notch custom property and mask; type, Tab and compare settled focused/blurred depths.
+Confirm focus returns on dismissal, then inspect the desktop FullScreen field.
+
+## Historical width and notch follow-ups before restored browser access
+
+## Parent-width follow-up — 2026-10-10
+
+The dialog field stopped at 280px because `.m3-field` had a fixed `width: 280px`.
+Its native input already filled the field row; the outer component was the
+constraint. The reusable field now uses `width: 100%`, `min-width: 0` and its
+existing `max-width: 100%`/border-box sizing. Layout containers determine the
+width, including nested form rows and compact dialogs. To request a narrow field,
+constrain its parent. The Rust API and copyable usage snippets are unchanged.
+
+Re-read the actual pinned upstream
+[text-field.tsx](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/text-field.tsx)
+and [dialog.tsx](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/dialog.tsx):
+the field wrapper and surface use `w-full`. This width behavior is attributed to
+upstream, rather than a fixed universal Material field width. The official four
+sections previously read in this conversation remain linked below. A fresh
+request for the official pages returned JavaScript-only shells; it is not a new
+rendered guideline reading.
+
+`cargo check --locked --offline --target wasm32-unknown-unknown` passed in 0.38s.
+The live server reported `text-field.css` hot reload, then a fresh preview build
+succeeded in **9.94s**. Automatic approval review rejected browser
+inspection because of the existing localhost URL security block. No substitute
+browser access was used. Final rendered width, typing/notch regression checks and
+responsive measurements are therefore pending; source arithmetic is not runtime
+evidence. Android remains paused.
+
+The user manually refreshed Create project and confirmed that the field now fills
+the content width. They then reported overflowing Project name notch text. Source
+inspection identified a transform-sensitive measurement: `getBoundingClientRect()`
+includes the dialog's .8→1 entry scale, whereas the notch needs the label's layout
+width. ResizeObserver does not issue another size change for an ancestor transform,
+so a scaled-down width could remain after entry. This is the likely cause, pending
+the requested screenshot/rendered confirmation.
+
+The notch now reads the observer's fractional `borderBoxSize.inlineSize`, falling
+back to `offsetWidth` for initial/font-ready measurements. Both ignore ancestor
+transforms. This preserves the existing label-plus-8px notch, focus-depth mask and
+200ms label/notch motion. The fallback rounds to whole CSS pixels; the observer
+supplies fractional layout width when available. Fresh Dioxus build passed in
+**5.36s**, Wasm check in **1.94s**, and the generated notch JavaScript passes
+`node --check`. Post-fix overflow, transformed-ancestor geometry and input checks
+still require rendered verification; no browser/device result is claimed.
+The independently exported TextField usage example also compiles with the updated
+source and stylesheet. The source-copy dependencies and API remain unchanged.
+
+Reproduce: reload, open Create project, compare field and dialog-body bounds, type
+a name, Tab out and verify the label/notch; repeat the Adaptive editor at a compact
+desktop viewport. Check normal, disabled, filled and multiline gallery fields
+against their own containers. Save settled measurements before marking verified.
+
+## Accessibility follow-up — 2026-10-10
+
+See [the accessibility audit](accessibility-verification.md) and
+[raw samples](accessibility-samples.json) for tested behavior and remaining gaps.
+
 
 R9: the native label and 56px surface focus the input; disabled surface does
 not forward focus. Added native read_only and ResizeObserver notch tracking.

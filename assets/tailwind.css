@@ -222,6 +222,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-full {
+    width: 100%;
+  }
   .w-px {
     width: 1px;
   }

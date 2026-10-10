@@ -2,7 +2,7 @@
  * M3 divider. Copy with src/components/divider.rs.
  * Sources: Material Web divider tokens (revision 47adb65): 1px thickness and the
  * outline-variant colour. The 16dp list inset and the vertical form follow the upstream
- * separator (shadcn-m3e, revision 8f1b3fb), which uses bg-outline-variant at h-px / w-px.
+ * separator (shadcn-m3e, revision c37c0d2), which uses bg-outline-variant at h-px / w-px.
  */
 .m3-divider {
   flex: 0 0 auto;

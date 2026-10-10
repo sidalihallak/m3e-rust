@@ -1,7 +1,8 @@
 use dioxus::prelude::*;
 
-/// Divider direction. A horizontal divider spans the width of its container; a
-/// vertical one spans its height.
+/// Divider direction. A horizontal divider spans its container's width; a
+/// vertical one stretches through a flex/grid row's cross axis. Its parent
+/// determines the line height; a plain block parent does not provide stretching.
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
 pub enum DividerOrientation {
     #[default]

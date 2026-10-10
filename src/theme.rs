@@ -46,6 +46,8 @@ pub fn css_rgb(color: Rgb) -> String {
 /// Convert the MCU semantic scheme to CSS custom properties consumed by the UI.
 pub fn css_variables(scheme: &Scheme) -> String {
     let roles = [
+        ("scrim", scheme.scrim),
+        ("shadow", scheme.shadow),
         ("primary", scheme.primary),
         ("on-primary", scheme.on_primary),
         ("primary-container", scheme.primary_container),

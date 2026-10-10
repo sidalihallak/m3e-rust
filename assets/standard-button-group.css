@@ -1,0 +1,16 @@
+/* Official per-size spacing; width choreography from upstream useStandardGroup. */
+.m3-standard { --sg-height: 40px; --sg-gap: 12px; box-sizing: border-box; display: inline-flex; align-items: center; gap: var(--sg-gap); width: max-content; margin-block: max(0px, calc((48px - var(--sg-height)) / 2)); isolation: isolate; }
+.m3-standard--xs { --sg-height: 32px; --sg-gap: 18px; }
+.m3-standard--m { --sg-height: 56px; --sg-gap: 8px; }
+.m3-standard--l { --sg-height: 96px; --sg-gap: 8px; }
+.m3-standard--xl { --sg-height: 136px; --sg-gap: 8px; }
+.m3-standard > .m3-action {
+  min-width: 0;
+  transition-property: border-radius, background-color, color, box-shadow, width;
+  transition-duration: 240ms, 200ms, 200ms, 200ms, 360ms;
+  transition-timing-function: var(--m3-effects-default), cubic-bezier(.2,0,0,1), cubic-bezier(.2,0,0,1), cubic-bezier(.2,0,0,1), var(--m3-fast-spatial);
+}
+@media (prefers-reduced-motion: reduce) { .m3-standard > .m3-action { transition-duration: .01ms !important; } }
+
+.m3-standard:has(> .m3-action--icon-only:first-child) { padding-inline-start: max(0px, calc((48px - var(--sg-height)) / 2)); }
+.m3-standard:has(> .m3-action--icon-only:last-child) { padding-inline-end: max(0px, calc((48px - var(--sg-height)) / 2)); }
