@@ -140,3 +140,12 @@ results and remaining platform gaps. All 27 usage examples compile independently
 Current desktop follow-up: [card](docs/card-verification.md),
 [divider](docs/divider-verification.md), [dialog](docs/dialog-verification.md),
 [field](docs/text-field-verification.md) and [raw browser frames](docs/resumed-browser-verification.json).
+
+## Help and selection
+
+[Family verification](docs/help-selection-verification.md) covers plain/rich
+tooltips, popover, hover card, outlined/filled select, native select, editable
+single/multiple combobox and free text autocomplete. Eight copyable examples
+are in the live gallery; all **35** source-export examples compile. Desktop
+keyboard/pointer, popup motion, actual Reduce Motion and 390px responsive checks
+are recorded separately from the paused Android work.

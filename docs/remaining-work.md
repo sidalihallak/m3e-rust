@@ -31,6 +31,10 @@ they are not the current defect list.
 
 - Switch drag gestures and card dragged/elevation states.
 - Chip avatars and drag behavior.
+- Finish input-chip keyboard editing/navigation and the whole-chip focus target
+  for remove-only chips; the embedded Combobox currently exposes named native
+  remove buttons with Enter/Space support. See the
+  [official-reference audit](multi-select-filled-alignment-verification.md).
 - Scrollable tabs, inline badges in tabs and content-swipe integration; vertical
   tabs are an additional upstream feature.
 - Audit all variants and disabled/focus combinations rather than treating the
@@ -41,8 +45,9 @@ they are not the current defect list.
 The upstream source inventory at c37c0d2 contains many components not yet ported.
 Recommended order for reusable application building blocks:
 
-1. Popover and tooltip, then select/combobox/autocomplete. Standard/connected
-   groups, split buttons, dialogs/alerts and dropdown/context menus are now
+1. Help and selection (tooltip/rich tooltip, popover, hover card, select/native
+   select, combobox/autocomplete) is implemented with [desktop evidence](help-selection-verification.md). Standard/connected
+   groups, split buttons, dialogs/alerts and dropdown/context menus are also
    implemented; see [composite scope and checks](composite-verification.md) and
    [connected-group report](button-group-verification.md). The official segmented-button
    pages now recommend connected groups for new M3 Expressive designs; the
@@ -65,7 +70,7 @@ and richer compositions are not yet equivalent ports.
 
 | Priority/family | Remaining ports |
 | --- | --- |
-| Anchored help and selection | Tooltip, popover, hover card; select/native-select, combobox/autocomplete |
+| Help and selection extensions | Transient rich help, custom/virtual popup anchors and boundaries, async/virtual suggestions, chip Backspace navigation; core family is implemented |
 | Surfaces | Bottom sheet/drawer, sheet and side sheet |
 | Navigation | App bar, toolbar, navigation bar/rail/drawer, sidebar, navigation menu/menubar |
 | Feedback and content | Snackbar/toast, alert banner, search, list/item, avatar, skeleton, empty state |
@@ -85,14 +90,14 @@ upstream implementation using [the component protocol](component-development.md)
 
 ## 4. Finish the Rust/UI distribution workflow
 
-The current [source export](copy-components.md) and all 27 usage examples compile
+The current [source export](copy-components.md) and all 35 usage examples compile
 as an independent library. Still needed:
 
 - Launch a real consuming app with copied CSS, color roles and assets, and
   verify runtime styling, motion and interactions there.
 - Broaden source-copy verification beyond the shared clipboard workflow. Nine
   gallery copy controls succeeded and a native paste exactly matched the Divider
-  snippet (509 characters); all 27 examples compile. Other consumer runtimes remain.
+  snippet (509 characters); all 35 examples compile. Other consumer runtimes remain.
 - Add a per-component registry/installer workflow if that is the desired
   distribution model. The current exporter copies the complete editable kit;
   it is not yet a Rust/UI registry installer.
@@ -101,5 +106,5 @@ as an independent library. Still needed:
 
 The [accessibility audit](accessibility-verification.md) and
 [composite pilot](composite-verification.md) have desktop evidence. The post-restart browser/copy-control recheck is complete; next expand audible
-screen-reader verification and held-pointer/compact regression coverage. The next components are popover/tooltip and
-select/combobox. Android remains paused.
+screen-reader verification and held-pointer/compact regression coverage. The next family is surfaces: bottom sheet/drawer, sheet and side sheet.
+Help and selection now has desktop and compact-layout evidence. Android remains paused.

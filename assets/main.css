@@ -236,6 +236,12 @@ button { cursor: pointer; }
 .composite-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; align-items: start; }
 .composite-grid > .demo-card { min-width: 0; }
 .composite-grid > .code-card { grid-column: 1 / -1; }
+.help-trigger-row { display:flex;align-items:center;gap:20px;padding-block:12px; }
+.help-check-row { display:flex;align-items:center;gap:8px; }
+.help-preview-link { display:inline-flex;align-items:center;min-height:48px;color:var(--md-sys-color-primary);text-underline-offset:4px; }
+.help-preview-link:focus-visible { outline:3px solid var(--md-sys-color-primary);outline-offset:3px;border-radius:4px; }
+.help-section .composite-stack {gap:24px;}
+.help-project-details {margin-top:20px;}
 .composite-stack { display: flex; flex-direction: column; gap: 16px; }
 .composite-size-row { display: flex; align-items: center; gap: 16px; }
 .composite-size-row > .control-label { flex: 0 0 52px; }

@@ -4,8 +4,13 @@ Desktop copy/paste checked on 2026-10-10: nine composite/card/divider controls
 showed success, and native paste exactly matched the 509-character Divider usage.
 The updated export includes 16px card slot padding and the dialog focus/label
 paint gutter. API/source completeness is checked separately by compiling all
-27 exported examples; runtime styling in a separate consuming app remains open.
+35 exported examples; runtime styling in a separate consuming app remains open.
 See [current browser evidence](resumed-browser-verification.json).
+
+The Help and selection family adds eight independently checked copy controls:
+all returned the exact snippet. A native paste into a single-line field matched
+the Autocomplete snippet after native newline removal. [Family evidence](help-selection-verification.md)
+records all 35 independently compiled examples and the current desktop checks.
 
 The gallery's **Copy Rust code** buttons copy real usage examples. Component
 implementations remain editable Rust and CSS files in this repository.
@@ -53,6 +58,10 @@ If copying only selected files, retain the corresponding module declarations.
 
 | Component Rust file | CSS | Additional Rust source |
 | --- | --- | --- |
+| `tooltip.rs` (plain/rich) | `help.css`, `composite-motion.css` | `anchored.rs` + **`anchored.js`**, `motion.rs`; supply chosen action components for rich help |
+| `popover.rs` (Popover/HelpTrigger) | `help.css`, `composite-motion.css`; HelpTrigger also needs `action-control.css`, `ripple.css`, `icon.css` | `anchored.rs` + **`anchored.js`**, `motion.rs`; HelpTrigger needs `action_control.rs`, `button.rs` enums, `icon.rs`, `icons.rs`, `ripple.rs` |
+| `hover_card.rs` | `help.css`, `composite-motion.css` | `anchored.rs` + **`anchored.js`**, `motion.rs` |
+| `select.rs` (Select/NativeSelect), `combobox.rs` (Combobox/Autocomplete) | `select.css`, `help.css`, `composite-motion.css`, `ripple.css`, `icon.css` | `anchored.rs` + **`anchored.js`**, **`selection.js`**, `motion.rs`, `ripple.rs`, `icon.rs`, `icons.rs`, `text_field.rs` (variant enum and Rust dependencies); Combobox also needs `select.rs` |
 | `standard_button_group.rs` | `standard-button-group.css`, `action-control.css`, `composite-motion.css`, `ripple.css`, `icon.css` | `action_control.rs`, `button.rs` enums, `icon.rs`, `icons.rs`, `ripple.rs`, `motion.rs` |
 | `split_button.rs` | `split-button.css` and all menu/shared action CSS below | `menu.rs` + `menu.js`, `action_control.rs`, `button.rs` enums, `icon.rs`, `icons.rs`, `ripple.rs`, `motion.rs` |
 | `menu.rs` | `menu.css`, `action-control.css`, `composite-motion.css`, `ripple.css`, `icon.css` | **`menu.js` in the same directory**, `action_control.rs`, `button.rs` enums, `icon.rs`, `icons.rs`, `ripple.rs`, `motion.rs` |
@@ -72,7 +81,7 @@ Keep the existing notices on generated Material Symbols and shape data.
 
 ## Verification scope
 
-The exported library and all 27 gallery usage examples were compiled for
+The exported library and all 35 gallery usage examples were compiled for
 `wasm32-unknown-unknown` in a separate directory on 2026-10-10. This establishes
 that the source bundle includes its Rust dependencies and that the examples
 use the current API. Runtime styling and interaction checks were performed in
@@ -101,3 +110,29 @@ TextField) when using those controls in dialog content.
 For text-only tab panels, include `tabindex: "0"` and a visible focus style.
 Give range sliders an `aria_label`. Badge `aria_label` supplies full announcement
 context; copy `badge.css` too so its announcement text is visually hidden.
+
+## Help and selection state and semantics
+
+`Popover`, `RichTooltip`, `Select`, `Combobox` and `Autocomplete` are controlled:
+update `open` through `onopenchange`. Select owns a String option ID; Combobox
+owns a Vec of IDs plus a separate `input_value` draft. Autocomplete owns arbitrary
+text; choosing a suggestion writes its label and reports its ID through
+`onselect`. It exposes `name` for its native form input. Custom Select/Combobox
+`required` is an ARIA state: validate committed choices in the consuming form.
+NativeSelect and free-text Autocomplete expose native required validation.
+
+Combobox `show_clear` applies to single-value selection. Multiple selection
+keeps the dropdown affordance and uses each input chip's remove action.
+
+Keep anchors mounted with stable, unique IDs. `HelpTrigger` supplies a named
+native action with such an ID; a native link/button can also be used as the
+anchor. Tooltip is supplementary text; RichTooltip provides persistent help
+opened explicitly. HoverCard is deliberately hidden from assistive technology:
+its preview contents are inert and must also be available at the linked
+destination. Use Popover for interactive content.
+
+Include TextField/Checkbox/action CSS when using the Popover form example.
+Native Popover API and modern CSS support are required; this pilot does not ship
+a legacy-browser polyfill. Preserve `.js` runtime files with the Rust sources;
+the exporter includes them automatically. [Each component report](help-selection-verification.md)
+records tested states and intentional differences from upstream.

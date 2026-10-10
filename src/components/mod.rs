@@ -56,3 +56,15 @@ pub mod dialog;
 pub use dialog::{Dialog, AlertDialog, DialogAction, DialogVariant, DialogRole};
 
 pub(crate) mod compact;
+pub(crate) mod anchored;
+pub mod tooltip;
+pub mod popover;
+pub mod hover_card;
+pub mod select;
+pub mod combobox;
+pub use anchored::{PopupSide, PopupAlign};
+pub use tooltip::{Tooltip, RichTooltip};
+pub use popover::{Popover, HelpTrigger};
+pub use hover_card::HoverCard;
+pub use select::{Select, NativeSelect, SelectOption, SelectSize};
+pub use combobox::{Combobox, Autocomplete};

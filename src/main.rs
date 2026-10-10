@@ -4,6 +4,7 @@ use m3e_rust_ui::{ConnectedButtonGroup, ConnectedButtonItem, ConnectedButtonVari
 
 mod theme;
 mod composite_gallery;
+mod help_gallery;
 use composite_gallery::CompositeGallery;
 
 use material_colors::color::Rgb;
@@ -448,6 +449,8 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/split-button.css") }
         document::Stylesheet { href: asset!("/assets/menu.css") }
         document::Stylesheet { href: asset!("/assets/dialog.css") }
+        document::Stylesheet { href: asset!("/assets/help.css") }
+        document::Stylesheet { href: asset!("/assets/select.css") }
         document::Stylesheet { href: asset!("/assets/tabs.css") }
         document::Stylesheet { href: asset!("/assets/badge.css") }
         document::Stylesheet { href: asset!("/assets/card.css") }
@@ -1148,6 +1151,7 @@ fn App() -> Element {
                 }
             }
             CompositeGallery {}
+            help_gallery::HelpGallery {}
             section { class: "wrap roles-section tabs-section",
                 div { class: "section-heading roles-heading",
                     div {

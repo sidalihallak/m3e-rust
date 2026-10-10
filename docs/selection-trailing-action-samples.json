@@ -1,0 +1,3185 @@
+{
+  "date": "2026-10-10",
+  "sourceRevision": "c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972",
+  "initial": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 24931.5
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 24935.5
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 64,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 24931.5
+        },
+        "icon": {
+          "centerY": 32,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 24939.5
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 25142.5
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 25146.5
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 25651.5
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 25655.5
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 25731.5
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 25735.5
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 25651.5
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 25655.5
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "materialReadings": {
+    "specs": "Text fields\nText fields let users enter text into a UI\nResources\nandroid\nflutter\n+2\ninfo\nOverview\nstyle\nSpecs\ndesign_services\nGuidelines\naccessibility_new\nAccessibility\nOn this page\nTokens & specs\nFilled text field\nOutlined text field\nlink\nCopy link\nTokens & specs\n\nBrowse the component elements, attributes, tokens, and their values. Learn about design tokens\n\nlink\nCopy link\nsearch\nvisibility\ngrid_view\nToken\nValue\nlink\nCopy link\nFilled text field\nlink\nCopy link\n\nContainer\n\nLeading icon (optional)\n\nLabel text in empty field\n\nLabel text in populated field\n\nTrailing icon (optional)\n\nFocused active Indicator\n\nCaret\n\nInput text\n\nSupporting text (optional)\n\nEnabled active indicator\n\nlink\nCopy link\nFilled text field color\n\nColor values are implemented through design tokens. For design, this means working with color values that correspond with tokens. For implementation, a color value will be a token that references a value. Learn more about design tokens\n\nlink\nCopy link\n\nFilled text field color roles used for light and dark schemes:\n\nSurface container highest\n\nOn surface variant\n\nOn surface variant\n\nPrimary\n\nOn surface variant\n\nPrimary\n\nPrimary\n\nOn surface\n\nOn surface variant\n\nOn surface\n\nlink\nCopy link\nFilled text field states\n\nStates are visual representations used to communicate the status of a component or interactive element. Learn more about interaction states\n\nlink\nCopy link\nEnabled (empty)\nFocused (empty)\nHovered (empty)\nDisabled (empty)\nEnabled (populated)\nFocused (populated)\nHovered (populated)\nDisabled (populated)\nlink\nCopy link\nFilled text field error states\n\nError states are visual representations used to communicate the status of a component or interactive element. An error message can display instructions on how to fix it. Error messages are displayed below the text field as supporting text until fixed.\n\nlink\nCopy link\nEnabled (empty)\nFocused (empty)\nHovered (empty)\nEnabled (populated)\nFocused (populated)\nHovered (populated)\nlink\nCopy link\nFilled text field measurements\nlink\nCopy link\n\nPadding and size measurements without icons\n\nlink\nCopy link\n\nPadding and size measurements with icons\n\nlink\nCopy link\n\nPadding and size measurements with supporting text and character count\n\nlink\nCopy link\nAttribute\tValue\nDefault container height\n\t56dp\nLabel alignment (unpopulated)\n\tVertically centered\nTop/bottom padding\n\t8dp\nLeft/right padding without icons\n\t16dp\nLeft/right padding with icons\n\t12dp\nIcon alignment\n\tVertically centered\nPadding between icons and text\n\t16dp\nSupporting text and character counter top padding\n\t4dp\nPadding between supporting text and character counter\n\t16dp\nTarget size\t56dp\nlink\nCopy link\nFilled text field configurations\nlink\nCopy link\n\nEmpty and populated filled text fields with:\n\nSupporting text\n\nTrailing icon\n\nLeading icon\n\nLeading and trailing icons\n\nPrefix\n\nSuffix\n\nMulti-line text field\n\nlink\nCopy link\nOutlined text field\nlink\nCopy link\n\nEnabled container outline\n\nLeading icon (optional)\n\nLabel text in empty field\n\nLabel text in populated field\n\nTrailing icon (optional)\n\nFocused container outline\n\nCaret\n\nInput text\n\nSupporting text (optional)\n\nlink\nCopy link\nOutlined text field color\n\nColor values are implemented through design tokens. For design, this means working with color values that correspond with tokens. For implementation, a color value will be a token that references a value. Learn more about design tokens\n\nlink\nCopy link\n\nOutlined text field color roles used for light and dark schemes:\n\nOutline\nOn surface variant\nOn surface variant\nPrimary\nOn surface variant\nPrimary\nPrimary\nOn surface\nOn surface variant\nlink\nCopy link\nOutlined text field states\n\nStates are visual representations used to communicate the status of a component or interactive element. Learn more about interaction states\n\nlink\nCopy link\nEnabled (empty)\nFocused (empty)\nHovered (empty)\nDisabled (empty)\nEnabled (populated)\nFocused (populated)\nHovered (populated)\nDisabled (populated)\nlink\nCopy link\nOutlined text field error states\n\nError states are visual representations used to communicate the status of a component or interactive element. An error message can display instructions on how to fix it. Error messages are displayed below the text field as supporting text until fixed.\n\nlink\nCopy link\nEnabled (empty)\nFocused (empty)\nHovered (empty)\nEnabled (populated)\nFocused (populated)\nHovered (populated)\nlink\nCopy link\nOutlined text field measurements\nlink\nCopy link\n\nPadding and size measurements without icons\n\nlink\nCopy link\n\nPadding and size measurements with icons\n\nlink\nCopy link\n\nPadding and size measurements with supporting text and character count\n\nlink\nCopy link\nAttribute\tValue\nContainer height\n\t56dp\nLeft/right padding without icons\n\t16dp\nLeft/right padding with icons\n\t12dp\nPadding between icons and text\n\t16dp\nIcon alignment\n\tVertically centered\nSupporting text and character counter top padding\n\t4dp\nPadding between supporting text and character counter\n\t16dp\nLabel alignment\n\tVertically centered\nLeft/right padding populated label text\n\t4dp\nTarget size\t56dp\nlink\nCopy link\nOutlined text field configurations\nlink\nCopy link\n\nEmpty and populated outlined text fields with:\n\nSupporting text\n\nTrailing icon\n\nLeading icon\n\nLeading and trailing icons\n\nPrefix\n\nSuffix\n\nMulti-line text field",
+    "overview": "Skip to main content\nsearch\nmaterial_design\nHome\napps\nGet started\ncode\nDevelop\nbook\nFoundations\npalette\nStyles\nadd_circle\nComponents\npages\nBlog\nplay_arrow\npause\ndark_mode\nlight_mode\nText fields\nText fields let users enter text into a UI\nResources\nandroid\nflutter\n+2\ninfo\nOverview\nstyle\nSpecs\ndesign_services\nGuidelines\naccessibility_new\nAccessibility\nOn this page\nAvailability & resources\nDifferences from M2\nlink\nCopy link\n\nMake sure text fields look interactive\n\nTwo variants: filled and outlined\n\nThe text field’s state (blank, with input, error, etc) should be visible at a glance\n\nKeep labels and error messages brief and easy to act on\n\nText fields commonly appear in forms and dialogs\n\nlink\nCopy link\nFilled text field\nOutlined text field\nlink\nCopy link\nAvailability & resources\nlink\nCopy link\nType\tResource\tStatus\nDesign\n\nDesign Kit (Figma)\n\t\nAvailable\n\nImplementation\n\nFlutter\n\t\nAvailable\n\n\nandroid\nJetpack Compose\n\t\nAvailable\n\n\nandroid\nAndroid Views (MDC-Android)\n\t\nAvailable\n\n\nlanguage\nWeb\n\t\nAvailable\nlink\nCopy link\nDifferences from M2\nlink\nCopy link\nColor: New color mappings and compatibility with dynamic color\n\nText fields have new color mappings\n\narrow_left_alt\nPrevious\nTabs: Overview\nUp next\narrow_right_alt\nText fields: Specs\nvertical_align_top\nmaterial_design\n\nMaterial Design is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material Design streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.\n\nSocial\nGitHub\nX\nYouTube\nBlog RSS\nLibraries\nAndroid\nCompose\nFlutter\nWeb\nMore Google sites\nGoogle Design\nArchived versions\nMaterial Design 1\nMaterial Design 2\nPrivacy Policy\nTerms of Service\nJoin research studies\nFeedback",
+    "guidelines": "Text fields\nText fields let users enter text into a UI\nResources\nandroid\nflutter\n+2\ninfo\nOverview\nstyle\nSpecs\ndesign_services\nGuidelines\naccessibility_new\nAccessibility\nOn this page\nUsage\nChoosing text fields\nAnatomy\nAdaptive design\nlink\nCopy link\n\nFilled and outlined text fields\n\nlink\nCopy link\nUsage\nlink\nCopy link\n\nUse a text field when someone needs to enter text into a UI, such as filling in contact or payment information.\n\nContact form using outlined text fields\n\nlink\nCopy link\n\nThere are two variants of text fields:\n\nFilled text fields\n\nOutlined text fields\n\nBoth variants of text fields use a container to provide a visual cue for interaction and provide the same functionality.\n\nFilled text field\n\nOutlined text field\n\nlink\nCopy link\nOutlined text fields\n\nOutlined text fields have less visual emphasis than filled text fields. When they appear in places like forms (where many text fields are placed together), their reduced emphasis helps simplify the  layout.\n\nLogin screen with outlined text fields\n\nlink\nCopy link\nChoosing text fields\nlink\nCopy link\nChoosing text fields\n\nBoth variants of text field provide the same functionality. The variant of text field used can depend on style alone.\n\nChoose the variant that:\n\nWorks best with an app’s visual style\n\nBest accommodates the UI's goals\n\nIs most distinct from other components (like buttons) and surrounding content\n\nMobile form using filled text fields\n\nThe same mobile form using outlined text fields\n\nlink\nCopy link\nUsing both text field variants on the same screen\n\nIf both variants of text field are used in a UI, they should be used consistently within different sections, and not intermixed within the same region. \n\nFor example, use outlined text fields in one section and filled text fields in another.\n\ncheck\nDo\n\nWhen using both variants of text fields in a UI, separate them by region\n\nclose\nDon’t\n\nWhen using both variants of text fields, don't use both next to each other or within the same form\n\nlink\nCopy link\nAnatomy\nlink\nCopy link\nFilled text field\nlink\nCopy link\n\nContainer\n\nLeading icon (optional)\n\nLabel text in empty field\n\nLabel text in populated field\n\nTrailing icon (optional)\n\nFocused active Indicator\n\nCaret\n\nInput text\n\nSupporting text (optional)\n\nEnabled active Indicator\n\nlink\nCopy link\nOutlined text field\nlink\nCopy link\n\nEnabled container outline\n\nLabel text in empty field\n\nLeading icon (optional)\n\nLabel text in populated field\n\nTrailing icon (optional)\n\nFocused container outline\n\nCaret\n\nInput text\n\nSupporting text (optional)\n\nlink\nCopy link\nContainers\n\nContainers improve the discoverability of text fields by creating contrast between the text field and surrounding content.\n\nFill and stroke\nA text field container has a fill and a stroke either around the entire container, or just the bottom edge. The color and thickness of a stroke can change to indicate when the text field is active. \n\nRounded corners\nThe container of an outlined text field has rounded corners, while the container of a filled text field has rounded top corners and square bottom corners.\n\nText field containers\n\nlink\nCopy link\nLabel text\n\nLabel text tells people what information is requested. Every text field should have a label.\n\nLabel text should be aligned with the input text, and always visible. It can be placed in the middle of a text field, or rest near the top of the container.\n\nLabel text shouldn't be truncated or take up multiple lines. Keep it short, clear, and fully visible.\n\npause\nLabel text should always be visible. When the field is selected, the label text moves from the middle of the text field to the top.\nlink\nCopy link\nclose\nDon’t\nDon’t truncate label text. Keep it short, clear, and fully visible.\nclose\nDon’t\n\nLabel text shouldn’t take up multiple lines\n\nlink\nCopy link\nAdjacent label\n\nA text field doesn't require a label if the field's purpose is indicated by a separate, adjacent label. \n\nAdjacent labels should be aligned to the leading edge of the text field container.\n\nText fields with adjacent labels\n\nlink\nCopy link\nRequired text indicator\n\nTo show a field is required, display an asterisk (*) next to the label text, and explain that asterisks indicate required fields in one of two ways:\n\nSupporting text\n\nA single note at the beginning of the form\n\nAdditional best practices include:\n\n\nIndicate all required fields\n\nIf required text has a particular color, use the same color for the asterisk\n\nAsterisk with required supporting text\n\nlink\nCopy link\nInput text\n\nInput text is text a person has entered into a text field.\n\nText fields can display input text in the following ways:\n\nSingle line text fields display only one line of text\nMulti-line text fields grow to accommodate multiple lines of text\nText areas are fixed-height fields\n\nInput text in a filled text field\n\nlink\nCopy link\npause\n\nIn single-line fields, as the cursor reaches the right field edge, text longer than the input line automatically scrolls left. Single-line fields are not suitable for collecting long responses; use a multi-line text field or text area instead.\n\npause\n\nIn multi-line fields, overflow text causes the text field to expand, shifting screen elements downward and text wraps onto a new line. These fields initially appear as single-line fields, which is useful for compact layouts that need to accommodate large amounts of text.\n\npause\n\nText areas are taller than text fields and wrap overflow text onto a new line. They are a fixed height and scroll vertically when the cursor reaches the bottom of the field. The large initial size indicates that longer responses are possible and encouraged. These should be used instead of multi-line fields on the web. Ensure the height of a text area fits within mobile screen sizes.\n\nlink\nCopy link\nPrefix text\n\nText fields can contain prefix text such as currency symbol.\n\nA text field with a currency symbol text prefix\n\nlink\nCopy link\nSuffix text\n\nText fields can contain suffix text such as unit of measurement or email domain.\n\nA text field with a grading scale as suffix\n\nA text field with an email domain suffix\n\nlink\nCopy link\nSupporting text & character counter\n\nSupporting text conveys additional information about the input field, such as how it will be used. It should ideally be one line, though may wrap to multiple lines if required. It can be either persistently visible or visible only on focus.\n\nIf there is a character or word limit, include a character or word counter. They display the ratio of characters used and the total character limit.\n\nSupporting text\nCharacter counter\nlink\nCopy link\nError text\n\nFor text fields that validate their content such as passwords, replace supporting text with error text. Swapping supporting text with error text prevents new lines of text from bumping content and changing the layout.\n\nIf only one error is possible, error text should describe how to avoid the error\nIf multiple errors are possible, error text should describe how to avoid the most likely error\npause\ncheck\nDo\n\nSwap supporting text with error text\n\nlink\nCopy link\npause\nclose\nDon’t\n\nDon't add error text in addition to supporting text, as their appearance will shift content\n\nexclamation\nCaution\n\nLong errors can wrap to multiple lines if there isn't enough space to clearly describe the error. In this case, ensure padding between text fields is sufficient to prevent multi-lined errors from bumping layout content.\n\nlink\nCopy link\nError icon\n\nIt’s strongly recommended to show an error icon when the text field is in the error state. \n\nThis highlights the error for people with visual impairments, and provides an additional sensory indicator.\n\nThe error icon is an important second visual indicator that a text field has an error\n\nlink\nCopy link\nIcons & images\n\nIcons in text fields are optional. Text field icons can: \n\nDescribe valid input methods such as a microphone icon\nProvide affordances to access additional functionality such as clearing the content of a field\nExpress an error\n\nLeading and trailing icons change their position based on LTR or RTL contexts.\n\nImages that are 24dp in height can be placed inside of text fields. This image height allows for optimal top and bottom padding within the field and is consistent with icon size recommendations.\n\nlink\nCopy link\nIcon signifier \nIcon signifiers can describe the type of input a text field requires, and be touch targets for nested components. For example, a calendar icon may be tapped to reveal a date picker.\nValid or error icon\nIconography can indicate both valid and invalid inputs, making error states clear for colorblind users. \nClear icon\nClear icons let a person clear an entire input field. They appear only when input text is present.\nVoice input icon\nA microphone icon signifies that people can input characters using voice. \nDropdown icon\nA dropdown arrow indicates that a text field has a nested selection component.\nImage\nAn image can help contextualize the required input text such as a credit card number.\nIcon signifier\nValid or error icon \nClear icon \nVoice input icon\nDropdown icon\nImage\nlink\nCopy link\nRead-only fields\n\nRead-only text fields display pre-filled text that people cannot edit. \n\nA read-only text field is styled the same as a regular text field and is clearly labeled as read-only.\n\nA filled read-only text field\n\nAn outlined read-only text field\n\nlink\nCopy link\nAdaptive design\n\nAs layouts adapt to larger screens and different breakpoints, apply flexible container dimensions to text fields. Set minimum and maximum values for margins, padding, and container dimensions as layouts scale so that typography adjusts for better reading experiences.\n\nlink\nCopy link\n\nFor compact breakpoints, text fields can span the full width of the display. For medium and expanded breakpoints, text fields should be bound by flexible margins or other containers.\n\nlink\nCopy link\n\nAs text fields expand in fluid layouts, avoid maintaining fixed margins and typography properties. This can lead to extra long text fields. \n\nFor example, text fields should not span the full width of a large screen.\n\nclose\nDon’t\n\nDon’t use fixed text field margins on large devices. Text fields shouldn’t span the full width of a large screen.\n\nlink\nCopy link\nDensity\n\nDense text fields enable people to scan and take action on large amounts of information.\n\nA form with dense text fields\n\nlink\nCopy link\nAvoid applying density by default\n\nDon't apply density to text fields by default. This lowers their targets below the recommended 48x48 CSS pixels. Instead, give people a way to choose a higher density, like selecting a denser layout or changing the theme.\n\nTo ensure this density setting can be easily reverted when it's active, keep all the targets to change it at a minimum of 48x48 CSS pixels each.",
+    "accessibility": "Text fields\nText fields let users enter text into a UI\nResources\nandroid\nflutter\n+2\ninfo\nOverview\nstyle\nSpecs\ndesign_services\nGuidelines\naccessibility_new\nAccessibility\nOn this page\nUse cases\nInteraction & style\nKeyboard navigation\nLabeling elements\nlink\nCopy link\nUse cases\nlink\nCopy link\n\nUser should be able to:\n\nNavigate to and activate a text field with assistive technology\nInput information into the text field\nReceive and understand supporting text and error messages\nNavigate to and select interactive icons\nlink\nCopy link\nInteraction & style\nlink\nCopy link\n\nThe containers for both filled and outlined text fields provide the same functionality. Changes to color and thickness of stroke help provide clear visual cues for interaction.\n\nFilled text fields\n\nOutlined text fields\n\nlink\nCopy link\n\nContainers improve the discoverability of text fields by creating contrast between the text field and surrounding content. \n\nIn some contexts, outlined text fields can improve the perception of the fields with a 3:1 or greater contrast ratio between the container outline and the background.\n\n\ncheck\nDo\n\nMake sure the container outline has a minimum contrast of 3:1 to the background\n\n\n\n\n\nclose\nDon’t\n\nDon't choose colors that won't pass Material's minimum contrast of 3:1\n\nlink\nCopy link\nKeyboard navigation\nlink\nCopy link\nKeys\n\t\nActions\n\nTab\tFocus lands on (non-disabled) text field\nlink\nCopy link\nLabeling elements\nlink\nCopy link\n\nIf the UI text is correctly linked, assistive tech (such as a screenreader) will read the UI text followed by the component’s role.\n\nThe accessibility label for a text field is the same as the text field label.\n\nA text field’s label should include its UI text\n\nlink\nCopy link\n\nFor text fields with interactive trailing icons, the accessibility label clarifies its function.\n\nFor example, when a password is hidden, the label for the view icon is \"Show password,\" and when the password is visible, the label is \"Hide password.\"\n\nWhen an icon has no actionable role, like an error icon, the label is \"Error.\"\n\nWhen a trailing icon in the field acts as a button, the label should clarify function, while the role explains the component type\n\nlink\nCopy link\n\nThe prefix and suffix of a text field provides symbols and abbreviations to help users enter the correct values. \n \nThe accessibility label for prefix and suffix needs to have a unique id attribute, for example, the currency name for a currency symbol prefix.\n\nA form containing fields with both a prefix for currency, and a suffix for email address\n\nlink\nCopy link\n\nWhen there is an error, \"alert\" is applied to the role and the error message to the text label.\n\nIf a text field displays both supporting text and error text, the label should include the supporting text first, followed by the error text.\n\nText field error messages should be given an “alert” role in accessibility labels\n\nlink\nCopy link\n\nThe accessibility label for the character counter clarifies the number of characters that can be entered into the text field. \n\nThe remaining character counter should be called “character count” within the label\n\nlink\nCopy link\n\nThe text displayed in the supporting text is also used for its accessibility label.\n\nText field supporting text should have its own accessibility label\n\nlink\nCopy link\n\nIf a text field requires input, indicate so with an asterisk at the end of the text field label. The accessibility label must include the asterisk.\n\nA required text field’s accessibility label should include any supporting text"
+  },
+  "cleared": {
+    "fields": [
+      {
+        "action": "Show Language options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 466
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 64,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 32,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 470
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 673
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 677
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1182
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1186
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1262
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1266
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 1182
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 1186
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "reselected": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 466
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 64,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 32,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 470
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 673
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 677
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1182
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1186
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1262
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1266
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 1182
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 1186
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "populatedInputClick": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "true",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 466
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 64,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 32,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 470
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 673
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 677
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1182
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1186
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1262
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1266
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 1182
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 1186
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "clearWhileOpen": {
+    "fields": [
+      {
+        "action": "Show Language options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "true",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 466
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 64,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 32,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 470
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 673
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 677
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1182
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1186
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1262
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1266
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 1182
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 1186
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "keyboardReselect": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 466
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 64,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 32,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 470
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 673
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 677
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1182
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1186
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1262
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1266
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 1182
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 1186
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "filledCleared": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": -258
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": -254
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 64,
+          "width": 463.5,
+          "x": 566.5,
+          "y": -258
+        },
+        "icon": {
+          "centerY": 32,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": -250
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": -47
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": -43
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Search billing region options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 466
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 542
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 546
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 466
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "finalInitial": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 24931.5
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 24935.5
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 64,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 24931.5
+        },
+        "icon": {
+          "centerY": 32,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 24939.5
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 25142.5
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 25146.5
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 25651.5
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 25655.5
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 25731.5
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 25735.5
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 25651.5
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 25655.5
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "filledSelected": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": -258
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": -254
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 64,
+          "width": 463.5,
+          "x": 566.5,
+          "y": -258
+        },
+        "icon": {
+          "centerY": 32,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": -250
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": -47
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": -43
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 466
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 542
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 546
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 466
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "autocompleteSelected": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 251
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 255
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 64,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 251
+        },
+        "icon": {
+          "centerY": 32,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 259
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 466
+        },
+        "textToIcon": 16,
+        "value": "Design"
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 971
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 975
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1051
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1055
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 971
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 975
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "disabledClick": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": -338
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": -334
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 64,
+          "width": 463.5,
+          "x": 566.5,
+          "y": -338
+        },
+        "icon": {
+          "centerY": 32,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": -330
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": -127
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": -123
+        },
+        "textToIcon": 16,
+        "value": "Design"
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 382
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 386
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 466
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 382
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 386
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "multipleCleared": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 458
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 462
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Project languages options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 458
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 462
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 669
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 673
+        },
+        "textToIcon": 16,
+        "value": "Design"
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1178
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1182
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1258
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1262
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 1178
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 1182
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  },
+  "openMotion": [
+    {
+      "ms": 383,
+      "h": 0,
+      "opacity": "1",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 431,
+      "h": 0,
+      "opacity": "1",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 492,
+      "h": 0,
+      "opacity": "1",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 529,
+      "h": 0,
+      "opacity": "1",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 576,
+      "h": 0,
+      "opacity": "1",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 621,
+      "h": 0,
+      "opacity": "1",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 668,
+      "h": 0,
+      "opacity": "1",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 719,
+      "h": 0,
+      "opacity": "1",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 762,
+      "h": 0,
+      "opacity": "1",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 806,
+      "h": 0,
+      "opacity": "1",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 862,
+      "h": 0,
+      "opacity": "1",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 915,
+      "h": 0,
+      "opacity": "1",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 1073,
+      "h": 174.2518310546875,
+      "opacity": "0.091418",
+      "phase": "opening",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 0.605041, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 521.6302490234375
+    },
+    {
+      "ms": 1223,
+      "h": 278.23663330078125,
+      "opacity": "1",
+      "phase": "opening",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 0.966099, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 523.7965698242188
+    },
+    {
+      "ms": 1271,
+      "h": 287.5115966796875,
+      "opacity": "1",
+      "phase": "opening",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 0.998304, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 523.9898071289062
+    },
+    {
+      "ms": 1315,
+      "h": 289.59942626953125,
+      "opacity": "1",
+      "phase": "opening",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 1.00555, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 524.0333251953125
+    },
+    {
+      "ms": 1347,
+      "h": 289.697021484375,
+      "opacity": "1",
+      "phase": "opening",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 1.00589, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 524.0353393554688
+    },
+    {
+      "ms": 1381,
+      "h": 289.30206298828125,
+      "opacity": "1",
+      "phase": "opening",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 1.00452, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 524.027099609375
+    },
+    {
+      "ms": 1430,
+      "h": 288.71734619140625,
+      "opacity": "1",
+      "phase": "opening",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 1.00249, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 524.0149536132812
+    },
+    {
+      "ms": 1492,
+      "h": 288.21429443359375,
+      "opacity": "1",
+      "phase": "opening",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 1.00074, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 524.0044555664062
+    },
+    {
+      "ms": 1541,
+      "h": 288,
+      "opacity": "1",
+      "phase": "open",
+      "radius": "16px",
+      "shown": true,
+      "transform": "none",
+      "w": 463.5,
+      "x": 49,
+      "y": 524
+    },
+    {
+      "ms": 1695,
+      "h": 288,
+      "opacity": "1",
+      "phase": "open",
+      "radius": "16px",
+      "shown": true,
+      "transform": "none",
+      "w": 463.5,
+      "x": 49,
+      "y": 524
+    },
+    {
+      "ms": 2052,
+      "h": 288,
+      "opacity": "1",
+      "phase": "open",
+      "radius": "16px",
+      "shown": true,
+      "transform": "none",
+      "w": 463.5,
+      "x": 49,
+      "y": 524
+    },
+    {
+      "ms": 2086,
+      "h": 288,
+      "opacity": "1",
+      "phase": "open",
+      "radius": "16px",
+      "shown": true,
+      "transform": "none",
+      "w": 463.5,
+      "x": 49,
+      "y": 524
+    }
+  ],
+  "closeMotion": [
+    {
+      "ms": 16,
+      "h": 288,
+      "opacity": "1",
+      "phase": "open",
+      "radius": "16px",
+      "shown": true,
+      "transform": "none",
+      "w": 463.5,
+      "x": 49,
+      "y": 524
+    },
+    {
+      "ms": 52,
+      "h": 288,
+      "opacity": "1",
+      "phase": "closing",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 524
+    },
+    {
+      "ms": 84,
+      "h": 286.73175048828125,
+      "opacity": "0.955963",
+      "phase": "closing",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 0.995596, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 523.9735717773438
+    },
+    {
+      "ms": 109,
+      "h": 283.90643310546875,
+      "opacity": "0.857863",
+      "phase": "closing",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 0.985786, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 523.9147338867188
+    },
+    {
+      "ms": 138,
+      "h": 278.3973388671875,
+      "opacity": "0.666575",
+      "phase": "closing",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 0.966658, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 523.7999267578125
+    },
+    {
+      "ms": 176,
+      "h": 262.27435302734375,
+      "opacity": "0.10675",
+      "phase": "closing",
+      "radius": "16px",
+      "shown": true,
+      "transform": "matrix(1, 0, 0, 0.910675, 0, 0)",
+      "w": 463.5,
+      "x": 49,
+      "y": 523.4640502929688
+    },
+    {
+      "ms": 201,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 227,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 253,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 284,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 315,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 343,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 376,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 407,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 435,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 461,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 485,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 510,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 543,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ms": 581,
+      "h": 0,
+      "opacity": "1",
+      "phase": "closed",
+      "radius": "16px",
+      "shown": false,
+      "transform": "none",
+      "w": 0,
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "compact": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 301,
+          "x": 37,
+          "y": 8294.40625
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 290,
+          "y": 8298.40625
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Project languages options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 301,
+          "x": 37,
+          "y": 8484.40625
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 290,
+          "y": 8488.40625
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 301,
+          "x": 37,
+          "y": 8674.40625
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 290,
+          "y": 8678.40625
+        },
+        "textToIcon": 16,
+        "value": "Design"
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 301,
+          "x": 37,
+          "y": 9566.40625
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 290,
+          "y": 9570.40625
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 301,
+          "x": 37,
+          "y": 9646.40625
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 290,
+          "y": 9650.40625
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 301,
+          "x": 37,
+          "y": 9804.40625
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 290,
+          "y": 9808.40625
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "compactSelected": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 301,
+          "x": 37,
+          "y": 140.40625
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 290,
+          "y": 144.40625
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 112,
+          "width": 301,
+          "x": 37,
+          "y": 330.40625
+        },
+        "icon": {
+          "centerY": 84,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 290,
+          "y": 390.40625
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 301,
+          "x": 37,
+          "y": 520.40625
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 290,
+          "y": 524.40625
+        },
+        "textToIcon": 16,
+        "value": "Design"
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 301,
+          "x": 37,
+          "y": 1412.40625
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 290,
+          "y": 1416.40625
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 301,
+          "x": 37,
+          "y": 1492.40625
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 290,
+          "y": 1496.40625
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 301,
+          "x": 37,
+          "y": 1650.40625
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 290,
+          "y": 1654.40625
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "final": {
+    "fields": [
+      {
+        "action": "Clear Language",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-97",
+        "label": "Language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 466
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Clear Project languages",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 64,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 462
+        },
+        "icon": {
+          "centerY": 32,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-89",
+        "label": "Project languages",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 470
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Show Project tag options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 673
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-85",
+        "label": "Project tag",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 677
+        },
+        "textToIcon": 16,
+        "value": ""
+      },
+      {
+        "action": "Clear Search billing region",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1182
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-54",
+        "label": "Search billing region",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1186
+        },
+        "textToIcon": 16,
+        "value": "Americas"
+      },
+      {
+        "action": "Clear Disabled language",
+        "actions": 1,
+        "disabled": true,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 49,
+          "y": 1262
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-46",
+        "label": "Disabled language",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 464.5,
+          "y": 1266
+        },
+        "textToIcon": 16,
+        "value": "Rust"
+      },
+      {
+        "action": "Show Custom topics * options",
+        "actions": 1,
+        "disabled": false,
+        "expanded": "false",
+        "field": {
+          "height": 56,
+          "width": 463.5,
+          "x": 566.5,
+          "y": 1182
+        },
+        "icon": {
+          "centerY": 28,
+          "endInset": 12,
+          "height": 24,
+          "width": 24
+        },
+        "id": "m3-choice-43",
+        "label": "Custom topics *",
+        "target": {
+          "height": 48,
+          "width": 48,
+          "x": 982,
+          "y": 1186
+        },
+        "textToIcon": 40,
+        "value": ""
+      }
+    ],
+    "shells": 1,
+    "viewport": {
+      "height": 980,
+      "width": 1094
+    }
+  }
+}

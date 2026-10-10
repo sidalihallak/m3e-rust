@@ -1,0 +1,16 @@
+/* Pinned upstream c37c0d2 tooltip/popover/hover-card and Material tooltip specs. */
+.m3-anchor { position:fixed; inset:auto; margin:0; box-sizing:border-box; border:0; max-width:calc(100vw - 16px); max-height:calc(100dvh - 16px); overflow:auto; overscroll-behavior:contain; outline:none; }
+.m3-tooltip { display:none; min-height:24px; width:max-content; max-width:min(320px,calc(100vw - 16px)); align-items:center; padding:4px 8px; border-radius:4px; color:var(--md-sys-color-inverse-on-surface); background:var(--md-sys-color-inverse-surface); font:400 12px/16px Inter,ui-sans-serif,system-ui,sans-serif; }
+.m3-tooltip:popover-open { display:inline-flex; }
+.m3-popover,.m3-hover-card,.m3-rich-tooltip { width:288px; padding:16px; border-radius:16px; color:var(--md-sys-color-on-surface-variant); background:var(--md-sys-color-surface-container); box-shadow:0 1px 2px rgb(0 0 0 / .3),0 2px 6px 2px rgb(0 0 0 / .15); font:400 14px/20px Inter,ui-sans-serif,system-ui,sans-serif; }
+.m3-popover:popover-open { display:flex; flex-direction:column; gap:16px; }
+.m3-hover-card { border-radius:12px; }
+.m3-help-header { display:flex; flex-direction:column; gap:4px; }
+.m3-help-header p,.m3-help-body p { margin:0; }
+.m3-help-title { margin:0; color:var(--md-sys-color-on-surface); font:500 16px/24px Inter,ui-sans-serif,system-ui,sans-serif; }
+.m3-rich-tooltip { border-radius:12px; padding:12px 16px 8px; }
+.m3-rich-tooltip .m3-help-title { color:var(--md-sys-color-on-surface-variant); }
+.m3-rich-tooltip .m3-help-body { margin-top:4px; }
+.m3-rich-tooltip__actions { display:flex; gap:8px; margin-top:8px; flex-wrap:wrap; }
+.m3-rich-tooltip__actions:empty { display:none; }
+.m3-hover-card p { margin:4px 0 0; }
