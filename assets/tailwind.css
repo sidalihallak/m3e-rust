@@ -219,9 +219,6 @@
   .h-px {
     height: 1px;
   }
-  .min-h-screen {
-    min-height: 100vh;
-  }
   .w-full {
     width: 100%;
   }
@@ -231,14 +228,8 @@
   .flex-1 {
     flex: 1;
   }
-  .flex-grow {
-    flex-grow: 1;
-  }
   .grow {
     flex-grow: 1;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -269,9 +260,6 @@
   }
   .text-on-primary {
     color: var(--md-sys-color-on-primary);
-  }
-  .underline {
-    text-decoration-line: underline;
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));

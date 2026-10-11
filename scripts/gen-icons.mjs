@@ -32,6 +32,17 @@ const ICONS = [
   ["INFO", "info"],
   ["KEYBOARD_ARROW_DOWN", "keyboard_arrow_down"],
   ["REMOVE", "remove"],
+  ["MENU", "menu"],
+  ["MENU_OPEN", "menu_open"],
+  ["PALETTE", "palette"], ["PALETTE_FILL", "palette-fill"],
+  ["TOUCH_APP", "touch_app"], ["TOUCH_APP_FILL", "touch_app-fill"],
+  ["TUNE", "tune"], ["TUNE_FILL", "tune-fill"],
+  ["CHAT_BUBBLE", "chat_bubble"], ["CHAT_BUBBLE_FILL", "chat_bubble-fill"],
+  ["LAYERS", "layers"], ["LAYERS_FILL", "layers-fill"],
+  ["EXPLORE", "explore"], ["EXPLORE_FILL", "explore-fill"],
+  ["HOME", "home"], ["HOME_FILL", "home-fill"],
+  ["SEARCH", "search"],
+  ["DARK_MODE", "dark_mode"], ["LIGHT_MODE", "light_mode"],
 ];
 
 const version = JSON.parse(readFileSync(join(src, "../package.json"), "utf8")).version;

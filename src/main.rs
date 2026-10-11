@@ -5,6 +5,9 @@ use m3e_rust_ui::{ConnectedButtonGroup, ConnectedButtonItem, ConnectedButtonVari
 mod theme;
 mod composite_gallery;
 mod help_gallery;
+mod showcase;
+mod navigation_gallery; // Material navigation and showcase catalogue.
+use m3e_rust_ui::{AppBar,NavigationRail,ModalNavigationRail};
 use composite_gallery::CompositeGallery;
 
 use material_colors::color::Rgb;
@@ -371,6 +374,11 @@ fn main() {
 
 #[component]
 fn App() -> Element {
+    let (route, scrolled, wide) = showcase::use_route();
+    let mut modal_navigation = use_signal(|| false);
+    let mut rail_override = use_signal(|| None::<bool>);
+    let expanded = rail_override().unwrap_or(wide());
+    let (_, page_title, family) = showcase::page(&route());
     let mut seed = use_signal(|| theme::SEEDS[0].1);
     let mut dark = use_signal(|| false);
     let mut selected = use_signal(|| false);
@@ -427,6 +435,8 @@ fn App() -> Element {
 
     rsx! {
         document::Stylesheet { href: asset!("/assets/main.css") }
+        document::Stylesheet { href: asset!("/assets/navigation.css") }
+        document::Stylesheet { href: asset!("/assets/showcase.css") }
         document::Stylesheet { href: asset!("/assets/tailwind.css") }
         document::Stylesheet { href: asset!("/assets/button.css") }
         document::Stylesheet { href: asset!("/assets/ripple.css") }
@@ -457,22 +467,29 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/divider.css") }
         document::Stylesheet { href: asset!("/assets/text-field.css") }
 
-        main { class: "app-shell min-h-screen", style: theme_style,
-            header { class: "topbar",
-                a { class: "brand", href: "#", aria_label: "M3E home",
-                    span { class: "brand-mark", "m" }
-                    span { "m3e" }
-                }
-                nav { class: "topnav", "Foundations", span { class: "nav-current", "Color" }, "Components" }
-                button {
-                    class: "mode-toggle",
-                    onclick: move |_| dark.toggle(),
-                    span { class: "mode-icon", aria_hidden: "true", if dark() { "☼" } else { "◐" } }
-                    if dark() { "Light mode" } else { "Dark mode" }
-                }
+        div { class: "app-shell showcase-shell", style: format!("{};--showcase-rail:{}px",theme_style,if expanded {220}else{96}),
+            a {class:"showcase-skip",href:"#showcase-content","Skip to component content"}
+            NavigationRail {class:"showcase-primary",items:showcase::destinations(),selected:family,expanded,
+                header:rsx!{IconButton {icon:if expanded {icons::MENU_OPEN}else{icons::MENU},aria_label:if expanded {"Collapse navigation"}else{"Expand navigation"},onclick:move |_|rail_override.set(Some(!expanded))}},
+                onchange:move|value:String|showcase::navigate(showcase::first(&value))
             }
-
-            section { class: "hero wrap",
+            AppBar {class:"showcase-header",title:page_title,scrolled:scrolled(),
+                leading:rsx!{span {class:"showcase-mobile-menu",IconButton {icon:icons::MENU,aria_label:"Open navigation",onclick:move |_|modal_navigation.set(true)}}},
+                trailing:rsx!{IconButton {icon:if dark(){icons::LIGHT_MODE}else{icons::DARK_MODE},aria_label:if dark(){"Switch to light mode"}else{"Switch to dark mode"},onclick:move |_|dark.toggle()}}
+            }
+            showcase::Catalog {active:route()}
+            ModalNavigationRail {open:modal_navigation(),items:showcase::destinations(),selected:family,title:"Browse components",
+                onopenchange:move|value|modal_navigation.set(value),onchange:move|value:String|showcase::navigate(showcase::first(&value))
+            }
+            main {id:"showcase-content",class:"showcase-content",tabindex:"-1",
+                div {class:"showcase-status",role:"status",aria_live:"polite","{page_title}"}
+                div {class:"showcase-mobile-catalog",
+                    m3e_rust_ui::NativeSelect {label:"Component",value:route(),
+                        options:showcase::PAGES.iter().copied().filter(|p|p.2==family).map(|(slug,label,_)|m3e_rust_ui::SelectOption::new(slug,label)).collect::<Vec<_>>(),
+                        onchange:move|value:String|showcase::navigate(&value)
+                    }
+                }
+            section { class: "hero wrap", id:"foundations", hidden:route()!="foundations",
                 div { class: "hero-copy",
                     div { class: "eyebrow", span { class: "status-dot" } "THEME FOUNDATIONS / 01" }
                     h1 { "Color that " em { "means" } " something." }
@@ -499,7 +516,7 @@ fn App() -> Element {
                 }
             }
 
-            section { class: "wrap palette-section",
+            section { class: "wrap palette-section", hidden:route()!="foundations",
                 div { class: "section-heading",
                     div {
                         p { class: "eyebrow", "01 — COLOR SYSTEM" }
@@ -517,7 +534,7 @@ fn App() -> Element {
                 }
             }
 
-            section { class: "wrap roles-section button-section",
+            section { class: "wrap roles-section button-section", id:"buttons", hidden:route()!="buttons",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "02 — COMPONENT PILOT" }
@@ -570,7 +587,7 @@ fn App() -> Element {
                 CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Button usage", code: BUTTON_USAGE }
             }
 
-            section { class: "wrap roles-section control-section",
+            section { class: "wrap roles-section control-section", id:"controls", hidden:route()!="controls",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "03 — SELECTION CONTROLS" }
@@ -643,7 +660,7 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Checkbox usage", code: CHECKBOX_USAGE }
                 }
             }
-            section { class: "wrap roles-section icon-section",
+            section { class: "wrap roles-section icon-section", id:"icons", hidden:route()!="icons",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "04 — ICONS" }
@@ -663,7 +680,7 @@ fn App() -> Element {
                     }
                 CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Icon usage", code: ICON_USAGE }
             }
-            section { class: "wrap roles-section fab-section",
+            section { class: "wrap roles-section fab-section", id:"fabs", hidden:route()!="fabs",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "05 — FLOATING ACTION BUTTON" }
@@ -737,7 +754,7 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "FAB usage", code: FAB_USAGE }
                 }
             }
-            section { class: "wrap roles-section icon-button-section",
+            section { class: "wrap roles-section icon-button-section", id:"icon-buttons", hidden:route()!="icon-buttons",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "06 — ICON BUTTONS" }
@@ -789,7 +806,7 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Icon button usage", code: ICON_BUTTON_USAGE }
                 }
             }
-            section { class: "wrap roles-section chip-section",
+            section { class: "wrap roles-section chip-section", id:"chips", hidden:route()!="chips",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "07 — CHIPS" }
@@ -833,7 +850,7 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Chip usage", code: CHIP_USAGE }
                 }
             }
-            section { class: "wrap roles-section progress-section",
+            section { class: "wrap roles-section progress-section", id:"progress", hidden:route()!="progress",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "08 — PROGRESS" }
@@ -885,7 +902,7 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Loading indicator usage", code: LOADING_USAGE }
                 }
             }
-            section { class: "wrap roles-section radio-section",
+            section { class: "wrap roles-section radio-section", id:"radios", hidden:route()!="radios",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "09 — RADIO" }
@@ -936,7 +953,7 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Radio usage", code: RADIO_USAGE }
                 }
             }
-            section { class: "wrap roles-section slider-section",
+            section { class: "wrap roles-section slider-section", id:"sliders", hidden:route()!="sliders",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "10 — SLIDER" }
@@ -1006,7 +1023,7 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Slider usage", code: SLIDER_USAGE }
                 }
             }
-            section { class: "wrap roles-section segmented-section",
+            section { class: "wrap roles-section segmented-section", id:"segmented-buttons", hidden:route()!="segmented-buttons",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "11 — SEGMENTED BUTTON" }
@@ -1078,7 +1095,7 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Segmented button usage", code: SEGMENTED_USAGE }
                 }
             }
-            section { class: "wrap roles-section connected-section", id: "connected-button-groups",
+            section { class: "wrap roles-section connected-section", id:"connected-button-groups", hidden:route()!="connected-button-groups",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "17 — M3 EXPRESSIVE" }
@@ -1150,9 +1167,10 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Connected button group usage", code: CONNECTED_USAGE }
                 }
             }
-            CompositeGallery {}
-            help_gallery::HelpGallery {}
-            section { class: "wrap roles-section tabs-section",
+            CompositeGallery {active:route()}
+            help_gallery::HelpGallery {active:route()}
+            navigation_gallery::NavigationGallery {active:route()}
+            section { class: "wrap roles-section tabs-section", id:"tabs", hidden:route()!="tabs",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "12 — TABS" }
@@ -1234,7 +1252,7 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Tabs usage", code: TABS_USAGE }
                 }
             }
-            section { class: "wrap roles-section badge-section",
+            section { class: "wrap roles-section badge-section", id:"badges", hidden:route()!="badges",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "13 — BADGE" }
@@ -1284,7 +1302,7 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Badge usage", code: BADGE_USAGE }
                 }
             }
-            section { class: "wrap roles-section card-section",
+            section { class: "wrap roles-section card-section", id:"cards", hidden:route()!="cards",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "14 — CARD" }
@@ -1371,7 +1389,7 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Card usage", code: CARD_USAGE }
                 }
             }
-            section { class: "wrap roles-section divider-section",
+            section { class: "wrap roles-section divider-section", id:"dividers", hidden:route()!="dividers",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "15 — DIVIDER" }
@@ -1407,7 +1425,7 @@ fn App() -> Element {
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Divider usage", code: DIVIDER_USAGE }
                 }
             }
-            section { class: "wrap roles-section field-section",
+            section { class: "wrap roles-section field-section", id:"text-fields", hidden:route()!="text-fields",
                 div { class: "section-heading roles-heading",
                     div {
                         p { class: "eyebrow", "16 — TEXT FIELD" }
@@ -1453,6 +1471,7 @@ fn App() -> Element {
                 }
             }
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
+            }
         }
     }
 }
@@ -1466,10 +1485,10 @@ fn menu_items() -> Vec<FabMenuItem> {
 }
 
 #[component]
-fn CodeCard(eyebrow: &'static str, title: &'static str, code: &'static str) -> Element {
+fn CodeCard(eyebrow: &'static str, title: &'static str, code: &'static str, #[props(default)] hidden: bool) -> Element {
     let mut copied = use_signal(|| false);
     rsx! {
-        article { class: "code-card",
+        article { class: "code-card", hidden,
             div { class: "code-card-header",
                 div {
                     p { class: "eyebrow", "{eyebrow}" }

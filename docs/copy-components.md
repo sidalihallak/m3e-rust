@@ -4,13 +4,13 @@ Desktop copy/paste checked on 2026-10-10: nine composite/card/divider controls
 showed success, and native paste exactly matched the 509-character Divider usage.
 The updated export includes 16px card slot padding and the dialog focus/label
 paint gutter. API/source completeness is checked separately by compiling all
-35 exported examples; runtime styling in a separate consuming app remains open.
+40 exported examples; runtime styling in a separate consuming app remains open.
 See [current browser evidence](resumed-browser-verification.json).
 
 The Help and selection family adds eight independently checked copy controls:
 all returned the exact snippet. A native paste into a single-line field matched
 the Autocomplete snippet after native newline removal. [Family evidence](help-selection-verification.md)
-records all 35 independently compiled examples and the current desktop checks.
+records all 40 independently compiled examples and the current desktop checks.
 
 The gallery's **Copy Rust code** buttons copy real usage examples. Component
 implementations remain editable Rust and CSS files in this repository.
@@ -81,7 +81,7 @@ Keep the existing notices on generated Material Symbols and shape data.
 
 ## Verification scope
 
-The exported library and all 35 gallery usage examples were compiled for
+The exported library and all 40 gallery usage examples were compiled for
 `wasm32-unknown-unknown` in a separate directory on 2026-10-10. This establishes
 that the source bundle includes its Rust dependencies and that the examples
 use the current API. Runtime styling and interaction checks were performed in
@@ -136,3 +136,23 @@ Native Popover API and modern CSS support are required; this pilot does not ship
 a legacy-browser polyfill. Preserve `.js` runtime files with the Rust sources;
 the exporter includes them automatically. [Each component report](help-selection-verification.md)
 records tested states and intentional differences from upstream.
+
+## Navigation dependencies and state
+
+| Rust sources | Required CSS/runtime dependencies |
+| --- | --- |
+| `app_bar.rs` | `navigation.css`, `composite-motion.css`; include chosen action/icon CSS for slots |
+| `navigation.rs` | `navigation.css`, `composite-motion.css`, `ripple.css`, `icon.css`, `badge.css`, `icon-button.css`; `navigation.js`, `modal_navigation.js`, `motion.rs`, `ripple.rs`, `badge.rs`, `icon.rs`, `icon_button.rs`, `icons.rs` and their enum dependencies |
+| `toolbar.rs` | `navigation.css`, `composite-motion.css`; `navigation.rs`/`navigation.js` keyboard helper and its dependencies; include CSS for supplied child controls |
+
+Navigation selected state is controlled: update it in `onchange`. Modal rail
+`open` is controlled through `onopenchange`; destination selection also requests
+closure. AppBar `scrolled` is supplied by the consuming application's scroll
+observer. Expanded rail supports 220–360px widths and the permitted full-width pill.
+Use named native controls inside Toolbar and named leading/trailing actions in
+AppBar. Preserve both outlined and filled destination icons.
+
+`showcase.rs`, `showcase.js` and `showcase.css` belong to the demo application,
+not the reusable kit. All five navigation clipboard examples matched exactly;
+all 40 independent examples compiled. See [navigation verification](navigation-verification.md)
+for runtime scope and unresolved verification gaps.

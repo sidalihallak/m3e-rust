@@ -149,3 +149,13 @@ single/multiple combobox and free text autocomplete. Eight copyable examples
 are in the live gallery; all **35** source-export examples compile. Desktop
 keyboard/pointer, popup motion, actual Reduce Motion and 390px responsive checks
 are recorded separately from the paused Android work.
+
+## Navigation and showcase
+
+[Navigation verification](docs/navigation-verification.md) covers
+[app bars](docs/app-bar-verification.md), [navigation bars](docs/navigation-bar-verification.md),
+[rails](docs/navigation-rail-verification.md), [modal rails](docs/modal-navigation-rail-verification.md)
+and [toolbars](docs/toolbar-verification.md). The showcase now has six families,
+28 component pages, a searchable desktop catalogue and compact navigation.
+Five new copyable examples bring the independent source-export total to **40**.
+The report distinguishes earlier desktop observations from final untested edits.

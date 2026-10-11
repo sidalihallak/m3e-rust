@@ -22,7 +22,7 @@ for filename in ['Cargo.toml', 'Cargo.lock']:
     shutil.copy2(source / filename, destination / filename)
 (destination / 'assets').mkdir()
 for file in (source / 'assets').glob('*.css'):
-    if file.name not in ['main.css', 'tailwind.css']:
+    if file.name not in ['main.css', 'tailwind.css', 'showcase.css']:
         shutil.copy2(file, destination / 'assets' / file.name)
 guide = (source / 'docs/copy-components.md').read_text()
 guide = re.sub(r'\(([\w-]+\.md)\)',

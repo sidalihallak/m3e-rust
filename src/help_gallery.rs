@@ -156,7 +156,7 @@ fn languages() -> Vec<SelectOption> {
 }
 
 #[component]
-pub fn HelpGallery() -> Element {
+pub fn HelpGallery(#[props(default)] active: String) -> Element {
     let mut rich = use_signal(|| false);
     let mut popup = use_signal(|| false);
     let mut display_name = use_signal(|| "Material pilot".to_string());
@@ -187,7 +187,7 @@ pub fn HelpGallery() -> Element {
     let mut required_value = use_signal(String::new);
     let mut required_open = use_signal(|| false);
     rsx! {
-        section {id:"help-and-selection",class:"wrap roles-section help-section",
+        section {id:"help-and-selection",hidden:!active.is_empty()&&active!="help-and-selection",class:"wrap roles-section help-section",
             div {class:"section-heading",div {p {class:"section-index","22 — CONTEXTUAL HELP"}h2 {"Tooltips and popovers"}p {class:"section-intro","Brief labels, persistent guidance, quick settings and supplementary link previews. Keyboard focus and Escape work alongside pointer interaction."}}span {class:"pill","PLAIN · RICH · NONMODAL"}}
             div {class:"composite-grid",
                 div {class:"demo-card",div {class:"demo-label","PLAIN · HOVER OR FOCUS"}div {class:"help-trigger-row",
@@ -225,7 +225,7 @@ pub fn HelpGallery() -> Element {
                 CodeCard {eyebrow:"COPY INTO YOUR DIOXUS APP",title:"Hover card usage",code:HOVER_USAGE}
             }
         }
-        section {id:"selection-fields",class:"wrap roles-section help-section",
+        section {id:"selection-fields",hidden:!active.is_empty()&&active!="selection-fields",class:"wrap roles-section help-section",
             div {class:"section-heading",div {p {class:"section-index","23 — EXPOSED SELECTION"}h2 {"Select and autocomplete"}p {class:"section-intro","56dp fields with expressive listbox surfaces. Arrow keys preview choices, Enter commits, Escape cancels. Editable fields filter while preserving native text editing."}}span {class:"pill","OUTLINED · FILLED · EDITABLE"}}
             div {class:"composite-grid",
                 div {class:"demo-card",div {class:"demo-label","OUTLINED · SELECT"}Select {label:"Region",options:regions(),value:region(),open:select_open(),supporting:"Choose where your project is hosted.",name:"region",onchange:move|v|region.set(v),onopenchange:move|v|select_open.set(v)}p {class:"control-label","Region ID: {region}"}}

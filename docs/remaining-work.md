@@ -1,4 +1,4 @@
-# Remaining work — 2026-10-10
+# Remaining work — 2026-10-11
 
 The desktop defects identified in the fidelity review have implementation fixes,
 including the subsequent badge, segmented-content and primary-indicator
@@ -54,7 +54,7 @@ Recommended order for reusable application building blocks:
    existing classic segmented control remains available.
 2. Menu extensions: badges/custom content, compact bottom-sheet adaptation and
    deeper dynamic-content checks. Dialog unsaved-data confirmation belongs to app state.
-3. Sheet/drawer/side sheet, app bar/toolbar and navigation components.
+3. Core app bars, toolbars, navigation bars and collapsed/expanded/modal rails are implemented; see [navigation evidence](navigation-verification.md). Next: bottom sheet and side sheet. Current Expressive expanded rails replace legacy navigation drawers.
 4. Toast/snackbar behavior, search, lists/items and avatar.
 5. Date/time pickers and calendar, then tables and other larger compositions.
 
@@ -72,7 +72,7 @@ and richer compositions are not yet equivalent ports.
 | --- | --- |
 | Help and selection extensions | Transient rich help, custom/virtual popup anchors and boundaries, async/virtual suggestions, chip Backspace navigation; core family is implemented |
 | Surfaces | Bottom sheet/drawer, sheet and side sheet |
-| Navigation | App bar, toolbar, navigation bar/rail/drawer, sidebar, navigation menu/menubar |
+| Navigation extensions | Generic upstream sidebar helpers, navigation menu/menubar; core app bar/toolbar/bar/rail and modal rail are implemented |
 | Feedback and content | Snackbar/toast, alert banner, search, list/item, avatar, skeleton, empty state |
 | Scheduling | Date picker, time picker, calendar |
 | Larger upstream compositions | Accordion/collapsible, table, chart, carousel/expressive carousel, command palette, breadcrumb, pagination |
@@ -90,14 +90,14 @@ upstream implementation using [the component protocol](component-development.md)
 
 ## 4. Finish the Rust/UI distribution workflow
 
-The current [source export](copy-components.md) and all 35 usage examples compile
+The current [source export](copy-components.md) and all 40 usage examples compile
 as an independent library. Still needed:
 
 - Launch a real consuming app with copied CSS, color roles and assets, and
   verify runtime styling, motion and interactions there.
 - Broaden source-copy verification beyond the shared clipboard workflow. Nine
   gallery copy controls succeeded and a native paste exactly matched the Divider
-  snippet (509 characters); all 35 examples compile. Other consumer runtimes remain.
+  snippet (509 characters); all 40 examples compile. Other consumer runtimes remain.
 - Add a per-component registry/installer workflow if that is the desired
   distribution model. The current exporter copies the complete editable kit;
   it is not yet a Rust/UI registry installer.
@@ -108,3 +108,5 @@ The [accessibility audit](accessibility-verification.md) and
 [composite pilot](composite-verification.md) have desktop evidence. The post-restart browser/copy-control recheck is complete; next expand audible
 screen-reader verification and held-pointer/compact regression coverage. The next family is surfaces: bottom sheet/drawer, sheet and side sheet.
 Help and selection now has desktop and compact-layout evidence. Android remains paused.
+
+Navigation follow-up: final compact NativeSelect routing, skip link, tall navigation bar and vertical toolbar interactions need a fresh browser recheck; the publishing recheck was blocked by URL policy. Earlier navigation samples were not persisted.

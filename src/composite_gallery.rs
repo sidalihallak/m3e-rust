@@ -189,7 +189,7 @@ fn action_name(event: &MenuSelection) -> &'static str {
 }
 
 #[component]
-pub fn CompositeGallery() -> Element {
+pub fn CompositeGallery(#[props(default)] active: String) -> Element {
     let mut standard_pick = use_signal(|| "None".to_string());
     let mut standard_selection = use_signal(|| vec![1_usize]);
     let mut standard_multiple = use_signal(|| vec![0_usize]);
@@ -217,7 +217,7 @@ pub fn CompositeGallery() -> Element {
     let mut discarded = use_signal(|| false);
     let mut editor = use_signal(|| "Material pilot".to_string());
     rsx! {
-        section { class: "wrap roles-section composite-section", id: "standard-button-groups",
+        section { class: "wrap roles-section composite-section", id: "standard-button-groups", hidden:!active.is_empty()&&active!="standard-button-groups",
             div { class: "section-heading roles-heading",
                 div { p { class: "eyebrow", "18 — M3 EXPRESSIVE" } h2 { "Standard button groups" }
                     p { class: "section-description", "Buttons respond to a press together: the active button grows, and adjacent buttons make room. Arrow keys move focus; Space or Enter activates." }
@@ -269,7 +269,7 @@ pub fn CompositeGallery() -> Element {
                 CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Standard button group usage", code: STANDARD_USAGE }
             }
         }
-        section { class: "wrap roles-section composite-section", id: "split-buttons",
+        section { class: "wrap roles-section composite-section", id: "split-buttons", hidden:!active.is_empty()&&active!="split-buttons",
             div { class: "section-heading roles-heading",
                 div { p { class: "eyebrow", "19 — M3 EXPRESSIVE" } h2 { "Split buttons" }
                     p { class: "section-description", "A primary action with related options. Opening the menu rounds the trailing button and rotates its chevron; both halves keep their color roles." }
@@ -321,7 +321,7 @@ pub fn CompositeGallery() -> Element {
                 CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Split button usage", code: SPLIT_USAGE }
             }
         }
-        section { class: "wrap roles-section composite-section", id: "dialogs",
+        section { class: "wrap roles-section composite-section", id: "dialogs", hidden:!active.is_empty()&&active!="dialogs",
             div { class: "section-heading roles-heading",
                 div { p { class: "eyebrow", "20 — MODAL SURFACES" } h2 { "Dialogs" }
                     p { class: "section-description", "Basic forms, urgent confirmations, scrollable content and a full-screen editor. Focus stays within the dialog and returns to its opener." }
@@ -380,7 +380,7 @@ pub fn CompositeGallery() -> Element {
                 CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Full-screen dialog usage", code: FULLSCREEN_USAGE }
             }
         }
-        section { class: "wrap roles-section composite-section", id: "menus",
+        section { class: "wrap roles-section composite-section", id: "menus", hidden:!active.is_empty()&&active!="menus",
             div { class: "section-heading roles-heading",
                 div { p { class: "eyebrow", "21 — ANCHORED SURFACES" } h2 { "Menus" }
                     p { class: "section-description", "Standard and vibrant menus with related actions, selection and submenus. Use arrows, Home/End and typeahead; Escape closes and Tab leaves the menu." }
