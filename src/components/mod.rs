@@ -74,3 +74,6 @@ pub mod toolbar;
 pub use navigation::{NavigationBar, NavigationRail, ModalNavigationRail, NavigationDestination, NavigationLayout};
 pub use app_bar::{AppBar, AppBarSize};
 pub use toolbar::{Toolbar, ToolbarVariant};
+
+pub mod sheet;
+pub use sheet::{Sheet, SheetSide, SheetVariant, BottomSheet, SideSheet};

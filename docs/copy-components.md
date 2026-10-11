@@ -10,7 +10,7 @@ See [current browser evidence](resumed-browser-verification.json).
 The Help and selection family adds eight independently checked copy controls:
 all returned the exact snippet. A native paste into a single-line field matched
 the Autocomplete snippet after native newline removal. [Family evidence](help-selection-verification.md)
-records all 40 independently compiled examples and the current desktop checks.
+records all 45 independently compiled examples and the current desktop checks.
 
 The gallery's **Copy Rust code** buttons copy real usage examples. Component
 implementations remain editable Rust and CSS files in this repository.
@@ -81,7 +81,7 @@ Keep the existing notices on generated Material Symbols and shape data.
 
 ## Verification scope
 
-The exported library and all 40 gallery usage examples were compiled for
+The exported library and all 45 gallery usage examples were compiled for
 `wasm32-unknown-unknown` in a separate directory on 2026-10-10. This establishes
 that the source bundle includes its Rust dependencies and that the examples
 use the current API. Runtime styling and interaction checks were performed in
@@ -154,5 +154,29 @@ AppBar. Preserve both outlined and filled destination icons.
 
 `showcase.rs`, `showcase.js` and `showcase.css` belong to the demo application,
 not the reusable kit. All five navigation clipboard examples matched exactly;
-all 40 independent examples compiled. See [navigation verification](navigation-verification.md)
+all 45 independent examples compiled. See [navigation verification](navigation-verification.md)
 for runtime scope and unresolved verification gaps.
+
+## Surfaces dependencies and state
+
+`Sheet`, `BottomSheet` and `SideSheet` share `sheet.rs` and **`sheet.js`** in the
+same directory. Include `sheet.css`, `composite-motion.css`, `icon-button.css`,
+`icon.css` and `ripple.css`; retain `motion.rs`, `icon_button.rs`, `button.rs` enum
+dependencies, `icon.rs`, `icons.rs` and `ripple.rs`. Include additional TextField,
+Checkbox or Button CSS when supplying those controls. The complete exporter
+includes component sources and runtime assets automatically. Keep global
+`box-sizing: border-box` in the consuming app, as the gallery does.
+
+All sheets have controlled `open` and `onopenchange`. BottomSheet also has
+controlled `expanded` and `onexpandedchange`; update both callbacks for working
+handle expansion. Dragging is confined to the handle; native body scrolling is
+independent. `SheetVariant::Standard` avoids native modality. Put standard side
+sheets beside main content in a flex row and standard bottom sheets inside a
+positioned pane with a defined height. `SideSheet` defaults to Standard and End;
+`BottomSheet` defaults to Modal. Logical Start/End follows direction. App state
+owns unsaved data and responsive bottom-to-side adaptation. Do not use top sheets
+as a claimed official Material variant.
+
+Five new copy controls matched exactly. [Surfaces verification](surfaces-verification.md)
+records all 45 independently compiled examples, actual desktop/compact interactions,
+reduced motion and the paused Android scope.

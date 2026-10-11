@@ -54,7 +54,7 @@ Recommended order for reusable application building blocks:
    existing classic segmented control remains available.
 2. Menu extensions: badges/custom content, compact bottom-sheet adaptation and
    deeper dynamic-content checks. Dialog unsaved-data confirmation belongs to app state.
-3. Core app bars, toolbars, navigation bars and collapsed/expanded/modal rails are implemented; see [navigation evidence](navigation-verification.md). Next: bottom sheet and side sheet. Current Expressive expanded rails replace legacy navigation drawers.
+3. Core navigation and surfaces are implemented; see [navigation evidence](navigation-verification.md) and [surfaces evidence](surfaces-verification.md). Current Expressive expanded rails replace legacy navigation drawers.
 4. Toast/snackbar behavior, search, lists/items and avatar.
 5. Date/time pickers and calendar, then tables and other larger compositions.
 
@@ -71,7 +71,7 @@ and richer compositions are not yet equivalent ports.
 | Priority/family | Remaining ports |
 | --- | --- |
 | Help and selection extensions | Transient rich help, custom/virtual popup anchors and boundaries, async/virtual suggestions, chip Backspace navigation; core family is implemented |
-| Surfaces | Bottom sheet/drawer, sheet and side sheet |
+| Surfaces extensions | Additional snap points, nested drawer stacking, velocity fling and whole-surface touch gestures; core bottom/side/generic sheets implemented |
 | Navigation extensions | Generic upstream sidebar helpers, navigation menu/menubar; core app bar/toolbar/bar/rail and modal rail are implemented |
 | Feedback and content | Snackbar/toast, alert banner, search, list/item, avatar, skeleton, empty state |
 | Scheduling | Date picker, time picker, calendar |
@@ -90,14 +90,14 @@ upstream implementation using [the component protocol](component-development.md)
 
 ## 4. Finish the Rust/UI distribution workflow
 
-The current [source export](copy-components.md) and all 40 usage examples compile
+The current [source export](copy-components.md) and all 45 usage examples compile
 as an independent library. Still needed:
 
 - Launch a real consuming app with copied CSS, color roles and assets, and
   verify runtime styling, motion and interactions there.
 - Broaden source-copy verification beyond the shared clipboard workflow. Nine
   gallery copy controls succeeded and a native paste exactly matched the Divider
-  snippet (509 characters); all 40 examples compile. Other consumer runtimes remain.
+  snippet (509 characters); all 45 examples compile. Other consumer runtimes remain.
 - Add a per-component registry/installer workflow if that is the desired
   distribution model. The current exporter copies the complete editable kit;
   it is not yet a Rust/UI registry installer.
@@ -106,11 +106,13 @@ as an independent library. Still needed:
 
 The [accessibility audit](accessibility-verification.md) and
 [composite pilot](composite-verification.md) have desktop evidence. The post-restart browser/copy-control recheck is complete; next expand audible
-screen-reader verification and held-pointer/compact regression coverage. The next family is surfaces: bottom sheet/drawer, sheet and side sheet.
+screen-reader verification and held-pointer/compact regression coverage. The next family is feedback and content: snackbar/toast, alert banner, search, list/item, avatar and skeleton.
 Help and selection now has desktop and compact-layout evidence. Android remains paused.
 
-Navigation follow-up: final compact NativeSelect routing, skip link, tall navigation bar and vertical toolbar interactions need a fresh browser recheck; the publishing recheck was blocked by URL policy. Earlier navigation samples were not persisted.
+Navigation follow-up: skip link, tall navigation bar and vertical toolbar interactions still need broader browser checks. Compact routing and modal motion now have saved samples; the original navigation session arrays were not persisted.
 
-The 2026-10-11 [drawer/showcase follow-up](showcase-navigation-verification.md) is implemented and builds; actual runtime motion, focus and compact-layout rechecks remain blocked by local browser URL policy. Recheck the new modal surface/scrim structure rather than relying on previous modal measurements.
+The 2026-10-11 [drawer/showcase follow-up](showcase-navigation-verification.md) has saved desktop motion, focus and compact-routing evidence. Additional interruption, RTL and reduced-motion combinations remain; use current surface/scrim measurements rather than historical modal geometry.
 
 Local browser access was restored with a fresh Codex in-app browser tab. Desktop drawer entry/exit, scrim fade, inert targets and compact routing now have [saved runtime evidence](showcase-navigation-verification.md); interrupted/reduced-motion/RTL and Android follow-ups remain.
+
+Core surfaces now have desktop,390px responsive and actual bottom-sheet reduced-motion evidence. Android touch and native packages remain paused. See the family report for unported drawer extensions.

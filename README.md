@@ -156,7 +156,7 @@ are recorded separately from the paused Android work.
 [app bars](docs/app-bar-verification.md), [navigation bars](docs/navigation-bar-verification.md),
 [rails](docs/navigation-rail-verification.md), [modal rails](docs/modal-navigation-rail-verification.md)
 and [toolbars](docs/toolbar-verification.md). The showcase now has six families,
-28 component pages, a searchable desktop catalogue and compact navigation.
+31 component pages, a searchable desktop catalogue and compact navigation.
 Five new copyable examples bring the independent source-export total to **40**.
 The report distinguishes earlier desktop observations from final untested edits.
 
@@ -165,3 +165,12 @@ panel movement from scrim fading. The [showcase layout](docs/showcase-navigation
 follows the Material website's compact rail, secondary catalogue and large page
 headings. Build checks pass. A fresh Codex in-app browser tab restored local access;
 actual drawer motion samples and the duration-unit correction are recorded in the follow-up report.
+
+## Surfaces
+
+[Bottom sheets](docs/bottom-sheet-verification.md), [side sheets](docs/side-sheet-verification.md)
+and [sheet composition](docs/sheet-verification.md) now have controlled APIs and
+five copyable examples under Content. [Family verification](docs/surfaces-verification.md)
+records desktop pointer/keyboard/RTL,390px responsive layout, actual Reduce Motion,
+raw motion and exact clipboard checks. All **45** independent examples compile.
+Android remains paused; nested drawer/snap-point extensions remain open.
