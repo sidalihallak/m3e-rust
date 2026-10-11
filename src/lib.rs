@@ -14,3 +14,5 @@ pub use components::{Avatar, AvatarGroup, AvatarSize, Skeleton, LoadingPlacehold
 pub use components::{CivilDate, DateInputFormat, DateLocale, DateConstraints, DateRange, DateSelection, Calendar, DatePicker, DatePickerModal, DatePickerView, DatePickerLayout};
 
 pub use components::{TimeValue, TimePicker, TimePickerMode, TimePickerLayout};
+
+pub use components::{Accordion, AccordionEntry, Collapsible, Table, TableHeader, TableBody, TableFooter, TableRow, TableHead, TableCell, TableCaption, TableSort, Pagination, TablePagination, DataTable, DataColumn, DataRow, DataCell};

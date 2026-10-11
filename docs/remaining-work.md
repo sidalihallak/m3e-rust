@@ -56,7 +56,7 @@ Recommended order for reusable application building blocks:
    deeper dynamic-content checks. Dialog unsaved-data confirmation belongs to app state.
 3. Core navigation and surfaces are implemented; see [navigation evidence](navigation-verification.md) and [surfaces evidence](surfaces-verification.md). Current Expressive expanded rails replace legacy navigation drawers.
 4. Core feedback and content is implemented; see [family evidence](feedback-content-verification.md). Advanced toast queues/promise APIs, search morph/virtual suggestions and list expansion/swipe remain.
-5. Core date picker/calendar is implemented; see [date picker](date-picker-verification.md) and [calendar](calendar-verification.md). Time picker is also implemented; see [time picker](time-picker-verification.md). Tables and larger compositions are next.
+5. Core date picker/calendar is implemented; see [date picker](date-picker-verification.md) and [calendar](calendar-verification.md). Time picker is also implemented; see [time picker](time-picker-verification.md). Accordion/collapsible, table, pagination and local DataTable are implemented; charts and carousels are next.
 
 ### Remaining component inventory
 
@@ -75,7 +75,7 @@ and richer compositions are not yet equivalent ports.
 | Navigation extensions | Generic upstream sidebar helpers, navigation menu/menubar; core app bar/toolbar/bar/rail and modal rail are implemented |
 | Feedback and content extensions | Imperative toast queue/promise host, source-to-full-screen search morph, search app bar, async/virtual suggestions, list expansion/swipe/typeahead; core family is implemented |
 | Scheduling extensions | Date/calendar touch swipes, infinite range scrolling; time pointer-cancel/held/repeated input evidence, broader locale/accessibility coverage |
-| Larger upstream compositions | Accordion/collapsible, table, chart, carousel/expressive carousel, command palette, breadcrumb, pagination |
+| Larger upstream compositions | Chart, carousel/expressive carousel, command palette, breadcrumb; accordion/collapsible, table, pagination and client-side DataTable are implemented |
 | Input extensions | Field/input-group wrappers, OTP input, standalone input/textarea/label/toggle-group wrappers |
 | Upstream helpers and application blocks | Aspect ratio, scroll area, resizable panels, keyboard hints, shapes/markers, image-derived theme, attachment/bubble/message/message scroller/questionnaire |
 
@@ -90,14 +90,14 @@ upstream implementation using [the component protocol](component-development.md)
 
 ## 4. Finish the Rust/UI distribution workflow
 
-The current [source export](copy-components.md) and all 59 usage examples compile
+The current [source export](copy-components.md) and all 66 usage examples compile
 as an independent library. Still needed:
 
 - Launch a real consuming app with copied CSS, color roles and assets, and
   verify runtime styling, motion and interactions there.
 - Broaden source-copy verification beyond the shared clipboard workflow. Nine
   gallery copy controls succeeded and a native paste exactly matched the Divider
-  snippet (509 characters); all 59 examples compile. Other consumer runtimes remain.
+  snippet (509 characters); all 66 examples compile. Other consumer runtimes remain.
 - Add a per-component registry/installer workflow if that is the desired
   distribution model. The current exporter copies the complete editable kit;
   it is not yet a Rust/UI registry installer.
@@ -106,7 +106,7 @@ as an independent library. Still needed:
 
 The [accessibility audit](accessibility-verification.md) and
 [composite pilot](composite-verification.md) have desktop evidence. The post-restart browser/copy-control recheck is complete; next expand audible
-screen-reader verification and held-pointer/compact regression coverage. Core Scheduling is implemented with date picker, time picker and calendar evidence. Tables and larger compositions are next. Core feedback/content has desktop evidence and eight copyable examples.
+screen-reader verification and held-pointer/compact regression coverage. Core Scheduling is implemented with date picker, time picker and calendar evidence. Accordion/collapsible, table, pagination and local DataTable are implemented; charts and carousels are next. Core feedback/content has desktop evidence and eight copyable examples.
 Help and selection now has desktop and compact-layout evidence. Android remains paused.
 
 Navigation follow-up: skip link, tall navigation bar and vertical toolbar interactions still need broader browser checks. Compact routing and modal motion now have saved samples; the original navigation session arrays were not persisted.
@@ -123,3 +123,11 @@ focus-pause timing, native selection, search keyboard commitment, actual reduced
 motion and 390px search/list layouts. Audible screen-reader checks, broader RTL,
 text zoom and Android remain open. Future Scheduling extensions should inspect current Material date/time guidance
 and upstream sources before adding APIs.
+
+
+Disclosure/data compositions now have [accordion](accordion-verification.md),
+[collapsible](collapsible-verification.md), [table](table-verification.md),
+[pagination](pagination-verification.md) and [data-table](data-table-verification.md)
+evidence. Advanced table server state, virtualization, editing, column sizing,
+multisort and export remain extensions. The showcase still has a 360px body
+minimum; 390px responsive checks passed, while 320px page overflow is recorded.

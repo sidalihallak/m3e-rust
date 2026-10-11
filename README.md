@@ -201,3 +201,14 @@ TimePicker now includes 12/24-hour dial and manual entry, draft confirmation,
 responsive layout and copyable examples. See [time-picker evidence](docs/time-picker-verification.md).
 The [date field background audit](docs/date-picker-verification.md) confirms
 transparent outlined fields over semantic Material surfaces in light/dark mode.
+
+
+### Disclosure and data compositions
+
+Accordion/collapsible, native table primitives, numbered/table pagination and a
+client-side data table are available with seven copyable Rust examples. The data
+table supports filtering, numeric sorting, column visibility and selection across
+pages. See the [accordion](docs/accordion-verification.md),
+[collapsible](docs/collapsible-verification.md), [table](docs/table-verification.md),
+[pagination](docs/pagination-verification.md), and [data-table](docs/data-table-verification.md)
+reports for reference contracts, measured interactions and remaining gaps.

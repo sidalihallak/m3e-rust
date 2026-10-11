@@ -1,0 +1,2801 @@
+{
+  "date": "2026-10-11",
+  "revision": "c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972",
+  "accordionOpen": [
+    {
+      "t": 0,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 51,
+      "expanded": "true",
+      "height": 0,
+      "inert": false,
+      "radius": "15.4115px",
+      "visibility": "visible"
+    },
+    {
+      "t": 86,
+      "expanded": "true",
+      "height": 18.265625,
+      "inert": false,
+      "radius": "15.9949px",
+      "visibility": "visible"
+    },
+    {
+      "t": 108,
+      "expanded": "true",
+      "height": 29.40625,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 130,
+      "expanded": "true",
+      "height": 44.8828125,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 152,
+      "expanded": "true",
+      "height": 58.7265625,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 175,
+      "expanded": "true",
+      "height": 70.75,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 198,
+      "expanded": "true",
+      "height": 77.578125,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 219,
+      "expanded": "true",
+      "height": 85.7890625,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 240,
+      "expanded": "true",
+      "height": 89.5859375,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 261,
+      "expanded": "true",
+      "height": 91.9921875,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 282,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 304,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 325,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 347,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 367,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 389,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    }
+  ],
+  "accordionClose": [
+    {
+      "t": 0,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 29,
+      "expanded": "false",
+      "height": 85.609375,
+      "inert": true,
+      "radius": "15.793px",
+      "visibility": "visible"
+    },
+    {
+      "t": 52,
+      "expanded": "false",
+      "height": 73.65625,
+      "inert": true,
+      "radius": "14.937px",
+      "visibility": "visible"
+    },
+    {
+      "t": 74,
+      "expanded": "false",
+      "height": 57.5234375,
+      "inert": true,
+      "radius": "13.6478px",
+      "visibility": "visible"
+    },
+    {
+      "t": 96,
+      "expanded": "false",
+      "height": 42.265625,
+      "inert": true,
+      "radius": "12.8046px",
+      "visibility": "visible"
+    },
+    {
+      "t": 118,
+      "expanded": "false",
+      "height": 33.265625,
+      "inert": true,
+      "radius": "12.481px",
+      "visibility": "visible"
+    },
+    {
+      "t": 139,
+      "expanded": "false",
+      "height": 21.1953125,
+      "inert": true,
+      "radius": "12.2154px",
+      "visibility": "visible"
+    },
+    {
+      "t": 161,
+      "expanded": "false",
+      "height": 14.3359375,
+      "inert": true,
+      "radius": "12.1235px",
+      "visibility": "visible"
+    },
+    {
+      "t": 182,
+      "expanded": "false",
+      "height": 6.1796875,
+      "inert": true,
+      "radius": "12.0527px",
+      "visibility": "visible"
+    },
+    {
+      "t": 203,
+      "expanded": "false",
+      "height": 2.3828125,
+      "inert": true,
+      "radius": "12.0296px",
+      "visibility": "visible"
+    },
+    {
+      "t": 224,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12.012px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 245,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12.0068px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 266,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 288,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 310,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 330,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 352,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 372,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 394,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    }
+  ],
+  "disclosureStates": {
+    "apps": 1,
+    "expanded": [
+      {
+        "controls": "m3-accordion-4-panel-0",
+        "disabled": false,
+        "label": "Can I own the source?",
+        "open": "false"
+      },
+      {
+        "controls": "m3-accordion-4-panel-1",
+        "disabled": false,
+        "label": "How does theming work?",
+        "open": "true"
+      },
+      {
+        "controls": "m3-accordion-4-panel-2",
+        "disabled": false,
+        "label": "Does it support reduced motion?",
+        "open": "false"
+      },
+      {
+        "controls": "m3-accordion-0-panel-0",
+        "disabled": false,
+        "label": "General",
+        "open": "true"
+      },
+      {
+        "controls": "m3-accordion-0-panel-1",
+        "disabled": false,
+        "label": "Notifications",
+        "open": "true"
+      },
+      {
+        "controls": "m3-accordion-0-panel-2",
+        "disabled": true,
+        "label": "Managed settings",
+        "open": "false"
+      }
+    ],
+    "focus": "Notifications"
+  },
+  "collapsibleOpen": {
+    "disabled": "Restricted details",
+    "expanded": "true",
+    "height": 64,
+    "inert": false
+  },
+  "collapsibleTab": "View project source",
+  "dataInitial": {
+    "colCount": "4",
+    "focus": null,
+    "range": "1–5 of 12",
+    "rowCount": "13",
+    "rows": [
+      {
+        "index": "2",
+        "selected": "false",
+        "text": "AtlasIn progress$1200.00"
+      },
+      {
+        "index": "3",
+        "selected": "false",
+        "text": "BeaconPlanning$250.00"
+      },
+      {
+        "index": "4",
+        "selected": "false",
+        "text": "CanvasComplete$9000.00"
+      },
+      {
+        "index": "5",
+        "selected": "false",
+        "text": "DriftIn progress$80.00"
+      },
+      {
+        "index": "6",
+        "selected": "false",
+        "text": "EchoPlanning$450.00"
+      }
+    ],
+    "selected": "0 selected",
+    "sort": [
+      {
+        "index": "1",
+        "sort": null,
+        "text": ""
+      },
+      {
+        "index": "2",
+        "sort": null,
+        "text": "Project↕"
+      },
+      {
+        "index": "3",
+        "sort": null,
+        "text": "Status↕"
+      },
+      {
+        "index": "4",
+        "sort": null,
+        "text": "Budget↕"
+      }
+    ]
+  },
+  "numericAsc": {
+    "colCount": "4",
+    "focus": "Sort by Budget",
+    "range": "1–5 of 12",
+    "rowCount": "13",
+    "rows": [
+      {
+        "index": "2",
+        "selected": "false",
+        "text": "Legacy archiveArchived$0.00"
+      },
+      {
+        "index": "3",
+        "selected": "false",
+        "text": "DriftIn progress$80.00"
+      },
+      {
+        "index": "4",
+        "selected": "false",
+        "text": "BeaconPlanning$250.00"
+      },
+      {
+        "index": "5",
+        "selected": "false",
+        "text": "IrisComplete$300.00"
+      },
+      {
+        "index": "6",
+        "selected": "false",
+        "text": "EchoPlanning$450.00"
+      }
+    ],
+    "selected": "0 selected",
+    "sort": [
+      {
+        "index": "1",
+        "sort": null,
+        "text": ""
+      },
+      {
+        "index": "2",
+        "sort": null,
+        "text": "Project↕"
+      },
+      {
+        "index": "3",
+        "sort": null,
+        "text": "Status↕"
+      },
+      {
+        "index": "4",
+        "sort": "ascending",
+        "text": "Budget↑"
+      }
+    ]
+  },
+  "numericDesc": {
+    "colCount": "4",
+    "focus": "Sort by Budget",
+    "range": "1–5 of 12",
+    "rowCount": "13",
+    "rows": [
+      {
+        "index": "2",
+        "selected": "false",
+        "text": "HarborPlanning$10000.00"
+      },
+      {
+        "index": "3",
+        "selected": "false",
+        "text": "CanvasComplete$9000.00"
+      },
+      {
+        "index": "4",
+        "selected": "false",
+        "text": "KitePlanning$2200.00"
+      },
+      {
+        "index": "5",
+        "selected": "false",
+        "text": "Field notesComplete$1500.00"
+      },
+      {
+        "index": "6",
+        "selected": "false",
+        "text": "AtlasIn progress$1200.00"
+      }
+    ],
+    "selected": "0 selected",
+    "sort": [
+      {
+        "index": "1",
+        "sort": null,
+        "text": ""
+      },
+      {
+        "index": "2",
+        "sort": null,
+        "text": "Project↕"
+      },
+      {
+        "index": "3",
+        "sort": null,
+        "text": "Status↕"
+      },
+      {
+        "index": "4",
+        "sort": "descending",
+        "text": "Budget↓"
+      }
+    ]
+  },
+  "numericReset": {
+    "colCount": "4",
+    "focus": "Sort by Budget",
+    "range": "1–5 of 12",
+    "rowCount": "13",
+    "rows": [
+      {
+        "index": "2",
+        "selected": "false",
+        "text": "AtlasIn progress$1200.00"
+      },
+      {
+        "index": "3",
+        "selected": "false",
+        "text": "BeaconPlanning$250.00"
+      },
+      {
+        "index": "4",
+        "selected": "false",
+        "text": "CanvasComplete$9000.00"
+      },
+      {
+        "index": "5",
+        "selected": "false",
+        "text": "DriftIn progress$80.00"
+      },
+      {
+        "index": "6",
+        "selected": "false",
+        "text": "EchoPlanning$450.00"
+      }
+    ],
+    "selected": "0 selected",
+    "sort": [
+      {
+        "index": "1",
+        "sort": null,
+        "text": ""
+      },
+      {
+        "index": "2",
+        "sort": null,
+        "text": "Project↕"
+      },
+      {
+        "index": "3",
+        "sort": null,
+        "text": "Status↕"
+      },
+      {
+        "index": "4",
+        "sort": null,
+        "text": "Budget↕"
+      }
+    ]
+  },
+  "mixedPage": "mixed",
+  "pageSelected": {
+    "colCount": "4",
+    "focus": "Select rows on this page",
+    "range": "1–5 of 12",
+    "rowCount": "13",
+    "rows": [
+      {
+        "index": "2",
+        "selected": "true",
+        "text": "AtlasIn progress$1200.00"
+      },
+      {
+        "index": "3",
+        "selected": "true",
+        "text": "BeaconPlanning$250.00"
+      },
+      {
+        "index": "4",
+        "selected": "true",
+        "text": "CanvasComplete$9000.00"
+      },
+      {
+        "index": "5",
+        "selected": "true",
+        "text": "DriftIn progress$80.00"
+      },
+      {
+        "index": "6",
+        "selected": "true",
+        "text": "EchoPlanning$450.00"
+      }
+    ],
+    "selected": "5 selectedClear selection",
+    "sort": [
+      {
+        "index": "1",
+        "sort": null,
+        "text": ""
+      },
+      {
+        "index": "2",
+        "sort": null,
+        "text": "Project↕"
+      },
+      {
+        "index": "3",
+        "sort": null,
+        "text": "Status↕"
+      },
+      {
+        "index": "4",
+        "sort": null,
+        "text": "Budget↕"
+      }
+    ]
+  },
+  "nextPage": {
+    "colCount": "4",
+    "focus": "Next table page",
+    "range": "6–10 of 12",
+    "rowCount": "13",
+    "rows": [
+      {
+        "index": "7",
+        "selected": "false",
+        "text": "Field notesComplete$1500.00"
+      },
+      {
+        "index": "8",
+        "selected": "false",
+        "text": "GardenIn progress$750.00"
+      },
+      {
+        "index": "9",
+        "selected": "false",
+        "text": "HarborPlanning$10000.00"
+      },
+      {
+        "index": "10",
+        "selected": "false",
+        "text": "IrisComplete$300.00"
+      },
+      {
+        "index": "11",
+        "selected": "false",
+        "text": "JuniperIn progress$600.00"
+      }
+    ],
+    "selected": "5 selectedClear selection",
+    "sort": [
+      {
+        "index": "1",
+        "sort": null,
+        "text": ""
+      },
+      {
+        "index": "2",
+        "sort": null,
+        "text": "Project↕"
+      },
+      {
+        "index": "3",
+        "sort": null,
+        "text": "Status↕"
+      },
+      {
+        "index": "4",
+        "sort": null,
+        "text": "Budget↕"
+      }
+    ]
+  },
+  "lastPage": {
+    "colCount": "4",
+    "focus": null,
+    "range": "11–12 of 12",
+    "rowCount": "13",
+    "rows": [
+      {
+        "index": "12",
+        "selected": "false",
+        "text": "KitePlanning$2200.00"
+      },
+      {
+        "index": "13",
+        "selected": "false",
+        "text": "Legacy archiveArchived$0.00"
+      }
+    ],
+    "selected": "6 selectedClear selection",
+    "sort": [
+      {
+        "index": "1",
+        "sort": null,
+        "text": ""
+      },
+      {
+        "index": "2",
+        "sort": null,
+        "text": "Project↕"
+      },
+      {
+        "index": "3",
+        "sort": null,
+        "text": "Status↕"
+      },
+      {
+        "index": "4",
+        "sort": null,
+        "text": "Budget↕"
+      }
+    ]
+  },
+  "disabledArchive": false,
+  "filter": {
+    "colCount": "4",
+    "focus": null,
+    "range": "1–3 of 3",
+    "rowCount": "4",
+    "rows": [
+      {
+        "index": "2",
+        "selected": "true",
+        "text": "CanvasComplete$9000.00"
+      },
+      {
+        "index": "3",
+        "selected": "true",
+        "text": "Field notesComplete$1500.00"
+      },
+      {
+        "index": "4",
+        "selected": "false",
+        "text": "IrisComplete$300.00"
+      }
+    ],
+    "selected": "6 selectedClear selection",
+    "sort": [
+      {
+        "index": "1",
+        "sort": null,
+        "text": ""
+      },
+      {
+        "index": "2",
+        "sort": null,
+        "text": "Project↕"
+      },
+      {
+        "index": "3",
+        "sort": null,
+        "text": "Status↕"
+      },
+      {
+        "index": "4",
+        "sort": null,
+        "text": "Budget↕"
+      }
+    ]
+  },
+  "empty": {
+    "colCount": "4",
+    "focus": null,
+    "range": "0–0 of 0",
+    "rowCount": "1",
+    "rows": [
+      {
+        "index": null,
+        "selected": "false",
+        "text": "No matching rows."
+      }
+    ],
+    "selected": "6 selectedClear selection",
+    "sort": [
+      {
+        "index": "1",
+        "sort": null,
+        "text": ""
+      },
+      {
+        "index": "2",
+        "sort": null,
+        "text": "Project↕"
+      },
+      {
+        "index": "3",
+        "sort": null,
+        "text": "Status↕"
+      },
+      {
+        "index": "4",
+        "sort": null,
+        "text": "Budget↕"
+      }
+    ]
+  },
+  "size10": {
+    "colCount": "4",
+    "focus": null,
+    "range": "1–10 of 12",
+    "rowCount": "13",
+    "rows": [
+      {
+        "index": "2",
+        "selected": "true",
+        "text": "AtlasIn progress$1200.00"
+      },
+      {
+        "index": "3",
+        "selected": "true",
+        "text": "BeaconPlanning$250.00"
+      },
+      {
+        "index": "4",
+        "selected": "true",
+        "text": "CanvasComplete$9000.00"
+      },
+      {
+        "index": "5",
+        "selected": "true",
+        "text": "DriftIn progress$80.00"
+      },
+      {
+        "index": "6",
+        "selected": "true",
+        "text": "EchoPlanning$450.00"
+      },
+      {
+        "index": "7",
+        "selected": "true",
+        "text": "Field notesComplete$1500.00"
+      },
+      {
+        "index": "8",
+        "selected": "false",
+        "text": "GardenIn progress$750.00"
+      },
+      {
+        "index": "9",
+        "selected": "false",
+        "text": "HarborPlanning$10000.00"
+      },
+      {
+        "index": "10",
+        "selected": "false",
+        "text": "IrisComplete$300.00"
+      },
+      {
+        "index": "11",
+        "selected": "false",
+        "text": "JuniperIn progress$600.00"
+      }
+    ],
+    "selected": "6 selectedClear selection",
+    "sort": [
+      {
+        "index": "1",
+        "sort": null,
+        "text": ""
+      },
+      {
+        "index": "2",
+        "sort": null,
+        "text": "Project↕"
+      },
+      {
+        "index": "3",
+        "sort": null,
+        "text": "Status↕"
+      },
+      {
+        "index": "4",
+        "sort": null,
+        "text": "Budget↕"
+      }
+    ]
+  },
+  "hideStatus": {
+    "colCount": "4",
+    "focus": "Show Status column",
+    "range": "1–10 of 12",
+    "rowCount": "13",
+    "rows": [
+      {
+        "index": "2",
+        "selected": "false",
+        "text": "Atlas$1200.00"
+      },
+      {
+        "index": "3",
+        "selected": "false",
+        "text": "Beacon$250.00"
+      },
+      {
+        "index": "4",
+        "selected": "false",
+        "text": "Canvas$9000.00"
+      },
+      {
+        "index": "5",
+        "selected": "false",
+        "text": "Drift$80.00"
+      },
+      {
+        "index": "6",
+        "selected": "false",
+        "text": "Echo$450.00"
+      },
+      {
+        "index": "7",
+        "selected": "false",
+        "text": "Field notes$1500.00"
+      },
+      {
+        "index": "8",
+        "selected": "false",
+        "text": "Garden$750.00"
+      },
+      {
+        "index": "9",
+        "selected": "false",
+        "text": "Harbor$10000.00"
+      },
+      {
+        "index": "10",
+        "selected": "false",
+        "text": "Iris$300.00"
+      },
+      {
+        "index": "11",
+        "selected": "false",
+        "text": "Juniper$600.00"
+      }
+    ],
+    "selected": "0 selected",
+    "sort": [
+      {
+        "index": "1",
+        "sort": null,
+        "text": ""
+      },
+      {
+        "index": "2",
+        "sort": null,
+        "text": "Project↕"
+      },
+      {
+        "index": "4",
+        "sort": null,
+        "text": "Budget↕"
+      }
+    ]
+  },
+  "lastColumnEnabled": false,
+  "loading": {
+    "busy": "true",
+    "filterDisabled": true,
+    "message": "Loading rows…",
+    "sortDisabled": true
+  },
+  "error": "Could not load projects. Try again.",
+  "pageFirst": {
+    "buttons": [
+      {
+        "current": null,
+        "disabled": true,
+        "height": 48,
+        "label": "Previous page",
+        "width": 50
+      },
+      {
+        "current": "page",
+        "disabled": false,
+        "height": 48,
+        "label": "Page 1",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 2",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 3",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 4",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 20",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Next page",
+        "width": 50
+      }
+    ],
+    "focus": null
+  },
+  "pageMiddle": {
+    "buttons": [
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Previous page",
+        "width": 50
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 1",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 3",
+        "width": 48
+      },
+      {
+        "current": "page",
+        "disabled": false,
+        "height": 48,
+        "label": "Page 4",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 5",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 20",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Next page",
+        "width": 50
+      }
+    ],
+    "focus": "Page 4"
+  },
+  "pageLast": {
+    "buttons": [
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Previous page",
+        "width": 50
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 1",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 17",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 18",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 19",
+        "width": 48
+      },
+      {
+        "current": "page",
+        "disabled": false,
+        "height": 48,
+        "label": "Page 20",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": true,
+        "height": 48,
+        "label": "Next page",
+        "width": 50
+      }
+    ],
+    "focus": "Page 20"
+  },
+  "pagePrevious": {
+    "buttons": [
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Previous page",
+        "width": 50
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 1",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 17",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 18",
+        "width": 48
+      },
+      {
+        "current": "page",
+        "disabled": false,
+        "height": 48,
+        "label": "Page 19",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Page 20",
+        "width": 48
+      },
+      {
+        "current": null,
+        "disabled": false,
+        "height": 48,
+        "label": "Next page",
+        "width": 50
+      }
+    ],
+    "focus": "Previous page"
+  },
+  "footer25": "26–50 of 137",
+  "accordionOpenFinal": [
+    {
+      "t": 0,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 46,
+      "expanded": "true",
+      "height": 0,
+      "inert": false,
+      "radius": "15.793px",
+      "visibility": "visible"
+    },
+    {
+      "t": 72,
+      "expanded": "true",
+      "height": 12.28125,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 93,
+      "expanded": "true",
+      "height": 29.34375,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 115,
+      "expanded": "true",
+      "height": 45.1171875,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 138,
+      "expanded": "true",
+      "height": 54.5390625,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 159,
+      "expanded": "true",
+      "height": 66.7890625,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 181,
+      "expanded": "true",
+      "height": 74.453125,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 202,
+      "expanded": "true",
+      "height": 83.5234375,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 224,
+      "expanded": "true",
+      "height": 89.5859375,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 246,
+      "expanded": "true",
+      "height": 91.7265625,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 267,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 289,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 310,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 332,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 353,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 374,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 395,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    }
+  ],
+  "accordionCloseFinal": [
+    {
+      "t": 0,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 29,
+      "expanded": "false",
+      "height": 85.6796875,
+      "inert": true,
+      "radius": "15.7954px",
+      "visibility": "visible"
+    },
+    {
+      "t": 51,
+      "expanded": "false",
+      "height": 68.671875,
+      "inert": true,
+      "radius": "14.518px",
+      "visibility": "visible"
+    },
+    {
+      "t": 73,
+      "expanded": "false",
+      "height": 57.203125,
+      "inert": true,
+      "radius": "13.6238px",
+      "visibility": "visible"
+    },
+    {
+      "t": 94,
+      "expanded": "false",
+      "height": 42.2109375,
+      "inert": true,
+      "radius": "12.8021px",
+      "visibility": "visible"
+    },
+    {
+      "t": 116,
+      "expanded": "false",
+      "height": 29.15625,
+      "inert": true,
+      "radius": "12.3704px",
+      "visibility": "visible"
+    },
+    {
+      "t": 138,
+      "expanded": "false",
+      "height": 21.1953125,
+      "inert": true,
+      "radius": "12.2153px",
+      "visibility": "visible"
+    },
+    {
+      "t": 160,
+      "expanded": "false",
+      "height": 11.359375,
+      "inert": true,
+      "radius": "12.0931px",
+      "visibility": "visible"
+    },
+    {
+      "t": 181,
+      "expanded": "false",
+      "height": 6.1796875,
+      "inert": true,
+      "radius": "12.0527px",
+      "visibility": "visible"
+    },
+    {
+      "t": 202,
+      "expanded": "false",
+      "height": 1.09375,
+      "inert": true,
+      "radius": "12.0219px",
+      "visibility": "visible"
+    },
+    {
+      "t": 224,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12.012px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 244,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12.005px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 266,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 287,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 308,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 329,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 350,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 371,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 392,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    }
+  ],
+  "accordionInterrupted": [
+    {
+      "t": 0,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 26,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 47,
+      "expanded": "true",
+      "height": 6.3046875,
+      "inert": false,
+      "radius": "12.2045px",
+      "visibility": "visible"
+    },
+    {
+      "t": 68,
+      "expanded": "true",
+      "height": 18.265625,
+      "inert": false,
+      "radius": "13.0572px",
+      "visibility": "visible"
+    },
+    {
+      "t": 90,
+      "expanded": "true",
+      "height": 34.8515625,
+      "inert": false,
+      "radius": "14.3799px",
+      "visibility": "visible"
+    },
+    {
+      "t": 111,
+      "expanded": "true",
+      "height": 44.9453125,
+      "inert": false,
+      "radius": "14.9736px",
+      "visibility": "visible"
+    },
+    {
+      "t": 132,
+      "expanded": "true",
+      "height": 58.78125,
+      "inert": false,
+      "radius": "15.5204px",
+      "visibility": "visible"
+    },
+    {
+      "t": 154,
+      "expanded": "true",
+      "height": 70.703125,
+      "inert": false,
+      "radius": "15.7832px",
+      "visibility": "visible"
+    },
+    {
+      "t": 176,
+      "expanded": "true",
+      "height": 77.6171875,
+      "inert": false,
+      "radius": "15.8761px",
+      "visibility": "visible"
+    },
+    {
+      "t": 197,
+      "expanded": "true",
+      "height": 85.6484375,
+      "inert": false,
+      "radius": "15.9461px",
+      "visibility": "visible"
+    },
+    {
+      "t": 218,
+      "expanded": "true",
+      "height": 89.609375,
+      "inert": false,
+      "radius": "15.9704px",
+      "visibility": "visible"
+    },
+    {
+      "t": 239,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "15.988px",
+      "visibility": "visible"
+    },
+    {
+      "t": 261,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "15.9948px",
+      "visibility": "visible"
+    },
+    {
+      "t": 283,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 304,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 325,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 345,
+      "expanded": "false",
+      "height": 92,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 365,
+      "expanded": "false",
+      "height": 79,
+      "inert": true,
+      "radius": "15.3648px",
+      "visibility": "visible"
+    },
+    {
+      "t": 386,
+      "expanded": "false",
+      "height": 62.453125,
+      "inert": true,
+      "radius": "14.014px",
+      "visibility": "visible"
+    },
+    {
+      "t": 408,
+      "expanded": "false",
+      "height": 52.0703125,
+      "inert": true,
+      "radius": "13.3px",
+      "visibility": "visible"
+    },
+    {
+      "t": 429,
+      "expanded": "false",
+      "height": 41.7578125,
+      "inert": true,
+      "radius": "12.783px",
+      "visibility": "visible"
+    }
+  ],
+  "accordionTab": "Browse the source",
+  "accordionInterruptedFinal": [
+    {
+      "t": 0,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 45,
+      "expanded": "true",
+      "height": 0,
+      "inert": false,
+      "radius": "15.4529px",
+      "visibility": "visible"
+    },
+    {
+      "t": 82,
+      "expanded": "true",
+      "height": 17.640625,
+      "inert": false,
+      "radius": "15.9961px",
+      "visibility": "visible"
+    },
+    {
+      "t": 104,
+      "expanded": "true",
+      "height": 29.34375,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 125,
+      "expanded": "true",
+      "height": 44.8828125,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 147,
+      "expanded": "true",
+      "height": 58.6796875,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 171,
+      "expanded": "true",
+      "height": 70.3515625,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 224,
+      "expanded": "true",
+      "height": 87.6796875,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 249,
+      "expanded": "true",
+      "height": 91.671875,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 272,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 294,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 316,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 337,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 359,
+      "expanded": "false",
+      "height": 92,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 381,
+      "expanded": "false",
+      "height": 73.7265625,
+      "inert": true,
+      "radius": "14.9428px",
+      "visibility": "visible"
+    },
+    {
+      "t": 403,
+      "expanded": "false",
+      "height": 62,
+      "inert": true,
+      "radius": "13.9807px",
+      "visibility": "visible"
+    },
+    {
+      "t": 424,
+      "expanded": "false",
+      "height": 46.7578125,
+      "inert": true,
+      "radius": "13.011px",
+      "visibility": "visible"
+    },
+    {
+      "t": 446,
+      "expanded": "false",
+      "height": 37.125,
+      "inert": true,
+      "radius": "12.6065px",
+      "visibility": "visible"
+    },
+    {
+      "t": 468,
+      "expanded": "false",
+      "height": 24.546875,
+      "inert": true,
+      "radius": "12.2723px",
+      "visibility": "visible"
+    },
+    {
+      "t": 489,
+      "expanded": "false",
+      "height": 14.265625,
+      "inert": true,
+      "radius": "12.1227px",
+      "visibility": "visible"
+    },
+    {
+      "t": 510,
+      "expanded": "false",
+      "height": 8.3515625,
+      "inert": true,
+      "radius": "12.068px",
+      "visibility": "visible"
+    },
+    {
+      "t": 532,
+      "expanded": "false",
+      "height": 2.3671875,
+      "inert": true,
+      "radius": "12.0295px",
+      "visibility": "visible"
+    },
+    {
+      "t": 554,
+      "expanded": "false",
+      "height": 0.234375,
+      "inert": true,
+      "radius": "12.0159px",
+      "visibility": "visible"
+    },
+    {
+      "t": 575,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12.0066px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 596,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12.0023px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 617,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "12px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 649,
+      "expanded": "true",
+      "height": 0,
+      "inert": false,
+      "radius": "12px",
+      "visibility": "visible"
+    }
+  ],
+  "accordionRapidKeyboard": [
+    {
+      "t": 0,
+      "expanded": "false",
+      "height": 85.6328125,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 27,
+      "expanded": "true",
+      "height": 85.6328125,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 50,
+      "expanded": "true",
+      "height": 86.5234375,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 71,
+      "expanded": "true",
+      "height": 87.703125,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 95,
+      "expanded": "false",
+      "height": 88.421875,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 124,
+      "expanded": "false",
+      "height": 76.515625,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 146,
+      "expanded": "false",
+      "height": 60.125,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 170,
+      "expanded": "true",
+      "height": 60.125,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 193,
+      "expanded": "true",
+      "height": 66.5859375,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 216,
+      "expanded": "true",
+      "height": 70.4375,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 238,
+      "expanded": "true",
+      "height": 75.6640625,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 261,
+      "expanded": "true",
+      "height": 80.4296875,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 284,
+      "expanded": "true",
+      "height": 83.4375,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 306,
+      "expanded": "true",
+      "height": 87.0859375,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 327,
+      "expanded": "true",
+      "height": 89.8671875,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 349,
+      "expanded": "true",
+      "height": 91.171875,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 370,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 394,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 416,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 437,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 464,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 485,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 507,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 528,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 549,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 570,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 591,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    }
+  ],
+  "reducedMedia": true,
+  "accordionReducedClose": [
+    {
+      "t": 0,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 57,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 86,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 160,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 220,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 246,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "hidden"
+    }
+  ],
+  "accordionReducedOpen": [
+    {
+      "t": 0,
+      "expanded": "false",
+      "height": 0,
+      "inert": true,
+      "radius": "16px",
+      "visibility": "hidden"
+    },
+    {
+      "t": 31,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 72,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 126,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 152,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 176,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 199,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 222,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    },
+    {
+      "t": 247,
+      "expanded": "true",
+      "height": 92,
+      "inert": false,
+      "radius": "16px",
+      "visibility": "visible"
+    }
+  ],
+  "motionRestored": true,
+  "multipleFinal": [
+    {
+      "disabled": false,
+      "label": "Can I own the source?",
+      "open": "false"
+    },
+    {
+      "disabled": false,
+      "label": "How does theming work?",
+      "open": "true"
+    },
+    {
+      "disabled": false,
+      "label": "Does it support reduced motion?",
+      "open": "false"
+    },
+    {
+      "disabled": false,
+      "label": "General",
+      "open": "true"
+    },
+    {
+      "disabled": false,
+      "label": "Notifications",
+      "open": "true"
+    },
+    {
+      "disabled": true,
+      "label": "Managed settings",
+      "open": "false"
+    }
+  ],
+  "accordionPhone": {
+    "bodyWidth": 375,
+    "client": 375,
+    "height": 844,
+    "items": [
+      {
+        "height": 56,
+        "width": 295
+      },
+      {
+        "height": 56,
+        "width": 295
+      },
+      {
+        "height": 72,
+        "width": 295
+      },
+      {
+        "height": 56,
+        "width": 295
+      },
+      {
+        "height": 56,
+        "width": 295
+      },
+      {
+        "height": 56,
+        "width": 295
+      }
+    ],
+    "width": 390
+  },
+  "dataPhone": {
+    "body": 375,
+    "client": 375,
+    "footer": 325,
+    "table": {
+      "client": 325,
+      "scroll": 382
+    },
+    "width": 390
+  },
+  "tableKeyboardScroll": {
+    "before": 0,
+    "after": 1.5
+  },
+  "tableGeometry": {
+    "caption": "Monthly invoices — amounts in USD",
+    "header": 56,
+    "numeric": "end",
+    "overflow": [
+      295,
+      385
+    ],
+    "padding": "16px",
+    "rowHeaders": [
+      "row",
+      "row",
+      "row"
+    ],
+    "rows": [
+      52,
+      52,
+      52
+    ]
+  },
+  "paginationPhone": {
+    "body": 375,
+    "buttons": [
+      {
+        "height": 48,
+        "width": 48,
+        "y": 693.6796875
+      },
+      {
+        "height": 48,
+        "width": 48,
+        "y": 693.6796875
+      },
+      {
+        "height": 48,
+        "width": 48,
+        "y": 693.6796875
+      },
+      {
+        "height": 48,
+        "width": 48,
+        "y": 693.6796875
+      },
+      {
+        "height": 48,
+        "width": 48,
+        "y": 693.6796875
+      },
+      {
+        "height": 48,
+        "width": 48,
+        "y": 745.6796875
+      },
+      {
+        "height": 48,
+        "width": 48,
+        "y": 745.6796875
+      }
+    ],
+    "client": 375,
+    "navWidth": 295,
+    "width": 390
+  },
+  "narrowColumns": {
+    "body": 360,
+    "client": 305,
+    "popup": {
+      "right": 305,
+      "width": 200,
+      "x": 105
+    },
+    "width": 320
+  },
+  "hiddenSorted": {
+    "colCount": "4",
+    "focus": "Show Budget column",
+    "range": "1–5 of 12",
+    "rowCount": "13",
+    "rows": [
+      {
+        "index": "2",
+        "selected": "false",
+        "text": "AtlasIn progress"
+      },
+      {
+        "index": "3",
+        "selected": "false",
+        "text": "BeaconPlanning"
+      },
+      {
+        "index": "4",
+        "selected": "false",
+        "text": "CanvasComplete"
+      },
+      {
+        "index": "5",
+        "selected": "false",
+        "text": "DriftIn progress"
+      },
+      {
+        "index": "6",
+        "selected": "false",
+        "text": "EchoPlanning"
+      }
+    ],
+    "selected": "0 selected",
+    "sort": [
+      {
+        "index": "1",
+        "sort": null,
+        "text": ""
+      },
+      {
+        "index": "2",
+        "sort": null,
+        "text": "Project↕"
+      },
+      {
+        "index": "3",
+        "sort": null,
+        "text": "Status↕"
+      }
+    ]
+  },
+  "dataGeometry": {
+    "checkbox": 48,
+    "containerRadius": "16px",
+    "filter": 56,
+    "header": 56,
+    "onSecondaryContainer": "#4a4458",
+    "row": 52,
+    "secondaryContainer": "#e8def8",
+    "selectedBg": "rgb(232, 222, 248)",
+    "selectedColor": "rgb(74, 68, 88)",
+    "width": 1337
+  },
+  "dataDark": {
+    "bg": "rgb(74, 68, 88)",
+    "text": "rgb(232, 222, 248)"
+  },
+  "copy": [
+    {
+      "route": "accordions",
+      "title": "Accordion usage",
+      "exact": true
+    },
+    {
+      "route": "accordions",
+      "title": "Multiple accordion usage",
+      "exact": true
+    },
+    {
+      "route": "collapsibles",
+      "title": "Collapsible usage",
+      "exact": true
+    },
+    {
+      "route": "tables",
+      "title": "Table usage",
+      "exact": true
+    },
+    {
+      "route": "pagination",
+      "title": "Pagination usage",
+      "exact": true
+    },
+    {
+      "route": "pagination",
+      "title": "Table pagination usage",
+      "exact": true
+    },
+    {
+      "route": "data-tables",
+      "title": "Data table usage",
+      "exact": true
+    }
+  ],
+  "selectionMotion": [
+    {
+      "t": 0,
+      "background": "rgb(232, 222, 248)",
+      "duration": "0.15s",
+      "selected": "true"
+    },
+    {
+      "t": 37,
+      "background": "oklab(0.916327 0.0199852 -0.0305675)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 60,
+      "background": "oklab(0.872097 0.01906 -0.0291401 / 0.575579)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 81,
+      "background": "oklab(0.736534 0.0162242 -0.0247652 / 0.250162)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 104,
+      "background": "oklab(0.594355 0.0132501 -0.0201767 / 0.157042)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 125,
+      "background": "oklab(0.385543 0.00888212 -0.0134379 / 0.101534)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 148,
+      "background": "oklab(0.276076 0.00659226 -0.00990512 / 0.0856614)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 171,
+      "background": "oklab(0.240607 0.0058503 -0.00876043 / 0.0815315)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 196,
+      "background": "color(srgb 0.113725 0.105882 0.12549 / 0.08)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 221,
+      "background": "color(srgb 0.113725 0.105882 0.12549 / 0.08)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 244,
+      "background": "color(srgb 0.113725 0.105882 0.12549 / 0.08)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 267,
+      "background": "color(srgb 0.113725 0.105882 0.12549 / 0.08)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 290,
+      "background": "color(srgb 0.113725 0.105882 0.12549 / 0.08)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 313,
+      "background": "color(srgb 0.113725 0.105882 0.12549 / 0.08)",
+      "duration": "0.15s",
+      "selected": "false"
+    },
+    {
+      "t": 336,
+      "background": "color(srgb 0.113725 0.105882 0.12549 / 0.08)",
+      "duration": "0.15s",
+      "selected": "false"
+    }
+  ],
+  "paginationMotion": [
+    {
+      "t": 0,
+      "current": null,
+      "height": 48,
+      "radius": "24px",
+      "width": 48
+    },
+    {
+      "t": 28,
+      "current": null,
+      "height": 48,
+      "radius": "24px",
+      "width": 48
+    },
+    {
+      "t": 50,
+      "current": "page",
+      "height": 48,
+      "pressed": "true",
+      "radius": "24px",
+      "width": 48
+    },
+    {
+      "t": 72,
+      "current": "page",
+      "height": 48,
+      "pressed": "true",
+      "radius": "19.7682px",
+      "width": 48
+    },
+    {
+      "t": 94,
+      "current": "page",
+      "height": 48,
+      "pressed": "true",
+      "radius": "14.494px",
+      "width": 48
+    },
+    {
+      "t": 117,
+      "current": "page",
+      "height": 48,
+      "pressed": "true",
+      "radius": "12.1041px",
+      "width": 48
+    },
+    {
+      "t": 137,
+      "current": "page",
+      "height": 48,
+      "pressed": "true",
+      "radius": "9.93956px",
+      "width": 48
+    },
+    {
+      "t": 160,
+      "current": "page",
+      "height": 48,
+      "pressed": "true",
+      "radius": "8.86102px",
+      "width": 48
+    },
+    {
+      "t": 182,
+      "current": "page",
+      "height": 48,
+      "pressed": "true",
+      "radius": "8.49525px",
+      "width": 48
+    },
+    {
+      "t": 204,
+      "current": "page",
+      "height": 48,
+      "pressed": "true",
+      "radius": "8.21057px",
+      "width": 48
+    },
+    {
+      "t": 227,
+      "current": "page",
+      "height": 48,
+      "pressed": "true",
+      "radius": "8.08806px",
+      "width": 48
+    },
+    {
+      "t": 252,
+      "current": "page",
+      "height": 48,
+      "pressed": "true",
+      "radius": "8.03603px",
+      "width": 48
+    },
+    {
+      "t": 275,
+      "current": "page",
+      "height": 48,
+      "radius": "8.03603px",
+      "width": 48
+    },
+    {
+      "t": 298,
+      "current": "page",
+      "height": 48,
+      "radius": "12.2725px",
+      "width": 48
+    },
+    {
+      "t": 321,
+      "current": "page",
+      "height": 48,
+      "radius": "17.5389px",
+      "width": 48
+    },
+    {
+      "t": 345,
+      "current": "page",
+      "height": 48,
+      "radius": "20.7971px",
+      "width": 48
+    },
+    {
+      "t": 370,
+      "current": "page",
+      "height": 48,
+      "radius": "22.5394px",
+      "width": 48
+    },
+    {
+      "t": 394,
+      "current": "page",
+      "height": 48,
+      "radius": "23.3527px",
+      "width": 48
+    },
+    {
+      "t": 419,
+      "current": "page",
+      "height": 48,
+      "radius": "23.7929px",
+      "width": 48
+    },
+    {
+      "t": 450,
+      "current": "page",
+      "height": 48,
+      "radius": "23.9133px",
+      "width": 48
+    },
+    {
+      "t": 475,
+      "current": "page",
+      "height": 48,
+      "radius": "23.9528px",
+      "width": 48
+    },
+    {
+      "t": 497,
+      "current": "page",
+      "height": 48,
+      "radius": "23.9801px",
+      "width": 48
+    },
+    {
+      "t": 520,
+      "current": "page",
+      "height": 48,
+      "radius": "24px",
+      "width": 48
+    },
+    {
+      "t": 543,
+      "current": "page",
+      "height": 48,
+      "radius": "24px",
+      "width": 48
+    },
+    {
+      "t": 571,
+      "current": "page",
+      "height": 48,
+      "radius": "24px",
+      "width": 48
+    },
+    {
+      "t": 595,
+      "current": "page",
+      "height": 48,
+      "radius": "24px",
+      "width": 48
+    },
+    {
+      "t": 618,
+      "current": "page",
+      "height": 48,
+      "radius": "24px",
+      "width": 48
+    },
+    {
+      "t": 642,
+      "current": "page",
+      "height": 48,
+      "radius": "24px",
+      "width": 48
+    },
+    {
+      "t": 664,
+      "current": "page",
+      "height": 48,
+      "radius": "24px",
+      "width": 48
+    },
+    {
+      "t": 688,
+      "current": "page",
+      "height": 48,
+      "radius": "24px",
+      "width": 48
+    }
+  ],
+  "final": {
+    "apps": 1,
+    "reduced": false,
+    "route": "#data-tables",
+    "width": 1337
+  },
+  "build": {
+    "preview": "successful final Rust rebuild 13.68s",
+    "exportExamples": 66,
+    "exportCheck": "successful 0.94s after 3.83s initial extraction check"
+  }
+}

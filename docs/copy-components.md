@@ -251,7 +251,7 @@ configured; full locale sentence ordering is not yet an internationalization API
 
 Scheduling adds `TimePicker` with dial/manual entry, 12/24-hour formats and
 controlled native modal draft state. The complete source export now has
-**59 independently compiled usage examples**.
+**66 independently compiled usage examples**.
 
 For a smaller copy, include `time.rs`, `time_picker.rs`, **`time_picker.js`**
 beside the Rust file, `time-picker.css`, and the shared Dialog/JS, Button,
@@ -265,3 +265,33 @@ Supply `hour24` from application/system preference. `default_mode` chooses
 Dial or Input when opening. Adaptive layout changes presentation to fit the
 viewport; it may require input mode even when Dial was requested.
 See [reference and runtime evidence](time-picker-verification.md).
+
+
+## Disclosure and data compositions
+
+New copyable components:
+
+| Component | Required files and dependencies |
+| --- | --- |
+| Accordion | `accordion.rs`, `disclosure.js`, `accordion.css`; motion IDs, Icon/icons, shared Ripple |
+| Collapsible | `collapsible.rs`, Accordion runtime helper, `disclosure.js`, `accordion.css` |
+| Table primitives | `table.rs`, `table.css`; native HTML semantics |
+| Pagination | `pagination.rs`, `pagination.css`; Icon/icons, Ripple, NativeSelect and its Select/field CSS dependencies |
+| DataTable | `data_table.rs`, `data-table.css`, Table/Pagination plus TextField, NativeSelect, Checkbox and their CSS/runtime dependencies |
+
+Use the full source exporter to retain dependencies. Accordion is controlled by
+unique string values, Collapsible by `open`. DataTable selection is controlled by
+stable row IDs; its query/sort/page/visibility state is internal. Columns require
+unique keys, rows unique IDs, and cells follow column order. A formatted numeric
+cell needs `DataCell::formatted_number(value, display)` to sort numerically.
+Custom cells may set `DataCell.content` while retaining searchable text.
+
+Pagination callbacks are for local page state, with one-based page numbers.
+Use real anchors for URL navigation. DataTable is client-side; server queries,
+virtualization, column resizing and editing are separate extensions.
+
+Seven new gallery snippets have exact clipboard evidence and compile with the
+independent export; all 66 current usage snippets compile. See the
+[accordion](accordion-verification.md), [collapsible](collapsible-verification.md),
+[table](table-verification.md), [pagination](pagination-verification.md) and
+[data-table](data-table-verification.md) verification reports.
