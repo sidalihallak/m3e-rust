@@ -180,3 +180,88 @@ as a claimed official Material variant.
 Five new copy controls matched exactly. [Surfaces verification](surfaces-verification.md)
 records all 45 independently compiled examples, actual desktop/compact interactions,
 reduced motion and the paused Android scope.
+
+## Feedback and content dependencies and state
+
+| Sources | Required styles and runtime files |
+| --- | --- |
+| `feedback.rs` (Snackbar, Toast, Alert) | `feedback.css`, `composite-motion.css`, `ripple.css`, `icon.css`; `snackbar.js`, `motion.rs`, `ripple.rs`, `icon.rs`, `icons.rs` |
+| `search.rs` | `search.css`, `feedback.css`, `composite-motion.css`, `ripple.css`, `icon.css`; `search.js` and shared motion/ripple/icon sources |
+| `list.rs` | `list.css`, `composite-motion.css`, `ripple.css`, `icon.css`; `list.js` and shared motion/ripple/icon sources |
+| `content.rs` | `content.css`; `icon.css` and icon sources for EmptyState icons; include CSS for supplied actions/media |
+
+Use global `box-sizing: border-box`. All interactive slots must use named native
+controls. ListItem leading/trailing slots are decorative; independent controls
+belong in `secondary`, as siblings of the primary button. Selection lists must
+pair `ListSelection::Single`/`Multiple` with `selected: Some(bool)` on every item.
+The app owns exclusivity and selected IDs. Selection rows do not support secondary
+actions. Provide a group name explaining single or multiple selection.
+
+SearchView requires a mounted, unique SearchBar `anchor_id`. `open` and `value`
+are controlled; update `onopenchange` and `oninput`. Supply filtered results,
+commit `onselect`, and implement `onsubmit` in the consuming app. Adaptive uses
+full-screen search below 600px. Query composition is respected; enabled results
+are previewed by arrows and committed with Enter. Native dialog provides modality.
+
+Mount one Snackbar/Toast host per app. Reuse it for updated information; `revision`
+restarts its timer. Queue unrelated messages in app state and show the next after
+exit. This controlled API does not implement upstream's imperative toast store,
+promise API or a queue manager. An action always makes the snackbar persistent.
+Timed messages are opt-in, clamped to 4–10 seconds, and require equivalent inline
+feedback on the web. Pause on focus/hover/hidden document is included. Alt+G moves
+focus to the snackbar; Escape dismisses while focused. Set `--m3-snackbar-bottom`
+to raise it above navigation/FABs. Never put critical errors only in a snackbar.
+
+Avatar label identifies the entity; `decorative: true` hides duplicates beside
+an existing name. Images have empty alt inside the named avatar, with initials
+fallback on loading/error. Skeleton is decorative. LoadingPlaceholder applies
+`aria-busy` to the content container and supplies a loading status. Your app owns
+loading completion. Alert defaults to polite status; choose Alert for urgent
+updates and Note for static information. These helpers and EmptyState are upstream
+extensions, not standalone official M3 components.
+
+Latest 2026-10-11 check: all **53** independent library usage examples compile.
+All eight feedback/content copy controls matched exactly. Previous dated counts
+above describe their respective audits. See [feedback/content evidence](feedback-content-verification.md).
+
+## Scheduling: date picker and calendar
+
+The four Scheduling examples bring the independent export to **57 compiled
+usage examples**. See [date-picker evidence](date-picker-verification.md) and
+[calendar evidence](calendar-verification.md).
+
+Copy `date.rs`, `calendar.rs`, **`calendar.js`**, `date_picker.rs`,
+**`date_input.js`** and `date-picker.css`. Keep JS beside its Rust source.
+Also include Icon/icons, Ripple/motion, Tooltip/anchored runtime, TextField,
+Button, Dialog and compact layout helper with their CSS/runtime dependencies.
+Styles required: `date-picker.css`, `text-field.css`, `button.css`,
+`dialog.css`, `action-control.css`, `help.css`, `composite-motion.css`,
+`icon.css`, `ripple.css`. Include shared semantic color and motion variables.
+
+`CivilDate::new(year, month, day)` validates Gregorian dates without timezones.
+`DatePicker` owns editing text but its date value is controlled: update
+`onchange`. `DatePickerModal` owns a draft while open; update `onopenchange`
+and save `onconfirm`. `DateSelection::Range(DateRange::default())` starts a
+range. Calendar month and selection are controlled separately. Constraints
+default to years 1900–2100; override them for other domains. Range-interior
+disabled-day exclusion is opt-in. Labels/month/weekdays/date format can be
+configured; full locale sentence ordering is not yet an internationalization API.
+
+## Time picker
+
+Scheduling adds `TimePicker` with dial/manual entry, 12/24-hour formats and
+controlled native modal draft state. The complete source export now has
+**59 independently compiled usage examples**.
+
+For a smaller copy, include `time.rs`, `time_picker.rs`, **`time_picker.js`**
+beside the Rust file, `time-picker.css`, and the shared Dialog/JS, Button,
+ActionControl, Icon/icons, Ripple and motion sources. Include `dialog.css`,
+`button.css`, `action-control.css`, `composite-motion.css`, `ripple.css`
+and `icon.css`, plus semantic color variables.
+
+`TimeValue::new(hours, minutes)` validates 24-hour values. The picker uses
+`open/onopenchange` and commits only through `onconfirm`; its draft is internal.
+Supply `hour24` from application/system preference. `default_mode` chooses
+Dial or Input when opening. Adaptive layout changes presentation to fit the
+viewport; it may require input mode even when Dial was requested.
+See [reference and runtime evidence](time-picker-verification.md).

@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-11",
+  "docked": {
+    "ancestors": [
+      {
+        "class": "app-shell showcase-shell",
+        "color": "rgb(253, 247, 255)",
+        "tag": "DIV"
+      },
+      {
+        "class": "",
+        "color": "rgb(248, 247, 251)",
+        "tag": "BODY"
+      }
+    ],
+    "container": "rgba(0, 0, 0, 0)",
+    "input": "rgba(0, 0, 0, 0)",
+    "variant": "m3-field m3-field--outlined "
+  },
+  "light": {
+    "container": "rgba(0, 0, 0, 0)",
+    "input": "rgba(0, 0, 0, 0)",
+    "modal": "rgb(236, 230, 238)",
+    "token": "#ece6ee"
+  },
+  "dark": {
+    "container": "rgba(0, 0, 0, 0)",
+    "input": "rgba(0, 0, 0, 0)",
+    "modal": "rgb(43, 41, 47)",
+    "token": "#2b292f"
+  }
+}

@@ -1,0 +1,8 @@
+const id=__ID__,root=document.getElementById(id);if(!root||root.dataset.ready)return;root.dataset.ready='true';
+const items=()=>[...root.querySelectorAll('button:not(:disabled),a[href],input:not(:disabled),select:not(:disabled)')].filter(e=>(!root.getClientRects().length||e.getClientRects().length)&&e.getAttribute('aria-disabled')!=='true');
+let last;
+const update=()=>{const entries=items();const chosen=entries.includes(document.activeElement)?document.activeElement:entries.find(e=>e.getAttribute('aria-selected')==='true')||entries.includes(last)&&last||entries[0];entries.forEach(e=>e.tabIndex=e===chosen?0:-1);};
+const focus=e=>{if(!items().includes(e.target))return;last=e.target;update();};
+const key=e=>{const entries=items(),index=entries.indexOf(document.activeElement);if(index<0)return;const rtl=getComputedStyle(root).direction==='rtl';let next;if(e.key==='Home')next=0;else if(e.key==='End')next=entries.length-1;else if(e.key==='ArrowDown'||e.key===(rtl?'ArrowLeft':'ArrowRight'))next=(index+1)%entries.length;else if(e.key==='ArrowUp'||e.key===(rtl?'ArrowRight':'ArrowLeft'))next=(index-1+entries.length)%entries.length;else return;e.preventDefault();entries[next].focus();};
+const observer=new MutationObserver(update);observer.observe(root,{childList:true,subtree:true,attributes:true,attributeFilter:['disabled','aria-selected']});root.addEventListener('keydown',key);root.addEventListener('focusin',focus);update();
+window.__m3Lists??={};window.__m3Lists[id]=()=>{observer.disconnect();root.removeEventListener('keydown',key);root.removeEventListener('focusin',focus);delete window.__m3Lists[id];};

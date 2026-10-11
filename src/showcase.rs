@@ -17,6 +17,16 @@ pub const PAGES: &[(&str, &str, &str)] = &[
     ("segmented-buttons", "Segmented buttons", "Selection"),
     ("text-fields", "Text fields", "Selection"),
     ("selection-fields", "Select & autocomplete", "Selection"),
+    ("snackbars", "Snackbars & toast", "Communication"),
+    ("alerts", "Alert banners", "Communication"),
+    ("search", "Search", "Communication"),
+    ("date-pickers", "Date pickers", "Scheduling"),
+    ("calendars", "Calendars", "Scheduling"),
+    ("time-pickers", "Time pickers", "Scheduling"),
+    ("lists", "Lists", "Content"),
+    ("avatars", "Avatars", "Content"),
+    ("loading-placeholders", "Loading placeholders", "Content"),
+    ("empty-states", "Empty states", "Content"),
     ("dialogs", "Dialogs", "Communication"),
     ("menus", "Menus", "Communication"),
     ("help-and-selection", "Tooltips & help", "Communication"),
@@ -62,6 +72,7 @@ pub fn destinations() -> Vec<NavigationDestination> {
         ("Communication", icons::CHAT_BUBBLE, icons::CHAT_BUBBLE_FILL),
         ("Content", icons::LAYERS, icons::LAYERS_FILL),
         ("Navigation", icons::EXPLORE, icons::EXPLORE_FILL),
+        ("Scheduling", icons::CALENDAR_TODAY, icons::CALENDAR_TODAY),
     ]
     .into_iter()
     .map(|(name, icon, fill)| {
@@ -184,6 +195,7 @@ pub fn PageIntro(active: String) -> Element {
         "Content" => {
             "Give content a clear hierarchy with tonal surfaces, purposeful spacing and flexible layouts."
         }
+        "Scheduling" => "Choose dates and times with a dial, calendar or text entry, with clear draft and confirmed states.",
         "Navigation" => {
             "Guide people through your app with adaptive navigation and a clear sense of place."
         }

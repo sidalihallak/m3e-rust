@@ -174,3 +174,30 @@ five copyable examples under Content. [Family verification](docs/surfaces-verifi
 records desktop pointer/keyboard/RTL,390px responsive layout, actual Reduce Motion,
 raw motion and exact clipboard checks. All **45** independent examples compile.
 Android remains paused; nested drawer/snap-point extensions remain open.
+
+## Feedback and content
+
+Snackbar/Toast, Alert banner, contained SearchBar/SearchView, standard/segmented
+List/ListItem, Avatar/AvatarGroup, Skeleton/LoadingPlaceholder and EmptyState
+are implemented with eight copyable examples. The showcase has seven new
+catalogue pages. [Family evidence](docs/feedback-content-verification.md) records
+actual desktop inputs, motion, 390px layouts and OS reduced motion. Reports:
+[Snackbar](docs/snackbar-verification.md), [Toast](docs/toast-verification.md),
+[Alert](docs/alert-verification.md), [Search](docs/search-verification.md),
+[List](docs/list-verification.md), [Avatar](docs/avatar-verification.md),
+[Skeleton](docs/skeleton-verification.md), [EmptyState](docs/empty-state-verification.md).
+The independent export and all 53 usage snippets compile for Rust/Wasm.
+Android remains paused; imperative toast queues and advanced list/search behavior
+are recorded as remaining scope, not claimed as complete upstream parity.
+
+## Scheduling
+
+DatePicker, DatePickerModal and Calendar now have copyable Dioxus examples,
+validated date-only values, text input, single/range drafts and compact
+full-screen layout. See [date-picker checks](docs/date-picker-verification.md)
+and [calendar checks](docs/calendar-verification.md). Android remains paused.
+
+TimePicker now includes 12/24-hour dial and manual entry, draft confirmation,
+responsive layout and copyable examples. See [time-picker evidence](docs/time-picker-verification.md).
+The [date field background audit](docs/date-picker-verification.md) confirms
+transparent outlined fields over semantic Material surfaces in light/dark mode.

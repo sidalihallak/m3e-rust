@@ -1,0 +1,49 @@
+/* Official M3 time picker roles/geometry; copy with time_picker.rs + JS. */
+.m3-time-dialog .m3-dialog__surface{width:328px;min-width:0;max-width:calc(100vw - 24px);padding:0;gap:0;box-shadow:0 1px 3px rgb(0 0 0/.3),0 4px 8px 3px rgb(0 0 0/.15)}
+.m3-time-dialog .m3-dialog__header{display:none}.m3-time-dialog .m3-dialog__body{padding:0;margin:0;border:0;gap:0}
+.m3-time-picker{border-radius:28px;padding:24px;color:var(--md-sys-color-on-surface);background:var(--md-sys-color-surface-container-high);font-family:Inter,system-ui,sans-serif;box-sizing:border-box}
+.m3-time-picker__title{margin:0 0 20px;color:var(--md-sys-color-on-surface-variant);font:500 12px/16px Inter,system-ui,sans-serif}
+.m3-time-picker__layout{display:flex;flex-direction:column;align-items:center;gap:36px}.m3-time-picker__selectors{display:flex;align-items:flex-start;gap:12px}.m3-time-picker__numbers{display:flex;align-items:flex-start;direction:ltr}
+.m3-time-picker__number{position:relative;isolation:isolate;display:grid;place-items:center;box-sizing:border-box;flex:none;width:96px;height:80px;padding:0;border:0;border-radius:8px;background:var(--md-sys-color-surface-container-highest);color:var(--md-sys-color-on-surface);font:400 57px/64px Inter,system-ui,sans-serif;letter-spacing:0;text-align:center;font-variant-numeric:tabular-nums;cursor:pointer;transition:background-color var(--m3-fast-effects-duration) var(--m3-fast-effects),color var(--m3-fast-effects-duration) var(--m3-fast-effects)}
+.m3-time-picker__number[data-active=true]{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container)}
+.m3-time-picker__numbers[data-hour24=true] .m3-time-picker__number{width:114px}
+.m3-time-picker__separator{display:grid;place-items:center;width:24px;height:80px;font:400 57px/64px Inter,system-ui,sans-serif}
+.m3-time-picker__input-label{display:flex;flex-direction:column;gap:4px;color:var(--md-sys-color-on-surface-variant);font:400 12px/16px Inter,system-ui,sans-serif}
+.m3-time-picker[data-mode=input] .m3-time-picker__number{height:72px;width:96px;font:400 45px/52px Inter,system-ui,sans-serif;cursor:text;appearance:none;outline:none}
+.m3-time-picker[data-mode=input] .m3-time-picker__separator{height:72px}
+.m3-time-picker__number:focus-visible{outline:3px solid var(--md-sys-color-primary);outline-offset:2px}
+.m3-time-picker__number[aria-invalid=true]{outline:2px solid var(--md-sys-color-error);outline-offset:-2px}
+.m3-time-picker__period{display:flex;flex-direction:column;width:52px;height:80px;box-sizing:border-box;flex:none;border:1px solid var(--md-sys-color-outline);border-radius:8px;overflow:hidden}
+.m3-time-picker__period-button{position:relative;isolation:isolate;flex:1;min-height:0;padding:0;border:0;background:transparent;color:var(--md-sys-color-on-surface-variant);font:500 16px/24px Inter,system-ui,sans-serif;cursor:pointer;transition:background-color var(--m3-fast-effects-duration) var(--m3-fast-effects),color var(--m3-fast-effects-duration) var(--m3-fast-effects)}
+.m3-time-picker__period-button+button{border-top:1px solid var(--md-sys-color-outline)}
+.m3-time-picker__period-button[aria-checked=true]{background:var(--md-sys-color-tertiary-container);color:var(--md-sys-color-on-tertiary-container)}
+.m3-time-picker__period-button:focus-visible{outline:3px solid var(--md-sys-color-primary);outline-offset:-3px}
+.m3-time-picker[data-mode=input] .m3-time-picker__period{height:72px}
+.m3-time-picker__dial{position:relative;width:256px;height:256px;border-radius:50%;background:var(--md-sys-color-surface-container-highest);flex:none;touch-action:none;user-select:none;direction:ltr}
+.m3-time-picker__hand{pointer-events:none;position:absolute;left:50%;top:50%;width:0;height:0;transition:transform var(--m3-fast-spatial-duration) var(--m3-fast-spatial)}
+.m3-time-picker__track{position:absolute;bottom:0;left:-1px;width:2px;background:var(--md-sys-color-primary);transition:height var(--m3-fast-spatial-duration) var(--m3-fast-spatial)}
+.m3-time-picker__handle{position:absolute;top:0;left:0;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--md-sys-color-primary);transition:transform var(--m3-fast-spatial-duration) var(--m3-fast-spatial)}
+.m3-time-picker__center{position:absolute;top:50%;left:50%;width:8px;height:8px;transform:translate(-50%,-50%);border-radius:50%;background:var(--md-sys-color-primary);pointer-events:none}
+.m3-time-picker__dot{width:4px;height:4px;border-radius:50%;background:var(--md-sys-color-on-primary)}
+.m3-time-picker__labels{position:absolute;inset:0;--m3-time-label-duration:200ms;--m3-time-label-easing:ease}
+.m3-time-picker__tick{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:48px;height:48px;box-sizing:border-box;border:0;border-radius:50%;padding:0;background:transparent;color:var(--md-sys-color-on-surface);font:400 16px/24px Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums;cursor:pointer}
+.m3-time-picker__tick[data-selected=true]{color:var(--md-sys-color-on-primary)}.m3-time-picker__tick:focus-visible{outline:3px solid var(--md-sys-color-secondary);outline-offset:2px}
+.m3-time-picker__dial[data-dragging=true] .m3-time-picker__hand,.m3-time-picker__dial[data-dragging=true] .m3-time-picker__track,.m3-time-picker__dial[data-dragging=true] .m3-time-picker__handle{transition:none}
+.m3-time-picker__actions{display:flex;align-items:center;gap:8px;margin-top:24px}.m3-time-picker__actions .m3-button{--button-height:48px}.m3-time-picker__spacer{flex:1}
+.m3-time-picker__switch{position:relative;isolation:isolate;display:grid;place-items:center;flex:none;width:48px;height:48px;border:0;border-radius:24px;padding:0;color:var(--md-sys-color-on-surface-variant);background:none;--m3-icon-size:24px;cursor:pointer}
+.m3-time-picker__switch:focus-visible{outline:3px solid var(--md-sys-color-primary);outline-offset:2px}.m3-time-picker__switch:disabled{opacity:.38;cursor:default}.m3-time-picker__error{margin:12px 0 0;color:var(--md-sys-color-error);font:400 12px/16px Inter,system-ui,sans-serif}
+.m3-time-dialog:has(.m3-time-picker[data-horizontal=true]) .m3-dialog__surface{width:560px}
+.m3-time-picker[data-horizontal=true] .m3-time-picker__layout{display:grid;grid-template-columns:216px 256px;gap:40px;align-items:start}
+.m3-time-picker[data-horizontal=true] .m3-time-picker__selectors{flex-direction:column;gap:16px}
+.m3-time-picker[data-horizontal=true] .m3-time-picker__number{width:96px}
+.m3-time-picker[data-horizontal=true] .m3-time-picker__period{flex-direction:row;width:216px;height:48px}
+.m3-time-picker[data-horizontal=true] .m3-time-picker__period-button+button{border-top:0;border-inline-start:1px solid var(--md-sys-color-outline)}
+@media(hover:hover){.m3-time-picker__period-button:not([aria-checked=true]):hover{background:color-mix(in srgb,var(--md-sys-color-on-surface) 8%,transparent)}.m3-time-picker__switch:not(:disabled):hover{background:color-mix(in srgb,currentColor 8%,transparent)}.m3-time-picker__tick:not([data-selected=true]):hover{background:color-mix(in srgb,var(--md-sys-color-on-surface) 8%,transparent)}}
+@media(prefers-reduced-motion:reduce){.m3-time-picker__hand,.m3-time-picker__track,.m3-time-picker__handle,.m3-time-picker__number,.m3-time-picker__period-button{transition:none}}
+/* Keep the dial at 256px on narrow phones; move the period row instead. */
+@media(max-width:351px){
+ .m3-time-dialog .m3-dialog__surface{max-width:calc(100vw - 16px)}
+ .m3-time-picker__selectors{flex-direction:column;gap:16px}
+ .m3-time-picker__period,.m3-time-picker[data-mode=input] .m3-time-picker__period{flex-direction:row;width:216px;height:48px}
+ .m3-time-picker__period-button+button{border-top:0;border-inline-start:1px solid var(--md-sys-color-outline)}
+}
