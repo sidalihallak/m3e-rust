@@ -110,3 +110,7 @@ screen-reader verification and held-pointer/compact regression coverage. The nex
 Help and selection now has desktop and compact-layout evidence. Android remains paused.
 
 Navigation follow-up: final compact NativeSelect routing, skip link, tall navigation bar and vertical toolbar interactions need a fresh browser recheck; the publishing recheck was blocked by URL policy. Earlier navigation samples were not persisted.
+
+The 2026-10-11 [drawer/showcase follow-up](showcase-navigation-verification.md) is implemented and builds; actual runtime motion, focus and compact-layout rechecks remain blocked by local browser URL policy. Recheck the new modal surface/scrim structure rather than relying on previous modal measurements.
+
+Local browser access was restored with a fresh Codex in-app browser tab. Desktop drawer entry/exit, scrim fade, inert targets and compact routing now have [saved runtime evidence](showcase-navigation-verification.md); interrupted/reduced-motion/RTL and Android follow-ups remain.

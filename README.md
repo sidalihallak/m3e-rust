@@ -159,3 +159,9 @@ and [toolbars](docs/toolbar-verification.md). The showcase now has six families,
 28 component pages, a searchable desktop catalogue and compact navigation.
 Five new copyable examples bring the independent source-export total to **40**.
 The report distinguishes earlier desktop observations from final untested edits.
+
+Latest [drawer-motion follow-up](docs/modal-navigation-rail-verification.md) separates
+panel movement from scrim fading. The [showcase layout](docs/showcase-navigation-verification.md)
+follows the Material website's compact rail, secondary catalogue and large page
+headings. Build checks pass. A fresh Codex in-app browser tab restored local access;
+actual drawer motion samples and the duration-unit correction are recorded in the follow-up report.

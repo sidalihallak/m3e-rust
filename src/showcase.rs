@@ -92,10 +92,18 @@ pub fn use_route() -> (Signal<String>, Signal<bool>, Signal<bool>) {
             let mut eval = document::eval(include_str!("showcase.js"));
             while let Ok((value, is_scrolled, is_wide)) = eval.recv::<(String, bool, bool)>().await
             {
-                let target = if value.is_empty() || value=="help-selection-details" || PAGES.iter().any(|p|p.0==value) {Some(page(&value).0)}else{None};
-                if let Some(target)=target {if route.peek().as_str() != target {
-                    route.set(target.to_string());
-                }
+                let target = if value.is_empty()
+                    || value == "help-selection-details"
+                    || PAGES.iter().any(|p| p.0 == value)
+                {
+                    Some(page(&value).0)
+                } else {
+                    None
+                };
+                if let Some(target) = target {
+                    if route.peek().as_str() != target {
+                        route.set(target.to_string());
+                    }
                 }
                 if *scrolled.peek() != is_scrolled {
                     scrolled.set(is_scrolled);
@@ -114,14 +122,18 @@ pub fn use_route() -> (Signal<String>, Signal<bool>, Signal<bool>) {
     use_effect(move || {
         let _value = route();
         spawn(async {
-                let _ = document::eval("if(location.hash==='#help-selection-details'){requestAnimationFrame(()=>document.getElementById('help-selection-details')?.scrollIntoView({block:'start'}));}else{window.scrollTo({top:0,behavior:'instant'});}").await;
+            let _ = document::eval("if(location.hash==='#help-selection-details'){requestAnimationFrame(()=>document.getElementById('help-selection-details')?.scrollIntoView({block:'start'}));}else{window.scrollTo({top:0,behavior:'instant'});}").await;
         });
     });
     (route, scrolled, wide)
 }
 
 #[component]
-pub fn Catalog(active: String, #[props(default)] compact: bool) -> Element {
+pub fn Catalog(
+    active: String,
+    #[props(default)] compact: bool,
+    #[props(default = true)] open: bool,
+) -> Element {
     let mut query = use_signal(String::new);
     let family = page(&active).2;
     let entries: Vec<_> = PAGES
@@ -137,7 +149,8 @@ pub fn Catalog(active: String, #[props(default)] compact: bool) -> Element {
             }
         })
         .collect();
-    rsx! {aside {class:if compact {"showcase-catalog showcase-catalog--compact"}else{"showcase-catalog"},aria_label:"Component catalogue",
+    rsx! {aside {class:if compact {"showcase-catalog showcase-catalog--compact"}else{"showcase-catalog"},aria_label:"Component catalogue",inert:if !open {Some("")}else{None},"aria-hidden":if !open {Some("true")}else{None},
+        div {class:"catalog-inner",
         div {class:"catalog-heading",p {class:"eyebrow","M3E / RUST"}h2 {"{family}"}p {"Copyable Dioxus components"}}
         div {class:"catalog-search",Icon {icon:icons::SEARCH}input {r#type:"search",aria_label:"Find a component",placeholder:"Find a component…",value:query(),oninput:move|e|query.set(e.value())}
             if !query().is_empty(){button {r#type:"button",class:"catalog-search__clear",aria_label:"Clear component search",onclick:move |_|query.set(String::new()),Icon {icon:icons::CLOSE}}}
@@ -149,5 +162,34 @@ pub fn Catalog(active: String, #[props(default)] compact: bool) -> Element {
         }}
         if entries.is_empty(){p {class:"catalog-empty",role:"status","No matching components."}}
         a {class:"catalog-source",href:"https://github.com/sidalihallak/m3e-rust",target:"_blank",rel:"noreferrer","View source ↗"}
+    }}}
+}
+
+#[component]
+pub fn PageIntro(active: String) -> Element {
+    let (_, title, family) = page(&active);
+    let description = match family {
+        "Actions" => {
+            "Help people take action with expressive shapes, clear emphasis and responsive motion."
+        }
+        "Selection" => {
+            "Make choices feel natural with clear states, accessible controls and helpful feedback."
+        }
+        "Communication" => {
+            "Keep people informed with contextual help, focused conversations and timely feedback."
+        }
+        "Content" => {
+            "Give content a clear hierarchy with tonal surfaces, purposeful spacing and flexible layouts."
+        }
+        "Navigation" => {
+            "Guide people through your app with adaptive navigation and a clear sense of place."
+        }
+        _ => "Create a consistent visual language with semantic colors and Material Symbols.",
+    };
+    rsx! {header {class:"showcase-page-intro wrap",hidden:active=="foundations",
+        p {class:"showcase-breadcrumb","Components / " if family=="Communication" {"Feedback"}else{"{family}"}}
+        h1 {"{title}"}
+        p {class:"showcase-page-description","{description}"}
+        div {class:"showcase-page-links",a {href:"#showcase-examples","Explore examples"}a {href:"https://github.com/sidalihallak/m3e-rust",target:"_blank",rel:"noreferrer","View source ↗"}}
     }}
 }

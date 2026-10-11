@@ -374,10 +374,9 @@ fn main() {
 
 #[component]
 fn App() -> Element {
-    let (route, scrolled, wide) = showcase::use_route();
+    let (route, scrolled, _wide) = showcase::use_route();
     let mut modal_navigation = use_signal(|| false);
-    let mut rail_override = use_signal(|| None::<bool>);
-    let expanded = rail_override().unwrap_or(wide());
+    let mut catalog_open = use_signal(|| true);
     let (_, page_title, family) = showcase::page(&route());
     let mut seed = use_signal(|| theme::SEEDS[0].1);
     let mut dark = use_signal(|| false);
@@ -467,33 +466,35 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/divider.css") }
         document::Stylesheet { href: asset!("/assets/text-field.css") }
 
-        div { class: "app-shell showcase-shell", style: format!("{};--showcase-rail:{}px",theme_style,if expanded {220}else{96}),
+        div { class: "app-shell showcase-shell", style: theme_style, "data-catalog-open":catalog_open(),
             a {class:"showcase-skip",href:"#showcase-content","Skip to component content"}
-            NavigationRail {class:"showcase-primary",items:showcase::destinations(),selected:family,expanded,
-                header:rsx!{IconButton {icon:if expanded {icons::MENU_OPEN}else{icons::MENU},aria_label:if expanded {"Collapse navigation"}else{"Expand navigation"},onclick:move |_|rail_override.set(Some(!expanded))}},
-                onchange:move|value:String|showcase::navigate(showcase::first(&value))
+            NavigationRail {class:"showcase-primary",items:showcase::destinations(),selected:family,expanded:false,
+                header:rsx!{IconButton {icon:if catalog_open(){icons::MENU_OPEN}else{icons::MENU},toggle:true,selected:catalog_open(),aria_label:if catalog_open(){"Hide component menu"}else{"Show component menu"},onclick:move |_|catalog_open.toggle()}},
+                onchange:move|value:String|{catalog_open.set(true);showcase::navigate(showcase::first(&value));}
             }
-            AppBar {class:"showcase-header",title:page_title,scrolled:scrolled(),
+            AppBar {class:"showcase-header",title:"M3E Rust UI",scrolled:scrolled(),
                 leading:rsx!{span {class:"showcase-mobile-menu",IconButton {icon:icons::MENU,aria_label:"Open navigation",onclick:move |_|modal_navigation.set(true)}}},
                 trailing:rsx!{IconButton {icon:if dark(){icons::LIGHT_MODE}else{icons::DARK_MODE},aria_label:if dark(){"Switch to light mode"}else{"Switch to dark mode"},onclick:move |_|dark.toggle()}}
             }
-            showcase::Catalog {active:route()}
+            showcase::Catalog {active:route(),open:catalog_open()}
             ModalNavigationRail {open:modal_navigation(),items:showcase::destinations(),selected:family,title:"Browse components",
                 onopenchange:move|value|modal_navigation.set(value),onchange:move|value:String|showcase::navigate(showcase::first(&value))
             }
             main {id:"showcase-content",class:"showcase-content",tabindex:"-1",
                 div {class:"showcase-status",role:"status",aria_live:"polite","{page_title}"}
+                showcase::PageIntro {active:route()}
                 div {class:"showcase-mobile-catalog",
                     m3e_rust_ui::NativeSelect {label:"Component",value:route(),
                         options:showcase::PAGES.iter().copied().filter(|p|p.2==family).map(|(slug,label,_)|m3e_rust_ui::SelectOption::new(slug,label)).collect::<Vec<_>>(),
                         onchange:move|value:String|showcase::navigate(&value)
                     }
                 }
+                div {id:"showcase-examples",class:"showcase-examples-anchor"}
             section { class: "hero wrap", id:"foundations", hidden:route()!="foundations",
                 div { class: "hero-copy",
-                    div { class: "eyebrow", span { class: "status-dot" } "THEME FOUNDATIONS / 01" }
-                    h1 { "Color that " em { "means" } " something." }
-                    p { class: "hero-description", "A live Material 3 color system, generated from a single source color. Change the seed or mode to see semantic roles adapt." }
+                    div { class: "eyebrow", span { class: "status-dot" } "M3 EXPRESSIVE / DIOXUS" }
+                    h1 { "Material 3." br {} "Made for Rust." }
+                    p { class: "hero-description", "Build expressive interfaces with copyable Dioxus components. Explore the color system, try each interaction, and make it your own." }
                     div { class: "seed-row",
                         span { class: "seed-label", "SOURCE COLOR" }
                         for (name, value) in theme::SEEDS {

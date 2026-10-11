@@ -84,3 +84,15 @@ Open the modal, test both boundary Tab directions, Escape, scrim and selection;
 confirm opener focus and scroll restoration. Repeat with reduced motion and
 restore the system setting. Resize to phone width and exercise the compact
 family menu/component picker separately; resume Android checks when requested.
+
+## Follow-up: drawer and Material website layout — 2026-10-11
+
+See [modal motion changes and verification gap](modal-navigation-rail-verification.md)
+and [showcase layout report](showcase-navigation-verification.md). The application
+now keeps a compact 96px primary rail and opens a separate secondary component
+menu. It no longer switches its primary destinations from vertical to horizontal
+when opening that menu. The reusable rail's standalone collapsed/expanded API is
+unchanged. Earlier measured results above describe the previous shell.
+
+Current source checks passed; follow-up runtime verification is blocked by browser
+URL policy. These changes are implemented, not declared fully runtime verified.

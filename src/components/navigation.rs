@@ -159,8 +159,10 @@ pub fn ModalNavigationRail(
         }
     });
     rsx! {dialog {id:"{id}",class:"m3-modal-rail {class}",aria_modal:"true",aria_labelledby:"{id}-title","data-open":open,
+        div {class:"m3-modal-rail__scrim",aria_hidden:"true"}
+        div {class:"m3-modal-rail__surface",
         div {class:"m3-modal-rail__heading",IconButton {icon:icons::MENU_OPEN,aria_label:"Close navigation",onclick:move |_|onopenchange.call(false)}h2 {id:"{id}-title","{title}"}}
         NavigationRail {items,selected,expanded:true,expanded_width:320,aria_label:title,
             onchange:move |value|{onchange.call(value);onopenchange.call(false);}}
-    }}
+    }}}
 }

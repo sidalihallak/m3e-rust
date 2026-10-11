@@ -1,0 +1,236 @@
+{
+  "before": [
+    {
+      "ms": 0,
+      "state": {
+        "open": true,
+        "phase": "opening",
+        "scrim": "1",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    },
+    {
+      "ms": 83,
+      "state": {
+        "open": true,
+        "phase": "closing",
+        "scrim": "0.85232",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": -14.608560562133787
+      }
+    },
+    {
+      "ms": 156,
+      "state": {
+        "open": true,
+        "phase": "closing",
+        "scrim": "0.11976",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": -193.78952026367188
+      }
+    },
+    {
+      "ms": 223,
+      "state": {
+        "open": true,
+        "phase": "closing",
+        "scrim": "0.0134006",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": -292.2898254394531
+      }
+    },
+    {
+      "ms": 298,
+      "state": {
+        "open": true,
+        "phase": "closing",
+        "scrim": "0.0007258",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": -320
+      }
+    },
+    {
+      "ms": 426,
+      "state": {
+        "open": true,
+        "phase": "closing",
+        "scrim": "0",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": -320
+      }
+    },
+    {
+      "ms": 527,
+      "state": {
+        "open": false,
+        "phase": "closed",
+        "scrim": "1",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    },
+    {
+      "ms": 629,
+      "state": {
+        "open": false,
+        "phase": "closed",
+        "scrim": "1",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    },
+    {
+      "ms": 730,
+      "state": {
+        "open": false,
+        "phase": "closed",
+        "scrim": "1",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    },
+    {
+      "ms": 831,
+      "state": {
+        "open": false,
+        "phase": "closed",
+        "scrim": "1",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    },
+    {
+      "ms": 933,
+      "state": {
+        "open": false,
+        "phase": "closed",
+        "scrim": "1",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    }
+  ],
+  "after": [
+    {
+      "ms": 0,
+      "state": {
+        "open": true,
+        "phase": "opening",
+        "scrim": "0.927949",
+        "shadow": "rgba(0, 0, 0, 0.184) 0px 1px 2px 0px, rgba(0, 0, 0, 0.125) 0px 2px 6px 2px",
+        "x": -94.1326141357422
+      }
+    },
+    {
+      "ms": 121,
+      "state": {
+        "open": true,
+        "phase": "opening",
+        "scrim": "0.999363",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    },
+    {
+      "ms": 222,
+      "state": {
+        "open": true,
+        "phase": "opening",
+        "scrim": "1",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    },
+    {
+      "ms": 297,
+      "state": {
+        "open": true,
+        "phase": "opening",
+        "scrim": "1",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    },
+    {
+      "ms": 356,
+      "state": {
+        "open": true,
+        "phase": "open",
+        "scrim": "1",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    },
+    {
+      "ms": 424,
+      "state": {
+        "open": true,
+        "phase": "closing",
+        "scrim": "0.50584",
+        "shadow": "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px, rgba(0, 0, 0, 0.067) 0px 2px 6px 2px",
+        "x": -68.04541015625
+      }
+    },
+    {
+      "ms": 527,
+      "state": {
+        "open": true,
+        "phase": "closing",
+        "scrim": "0.0232079",
+        "shadow": "rgba(0, 0, 0, 0.004) 0px 1px 2px 0px, rgba(0, 0, 0, 0.004) 0px 2px 6px 2px",
+        "x": -276.2098083496094
+      }
+    },
+    {
+      "ms": 628,
+      "state": {
+        "open": true,
+        "phase": "closing",
+        "scrim": "0",
+        "shadow": "rgba(0, 0, 0, 0) 0px 1px 2px 0px, rgba(0, 0, 0, 0) 0px 2px 6px 2px",
+        "x": -320
+      }
+    },
+    {
+      "ms": 684,
+      "state": {
+        "open": true,
+        "phase": "closing",
+        "scrim": "0",
+        "shadow": "rgba(0, 0, 0, 0) 0px 1px 2px 0px, rgba(0, 0, 0, 0) 0px 2px 6px 2px",
+        "x": -320
+      }
+    },
+    {
+      "ms": 829,
+      "state": {
+        "open": false,
+        "phase": "closed",
+        "scrim": "1",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    },
+    {
+      "ms": 909,
+      "state": {
+        "open": false,
+        "phase": "closed",
+        "scrim": "1",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    },
+    {
+      "ms": 973,
+      "state": {
+        "open": false,
+        "phase": "closed",
+        "scrim": "1",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(0, 0, 0, 0.133) 0px 2px 6px 2px",
+        "x": 0
+      }
+    }
+  ]
+}
