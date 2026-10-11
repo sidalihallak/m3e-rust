@@ -16,3 +16,5 @@ pub use components::{CivilDate, DateInputFormat, DateLocale, DateConstraints, Da
 pub use components::{TimeValue, TimePicker, TimePickerMode, TimePickerLayout};
 
 pub use components::{Accordion, AccordionEntry, Collapsible, Table, TableHeader, TableBody, TableFooter, TableRow, TableHead, TableCell, TableCaption, TableSort, Pagination, TablePagination, DataTable, DataColumn, DataRow, DataCell};
+
+pub use components::{Chart, ChartContainer, ChartLegend, ChartTooltipContent, ChartKind, ChartIndicator, ChartSeries, ChartPoint, ChartTooltipItem, Carousel, CarouselEntry, CarouselOrientation, ExpressiveCarousel, ExpressiveCarouselVariant, CarouselSlide};

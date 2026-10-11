@@ -1,0 +1,7091 @@
+{
+  "date": "2026-10-11",
+  "multiEnd": [
+    {
+      "t": 0,
+      "current": "0",
+      "focus": "Atlas, 1 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": false,
+          "width": 193.140625,
+          "x": 0
+        },
+        {
+          "index": "1",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.142822265625
+        },
+        {
+          "index": "2",
+          "inert": false,
+          "width": 193.14056396484375,
+          "x": 402.28570556640625
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 124.5703125,
+          "x": 603.4285888671875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 56,
+          "x": 736
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 0,
+          "x": 800
+        },
+        {
+          "index": "6",
+          "inert": true,
+          "width": 0,
+          "x": 800
+        },
+        {
+          "index": "7",
+          "inert": true,
+          "width": 0,
+          "x": 800
+        }
+      ],
+      "scroll": 0
+    },
+    {
+      "t": 46,
+      "current": "0",
+      "focus": "Atlas, 1 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": false,
+          "width": 177.79690551757812,
+          "x": -7.159088134765625
+        },
+        {
+          "index": "1",
+          "inert": false,
+          "width": 193.140625,
+          "x": 178.642822265625
+        },
+        {
+          "index": "2",
+          "inert": false,
+          "width": 193.140625,
+          "x": 379.78570556640625
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 132.234375,
+          "x": 580.9285888671875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 63.6640625,
+          "x": 721.17041015625
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 6.2578125,
+          "x": 792.8408203125
+        },
+        {
+          "index": "6",
+          "inert": true,
+          "width": 0,
+          "x": 807.1051025390625
+        },
+        {
+          "index": "7",
+          "inert": true,
+          "width": 0,
+          "x": 807.1051025390625
+        }
+      ],
+      "scroll": 22.5
+    },
+    {
+      "t": 112,
+      "current": "1",
+      "focus": "Atlas, 1 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": false,
+          "width": 114.046875,
+          "x": -36.909088134765625
+        },
+        {
+          "index": "1",
+          "inert": false,
+          "width": 193.14056396484375,
+          "x": 85.14288330078125
+        },
+        {
+          "index": "2",
+          "inert": false,
+          "width": 193.140625,
+          "x": 286.28570556640625
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 164.109375,
+          "x": 487.4285888671875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 95.5390625,
+          "x": 659.54541015625
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 32.2890625,
+          "x": 763.0908203125
+        },
+        {
+          "index": "6",
+          "inert": true,
+          "width": 0,
+          "x": 803.3863525390625
+        },
+        {
+          "index": "7",
+          "inert": true,
+          "width": 0,
+          "x": 803.3863525390625
+        }
+      ],
+      "scroll": 116
+    },
+    {
+      "t": 163,
+      "current": "1",
+      "focus": null,
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 31.3984375,
+          "x": -67.51422119140625
+        },
+        {
+          "index": "1",
+          "inert": false,
+          "width": 132.8984375,
+          "x": -28.1136474609375
+        },
+        {
+          "index": "2",
+          "inert": false,
+          "width": 193.140625,
+          "x": 112.78570556640624
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 193.140625,
+          "x": 313.9285888671875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 154.6875,
+          "x": 515.0714111328125
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 86.1171875,
+          "x": 677.7646484375
+        },
+        {
+          "index": "6",
+          "inert": true,
+          "width": 24.59375,
+          "x": 771.8863525390625
+        },
+        {
+          "index": "7",
+          "inert": true,
+          "width": 0,
+          "x": 804.48583984375
+        }
+      ],
+      "scroll": 289.5
+    },
+    {
+      "t": 211,
+      "current": "3",
+      "focus": null,
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -69.8551025390625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 15.0078125,
+          "x": -69.8551025390625
+        },
+        {
+          "index": "2",
+          "inert": false,
+          "width": 92.765625,
+          "x": -46.840911865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 193.14065551757812,
+          "x": 53.928558349609375
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.140625,
+          "x": 255.0714111328125
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 174.75787353515625,
+          "x": 456.21429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 106.1796875,
+          "x": 638.972412109375
+        },
+        {
+          "index": "7",
+          "inert": true,
+          "width": 40.984375,
+          "x": 753.1591796875
+        }
+      ],
+      "scroll": 549.5
+    },
+    {
+      "t": 262,
+      "current": "3",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -67.84091186523438
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -67.84091186523438
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 29.109375,
+          "x": -67.84091186523438
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 127.29684448242188,
+          "x": -30.727264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.140625,
+          "x": 104.5714111328125
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 305.71429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 157.4921875,
+          "x": 506.857177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 88.921875,
+          "x": 672.3505859375
+        }
+      ],
+      "scroll": 700
+    },
+    {
+      "t": 306,
+      "current": "4",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -71.0625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -71.0625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 6.5625,
+          "x": -71.0625
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 72.0703125,
+          "x": -56.5
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.14059448242188,
+          "x": 23.571441650390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 224.71429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 185.1015625,
+          "x": 425.857177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 116.53125,
+          "x": 618.96435546875
+        }
+      ],
+      "scroll": 781
+    },
+    {
+      "t": 350,
+      "current": "4",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -57.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -57.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -57.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56,
+          "x": -56.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 184.640625,
+          "x": 7.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 200.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 401.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 133.0625,
+          "x": 602.862060546875
+        }
+      ],
+      "scroll": 829.5
+    },
+    {
+      "t": 394,
+      "current": "4",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -39.9375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -39.9375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -39.9375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -36.5
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 163.671875,
+          "x": 27.5
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 199.1785888671875
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 400.3214111328125
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 154.03125,
+          "x": 601.46435546875
+        }
+      ],
+      "scroll": 891
+    },
+    {
+      "t": 437,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -32.6988525390625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -32.6988525390625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -32.6988525390625
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -28.227264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 154.81246948242188,
+          "x": 35.772735595703125
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 198.587646484375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 399.73052978515625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 162.8984375,
+          "x": 600.873291015625
+        }
+      ],
+      "scroll": 917
+    },
+    {
+      "t": 477,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -23.928985595703125
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -23.928985595703125
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -23.928985595703125
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56.000030517578125,
+          "x": -18.204559326171875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 144.0703125,
+          "x": 45.79547119140625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 197.87176513671875
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 399.0146484375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 173.6328125,
+          "x": 600.157470703125
+        }
+      ],
+      "scroll": 948.5
+    },
+    {
+      "t": 521,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -18.639190673828125
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -18.639190673828125
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -18.639190673828125
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -12.159088134765623
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 137.59378051757812,
+          "x": 51.840911865234375
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 197.43994140625
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 398.582763671875
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 180.109375,
+          "x": 599.7255859375
+        }
+      ],
+      "scroll": 967.5
+    },
+    {
+      "t": 564,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -14.602264404296877
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -14.602264404296877
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -14.602264404296877
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 55.999969482421875,
+          "x": -7.545440673828125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 132.6484375,
+          "x": 56.45452880859375
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 197.1103515625
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 398.2532348632813
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 185.0546875,
+          "x": 599.3961181640625
+        }
+      ],
+      "scroll": 982
+    },
+    {
+      "t": 602,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -12.7926025390625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -12.7926025390625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -12.7926025390625
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -5.477264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 130.43746948242188,
+          "x": 58.522735595703125
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.962646484375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 398.10552978515625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 187.2734375,
+          "x": 599.248291015625
+        }
+      ],
+      "scroll": 988.5
+    },
+    {
+      "t": 639,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -10.147735595703123
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -10.147735595703123
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -10.147735595703123
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56.000030517578125,
+          "x": -2.454559326171875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 127.1953125,
+          "x": 61.54547119140625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.74676513671875
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.8896484375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 190.5078125,
+          "x": 599.032470703125
+        }
+      ],
+      "scroll": 998
+    },
+    {
+      "t": 679,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.616485595703125
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.616485595703125
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.616485595703125
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56.000030517578125,
+          "x": -0.704559326171875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 125.3203125,
+          "x": 63.29547119140625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.62176513671875
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7646484375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 192.3828125,
+          "x": 598.907470703125
+        }
+      ],
+      "scroll": 1003.5
+    },
+    {
+      "t": 734,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 774,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 808,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 846,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 882,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 917,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    }
+  ],
+  "multiReverse": [
+    {
+      "t": 0,
+      "current": "5",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.1988525390625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.1988525390625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.1988525390625
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.227264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.81246948242188,
+          "x": 63.772735595703125
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.587646484375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.73052978515625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 192.8984375,
+          "x": 598.873291015625
+        }
+      ],
+      "scroll": 1005
+    },
+    {
+      "t": 42,
+      "current": "5",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -12.7926025390625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -12.7926025390625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -12.7926025390625
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -5.477264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 130.43746948242188,
+          "x": 58.522735595703125
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.962646484375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 398.10552978515625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 187.2734375,
+          "x": 599.248291015625
+        }
+      ],
+      "scroll": 988.5
+    },
+    {
+      "t": 87,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -39.659088134765625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -39.659088134765625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -39.659088134765625
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -36.18182373046875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 163.3359375,
+          "x": 27.81817626953125
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 199.15582275390625
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 400.2987060546875
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 154.375,
+          "x": 601.4415283203125
+        }
+      ],
+      "scroll": 892
+    },
+    {
+      "t": 127,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -50.51702880859375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -50.51702880859375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -50.51702880859375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -48.590911865234375
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 176.63278198242188,
+          "x": 15.409088134765623
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 200.042236328125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 401.18505859375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 141.078125,
+          "x": 602.327880859375
+        }
+      ],
+      "scroll": 853
+    },
+    {
+      "t": 169,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -58.034088134765625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -58.034088134765625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -58.034088134765625
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56,
+          "x": -57.18182373046875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 185.8359375,
+          "x": 6.81817626953125
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 200.65582275390625
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 401.7987060546875
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 131.875,
+          "x": 602.9415283203125
+        }
+      ],
+      "scroll": 826
+    },
+    {
+      "t": 210,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -60.81817626953125
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -60.81817626953125
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -60.81817626953125
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56,
+          "x": -60.3636474609375
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 189.2421875,
+          "x": 3.6363525390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 200.88311767578125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 402.0260009765625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 128.4609375,
+          "x": 603.1688232421875
+        }
+      ],
+      "scroll": 816
+    },
+    {
+      "t": 252,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -62.90625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -62.90625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -62.90625
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56,
+          "x": -62.75
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 191.796875,
+          "x": 1.25
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.0535888671875
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 402.1964111328125
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 125.90625,
+          "x": 603.33935546875
+        }
+      ],
+      "scroll": 808.5
+    },
+    {
+      "t": 294,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.88067626953125
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.88067626953125
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -63.88067626953125
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56,
+          "x": -63.8636474609375
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 192.9921875,
+          "x": 0.1363525390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.13311767578125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 402.2760009765625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 124.7109375,
+          "x": 603.4188232421875
+        }
+      ],
+      "scroll": 805
+    },
+    {
+      "t": 337,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0.015625,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56.046875,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.14059448242188,
+          "x": 0.071441650390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.21429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.1171875,
+          "x": 402.357177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 124.546875,
+          "x": 603.4755859375
+        }
+      ],
+      "scroll": 804.5
+    },
+    {
+      "t": 375,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0.015625,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56.046875,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.14059448242188,
+          "x": 0.071441650390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.21429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.1171875,
+          "x": 402.357177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 124.546875,
+          "x": 603.4755859375
+        }
+      ],
+      "scroll": 804.5
+    },
+    {
+      "t": 408,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0.015625,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56.046875,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.14059448242188,
+          "x": 0.071441650390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.21429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.1171875,
+          "x": 402.357177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 124.546875,
+          "x": 603.4755859375
+        }
+      ],
+      "scroll": 804.5
+    },
+    {
+      "t": 442,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0.015625,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56.046875,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.14059448242188,
+          "x": 0.071441650390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.21429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.1171875,
+          "x": 402.357177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 124.546875,
+          "x": 603.4755859375
+        }
+      ],
+      "scroll": 804.5
+    },
+    {
+      "t": 474,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0.015625,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56.046875,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.14059448242188,
+          "x": 0.071441650390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.21429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.1171875,
+          "x": 402.357177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 124.546875,
+          "x": 603.4755859375
+        }
+      ],
+      "scroll": 804.5
+    },
+    {
+      "t": 508,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0.015625,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56.046875,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.14059448242188,
+          "x": 0.071441650390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.21429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.1171875,
+          "x": 402.357177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 124.546875,
+          "x": 603.4755859375
+        }
+      ],
+      "scroll": 804.5
+    },
+    {
+      "t": 540,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0.015625,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56.046875,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.14059448242188,
+          "x": 0.071441650390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.21429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.1171875,
+          "x": 402.357177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 124.546875,
+          "x": 603.4755859375
+        }
+      ],
+      "scroll": 804.5
+    },
+    {
+      "t": 574,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0.015625,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56.046875,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.14059448242188,
+          "x": 0.071441650390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.21429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.1171875,
+          "x": 402.357177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 124.546875,
+          "x": 603.4755859375
+        }
+      ],
+      "scroll": 804.5
+    },
+    {
+      "t": 606,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0.015625,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56.046875,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.14059448242188,
+          "x": 0.071441650390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.21429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.1171875,
+          "x": 402.357177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 124.546875,
+          "x": 603.4755859375
+        }
+      ],
+      "scroll": 804.5
+    },
+    {
+      "t": 640,
+      "current": "4",
+      "focus": "Echo, 5 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0.015625,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56.046875,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.14059448242188,
+          "x": 0.071441650390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.21429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.1171875,
+          "x": 402.357177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 124.546875,
+          "x": 603.4755859375
+        }
+      ],
+      "scroll": 804.5
+    }
+  ],
+  "multiLastStep": [
+    {
+      "t": 0,
+      "current": "4",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0.015625,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56.046875,
+          "x": -63.977264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 193.14059448242188,
+          "x": 0.071441650390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 201.21429443359375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.1171875,
+          "x": 402.357177734375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 124.546875,
+          "x": 603.4755859375
+        }
+      ],
+      "scroll": 804.5
+    },
+    {
+      "t": 36,
+      "current": "4",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -61.23577880859375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -61.23577880859375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -61.23577880859375
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 56,
+          "x": -60.840911865234375
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 189.75778198242188,
+          "x": 3.159088134765625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 200.917236328125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 402.06005859375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 127.953125,
+          "x": 603.202880859375
+        }
+      ],
+      "scroll": 814.5
+    },
+    {
+      "t": 75,
+      "current": "4",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -41.747161865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -41.747161865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -41.747161865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -38.56817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 165.890625,
+          "x": 25.43182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 199.3262939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 400.4691162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 151.8125,
+          "x": 601.612060546875
+        }
+      ],
+      "scroll": 884.5
+    },
+    {
+      "t": 116,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -25.7386474609375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -25.7386474609375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -25.7386474609375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -20.272735595703125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 146.28909301757812,
+          "x": 43.727264404296875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 198.01947021484375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 399.162353515625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 171.421875,
+          "x": 600.30517578125
+        }
+      ],
+      "scroll": 942
+    },
+    {
+      "t": 158,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -15.8551025390625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -15.8551025390625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -15.8551025390625
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -8.977264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 134.18746948242188,
+          "x": 55.022735595703125
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 197.212646484375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 398.35552978515625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 183.5234375,
+          "x": 599.498291015625
+        }
+      ],
+      "scroll": 977.5
+    },
+    {
+      "t": 200,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -11.81817626953125
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -11.81817626953125
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -11.81817626953125
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -4.3636474609375
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 129.2421875,
+          "x": 59.6363525390625
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.88311767578125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 398.0260009765625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 188.4609375,
+          "x": 599.1688232421875
+        }
+      ],
+      "scroll": 992
+    },
+    {
+      "t": 241,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.8948974609375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.8948974609375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.8948974609375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -1.022735595703125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 125.66409301757812,
+          "x": 62.977264404296875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.64447021484375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.787353515625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 192.046875,
+          "x": 598.93017578125
+        }
+      ],
+      "scroll": 1002.5
+    },
+    {
+      "t": 306,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.1988525390625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.1988525390625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.1988525390625
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.227264404296875
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.81246948242188,
+          "x": 63.772735595703125
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.587646484375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.73052978515625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 192.8984375,
+          "x": 598.873291015625
+        }
+      ],
+      "scroll": 1005
+    },
+    {
+      "t": 348,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 385,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 421,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 455,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 491,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 526,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 560,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 593,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 626,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 658,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    },
+    {
+      "t": 699,
+      "current": "5",
+      "focus": "Field notes, 6 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.059661865234375
+        },
+        {
+          "index": "3",
+          "inert": false,
+          "width": 56,
+          "x": -0.06817626953125
+        },
+        {
+          "index": "4",
+          "inert": false,
+          "width": 124.640625,
+          "x": 63.93182373046875
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 193.140625,
+          "x": 196.5762939453125
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 193.140625,
+          "x": 397.7191162109375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 193.0625,
+          "x": 598.862060546875
+        }
+      ],
+      "scroll": 1005.5
+    }
+  ],
+  "heroLastStep": [
+    {
+      "t": 0,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -64
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -64
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -64
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -64
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -64
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 728,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 56,
+          "x": 736
+        }
+      ],
+      "scroll": 4416
+    },
+    {
+      "t": 36,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -64.13043212890625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -64.13043212890625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -64.13043212890625
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -64.13043212890625
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -64.13043212890625
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 717.0390625,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 66.953125,
+          "x": 725.04345703125
+        }
+      ],
+      "scroll": 4428
+    },
+    {
+      "t": 78,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -64.5924072265625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -64.5924072265625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -64.5924072265625
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -64.5924072265625
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -64.5924072265625
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 678.234375,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 105.7578125,
+          "x": 686.2391357421875
+        }
+      ],
+      "scroll": 4470.5
+    },
+    {
+      "t": 121,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -65.51629638671875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -65.51629638671875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -65.51629638671875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -65.51629638671875
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -65.51629638671875
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 600.625,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 183.3671875,
+          "x": 608.63037109375
+        }
+      ],
+      "scroll": 4555.5
+    },
+    {
+      "t": 160,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -67.94564819335938
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -67.94564819335938
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -67.94564819335938
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -67.94564819335938
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -67.94564819335938
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 396.5625,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 387.4296875,
+          "x": 404.565185546875
+        }
+      ],
+      "scroll": 4779
+    },
+    {
+      "t": 204,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -69.07608032226562
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -69.07608032226562
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -69.07608032226562
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -69.07608032226562
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -69.07608032226562
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 301.6015625,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 482.39056396484375,
+          "x": 309.60870361328125
+        }
+      ],
+      "scroll": 4883
+    },
+    {
+      "t": 246,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -69.98370361328125
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -69.98370361328125
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -69.98370361328125
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -69.98370361328125
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -69.98370361328125
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 225.3671875,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 558.6250610351562,
+          "x": 233.36956787109375
+        }
+      ],
+      "scroll": 4966.5
+    },
+    {
+      "t": 286,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -70.5924072265625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -70.5924072265625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -70.5924072265625
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -70.5924072265625
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -70.5924072265625
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 174.234375,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 609.7578125,
+          "x": 182.2391357421875
+        }
+      ],
+      "scroll": 5022.5
+    },
+    {
+      "t": 327,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -71.01629638671875
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -71.01629638671875
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -71.01629638671875
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -71.01629638671875
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -71.01629638671875
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 138.625,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 645.3671264648438,
+          "x": 146.63043212890625
+        }
+      ],
+      "scroll": 5061.5
+    },
+    {
+      "t": 370,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -71.38043212890625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -71.38043212890625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -71.38043212890625
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -71.38043212890625
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -71.38043212890625
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 108.0390625,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 675.953125,
+          "x": 116.04345703125
+        }
+      ],
+      "scroll": 5095
+    },
+    {
+      "t": 412,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -71.55978393554688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -71.55978393554688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -71.55978393554688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -71.55978393554688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -71.55978393554688
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 92.9765625,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 691.015625,
+          "x": 100.978271484375
+        }
+      ],
+      "scroll": 5111.5
+    },
+    {
+      "t": 452,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -71.728271484375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -71.728271484375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -71.728271484375
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -71.728271484375
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -71.728271484375
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 78.8203125,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 705.1719360351562,
+          "x": 86.82611083984375
+        }
+      ],
+      "scroll": 5127
+    },
+    {
+      "t": 510,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -71.90216064453125
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -71.90216064453125
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -71.90216064453125
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -71.90216064453125
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -71.90216064453125
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 64.2109375,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 719.78125,
+          "x": 72.2174072265625
+        }
+      ],
+      "scroll": 5143
+    },
+    {
+      "t": 554,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -71.96197509765625
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -71.96197509765625
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -71.96197509765625
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -71.96197509765625
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -71.96197509765625
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 59.1953125,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 724.796875,
+          "x": 67.19564819335938
+        }
+      ],
+      "scroll": 5148.5
+    },
+    {
+      "t": 599,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -71.99456787109375
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -71.99456787109375
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -71.99456787109375
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -71.99456787109375
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -71.99456787109375
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56.453125,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 727.5390625,
+          "x": 64.45651245117188
+        }
+      ],
+      "scroll": 5151.5
+    },
+    {
+      "t": 642,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 728,
+          "x": 64
+        }
+      ],
+      "scroll": 5152
+    },
+    {
+      "t": 677,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 728,
+          "x": 64
+        }
+      ],
+      "scroll": 5152
+    },
+    {
+      "t": 713,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 728,
+          "x": 64
+        }
+      ],
+      "scroll": 5152
+    },
+    {
+      "t": 747,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 728,
+          "x": 64
+        }
+      ],
+      "scroll": 5152
+    },
+    {
+      "t": 780,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 728,
+          "x": 64
+        }
+      ],
+      "scroll": 5152
+    },
+    {
+      "t": 815,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 728,
+          "x": 64
+        }
+      ],
+      "scroll": 5152
+    },
+    {
+      "t": 847,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 728,
+          "x": 64
+        }
+      ],
+      "scroll": 5152
+    },
+    {
+      "t": 883,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 728,
+          "x": 64
+        }
+      ],
+      "scroll": 5152
+    }
+  ],
+  "desktopEnd": {
+    "current": "5",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -8.059661865234375
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -8.059661865234375
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -8.059661865234375
+      },
+      {
+        "inert": false,
+        "label": "Drift, 4 of 8",
+        "width": 56,
+        "x": -0.06817626953125
+      },
+      {
+        "inert": false,
+        "label": "Echo, 5 of 8",
+        "width": 124.640625,
+        "x": 63.93182373046875
+      },
+      {
+        "inert": false,
+        "label": "Field notes, 6 of 8",
+        "width": 193.140625,
+        "x": 196.5762939453125
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 193.140625,
+        "x": 397.7191162109375
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 193.0625,
+        "x": 598.862060546875
+      }
+    ],
+    "lastWidth": 193.0625,
+    "leading": 598.862060546875,
+    "maxScroll": 1006,
+    "scroll": 1005.5,
+    "trackWidth": 791.6875,
+    "trailing": -0.237060546875
+  },
+  "heroEnd": {
+    "current": "7",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Drift, 4 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Echo, 5 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Field notes, 6 of 8",
+        "width": 56,
+        "x": -64
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 56,
+        "x": 0
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 728,
+        "x": 64
+      }
+    ],
+    "lastWidth": 728,
+    "leading": 64,
+    "maxScroll": 5152,
+    "scroll": 5152,
+    "trackWidth": 791.6875,
+    "trailing": -0.3125
+  },
+  "phoneBefore": {
+    "current": "5",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -64.01142883300781
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -64.01142883300781
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -64.01142883300781
+      },
+      {
+        "inert": true,
+        "label": "Drift, 4 of 8",
+        "width": 0,
+        "x": -64.01142883300781
+      },
+      {
+        "inert": true,
+        "label": "Echo, 5 of 8",
+        "width": 55.9140625,
+        "x": -64.01142883300781
+      },
+      {
+        "inert": false,
+        "label": "Field notes, 6 of 8",
+        "width": 108.5859375,
+        "x": -0.09142684936523438
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 82.3671875,
+        "x": 116.5
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 56.03125,
+        "x": 206.8709716796875
+      }
+    ],
+    "lastWidth": 56.03125,
+    "leading": 206.8709716796875,
+    "maxScroll": 817,
+    "scroll": 583.5,
+    "trackWidth": 263,
+    "trailing": 0.0977783203125
+  },
+  "phoneLastStep": [
+    {
+      "t": 0,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -63.7599983215332
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -63.7599983215332
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -63.7599983215332
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -63.7599983215332
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -63.7599983215332
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -63.72571563720703
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 108.54688262939452,
+          "x": 0.27428436279296875
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 82.4453125,
+          "x": 116.82809448242188
+        }
+      ],
+      "scroll": 700.5
+    },
+    {
+      "t": 38,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -52.720001220703125
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -52.720001220703125
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -52.720001220703125
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -52.720001220703125
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -52.720001220703125
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 56,
+          "x": -51.10857009887695
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 103.35936737060548,
+          "x": 12.89142608642578
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 87.6328125,
+          "x": 124.25381469726562
+        }
+      ],
+      "scroll": 723.5
+    },
+    {
+      "t": 74,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -27.760000228881836
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -27.760000228881836
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -27.760000228881836
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -27.760000228881836
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -27.760000228881836
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 56,
+          "x": -22.582855224609375
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 91.625,
+          "x": 41.417144775390625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 99.36717224121094,
+          "x": 141.04237365722656
+        }
+      ],
+      "scroll": 775.5
+    },
+    {
+      "t": 113,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -16.23999786376953
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -16.23999786376953
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -16.23999786376953
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -16.23999786376953
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -16.23999786376953
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 56,
+          "x": -9.417144775390623
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 86.203125,
+          "x": 54.582855224609375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 104.7890625,
+          "x": 148.79095458984375
+        }
+      ],
+      "scroll": 799.5
+    },
+    {
+      "t": 154,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -10.959999084472656
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -10.959999084472656
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -10.959999084472656
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -10.959999084472656
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -10.959999084472656
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 56,
+          "x": -3.3828582763671875
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 83.71875,
+          "x": 60.61714172363281
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 107.2734375,
+          "x": 152.34237670898438
+        }
+      ],
+      "scroll": 810.5
+    },
+    {
+      "t": 190,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -9.040000915527344
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -9.040000915527344
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -9.040000915527344
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -9.040000915527344
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -9.040000915527344
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 56.000003814697266,
+          "x": -1.1885719299316406
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.8203125,
+          "x": 62.811431884765625
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.17185974121094,
+          "x": 153.63380432128906
+        }
+      ],
+      "scroll": 814.5
+    },
+    {
+      "t": 229,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.319999694824219
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.319999694824219
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.319999694824219
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.319999694824219
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.319999694824219
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 56,
+          "x": -0.3657150268554687
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.47655487060547,
+          "x": 63.63428497314453
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.51564025878906,
+          "x": 154.1180877685547
+        }
+      ],
+      "scroll": 816
+    },
+    {
+      "t": 265,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    },
+    {
+      "t": 298,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    },
+    {
+      "t": 331,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    },
+    {
+      "t": 364,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    },
+    {
+      "t": 396,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    },
+    {
+      "t": 429,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    },
+    {
+      "t": 462,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    },
+    {
+      "t": 495,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    },
+    {
+      "t": 527,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    },
+    {
+      "t": 560,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    },
+    {
+      "t": 600,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    },
+    {
+      "t": 635,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    },
+    {
+      "t": 669,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -8.080001831054688
+        },
+        {
+          "index": "5",
+          "inert": false,
+          "width": 55.999996185302734,
+          "x": -0.09142684936523438
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 82.3671875,
+          "x": 63.9085693359375
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 108.62501525878906,
+          "x": 154.27952575683594
+        }
+      ],
+      "scroll": 816.5
+    }
+  ],
+  "phoneEnd": {
+    "current": "7",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -8.080001831054688
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -8.080001831054688
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -8.080001831054688
+      },
+      {
+        "inert": true,
+        "label": "Drift, 4 of 8",
+        "width": 0,
+        "x": -8.080001831054688
+      },
+      {
+        "inert": true,
+        "label": "Echo, 5 of 8",
+        "width": 0,
+        "x": -8.080001831054688
+      },
+      {
+        "inert": false,
+        "label": "Field notes, 6 of 8",
+        "width": 55.999996185302734,
+        "x": -0.09142684936523438
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 82.3671875,
+        "x": 63.9085693359375
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 108.62501525878906,
+        "x": 154.27952575683594
+      }
+    ],
+    "lastWidth": 108.62501525878906,
+    "leading": 154.27952575683594,
+    "maxScroll": 817,
+    "scroll": 816.5,
+    "trackWidth": 263,
+    "trailing": 0.095458984375
+  },
+  "phoneHeroLastStep": [
+    {
+      "t": 0,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -64.01932525634766
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -64.01932525634766
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -64.01932525634766
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -64.01932525634766
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -64.01932525634766
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 198.6484375,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 56.34375,
+          "x": 206.65460205078125
+        }
+      ],
+      "scroll": 1242.5
+    },
+    {
+      "t": 39,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -64.63768005371094
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -64.63768005371094
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -64.63768005371094
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -64.63768005371094
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -64.63768005371094
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 187.59375,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 67.39842224121094,
+          "x": 195.60145568847656
+        }
+      ],
+      "scroll": 1258.5
+    },
+    {
+      "t": 77,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -67.11111450195312
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -67.11111450195312
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -67.11111450195312
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -67.11111450195312
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -67.11111450195312
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 143.3828125,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 111.609375,
+          "x": 151.38888549804688
+        }
+      ],
+      "scroll": 1322.5
+    },
+    {
+      "t": 115,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -70.24154663085938
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -70.24154663085938
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -70.24154663085938
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -70.24154663085938
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -70.24154663085938
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 87.4296875,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 167.5625,
+          "x": 95.432373046875
+        }
+      ],
+      "scroll": 1403.5
+    },
+    {
+      "t": 175,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -71.11111450195312
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -71.11111450195312
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -71.11111450195312
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -71.11111450195312
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -71.11111450195312
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 71.8828125,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 183.109375,
+          "x": 79.88888549804688
+        }
+      ],
+      "scroll": 1426
+    },
+    {
+      "t": 218,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -71.59420013427734
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -71.59420013427734
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -71.59420013427734
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -71.59420013427734
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -71.59420013427734
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 63.25,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 191.7421875,
+          "x": 71.25362396240234
+        }
+      ],
+      "scroll": 1438.5
+    },
+    {
+      "t": 258,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -71.86473083496094
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -71.86473083496094
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -71.86473083496094
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -71.86473083496094
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -71.86473083496094
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 58.4140625,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 196.578125,
+          "x": 66.41787719726562
+        }
+      ],
+      "scroll": 1445.5
+    },
+    {
+      "t": 299,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -71.98067474365234
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -71.98067474365234
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -71.98067474365234
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -71.98067474365234
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -71.98067474365234
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56.34375,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 198.64842224121097,
+          "x": 64.34541320800781
+        }
+      ],
+      "scroll": 1448.5
+    },
+    {
+      "t": 340,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 199,
+          "x": 64
+        }
+      ],
+      "scroll": 1449
+    },
+    {
+      "t": 375,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 199,
+          "x": 64
+        }
+      ],
+      "scroll": 1449
+    },
+    {
+      "t": 408,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 199,
+          "x": 64
+        }
+      ],
+      "scroll": 1449
+    },
+    {
+      "t": 442,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 199,
+          "x": 64
+        }
+      ],
+      "scroll": 1449
+    },
+    {
+      "t": 475,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 199,
+          "x": 64
+        }
+      ],
+      "scroll": 1449
+    },
+    {
+      "t": 508,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 199,
+          "x": 64
+        }
+      ],
+      "scroll": 1449
+    },
+    {
+      "t": 542,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 199,
+          "x": 64
+        }
+      ],
+      "scroll": 1449
+    },
+    {
+      "t": 576,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 199,
+          "x": 64
+        }
+      ],
+      "scroll": 1449
+    },
+    {
+      "t": 608,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 199,
+          "x": 64
+        }
+      ],
+      "scroll": 1449
+    },
+    {
+      "t": 641,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 199,
+          "x": 64
+        }
+      ],
+      "scroll": 1449
+    },
+    {
+      "t": 674,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "index": "0",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "1",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "2",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "3",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "4",
+          "inert": true,
+          "width": 0,
+          "x": -72
+        },
+        {
+          "index": "5",
+          "inert": true,
+          "width": 56,
+          "x": -64
+        },
+        {
+          "index": "6",
+          "inert": false,
+          "width": 56,
+          "x": 0
+        },
+        {
+          "index": "7",
+          "inert": false,
+          "width": 199,
+          "x": 64
+        }
+      ],
+      "scroll": 1449
+    }
+  ],
+  "phoneHeroEnd": {
+    "current": "7",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Drift, 4 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Echo, 5 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Field notes, 6 of 8",
+        "width": 56,
+        "x": -64
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 56,
+        "x": 0
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 199,
+        "x": 64
+      }
+    ],
+    "lastWidth": 199,
+    "leading": 64,
+    "maxScroll": 1449,
+    "scroll": 1449,
+    "trackWidth": 263,
+    "trailing": 0
+  }
+}

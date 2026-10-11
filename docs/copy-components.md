@@ -295,3 +295,27 @@ independent export; all 66 current usage snippets compile. See the
 [accordion](accordion-verification.md), [collapsible](collapsible-verification.md),
 [table](table-verification.md), [pagination](pagination-verification.md) and
 [data-table](data-table-verification.md) verification reports.
+
+
+## Charts and carousels
+
+| Component | Required copy files |
+| --- | --- |
+| Charts | `chart.rs`, `chart.js`, `chart.css`, motion ID helper; SVG rendering has no external chart dependency |
+| Carousels | `carousel.rs`, `carousel.js`, `carousel.css`, shared Icon/icons, Ripple and motion CSS/runtime |
+
+ChartSeries keys and CarouselEntry keys must be unique/stable. ChartPoint values
+follow series order. Missing/nonfinite values stay missing; formatted chart
+numbers retain original raw values in the data table. Donut uses one datum with
+non-negative values. Overlaid area supports at most two visible series.
+
+CarouselEntry content must be presentational: do not nest buttons/links in the
+owned item button. Handle `onactivate` in app state. Expressive `onshowall`
+should navigate/open a vertically scrolling view of every item. FullScreen
+omits that control and uses a vertical snap region whose height the app supplies.
+
+The refreshed independent library and all **75** snippets compile. The nine new
+visual-family copy controls match the displayed code exactly. Desktop and
+responsive evidence is recorded; Android remains paused. See
+[charts](chart-verification.md), [carousel](carousel-verification.md) and
+[expressive carousel](expressive-carousel-verification.md) for current scope.

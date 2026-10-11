@@ -10,6 +10,7 @@ mod surfaces_gallery;
 mod feedback_gallery;
 mod scheduling_gallery;
 mod data_gallery;
+mod visual_gallery;
 mod navigation_gallery; // Material navigation and showcase catalogue.
 use m3e_rust_ui::{AppBar,NavigationRail,ModalNavigationRail};
 use composite_gallery::CompositeGallery;
@@ -451,6 +452,8 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/table.css") }
         document::Stylesheet { href: asset!("/assets/pagination.css") }
         document::Stylesheet { href: asset!("/assets/data-table.css") }
+        document::Stylesheet { href: asset!("/assets/chart.css") }
+        document::Stylesheet { href: asset!("/assets/carousel.css") }
         document::Stylesheet { href: asset!("/assets/tailwind.css") }
         document::Stylesheet { href: asset!("/assets/button.css") }
         document::Stylesheet { href: asset!("/assets/ripple.css") }
@@ -1490,6 +1493,7 @@ fn App() -> Element {
             feedback_gallery::FeedbackGallery {active:route()}
             scheduling_gallery::SchedulingGallery {active:route()}
             data_gallery::DataGallery {active:route()}
+            visual_gallery::VisualGallery {active:route()}
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
             }
         }

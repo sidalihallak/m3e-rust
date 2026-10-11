@@ -110,3 +110,8 @@ pub use collapsible::Collapsible;
 pub use table::{Table, TableHeader, TableBody, TableFooter, TableRow, TableHead, TableCell, TableCaption, TableSort};
 pub use pagination::{Pagination, TablePagination};
 pub use data_table::{DataTable, DataColumn, DataRow, DataCell};
+
+pub mod chart;
+pub mod carousel;
+pub use chart::{Chart, ChartContainer, ChartLegend, ChartTooltipContent, ChartKind, ChartIndicator, ChartSeries, ChartPoint, ChartTooltipItem};
+pub use carousel::{Carousel, CarouselEntry, CarouselOrientation, ExpressiveCarousel, ExpressiveCarouselVariant, CarouselSlide};

@@ -212,3 +212,14 @@ pages. See the [accordion](docs/accordion-verification.md),
 [collapsible](docs/collapsible-verification.md), [table](docs/table-verification.md),
 [pagination](docs/pagination-verification.md), and [data-table](docs/data-table-verification.md)
 reports for reference contracts, measured interactions and remaining gaps.
+
+
+### Charts and carousels
+
+Bar/line/area/donut SVG charts and standard/expressive carousels are available
+with nine copyable Rust examples. All **75** independent examples compile;
+new copy controls match clipboard text exactly. Desktop keyboard, mouse dragging,
+390px layouts and actual expressive reduced-motion checks have saved evidence.
+See [chart](docs/chart-verification.md), [carousel](docs/carousel-verification.md)
+and [expressive carousel](docs/expressive-carousel-verification.md) reports for
+scope and remaining Android/RTL/engine-parity gaps.

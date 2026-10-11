@@ -131,3 +131,21 @@ Disclosure/data compositions now have [accordion](accordion-verification.md),
 evidence. Advanced table server state, virtualization, editing, column sizing,
 multisort and export remain extensions. The showcase still has a 360px body
 minimum; 390px responsive checks passed, while 320px page overflow is recorded.
+
+
+## Visual family — 2026-10-11
+
+Charts and standard/expressive carousels are implemented locally. The refreshed
+independent library plus **75** snippets compile, with exact clipboard evidence
+for all nine new visual examples. Desktop keyboard/pointer/drag, chart dark mode,
+390px chart/expressive layouts and actual expressive Reduce Motion checks have
+[saved samples](visual-family-samples.json). Android, audible screen readers,
+RTL, forced colors, zoom and broader interruption/dynamic-state checks remain.
+Current scope: bar/line/area/donut; horizontal/vertical standard carousel;
+multi-browse, hero, uncontained and vertical full-screen expressive carousel.
+Centered hero, multi-aspect ratio, complete Compose keyline parity, richer chart
+engines and Embla/Recharts API parity remain extensions. See component reports.
+Command palette and breadcrumbs are the next new compositions.
+
+The excessive expressive terminal gap is fixed using Material-style shifted size keylines;
+[desktop and390px end evidence](expressive-carousel-verification.md#terminal-layout-correction--2026-10-11) records trailing error below1px.

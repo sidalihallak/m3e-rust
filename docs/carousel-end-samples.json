@@ -1,0 +1,4088 @@
+{
+  "date": "2026-10-11",
+  "before": {
+    "current": "7",
+    "focus": null,
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -64
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -64
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -64
+      },
+      {
+        "inert": true,
+        "label": "Drift, 4 of 8",
+        "width": 0,
+        "x": -64
+      },
+      {
+        "inert": true,
+        "label": "Echo, 5 of 8",
+        "width": 0,
+        "x": -64
+      },
+      {
+        "inert": true,
+        "label": "Field notes, 6 of 8",
+        "width": 0,
+        "x": -64
+      },
+      {
+        "inert": true,
+        "label": "Garden, 7 of 8",
+        "width": 56,
+        "x": -64
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 193.140625,
+        "x": 0
+      }
+    ],
+    "lastWidth": 193.140625,
+    "leading": 0,
+    "maxScroll": 1408,
+    "scroll": 1408,
+    "trackWidth": 791.6875,
+    "trailing": 598.546875
+  },
+  "multiMotion": [
+    {
+      "t": 0,
+      "current": "0",
+      "focus": "Atlas, 1 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -4.93182, 0)",
+          "width": 182.5703125
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 185.643, 0)",
+          "width": 193.140625
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 386.786, 0)",
+          "width": 193.140625
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 587.929, 0)",
+          "width": 129.8515625
+        }
+      ],
+      "left": 15.5,
+      "top": 0
+    },
+    {
+      "t": 93,
+      "current": "1",
+      "focus": "Atlas, 1 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -45.5, 0)",
+          "width": 95.640625
+        },
+        {
+          "contentWidth": 193.14059448242188,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 58.1429, 0)",
+          "width": 193.14059448242188
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 259.286, 0)",
+          "width": 193.140625
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 460.429, 0)",
+          "width": 173.3203125
+        }
+      ],
+      "left": 143,
+      "top": 0
+    },
+    {
+      "t": 176,
+      "current": "2",
+      "focus": null,
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.1705, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.1705, 0)",
+          "width": 33.8046875
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -25.3636, 0)",
+          "width": 138.7890625
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 121.429, 0)",
+          "width": 193.140625
+        }
+      ],
+      "left": 482,
+      "top": 0
+    },
+    {
+      "t": 229,
+      "current": "4",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2557, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2557, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2557, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2557, 0)",
+          "width": 54.203125
+        }
+      ],
+      "left": 811,
+      "top": 0
+    },
+    {
+      "t": 286,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.1818, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.1818, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.1818, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.1818, 0)",
+          "width": 12.7265625
+        }
+      ],
+      "left": 960,
+      "top": 0
+    },
+    {
+      "t": 337,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -68.2472, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -68.2472, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -68.2472, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -68.2472, 0)",
+          "width": 0
+        }
+      ],
+      "left": 1112.5,
+      "top": 0
+    },
+    {
+      "t": 395,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.8068, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.8068, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.8068, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.8068, 0)",
+          "width": 0
+        }
+      ],
+      "left": 1202,
+      "top": 0
+    },
+    {
+      "t": 461,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -51.2783, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -51.2783, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -51.2783, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -49.2442, 0)",
+          "width": 14.234375
+        }
+      ],
+      "left": 1258,
+      "top": 0
+    },
+    {
+      "t": 509,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -39.6436, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -39.6436, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -39.6436, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -35.8794, 0)",
+          "width": 26.34375
+        }
+      ],
+      "left": 1301.5,
+      "top": 0
+    },
+    {
+      "t": 553,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -30.3182, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -30.3182, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -30.3182, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -25.2415, 0)",
+          "width": 35.53125
+        }
+      ],
+      "left": 1334.5,
+      "top": 0
+    },
+    {
+      "t": 611,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -19.8054, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -19.8054, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -19.8054, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.14059448242188,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -13.3167, 0)",
+          "width": 45.4140625
+        }
+      ],
+      "left": 1370,
+      "top": 0
+    },
+    {
+      "t": 685,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -13.5076, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -13.5076, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -13.5076, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.14059448242188,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -6.20365, 0)",
+          "width": 51.125
+        }
+      ],
+      "left": 1390.5,
+      "top": 0
+    },
+    {
+      "t": 752,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -9.74402, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -9.74402, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -9.74402, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -1.96277, 0)",
+          "width": 54.46875
+        }
+      ],
+      "left": 1402.5,
+      "top": 0
+    },
+    {
+      "t": 819,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.13881, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.13881, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.13881, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -0.158695, 0)",
+          "width": 55.859375
+        }
+      ],
+      "left": 1407.5,
+      "top": 0
+    }
+  ],
+  "multiAfter": {
+    "current": "7",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -8
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -8
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -8
+      },
+      {
+        "inert": false,
+        "label": "Drift, 4 of 8",
+        "width": 56,
+        "x": 0
+      },
+      {
+        "inert": false,
+        "label": "Echo, 5 of 8",
+        "width": 124.5703125,
+        "x": 64
+      },
+      {
+        "inert": false,
+        "label": "Field notes, 6 of 8",
+        "width": 193.140625,
+        "x": 196.5714111328125
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 193.140625,
+        "x": 397.71429443359375
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 193.140625,
+        "x": 598.857177734375
+      }
+    ],
+    "lastWidth": 193.140625,
+    "leading": 598.857177734375,
+    "maxScroll": 1408,
+    "scroll": 1408,
+    "trackWidth": 791.6875,
+    "trailing": -0.310302734375
+  },
+  "heroMotion": [
+    {
+      "t": 0,
+      "current": "0",
+      "focus": "Atlas, 1 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -0.478261, 0)",
+          "width": 722.9765625
+        },
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 730.5, 0)",
+          "width": 61.015625
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, 799.522, 0)",
+          "width": 56
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, 863.522, 0)",
+          "width": 0.4140625
+        }
+      ],
+      "left": 5.5,
+      "top": 0
+    },
+    {
+      "t": 64,
+      "current": "0",
+      "focus": "Atlas, 1 of 8",
+      "items": [
+        {
+          "contentWidth": 728.0000610351562,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -4.13043, 0)",
+          "width": 684.6250610351562
+        },
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 688.5, 0)",
+          "width": 99.3671875
+        },
+        {
+          "contentWidth": 728.0000610351562,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, 795.87, 0)",
+          "width": 56
+        },
+        {
+          "contentWidth": 728.0000610351562,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, 859.87, 0)",
+          "width": 3.609375
+        }
+      ],
+      "left": 47.5,
+      "top": 0
+    },
+    {
+      "t": 124,
+      "current": "0",
+      "focus": "Atlas, 1 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -11.4348, 0)",
+          "width": 607.9296875
+        },
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 604.5, 0)",
+          "width": 176.0625
+        },
+        {
+          "contentWidth": 727.9999389648438,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 788.565, 0)",
+          "width": 56
+        },
+        {
+          "contentWidth": 727.9999389648438,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, 852.565, 0)",
+          "width": 10
+        }
+      ],
+      "left": 131.5,
+      "top": 0
+    },
+    {
+      "t": 166,
+      "current": "0",
+      "focus": "Atlas, 1 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -21.6087, 0)",
+          "width": 501.1015625
+        },
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 487.5, 0)",
+          "width": 282.890625
+        },
+        {
+          "contentWidth": 728.0000610351562,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 778.391, 0)",
+          "width": 56
+        },
+        {
+          "contentWidth": 728.0000610351562,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, 842.391, 0)",
+          "width": 18.90625
+        }
+      ],
+      "left": 248.5,
+      "top": 0
+    },
+    {
+      "t": 208,
+      "current": "1",
+      "focus": "Atlas, 1 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -37.5652, 0)",
+          "width": 333.5625305175781
+        },
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 304, 0)",
+          "width": 450.4296875
+        },
+        {
+          "contentWidth": 728.0000610351562,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 762.435, 0)",
+          "width": 56
+        },
+        {
+          "contentWidth": 728.0000610351562,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, 826.435, 0)",
+          "width": 32.8671875
+        }
+      ],
+      "left": 432,
+      "top": 0
+    },
+    {
+      "t": 256,
+      "current": "1",
+      "focus": null,
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.5163, 0)",
+          "width": 52.3828125
+        },
+        {
+          "contentWidth": 728.0000610351562,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -4.13043, 0)",
+          "width": 684.6250610351562
+        },
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 688.5, 0)",
+          "width": 99.3671875
+        },
+        {
+          "contentWidth": 728.0000610351562,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, 795.87, 0)",
+          "width": 56
+        }
+      ],
+      "left": 783.5,
+      "top": 0
+    },
+    {
+      "t": 298,
+      "current": "2",
+      "focus": null,
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2283, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2283, 0)",
+          "width": 54.3984375
+        },
+        {
+          "contentWidth": 727.9998779296875,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -1.82609, 0)",
+          "width": 708.8201904296875
+        },
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 715, 0)",
+          "width": 75.171875
+        }
+      ],
+      "left": 1493,
+      "top": 0
+    },
+    {
+      "t": 364,
+      "current": "3",
+      "focus": null,
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0543, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0543, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0543, 0)",
+          "width": 55.6171875
+        },
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -0.434783, 0)",
+          "width": 723.4296875
+        }
+      ],
+      "left": 2213,
+      "top": 0
+    },
+    {
+      "t": 407,
+      "current": "4",
+      "focus": null,
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.337, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.337, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.337, 0)",
+          "width": 4.640625
+        },
+        {
+          "contentWidth": 728,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -58.6957, 0)",
+          "width": 111.6953125
+        }
+      ],
+      "left": 2883,
+      "top": 0
+    },
+    {
+      "t": 474,
+      "current": "4",
+      "focus": null,
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.8859, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.8859, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.8859, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.8859, 0)",
+          "width": 28.796875
+        }
+      ],
+      "left": 3301.5,
+      "top": 0
+    },
+    {
+      "t": 518,
+      "current": "5",
+      "focus": null,
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.8261, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.8261, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.8261, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.8261, 0)",
+          "width": 8.2109375
+        }
+      ],
+      "left": 3572,
+      "top": 0
+    },
+    {
+      "t": 558,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.75, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.75, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.75, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.75, 0)",
+          "width": 0
+        }
+      ],
+      "left": 3841,
+      "top": 0
+    },
+    {
+      "t": 608,
+      "current": "5",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.75, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.75, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.75, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.75, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4025,
+      "top": 0
+    },
+    {
+      "t": 648,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -69.4891, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -69.4891, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -69.4891, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -69.4891, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4185,
+      "top": 0
+    },
+    {
+      "t": 691,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.962, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.962, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.962, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.962, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4320.5,
+      "top": 0
+    },
+    {
+      "t": 740,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.4922, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.4922, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.4922, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.4922, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4439,
+      "top": 0
+    },
+    {
+      "t": 780,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -66.4957, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -66.4957, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -66.4957, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -66.4957, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4541.5,
+      "top": 0
+    },
+    {
+      "t": 822,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -68.0143, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -68.0143, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -68.0143, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -68.0143, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4632.5,
+      "top": 0
+    }
+  ],
+  "heroAfter": {
+    "current": "7",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Drift, 4 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Echo, 5 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Field notes, 6 of 8",
+        "width": 56,
+        "x": -64
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 56,
+        "x": 0
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 728,
+        "x": 64
+      }
+    ],
+    "lastWidth": 728,
+    "leading": 64,
+    "maxScroll": 5152,
+    "scroll": 5152,
+    "trackWidth": 791.6875,
+    "trailing": -0.3125
+  },
+  "heroReverse": [
+    {
+      "t": 0,
+      "current": "7",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.989, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.989, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.989, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.989, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5151,
+      "top": 0
+    },
+    {
+      "t": 41,
+      "current": "7",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9955, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9955, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9955, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9955, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5134.5,
+      "top": 0
+    },
+    {
+      "t": 84,
+      "current": "7",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9266, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9266, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9266, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9266, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5081.5,
+      "top": 0
+    },
+    {
+      "t": 128,
+      "current": "7",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.3237, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.3237, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.3237, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.3237, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4938,
+      "top": 0
+    },
+    {
+      "t": 169,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -68.7377, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -68.7377, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -68.7377, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -68.7377, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4682,
+      "top": 0
+    },
+    {
+      "t": 228,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.5, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.5, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.5, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.5, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4600,
+      "top": 0
+    },
+    {
+      "t": 271,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -66.2679, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -66.2679, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -66.2679, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -66.2679, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4529,
+      "top": 0
+    },
+    {
+      "t": 328,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.5961, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.5961, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.5961, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.5961, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4493.5,
+      "top": 0
+    },
+    {
+      "t": 370,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.1006, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.1006, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.1006, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.1006, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4468.5,
+      "top": 0
+    },
+    {
+      "t": 411,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.7841, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.7841, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.7841, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.7841, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4453,
+      "top": 0
+    },
+    {
+      "t": 451,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.4289, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.4289, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.4289, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.4289, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4436,
+      "top": 0
+    },
+    {
+      "t": 500,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2266, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2266, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2266, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2266, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4426.5,
+      "top": 0
+    },
+    {
+      "t": 544,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0975, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0975, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0975, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0975, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4420.5,
+      "top": 0
+    },
+    {
+      "t": 585,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0217, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0217, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0217, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0217, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4417,
+      "top": 0
+    },
+    {
+      "t": 628,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4416,
+      "top": 0
+    },
+    {
+      "t": 663,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4416,
+      "top": 0
+    },
+    {
+      "t": 697,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4416,
+      "top": 0
+    },
+    {
+      "t": 731,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4416,
+      "top": 0
+    },
+    {
+      "t": 766,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4416,
+      "top": 0
+    }
+  ],
+  "heroFinalStep": [
+    {
+      "t": 0,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0109, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0109, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0109, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.0109, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4416.5,
+      "top": 0
+    },
+    {
+      "t": 38,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2587, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2587, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2587, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -64.2587, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4428,
+      "top": 0
+    },
+    {
+      "t": 79,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.1309, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.1309, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.1309, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -65.1309, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4470,
+      "top": 0
+    },
+    {
+      "t": 122,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.3105, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.3105, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.3105, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -67.3105, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4588.5,
+      "top": 0
+    },
+    {
+      "t": 163,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -69.5656, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -69.5656, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -69.5656, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -69.5656, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4746,
+      "top": 0
+    },
+    {
+      "t": 204,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.9432, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.9432, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.9432, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -70.9432, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4884.5,
+      "top": 0
+    },
+    {
+      "t": 245,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.4946, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.4946, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.4946, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.4946, 0)",
+          "width": 0
+        }
+      ],
+      "left": 4967,
+      "top": 0
+    },
+    {
+      "t": 287,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.782, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.782, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.782, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.782, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5030.5,
+      "top": 0
+    },
+    {
+      "t": 329,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.8777, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.8777, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.8777, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.8777, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5061,
+      "top": 0
+    },
+    {
+      "t": 370,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9593, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9593, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9593, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9593, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5099.5,
+      "top": 0
+    },
+    {
+      "t": 429,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9858, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9858, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9858, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9858, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5121,
+      "top": 0
+    },
+    {
+      "t": 471,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9952, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9952, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9952, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9952, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5134,
+      "top": 0
+    },
+    {
+      "t": 513,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.8728, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.8728, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.8728, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.8728, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5141.5,
+      "top": 0
+    },
+    {
+      "t": 555,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9487, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9487, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9487, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.9487, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5147.5,
+      "top": 0
+    },
+    {
+      "t": 595,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.989, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.989, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.989, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -71.989, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5151,
+      "top": 0
+    },
+    {
+      "t": 637,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5152,
+      "top": 0
+    },
+    {
+      "t": 673,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5152,
+      "top": 0
+    },
+    {
+      "t": 712,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5152,
+      "top": 0
+    },
+    {
+      "t": 751,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5152,
+      "top": 0
+    },
+    {
+      "t": 785,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 728,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -72, 0)",
+          "width": 0
+        }
+      ],
+      "left": 5152,
+      "top": 0
+    }
+  ],
+  "heroSettled": {
+    "current": "7",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Drift, 4 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Echo, 5 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Field notes, 6 of 8",
+        "width": 56,
+        "x": -64
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 56,
+        "x": 0
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 728,
+        "x": 64
+      }
+    ],
+    "lastWidth": 728,
+    "leading": 64,
+    "maxScroll": 5152,
+    "scroll": 5152,
+    "trackWidth": 791.6875,
+    "trailing": -0.3125
+  },
+  "multiReverse": [
+    {
+      "t": 0,
+      "current": "7",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -11.162, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -11.162, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -11.162, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -3.55977, 0)",
+          "width": 53.2109375
+        }
+      ],
+      "left": 1398,
+      "top": 0
+    },
+    {
+      "t": 77,
+      "current": "7",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -37.8408, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -37.8408, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -37.8408, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -33.8181, 0)",
+          "width": 28.15625
+        }
+      ],
+      "left": 1308,
+      "top": 0
+    },
+    {
+      "t": 123,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -53.4643, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -53.4643, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -53.4643, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -51.7683, 0)",
+          "width": 11.8671875
+        }
+      ],
+      "left": 1249.5,
+      "top": 0
+    },
+    {
+      "t": 171,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -59.6054, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -59.6054, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -59.6054, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -58.8838, 0)",
+          "width": 5.046875
+        }
+      ],
+      "left": 1225,
+      "top": 0
+    },
+    {
+      "t": 225,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 193.14065551757812,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -62.406, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.14065551757812,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -62.406, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.14065551757812,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -62.406, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -62.1418, 0)",
+          "width": 1.84375
+        }
+      ],
+      "left": 1213.5,
+      "top": 0
+    },
+    {
+      "t": 276,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.6074, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.6074, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.6074, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.5421, 0)",
+          "width": 0.453125
+        }
+      ],
+      "left": 1208.5,
+      "top": 0
+    },
+    {
+      "t": 351,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9659, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9659, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9659, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.14059448242188,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9602, 0)",
+          "width": 0.0390625
+        }
+      ],
+      "left": 1207,
+      "top": 0
+    },
+    {
+      "t": 426,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9659, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9659, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9659, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.14059448242188,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9602, 0)",
+          "width": 0.0390625
+        }
+      ],
+      "left": 1207,
+      "top": 0
+    },
+    {
+      "t": 566,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9659, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9659, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9659, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.14059448242188,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9602, 0)",
+          "width": 0.0390625
+        }
+      ],
+      "left": 1207,
+      "top": 0
+    },
+    {
+      "t": 653,
+      "current": "6",
+      "focus": "Garden, 7 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9659, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9659, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9659, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.14059448242188,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.9602, 0)",
+          "width": 0.0390625
+        }
+      ],
+      "left": 1207,
+      "top": 0
+    }
+  ],
+  "multiFinalStep": [
+    {
+      "t": 0,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -48.9325, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -48.9325, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -48.9325, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.14065551757812,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -46.5404, 0)",
+          "width": 16.7421875
+        }
+      ],
+      "left": 1267,
+      "top": 0
+    },
+    {
+      "t": 105,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -12.2594, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -12.2594, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -12.2594, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.14065551757812,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -4.79635, 0)",
+          "width": 52.234375
+        }
+      ],
+      "left": 1394.5,
+      "top": 0
+    },
+    {
+      "t": 233,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.82099, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.82099, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.82099, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, -0.940309, 0)",
+          "width": 55.1640625
+        }
+      ],
+      "left": 1405,
+      "top": 0
+    },
+    {
+      "t": 283,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 8.52651e-14, 0)",
+          "width": 56
+        }
+      ],
+      "left": 1408,
+      "top": 0
+    },
+    {
+      "t": 347,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 8.52651e-14, 0)",
+          "width": 56
+        }
+      ],
+      "left": 1408,
+      "top": 0
+    },
+    {
+      "t": 390,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 8.52651e-14, 0)",
+          "width": 56
+        }
+      ],
+      "left": 1408,
+      "top": 0
+    },
+    {
+      "t": 452,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 8.52651e-14, 0)",
+          "width": 56
+        }
+      ],
+      "left": 1408,
+      "top": 0
+    },
+    {
+      "t": 638,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 8.52651e-14, 0)",
+          "width": 56
+        }
+      ],
+      "left": 1408,
+      "top": 0
+    },
+    {
+      "t": 677,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 193.140625,
+          "inert": false,
+          "transform": "matrix(1, 0, 0, 1, 8.52651e-14, 0)",
+          "width": 56
+        }
+      ],
+      "left": 1408,
+      "top": 0
+    }
+  ],
+  "multiSettled": {
+    "current": "7",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -8
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -8
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -8
+      },
+      {
+        "inert": false,
+        "label": "Drift, 4 of 8",
+        "width": 56,
+        "x": 0
+      },
+      {
+        "inert": false,
+        "label": "Echo, 5 of 8",
+        "width": 124.5703125,
+        "x": 64
+      },
+      {
+        "inert": false,
+        "label": "Field notes, 6 of 8",
+        "width": 193.140625,
+        "x": 196.5714111328125
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 193.140625,
+        "x": 397.71429443359375
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 193.140625,
+        "x": 598.857177734375
+      }
+    ],
+    "lastWidth": 193.140625,
+    "leading": 598.857177734375,
+    "maxScroll": 1408,
+    "scroll": 1408,
+    "trackWidth": 791.6875,
+    "trailing": -0.310302734375
+  },
+  "boundary": {
+    "current": "7",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -8
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -8
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -8
+      },
+      {
+        "inert": false,
+        "label": "Drift, 4 of 8",
+        "width": 56,
+        "x": 0
+      },
+      {
+        "inert": false,
+        "label": "Echo, 5 of 8",
+        "width": 124.5703125,
+        "x": 64
+      },
+      {
+        "inert": false,
+        "label": "Field notes, 6 of 8",
+        "width": 193.140625,
+        "x": 196.5714111328125
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 193.140625,
+        "x": 397.71429443359375
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 193.140625,
+        "x": 598.857177734375
+      }
+    ],
+    "lastWidth": 193.140625,
+    "leading": 598.857177734375,
+    "maxScroll": 1408,
+    "scroll": 1408,
+    "trackWidth": 791.6875,
+    "trailing": -0.310302734375
+  },
+  "phoneMulti": {
+    "current": "7",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -8.07986831665039
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -8.07986831665039
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -8.07986831665039
+      },
+      {
+        "inert": true,
+        "label": "Drift, 4 of 8",
+        "width": 0,
+        "x": -8.07986831665039
+      },
+      {
+        "inert": true,
+        "label": "Echo, 5 of 8",
+        "width": 0,
+        "x": -8.07986831665039
+      },
+      {
+        "inert": false,
+        "label": "Field notes, 6 of 8",
+        "width": 55.914066314697266,
+        "x": -0.09129714965820312
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 82.2890625,
+        "x": 63.81727600097656
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 108.6640625,
+        "x": 154.11309814453125
+      }
+    ],
+    "lastWidth": 108.6640625,
+    "leading": 154.11309814453125,
+    "maxScroll": 817,
+    "scroll": 816.5,
+    "trackWidth": 263,
+    "trailing": 0.22283935546875
+  },
+  "phoneHero": {
+    "current": "7",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Drift, 4 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Echo, 5 of 8",
+        "width": 0,
+        "x": -72
+      },
+      {
+        "inert": true,
+        "label": "Field notes, 6 of 8",
+        "width": 56,
+        "x": -64
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 56,
+        "x": 0
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 199,
+        "x": 64
+      }
+    ],
+    "lastWidth": 199,
+    "leading": 64,
+    "maxScroll": 1449,
+    "scroll": 1449,
+    "trackWidth": 263,
+    "trailing": 0
+  },
+  "phoneMotion": [
+    {
+      "t": 0,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.7941, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.7941, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.7941, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -63.7941, 0)",
+          "width": 0
+        }
+      ],
+      "left": 700.5,
+      "top": 0
+    },
+    {
+      "t": 40,
+      "current": "6",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -54.4453, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -54.4453, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -54.4453, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -54.4453, 0)",
+          "width": 0
+        }
+      ],
+      "left": 722.5,
+      "top": 0
+    },
+    {
+      "t": 82,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -26.5646, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -26.5646, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -26.5646, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -26.5646, 0)",
+          "width": 0
+        }
+      ],
+      "left": 781.5,
+      "top": 0
+    },
+    {
+      "t": 123,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -15.9193, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -15.9193, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -15.9193, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -15.9193, 0)",
+          "width": 0
+        }
+      ],
+      "left": 802,
+      "top": 0
+    },
+    {
+      "t": 163,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -10.8186, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -10.8186, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -10.8186, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -10.8186, 0)",
+          "width": 0
+        }
+      ],
+      "left": 811.5,
+      "top": 0
+    },
+    {
+      "t": 201,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.78694, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.78694, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.78694, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.78694, 0)",
+          "width": 0
+        }
+      ],
+      "left": 815,
+      "top": 0
+    },
+    {
+      "t": 240,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        }
+      ],
+      "left": 816.5,
+      "top": 0
+    },
+    {
+      "t": 276,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        }
+      ],
+      "left": 816.5,
+      "top": 0
+    },
+    {
+      "t": 311,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        }
+      ],
+      "left": 816.5,
+      "top": 0
+    },
+    {
+      "t": 347,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        }
+      ],
+      "left": 816.5,
+      "top": 0
+    },
+    {
+      "t": 384,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        }
+      ],
+      "left": 816.5,
+      "top": 0
+    },
+    {
+      "t": 422,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        }
+      ],
+      "left": 816.5,
+      "top": 0
+    },
+    {
+      "t": 461,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        }
+      ],
+      "left": 816.5,
+      "top": 0
+    },
+    {
+      "t": 498,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        }
+      ],
+      "left": 816.5,
+      "top": 0
+    },
+    {
+      "t": 532,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        }
+      ],
+      "left": 816.5,
+      "top": 0
+    },
+    {
+      "t": 569,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        }
+      ],
+      "left": 816.5,
+      "top": 0
+    },
+    {
+      "t": 603,
+      "current": "7",
+      "focus": "Harbor, 8 of 8",
+      "items": [
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        },
+        {
+          "contentWidth": 108.6640625,
+          "inert": true,
+          "transform": "matrix(1, 0, 0, 1, -8.07987, 0)",
+          "width": 0
+        }
+      ],
+      "left": 816.5,
+      "top": 0
+    }
+  ],
+  "phoneSettled": {
+    "current": "7",
+    "focus": "Harbor, 8 of 8",
+    "items": [
+      {
+        "inert": true,
+        "label": "Atlas, 1 of 8",
+        "width": 0,
+        "x": -8.07986831665039
+      },
+      {
+        "inert": true,
+        "label": "Beacon, 2 of 8",
+        "width": 0,
+        "x": -8.07986831665039
+      },
+      {
+        "inert": true,
+        "label": "Canvas, 3 of 8",
+        "width": 0,
+        "x": -8.07986831665039
+      },
+      {
+        "inert": true,
+        "label": "Drift, 4 of 8",
+        "width": 0,
+        "x": -8.07986831665039
+      },
+      {
+        "inert": true,
+        "label": "Echo, 5 of 8",
+        "width": 0,
+        "x": -8.07986831665039
+      },
+      {
+        "inert": false,
+        "label": "Field notes, 6 of 8",
+        "width": 55.914066314697266,
+        "x": -0.09129714965820312
+      },
+      {
+        "inert": false,
+        "label": "Garden, 7 of 8",
+        "width": 82.2890625,
+        "x": 63.81727600097656
+      },
+      {
+        "inert": false,
+        "label": "Harbor, 8 of 8",
+        "width": 108.6640625,
+        "x": 154.11309814453125
+      }
+    ],
+    "lastWidth": 108.6640625,
+    "leading": 154.11309814453125,
+    "maxScroll": 817,
+    "scroll": 816.5,
+    "trackWidth": 263,
+    "trailing": 0.22283935546875
+  }
+}
