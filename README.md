@@ -280,3 +280,11 @@ Content and loading compositions: [Item slots](docs/item-verification.md) and
 [compact Spinner](docs/spinner-verification.md). Three copyable usages; all112
 exports compile. Native keyboard/selection, sampled motion,390px layout and actual
 OS Reduce Motion have saved evidence. Android and audible readers remain open.
+
+
+Notification queues: [Toaster provider and future notifications](docs/toaster-verification.md).
+One visible snackbar, FIFO handoff, same-ID updates, persistent actions/loading
+and stale-result guards. Four copyable examples; all116 exported usages compile.
+Desktop pointer/keyboard, sampled motion, actual OS Reduce Motion and390px
+layout have evidence. Android, audible reader and full upstream engine parity
+remain open. Item and Spinner are published at `0ec375b`.

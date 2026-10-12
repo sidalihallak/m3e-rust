@@ -1,0 +1,13 @@
+/* M3 queue host following upstream sonner.tsx; copy with feedback/ripple/motion CSS. */
+.m3-toaster{position:fixed;z-index:100;inset-inline:0;bottom:0;display:flex;justify-content:center;padding:0 12px calc(12px + env(safe-area-inset-bottom) + var(--m3-toast-offset,0px));pointer-events:none}
+.m3-toaster[data-position=start]{justify-content:flex-start}.m3-toaster[data-position=end]{justify-content:flex-end}
+.m3-toast-card{position:relative;display:flex;align-items:center;gap:8px;box-sizing:border-box;width:100%;min-width:0;min-height:48px;max-width:600px;border-radius:4px;background:var(--md-sys-color-inverse-surface);color:var(--md-sys-color-inverse-on-surface);box-shadow:0 4px 8px 3px #0002,0 1px 3px #0003;pointer-events:auto;transform-origin:center;will-change:transform,opacity;font:400 14px/20px Inter,system-ui,sans-serif}
+.m3-toast-card:not([data-ready=true]){visibility:hidden}
+.m3-toast-text{flex:1;min-width:0;padding:14px 0 14px 16px;overflow-wrap:anywhere}.m3-toast-title,.m3-toast-description{margin:0}.m3-toast-description{color:inherit}
+.m3-toast-actions{display:flex;flex:none;align-items:center;padding-inline-end:4px}.m3-toast-actions:empty{display:none}.m3-toast-card:has(.m3-toast-actions:empty) .m3-toast-text{padding-inline-end:16px}
+.m3-toast-card[data-new-line=true]{flex-wrap:wrap;row-gap:0}.m3-toast-card[data-new-line=true] .m3-toast-text{flex-basis:100%;padding-inline-end:16px}.m3-toast-card[data-new-line=true] .m3-toast-actions{margin-inline-start:auto;padding-inline-end:8px;padding-block-end:4px}
+.m3-toaster:focus-visible{outline:none}.m3-toast-card:has(:focus-visible){outline:3px solid var(--md-sys-color-inverse-primary);outline-offset:2px}
+@media(min-width:600px){.m3-toast-card{width:max-content;min-width:344px}}
+.m3-toaster:focus-visible .m3-toast-card{outline:3px solid var(--md-sys-color-inverse-primary);outline-offset:2px}
+
+.m3-toast-card[data-multiline=true] .m3-toast-text{padding-block:12px}

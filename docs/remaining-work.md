@@ -267,3 +267,18 @@ Form primitives are published at8299184.
 Next priorities: toast host/queue/promise notifications, richer sidebar/provider
 APIs, source registry/installer and consuming-app runtime. Full upstream slot/
 engine parity, Android touch, RTL and audible assistive checks remain extensions.
+
+
+## Notification queue —2026-10-12
+
+Item and Spinner are published on main at0ec375b. ToastProvider, Toaster, scoped
+manager, FIFO queue, ID updates/dismissal and Rust future loading→success/error
+are implemented locally for review. Four exact copy examples join116 compiling
+exports. Desktop queue/update/callback/keyboard/pause timing, stale timer/result
+guards, inverse colors, measured motion, actual Reduce Motion and390px layout
+have saved evidence in [the report](toaster-verification.md).
+
+Next new family: richer Sidebar/provider compositions. Remaining extensions:
+source registry/installer, consuming-app runtime, deeper upstream slot/engine
+parity (including Base UI toast stacks/swipe/portal adapter), result-message
+mappers, Android touch, RTL, audible assistive checks and broader accessibility.

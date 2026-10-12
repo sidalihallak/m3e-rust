@@ -510,3 +510,40 @@ controls in a noninteractive Item. Use List for primary+secondary action layouts
 Spinner needs `spinner.rs` and **spinner.css**. Default is a labeled indeterminate
 progressbar; use `decorative:true` inside an already named status/button and
 `inherit_color:true` inside buttons to match their content color.
+
+
+## Notification provider and queue
+
+Copy `components/toaster.rs` and its embedded `toaster.js`, with motion IDs,
+Icon, Ripple and generated icons. Include **toaster.css**, **feedback.css**,
+**icon.css**, **ripple.css** and **composite-motion.css** plus your Material theme.
+The full exporter includes these dependencies.
+
+Wrap notification producers and exactly one `Toaster` in `ToastProvider`; call
+`use_toast_manager()` inside a descendant component. Render the host near the
+application root, outside transformed/clipping ancestors. It uses fixed positioning;
+this version has no portal/container adapter. The demo scopes its provider to the
+active route; production apps normally retain it across route changes.
+
+`show(message, ToastOptions)` returns a `ToastId`. Reuse that ID to update an
+active/queued message without adding another entry. `dismiss(id)` removes that
+notification; `dismiss_all()` clears the previous queue. `snapshot()` is reactive.
+`message/success/info/warning/error/loading` are convenience methods; kinds use
+the same inverse Material colors and no default decorative icons. One snackbar
+is visible at a time; the next starts after exit. Actions/loading persist; other
+messages default to4000ms, clamp timed durations to4000–10000ms, or accept0 to
+persist. Keep equivalent inline feedback beside the triggering control for timed
+messages. Single text actions remain until acted on or dismissed.
+
+`track(future, ToastPromiseMessages::new(loading, success, error))` awaits a Rust
+`Result` future, updates its loader in place, and returns the original result.
+Dismissal/superseding suppresses stale notification results; it does not cancel
+the application's work. Launch it in a Dioxus-owned task. Update messages are
+currently fixed strings; result-dependent text can be built with `show`.
+
+Use `ToastPosition` and `offset` for bottom placement/navigation clearance;
+`action_new_line` puts a long action on its own row. The host provides a polite
+live region, Alt+G focus and Escape dismissal, focus restoration and hover/focus/
+visibility timer holds. No focus trap. Four copy controls matched the exact Rust
+snippets; all116 exported usages compile. See the
+[verification report](toaster-verification.md) for tested scope and gaps.
