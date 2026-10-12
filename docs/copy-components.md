@@ -368,3 +368,46 @@ Android/SMS autofill remain unverified.
 
 All **86** exported usages compile independently; the four new clipboard controls
 match exactly. See the component reports for desktop and390px evidence and gaps.
+
+## Application layout helpers
+
+Copy `aspect_ratio.rs`, `scroll_area.rs` + `scroll_area.js`, and/or `resizable.rs`
++ `resizable.js` with `motion.rs` and `layout-helpers.css`. The complete exporter
+retains them automatically. Add semantic color variables. Gallery surfaces and
+media assets are examples; consuming apps own their content and bounds.
+
+AspectRatio takes a width/height ratio. ScrollArea takes a required accessible
+label, CSS height and Vertical/Horizontal/Both scrollbar mode. Its native
+viewport is the single keyboard scroll target; its bars are decorative to AT.
+
+ResizablePanelGroup contains direct alternating ResizablePanel/ResizableHandle
+children. Each panel needs a label; each handle should name its preceding pane.
+All size props are percentages. Defaults initialize once; runtime owns sizes and
+onlayoutchange reports initial/committed values. Include a bounded parent height.
+Set adaptive=true to stack below840px; otherwise direction stays as supplied.
+Collapse uses native inert; use Enter to restore the panel. Remount when replacing
+default layout or child structure. Full upstream unit/persistence APIs are not ported.
+
+All91 examples compile; five new clipboard controls match exact text after completion.
+Platform scope and unported behavior are documented in the component reports.
+
+## Keyboard hints, shapes and markers
+
+Copy `kbd.rs`, `marker.rs` and/or `shape.rs` with `expression-helpers.css`.
+Shape additionally requires `shape_library.rs` at the crate root, its public
+module declaration, and `composite-motion.css`. MarkerIcon may contain Icon: retain
+icon.rs/icon.css and your chosen icon data. Keep THIRD_PARTY_NOTICES.md with copied
+shape data. The exporter now includes both shape_library.rs and notices.
+
+Kbd/KbdGroup display key hints; supply key_label for readable glyph names and
+implement the shortcuts in your app. They add no focus stops. Marker href uses
+a native anchor; ordinary markers/lines/icons add no interactive roles.
+
+ShapeName::ALL contains35 names. Shape name is optional; initialize an explicit
+name before morphing between named polygons. Shape size defaults48px. Supplied
+media children fill the mask; your app owns alt text and cropping. Optional label
+names a composite image. Customize fill with --m3-shape-color in a class.
+
+All95 usages compile and four new code copies match exactly. Shape coordinates
+match upstream for all35 catalogue items; pointer/keyboard/interruption and actual
+OS Reduce Motion have separate evidence in the component reports.

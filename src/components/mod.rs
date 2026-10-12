@@ -132,3 +132,17 @@ pub mod input_group;
 pub mod input_otp;
 pub use input_group::{InputGroup,InputGroupAlign,InputGroupAddon,InputGroupButton,InputGroupText,InputGroupInput,InputGroupTextarea};
 pub use input_otp::{InputOTP,OTPPattern};
+
+pub mod aspect_ratio;
+pub mod scroll_area;
+pub mod resizable;
+pub use aspect_ratio::AspectRatio;
+pub use scroll_area::{ScrollArea,ScrollBar,Scrollbars};
+pub use resizable::{ResizablePanelGroup,ResizablePanel,ResizableHandle,PanelDirection};
+
+pub mod kbd;
+pub mod marker;
+pub mod shape;
+pub use kbd::{Kbd,KbdGroup};
+pub use marker::{Marker,MarkerIcon,MarkerContent,MarkerVariant};
+pub use shape::Shape;

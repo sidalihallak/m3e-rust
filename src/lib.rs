@@ -24,3 +24,9 @@ pub use components::{Command, CommandDialog, CommandEntry, Breadcrumb, Breadcrum
 pub use components::{Menubar, MenubarEntry, MenubarSelection, NavigationMenu, NavigationMenuEntry, NavigationLink, Sidebar, SidebarTrigger, SidebarLayout, SidebarInset, SidebarHeader, SidebarFooter, SidebarGroup, SidebarContent};
 
 pub use components::{InputGroup,InputGroupAlign,InputGroupAddon,InputGroupButton,InputGroupText,InputGroupInput,InputGroupTextarea,InputOTP,OTPPattern};
+
+pub use components::{AspectRatio,ScrollArea,ScrollBar,Scrollbars,ResizablePanelGroup,ResizablePanel,ResizableHandle,PanelDirection};
+
+pub mod shape_library;
+pub use shape_library::ShapeName;
+pub use components::{Kbd,KbdGroup,Marker,MarkerIcon,MarkerContent,MarkerVariant,Shape};

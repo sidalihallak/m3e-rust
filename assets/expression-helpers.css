@@ -1,0 +1,28 @@
+/* Copy with kbd.rs, marker.rs, shape.rs and shape_library.rs.
+   Shape also uses composite-motion.css Slow Effects330ms from the pinned upstream. */
+.m3-kbd{pointer-events:none;display:inline-flex;align-items:center;justify-content:center;gap:4px;height:24px;min-width:24px;width:fit-content;box-sizing:border-box;padding-inline:6px;border-radius:4px;background:var(--md-sys-color-surface-container-highest);color:var(--md-sys-color-on-surface-variant);font:500 12px/16px Inter,system-ui,sans-serif;user-select:none;--m3-icon-size:12px}
+.m3-kbd-group{display:inline-flex;align-items:center;gap:4px;font:inherit}
+.m3-helper-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.m3-shape{position:relative;display:inline-block;flex:none;aspect-ratio:1;width:var(--m3-shape-size,48px);height:var(--m3-shape-size,48px);background:var(--m3-shape-color,var(--md-sys-color-primary));transition:clip-path var(--m3-slow-effects-duration,330ms) var(--m3-slow-effects);will-change:clip-path}
+.m3-shape>img,.m3-shape>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.m3-marker{position:relative;display:flex;align-items:center;gap:8px;min-height:16px;width:100%;box-sizing:border-box;text-align:start;color:var(--md-sys-color-on-surface-variant);font:400 14px/20px Inter,system-ui,sans-serif}
+.m3-marker--separator::before,.m3-marker--separator::after{content:"";height:1px;min-width:0;flex:1;background:var(--md-sys-color-outline-variant)}
+.m3-marker--separator::before{margin-inline-end:4px}.m3-marker--separator::after{margin-inline-start:4px}
+.m3-marker--border{border-bottom:1px solid var(--md-sys-color-outline-variant);padding-bottom:8px}
+.m3-marker__icon{display:inline-flex;width:16px;height:16px;flex:none;--m3-icon-size:16px}
+.m3-marker__content{min-width:0;overflow-wrap:break-word}
+.m3-marker--separator>.m3-marker__content{flex:none;text-align:center;max-width:100%;overflow-wrap:anywhere}
+a.m3-marker{min-height:48px;text-decoration:underline;text-underline-offset:3px}
+.m3-marker a{color:inherit;text-decoration:underline;text-underline-offset:3px}.m3-marker a:hover,a.m3-marker:hover{color:var(--md-sys-color-on-surface)}
+a.m3-marker:focus-visible,.m3-marker a:focus-visible{outline:3px solid var(--md-sys-color-secondary);outline-offset:3px;border-radius:4px}
+@media(prefers-reduced-motion:reduce){.m3-shape{transition:none}}
+@media(forced-colors:active){.m3-kbd{border:1px solid CanvasText}.m3-shape{background:CanvasText}.m3-marker--separator::before,.m3-marker--separator::after{background:CanvasText}}
+.m3-expression-card{padding:24px;margin-block:24px;border-radius:16px;background:var(--md-sys-color-surface-container-low);color:var(--md-sys-color-on-surface);min-width:0}
+.m3-shortcut-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-block:16px}
+.m3-shape-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:20px;margin-block:24px}
+.m3-shape-tile{display:flex;flex-direction:column;align-items:center;gap:12px;padding:12px;min-width:0;font:400 12px/16px Inter,system-ui,sans-serif;text-align:center;overflow-wrap:anywhere}
+.m3-shape-stage{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin-block:24px}
+.m3-marker-demo{display:grid;gap:24px}.m3-expression-actions{display:flex;flex-wrap:wrap;gap:12px}
+/* Reserve line spacing before allowing a long separator caption to wrap. */
+.m3-marker--separator>.m3-marker__content{max-width:calc(100% - 24px)}
+.m3-marker--separator:has(.m3-marker__icon)>.m3-marker__content{max-width:calc(100% - 48px)}

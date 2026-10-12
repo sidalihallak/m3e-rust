@@ -14,11 +14,11 @@ if destination.exists():
     parser.error('Destination already exists; choose a new directory to avoid overwriting work.')
 (destination / 'src').mkdir(parents=True)
 shutil.copytree(source / 'src/components', destination / 'src/components')
-for filename in ['lib.rs', 'icons.rs', 'loading_shapes.rs', 'theme.rs']:
+for filename in ['lib.rs', 'icons.rs', 'loading_shapes.rs', 'shape_library.rs', 'theme.rs']:
     shutil.copy2(source / 'src' / filename, destination / 'src' / filename)
 with (destination / 'src/lib.rs').open('a') as file:
     file.write('\npub mod theme;\n')
-for filename in ['Cargo.toml', 'Cargo.lock']:
+for filename in ['Cargo.toml', 'Cargo.lock', 'THIRD_PARTY_NOTICES.md']:
     shutil.copy2(source / filename, destination / filename)
 (destination / 'assets').mkdir()
 for file in (source / 'assets').glob('*.css'):

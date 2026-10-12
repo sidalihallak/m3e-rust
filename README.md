@@ -242,3 +242,13 @@ and [sidebar](docs/sidebar-verification.md) reports.
 Input groups and single-field OTP input have four copyable usages and
 [input-group](docs/input-group-verification.md) / [OTP](docs/input-otp-verification.md)
 desktop verification reports. All86 exported examples compile.
+
+Layout helpers: [AspectRatio](docs/aspect-ratio-verification.md),
+[ScrollArea](docs/scroll-area-verification.md) and
+[ResizablePanelGroup](docs/resizable-panels-verification.md) have desktop and
+390px evidence, five copyable examples and91 independently compiled usages.
+
+Expression helpers: [keyboard hints](docs/keyboard-hints-verification.md),
+[all35 shapes](docs/shape-verification.md) and [markers](docs/marker-verification.md)
+have four copyable examples, desktop/390px evidence and95 compiling usages.
+Shape coordinate parity and actual Reduce Motion checks are recorded.

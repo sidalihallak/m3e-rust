@@ -1,0 +1,212 @@
+[
+  {
+    "name": "4-leaf-clover",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "4-sided-cookie",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "6-sided-cookie",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "7-sided-cookie",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "8-leaf-clover",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "9-sided-cookie",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "12-sided-cookie",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "burst",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "oval",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "pentagon",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "pill",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "soft-burst",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "sunny",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "very-sunny",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "bun",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "boom",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "arch",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "arrow",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "diamond",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "fan",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "flower",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "gem",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "ghost-ish",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "heart",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "hexagon",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "pixel-circle",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "pixel-triangle",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "puffy",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "puffy-diamond",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "semicircle",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "slanted",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "soft-boom",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "square",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "circle",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  },
+  {
+    "name": "triangle",
+    "points": 300,
+    "max_error_percent": 0.0,
+    "same_count": true
+  }
+]
