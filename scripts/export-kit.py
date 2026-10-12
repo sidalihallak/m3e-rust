@@ -16,10 +16,9 @@ if destination.exists():
 shutil.copytree(source / 'src/components', destination / 'src/components')
 for filename in ['lib.rs', 'icons.rs', 'loading_shapes.rs', 'shape_library.rs', 'theme.rs']:
     shutil.copy2(source / 'src' / filename, destination / 'src' / filename)
-with (destination / 'src/lib.rs').open('a') as file:
-    file.write('\npub mod theme;\n')
 for filename in ['Cargo.toml', 'Cargo.lock', 'THIRD_PARTY_NOTICES.md']:
     shutil.copy2(source / filename, destination / filename)
+shutil.copytree(source / '.cargo', destination / '.cargo')
 (destination / 'assets').mkdir()
 for file in (source / 'assets').glob('*.css'):
     if file.name not in ['main.css', 'tailwind.css', 'showcase.css']:

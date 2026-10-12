@@ -5,8 +5,11 @@ edition = "2024"
 
 [dependencies]
 dioxus = { version = "0.7" }
-material-colors = { version = "0.5", default-features = false, features = ["std"] }
+material-colors = { version = "0.5", default-features = false, features = ["std", "quantize"] }
 
 [features]
 default = ["web"]
 web = ["dioxus/web"]
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+getrandom = { version = "0.3", features = ["wasm_js"] }

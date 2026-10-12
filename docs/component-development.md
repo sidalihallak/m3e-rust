@@ -109,6 +109,13 @@ instead of claiming complete parity. Android Chrome verification covers the
 web component on Android; a native Dioxus Android package requires its own
 build and device verification.
 
+## Native attribute pitfall
+
+HTML `inert` is a presence-based boolean attribute. In this Dioxus version,
+`inert: false` can serialize as `inert="false"`, which still disables the subtree.
+Use `Some("")` for inactive content and `None` for active content. Inspect the
+actual attribute and test pointer/focus activation before calling it verified.
+
 ## Button baseline
 
 Read [the button report](button-motion-verification.md) before changing shared

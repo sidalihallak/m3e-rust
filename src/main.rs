@@ -2,7 +2,9 @@ use dioxus::prelude::*;
 use m3e_rust_ui::icons;
 use m3e_rust_ui::{ConnectedButtonGroup, ConnectedButtonItem, ConnectedButtonVariant, ButtonGroupSelection, Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, ChipSize, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, SliderSize, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardActions, Divider, DividerInset, DividerOrientation, TextField, TextFieldVariant, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, IconButtonWidth, Switch};
 
-mod theme;
+use m3e_rust_ui::theme;
+mod theme_helpers_gallery;
+mod application_blocks_gallery;
 mod composite_gallery;
 mod help_gallery;
 mod showcase;
@@ -465,6 +467,8 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/input-extensions.css") }
         document::Stylesheet { href: asset!("/assets/layout-helpers.css") }
         document::Stylesheet { href: asset!("/assets/expression-helpers.css") }
+        document::Stylesheet { href: asset!("/assets/theme-helpers.css") }
+        document::Stylesheet { href: asset!("/assets/application-blocks.css") }
         document::Stylesheet { href: asset!("/assets/tailwind.css") }
         document::Stylesheet { href: asset!("/assets/button.css") }
         document::Stylesheet { href: asset!("/assets/ripple.css") }
@@ -495,7 +499,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/divider.css") }
         document::Stylesheet { href: asset!("/assets/text-field.css") }
 
-        div { class: "app-shell showcase-shell", style: theme_style, "data-catalog-open":catalog_open(),
+        div { class: "app-shell showcase-shell", style: theme_style, "data-color-mode":if dark(){"dark"}else{"light"}, "data-catalog-open":catalog_open(),
             a {class:"showcase-skip",href:"#showcase-content","Skip to component content"}
             NavigationRail {class:"showcase-primary",items:showcase::destinations(),selected:family,expanded:false,
                 header:rsx!{IconButton {icon:if catalog_open(){icons::MENU_OPEN}else{icons::MENU},toggle:true,selected:catalog_open(),aria_label:if catalog_open(){"Hide component menu"}else{"Show component menu"},onclick:move |_|catalog_open.toggle()}},
@@ -1510,6 +1514,8 @@ fn App() -> Element {
             input_extensions_gallery::InputExtensionsGallery {active:route()}
             layout_helpers_gallery::LayoutHelpersGallery {active:route()}
             expression_helpers_gallery::ExpressionHelpersGallery {active:route()}
+            theme_helpers_gallery::ThemeHelpersGallery {active:route()}
+            application_blocks_gallery::ApplicationBlocksGallery {active:route()}
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
             }
         }

@@ -252,3 +252,18 @@ Expression helpers: [keyboard hints](docs/keyboard-hints-verification.md),
 [all35 shapes](docs/shape-verification.md) and [markers](docs/marker-verification.md)
 have four copyable examples, desktop/390px evidence and95 compiling usages.
 Shape coordinate parity and actual Reduce Motion checks are recorded.
+
+
+Theme helpers: scoped seed/variant/contrast roles, light/dark/system mode, a
+Dioxus ThemeProvider context and local image seed extraction. See
+[theme verification](docs/theme-scope-verification.md) and
+[image verification](docs/image-theme-verification.md). Three new examples are
+copyable; all98 exported usages compile. Android remains paused.
+
+
+Application blocks: [attachments](docs/attachment-verification.md),
+[bubbles](docs/bubble-verification.md), [messages](docs/message-verification.md),
+[message scroller](docs/message-scroller-verification.md) and
+[questionnaire](docs/questionnaire-verification.md). Five copyable usages,
+desktop interactions,390px bounds and actual Reduce Motion checks have saved
+evidence. Full upstream engine/slot extensions and Android remain open.

@@ -1,4 +1,4 @@
-# Remaining work — 2026-10-11
+# Remaining work — 2026-10-12
 
 The desktop defects identified in the fidelity review have implementation fixes,
 including the subsequent badge, segmented-content and primary-indicator
@@ -77,10 +77,10 @@ and richer compositions are not yet equivalent ports.
 | Scheduling extensions | Date/calendar touch swipes, infinite range scrolling; time pointer-cancel/held/repeated input evidence, broader locale/accessibility coverage |
 | Larger upstream compositions | Command nested/fuzzy/virtual extensions and breadcrumb overflow/router adapters; charts, carousels, command palette and breadcrumbs are implemented; accordion/collapsible, table, pagination and client-side DataTable are implemented |
 | Input extensions | Field wrappers and standalone input/textarea/label/toggle-group wrappers; input groups and OTP input are implemented |
-| Upstream helpers and application blocks | Image-derived theme, attachment/bubble/message/message scroller/questionnaire |
+| Upstream helpers and application blocks | Theme/provider/portal extensions; core application blocks implemented |
 
-Provider/context helpers (M3 theme scope, color mode, portal container) need an
-idiomatic Dioxus integration design rather than a literal React API translation.
+Theme scope/color mode and Dioxus context are now implemented. Portal-container
+adapters and upstream provider extensions still need consuming-project design.
 The existing Rust theme generation and native popup behavior cover part of their
 purpose. Review each optional helper against actual consuming-project needs.
 
@@ -190,7 +190,7 @@ Keyboard/native pointer, scrollbar entry/exit, resize cancellation/collapse and
 390px adaptation have [saved evidence](layout-helpers-samples.json).
 Android, audible screen readers, actual Reduce Motion, touch cancellation and
 broader dynamic/nested cases remain. Full Base UI/react-resizable-panels parity
-is outside the current core port. New family is local for review.
+is outside the current core port. Layout family is published on main at71ac627.
 Keyboard hints and shape/marker helpers are implemented; next consider theme
 providers/image-derived seed and application blocks. Standalone field/toggle
 wrappers and distribution/consumer-runtime work remain in the inventory above.
@@ -203,7 +203,37 @@ comparison, pointer/keyboard/interruption, actual OS Reduce Motion off→on→of
 markers' native-link behavior,390px compact widths and exact clipboard checks
 have [saved evidence](expression-helpers-samples.json).
 Android, audible readers, all shape-pair/permutation and broader accessibility
-checks remain in the reports. Layout and expression families remain local for review.
+checks remain in the reports. Layout and expression families are published on main at71ac627.
 Next family: theme scope/color mode helpers and image-derived seed, followed by
 optional application/message blocks. Field/toggle wrappers and source installer/
 consumer runtime work remain in the inventory.
+
+
+## Theme helpers —2026-10-12
+
+ThemeScope, light/dark/system ColorMode, ThemeProvider/use_theme context and
+ImageThemePicker with MCU seed ranking are implemented locally. The complete
+color-role output adds fixed roles, lowest/bright/dim surfaces and error containers.
+All98 exported usage examples compile. Desktop keyboard, six mode/contrast states,
+image seed/error behavior, exact copies and390px bounds have saved verification
+reports and samples. Root persistence, arbitrary image
+sources, Vibrant multipalette parity, variant/spec/motion/shape provider extensions
+and broader platform coverage remain. Core application blocks are now implemented locally. Next new ports: optional
+form/field/input/toggle wrappers.
+
+
+## Application blocks —2026-10-12
+
+Attachment slots/states, seven Bubble variants/reactions, Message compositions,
+MessageScroller and a data-driven Questionnaire are implemented locally. Five
+exact clipboard usages join103 compiling exports. Native pointer/keyboard,
+question validation/retention/skip/submit/disabled focus, scroll following/pause/
+prepend/interruption, desktop and390px geometry, and actual OS Reduce Motion
+off→on→off have saved reports/raw samples.
+
+Remaining application extensions: complete scroller streaming-turn spacer/peek
+and visibility APIs, virtualization, questionnaire slots/controlled/reset/default
+answers/advanced constraints, richer uploader/composer integrations and broader
+platform coverage. They remain library application patterns, not separately
+specified official M3 components. Next: forms/field/Input/Textarea/Label/ToggleGroup
+wrappers, or extend existing components and consuming-app distribution.

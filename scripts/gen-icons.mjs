@@ -20,6 +20,7 @@ if (!src) {
 const ICONS = [
   ["ADD", "add"],
   ["ARROW_BACK", "arrow_back"],
+  ["ARROW_DOWNWARD", "arrow_downward"],
   ["ARROW_DROP_DOWN", "arrow_drop_down"],
   ["CANCEL", "cancel"],
   ["CALENDAR_TODAY", "calendar_today"],

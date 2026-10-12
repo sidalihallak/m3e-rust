@@ -411,3 +411,72 @@ names a composite image. Customize fill with --m3-shape-color in a class.
 All95 usages compile and four new code copies match exactly. Shape coordinates
 match upstream for all35 catalogue items; pointer/keyboard/interruption and actual
 OS Reduce Motion have separate evidence in the component reports.
+
+
+## Theme scopes, provider and image seeds
+
+Copy `src/theme.rs`, `components/theme_scope.rs` and `theme_scope.js` (with `motion::next_id`) and,
+for image input, `components/image_theme.rs` plus `image_theme.js`. Include
+`assets/theme-helpers.css`, the existing button assets, and the normal kit CSS.
+The exporter includes these files and `.cargo/config.toml`.
+
+`ThemeScope` controls seed, ColorMode (Light/Dark/System), ThemeVariant and
+ThemeContrast (Standard/Medium/High). Roles inherit through descendants; nesting
+is isolated. System follows the browser media query. `ThemeProvider` initializes
+ThemeSettings and supplies `use_theme()` as a Dioxus Signal for descendant updates.
+Apply the provider around your app; scoped native dialogs/popovers inherit, while
+content portalled outside must have its own scope.
+
+Use `material-colors` 0.5 with `std` and `quantize`. For wasm32, also include
+`getrandom` 0.3 with `wasm_js` and the exporter’s target rustflags. Run Cargo from
+the exported project directory so its `.cargo/config.toml` is discovered.
+
+ImageThemePicker decodes local files in the browser, resizes to at most128px on
+the longest side, accepts at most20MB, excludes non-opaque pixels, and uses Rust
+Celebi quantization (128 clusters) plus HCT Score (up to4 candidates). It reports
+loading/errors, releases bitmap/object URLs and ignores stale decode results.
+`onseedchange` lets your app apply a chosen seed. `image_seed_candidates(&[u32])`
+is available separately for already-decoded pixels in native consuming apps.
+
+This is an MCU content-scheme choice, not the upstream Vibrant six-swatch image
+palette algorithm. Spec2021/Phone matches the current pilot; React storage,
+global HTML classes, default D shortcut, arbitrary image objects/URLs, shape
+scaling and motion switching are not implemented by these helpers. Persistence
+and app shortcuts belong to the consuming application. See verification reports
+for measured scope and platform gaps.
+
+
+## Application blocks
+
+Copy `components/attachment.rs`, `message.rs`, `message_scroller.rs` and/or
+`questionnaire.rs`, plus `assets/application-blocks.css`. Scroller/questionnaire
+require their sibling `.js` files and `motion::next_id`. Reused dependencies:
+Button/IconButton/Icon and their press/ripple assets, TextField/text-field.css,
+and the generated icons module. The whole-kit exporter includes these files.
+
+Attachment exposes Group/Media/Content/Title/Description/Actions/Action/Trigger
+with typed state, size and orientation. Your app owns upload, open and remove
+callbacks; native overlay triggers and separate actions avoid nested buttons.
+
+Bubble supports seven variants, start/end alignment, reactions and static/native
+button/link content. Do not place interactive children inside interactive
+BubbleContent. Message composes avatar, header, content and footer; supply
+meaningful sender/message labels, image alt text and timestamps.
+
+MessageScroller has a named native log viewport, direct stable-ID
+MessageScrollerItem children, optional auto_scroll, initial position and
+start/end jump direction. Descendants may use use_message_scroller() for typed
+start/end/message commands. Root defaults auto_scroll false and initial End,
+matching upstream. Preserve-prepend and end-follow require stable item identity.
+No virtualization or full streaming-turn spacer API is included.
+
+Questionnaire accepts stable QuestionDefinition/QuestionChoice data and produces
+Vec<QuestionAnswer>. Single/multiple/text, optional skipping, disabled state,
+validation/focus, previous/next and optional letters/numbers are built in. IDs
+and per-question values must be unique; remount when replacing definitions.
+The application supplies submission/persistence. Input constraints, arbitrary
+slots, reset/default/controlled answers and advanced validation are extensions.
+
+Five new snippets match the clipboard exactly. All103 exported usages compile;
+see the per-component reports and application-blocks-samples.json for measured
+desktop scope.390px screenshots are responsive evidence, not Android touch.

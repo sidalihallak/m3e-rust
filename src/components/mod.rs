@@ -146,3 +146,17 @@ pub mod shape;
 pub use kbd::{Kbd,KbdGroup};
 pub use marker::{Marker,MarkerIcon,MarkerContent,MarkerVariant};
 pub use shape::Shape;
+
+pub mod theme_scope;
+pub mod image_theme;
+pub use theme_scope::{ThemeScope,ColorMode,ThemeProvider,ThemeSettings,use_theme};
+pub use image_theme::ImageThemePicker;
+
+pub mod attachment;
+pub mod message;
+pub mod message_scroller;
+pub mod questionnaire;
+pub use attachment::{Attachment,AttachmentGroup,AttachmentMedia,AttachmentContent,AttachmentTitle,AttachmentDescription,AttachmentActions,AttachmentAction,AttachmentTrigger,AttachmentState,AttachmentSize,AttachmentOrientation};
+pub use message::{Bubble,BubbleContent,BubbleGroup,BubbleReactions,BubbleVariant,ReactionSide,Message,MessageGroup,MessageAvatar,MessageContent,MessageHeader,MessageFooter,MessageAlign};
+pub use message_scroller::{MessageScroller,MessageScrollerItem,MessageScrollerHandle,MessageScrollPosition,MessageScrollDirection,use_message_scroller};
+pub use questionnaire::{Questionnaire,QuestionDefinition,QuestionChoice,QuestionKind,QuestionAnswer,QuestionShortcuts};
