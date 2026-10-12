@@ -17,6 +17,8 @@ pub const PAGES: &[(&str, &str, &str)] = &[
     ("chips", "Chips", "Selection"),
     ("segmented-buttons", "Segmented buttons", "Selection"),
     ("text-fields", "Text fields", "Selection"),
+    ("input-groups", "Input groups", "Selection"),
+    ("otp-input", "OTP input", "Selection"),
     ("selection-fields", "Select & autocomplete", "Selection"),
     ("snackbars", "Snackbars & toast", "Communication"),
     ("alerts", "Alert banners", "Communication"),

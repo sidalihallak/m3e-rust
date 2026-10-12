@@ -76,7 +76,7 @@ and richer compositions are not yet equivalent ports.
 | Feedback and content extensions | Imperative toast queue/promise host, source-to-full-screen search morph, search app bar, async/virtual suggestions, list expansion/swipe/typeahead; core family is implemented |
 | Scheduling extensions | Date/calendar touch swipes, infinite range scrolling; time pointer-cancel/held/repeated input evidence, broader locale/accessibility coverage |
 | Larger upstream compositions | Command nested/fuzzy/virtual extensions and breadcrumb overflow/router adapters; charts, carousels, command palette and breadcrumbs are implemented; accordion/collapsible, table, pagination and client-side DataTable are implemented |
-| Input extensions | Field/input-group wrappers, OTP input, standalone input/textarea/label/toggle-group wrappers |
+| Input extensions | Field wrappers and standalone input/textarea/label/toggle-group wrappers; input groups and OTP input are implemented |
 | Upstream helpers and application blocks | Aspect ratio, scroll area, resizable panels, keyboard hints, shapes/markers, image-derived theme, attachment/bubble/message/message scroller/questionnaire |
 
 Provider/context helpers (M3 theme scope, color mode, portal container) need an
@@ -158,7 +158,7 @@ keyboard, filtering, disabled actions, modal focus restoration and390px layouts
 have [command](command-verification.md) and [breadcrumb](breadcrumb-verification.md)
 evidence. Four copy controls match clipboard text exactly. Automatic breadcrumb
 overflow, cmdk fuzzy ranking/nested pages and broader platform coverage remain.
-Next new family: input groups and OTP input.
+Next new family: application layout helpers (aspect ratio, scroll area and resizable panels).
 
 ## Navigation extensions — 2026-10-12
 
@@ -168,4 +168,17 @@ controls match exact clipboard text. Desktop keyboard/pointer/repeated toggle,
 390px bounds and compact modal focus have [saved evidence](navigation-extensions-samples.json).
 Full upstream sidebar provider/auxiliary wrappers, navigation shared viewport,
 advanced adaptation and broader platform checks remain in the component reports.
-Next new family: input groups and OTP input.
+Next new family: application layout helpers (aspect ratio, scroll area and resizable panels).
+
+## Input extensions — 2026-10-12
+
+Input groups (inline/block addons, actions and textarea) and single-native-input
+OTP codes are implemented locally. Four copy controls match exactly and all86
+exported usages compile. Desktop editing/selection/paste/disabled/read-only and
+390px bounds have [saved evidence](input-extensions-samples.json).
+Android, actual Reduce Motion, audible screen readers, native SMS autofill,
+password-manager adaptations and broader input/browser permutations remain.
+Standalone Input/Textarea/Label, Field compositions and ToggleGroup wrappers
+remain optional additions; existing TextField already handles ordinary inputs.
+Navigation extensions were pushed to main at378dae2; this input family is local
+for review. Next family: application layout helpers.

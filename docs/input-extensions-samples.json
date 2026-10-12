@@ -1,0 +1,624 @@
+{
+  "date": "2026-10-12",
+  "group": {
+    "fields": [
+      {
+        "description": "m3-input-group-5-support",
+        "disabled": false,
+        "invalid": "false",
+        "readonly": false,
+        "type": "text",
+        "value": "24.50"
+      },
+      {
+        "description": "m3-input-group-4-support",
+        "disabled": false,
+        "invalid": "false",
+        "readonly": false,
+        "type": "text",
+        "value": ""
+      },
+      {
+        "description": "m3-input-group-3-support",
+        "disabled": false,
+        "invalid": "false",
+        "readonly": false,
+        "type": "textarea",
+        "value": ""
+      },
+      {
+        "description": "m3-input-group-2-support",
+        "disabled": true,
+        "invalid": "false",
+        "readonly": false,
+        "type": "text",
+        "value": "Unavailable"
+      },
+      {
+        "description": "m3-input-group-1-support",
+        "disabled": false,
+        "invalid": "false",
+        "readonly": true,
+        "type": "text",
+        "value": "atlas-2026"
+      },
+      {
+        "description": "m3-input-group-0-support",
+        "disabled": false,
+        "invalid": "true",
+        "readonly": false,
+        "type": "text",
+        "value": "ABC"
+      }
+    ],
+    "groups": [
+      {
+        "border": "rgb(122, 117, 127)",
+        "height": 56,
+        "radius": "4px",
+        "shadow": "none",
+        "width": 560
+      },
+      {
+        "border": "rgb(122, 117, 127)",
+        "height": 56,
+        "radius": "4px",
+        "shadow": "none",
+        "width": 560
+      },
+      {
+        "border": "rgb(29, 27, 32)",
+        "height": 214,
+        "radius": "12px",
+        "shadow": "none",
+        "width": 560
+      },
+      {
+        "border": "color(srgb 0.113725 0.105882 0.12549 / 0.12)",
+        "height": 56,
+        "radius": "4px",
+        "shadow": "none",
+        "width": 560
+      },
+      {
+        "border": "rgb(122, 117, 127)",
+        "height": 56,
+        "radius": "4px",
+        "shadow": "none",
+        "width": 560
+      },
+      {
+        "border": "rgb(186, 26, 26)",
+        "height": 56,
+        "radius": "4px",
+        "shadow": "none",
+        "width": 560
+      }
+    ],
+    "mounts": 1
+  },
+  "groupFocus": {
+    "border": "rgb(101, 85, 143)",
+    "shadow": "rgb(101, 85, 143) 0px 0px 0px 1px inset"
+  },
+  "tabFromPrice": {
+    "label": "Find a project",
+    "value": ""
+  },
+  "readonly": "atlas-2026",
+  "otpFull": {
+    "autocomplete": "one-time-code",
+    "end": 6,
+    "inputmode": "numeric",
+    "slots": [
+      {
+        "active": "false",
+        "caret": "false",
+        "char": "1",
+        "index": "0"
+      },
+      {
+        "active": "false",
+        "caret": "false",
+        "char": "2",
+        "index": "1"
+      },
+      {
+        "active": "false",
+        "caret": "false",
+        "char": "3",
+        "index": "2"
+      },
+      {
+        "active": "false",
+        "caret": "false",
+        "char": "4",
+        "index": "3"
+      },
+      {
+        "active": "false",
+        "caret": "false",
+        "char": "5",
+        "index": "4"
+      },
+      {
+        "active": "true",
+        "caret": "false",
+        "char": "6",
+        "index": "5"
+      }
+    ],
+    "start": 5,
+    "value": "<redacted>"
+  },
+  "otpReplace": [
+    "1",
+    "2",
+    "9",
+    "4",
+    "5",
+    "6"
+  ],
+  "otpArrow": {
+    "end": 3,
+    "start": 2
+  },
+  "otpDelete": [
+    "1",
+    "2",
+    "4",
+    "5",
+    "6",
+    " "
+  ],
+  "otpPaste": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
+  "otpTab": "Invitation code",
+  "alpha": [
+    "A",
+    "b",
+    "2",
+    "Z"
+  ],
+  "afterAlpha": "Expired code",
+  "skipDisabled": "Saved code (read-only)",
+  "otpReadonly": [
+    "6",
+    "5",
+    "4",
+    "3",
+    "2",
+    "1"
+  ],
+  "caretSamples": [
+    {
+      "t": 1791770993909,
+      "active": "true",
+      "animation": "m3-otp-blink",
+      "caret": "true",
+      "opacity": "0"
+    },
+    {
+      "t": 1791770994026,
+      "active": "true",
+      "animation": "m3-otp-blink",
+      "caret": "true",
+      "opacity": "1"
+    },
+    {
+      "t": 1791770994138,
+      "active": "true",
+      "animation": "m3-otp-blink",
+      "caret": "true",
+      "opacity": "1"
+    },
+    {
+      "t": 1791770994251,
+      "active": "true",
+      "animation": "m3-otp-blink",
+      "caret": "true",
+      "opacity": "1"
+    },
+    {
+      "t": 1791770994364,
+      "active": "true",
+      "animation": "m3-otp-blink",
+      "caret": "true",
+      "opacity": "1"
+    },
+    {
+      "t": 1791770994477,
+      "active": "true",
+      "animation": "m3-otp-blink",
+      "caret": "true",
+      "opacity": "0"
+    },
+    {
+      "t": 1791770994589,
+      "active": "true",
+      "animation": "m3-otp-blink",
+      "caret": "true",
+      "opacity": "0"
+    },
+    {
+      "t": 1791770994702,
+      "active": "true",
+      "animation": "m3-otp-blink",
+      "caret": "true",
+      "opacity": "0"
+    },
+    {
+      "t": 1791770994831,
+      "active": "true",
+      "animation": "m3-otp-blink",
+      "caret": "true",
+      "opacity": "0"
+    },
+    {
+      "t": 1791770994944,
+      "active": "true",
+      "animation": "m3-otp-blink",
+      "caret": "true",
+      "opacity": "0"
+    },
+    {
+      "t": 1791770995058,
+      "active": "true",
+      "animation": "m3-otp-blink",
+      "caret": "true",
+      "opacity": "1"
+    },
+    {
+      "t": 1791770995170,
+      "active": "true",
+      "animation": "m3-otp-blink",
+      "caret": "true",
+      "opacity": "1"
+    }
+  ],
+  "otpGeometry": {
+    "field": {
+      "bottom": 387.9921875,
+      "height": 56,
+      "left": 387.1953125,
+      "right": 739.1953125,
+      "top": 331.9921875,
+      "width": 352,
+      "x": 387.1953125,
+      "y": 331.9921875
+    },
+    "gap": "8px",
+    "radius": "12px",
+    "slot": {
+      "bottom": 387.9921875,
+      "height": 56,
+      "left": 387.1953125,
+      "right": 435.1953125,
+      "top": 331.9921875,
+      "width": 48,
+      "x": 387.1953125,
+      "y": 331.9921875
+    }
+  },
+  "copies": [
+    {
+      "title": "OTP input usage",
+      "exact": true,
+      "length": 529
+    },
+    {
+      "title": "Alphanumeric OTP usage",
+      "exact": true,
+      "length": 401
+    },
+    {
+      "title": "Input group usage",
+      "exact": true,
+      "length": 567
+    },
+    {
+      "title": "Textarea group usage",
+      "exact": true,
+      "length": 603
+    }
+  ],
+  "otp390": {
+    "body": 376,
+    "client": 375,
+    "fields": [
+      {
+        "field": {
+          "bottom": -728.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 376,
+          "top": -784.3203125,
+          "width": 352,
+          "x": 24,
+          "y": -784.3203125
+        },
+        "slot": {
+          "bottom": -728.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 72,
+          "top": -784.3203125,
+          "width": 48,
+          "x": 24,
+          "y": -784.3203125
+        },
+        "slots": {
+          "bottom": -728.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 376,
+          "top": -784.3203125,
+          "width": 352,
+          "x": 24,
+          "y": -784.3203125
+        }
+      },
+      {
+        "field": {
+          "bottom": -552.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 240,
+          "top": -608.3203125,
+          "width": 216,
+          "x": 24,
+          "y": -608.3203125
+        },
+        "slot": {
+          "bottom": -552.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 72,
+          "top": -608.3203125,
+          "width": 48,
+          "x": 24,
+          "y": -608.3203125
+        },
+        "slots": {
+          "bottom": -552.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 240,
+          "top": -608.3203125,
+          "width": 216,
+          "x": 24,
+          "y": -608.3203125
+        }
+      },
+      {
+        "field": {
+          "bottom": -424.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 376,
+          "top": -480.3203125,
+          "width": 352,
+          "x": 24,
+          "y": -480.3203125
+        },
+        "slot": {
+          "bottom": -424.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 72,
+          "top": -480.3203125,
+          "width": 48,
+          "x": 24,
+          "y": -480.3203125
+        },
+        "slots": {
+          "bottom": -424.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 376,
+          "top": -480.3203125,
+          "width": 352,
+          "x": 24,
+          "y": -480.3203125
+        }
+      },
+      {
+        "field": {
+          "bottom": -296.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 376,
+          "top": -352.3203125,
+          "width": 352,
+          "x": 24,
+          "y": -352.3203125
+        },
+        "slot": {
+          "bottom": -296.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 72,
+          "top": -352.3203125,
+          "width": 48,
+          "x": 24,
+          "y": -352.3203125
+        },
+        "slots": {
+          "bottom": -296.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 376,
+          "top": -352.3203125,
+          "width": 352,
+          "x": 24,
+          "y": -352.3203125
+        }
+      },
+      {
+        "field": {
+          "bottom": -168.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 376,
+          "top": -224.3203125,
+          "width": 352,
+          "x": 24,
+          "y": -224.3203125
+        },
+        "slot": {
+          "bottom": -168.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 72,
+          "top": -224.3203125,
+          "width": 48,
+          "x": 24,
+          "y": -224.3203125
+        },
+        "slots": {
+          "bottom": -168.3203125,
+          "height": 56,
+          "left": 24,
+          "right": 376,
+          "top": -224.3203125,
+          "width": 352,
+          "x": 24,
+          "y": -224.3203125
+        }
+      }
+    ]
+  },
+  "otp390Fixed": {
+    "body": 375,
+    "client": 375,
+    "field": {
+      "bottom": 496.1796875,
+      "height": 56,
+      "left": 24,
+      "right": 351,
+      "top": 440.1796875,
+      "width": 327,
+      "x": 24,
+      "y": 440.1796875
+    },
+    "slot": {
+      "bottom": 496.1796875,
+      "height": 56,
+      "left": 24,
+      "right": 67.8359375,
+      "top": 440.1796875,
+      "width": 43.8359375,
+      "x": 24,
+      "y": 440.1796875
+    }
+  },
+  "group390": {
+    "body": 375,
+    "button": {
+      "bottom": 842.6796875,
+      "height": 48,
+      "left": 275.3046875,
+      "right": 338,
+      "top": 794.6796875,
+      "width": 62.6953125,
+      "x": 275.3046875,
+      "y": 794.6796875
+    },
+    "client": 375,
+    "groups": [
+      {
+        "bottom": 718.6796875,
+        "height": 56,
+        "left": 24,
+        "right": 351,
+        "top": 662.6796875,
+        "width": 327,
+        "x": 24,
+        "y": 662.6796875
+      },
+      {
+        "bottom": 846.6796875,
+        "height": 56,
+        "left": 24,
+        "right": 351,
+        "top": 790.6796875,
+        "width": 327,
+        "x": 24,
+        "y": 790.6796875
+      },
+      {
+        "bottom": 1132.6796875,
+        "height": 214,
+        "left": 24,
+        "right": 351,
+        "top": 918.6796875,
+        "width": 327,
+        "x": 24,
+        "y": 918.6796875
+      },
+      {
+        "bottom": 1308.6796875,
+        "height": 56,
+        "left": 24,
+        "right": 351,
+        "top": 1252.6796875,
+        "width": 327,
+        "x": 24,
+        "y": 1252.6796875
+      },
+      {
+        "bottom": 1436.6796875,
+        "height": 56,
+        "left": 24,
+        "right": 351,
+        "top": 1380.6796875,
+        "width": 327,
+        "x": 24,
+        "y": 1380.6796875
+      },
+      {
+        "bottom": 1564.6796875,
+        "height": 56,
+        "left": 24,
+        "right": 351,
+        "top": 1508.6796875,
+        "width": 327,
+        "x": 24,
+        "y": 1508.6796875
+      }
+    ]
+  },
+  "unverified": [
+    "Android paused",
+    "OS Reduce Motion could not be changed: System Settings process unavailable; no preference changed",
+    "Audible screen reader",
+    "RTL, zoom, forced colors, password manager and SMS autofill",
+    "IME and native undo after transformed paste"
+  ],
+  "nativePartial": {
+    "mismatch": true,
+    "pattern": "[0-9]{6}",
+    "valid": false
+  },
+  "nativeFull": {
+    "mismatch": false,
+    "valid": true
+  },
+  "dark": {
+    "border": "rgb(148, 143, 153)",
+    "label": "rgb(202, 196, 207)",
+    "text": "rgb(230, 224, 233)"
+  },
+  "finalMounts": 1,
+  "replacementStatus": [
+    "OTP input",
+    "Code ready to verify"
+  ],
+  "finalBuild": "Dioxus serve24.70s;86 examples check1.12s"
+}

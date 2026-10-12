@@ -13,6 +13,7 @@ mod data_gallery;
 mod visual_gallery;
 mod wayfinding_gallery;
 mod navigation_extensions_gallery;
+mod input_extensions_gallery;
 mod navigation_gallery; // Material navigation and showcase catalogue.
 use m3e_rust_ui::{AppBar,NavigationRail,ModalNavigationRail};
 use composite_gallery::CompositeGallery;
@@ -459,6 +460,7 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/command.css") }
         document::Stylesheet { href: asset!("/assets/breadcrumb.css") }
         document::Stylesheet { href: asset!("/assets/navigation-extensions.css") }
+        document::Stylesheet { href: asset!("/assets/input-extensions.css") }
         document::Stylesheet { href: asset!("/assets/tailwind.css") }
         document::Stylesheet { href: asset!("/assets/button.css") }
         document::Stylesheet { href: asset!("/assets/ripple.css") }
@@ -1501,6 +1503,7 @@ fn App() -> Element {
             visual_gallery::VisualGallery {active:route()}
             wayfinding_gallery::WayfindingGallery {active:route()}
             navigation_extensions_gallery::NavigationExtensionsGallery {active:route()}
+            input_extensions_gallery::InputExtensionsGallery {active:route()}
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
             }
         }

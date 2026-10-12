@@ -127,3 +127,8 @@ pub mod sidebar;
 pub use menubar::{Menubar, MenubarEntry, MenubarSelection};
 pub use navigation_menu::{NavigationMenu, NavigationMenuEntry, NavigationLink};
 pub use sidebar::{Sidebar, SidebarTrigger, SidebarLayout, SidebarInset, SidebarHeader, SidebarFooter, SidebarGroup, SidebarContent};
+
+pub mod input_group;
+pub mod input_otp;
+pub use input_group::{InputGroup,InputGroupAlign,InputGroupAddon,InputGroupButton,InputGroupText,InputGroupInput,InputGroupTextarea};
+pub use input_otp::{InputOTP,OTPPattern};

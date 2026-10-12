@@ -346,3 +346,25 @@ See the component reports for actual runtime scope and differences.
 Latest navigation-family check: all **82** exported usages compile; the three
 new controls have exact clipboard evidence. Shared source dependencies and
 platform gaps are recorded in the component reports.
+
+## Input groups and OTP codes
+
+Copy `input_group.rs` and/or `input_otp.rs` with `input_otp.js`, `motion.rs`
+and `input-extensions.css`. InputGroupButton additionally needs `button.rs`
+and `button.css`; add `icon.rs`/`icon.css` for icons. The complete exporter
+includes these automatically. Provide Material color variables.
+
+Use one InputGroupInput or InputGroupTextarea inside each InputGroup: its
+label/support IDs are supplied through Dioxus context. The enclosing disabled
+fieldset disables nested native inputs and actions. Group error propagates
+to the input; error supporting text belongs on the group.
+
+InputOTP owns one native control and exposes decorative slots through length,
+separator_after and pattern props. Update value in oninput; oncomplete reports
+an incomplete-to-complete edit. The app owns code validation and submission.
+Numeric codes use text inputs, so no HTML numeric spinner appears. Form name,
+required, readonly, disabled and one-time-code autocomplete are native attributes.
+Android/SMS autofill remain unverified.
+
+All **86** exported usages compile independently; the four new clipboard controls
+match exactly. See the component reports for desktop and390px evidence and gaps.

@@ -22,3 +22,5 @@ pub use components::{Chart, ChartContainer, ChartLegend, ChartTooltipContent, Ch
 pub use components::{Command, CommandDialog, CommandEntry, Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator, BreadcrumbEllipsis, BreadcrumbTrail, BreadcrumbEntry};
 
 pub use components::{Menubar, MenubarEntry, MenubarSelection, NavigationMenu, NavigationMenuEntry, NavigationLink, Sidebar, SidebarTrigger, SidebarLayout, SidebarInset, SidebarHeader, SidebarFooter, SidebarGroup, SidebarContent};
+
+pub use components::{InputGroup,InputGroupAlign,InputGroupAddon,InputGroupButton,InputGroupText,InputGroupInput,InputGroupTextarea,InputOTP,OTPPattern};

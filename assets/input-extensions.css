@@ -1,0 +1,48 @@
+/* Copy with input_group.rs, input_otp.rs/js and the existing Button styles/runtime.
+   Upstream c37c0d2: 56px group, 4px corner,12px addon,8px gap;
+   OTP48x56px,12px corner,8px gap. Persistent adjacent labels follow M3 guidance. */
+.m3-input-group-field{border:0;margin:0;padding:0;min-width:0;width:100%}
+.m3-input-group__label{display:block;margin-bottom:8px;color:var(--md-sys-color-on-surface-variant);font:500 14px/20px Inter,system-ui,sans-serif}
+.m3-input-group{display:flex;align-items:center;width:100%;min-width:0;min-height:56px;box-sizing:border-box;border:1px solid var(--md-sys-color-outline);border-radius:4px;background:transparent;color:var(--md-sys-color-on-surface)}
+.m3-input-group:hover{border-color:var(--md-sys-color-on-surface)}
+.m3-input-group:has(.m3-input-group__control:focus-visible){border-color:var(--md-sys-color-primary);box-shadow:inset 0 0 0 1px var(--md-sys-color-primary)}
+.m3-input-group__control{flex:1;min-width:0;width:100%;height:54px;padding:8px 16px;box-sizing:border-box;border:0;border-radius:0;outline:0;background:transparent;color:inherit;caret-color:var(--md-sys-color-primary);font:400 16px/24px Inter,system-ui,sans-serif;letter-spacing:.03125rem}
+.m3-input-group__control::placeholder{color:var(--md-sys-color-on-surface-variant)}
+.m3-input-group__addon{display:flex;flex:none;align-items:center;gap:8px;padding-block:3px;color:var(--md-sys-color-on-surface-variant);font:500 14px/20px Inter,system-ui,sans-serif;--m3-icon-size:24px;cursor:text}
+.m3-input-group__addon[data-align=inline-start]{order:-1;padding-inline-start:12px}
+.m3-input-group__addon[data-align=inline-end]{order:1;padding-inline-end:12px}
+.m3-input-group:has([data-align=inline-start])>.m3-input-group__control{padding-inline-start:8px}
+.m3-input-group:has([data-align=inline-end])>.m3-input-group__control{padding-inline-end:8px}
+.m3-input-group:has([data-align^=block]),.m3-input-group:has(textarea){flex-direction:column;height:auto}
+.m3-input-group:has([data-align^=block]){border-radius:12px}
+.m3-input-group__addon[data-align^=block]{align-self:stretch;padding:12px;justify-content:flex-start}
+.m3-input-group__addon[data-align=block-start]{order:-1}.m3-input-group__addon[data-align=block-end]{order:1}
+textarea.m3-input-group__control{height:auto;min-height:96px;resize:none;padding:12px 16px;overflow:auto}
+.m3-input-group__text{display:flex;align-items:center;gap:8px;font:400 14px/20px Inter,system-ui,sans-serif}
+.m3-input-group__button.m3-button{--button-height:48px;--button-inline-space:12px}
+.m3-input-group-field[data-error=true] .m3-input-group,.m3-input-group:has([aria-invalid=true]){border-color:var(--md-sys-color-error)}
+.m3-input-group-field[data-error=true] .m3-input-group:focus-within,.m3-input-group:has([aria-invalid=true]:focus-visible){box-shadow:inset 0 0 0 1px var(--md-sys-color-error)}
+.m3-input-group__support{min-height:16px;margin:4px 16px 0;color:var(--md-sys-color-on-surface-variant);font:400 12px/16px Inter,system-ui,sans-serif}
+.m3-input-group-field[data-error=true] .m3-input-group__support,.m3-otp-field[data-error=true] .m3-input-group__support{color:var(--md-sys-color-error)}
+.m3-input-group-field:disabled .m3-input-group{border-color:color-mix(in srgb,var(--md-sys-color-on-surface) 12%,transparent);box-shadow:none}
+.m3-input-group-field:disabled .m3-input-group__control,.m3-input-group-field:disabled .m3-input-group__addon,.m3-input-group-field:disabled label{color:color-mix(in srgb,var(--md-sys-color-on-surface) 38%,transparent)}
+.m3-otp{position:relative;display:inline-flex;max-width:100%;direction:ltr}
+.m3-otp__input{position:absolute;inset:0;z-index:1;width:100%;height:100%;margin:0;padding:0;border:0;background:transparent;color:transparent;caret-color:transparent;outline:0;pointer-events:none;font-size:16px}
+.m3-otp__slots{display:flex;gap:8px;align-items:center;min-width:0;cursor:text}
+.m3-otp__slot{position:relative;display:flex;flex:0 1 48px;min-width:0;width:48px;height:56px;align-items:center;justify-content:center;box-sizing:border-box;border:1px solid var(--md-sys-color-outline);border-radius:12px;color:var(--md-sys-color-on-surface);font:400 24px/32px Inter,system-ui,sans-serif}
+.m3-otp__slot[data-active=true]{border-color:var(--md-sys-color-primary);box-shadow:inset 0 0 0 1px var(--md-sys-color-primary)}
+.m3-otp__separator{flex:none;width:16px;text-align:center;color:var(--md-sys-color-on-surface-variant)}
+.m3-otp__caret{display:none;position:absolute;height:24px;width:2px;background:var(--md-sys-color-primary);animation:m3-otp-blink 1s step-end infinite}
+.m3-otp__slot[data-caret=true] .m3-otp__caret{display:block}
+.m3-otp-field[data-error=true] .m3-otp__slot{border-color:var(--md-sys-color-error)}
+.m3-otp-field[data-error=true] .m3-otp__slot[data-active=true]{box-shadow:inset 0 0 0 1px var(--md-sys-color-error)}
+.m3-otp:has(input:disabled){opacity:.38;cursor:default}.m3-otp:has(input:disabled) .m3-otp__slots{cursor:default}
+@keyframes m3-otp-blink{0%,100%{opacity:1}50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.m3-otp__caret{animation:none}}
+@media(forced-colors:active){.m3-otp__slot[data-active=true],.m3-input-group:focus-within{outline:2px solid Highlight;outline-offset:-2px}}
+.m3-input-extensions-demo{display:grid;gap:24px;max-width:560px;margin-block:24px}
+/* A code is one 56px-high target. Decorative slots may flex at compact widths. */
+.m3-otp-field{min-width:0;max-width:100%}
+.m3-input-extensions-demo{grid-template-columns:minmax(0,1fr)}
+.m3-input-group-field[data-error=true]>.m3-input-group__label,.m3-otp-field[data-error=true]>.m3-input-group__label{color:var(--md-sys-color-error)}
+.m3-input-group-field[data-error=true] .m3-input-group__addon[data-align=inline-end] .m3-icon{color:var(--md-sys-color-error)}

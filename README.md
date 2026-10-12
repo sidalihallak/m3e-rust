@@ -238,3 +238,7 @@ Menubar, navigation-menu link popups and controlled sidebar layout helpers are
 available locally. Source/reference comparisons and platform scope are recorded
 in [menubar](docs/menubar-verification.md), [navigation menu](docs/navigation-menu-verification.md)
 and [sidebar](docs/sidebar-verification.md) reports.
+
+Input groups and single-field OTP input have four copyable usages and
+[input-group](docs/input-group-verification.md) / [OTP](docs/input-otp-verification.md)
+desktop verification reports. All86 exported examples compile.
