@@ -254,3 +254,16 @@ Accepted theme helpers and application blocks are published at0362828.
 
 The compact showcase selector now remounts per route; actual native selected
 values matched form-fields and toggles after switching families.
+
+
+## Content and loading compositions —2026-10-12
+
+Item/Group/Media/Content/Title/Description/Actions/Header/Footer/Separator and
+compact Spinner now have explicit copyable wrappers. Three examples join112
+compiling exports. Native selection/focus reentry, exact copies, measured shape/
+arc/rotation,390px layout and actual OS Reduce Motion have saved evidence.
+Form primitives are published at8299184.
+
+Next priorities: toast host/queue/promise notifications, richer sidebar/provider
+APIs, source registry/installer and consuming-app runtime. Full upstream slot/
+engine parity, Android touch, RTL and audible assistive checks remain extensions.

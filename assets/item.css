@@ -1,0 +1,46 @@
+/* shadcn-m3e Item slots. Corners use its Material aliases, not stock Tailwind. */
+.m3-item-group{display:flex;flex-direction:column;width:100%;gap:16px}
+.m3-item-group:has(>.m3-item-entry[data-size=small]){gap:10px}
+.m3-item-group:has(>.m3-item-entry[data-size=xs]){gap:8px}
+.m3-item-group:has(>.m3-item-entry[data-variant=segmented]){gap:2px}
+.m3-item-entry{min-width:0;width:100%}
+.m3-item{position:relative;isolation:isolate;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;width:100%;min-width:0;min-height:56px;gap:12px;padding:10px 16px;border:1px solid transparent;border-radius:16px;background:transparent;color:var(--md-sys-color-on-surface);text-align:start;font:400 16px/24px Inter,system-ui,sans-serif;letter-spacing:.5px;text-decoration:none;transition:border-radius var(--m3-default-effects-duration) var(--m3-default-effects),background-color var(--m3-fast-effects-duration) var(--m3-fast-effects),color var(--m3-fast-effects-duration) var(--m3-fast-effects);}
+.m3-item--small{min-height:48px;padding:8px 12px}
+.m3-item--xs{min-height:0;padding:10px 12px;gap:10px}
+.m3-item--outlined{border-color:var(--md-sys-color-outline-variant)}
+.m3-item--muted{background:var(--md-sys-color-surface-container)}
+.m3-item--segmented{border-radius:4px;background:var(--md-sys-color-surface)}
+.m3-item-entry:first-child>.m3-item--segmented{border-start-start-radius:16px;border-start-end-radius:16px}
+.m3-item-entry:last-child>.m3-item--segmented{border-end-start-radius:16px;border-end-end-radius:16px}
+.m3-item-entry:only-child>.m3-item--segmented{border-radius:16px}
+.m3-item--segmented:where(:hover):not(:disabled):not([data-disabled=true]){border-radius:12px}
+.m3-item-entry>.m3-item--segmented:has(:focus-visible),.m3-item-entry>.m3-item--segmented:focus-visible,.m3-item-entry>.m3-item--segmented[data-ripple-pressed=true],.m3-item-entry>.m3-item--segmented[data-selected=true]{border-radius:16px}
+.m3-item[data-selected=true]{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container)}
+.m3-item:is(button,a){cursor:pointer;-webkit-tap-highlight-color:transparent}
+.m3-item:is(button,a)::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:currentColor;opacity:0}
+.m3-item:is(button,a):hover:not(:disabled):not([data-disabled=true])::before{opacity:.08}
+.m3-item:is(button,a):focus-visible{outline:3px solid var(--md-sys-color-secondary);outline-offset:2px}
+.m3-item:is(button,a):focus-visible::before{opacity:.1}
+.m3-item:is(button,a){min-height:48px}
+.m3-item:disabled,.m3-item[data-disabled=true]{opacity:.38;cursor:default}
+.m3-item>span{position:relative;z-index:1}
+.m3-item-media{display:flex;flex:none;align-items:center;justify-content:center;gap:8px}
+.m3-item:has(.m3-item-description)>.m3-item-media{align-self:flex-start;translate:0 2px}
+.m3-item-media--icon{--m3-icon-size:16px}
+.m3-item-media--image{width:56px;height:56px;border-radius:12px;overflow:hidden}
+.m3-item--small .m3-item-media--image{width:40px;height:40px}
+.m3-item--xs .m3-item-media--image{width:24px;height:24px}
+.m3-item-media--image img{width:100%;height:100%;object-fit:cover}
+.m3-item-content{display:flex;flex:1;min-width:0;flex-direction:column;gap:4px}
+.m3-item--xs .m3-item-content{gap:2px}
+.m3-item-content+.m3-item-content{flex:none}
+.m3-item-title{display:block;width:fit-content;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:inherit;font:400 16px/24px Inter,system-ui,sans-serif;letter-spacing:.5px}
+.m3-item-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-align:start;overflow-wrap:anywhere;color:var(--md-sys-color-on-surface-variant);font:400 14px/20px Inter,system-ui,sans-serif;letter-spacing:.25px}
+.m3-item[data-selected=true] .m3-item-description{color:var(--md-sys-color-on-primary-container)}
+.m3-item-description a{text-decoration:underline;text-underline-offset:4px}
+.m3-item-description a:hover{color:var(--md-sys-color-primary)}
+.m3-item-actions,.m3-item-header,.m3-item-footer{display:flex;align-items:center;gap:8px}
+.m3-item-actions{flex:none}
+.m3-item-header,.m3-item-footer{flex-basis:100%;min-width:0;justify-content:space-between}
+.m3-item-separator{margin-block:8px}
+@media(prefers-reduced-motion:reduce){.m3-item{transition:none}}

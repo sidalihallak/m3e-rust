@@ -6,6 +6,7 @@ use m3e_rust_ui::theme;
 mod theme_helpers_gallery;
 mod application_blocks_gallery;
 mod form_gallery;
+mod item_gallery;
 mod composite_gallery;
 mod help_gallery;
 mod showcase;
@@ -471,6 +472,8 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/theme-helpers.css") }
         document::Stylesheet { href: asset!("/assets/application-blocks.css") }
         document::Stylesheet { href: asset!("/assets/form.css") }
+        document::Stylesheet { href: asset!("/assets/item.css") }
+        document::Stylesheet { href: asset!("/assets/spinner.css") }
         document::Stylesheet { href: asset!("/assets/toggle.css") }
         document::Stylesheet { href: asset!("/assets/tailwind.css") }
         document::Stylesheet { href: asset!("/assets/button.css") }
@@ -1520,6 +1523,7 @@ fn App() -> Element {
             theme_helpers_gallery::ThemeHelpersGallery {active:route()}
             application_blocks_gallery::ApplicationBlocksGallery {active:route()}
             form_gallery::FormGallery {active:route()}
+            item_gallery::ItemGallery {active:route()}
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
             }
         }

@@ -1,0 +1,8 @@
+/* Exact upstream spinner.tsx and m3e.css rotation/arc phases. */
+.m3-spinner{display:inline-block;flex:none;width:var(--m3-spinner-size,20px);height:var(--m3-spinner-size,20px);color:var(--md-sys-color-primary);animation:m3-compact-spinner-rotate 1.568s linear infinite}
+.m3-spinner__arc{transform-origin:center;stroke-dasharray:100;animation:m3-compact-spinner-arc 1.333s cubic-bezier(.2,0,0,1) infinite}
+@keyframes m3-compact-spinner-rotate{to{transform:rotate(360deg)}}
+@keyframes m3-compact-spinner-arc{0%{stroke-dashoffset:97;transform:rotate(0deg)}50%{stroke-dashoffset:25;transform:rotate(45deg)}100%{stroke-dashoffset:97;transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.m3-spinner,.m3-spinner__arc{animation:none}.m3-spinner__arc{stroke-dashoffset:25}}
+
+.m3-spinner--inherit{color:inherit}

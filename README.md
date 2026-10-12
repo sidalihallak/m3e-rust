@@ -274,3 +274,9 @@ Form primitives: [Input](docs/input-verification.md), [Textarea](docs/textarea-v
 [Toggle](docs/toggle-verification.md) and [ToggleGroup](docs/toggle-group-verification.md).
 Six copyable usages; all109 exported examples compile. Desktop interaction and
 390px layout checks have saved evidence; Android and broader assistive checks remain.
+
+
+Content and loading compositions: [Item slots](docs/item-verification.md) and
+[compact Spinner](docs/spinner-verification.md). Three copyable usages; all112
+exports compile. Native keyboard/selection, sampled motion,390px layout and actual
+OS Reduce Motion have saved evidence. Android and audible readers remain open.

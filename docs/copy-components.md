@@ -496,3 +496,17 @@ button_group, button, icon, ripple and motion helpers. Include **toggle.css**,
 **composite-motion.css**, **icon.css** and **ripple.css**. Use unique stable string
 values and initialize required selection to a valid enabled option. These wrappers
 follow the horizontal Material group pattern. All109 exported usages compile.
+
+
+## Item and compact Spinner
+
+Item slots need `item.rs`, its embedded `item.js`, **item.css**, and the exported
+ListSelection type, motion, Ripple, Divider helpers and their styles. Include
+**composite-motion.css**, **ripple.css**, **divider.css**, and **icon.css** when used.
+Group selections expect `selected: Some(bool)` on each row and one visible
+selection indicator. Interactive rows contain decorative slots; place nested
+controls in a noninteractive Item. Use List for primary+secondary action layouts.
+
+Spinner needs `spinner.rs` and **spinner.css**. Default is a labeled indeterminate
+progressbar; use `decorative:true` inside an already named status/button and
+`inherit_color:true` inside buttons to match their content color.

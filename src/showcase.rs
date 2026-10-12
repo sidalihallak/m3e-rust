@@ -32,6 +32,8 @@ pub const PAGES: &[(&str, &str, &str)] = &[
     ("message-scroller", "Message scroller", "Communication"),
     ("questionnaire", "Questionnaire", "Selection"),
     ("form-fields", "Form fields", "Selection"),
+    ("items", "Item compositions", "Content"),
+    ("spinners", "Spinners", "Communication"),
     ("toggles", "Toggles", "Actions"),
     ("date-pickers", "Date pickers", "Scheduling"),
     ("calendars", "Calendars", "Scheduling"),

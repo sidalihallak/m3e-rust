@@ -1,0 +1,999 @@
+{
+  "date": "2026-10-12",
+  "initial": [
+    {
+      "bg": "rgba(0, 0, 0, 0)",
+      "height": 134,
+      "padding": "10px 16px",
+      "pressed": null,
+      "radius": "16px",
+      "role": null,
+      "selected": null,
+      "tag": "DIV",
+      "width": 778.609375
+    },
+    {
+      "bg": "rgb(242, 236, 244)",
+      "height": 66,
+      "padding": "8px 12px",
+      "pressed": null,
+      "radius": "16px",
+      "role": "link",
+      "selected": null,
+      "tag": "A",
+      "width": 778.609375
+    },
+    {
+      "bg": "rgba(0, 0, 0, 0)",
+      "height": 68,
+      "padding": "10px 12px",
+      "pressed": null,
+      "radius": "16px",
+      "role": null,
+      "selected": null,
+      "tag": "DIV",
+      "width": 778.609375
+    },
+    {
+      "bg": "rgb(253, 247, 255)",
+      "height": 70,
+      "padding": "10px 16px",
+      "pressed": null,
+      "radius": "16px 16px 4px 4px",
+      "role": "option",
+      "selected": "false",
+      "tag": "BUTTON",
+      "width": 778.609375
+    },
+    {
+      "bg": "rgb(253, 247, 255)",
+      "height": 70,
+      "padding": "10px 16px",
+      "pressed": null,
+      "radius": "4px",
+      "role": "option",
+      "selected": "false",
+      "tag": "BUTTON",
+      "width": 778.609375
+    },
+    {
+      "bg": "rgb(253, 247, 255)",
+      "height": 70,
+      "padding": "10px 16px",
+      "pressed": null,
+      "radius": "4px 4px 16px 16px",
+      "role": "option",
+      "selected": "false",
+      "tag": "BUTTON",
+      "width": 778.609375
+    },
+    {
+      "bg": "rgb(253, 247, 255)",
+      "height": 70,
+      "padding": "10px 16px",
+      "pressed": null,
+      "radius": "16px",
+      "role": null,
+      "selected": null,
+      "tag": "BUTTON",
+      "width": 778.609375
+    }
+  ],
+  "documentArrow": {
+    "tag": "A",
+    "text": "Open spinner examples"
+  },
+  "motion": [
+    {
+      "ms": 0,
+      "bg": "rgb(253, 247, 255)",
+      "height": 70,
+      "radius": "4px",
+      "selected": "false",
+      "width": 778.609375
+    },
+    {
+      "ms": 44,
+      "bg": "rgb(253, 247, 255)",
+      "height": 70,
+      "pressed": "true",
+      "radius": "5.75848px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 93,
+      "bg": "rgb(241, 231, 255)",
+      "height": 70,
+      "pressed": "true",
+      "radius": "12.0947px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 131,
+      "bg": "rgb(235, 223, 255)",
+      "height": 70,
+      "pressed": "true",
+      "radius": "14.5593px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 168,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "pressed": "true",
+      "radius": "15.6173px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 205,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "pressed": "true",
+      "radius": "15.8811px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 242,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "pressed": "true",
+      "radius": "15.9638px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 276,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "15.9919px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 309,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 342,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 375,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 409,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 462,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 496,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 531,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 564,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 599,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 645,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 680,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 716,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 749,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 782,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 813,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 846,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 878,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 912,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 944,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 975,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 1010,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 1042,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 1073,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 1105,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 1136,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 1171,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 1205,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 1238,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 1273,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 1305,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 1340,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    },
+    {
+      "ms": 1374,
+      "bg": "rgb(233, 221, 255)",
+      "height": 70,
+      "radius": "16px",
+      "selected": "true",
+      "width": 778.609375
+    }
+  ],
+  "arrow": {
+    "focusOutline": "rgb(98, 91, 113) solid 3px",
+    "name": "Organization"
+  },
+  "finalSelection": [
+    {
+      "name": "Personal project",
+      "selected": "false",
+      "tabIndex": -1
+    },
+    {
+      "name": "Team project",
+      "selected": "false",
+      "tabIndex": -1
+    },
+    {
+      "name": "Organization",
+      "selected": "false",
+      "tabIndex": 0
+    }
+  ],
+  "noNestedControls": 0,
+  "disabled": false,
+  "spinnerMotion": [
+    {
+      "ms": 0,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.729367, -0.684122, 0.684122, 0.729367, 0, 0)",
+      "dashOffset": "87.1333px",
+      "height": 26.718994140625,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(0.436005, 0.899944, -0.899944, 0.436005, 0, 0)",
+      "width": 26.718994140625
+    },
+    {
+      "ms": 71,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.901049, -0.433718, 0.433718, 0.901049, 0, 0)",
+      "dashOffset": "91.1249px",
+      "height": 23.3773193359375,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(0.186389, 0.982476, -0.982476, 0.186389, 0, 0)",
+      "width": 23.3773193359375
+    },
+    {
+      "ms": 136,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.966528, -0.256562, 0.256562, 0.966528, 0, 0)",
+      "dashOffset": "93.602px",
+      "height": 20.9696044921875,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.049716, 0.998763, -0.998763, -0.049716, 0, 0)",
+      "width": 20.9696044921875
+    },
+    {
+      "ms": 198,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.992921, -0.118774, 0.118774, 0.992921, 0, 0)",
+      "dashOffset": "95.4408px",
+      "height": 25.21240234375,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.309825, 0.950794, -0.950794, -0.309825, 0, 0)",
+      "width": 25.21234130859375
+    },
+    {
+      "ms": 260,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.99932, -0.0368802, 0.0368802, 0.99932, 0, 0)",
+      "dashOffset": "96.5169px",
+      "height": 27.702880859375,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.549933, 0.835208, -0.835208, -0.549933, 0, 0)",
+      "width": 27.70281982421875
+    },
+    {
+      "ms": 322,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.999991, -0.00434248, 0.00434248, 0.999991, 0, 0)",
+      "dashOffset": "96.9431px",
+      "height": 28.2696533203125,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.72944, 0.684045, -0.684045, -0.72944, 0, 0)",
+      "width": 28.26971435546875
+    },
+    {
+      "ms": 385,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.999696, 0.0246664, -0.0246664, 0.999696, 0, 0)",
+      "dashOffset": "94.7385px",
+      "height": 27.026123046875,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.8842, 0.467108, -0.467108, -0.8842, 0, 0)",
+      "width": 27.02618408203125
+    },
+    {
+      "ms": 445,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.970055, 0.242884, -0.242884, 0.970055, 0, 0)",
+      "dashOffset": "74.5091px",
+      "height": 24.3609619140625,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.968316, 0.24973, -0.24973, -0.968316, 0, 0)",
+      "width": 24.36090087890625
+    },
+    {
+      "ms": 506,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.905116, 0.425164, -0.425164, 0.905116, 0, 0)",
+      "dashOffset": "56.7423px",
+      "height": 20.4427490234375,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.999749, 0.02239, -0.02239, -0.999749, 0, 0)",
+      "width": 20.44281005859375
+    },
+    {
+      "ms": 569,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.842559, 0.538604, -0.538604, 0.842559, 0, 0)",
+      "dashOffset": "44.8581px",
+      "height": 24.3045654296875,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.969285, -0.245941, 0.245941, -0.969285, 0, 0)",
+      "width": 24.30450439453125
+    },
+    {
+      "ms": 634,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.801926, 0.597423, -0.597423, 0.801926, 0, 0)",
+      "dashOffset": "38.3031px",
+      "height": 26.9932861328125,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.88602, -0.463646, 0.463646, -0.88602, 0, 0)",
+      "width": 26.99334716796875
+    },
+    {
+      "ms": 696,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.767182, 0.64143, -0.64143, 0.767182, 0, 0)",
+      "dashOffset": "33.1624px",
+      "height": 28.265869140625,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.73211, -0.681186, 0.681186, -0.73211, 0, 0)",
+      "width": 28.26593017578125
+    },
+    {
+      "ms": 759,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.742458, 0.669892, -0.669892, 0.742458, 0, 0)",
+      "dashOffset": "29.706px",
+      "height": 27.54931640625,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.528594, -0.848875, 0.848875, -0.528594, 0, 0)",
+      "width": 27.54937744140625
+    },
+    {
+      "ms": 823,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.726838, 0.686809, -0.686809, 0.726838, 0, 0)",
+      "dashOffset": "27.5952px",
+      "height": 25.277587890625,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.314682, -0.949197, 0.949197, -0.314682, 0, 0)",
+      "width": 25.277587890625
+    },
+    {
+      "ms": 886,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.715342, 0.698774, -0.698774, 0.715342, 0, 0)",
+      "dashOffset": "26.074px",
+      "height": 21.08154296875,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(-0.0556223, -0.998452, 0.998452, -0.0556223, 0, 0)",
+      "width": 21.08148193359375
+    },
+    {
+      "ms": 948,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.709509, 0.704696, -0.704696, 0.709509, 0, 0)",
+      "dashOffset": "25.312px",
+      "height": 23.263427734375,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(0.179393, -0.983778, 0.983778, 0.179393, 0, 0)",
+      "width": 23.263427734375
+    },
+    {
+      "ms": 1010,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.707127, 0.707087, -0.707087, 0.707127, 0, 0)",
+      "dashOffset": "25.0026px",
+      "height": 26.6824951171875,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(0.432482, -0.901642, 0.901642, 0.432482, 0, 0)",
+      "width": 26.6824951171875
+    },
+    {
+      "ms": 1072,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.344808, 0.938673, -0.938673, 0.344808, 0, 0)",
+      "dashOffset": "30.6754px",
+      "height": 28.1202392578125,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(0.626967, -0.779046, 0.779046, 0.626967, 0, 0)",
+      "width": 28.1202392578125
+    },
+    {
+      "ms": 1136,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(-0.9988, -0.0489711, 0.0489711, -0.9988, 0, 0)",
+      "dashOffset": "56.4987px",
+      "height": 27.9141845703125,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(0.811862, -0.583849, 0.583849, 0.811862, 0, 0)",
+      "width": 27.91424560546875
+    },
+    {
+      "ms": 1200,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(-0.429915, -0.902869, 0.902869, -0.429915, 0, 0)",
+      "dashOffset": "70.6086px",
+      "height": 26.087158203125,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(0.925424, -0.378934, 0.378934, 0.925424, 0, 0)",
+      "width": 26.087158203125
+    },
+    {
+      "ms": 1261,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.289575, -0.957155, 0.957155, 0.289575, 0, 0)",
+      "dashOffset": "80.276px",
+      "height": 22.2742919921875,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(0.992644, -0.12107, 0.12107, 0.992644, 0, 0)",
+      "width": 22.2742919921875
+    },
+    {
+      "ms": 1325,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.693629, -0.720332, 0.720332, 0.693629, 0, 0)",
+      "dashOffset": "86.467px",
+      "height": 22.63427734375,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(0.989892, 0.141822, -0.141822, 0.989892, 0, 0)",
+      "width": 22.63427734375
+    },
+    {
+      "ms": 1389,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.870964, -0.491347, 0.491347, 0.870964, 0, 0)",
+      "dashOffset": "90.2733px",
+      "height": 25.950439453125,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(0.930024, 0.367499, -0.367499, 0.930024, 0, 0)",
+      "width": 25.950439453125
+    },
+    {
+      "ms": 1454,
+      "arcDuration": "1.333s",
+      "arcTransform": "matrix(0.96066, -0.277726, 0.277726, 0.96066, 0, 0)",
+      "dashOffset": "93.3144px",
+      "height": 28.011474609375,
+      "label": "Loading compact example",
+      "pathLength": "100",
+      "role": "status",
+      "rotationDuration": "1.568s",
+      "stroke": "5",
+      "transform": "matrix(0.798258, 0.602316, -0.602316, 0.798258, 0, 0)",
+      "width": 28.011474609375
+    }
+  ],
+  "loadingComplete": [
+    "Spinners",
+    "",
+    "",
+    "",
+    "Project ready"
+  ],
+  "decorative": [
+    {
+      "hidden": "true",
+      "label": null,
+      "role": null
+    },
+    {
+      "hidden": "true",
+      "label": null,
+      "role": null
+    }
+  ],
+  "reducedSpinner": {
+    "animation": "none",
+    "arcAnimation": "none",
+    "dashOffset": "25px",
+    "layoutHeight": "20px",
+    "layoutWidth": "20px",
+    "preference": true,
+    "role": "progressbar"
+  },
+  "reducedItem": {
+    "preference": true,
+    "radius": "16px",
+    "selected": "true",
+    "transition": "none 1e-05s"
+  },
+  "motionRestored": false,
+  "reentryTabIndex": [
+    {
+      "name": "Personal project",
+      "selected": "false",
+      "tabIndex": -1
+    },
+    {
+      "name": "Team project",
+      "selected": "true",
+      "tabIndex": 0
+    },
+    {
+      "name": "Organization",
+      "selected": "false",
+      "tabIndex": -1
+    }
+  ],
+  "copies": [
+    {
+      "title": "Item usage",
+      "equal": false,
+      "length": 406
+    },
+    {
+      "title": "Segmented Item usage",
+      "equal": true,
+      "length": 617
+    }
+  ],
+  "compactItems": {
+    "body": 375,
+    "media": [
+      {
+        "height": 16,
+        "width": 16
+      },
+      {
+        "height": 16,
+        "width": 16
+      },
+      {
+        "height": 24,
+        "width": 24
+      },
+      {
+        "height": 16,
+        "width": 16
+      }
+    ],
+    "rows": [
+      {
+        "height": 162,
+        "right": 327,
+        "scroll": 277,
+        "width": 279
+      },
+      {
+        "height": 86,
+        "right": 327,
+        "scroll": 277,
+        "width": 279
+      },
+      {
+        "height": 68,
+        "right": 327,
+        "scroll": 277,
+        "width": 279
+      },
+      {
+        "height": 70,
+        "right": 327,
+        "scroll": 277,
+        "width": 279
+      },
+      {
+        "height": 90,
+        "right": 327,
+        "scroll": 277,
+        "width": 279
+      },
+      {
+        "height": 90,
+        "right": 327,
+        "scroll": 277,
+        "width": 279
+      },
+      {
+        "height": 70,
+        "right": 327,
+        "scroll": 277,
+        "width": 279
+      }
+    ],
+    "viewport": 390
+  },
+  "copyRetry": {
+    "title": "Item usage",
+    "equal": true,
+    "length": 501
+  },
+  "spinnerFinal": [
+    {
+      "arcDuration": "1.333s",
+      "color": "rgb(101, 85, 143)",
+      "hidden": null,
+      "label": "Loading compact example",
+      "layoutHeight": "20px",
+      "layoutWidth": "20px",
+      "role": "progressbar",
+      "rotation": "m3-compact-spinner-rotate",
+      "rotationDuration": "1.568s"
+    },
+    {
+      "arcDuration": "1.333s",
+      "color": "rgb(101, 85, 143)",
+      "hidden": null,
+      "label": "Loading medium example",
+      "layoutHeight": "32px",
+      "layoutWidth": "32px",
+      "role": "progressbar",
+      "rotation": "m3-compact-spinner-rotate",
+      "rotationDuration": "1.568s"
+    },
+    {
+      "arcDuration": "1.333s",
+      "color": "rgb(101, 85, 143)",
+      "hidden": null,
+      "label": "Loading large example",
+      "layoutHeight": "48px",
+      "layoutWidth": "48px",
+      "role": "progressbar",
+      "rotation": "m3-compact-spinner-rotate",
+      "rotationDuration": "1.568s"
+    },
+    {
+      "arcDuration": "1.333s",
+      "color": "rgb(101, 85, 143)",
+      "hidden": "true",
+      "label": null,
+      "layoutHeight": "20px",
+      "layoutWidth": "20px",
+      "role": null,
+      "rotation": "m3-compact-spinner-rotate",
+      "rotationDuration": "1.568s"
+    },
+    {
+      "arcDuration": "1.333s",
+      "color": "rgb(101, 85, 143)",
+      "hidden": "true",
+      "label": null,
+      "layoutHeight": "20px",
+      "layoutWidth": "20px",
+      "role": null,
+      "rotation": "m3-compact-spinner-rotate",
+      "rotationDuration": "1.568s"
+    }
+  ],
+  "compactSpinner": {
+    "body": 375,
+    "section": 375,
+    "viewport": 390
+  },
+  "spinnerCopy": {
+    "title": "Spinner usage",
+    "equal": true,
+    "length": 220
+  },
+  "finalOneApp": 1,
+  "inheritedSpinner": {
+    "button": "color(srgb 0.658353 0.640784 0.667686)",
+    "class": "m3-spinner m3-spinner--inherit ",
+    "hidden": "true",
+    "role": null,
+    "spinner": "color(srgb 0.658353 0.640784 0.667686)"
+  },
+  "savedAfterPointer": "true",
+  "savedAfterSpace": "false",
+  "disabledTabSkipped": {
+    "disabled": false,
+    "label": "Copy Rust code",
+    "tag": "BUTTON"
+  },
+  "home": "Personal project",
+  "end": "Organization",
+  "finalBuild": {
+    "serveSeconds": 14.71,
+    "exportSeconds": 11.93,
+    "examples": 112
+  }
+}
