@@ -319,3 +319,15 @@ visual-family copy controls match the displayed code exactly. Desktop and
 responsive evidence is recorded; Android remains paused. See
 [charts](chart-verification.md), [carousel](carousel-verification.md) and
 [expressive carousel](expressive-carousel-verification.md) for current scope.
+
+## Commands and breadcrumbs
+
+Copy `command.rs`, `command.js`, `command.css` with the shared Dialog, action
+controls, Icon/icons and motion ID/runtime dependencies for CommandDialog.
+Copy `breadcrumb.rs`, `breadcrumb.css` and Icon/icons for breadcrumbs. The
+exporter includes these files. Four new examples bring the independent export
+to **79** compiling usages. Command query and actions belong to the caller;
+entry values must be unique. Shortcut text does not register a hotkey.
+Breadcrumb parent links are native URLs; its last entry is current-page text.
+See [command](command-verification.md) and [breadcrumb](breadcrumb-verification.md)
+reports for source comparisons and runtime scope.

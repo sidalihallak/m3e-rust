@@ -115,3 +115,8 @@ pub mod chart;
 pub mod carousel;
 pub use chart::{Chart, ChartContainer, ChartLegend, ChartTooltipContent, ChartKind, ChartIndicator, ChartSeries, ChartPoint, ChartTooltipItem};
 pub use carousel::{Carousel, CarouselEntry, CarouselOrientation, ExpressiveCarousel, ExpressiveCarouselVariant, CarouselSlide};
+
+pub mod command;
+pub mod breadcrumb;
+pub use command::{Command, CommandDialog, CommandEntry};
+pub use breadcrumb::{Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator, BreadcrumbEllipsis, BreadcrumbTrail, BreadcrumbEntry};

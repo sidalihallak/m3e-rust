@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-12",
+  "desktop": {
+    "current": "Atlas",
+    "currentTag": "SPAN",
+    "font": "14px",
+    "hiddenSeparators": [
+      "true",
+      "true"
+    ],
+    "links": [
+      {
+        "height": 48,
+        "href": "#foundations",
+        "label": "Home"
+      },
+      {
+        "height": 48,
+        "href": "#cards",
+        "label": "Projects"
+      }
+    ]
+  },
+  "tab": {
+    "label": "Projects",
+    "tag": "A"
+  },
+  "navigation": "http://127.0.0.1:8080/#cards",
+  "copy": [
+    {
+      "name": "Breadcrumb trail usage",
+      "characters": 338,
+      "exact": true
+    },
+    {
+      "name": "Composed breadcrumb usage",
+      "characters": 450,
+      "exact": true
+    }
+  ],
+  "phone": {
+    "body": 375,
+    "clientWidth": 295,
+    "contentWidth": 295,
+    "current": {
+      "bottom": 1168.6796875,
+      "height": 40,
+      "left": 40,
+      "right": 335,
+      "top": 1128.6796875,
+      "width": 295,
+      "x": 40,
+      "y": 1128.6796875
+    },
+    "links": [
+      {
+        "height": 48,
+        "label": "Workspace",
+        "width": 82.7734375
+      },
+      {
+        "height": 48,
+        "label": "Research and product development",
+        "width": 243.640625
+      },
+      {
+        "height": 48,
+        "label": "Design systems and accessibility",
+        "width": 226.984375
+      }
+    ],
+    "rect": {
+      "bottom": 1168.6796875,
+      "height": 202,
+      "left": 40,
+      "right": 335,
+      "top": 966.6796875,
+      "width": 295,
+      "x": 40,
+      "y": 966.6796875
+    },
+    "viewport": 375
+  }
+}

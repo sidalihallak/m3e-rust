@@ -223,3 +223,11 @@ new copy controls match clipboard text exactly. Desktop keyboard, mouse dragging
 See [chart](docs/chart-verification.md), [carousel](docs/carousel-verification.md)
 and [expressive carousel](docs/expressive-carousel-verification.md) reports for
 scope and remaining Android/RTL/engine-parity gaps.
+
+### Command palette and breadcrumbs
+
+Inline commands, a modal palette and composable native breadcrumbs are in the
+showcase. Four copyable Rust examples bring the independent library check to
+**79** usages. See [command](docs/command-verification.md) and
+[breadcrumb](docs/breadcrumb-verification.md) reports for the upstream contract,
+Material composition choices and verification scope.

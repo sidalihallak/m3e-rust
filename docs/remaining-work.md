@@ -56,7 +56,7 @@ Recommended order for reusable application building blocks:
    deeper dynamic-content checks. Dialog unsaved-data confirmation belongs to app state.
 3. Core navigation and surfaces are implemented; see [navigation evidence](navigation-verification.md) and [surfaces evidence](surfaces-verification.md). Current Expressive expanded rails replace legacy navigation drawers.
 4. Core feedback and content is implemented; see [family evidence](feedback-content-verification.md). Advanced toast queues/promise APIs, search morph/virtual suggestions and list expansion/swipe remain.
-5. Core date picker/calendar is implemented; see [date picker](date-picker-verification.md) and [calendar](calendar-verification.md). Time picker is also implemented; see [time picker](time-picker-verification.md). Accordion/collapsible, table, pagination and local DataTable are implemented; charts and carousels are next.
+5. Core date picker/calendar is implemented; see [date picker](date-picker-verification.md) and [calendar](calendar-verification.md). Time picker is also implemented; see [time picker](time-picker-verification.md). Accordion/collapsible, table, pagination and local DataTable are implemented; charts and carousels are implemented.
 
 ### Remaining component inventory
 
@@ -75,7 +75,7 @@ and richer compositions are not yet equivalent ports.
 | Navigation extensions | Generic upstream sidebar helpers, navigation menu/menubar; core app bar/toolbar/bar/rail and modal rail are implemented |
 | Feedback and content extensions | Imperative toast queue/promise host, source-to-full-screen search morph, search app bar, async/virtual suggestions, list expansion/swipe/typeahead; core family is implemented |
 | Scheduling extensions | Date/calendar touch swipes, infinite range scrolling; time pointer-cancel/held/repeated input evidence, broader locale/accessibility coverage |
-| Larger upstream compositions | Chart, carousel/expressive carousel, command palette, breadcrumb; accordion/collapsible, table, pagination and client-side DataTable are implemented |
+| Larger upstream compositions | Command nested/fuzzy/virtual extensions and breadcrumb overflow/router adapters; charts, carousels, command palette and breadcrumbs are implemented; accordion/collapsible, table, pagination and client-side DataTable are implemented |
 | Input extensions | Field/input-group wrappers, OTP input, standalone input/textarea/label/toggle-group wrappers |
 | Upstream helpers and application blocks | Aspect ratio, scroll area, resizable panels, keyboard hints, shapes/markers, image-derived theme, attachment/bubble/message/message scroller/questionnaire |
 
@@ -90,14 +90,14 @@ upstream implementation using [the component protocol](component-development.md)
 
 ## 4. Finish the Rust/UI distribution workflow
 
-The current [source export](copy-components.md) and all 66 usage examples compile
+The current [source export](copy-components.md) and all 79 usage examples compile
 as an independent library. Still needed:
 
 - Launch a real consuming app with copied CSS, color roles and assets, and
   verify runtime styling, motion and interactions there.
 - Broaden source-copy verification beyond the shared clipboard workflow. Nine
   gallery copy controls succeeded and a native paste exactly matched the Divider
-  snippet (509 characters); all 66 examples compile. Other consumer runtimes remain.
+  snippet (509 characters); all 79 examples compile. Other consumer runtimes remain.
 - Add a per-component registry/installer workflow if that is the desired
   distribution model. The current exporter copies the complete editable kit;
   it is not yet a Rust/UI registry installer.
@@ -106,7 +106,7 @@ as an independent library. Still needed:
 
 The [accessibility audit](accessibility-verification.md) and
 [composite pilot](composite-verification.md) have desktop evidence. The post-restart browser/copy-control recheck is complete; next expand audible
-screen-reader verification and held-pointer/compact regression coverage. Core Scheduling is implemented with date picker, time picker and calendar evidence. Accordion/collapsible, table, pagination and local DataTable are implemented; charts and carousels are next. Core feedback/content has desktop evidence and eight copyable examples.
+screen-reader verification and held-pointer/compact regression coverage. Core Scheduling is implemented with date picker, time picker and calendar evidence. Accordion/collapsible, table, pagination and local DataTable are implemented; charts and carousels are implemented. Core feedback/content has desktop evidence and eight copyable examples.
 Help and selection now has desktop and compact-layout evidence. Android remains paused.
 
 Navigation follow-up: skip link, tall navigation bar and vertical toolbar interactions still need broader browser checks. Compact routing and modal motion now have saved samples; the original navigation session arrays were not persisted.
@@ -145,7 +145,17 @@ Current scope: bar/line/area/donut; horizontal/vertical standard carousel;
 multi-browse, hero, uncontained and vertical full-screen expressive carousel.
 Centered hero, multi-aspect ratio, complete Compose keyline parity, richer chart
 engines and Embla/Recharts API parity remain extensions. See component reports.
-Command palette and breadcrumbs are the next new compositions.
+Command palette and breadcrumbs are implemented locally; navigation menu/menubar are the next new compositions.
 
 The excessive expressive terminal gap is fixed using Material-style shifted size keylines;
 [desktop and390px end evidence](expressive-carousel-verification.md#terminal-layout-correction--2026-10-11) records trailing error below1px.
+
+## Commands and wayfinding — 2026-10-12
+
+Inline Command, CommandDialog and Breadcrumb primitives/Trail are implemented
+locally with four copyable examples. All79 exported usages compile. Native
+keyboard, filtering, disabled actions, modal focus restoration and390px layouts
+have [command](command-verification.md) and [breadcrumb](breadcrumb-verification.md)
+evidence. Four copy controls match clipboard text exactly. Automatic breadcrumb
+overflow, cmdk fuzzy ranking/nested pages and broader platform coverage remain.
+Next new family: navigation menu/menubar and sidebar helpers.
