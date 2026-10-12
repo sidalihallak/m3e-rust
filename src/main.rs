@@ -5,6 +5,7 @@ use m3e_rust_ui::{ConnectedButtonGroup, ConnectedButtonItem, ConnectedButtonVari
 use m3e_rust_ui::theme;
 mod theme_helpers_gallery;
 mod application_blocks_gallery;
+mod form_gallery;
 mod composite_gallery;
 mod help_gallery;
 mod showcase;
@@ -469,6 +470,8 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/expression-helpers.css") }
         document::Stylesheet { href: asset!("/assets/theme-helpers.css") }
         document::Stylesheet { href: asset!("/assets/application-blocks.css") }
+        document::Stylesheet { href: asset!("/assets/form.css") }
+        document::Stylesheet { href: asset!("/assets/toggle.css") }
         document::Stylesheet { href: asset!("/assets/tailwind.css") }
         document::Stylesheet { href: asset!("/assets/button.css") }
         document::Stylesheet { href: asset!("/assets/ripple.css") }
@@ -517,7 +520,7 @@ fn App() -> Element {
                 div {class:"showcase-status",role:"status",aria_live:"polite","{page_title}"}
                 showcase::PageIntro {active:route()}
                 div {class:"showcase-mobile-catalog",
-                    m3e_rust_ui::NativeSelect {label:"Component",value:route(),
+                    m3e_rust_ui::NativeSelect {key:route(),label:"Component",value:route(),
                         options:showcase::PAGES.iter().copied().filter(|p|p.2==family).map(|(slug,label,_)|m3e_rust_ui::SelectOption::new(slug,label)).collect::<Vec<_>>(),
                         onchange:move|value:String|showcase::navigate(&value)
                     }
@@ -1516,6 +1519,7 @@ fn App() -> Element {
             expression_helpers_gallery::ExpressionHelpersGallery {active:route()}
             theme_helpers_gallery::ThemeHelpersGallery {active:route()}
             application_blocks_gallery::ApplicationBlocksGallery {active:route()}
+            form_gallery::FormGallery {active:route()}
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
             }
         }

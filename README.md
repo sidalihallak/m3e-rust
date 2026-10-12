@@ -267,3 +267,10 @@ Application blocks: [attachments](docs/attachment-verification.md),
 [questionnaire](docs/questionnaire-verification.md). Five copyable usages,
 desktop interactions,390px bounds and actual Reduce Motion checks have saved
 evidence. Full upstream engine/slot extensions and Android remain open.
+
+
+Form primitives: [Input](docs/input-verification.md), [Textarea](docs/textarea-verification.md),
+[Label](docs/label-verification.md), [Field compositions](docs/field-verification.md),
+[Toggle](docs/toggle-verification.md) and [ToggleGroup](docs/toggle-group-verification.md).
+Six copyable usages; all109 exported examples compile. Desktop interaction and
+390px layout checks have saved evidence; Android and broader assistive checks remain.

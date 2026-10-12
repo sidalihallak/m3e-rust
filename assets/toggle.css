@@ -1,0 +1,5 @@
+/* Copy with action-control.css, standard-button-group.css, button-group.css,
+   ripple.css and the corresponding Rust/runtime helpers. */
+.m3-toggle--default:not(:disabled),.m3-toggle-group--default .m3-action:not(:disabled) {--ac-fg:var(--md-sys-color-on-surface-variant)}
+.m3-toggle--default:not(:disabled)[aria-pressed=true],.m3-toggle-group--default .m3-action:not(:disabled)[aria-pressed=true] {--ac-fg:var(--md-sys-color-primary)}
+.m3-toggle.m3-action--icon-only.m3-action--s {--ac-icon:20px}

@@ -480,3 +480,19 @@ slots, reset/default/controlled answers and advanced validation are extensions.
 Five new snippets match the clipboard exactly. All103 exported usages compile;
 see the per-component reports and application-blocks-samples.json for measured
 desktop scope.390px screenshots are responsive evidence, not Android touch.
+
+
+## Standalone forms and toggle wrappers
+
+Copy `components/form.rs`, `components/motion.rs` and **form.css** for Input,
+Textarea, Label and Field slots. Field owns one Input or Textarea, supplies the
+linked IDs and propagates invalid/disabled state; standalone controls need
+Label with matching `html_for`/`id`, or an accessible name. Use TextField for a
+floating label. In validation, swap FieldDescription for FieldError.
+
+Copy `components/toggle.rs` with the exported action_control, standard_button_group,
+button_group, button, icon, ripple and motion helpers. Include **toggle.css**,
+**action-control.css**, **standard-button-group.css**, **button-group.css**,
+**composite-motion.css**, **icon.css** and **ripple.css**. Use unique stable string
+values and initialize required selection to a valid enabled option. These wrappers
+follow the horizontal Material group pattern. All109 exported usages compile.

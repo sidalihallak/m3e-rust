@@ -64,9 +64,8 @@ Compared the current local public modules with the upstream
 [component directory](https://github.com/Crysta1221/shadcn-m3e/tree/main/packages/m3e/src/components)
 through GitHub's contents API on 2026-10-10. The directory contains both Material
 components and library-specific additions; this list groups ports by family,
-not by source-file count. Basic inputs/textarea already exist through TextField,
-and button toggles through the current button APIs; separate upstream wrappers
-and richer compositions are not yet equivalent ports.
+not by source-file count. Core Input/Textarea/Label/Field/Toggle/ToggleGroup wrappers now exist alongside
+TextField and the existing button APIs. Remaining items below are extensions.
 
 | Priority/family | Remaining ports |
 | --- | --- |
@@ -76,7 +75,7 @@ and richer compositions are not yet equivalent ports.
 | Feedback and content extensions | Imperative toast queue/promise host, source-to-full-screen search morph, search app bar, async/virtual suggestions, list expansion/swipe/typeahead; core family is implemented |
 | Scheduling extensions | Date/calendar touch swipes, infinite range scrolling; time pointer-cancel/held/repeated input evidence, broader locale/accessibility coverage |
 | Larger upstream compositions | Command nested/fuzzy/virtual extensions and breadcrumb overflow/router adapters; charts, carousels, command palette and breadcrumbs are implemented; accordion/collapsible, table, pagination and client-side DataTable are implemented |
-| Input extensions | Field wrappers and standalone input/textarea/label/toggle-group wrappers; input groups and OTP input are implemented |
+| Input extensions | Arbitrary field slots/native constraints and form integrations; vertical/custom-spacing toggle groups; core Input/Textarea/Label/Field/Toggle/ToggleGroup, input groups and OTP are implemented |
 | Upstream helpers and application blocks | Theme/provider/portal extensions; core application blocks implemented |
 
 Theme scope/color mode and Dioxus context are now implemented. Portal-container
@@ -237,3 +236,21 @@ answers/advanced constraints, richer uploader/composer integrations and broader
 platform coverage. They remain library application patterns, not separately
 specified official M3 components. Next: forms/field/Input/Textarea/Label/ToggleGroup
 wrappers, or extend existing components and consuming-app distribution.
+
+
+## Form primitives —2026-10-12
+
+Input, Textarea, Label, FieldSet/Legend/Group/Field/Content/Title/Label/Description/
+Error/Separator, standalone Toggle and string-valued ToggleGroup are implemented
+locally with six exact copy examples; all109 exports compile. Pointer/keyboard,
+validation/helper replacement, disabled navigation, required and multiple
+selection, sampled shape/width motion and390px layout have saved reports.
+
+The core forms wrapper family is covered. Remaining work is primarily deeper
+upstream API parity (vertical/custom-spacing toggle groups, arbitrary field slots/
+form integration, provider and message-engine extensions), distribution/installer
+and consuming-app runtime verification, Android touch, RTL and broader accessibility.
+Accepted theme helpers and application blocks are published at0362828.
+
+The compact showcase selector now remounts per route; actual native selected
+values matched form-fields and toggles after switching families.

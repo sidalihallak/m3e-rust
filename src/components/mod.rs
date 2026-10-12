@@ -160,3 +160,8 @@ pub use attachment::{Attachment,AttachmentGroup,AttachmentMedia,AttachmentConten
 pub use message::{Bubble,BubbleContent,BubbleGroup,BubbleReactions,BubbleVariant,ReactionSide,Message,MessageGroup,MessageAvatar,MessageContent,MessageHeader,MessageFooter,MessageAlign};
 pub use message_scroller::{MessageScroller,MessageScrollerItem,MessageScrollerHandle,MessageScrollPosition,MessageScrollDirection,use_message_scroller};
 pub use questionnaire::{Questionnaire,QuestionDefinition,QuestionChoice,QuestionKind,QuestionAnswer,QuestionShortcuts};
+
+pub mod form;
+pub mod toggle;
+pub use form::{Input,Textarea,Label,InputVariant,InputSize,Field,FieldLabel,FieldDescription,FieldError,FieldGroup,FieldSet,FieldLegend,FieldContent,FieldTitle,FieldSeparator,FieldOrientation};
+pub use toggle::{Toggle,ToggleVariant,ToggleGroup,ToggleGroupItem};
