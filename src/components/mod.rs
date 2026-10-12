@@ -120,3 +120,10 @@ pub mod command;
 pub mod breadcrumb;
 pub use command::{Command, CommandDialog, CommandEntry};
 pub use breadcrumb::{Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator, BreadcrumbEllipsis, BreadcrumbTrail, BreadcrumbEntry};
+
+pub mod menubar;
+pub mod navigation_menu;
+pub mod sidebar;
+pub use menubar::{Menubar, MenubarEntry, MenubarSelection};
+pub use navigation_menu::{NavigationMenu, NavigationMenuEntry, NavigationLink};
+pub use sidebar::{Sidebar, SidebarTrigger, SidebarLayout, SidebarInset, SidebarHeader, SidebarFooter, SidebarGroup, SidebarContent};

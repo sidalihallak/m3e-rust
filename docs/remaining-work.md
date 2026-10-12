@@ -72,7 +72,7 @@ and richer compositions are not yet equivalent ports.
 | --- | --- |
 | Help and selection extensions | Transient rich help, custom/virtual popup anchors and boundaries, async/virtual suggestions, chip Backspace navigation; core family is implemented |
 | Surfaces extensions | Additional snap points, nested drawer stacking, velocity fling and whole-surface touch gestures; core bottom/side/generic sheets implemented |
-| Navigation extensions | Generic upstream sidebar helpers, navigation menu/menubar; core app bar/toolbar/bar/rail and modal rail are implemented |
+| Navigation extensions | Sidebar provider/persistence, right-edge/offcanvas variants and auxiliary item wrappers; menubar/navigation menu/core sidebar helpers and app bar/toolbar/bar/rail are implemented |
 | Feedback and content extensions | Imperative toast queue/promise host, source-to-full-screen search morph, search app bar, async/virtual suggestions, list expansion/swipe/typeahead; core family is implemented |
 | Scheduling extensions | Date/calendar touch swipes, infinite range scrolling; time pointer-cancel/held/repeated input evidence, broader locale/accessibility coverage |
 | Larger upstream compositions | Command nested/fuzzy/virtual extensions and breadcrumb overflow/router adapters; charts, carousels, command palette and breadcrumbs are implemented; accordion/collapsible, table, pagination and client-side DataTable are implemented |
@@ -145,7 +145,7 @@ Current scope: bar/line/area/donut; horizontal/vertical standard carousel;
 multi-browse, hero, uncontained and vertical full-screen expressive carousel.
 Centered hero, multi-aspect ratio, complete Compose keyline parity, richer chart
 engines and Embla/Recharts API parity remain extensions. See component reports.
-Command palette and breadcrumbs are implemented locally; navigation menu/menubar are the next new compositions.
+Command palette and breadcrumbs are implemented locally; navigation menu/menubar and controlled sidebar helpers are implemented locally.
 
 The excessive expressive terminal gap is fixed using Material-style shifted size keylines;
 [desktop and390px end evidence](expressive-carousel-verification.md#terminal-layout-correction--2026-10-11) records trailing error below1px.
@@ -158,4 +158,14 @@ keyboard, filtering, disabled actions, modal focus restoration and390px layouts
 have [command](command-verification.md) and [breadcrumb](breadcrumb-verification.md)
 evidence. Four copy controls match clipboard text exactly. Automatic breadcrumb
 overflow, cmdk fuzzy ranking/nested pages and broader platform coverage remain.
-Next new family: navigation menu/menubar and sidebar helpers.
+Next new family: input groups and OTP input.
+
+## Navigation extensions — 2026-10-12
+
+Menubar, native-link NavigationMenu and controlled Sidebar helpers are implemented
+locally with three new usages. All **82** exported examples compile; three copy
+controls match exact clipboard text. Desktop keyboard/pointer/repeated toggle,
+390px bounds and compact modal focus have [saved evidence](navigation-extensions-samples.json).
+Full upstream sidebar provider/auxiliary wrappers, navigation shared viewport,
+advanced adaptation and broader platform checks remain in the component reports.
+Next new family: input groups and OTP input.

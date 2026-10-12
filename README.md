@@ -231,3 +231,10 @@ showcase. Four copyable Rust examples bring the independent library check to
 **79** usages. See [command](docs/command-verification.md) and
 [breadcrumb](docs/breadcrumb-verification.md) reports for the upstream contract,
 Material composition choices and verification scope.
+
+### Navigation extensions
+
+Menubar, navigation-menu link popups and controlled sidebar layout helpers are
+available locally. Source/reference comparisons and platform scope are recorded
+in [menubar](docs/menubar-verification.md), [navigation menu](docs/navigation-menu-verification.md)
+and [sidebar](docs/sidebar-verification.md) reports.

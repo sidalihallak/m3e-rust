@@ -20,3 +20,5 @@ pub use components::{Accordion, AccordionEntry, Collapsible, Table, TableHeader,
 pub use components::{Chart, ChartContainer, ChartLegend, ChartTooltipContent, ChartKind, ChartIndicator, ChartSeries, ChartPoint, ChartTooltipItem, Carousel, CarouselEntry, CarouselOrientation, ExpressiveCarousel, ExpressiveCarouselVariant, CarouselSlide};
 
 pub use components::{Command, CommandDialog, CommandEntry, Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator, BreadcrumbEllipsis, BreadcrumbTrail, BreadcrumbEntry};
+
+pub use components::{Menubar, MenubarEntry, MenubarSelection, NavigationMenu, NavigationMenuEntry, NavigationLink, Sidebar, SidebarTrigger, SidebarLayout, SidebarInset, SidebarHeader, SidebarFooter, SidebarGroup, SidebarContent};

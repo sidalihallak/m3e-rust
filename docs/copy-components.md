@@ -331,3 +331,18 @@ entry values must be unique. Shortcut text does not register a hotkey.
 Breadcrumb parent links are native URLs; its last entry is current-page text.
 See [command](command-verification.md) and [breadcrumb](breadcrumb-verification.md)
 reports for source comparisons and runtime scope.
+
+## Navigation extensions
+
+Copy `menubar.rs`, `menubar.js`, `navigation_menu.rs`, `sidebar.rs`, and
+`navigation-extensions.css` with shared Menu, Popover/anchored, compact breakpoint,
+NavigationRail/ModalNavigationRail, Icon and motion/ripple dependencies.
+The exporter carries these files. MenubarSelection identifies the parent menu
+index and existing MenuSelection path. NavigationMenu uses native href links;
+Sidebar requires independent controlled desktop/mobile state. Cookie persistence,
+global hotkeys and the upstream React provider are not ported.
+See the component reports for actual runtime scope and differences.
+
+Latest navigation-family check: all **82** exported usages compile; the three
+new controls have exact clipboard evidence. Shared source dependencies and
+platform gaps are recorded in the component reports.
