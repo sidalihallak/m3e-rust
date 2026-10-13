@@ -5,3 +5,7 @@
 .env
 .env.*
 !.env.example
+
+/dist/
+/browser-evidence/
+__pycache__/

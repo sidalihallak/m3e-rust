@@ -1,0 +1,103 @@
+name: Registry and component CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        required: false
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+      - name: Install Rust
+        run: |
+          rustup toolchain install 1.99.0 --profile minimal --target wasm32-unknown-unknown
+          rustup default 1.99.0
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: registry-${{ runner.os }}-rust-1.99.0-${{ hashFiles('Cargo.lock') }}
+      - name: Verify pinned upstream icon artwork
+        run: |
+          python3 -m venv "$RUNNER_TEMP/font-env"
+          "$RUNNER_TEMP/font-env/bin/pip" install fonttools==4.66.1
+          python3 scripts/fetch-icon-reference.py --directory "$RUNNER_TEMP/icon-reference"
+          "$RUNNER_TEMP/font-env/bin/python" scripts/gen-extra-icons.py "$RUNNER_TEMP/icon-reference/fonts" "$RUNNER_TEMP/icon-reference/package"
+          python3 scripts/verify-icons.py "$RUNNER_TEMP/icon-reference/package"
+          git diff --exit-code -- assets/material-symbols/font-extras.json
+      - name: Verify source integrity and installer safety
+        run: |
+          python3 scripts/verify-distribution.py
+          python3 tests/installer.py
+          git diff --exit-code -- registry/registry.json
+      - name: Fetch locked dependencies
+        run: cargo fetch --locked --target wasm32-unknown-unknown
+      - name: Check showcase
+        run: cargo check --locked --offline --target wasm32-unknown-unknown
+      - name: Check every independently installed entry
+        run: python3 scripts/verify-registry.py --cargo cargo --target-dir "$PWD/target" --report "$RUNNER_TEMP/registry-checks.json"
+      - name: Check complete install and consuming app
+        env:
+          CARGO_TARGET_DIR: ${{ github.workspace }}/target
+        run: |
+          python3 scripts/m3e.py add --all --target "$RUNNER_TEMP/consumer"
+          cargo check --locked --offline --target wasm32-unknown-unknown --lib --manifest-path "$RUNNER_TEMP/consumer/ui-kit/Cargo.toml"
+          python3 scripts/m3e.py add button icon-button material-symbol text-field combobox dialog tabs switch card sidebar-provider data-table message-scroller theme-scope --target examples/consumer
+          cargo check --locked --offline --target wasm32-unknown-unknown --manifest-path examples/consumer/Cargo.toml
+      - name: Build deterministic registry archive
+        run: |
+          python3 scripts/package-registry.py --output "$RUNNER_TEMP/release-a"
+          python3 scripts/package-registry.py --output "$RUNNER_TEMP/release-b"
+          cmp "$RUNNER_TEMP/release-a/SHA256SUMS" "$RUNNER_TEMP/release-b/SHA256SUMS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: registry-checks
+          path: ${{ runner.temp }}/registry-checks.json
+  icons:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+      - name: Install Rust
+        run: |
+          rustup toolchain install 1.99.0 --profile minimal --target wasm32-unknown-unknown
+          rustup default 1.99.0
+      - uses: ./.github/actions/setup-dx
+      - name: Install browser verification dependencies
+        run: |
+          python3 -m venv "$RUNNER_TEMP/browser-env"
+          "$RUNNER_TEMP/browser-env/bin/pip" install playwright==1.63.0 Pillow==12.0.0
+          "$RUNNER_TEMP/browser-env/bin/playwright" install --with-deps chromium webkit
+      - name: Build actual Wasm preview
+        run: dx build --platform web --locked --debug-symbols false
+      - name: Compare rendered glyphs
+        run: |
+          python3 -m http.server 8080 --bind 127.0.0.1 --directory target/dx/m3e-rust-ui/debug/web/public > "$RUNNER_TEMP/server.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for attempt in {1..30}; do curl -fsS http://127.0.0.1:8080/ >/dev/null && break; sleep 1; done
+          "$RUNNER_TEMP/browser-env/bin/python" tests/icons_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: icon-browser-evidence
+          path: browser-evidence

@@ -8,6 +8,7 @@ use dioxus::prelude::*;
 #[component]
 pub fn Switch(
     #[props(default)] checked: bool,
+    #[props(default)] draggable: bool,
     #[props(default)] disabled: bool,
     #[props(default)] error: bool,
     #[props(default)] class: String,
@@ -17,6 +18,10 @@ pub fn Switch(
     #[props(default)] onchange: EventHandler<bool>,
 ) -> Element {
     let mut pressed = use_signal(|| false);
+    let id=use_hook(||super::motion::next_id("m3-switch"));
+    let change=use_callback(move |next|onchange.call(next));
+    use_effect({let id=id.clone();move ||{let script=include_str!("switch_drag.js").replace("__ID__",&format!("{id:?}"));spawn(async move{let mut eval=document::eval(&script);while let Ok(value)=eval.recv::<bool>().await{pressed.set(false);change.call(value);}});}});
+    use_drop({let id=id.clone();move ||{spawn(async move{let _=document::eval(&format!("window.__m3SwitchDrags?.[{id:?}]?.();")).await;});}});
     let checked_class = if checked { " m3-switch--checked" } else { "" };
     let pressed_class = if pressed() && !disabled {
         " m3-switch--pressed"
@@ -36,6 +41,7 @@ pub fn Switch(
 
     rsx! {
         button {
+            id,"data-draggable":draggable,
             r#type: "button",
             role: "switch",
             class,
@@ -52,6 +58,7 @@ pub fn Switch(
             onpointercancel: move |_| pressed.set(false),
             onpointerleave: move |_| pressed.set(false),
             onkeydown: move |event| {
+                if event.key()==Key::Escape{pressed.set(false);}
                 if !disabled && event.code() == Code::Space && !event.is_auto_repeating() {
                     pressed.set(true);
                 }

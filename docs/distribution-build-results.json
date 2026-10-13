@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-13",
+  "final_registry_snapshot": "8f637afdcf887bde6cb8d753c4f4e63a867fb7c5ce01cc6f33bd80e737d4b54e",
+  "selective_checks": "registry-compile-checks.json",
+  "full_install": {
+    "requested": 76,
+    "modules": 82,
+    "files": 194,
+    "wasm_lib_check": "passed",
+    "path": "/private/tmp/m3e-all-final-1013/ui-kit"
+  },
+  "full_export": {
+    "path": "/private/tmp/m3e-icons-final-1013",
+    "wasm_lib_and_examples": "passed",
+    "examples": 126,
+    "warnings": "unused import in existing chip example; unnecessary braces in two new examples"
+  },
+  "consumer_serve": {
+    "port": 8081,
+    "build_seconds": 13.4,
+    "result": "success"
+  },
+  "main_serve": {
+    "port": 8080,
+    "result": "success",
+    "observed_build_seconds": [
+      51.4,
+      16.64
+    ]
+  }
+}

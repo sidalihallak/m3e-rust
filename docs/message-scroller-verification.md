@@ -102,3 +102,40 @@ transition list returns.390px scroller/body have no page overflow. Screenshots:
 scroller-desktop.png/scroller-390.png. Wheel/touch cancellation, initialStart/
 LastAnchor, public message-target command, prop changes, streaming and all RTL
 permutations remain outside the sampled runtime matrix.
+
+
+## Advanced behavior follow-up — 2026-10-13
+
+Scope `#advanced-messages`. Current rendered reference: No dedicated current M3 component page; relevant baseline references retained above..
+Actual [upstream](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/message-scroller.tsx) at `c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972`.
+
+Public status exposes following/scrollable/start/end, locally visible IDs and
+current anchor; controller adds pause/resume/peek. `stream_anchor`, `streaming`,
+scroll margin, 64px previous-item peek and optional controls slot. Uses stable
+message IDs for prepend preservation (initial runtime check found DOM-node reuse
+broke preservation and prompted this correction). Short turns align to anchor;
+responses larger than remaining viewport follow end. Pausing keeps scrollTop160
+while appending; resume follows; peek pauses. A long response ended at236 with
+scrollHeight632 and viewport396, i.e. the true end. Final corrected prepend passes: top160→216 after56px insertion, with the
+existing h0 screen position unchanged at467.992px.
+
+No dedicated M3 MessageScroller component contract. Compared actual upstream
+wrapper and `@shadcn/react` 0.3.1 implementation/types: edge8, previousPeek64,
+margin0, anchor epsilon0.5. This is an application pattern with Material surfaces,
+not an official M3 component. No full virtualization or upstream provider engine
+parity; audible streaming/live-region UX and Android remain open.
+
+### Verification and reproduction
+
+Run `./scripts/dev.sh`, wait for a successful Wasm build, reload, then open the
+listed hash route. Use actual native pointer and keyboard input. Fresh desktop
+results and sample arrays are in [advanced-behavior-samples.json](advanced-behavior-samples.json).
+All seven new copy controls matched their displayed Rust snippets exactly.
+The exported editable library and **123 usage examples** passed an offline
+`cargo check` for `wasm32-unknown-unknown` (2026-10-13, 11.99s); an existing
+unused `ChipSize` import warning remains. Final anchoring/announcement fixes were rebuilt and rechecked; see the family report.
+
+Android remains paused. Compact browser geometry is desktop responsive evidence,
+not Android touch evidence. Audible screen-reader, forced-colors, large-font,
+live-prop interruption and exhaustive variant coverage remain open. Source
+settings alone do not establish runtime behavior.

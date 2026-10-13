@@ -1,0 +1,10 @@
+[package]
+name = "m3e-consumer-verification"
+version = "0.1.0"
+edition = "2024"
+[dependencies]
+dioxus = { version = "0.7", features = ["web"] }
+m3e-rust-ui = { path = "ui-kit" }
+[features]
+default = ["web"]
+web = ["dioxus/web"]

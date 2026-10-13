@@ -331,3 +331,30 @@ Raw data: [`card-media-samples.json`](card-media-samples.json); screenshot:
    `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`. It reads computed styles, holds the pointer
    down, presses Enter and Space on the focused outlined card, and clicks the disabled card.
 3. Compare the output with [`card-samples.json`](card-samples.json).
+
+
+## Advanced behavior follow-up — 2026-10-13
+
+Scope `#advanced-gestures`. Current rendered reference: [overview](https://m3.material.io/components/cards/overview), [specs](https://m3.material.io/components/cards/specs), [guidelines](https://m3.material.io/components/cards/guidelines), [accessibility](https://m3.material.io/components/cards/accessibility).
+Actual [upstream](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/card.tsx) at `c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972`.
+
+ReorderGroup adds explicit 48px handles and equivalent native Move buttons,
+8px inter-card spacing and level4 dragged elevation with .16 layer. Official
+cards accessibility requires a single-pointer alternative; included Move controls
+also restore focus and announce position. Pointer/keyboard order and Escape
+checks pass. See reorder report; no general card DnD engine parity is claimed.
+
+### Verification and reproduction
+
+Run `./scripts/dev.sh`, wait for a successful Wasm build, reload, then open the
+listed hash route. Use actual native pointer and keyboard input. Fresh desktop
+results and sample arrays are in [advanced-behavior-samples.json](advanced-behavior-samples.json).
+All seven new copy controls matched their displayed Rust snippets exactly.
+The exported editable library and **123 usage examples** passed an offline
+`cargo check` for `wasm32-unknown-unknown` (2026-10-13, 11.99s); an existing
+unused `ChipSize` import warning remains. Final anchoring/announcement fixes were rebuilt and rechecked; see the family report.
+
+Android remains paused. Compact browser geometry is desktop responsive evidence,
+not Android touch evidence. Audible screen-reader, forced-colors, large-font,
+live-prop interruption and exhaustive variant coverage remain open. Source
+settings alone do not establish runtime behavior.

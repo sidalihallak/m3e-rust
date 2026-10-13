@@ -16,6 +16,7 @@ if destination.exists():
 shutil.copytree(source / 'src/components', destination / 'src/components')
 for filename in ['lib.rs', 'icons.rs', 'loading_shapes.rs', 'shape_library.rs', 'theme.rs']:
     shutil.copy2(source / 'src' / filename, destination / 'src' / filename)
+shutil.copytree(source / 'src/icons', destination / 'src/icons')
 for filename in ['Cargo.toml', 'Cargo.lock', 'THIRD_PARTY_NOTICES.md']:
     shutil.copy2(source / filename, destination / filename)
 shutil.copytree(source / '.cargo', destination / '.cargo')
@@ -23,6 +24,7 @@ shutil.copytree(source / '.cargo', destination / '.cargo')
 for file in (source / 'assets').glob('*.css'):
     if file.name not in ['main.css', 'tailwind.css', 'showcase.css']:
         shutil.copy2(file, destination / 'assets' / file.name)
+shutil.copytree(source / 'assets/material-symbols', destination / 'assets/material-symbols')
 guide = (source / 'docs/copy-components.md').read_text()
 guide = re.sub(r'\(([\w-]+\.md)\)',
                r'(https://github.com/sidalihallak/m3e-rust/blob/main/docs/\1)', guide)

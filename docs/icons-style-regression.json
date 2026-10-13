@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-13",
+  "input": "NativeSelect change and Checkbox activation in in-app WebKit",
+  "glyph": "rocket_launch",
+  "pixel_region": [
+    452,
+    666,
+    485,
+    689
+  ],
+  "comparisons": [
+    {
+      "from": "rounded",
+      "to": "sharp",
+      "changed_glyph_pixels": 472
+    },
+    {
+      "from": "rounded",
+      "to": "outlined",
+      "changed_glyph_pixels": 472
+    },
+    {
+      "from": "outlined",
+      "to": "sharp",
+      "changed_glyph_pixels": 0
+    },
+    {
+      "from": "outlined",
+      "to": "outlined-filled",
+      "changed_glyph_pixels": 759
+    }
+  ],
+  "build_seconds": 16.37,
+  "wasm_check": "passed",
+  "registry_snapshot": "a314d1844abef7ba609ed43bb4282d5d0ef5584101690217a8dba5d8fe810147",
+  "computer_comparisons": [
+    {
+      "from": "rounded",
+      "to": "outlined",
+      "changed_glyph_pixels": 58
+    },
+    {
+      "from": "outlined",
+      "to": "sharp",
+      "changed_glyph_pixels": 253
+    },
+    {
+      "from": "rounded",
+      "to": "sharp",
+      "changed_glyph_pixels": 252
+    }
+  ],
+  "reference_note": "Official rocket_launch outlined and sharp paths are identical; computer has three distinct reference paths.",
+  "computer_pixel_region": [
+    444,
+    542,
+    469,
+    570
+  ]
+}

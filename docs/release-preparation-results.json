@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-13",
+  "registry_snapshot": "8c1341968b18d264825a751b6981cf74c5233bdf7f03ce6d8883c229dab1aec4",
+  "archive": "/private/tmp/m3e-release-final/m3e-registry-0.1.0.tar.gz",
+  "sha256": "c512c5c6ccf679828385d6e5c0f0525860864039a1c45a3a310aa14c68b446f0",
+  "installer_tests": {
+    "count": 4,
+    "passed": true
+  },
+  "archive_roundtrip": "passed",
+  "wasm_installed_library_check": {
+    "passed": true,
+    "seconds": 16.41,
+    "note": "Before addition of package provenance JSON; Rust unchanged."
+  },
+  "workflow_actionlint": "1.7.12 passed (shellcheck/pyflakes disabled)",
+  "upstream_source_check": "pinned SVG SHA512 and three font SHA256 verified; regenerated supplement byte-identical; 25806 paths match",
+  "icon_browser_evidence": "icons-artwork-verification.json",
+  "hosted_ci": "not run; workflows local",
+  "release": "prepared locally; no tag, push or published release"
+}

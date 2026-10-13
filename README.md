@@ -288,3 +288,36 @@ and stale-result guards. Four copyable examples; all116 exported usages compile.
 Desktop pointer/keyboard, sampled motion, actual OS Reduce Motion and390px
 layout have evidence. Android, audible reader and full upstream engine parity
 remain open. Item and Spinner are published at `0ec375b`.
+
+### Sidebar extensions and advanced behavior
+
+New opt-in provider/menu helpers, async virtual selection and editable input
+chips, scrollable tabs and panel swipe, draggable switches, accessible card/chip
+reorder, expandable lists, controlled cell editing/multisort/CSV/column widths,
+and streaming-message status/anchors. Seven new interactive previews include
+copyable Rust examples; all123 exported usages compile.
+
+See [family verification](docs/advanced-behavior-verification.md),
+[sidebar provider](docs/sidebar-provider-verification.md), and
+[reordering](docs/reorder-verification.md) for desktop evidence and explicit
+platform/engine differences. Android remains paused.
+
+### Full icons and editable installation
+
+All 4,301 Material Symbols names are available in rounded, outlined and sharp,
+with outlined/filled glyphs at weight400. Existing rounded constants remain
+compatible. Search and copy from the icon gallery.
+
+[Icon verification](docs/icons-verification.md) ·
+[Installer quickstart](docs/registry-installer.md) ·
+[Registry checks](docs/registry-installer-verification.md) ·
+[Independent application](docs/consumer-app-verification.md).
+
+### GitHub registry releases and CI
+
+The source registry can live in a public or private GitHub repository.
+[Release setup and consumption](docs/github-registry-release.md) explains
+versioned archives, checksums, authenticated private access and draft releases.
+CI validates pinned icon sources, editable installation, Wasm builds and browser
+artwork. [Conclusive icon evidence](docs/icons-artwork-verification.json) compares
+actual sprite output with direct source paths, including live style changes.

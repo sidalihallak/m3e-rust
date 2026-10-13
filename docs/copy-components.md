@@ -547,3 +547,32 @@ live region, Alt+G focus and Escape dismissal, focus restoration and hover/focus
 visibility timer holds. No focus trap. Four copy controls matched the exact Rust
 snippets; all116 exported usages compile. See the
 [verification report](toaster-verification.md) for tested scope and gaps.
+
+## Sidebar extensions and advanced behavior
+
+Seven additional current examples bring the independent exported usage check to
+**123 examples** (2026-10-13). All seven new copy controls were checked against
+the exact clipboard text. See [family evidence](advanced-behavior-verification.md).
+
+| API | Copy dependencies |
+| --- | --- |
+| SidebarProvider/Panel/Menu helpers | `sidebar_provider.rs`, `sidebar_provider.js`, `sidebar-provider.css`; existing Sidebar layout helpers and navigation/Sheet/Input/Label/Skeleton/Button/Icon/Badge/Ripple assets |
+| Async selection/input-chip editing | `async_options.rs`, `select.rs`, `selection.js`, `combobox.rs`, `select.css`, shared field/popup/icon dependencies |
+| Scrollable Tabs/TabsViewport | `tabs.rs`, tabs/ripple/icon CSS/runtime; `swipe.rs`, `swipe.js` |
+| ReorderGroup | `reorder.rs`, `reorder.js`, `advanced.css`, Icon/motion tokens and supplied Card/Chip assets |
+| Draggable Switch | `switch.rs`, `switch_drag.js`, `switch.css`, existing Ripple and motion assets |
+| Expandable List/SwipeAction | `list.rs`, `list.js`, `swipe.rs`, `swipe.js`, existing disclosure runtime/accordion CSS, `advanced.css`, existing list assets |
+| Advanced DataTable | existing table family plus `advanced.css`; DataCellEdit callback is application-owned |
+| Streaming MessageScroller | `message_scroller.rs`, `.js`, existing application-block CSS and `advanced.css`; status/controllers use Dioxus context |
+
+The complete exporter includes all runtime files and CSS. Consumers must load
+the copied styles and existing generated color/motion roles. Apply controlled
+callbacks, use unique stable IDs, and persist state in the consuming app. Async
+transport, cancellation and debounce belong to its data layer.
+
+## Selective installation
+
+Use the [local registry installer](registry-installer.md) to resolve Rust, CSS,
+JavaScript and assets automatically. It generates UiStyles for the installed
+library and preserves editable source. Full icon namespaces and dynamic symbols
+are described in [icon verification](icons-verification.md).

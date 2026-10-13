@@ -18,6 +18,10 @@ pub fn Combobox(
     #[props(default)] input_value: String,
     #[props(default)] open: bool,
     #[props(default)] multiple: bool,
+    #[props(default)] virtualize: bool,
+    #[props(default)] loading: bool,
+    #[props(default)] load_error: Option<String>,
+    #[props(default)] onedit: EventHandler<String>,
     #[props(default)] allow_custom: bool,
     #[props(default = true)] show_clear: bool,
     #[props(default)] variant: TextFieldVariant,
@@ -32,7 +36,7 @@ pub fn Combobox(
     #[props(default)] oninput: EventHandler<String>,
     #[props(default)] onchange: EventHandler<Vec<String>>,
 ) -> Element {
-    rsx! {ChoiceField {label,options,values,input_value,open,multiple,allow_custom,show_clear,variant,placeholder,supporting,name,disabled,required,error,class,editable:true,onopenchange,oninput,onchange}}
+    rsx! {ChoiceField {label,options,values,input_value,open,multiple,allow_custom,show_clear,variant,placeholder,supporting,name,disabled,required,error,class,editable:true,onopenchange,oninput,onchange,virtualize,loading,load_error,onedit}}
 }
 
 /// Free text with manual list suggestions. The native input remains editable;
@@ -43,6 +47,9 @@ pub fn Autocomplete(
     label: String,
     options: Vec<SelectOption>,
     #[props(default)] value: String,
+    #[props(default)] virtualize: bool,
+    #[props(default)] loading: bool,
+    #[props(default)] load_error: Option<String>,
     #[props(default)] open: bool,
     #[props(default)] variant: TextFieldVariant,
     #[props(default)] supporting: Option<String>,
@@ -56,7 +63,7 @@ pub fn Autocomplete(
     #[props(default)] oninput: EventHandler<String>,
     #[props(default)] onselect: EventHandler<String>,
 ) -> Element {
-    rsx! {ChoiceField {label,options,input_value:value,values:vec![],open,variant,supporting,name,placeholder,class,disabled,required,error,editable:true,allow_custom:true,clear_on_select:false,show_clear:false,onopenchange,oninput,
+    rsx! {ChoiceField {label,options,input_value:value,values:vec![],open,variant,supporting,name,placeholder,class,disabled,required,error,virtualize,loading,load_error,editable:true,allow_custom:true,clear_on_select:false,show_clear:false,onopenchange,oninput,
         onchange:move|values:Vec<String>|{if let Some(value)=values.first(){onselect.call(value.clone());}}
     }}
 }

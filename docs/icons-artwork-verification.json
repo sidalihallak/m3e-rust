@@ -1,0 +1,249 @@
+{
+  "date": "2026-10-13",
+  "browser": "Codex in-app WebKit",
+  "size": 48,
+  "threshold_per_rgb_channel": 8,
+  "comparisons": [
+    {
+      "style": "rounded",
+      "glyph": "delete",
+      "mismatched_pixels": 0,
+      "dark_pixels": 601,
+      "filled": false
+    },
+    {
+      "style": "rounded",
+      "glyph": "computer",
+      "mismatched_pixels": 0,
+      "dark_pixels": 560,
+      "filled": false
+    },
+    {
+      "style": "rounded",
+      "glyph": "check",
+      "mismatched_pixels": 0,
+      "dark_pixels": 149,
+      "filled": false
+    },
+    {
+      "style": "outlined",
+      "glyph": "delete",
+      "mismatched_pixels": 0,
+      "dark_pixels": 615,
+      "filled": false
+    },
+    {
+      "style": "outlined",
+      "glyph": "computer",
+      "mismatched_pixels": 0,
+      "dark_pixels": 563,
+      "filled": false
+    },
+    {
+      "style": "outlined",
+      "glyph": "check",
+      "mismatched_pixels": 0,
+      "dark_pixels": 153,
+      "filled": false
+    },
+    {
+      "style": "sharp",
+      "glyph": "delete",
+      "mismatched_pixels": 0,
+      "dark_pixels": 620,
+      "filled": false
+    },
+    {
+      "style": "sharp",
+      "glyph": "computer",
+      "mismatched_pixels": 0,
+      "dark_pixels": 573,
+      "filled": false
+    },
+    {
+      "style": "sharp",
+      "glyph": "check",
+      "mismatched_pixels": 0,
+      "dark_pixels": 153,
+      "filled": false
+    },
+    {
+      "filled": true,
+      "style": "rounded",
+      "glyph": "delete",
+      "mismatched_pixels": 0,
+      "dark_pixels": 961
+    },
+    {
+      "filled": true,
+      "style": "rounded",
+      "glyph": "computer",
+      "mismatched_pixels": 0,
+      "dark_pixels": 1352
+    },
+    {
+      "filled": true,
+      "style": "rounded",
+      "glyph": "check",
+      "mismatched_pixels": 0,
+      "dark_pixels": 149
+    },
+    {
+      "filled": true,
+      "style": "outlined",
+      "glyph": "delete",
+      "mismatched_pixels": 0,
+      "dark_pixels": 963
+    },
+    {
+      "filled": true,
+      "style": "outlined",
+      "glyph": "computer",
+      "mismatched_pixels": 0,
+      "dark_pixels": 1355
+    },
+    {
+      "filled": true,
+      "style": "outlined",
+      "glyph": "check",
+      "mismatched_pixels": 0,
+      "dark_pixels": 153
+    },
+    {
+      "filled": true,
+      "style": "sharp",
+      "glyph": "delete",
+      "mismatched_pixels": 0,
+      "dark_pixels": 968
+    },
+    {
+      "filled": true,
+      "style": "sharp",
+      "glyph": "computer",
+      "mismatched_pixels": 0,
+      "dark_pixels": 1365
+    },
+    {
+      "filled": true,
+      "style": "sharp",
+      "glyph": "check",
+      "mismatched_pixels": 0,
+      "dark_pixels": 153
+    }
+  ],
+  "all_identical": true,
+  "build_seconds": 10.38,
+  "family_differences": [
+    {
+      "glyph": "delete",
+      "filled": false,
+      "from": "rounded",
+      "to": "outlined",
+      "changed_pixels": 219
+    },
+    {
+      "glyph": "delete",
+      "filled": false,
+      "from": "outlined",
+      "to": "sharp",
+      "changed_pixels": 57
+    },
+    {
+      "glyph": "computer",
+      "filled": false,
+      "from": "rounded",
+      "to": "outlined",
+      "changed_pixels": 25
+    },
+    {
+      "glyph": "computer",
+      "filled": false,
+      "from": "outlined",
+      "to": "sharp",
+      "changed_pixels": 105
+    },
+    {
+      "glyph": "check",
+      "filled": false,
+      "from": "rounded",
+      "to": "outlined",
+      "changed_pixels": 87
+    },
+    {
+      "glyph": "check",
+      "filled": false,
+      "from": "outlined",
+      "to": "sharp",
+      "changed_pixels": 0
+    },
+    {
+      "glyph": "delete",
+      "filled": true,
+      "from": "rounded",
+      "to": "outlined",
+      "changed_pixels": 233
+    },
+    {
+      "glyph": "delete",
+      "filled": true,
+      "from": "outlined",
+      "to": "sharp",
+      "changed_pixels": 49
+    },
+    {
+      "glyph": "computer",
+      "filled": true,
+      "from": "rounded",
+      "to": "outlined",
+      "changed_pixels": 25
+    },
+    {
+      "glyph": "computer",
+      "filled": true,
+      "from": "outlined",
+      "to": "sharp",
+      "changed_pixels": 105
+    },
+    {
+      "glyph": "check",
+      "filled": true,
+      "from": "rounded",
+      "to": "outlined",
+      "changed_pixels": 87
+    },
+    {
+      "glyph": "check",
+      "filled": true,
+      "from": "outlined",
+      "to": "sharp",
+      "changed_pixels": 0
+    }
+  ],
+  "live_changes": [
+    {
+      "family": "rounded",
+      "filled": false,
+      "mismatched_pixels": 0,
+      "dark_pixels": 601
+    },
+    {
+      "family": "outlined",
+      "filled": false,
+      "mismatched_pixels": 0,
+      "dark_pixels": 615
+    },
+    {
+      "family": "sharp",
+      "filled": false,
+      "mismatched_pixels": 0,
+      "dark_pixels": 620
+    },
+    {
+      "family": "sharp",
+      "filled": true,
+      "mismatched_pixels": 0,
+      "dark_pixels": 968
+    }
+  ],
+  "live_build_seconds": 17.04
+}

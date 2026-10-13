@@ -46,6 +46,8 @@ pub fn Tabs(
     items: Vec<TabItem>,
     selected: usize,
     #[props(default)] variant: TabsVariant,
+    #[props(default)] scrollable: bool,
+    #[props(default)] badges: Vec<Option<u32>>,
     #[props(default)] aria_label: Option<String>,
     #[props(default)] class: String,
     #[props(default)] panel_ids: Vec<String>,
@@ -82,12 +84,13 @@ pub fn Tabs(
     });
 
     rsx! {
-        div { id: "{id}", class, role: "tablist", "aria-label": aria_label,
+        div { id: "{id}", class, role: "tablist", "aria-label": aria_label, "data-scrollable": scrollable,
             for (index, item) in items.into_iter().enumerate() {
                 {
                     let is_selected = Some(index) == selected;
                     let available = enabled.clone();
                     let panel_id = panel_ids.get(index).cloned();
+                    let badge=badges.get(index).copied().flatten();
                     let tab_id = tab_ids.get(index).cloned().unwrap_or_else(|| format!("{id}-{index}"));
                     let tab_class = if is_selected { "m3-tabs__tab m3-tabs__tab--selected" } else { "m3-tabs__tab" };
                     let focus_id = id.clone();
@@ -97,6 +100,7 @@ pub fn Tabs(
                             r#type: "button",
                             role: "tab",
                             class: tab_class,
+                            aria_label:badge.map(|n|format!("{}, {n} notifications",item.label)),
                             "aria-selected": if is_selected { "true" } else { "false" },
                             tabindex: if is_selected { "0" } else { "-1" },
                             disabled: item.disabled,
@@ -116,7 +120,7 @@ const key = {key:?};
 let target;
 if (key === 'Home') target = enabled[0];
 else if (key === 'End') target = enabled[enabled.length-1];
-else {{ const delta = (key === 'ArrowRight' ? 1 : -1) * (rtl ? -1 : 1); target = enabled[(pos + delta + enabled.length) % enabled.length]; }}
+else {{ const delta = (key === 'ArrowRight' ? 1 : -1) * (rtl ? -1 : 1); target = enabled[list.dataset.scrollable==='true'?Math.max(0,Math.min(enabled.length-1,pos+delta)):(pos + delta + enabled.length) % enabled.length]; }}
 if (target !== undefined) {{ list.querySelectorAll('[role=tab]')[target]?.focus(); dioxus.send(target); }}
 "#);
                                     spawn(async move {
@@ -129,7 +133,7 @@ if (target !== undefined) {{ list.querySelectorAll('[role=tab]')[target]?.focus(
                             if let Some(icon) = item.icon {
                                 Icon { icon, class: "m3-tabs__icon" }
                             }
-                            span { class: "m3-tabs__label", "{item.label}" }
+                            span {class:"m3-tabs__label-row",span { class: "m3-tabs__label", "{item.label}" } if let Some(count)=badge {span {aria_hidden:"true",super::NotificationBadge{count}}}}
                         }
                     }
                 }
@@ -174,13 +178,20 @@ const observeTargets = () => {{
     if (!observed.has(target)) {{ resize.observe(target); observed.add(target); }}
   }}
 }};
-const changes = new MutationObserver(() => {{ observeTargets(); place(); }});
+const reveal = () => {{
+ if(list.dataset.scrollable!=='true')return;
+ const tab=list.querySelector('[aria-selected="true"]');if(!tab)return;
+ const r=tab.getBoundingClientRect(),v=list.getBoundingClientRect();
+ const delta=r.left<v.left?r.left-v.left-16:r.right>v.right?r.right-v.right+16:0;
+ if(delta)list.scrollBy({{left:delta,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'}});
+}};
+const changes = new MutationObserver(() => {{ observeTargets(); place(); reveal(); }});
 changes.observe(list, {{ attributes: true, subtree: true, childList: true,
   characterData: true, attributeFilter: ["aria-selected"] }});
 observeTargets();
 place();
 const enableMotion = () => {{
-  place();
+  place(); reveal();
   // Paint initial geometry before enabling transitions, so mount never slides from x=0.
   motionFrame = requestAnimationFrame(() => {{
     motionFrame = requestAnimationFrame(() => {{
@@ -195,4 +206,15 @@ window.__m3TabIndicators["{id}"] = () => {{
 return true;
 "#
     )
+}
+
+/// Native vertical scrolling is preserved; horizontal gestures commit one enabled
+/// panel only on release. Escape/pointer cancellation retains the current panel.
+#[component]
+pub fn TabsViewport(selected:usize,enabled:Vec<usize>,onchange:EventHandler<usize>,#[props(default)] class:String,children:Element)->Element{
+ let id=use_hook(||next_id("m3-tabs-viewport"));
+ super::swipe::use_swipe(id.clone(),EventHandler::new(move |direction:i32|{
+  if let Some(at)=enabled.iter().position(|i|*i==selected){let next=at as i32+direction;if next>=0 {if let Some(index)=enabled.get(next as usize){onchange.call(*index);}}}
+ }));
+ rsx!{div{id,class:"m3-tabs-viewport {class}",{children}}}
 }

@@ -101,3 +101,39 @@ Android touch/on-screen keyboard and native Dioxus Android remain paused.
 Audible screen-reader announcements, forced colors, text enlargement,
 transformed/scrolled ancestors, dynamic anchor replacement and unmount stress
 remain unverified. A separate consuming-app runtime is also still open.
+
+
+## Advanced behavior follow-up — 2026-10-13
+
+Scope `#advanced-selection`. Current rendered reference: [overview](https://m3.material.io/components/text-fields/overview), [specs](https://m3.material.io/components/text-fields/specs), [guidelines](https://m3.material.io/components/text-fields/guidelines), [accessibility](https://m3.material.io/components/text-fields/accessibility).
+Actual [upstream](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/combobox.tsx) at `c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972`.
+
+AsyncOptions generation guards ignore obsolete Results. ChoiceField supports
+loading/error and fixed 48px virtualization, 24 logical rows mounted with
+spacers and full keyboard model. Active descendant refers to a mounted row.
+A 2000-item request and 35 Down presses select p35; the window shows 26–49.
+Other People options explain the larger total option count in raw page samples.
+Error alert preserves selected p35; cancellation clears loading. Editable input
+chips have separate 48px main/remove targets. Empty Backspace focuses Casey,
+Left goes to Bob, Delete removes Bob, F2 Alice removes its chip and places Alice
+in the draft with focus People. Same shared engine is used by Select/Autocomplete.
+
+Server query/debounce/cancellation of transport is application-owned; fixed-height
+rows, flattened accessible group labels, no variable-height virtualization or
+full headless upstream engine parity. Standalone Select/Autocomplete async
+permutations still need separate runtime checks.
+
+### Verification and reproduction
+
+Run `./scripts/dev.sh`, wait for a successful Wasm build, reload, then open the
+listed hash route. Use actual native pointer and keyboard input. Fresh desktop
+results and sample arrays are in [advanced-behavior-samples.json](advanced-behavior-samples.json).
+All seven new copy controls matched their displayed Rust snippets exactly.
+The exported editable library and **123 usage examples** passed an offline
+`cargo check` for `wasm32-unknown-unknown` (2026-10-13, 11.99s); an existing
+unused `ChipSize` import warning remains. Final anchoring/announcement fixes were rebuilt and rechecked; see the family report.
+
+Android remains paused. Compact browser geometry is desktop responsive evidence,
+not Android touch evidence. Audible screen-reader, forced-colors, large-font,
+live-prop interruption and exhaustive variant coverage remain open. Source
+settings alone do not establish runtime behavior.

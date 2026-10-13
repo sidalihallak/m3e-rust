@@ -1,4 +1,5 @@
-# Remaining work — 2026-10-12
+<!-- Later implementation notes override historical planning entries below. -->
+# Remaining work — 2026-10-13
 
 The desktop defects identified in the fidelity review have implementation fixes,
 including the subsequent badge, segmented-content and primary-indicator
@@ -27,18 +28,20 @@ they are not the current defect list.
   touch cancellation and on-screen keyboards. Native Dioxus Android requires a
   separate package/device check from the web preview in Android Chrome.
 
-## 2. Finish optional behavior in existing components
+## 2. Extend and verify advanced behavior
 
-- Switch drag gestures and card dragged/elevation states.
-- Chip avatars and drag behavior.
-- Finish input-chip keyboard editing/navigation and the whole-chip focus target
-  for remove-only chips; the embedded Combobox currently exposes named native
-  remove buttons with Enter/Space support. See the
-  [official-reference audit](multi-select-filled-alignment-verification.md).
-- Scrollable tabs, inline badges in tabs and content-swipe integration; vertical
-  tabs are an additional upstream feature.
-- Audit all variants and disabled/focus combinations rather than treating the
-  gallery's sampled states as exhaustive coverage.
+[Sidebar/advanced implementation and desktop evidence](advanced-behavior-verification.md)
+now covers provider persistence/context, menu helpers, async/virtual selection,
+chip keyboard editing, scrollable/badged tabs and panel swipe, switch drag,
+card/chip reorder with native alternatives, list expansion/typeahead/swipe,
+multisort/edit/width/CSV and streaming-message anchors/status.
+
+Remaining extensions include chip avatars, animated swipe-to-reveal and tab
+panel translation, cross-group reorder/autoscroll, variable-height options,
+standalone Select/Autocomplete async permutations, boundary-drag widths,
+server/virtual data tables and full message-scroller engine parity. Sidebar
+edge rail/every item variant/multi-provider arbitration remain optional.
+Broader reduced-motion, audible reader, RTL drag and Android checks remain.
 
 ## 3. Extend the Material 3 Expressive component kit
 
@@ -282,3 +285,37 @@ Next new family: richer Sidebar/provider compositions. Remaining extensions:
 source registry/installer, consuming-app runtime, deeper upstream slot/engine
 parity (including Base UI toast stacks/swipe/portal adapter), result-message
 mappers, Android touch, RTL, audible assistive checks and broader accessibility.
+
+## Latest advanced follow-up — 2026-10-13
+
+Sidebar extensions and the advanced behavior pilot are implemented locally with
+seven copy examples and123 independently compiling usages. The family report
+lists actual verified states and limitations. This supersedes earlier entries
+listing switch drag, chip keyboard editing, scrollable tabs, async suggestions,
+list gestures, data editing and message anchors as wholly unimplemented.
+Remaining families are extensions/hardening: scheduling gestures, command
+nested/fuzzy/virtual behavior, breadcrumb router/overflow adapters, input/form
+slots, provider/portal integrations and consuming-app distribution checks.
+
+## Icons and distribution pilot — 2026-10-13
+
+Complete pinned Material Symbols catalogue, local selective registry installer
+and independent consuming-app desktop verification are implemented locally.
+76 selective entries and 126 exported usages compile. This supersedes the
+earlier entries marking distribution/consumer checks wholly unimplemented.
+
+Remaining: remote registry/release/CI, full upstream engine/slot parity,
+scheduling gestures, command nested/fuzzy/virtual behavior, breadcrumb router/
+overflow adapters, provider/portal integrations, Android touch, native Dioxus
+targets, RTL and audible accessibility checks. See the three new reports.
+
+## Registry release preparation —2026-10-13
+
+GitHub-only versioned source distribution, deterministic packaging/checksums,
+installer roundtrip tests and CI/release workflows are prepared locally.
+Conclusive icon source and rendered/live-change comparisons are recorded.
+Remaining distribution steps: commit/push, hosted CI execution, create matching
+version tag, review the resulting draft and publish. A standalone public registry
+service is unnecessary. Private access can use authenticated GitHub downloads
+or a pinned clone. Android/native/RTL/audible/platform and API extensions above
+remain open.

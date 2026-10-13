@@ -202,3 +202,33 @@ selected check is centred at 0.00px horizontally and +0.50px vertically. The
 +0.5px is sub-pixel, from the handle's half-pixel top edge (y = 437.5).
 
 Evidence: [`icon-specimen.png`](icon-specimen.png).
+
+
+## Advanced behavior follow-up — 2026-10-13
+
+Scope `#advanced-gestures`. Current rendered reference: [overview](https://m3.material.io/components/switch/overview), [specs](https://m3.material.io/components/switch/specs), [guidelines](https://m3.material.io/components/switch/guidelines), [accessibility](https://m3.material.io/components/switch/accessibility).
+Actual [upstream](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/switch.tsx) at `c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972`.
+
+Optional `draggable` tracks the native 52×32px switch, with 28px pressed handle.
+8px horizontal intent, vertical-scroll exclusion, RTL travel, halfway release
+commit, pointer cancellation and controlled/disabled guards. Source upstream
+switch provides styling, not drag logic. Space and Enter toggle twice back to
+false; real pointer drag changes false→true with exactly one added callback
+(Changes 2→3). Visible adjacent labels supplied in gallery/examples. Disabled
+handle observed noninteractive. Pointer cancellation, RTL drag and Android
+scrolling still need expanded runtime evidence.
+
+### Verification and reproduction
+
+Run `./scripts/dev.sh`, wait for a successful Wasm build, reload, then open the
+listed hash route. Use actual native pointer and keyboard input. Fresh desktop
+results and sample arrays are in [advanced-behavior-samples.json](advanced-behavior-samples.json).
+All seven new copy controls matched their displayed Rust snippets exactly.
+The exported editable library and **123 usage examples** passed an offline
+`cargo check` for `wasm32-unknown-unknown` (2026-10-13, 11.99s); an existing
+unused `ChipSize` import warning remains. Final anchoring/announcement fixes were rebuilt and rechecked; see the family report.
+
+Android remains paused. Compact browser geometry is desktop responsive evidence,
+not Android touch evidence. Audible screen-reader, forced-colors, large-font,
+live-prop interruption and exhaustive variant coverage remain open. Source
+settings alone do not establish runtime behavior.

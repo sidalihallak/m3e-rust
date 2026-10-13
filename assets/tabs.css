@@ -142,3 +142,6 @@
 /* Keep visual geometry separate from the native interaction target. */
 .m3-tabs__tab { height: 48px; margin: 0; }
 .m3-tabs--icons .m3-tabs__tab { height: 64px; }
+
+.m3-tabs__label-row{display:inline-flex;align-items:center;gap:4px}.m3-tabs__label-row .m3-badge{position:static;background:var(--md-sys-color-primary);color:var(--md-sys-color-on-primary)}.m3-tabs[data-scrollable=true]{overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin}.m3-tabs[data-scrollable=true] .m3-tabs__tab{flex:0 0 auto;min-width:90px;padding-inline:24px}.m3-tabs-viewport{touch-action:pan-y;min-width:0}
+.m3-tabs[data-scrollable=true]::before{content:"";flex:0 0 52px}.m3-tabs[data-scrollable=true]{padding-inline-end:16px}

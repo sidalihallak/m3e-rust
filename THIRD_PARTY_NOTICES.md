@@ -79,3 +79,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Google Material Symbols
+
+Artwork copyright Google LLC, Apache License 2.0. Full license is retained in
+assets/material-symbols/LICENSE and installed with the icon assets.
+
+SVG input: community-maintained @material-symbols/svg-400 by marella, version
+0.48.0, https://github.com/marella/material-symbols. Font-only glyphs and the
+complete name index come from https://github.com/google/material-design-icons
+at 49d4db35df873165d6bd6ba09b063c7dafbac2f4. Exact input hashes and generation
+axes are retained in assets/material-symbols/catalog.json and upstream-fonts.json.

@@ -1,0 +1,72 @@
+[
+  {
+    "check": "search style fill final",
+    "status": "2 of 3929 symbols · Page 1 of 1",
+    "symbol": {
+      "fill": "rgb(77, 61, 117)",
+      "html": "<svg viewBox=\"0 -960 960 960\" class=\"m3-icon \" role=\"img\" aria-label=\"Selected rocket_launch\" data-icon=\"rocket_launch\" data-symbol-style=\"sharp\" data-symbol-filled=\"true\" data-symbol-valid=\"true\"><use x=\"0\" y=\"-960\" width=\"960\" height=\"960\" href=\"/assets/sharp-dxh7a251ca3e1497264.svg#rocket_launch-fill\"></use></svg>",
+      "rect": {
+        "bottom": 631.9921875,
+        "height": 24,
+        "left": 427.1953125,
+        "right": 451.1953125,
+        "top": 607.9921875,
+        "width": 24,
+        "x": 427.1953125,
+        "y": 607.9921875
+      }
+    }
+  },
+  {
+    "check": "style rounded",
+    "href": "/assets/rounded-dxhd3a2bbbf20bb4ed.svg#rocket_launch-fill"
+  },
+  {
+    "check": "style outlined",
+    "href": "/assets/outlined-dxhb9ceb4142c12c9f.svg#rocket_launch-fill"
+  },
+  {
+    "check": "style sharp",
+    "href": "/assets/sharp-dxh7a251ca3e1497264.svg#rocket_launch-fill"
+  },
+  {
+    "check": "copy Selected icon usage",
+    "exact": true,
+    "code": "use dioxus::prelude::*;\nuse m3e_rust_ui::{icons, Icon};\n#[component]\nfn SelectedIcon()->Element {\n rsx! {Icon {icon:icons::sharp::ROCKET_LAUNCH_FILL}}\n}\n"
+  },
+  {
+    "check": "copy Complete Material Symbols usage",
+    "exact": true,
+    "code": "use dioxus::prelude::*;\nuse m3e_rust_ui::{icons, Icon, IconButton, MaterialSymbol, SymbolStyle};\n#[component]\nfn ProjectIcons()->Element {\n rsx! {\n  Icon {icon:icons::rounded::DELETE,aria_label:Some(\"Delete\".into())}\n  Icon {icon:icons::outlined::ROCKET_LAUNCH_FILL,aria_label:Some(\"Launch\".into())}\n  IconButton {icon:icons::sharp::SETTINGS,aria_label:\"Settings\"}\n  MaterialSymbol {name:\"travel_explore\",style:SymbolStyle::Rounded,filled:true}\n }\n}\n"
+  },
+  {
+    "check": "numeric name keyboard choose",
+    "code": "use dioxus::prelude::*;\nuse m3e_rust_ui::{icons, Icon};\n#[component]\nfn SelectedIcon()->Element {\n rsx! {Icon {icon:icons::sharp::ICON_10K_FILL}}\n}\n"
+  },
+  {
+    "check": "pagination",
+    "status": "3929 of 3929 symbols · Page 2 of 82",
+    "rendered": 48
+  },
+  {
+    "check": "final complete Google index and font-only glyph",
+    "status": "1 of 4301 symbols · Page 1 of 1",
+    "symbol": {
+      "html": "<svg viewBox=\"0 -960 960 960\" class=\"m3-icon \" role=\"img\" aria-label=\"Selected magic_button\" data-icon=\"magic_button\" data-symbol-style=\"outlined\" data-symbol-filled=\"true\" data-symbol-valid=\"true\"><use x=\"0\" y=\"-960\" width=\"960\" height=\"960\" href=\"/assets/outlined-dxh43291235b0487315.svg#magic_button-fill\"></use></svg>",
+      "rect": {
+        "bottom": 635.9921875,
+        "height": 24,
+        "left": 427.1953125,
+        "right": 451.1953125,
+        "top": 611.9921875,
+        "width": 24,
+        "x": 427.1953125,
+        "y": 611.9921875
+      }
+    }
+  },
+  {
+    "check": "final font-only selected code exact copy",
+    "copied": "use dioxus::prelude::*;\nuse m3e_rust_ui::{icons, Icon};\n#[component]\nfn SelectedIcon()->Element {\n rsx! {Icon {icon:icons::outlined::MAGIC_BUTTON_FILL}}\n}\n"
+  }
+]

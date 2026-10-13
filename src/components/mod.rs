@@ -177,3 +177,24 @@ pub use toaster::{
     ToastOptions, ToastPosition, ToastPromiseMessages, ToastProvider, ToastQueueSnapshot, Toaster,
     use_toast_manager,
 };
+
+pub mod sidebar_provider;
+pub use sidebar_provider::{SidebarProvider, SidebarState, use_sidebar, SidebarPanel, SidebarToggle, SidebarSide, SidebarVariant, SidebarCollapse, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarMenuAction, SidebarMenuSub, SidebarSeparator, SidebarInput, SidebarMenuSkeleton};
+
+pub mod async_options;
+pub use async_options::{AsyncOptions, AsyncOptionsSnapshot, AsyncOptionsRequest, use_async_options};
+
+pub(crate) mod swipe;
+pub use tabs::TabsViewport;
+
+pub use message_scroller::MessageScrollerStatus;
+
+pub mod reorder;
+pub use reorder::{ReorderAxis,ReorderGroup,ReorderItem};
+
+pub use data_table::DataCellEdit;
+
+pub use list::SwipeAction;
+
+pub mod material_symbol;
+pub use material_symbol::{MaterialSymbol, SymbolStyle};

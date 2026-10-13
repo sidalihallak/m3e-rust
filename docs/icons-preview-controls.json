@@ -1,0 +1,64 @@
+{
+  "comparison": [
+    {
+      "filled": "true",
+      "name": "delete",
+      "size": 48,
+      "style": "rounded"
+    },
+    {
+      "filled": "true",
+      "name": "delete",
+      "size": 48,
+      "style": "outlined"
+    },
+    {
+      "filled": "true",
+      "name": "delete",
+      "size": 48,
+      "style": "sharp"
+    }
+  ],
+  "examples": [
+    {
+      "filled": "true",
+      "name": "add",
+      "style": "sharp"
+    },
+    {
+      "filled": "true",
+      "name": "favorite",
+      "style": "sharp"
+    },
+    {
+      "filled": "true",
+      "name": "check",
+      "style": "sharp"
+    },
+    {
+      "filled": "true",
+      "name": "close",
+      "style": "sharp"
+    },
+    {
+      "filled": "true",
+      "name": "info",
+      "style": "sharp"
+    },
+    {
+      "filled": "true",
+      "name": "chevron_left",
+      "style": "sharp"
+    },
+    {
+      "filled": "true",
+      "name": "arrow_back",
+      "style": "sharp"
+    },
+    {
+      "filled": "true",
+      "name": "remove",
+      "style": "sharp"
+    }
+  ]
+}

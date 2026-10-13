@@ -8,6 +8,8 @@ mod application_blocks_gallery;
 mod form_gallery;
 mod item_gallery;
 mod notification_gallery;
+mod advanced_gallery;
+mod icon_gallery;
 mod composite_gallery;
 mod help_gallery;
 mod showcase;
@@ -76,7 +78,7 @@ const ICON_USAGE: &str = r#"use dioxus::prelude::*;
 use m3e_rust_ui::{icons, Icon};
 
 #[component]
-fn SavedBadge() -> Element {
+fn SavedIcon() -> Element {
     rsx! {
         Icon { icon: icons::CHECK, aria_label: Some("Saved".to_string()) }
     }
@@ -475,6 +477,8 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/form.css") }
         document::Stylesheet { href: asset!("/assets/item.css") }
         document::Stylesheet { href: asset!("/assets/toaster.css") }
+        document::Stylesheet { href: asset!("/assets/sidebar-provider.css") }
+        document::Stylesheet { href: asset!("/assets/advanced.css") }
         document::Stylesheet { href: asset!("/assets/spinner.css") }
         document::Stylesheet { href: asset!("/assets/toggle.css") }
         document::Stylesheet { href: asset!("/assets/tailwind.css") }
@@ -707,19 +711,11 @@ fn App() -> Element {
                     div {
                         p { class: "eyebrow", "04 — ICONS" }
                         h2 { "Material Symbols" }
-                        p { class: "section-description", "Official Material Symbols Rounded glyphs, generated from @material-symbols/svg-400@0.48.0. Icons fill with the current text colour and size through --m3-icon-size." }
+                        p { class: "section-description", "The complete Material Symbols catalogue: Rounded, Outlined and Sharp, with filled variants. Static SVG paths and local sprites inherit the text colour." }
                     }
                     span { class: "token-note", "APACHE-2.0 · GOOGLE" }
                 }
-                    article { class: "demo-card icon-specimen",
-                        div { class: "card-topline", span { "ICON" } span { class: "component-index", "C" } }
-                        div { class: "icon-grid",
-                            for (label, icon) in [("add", icons::ADD), ("favorite", icons::FAVORITE), ("check", icons::CHECK), ("close", icons::CLOSE), ("info", icons::INFO), ("chevron_left", icons::CHEVRON_LEFT), ("arrow_back", icons::ARROW_BACK), ("remove", icons::REMOVE)] {
-                                div { class: "icon-cell", Icon { icon, class: "icon-glyph" } span { "{label}" } }
-                            }
-                        }
-                        p { class: "icon-note", "Official Material Symbols Rounded paths, generated from @material-symbols/svg-400@0.48.0." }
-                    }
+                icon_gallery::IconCatalogue {}
                 CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Icon usage", code: ICON_USAGE }
             }
             section { class: "wrap roles-section fab-section", id:"fabs", hidden:route()!="fabs",
@@ -1527,6 +1523,7 @@ fn App() -> Element {
             form_gallery::FormGallery {active:route()}
             item_gallery::ItemGallery {active:route()}
             notification_gallery::NotificationGallery {active:route()}
+            advanced_gallery::AdvancedGallery {active:route()}
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
             }
         }
@@ -1542,8 +1539,10 @@ fn menu_items() -> Vec<FabMenuItem> {
 }
 
 #[component]
-fn CodeCard(eyebrow: &'static str, title: &'static str, code: &'static str, #[props(default)] hidden: bool) -> Element {
+fn CodeCard(eyebrow: &'static str, title: &'static str, code: String, #[props(default)] hidden: bool) -> Element {
     let mut copied = use_signal(|| false);
+    use_effect(use_reactive((&code,), move |_| copied.set(false)));
+    let copy_code = code.clone();
     rsx! {
         article { class: "code-card", hidden,
             div { class: "code-card-header",
@@ -1554,13 +1553,13 @@ fn CodeCard(eyebrow: &'static str, title: &'static str, code: &'static str, #[pr
                 button {
                     class: "copy-code",
                     aria_label: if copied() { "Code copied" } else { "Copy Rust code" },
-                    onclick: move |_| async move {
+                    onclick: move |_| { let code = copy_code.clone(); async move {
                         let script = format!(
                             "await navigator.clipboard.writeText({:?}); return true;",
                             code
                         );
                         copied.set(document::eval(&script).join::<bool>().await.unwrap_or(false));
-                    },
+                    }},
                     span { class: "copy-icon", if copied() { "✓" } else { "▢" } }
                     if copied() { "Copied" } else { "Copy code" }
                 }

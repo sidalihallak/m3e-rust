@@ -1,0 +1,5 @@
+[application]
+name = "m3e-consumer-verification"
+default_platform = "web"
+[web.app]
+title = "Installed M3E consumer"

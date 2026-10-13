@@ -96,3 +96,39 @@ archive. Filter Complete/no-match; change page size. Open Columns and hide/show
 columns including the sorted column. Toggle Loading/Error. Repeat at390px and
 in dark mode. Screenshots: `data-table-desktop.png`, `data-table-dark.png`,
 `data-table-phone.png` under `evidence/data`.
+
+
+## Advanced behavior follow-up — 2026-10-13
+
+Scope `#advanced-tables`. Current rendered reference: No dedicated current M3 component page; relevant baseline references retained above..
+Actual [upstream](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/table.tsx) at `c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972`.
+
+Adds controlled cell edits, Shift multicolumn sort, native range column widths
+100–400 step10 and filtered CSV export. Native table stays a table; individual
+controls are focusable. Header aria-sort only on primary key; sort priority is
+visible. Numeric NaN produces an alert; Enter saves42 and restores focus to cell,
+Escape keeps Ada. Shift Owner/Score yields primary Owner ascending, secondary
+Score with no contradictory aria-sort. Right arrow width180→190px. Filter Project2
+exports all five matching rows in sort order, not only visible page.
+
+Source upstream table/pagination are primitives; no dedicated upstream DataTable
+file exists. [Archived M2 data tables](https://m2.material.io/components/data-tables)
+read rendered Oct13 (M2 is unmaintained); [WAI table pattern](https://www.w3.org/WAI/ARIA/apg/patterns/table/)
+read Oct13. These are not a new M3 table specification. Resizing uses native
+labeled ranges, not header-boundary dragging. CSV payload checked; actual download
+file and server sorting/edit persistence/virtual rows remain open.
+
+### Verification and reproduction
+
+Run `./scripts/dev.sh`, wait for a successful Wasm build, reload, then open the
+listed hash route. Use actual native pointer and keyboard input. Fresh desktop
+results and sample arrays are in [advanced-behavior-samples.json](advanced-behavior-samples.json).
+All seven new copy controls matched their displayed Rust snippets exactly.
+The exported editable library and **123 usage examples** passed an offline
+`cargo check` for `wasm32-unknown-unknown` (2026-10-13, 11.99s); an existing
+unused `ChipSize` import warning remains. Final anchoring/announcement fixes were rebuilt and rechecked; see the family report.
+
+Android remains paused. Compact browser geometry is desktop responsive evidence,
+not Android touch evidence. Audible screen-reader, forced-colors, large-font,
+live-prop interruption and exhaustive variant coverage remain open. Source
+settings alone do not establish runtime behavior.

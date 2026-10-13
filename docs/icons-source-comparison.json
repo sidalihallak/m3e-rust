@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-13",
+  "names": 4301,
+  "google_revision": "49d4db35df873165d6bd6ba09b063c7dafbac2f4",
+  "google_index_complete": true,
+  "total_variants": 25806,
+  "source_matches": [
+    {
+      "style": "rounded",
+      "compared_variants": 8602,
+      "package_variants": 7858,
+      "font_only_variants": 164,
+      "alias_variants": 580
+    },
+    {
+      "style": "outlined",
+      "compared_variants": 8602,
+      "package_variants": 7858,
+      "font_only_variants": 164,
+      "alias_variants": 580
+    },
+    {
+      "style": "sharp",
+      "compared_variants": 8602,
+      "package_variants": 7858,
+      "font_only_variants": 164,
+      "alias_variants": 580
+    }
+  ],
+  "font_axis_values": [
+    {
+      "axis_values": {
+        "FILL": [
+          0,
+          1
+        ],
+        "GRAD": 0,
+        "opsz": 48,
+        "wght": 400
+      },
+      "font_only_codepoints": 78,
+      "font_only_names": 82,
+      "style": "rounded",
+      "units_per_em": 960
+    },
+    {
+      "axis_values": {
+        "FILL": [
+          0,
+          1
+        ],
+        "GRAD": 0,
+        "opsz": 48,
+        "wght": 400
+      },
+      "font_only_codepoints": 78,
+      "font_only_names": 82,
+      "style": "outlined",
+      "units_per_em": 960
+    },
+    {
+      "axis_values": {
+        "FILL": [
+          0,
+          1
+        ],
+        "GRAD": 0,
+        "opsz": 48,
+        "wght": 400
+      },
+      "font_only_codepoints": 78,
+      "font_only_names": 82,
+      "style": "sharp",
+      "units_per_em": 960
+    }
+  ]
+}

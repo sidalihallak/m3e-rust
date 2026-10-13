@@ -82,3 +82,10 @@ not Android touch evidence. Audible screen-reader, actual OS Reduce Motion,
 RTL, forced colors, zoom and held/touch cancellation checks remain open for this
 family. Existing shared runtimes support reduced motion but were not newly
 verified under the OS setting here.
+
+## Provider extension — 2026-10-13
+
+The existing controlled Sidebar remains. New optional context/provider,
+persistence, side/surface/collapse modes and composable menu helpers are covered
+by [the provider report](sidebar-provider-verification.md). Its compact modal
+supports the full supplied slots. Historical gaps above describe the earlier API.

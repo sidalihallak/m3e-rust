@@ -1,0 +1,17 @@
+name: Install pinned Dioxus CLI
+description: Download and checksum Dioxus CLI 0.7.10 for Linux
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env:
+        DX_VERSION: 0.7.10
+      run: |
+        release="https://github.com/DioxusLabs/dioxus/releases/download/v${DX_VERSION}"
+        archive=dx-x86_64-unknown-linux-gnu.tar.gz
+        curl --fail --location --retry 3 "${release}/${archive}" -o "$RUNNER_TEMP/$archive"
+        curl --fail --location --retry 3 "${release}/dx-x86_64-unknown-linux-gnu.sha256" -o "$RUNNER_TEMP/dx.sha256"
+        (cd "$RUNNER_TEMP"; grep " ${archive}$" dx.sha256 | sha256sum --check -)
+        mkdir -p "$RUNNER_TEMP/dioxus"
+        tar -xzf "$RUNNER_TEMP/$archive" -C "$RUNNER_TEMP/dioxus"
+        echo "$RUNNER_TEMP/dioxus" >> "$GITHUB_PATH"

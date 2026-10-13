@@ -36,6 +36,9 @@ pub fn Select(
     label: String,
     options: Vec<SelectOption>,
     #[props(default)] value: String,
+    #[props(default)] virtualize: bool,
+    #[props(default)] loading: bool,
+    #[props(default)] load_error: Option<String>,
     #[props(default)] open: bool,
     #[props(default)] variant: TextFieldVariant,
     #[props(default)] size: SelectSize,
@@ -49,7 +52,7 @@ pub fn Select(
     #[props(default)] onopenchange: EventHandler<bool>,
     #[props(default)] onchange: EventHandler<String>,
 ) -> Element {
-    rsx! { ChoiceField { label,options,values:if value.is_empty(){vec![]}else{vec![value]},open,variant,size,placeholder,supporting,name,disabled,required,error,class,
+    rsx! { ChoiceField { label,options,values:if value.is_empty(){vec![]}else{vec![value]},open,variant,size,placeholder,supporting,name,disabled,required,error,class,virtualize,loading,load_error,
         onopenchange,onchange:move|values:Vec<String>|onchange.call(values.into_iter().next().unwrap_or_default()),
     }}
 }
@@ -122,6 +125,10 @@ pub(crate) fn ChoiceField(
     #[props(default)] editable: bool,
     #[props(default)] input_value: String,
     #[props(default)] multiple: bool,
+    #[props(default)] virtualize: bool,
+    #[props(default)] loading: bool,
+    #[props(default)] load_error: Option<String>,
+    #[props(default)] onedit: EventHandler<String>,
     #[props(default)] allow_custom: bool,
     #[props(default = true)] clear_on_select: bool,
     #[props(default = true)] show_clear: bool,
@@ -157,10 +164,14 @@ pub(crate) fn ChoiceField(
     } else {
         "default"
     };
+    let mut label_cache=use_signal(Vec::<(String,String)>::new);
+    use_effect(use_reactive((&options,&values),move |(options,values)|{let old=label_cache.peek().clone();let next=values.iter().filter_map(|value|options.iter().find(|o|&o.value==value).map(|o|(value.clone(),o.label.clone())).or_else(||old.iter().find(|(v,_)|v==value).cloned())).collect::<Vec<_>>();if *label_cache.peek()!=next{label_cache.set(next);}}));
+    let cached=label_cache();
     let selected = values
         .first()
         .and_then(|v| options.iter().find(|o| &o.value == v))
         .map(|o| o.label.clone())
+        .or_else(||values.first().and_then(|value|cached.iter().find(|(v,_)|v==value).map(|(_,label)|label.clone())))
         .unwrap_or_else(|| {
             if allow_custom {
                 values
@@ -171,20 +182,36 @@ pub(crate) fn ChoiceField(
                 placeholder.clone()
             }
         });
+    let blocked=loading||load_error.is_some();
+    let mut window_start=use_signal(||0usize);
     let all = options.clone();
+    let event_options=options.clone();
+    let event_values=values.clone();
     let current = values.clone();
     let custom_values = values.clone();
     use_popup_runtime(
         panel_id.clone(),
         include_str!("selection.js"),
         EventHandler::new(move |message: Vec<String>| {
-            if message.first().is_some_and(|m| m == "open") {
+            if message.first().is_some_and(|m| m == "window") {
+                if let Some(start)=message.get(1).and_then(|v|v.parse::<usize>().ok()){window_start.set(start);}
+            } else if message.first().is_some_and(|m|m=="chip-remove") && !disabled {
+                if let Some(value)=message.get(1){onchange.call(event_values.iter().filter(|v|*v!=value).cloned().collect());}
+            } else if message.first().is_some_and(|m|m=="chip-edit") && !disabled {
+                if let Some(value)=message.get(1){onedit.call(value.clone());}
+            } else if message.first().is_some_and(|m|m=="select") && !disabled && !blocked {
+                if let Some(option)=event_options.iter().find(|o|Some(&o.value)==message.get(1)&&!o.disabled){
+                    let mut next=if multiple{event_values.clone()}else{vec![]};
+                    if multiple&&next.contains(&option.value){next.retain(|v|v!=&option.value);}else{next.push(option.value.clone());}
+                    onchange.call(next);oninput.call(if clear_on_select{String::new()}else{option.label.clone()});if !multiple{onopenchange.call(false);}
+                }
+            } else if message.first().is_some_and(|m| m == "open") {
                 let next = message.get(1).is_some_and(|v| v == "true");
                 if !next && editable && clear_on_select {
                     oninput.call(String::new());
                 }
                 onopenchange.call(next);
-            } else if message.first().is_some_and(|m| m == "custom") && allow_custom {
+            } else if message.first().is_some_and(|m| m == "custom") && allow_custom && !disabled && !loading {
                 if let Some(value) = message.get(1) {
                     let value = value.trim().to_string();
                     if !value.is_empty() {
@@ -210,7 +237,7 @@ pub(crate) fn ChoiceField(
     );
     // The event closure is rebuilt with current controlled values each render.
     let choose = EventHandler::new(move |option: SelectOption| {
-        if disabled || option.disabled {
+        if disabled || blocked || option.disabled {
             return;
         }
         if multiple {
@@ -238,16 +265,21 @@ pub(crate) fn ChoiceField(
         .iter()
         .enumerate()
         .filter(|(_, o)| {
-            !editable
+            !blocked && (!editable
                 || input_value.trim().is_empty()
                 || o.label
                     .to_lowercase()
-                    .contains(&input_value.trim().to_lowercase())
+                    .contains(&input_value.trim().to_lowercase()))
         })
         .map(|(i, o)| (i, o.clone()))
         .collect();
-    let groups: Vec<_> = visible
-        .chunk_by(|a, b| a.1.group == b.1.group)
+    let model=format!("[{}]",visible.iter().enumerate().map(|(pos,(index,o))|format!("[{}, {}, {}, {}, {}]",json_string(&format!("{panel_id}-option-{index}")),json_string(&o.label),o.disabled,json_string(&o.value),pos)).collect::<Vec<_>>().join(","));
+    let total=visible.len();
+    let start=if virtualize{window_start().min(total.saturating_sub(1))}else{0};
+    let end=if virtualize{(start+24).min(total)}else{total};
+    let rendered=&visible[start..end];
+    let groups: Vec<_> = rendered
+        .chunk_by(|a, b| virtualize || a.1.group == b.1.group)
         .map(|items| (items[0].1.group.clone(), items.to_vec()))
         .collect();
     rsx! { div { id:"{id}",class:"m3-choice m3-choice--{style} m3-choice--{size} {class}","data-disabled":disabled,"data-error":error,"data-open":open,
@@ -256,8 +288,8 @@ pub(crate) fn ChoiceField(
             if editable {
                 div {class:"m3-choice__edit-row",
                     if multiple {for value in values.iter() {
-                        {let text=all.iter().find(|o|&o.value==value).map(|o|o.label.clone()).unwrap_or_else(||value.clone());let remove=value.clone();let selected_values=values.clone();
-                        rsx!{span {class:"m3-choice-chip",span {"{text}"}
+                        {let text=all.iter().find(|o|&o.value==value).map(|o|o.label.clone()).or_else(||cached.iter().find(|(v,_)|v==value).map(|(_,label)|label.clone())).unwrap_or_else(||value.clone());let remove=value.clone();let selected_values=values.clone();
+                        rsx!{span {class:"m3-choice-chip","data-chip-value":value.clone(),button {r#type:"button",class:"m3-choice-chip__main",disabled,aria_label:text.clone(),onclick:{let value=value.clone();let focus=input_id.clone();move |_|{onedit.call(value.clone());let script=format!("document.getElementById({focus:?})?.focus();");spawn(async move{let _=document::eval(&script).await;});}},"{text}"}
                             button {r#type:"button",class:"m3-choice-chip__remove",disabled,aria_label:"Remove {text}",
                                 onclick:move |_|{let next=selected_values.iter().filter(|v|v!=&&remove).cloned().collect();onchange.call(next);},
                                 Icon {icon:icons::CLOSE}
@@ -296,15 +328,15 @@ pub(crate) fn ChoiceField(
         if let Some(name)=name { for value in values.iter() {input {r#type:"hidden",name:name.clone(),value:value.clone(),disabled}} }
         div {id:"{panel_id}",class:"m3-anchor m3-choice-list",role:"listbox",aria_label:label.clone(),aria_multiselectable:multiple,
             "popover":"manual","data-kind":if editable{"combobox"}else{"select"},"data-anchor":input_id,"data-open":open&&!disabled,
-            "data-position-anchor":"{id}-field","data-query":input_value,"data-multiple":multiple,"data-custom":allow_custom,"data-side":"bottom","data-align":"start","data-offset":if editable{6}else{4},
-            if visible.is_empty() {div {class:"m3-choice-empty",role:"status","No matching options"}}
+            "data-position-anchor":"{id}-field","data-query":input_value,"data-multiple":multiple,"data-virtual":virtualize,"data-model":model,"data-values":format!("[{}]",values.iter().map(|v|json_string(v)).collect::<Vec<_>>().join(",")),aria_busy:loading,"data-custom":allow_custom,"data-side":"bottom","data-align":"start","data-offset":if editable{6}else{4},
+            if loading {div {class:"m3-choice-empty",role:"status","Loading options…"}}else if let Some(message)=load_error {div {class:"m3-choice-empty",role:"alert","{message}"}}else if visible.is_empty() {div {class:"m3-choice-empty",role:"status","No matching options"}}
             for (group, items) in groups.iter() {
-                div {class:"m3-choice-options",role:if group.is_some(){"group"}else{"presentation"},aria_label:group.clone(),
-                    if let Some(group)=group {div {class:"m3-choice-group",aria_hidden:"true","{group}"}}
+                div {class:"m3-choice-options",style:if virtualize{format!("padding-top:{}px;padding-bottom:{}px",start*48,(total-end)*48)}else{String::new()},role:if group.is_some()&&!virtualize{"group"}else{"presentation"},aria_label:if !virtualize{group.clone()}else{None},
+                    if !virtualize{if let Some(group)=group {div {class:"m3-choice-group",aria_hidden:"true","{group}"}}}
                     for (index,option) in items.iter() {
                 {let option=option.clone();let select=option.clone();let selected=values.contains(&option.value);
                 rsx!{button {id:"{panel_id}-option-{index}",key:"{option.value}",class:"m3-choice-option",r#type:"button",role:"option",tabindex:"-1",
-                    aria_selected:selected,aria_disabled:option.disabled,"data-label":option.label.clone(),"data-value":option.value.clone(),
+                    aria_selected:selected,aria_disabled:option.disabled,aria_posinset:visible.iter().position(|(i,_)|i==index).map(|p|p+1),aria_setsize:total,aria_label:if virtualize{option.group.as_ref().map(|g|format!("{g}, {}",option.label))}else{None},"data-label":option.label.clone(),"data-value":option.value.clone(),
                     onmousedown:move|e|e.prevent_default(),onclick:move |_|choose.call(select.clone()),
                     super::ripple::Ripple {}
                     if let Some(icon)=option.icon {Icon {icon,class:"m3-choice-option__icon"}}
@@ -317,3 +349,5 @@ pub(crate) fn ChoiceField(
         }
     }}
 }
+
+fn json_string(value:&str)->String{let mut out=String::from("\"");for c in value.chars(){match c{'"'=>out.push_str("\\\""),'\\'=>out.push_str("\\\\"),'\n'=>out.push_str("\\n"),'\r'=>out.push_str("\\r"),'\t'=>out.push_str("\\t"),c if c<' '=>out.push_str(&format!("\\u{:04x}",c as u32)),_=>out.push(c)}}out.push('"');out}

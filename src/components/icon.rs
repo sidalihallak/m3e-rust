@@ -2,8 +2,10 @@ use dioxus::prelude::*;
 
 /// One Material Symbols glyph: its name and the path data on the 960-unit grid.
 ///
-/// Glyphs come from [`crate::icons`], generated from the official
-/// `@material-symbols/svg-400` package by `scripts/gen-icons.mjs`.
+/// Glyphs come from [`crate::icons`], generated from Google Material Symbols
+/// SVGs distributed by the community `@material-symbols/svg-400` package.
+/// Choose `icons::rounded`, `icons::outlined`, or `icons::sharp`; root constants
+/// keep the rounded style for compatibility.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub struct IconData {
     pub name: &'static str,

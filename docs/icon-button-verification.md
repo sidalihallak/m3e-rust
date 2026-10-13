@@ -122,3 +122,10 @@ not a mid-animation capture.
 2. In section 06, press and hold a filled icon button, and read `border-radius` while held and after release.
 3. Click a square toggle, and read its `border-radius` and `aria-pressed`.
 4. Compare with the table in section 2.
+
+## Catalogue extension —2026-10-13
+
+The unchanged IconButton API can now use any generated style/fill constant.
+The independent consuming app verified pointer/keyboard activation with the
+expanded icon source. See [icon source verification](icons-verification.md)
+and [consuming app evidence](consumer-app-verification.md).

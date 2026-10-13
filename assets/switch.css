@@ -163,3 +163,6 @@
     transition-duration: .01ms !important;
   }
 }
+.m3-switch[data-draggable=true]{touch-action:pan-y}.m3-switch[data-dragging=true]{cursor:grabbing}
+
+.m3-switch:dir(rtl){--switch-handle-left:26px}.m3-switch--unchecked-icon:dir(rtl){--switch-handle-left:22px}.m3-switch--checked:dir(rtl){--switch-handle-left:2px}.m3-switch--pressed:dir(rtl){--switch-handle-left:20px}.m3-switch--checked.m3-switch--pressed:dir(rtl){--switch-handle-left:0px}

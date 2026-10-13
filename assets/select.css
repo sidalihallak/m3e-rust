@@ -77,3 +77,5 @@
 .m3-choice--filled .m3-choice__edit-row {padding-block:24px 8px;padding-inline:16px 52px;}
 .m3-choice--filled .m3-choice__input {height:24px;}
 .m3-choice--filled :is(.m3-choice__toggle,.m3-choice__clear) {position:absolute;inset-block-start:4px;inset-inline-end:0;margin:0;}
+.m3-choice-chip__main{min-height:48px;border:0;padding:0;background:none;color:inherit;font:inherit;cursor:pointer}.m3-choice-chip__main:focus-visible{outline:3px solid var(--md-sys-color-primary);outline-offset:2px;border-radius:4px}.m3-choice-list[data-virtual=true] .m3-choice-option{height:48px;min-height:48px;box-sizing:border-box;white-space:nowrap}.m3-choice-list[data-virtual=true] .m3-choice-option>span{overflow:hidden;text-overflow:ellipsis}
+.m3-choice-chip__main{min-width:48px}

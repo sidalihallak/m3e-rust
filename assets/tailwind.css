@@ -287,6 +287,12 @@
   .text-on-primary {
     color: var(--md-sys-color-on-primary);
   }
+  .lowercase {
+    text-transform: lowercase;
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
   .italic {
     font-style: italic;
   }
@@ -335,6 +341,9 @@
   .select-all {
     -webkit-user-select: all;
     user-select: all;
+  }
+  .transform-fill {
+    transform-box: fill-box;
   }
   .group-has-data-\[slot\=combobox-clear\]\/input-group\:hidden {
     &:is(:where(.group\/input-group):has(*[data-slot="combobox-clear"]) *) {

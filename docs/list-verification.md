@@ -57,3 +57,37 @@ Android remains paused. Audible VoiceOver, forced colors, custom seed contrast,
 200% text, broad RTL, interrupted animation and held/touch-cancellation matrices
 remain unverified unless explicitly listed below. Do not treat this report as
 exhaustive pixel or platform parity.
+
+
+## Advanced behavior follow-up — 2026-10-13
+
+Scope `#advanced-lists`. Current rendered reference: [overview](https://m3.material.io/components/lists/overview), [specs](https://m3.material.io/components/lists/specs), [guidelines](https://m3.material.io/components/lists/guidelines), [accessibility](https://m3.material.io/components/lists/accessibility).
+Actual [upstream](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/item.tsx) at `c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972`.
+
+ListItem optional expanded/content/callback uses measured disclosure runtime;
+selection rows do not combine expansion with selection. Prefix typeahead moves
+Design→Themes; Enter expands, Open review adds one activation. Archive native
+Space and real horizontal swipe both archive Rust, and Undo restores it without
+an accidental extra primary activation. The 48px visible action is the accessible
+alternative to swipe. Source upstream item is a styling/composition primitive.
+
+SwipeAction commits a reversible action on release, not the official Android
+multi-button swipe-to-reveal animation. That visual reveal is explicitly still
+open. Expansion uses existing measured-height effects rather than a full-screen
+container-transform pattern. Long-label typeahead/locales and gesture cancellation
+need broader evidence.
+
+### Verification and reproduction
+
+Run `./scripts/dev.sh`, wait for a successful Wasm build, reload, then open the
+listed hash route. Use actual native pointer and keyboard input. Fresh desktop
+results and sample arrays are in [advanced-behavior-samples.json](advanced-behavior-samples.json).
+All seven new copy controls matched their displayed Rust snippets exactly.
+The exported editable library and **123 usage examples** passed an offline
+`cargo check` for `wasm32-unknown-unknown` (2026-10-13, 11.99s); an existing
+unused `ChipSize` import warning remains. Final anchoring/announcement fixes were rebuilt and rechecked; see the family report.
+
+Android remains paused. Compact browser geometry is desktop responsive evidence,
+not Android touch evidence. Audible screen-reader, forced-colors, large-font,
+live-prop interruption and exhaustive variant coverage remain open. Source
+settings alone do not establish runtime behavior.

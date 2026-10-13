@@ -1,0 +1,4734 @@
+[
+  {
+    "check": "keyboard reorder",
+    "state": "Use Space to pick up, arrows to move, Enter or Space to drop, Escape to cancel.\n\nReview\n\nUse the handle to reorder.\n\nDraft\n\nUse the handle to reorder.\n\nPublish\n\nUse the handle to reorder.\n\nDraft dropped at position 2"
+  },
+  {
+    "check": "reorder cancel",
+    "state": "Use Space to pick up, arrows to move, Enter or Space to drop, Escape to cancel.\n\nReview\n\nUse the handle to reorder.\n\nDraft\n\nUse the handle to reorder.\n\nPublish\n\nUse the handle to reorder.\n\nReorder cancelled"
+  },
+  {
+    "check": "single pointer reorder",
+    "state": "Use Space to pick up, arrows to move, Enter or Space to drop, Escape to cancel.\n\nDraft\n\nUse the handle to reorder.\n\nReview\n\nUse the handle to reorder.\n\nPublish\n\nUse the handle to reorder.\n\nReorder cancelled",
+    "focus": "Move Draft later"
+  },
+  {
+    "check": "switch keyboard",
+    "checked": "false"
+  },
+  {
+    "check": "switch pointer drag",
+    "checked": "true",
+    "state": "Notifications\nUnavailable setting\nEnabled: true · Changes: 3\n\nUse Space to pick up, arrows to move, Enter or Space to drop, Escape to cancel.\n\nDraft\n\nUse the handle to reorder.\n\nReview\n\nUse the handle to reorder.\n\nPublish\n\nUse the handle to reorder.\n\nReorder cancelled\n\nCard order: [\"Draft\", \"Review\", \"Publish\"]\n\nUse Space to pick up, arrows to move, Enter or Space to drop, Escape to cancel.\n\nDesign\nRust\nMobile\n\nChip order: [\"Design\", \"Rust\", \"Mobile\"]"
+  },
+  {
+    "check": "card pointer drag",
+    "state": "Use Space to pick up, arrows to move, Enter or Space to drop, Escape to cancel.\n\nDraft\n\nUse the handle to reorder.\n\nReview\n\nUse the handle to reorder.\n\nPublish\n\nUse the handle to reorder.\n\nDraft dropped at position 1"
+  },
+  {
+    "check": "card pointer move across row centre",
+    "state": "Use Space to pick up, arrows to move, Enter or Space to drop, Escape to cancel.\n\nReview\n\nUse the handle to reorder.\n\nDraft\n\nUse the handle to reorder.\n\nPublish\n\nUse the handle to reorder.\n\nDraft dropped at position 2"
+  },
+  {
+    "check": "reorder motion",
+    "samples": [
+      {
+        "stamp": 1791888586944,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 417.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 309.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888586961,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 108)",
+            "value": "Review",
+            "y": 417.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888586968,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 108)",
+            "value": "Review",
+            "y": 417.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888586974,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 108)",
+            "value": "Review",
+            "y": 417.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888586980,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 105.163)",
+            "value": "Review",
+            "y": 415.155029296875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888586985,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 105.163)",
+            "value": "Review",
+            "y": 415.155029296875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888586989,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 97.9502)",
+            "value": "Review",
+            "y": 407.9423828125
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888586994,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 97.9502)",
+            "value": "Review",
+            "y": 407.9423828125
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888586998,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 87.9448)",
+            "value": "Review",
+            "y": 397.93695068359375
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888587002,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 78.1499)",
+            "value": "Review",
+            "y": 388.14208984375
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888587007,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 78.1499)",
+            "value": "Review",
+            "y": 388.14208984375
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888587012,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 65.2633)",
+            "value": "Review",
+            "y": 375.2554931640625
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888587016,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 65.2633)",
+            "value": "Review",
+            "y": 375.2554931640625
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888587020,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 52.1754)",
+            "value": "Review",
+            "y": 362.16754150390625
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888587025,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 52.1754)",
+            "value": "Review",
+            "y": 362.16754150390625
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791888587028,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 38.9893)",
+            "value": "Review",
+            "y": 348.9814758300781
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 417.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 525.9921875
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "check": "invalid number edit",
+    "alerts": [
+      "Enter a finite number."
+    ]
+  },
+  {
+    "check": "numeric save",
+    "text": "42",
+    "focus": "Edit Score for r0"
+  },
+  {
+    "check": "edit cancel",
+    "text": "Ada"
+  },
+  {
+    "check": "multi sort",
+    "status": "Sort priority: [(\"owner\", false), (\"score\", false)]. Shift-activate a heading to add another sort.",
+    "headers": [
+      {
+        "sort": "ascending",
+        "text": "Owner↑"
+      },
+      {
+        "sort": null,
+        "text": "Score↑"
+      },
+      {
+        "sort": null,
+        "text": "Project↕"
+      }
+    ]
+  },
+  {
+    "check": "column sizing keyboard",
+    "state": [
+      "width:190px",
+      "width:180px",
+      "width:180px"
+    ]
+  },
+  {
+    "check": "filtered export",
+    "csv": "\"Owner\",\"Score\",\"Project\"\r\n\"Ada\",\"2\",\"Project 22\"\r\n\"Ada\",\"4\",\"Project 20\"\r\n\"Ada\",\"22\",\"Project 2\"\r\n\"Lin\",\"1\",\"Project 23\"\r\n\"Lin\",\"3\",\"Project 21\""
+  },
+  {
+    "check": "stream initial",
+    "state": {
+      "anchor": [
+        {
+          "id": "h3",
+          "y": 555.9921875
+        },
+        {
+          "id": "h2",
+          "y": 611.9921875
+        },
+        {
+          "id": "h1",
+          "y": 667.9921875
+        },
+        {
+          "id": "h0",
+          "y": 723.9921875
+        },
+        {
+          "id": "question",
+          "y": 779.9921875
+        },
+        {
+          "id": "answer",
+          "y": 835.9921875
+        }
+      ],
+      "following": "true",
+      "height": 396,
+      "jump": "<div class=\"m3-message-scroller-jump\" data-active=\"false\" aria-hidden=\"true\" data-direction=\"end\" inert=\"\"><button type=\"button\" class=\"m3-icon-button m3-icon-button--outlined m3-icon-button--s m3-icon-button--round m3-icon-button--width-default \" aria-label=\"Scroll to end\" data-dioxus-id=\"10136\" tabindex=\"-1\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-1113\" data-ready=\"true\"></span><svg viewBox=\"0 -960 960 960\" class=\"m3-icon m3-icon-button__icon\" aria-hidden=\"true\" data-icon=\"arrow_downward\"><path d=\"M450-274v-496q0-13 8.5-21.5T480-800q13 0 21.5 8.5T510-770v496l227-227q9-9 21-9t21 9q9 9 9 21t-9 21L501-181q-5 5-10 7t-11 2q-6 0-11-2t-10-7L181-459q-9-9-9-21t9-21q9-9 21-9t21 9l227 227Z\"></path></svg></button></div>",
+      "scrollHeight": 556,
+      "top": 160
+    }
+  },
+  {
+    "check": "stream pause growth",
+    "before": {
+      "anchor": [
+        {
+          "id": "h3",
+          "y": 299.9921875
+        },
+        {
+          "id": "h2",
+          "y": 355.9921875
+        },
+        {
+          "id": "h1",
+          "y": 411.9921875
+        },
+        {
+          "id": "h0",
+          "y": 467.9921875
+        },
+        {
+          "id": "question",
+          "y": 523.9921875
+        },
+        {
+          "id": "answer",
+          "y": 579.9921875
+        }
+      ],
+      "following": "false",
+      "height": 396,
+      "jump": "<div class=\"m3-message-scroller-jump\" data-active=\"false\" aria-hidden=\"true\" data-direction=\"end\" inert=\"\"><button type=\"button\" class=\"m3-icon-button m3-icon-button--outlined m3-icon-button--s m3-icon-button--round m3-icon-button--width-default \" aria-label=\"Scroll to end\" data-dioxus-id=\"10136\" tabindex=\"-1\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-1113\" data-ready=\"true\"></span><svg viewBox=\"0 -960 960 960\" class=\"m3-icon m3-icon-button__icon\" aria-hidden=\"true\" data-icon=\"arrow_downward\"><path d=\"M450-274v-496q0-13 8.5-21.5T480-800q13 0 21.5 8.5T510-770v496l227-227q9-9 21-9t21 9q9 9 9 21t-9 21L501-181q-5 5-10 7t-11 2q-6 0-11-2t-10-7L181-459q-9-9-9-21t9-21q9-9 21-9t21 9l227 227Z\"></path></svg></button></div>",
+      "scrollHeight": 556,
+      "top": 160
+    },
+    "after": {
+      "anchor": [
+        {
+          "id": "h3",
+          "y": 299.9921875
+        },
+        {
+          "id": "h2",
+          "y": 355.9921875
+        },
+        {
+          "id": "h1",
+          "y": 411.9921875
+        },
+        {
+          "id": "h0",
+          "y": 467.9921875
+        },
+        {
+          "id": "question",
+          "y": 523.9921875
+        },
+        {
+          "id": "answer",
+          "y": 579.9921875
+        }
+      ],
+      "following": "false",
+      "height": 396,
+      "jump": "<div class=\"m3-message-scroller-jump\" data-active=\"false\" aria-hidden=\"true\" data-direction=\"end\" inert=\"\"><button type=\"button\" class=\"m3-icon-button m3-icon-button--outlined m3-icon-button--s m3-icon-button--round m3-icon-button--width-default \" aria-label=\"Scroll to end\" data-dioxus-id=\"10136\" tabindex=\"-1\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-1113\" data-ready=\"true\"></span><svg viewBox=\"0 -960 960 960\" class=\"m3-icon m3-icon-button__icon\" aria-hidden=\"true\" data-icon=\"arrow_downward\"><path d=\"M450-274v-496q0-13 8.5-21.5T480-800q13 0 21.5 8.5T510-770v496l227-227q9-9 21-9t21 9q9 9 9 21t-9 21L501-181q-5 5-10 7t-11 2q-6 0-11-2t-10-7L181-459q-9-9-9-21t9-21q9-9 21-9t21 9l227 227Z\"></path></svg></button></div>",
+      "scrollHeight": 556,
+      "top": 160
+    }
+  },
+  {
+    "check": "stream prepend preservation",
+    "state": {
+      "anchor": [
+        {
+          "id": "h4",
+          "y": 299.9921875
+        },
+        {
+          "id": "h3",
+          "y": 355.9921875
+        },
+        {
+          "id": "h2",
+          "y": 411.9921875
+        },
+        {
+          "id": "h1",
+          "y": 467.9921875
+        },
+        {
+          "id": "h0",
+          "y": 523.9921875
+        },
+        {
+          "id": "question",
+          "y": 579.9921875
+        },
+        {
+          "id": "answer",
+          "y": 635.9921875
+        }
+      ],
+      "following": "false",
+      "height": 396,
+      "jump": "<div class=\"m3-message-scroller-jump\" data-active=\"true\" aria-hidden=\"false\" data-direction=\"end\"><button type=\"button\" class=\"m3-icon-button m3-icon-button--outlined m3-icon-button--s m3-icon-button--round m3-icon-button--width-default \" aria-label=\"Scroll to end\" data-dioxus-id=\"10136\" tabindex=\"0\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-1113\" data-ready=\"true\"></span><svg viewBox=\"0 -960 960 960\" class=\"m3-icon m3-icon-button__icon\" aria-hidden=\"true\" data-icon=\"arrow_downward\"><path d=\"M450-274v-496q0-13 8.5-21.5T480-800q13 0 21.5 8.5T510-770v496l227-227q9-9 21-9t21 9q9 9 9 21t-9 21L501-181q-5 5-10 7t-11 2q-6 0-11-2t-10-7L181-459q-9-9-9-21t9-21q9-9 21-9t21 9l227 227Z\"></path></svg></button></div>",
+      "scrollHeight": 612,
+      "top": 160
+    }
+  },
+  {
+    "check": "stream long response following",
+    "state": {
+      "anchor": [
+        {
+          "id": "h4",
+          "y": 243.9921875
+        },
+        {
+          "id": "h3",
+          "y": 299.9921875
+        },
+        {
+          "id": "h2",
+          "y": 355.9921875
+        },
+        {
+          "id": "h1",
+          "y": 411.9921875
+        },
+        {
+          "id": "h0",
+          "y": 467.9921875
+        },
+        {
+          "id": "question",
+          "y": 523.9921875
+        },
+        {
+          "id": "answer",
+          "y": 579.9921875
+        }
+      ],
+      "following": "true",
+      "height": 396,
+      "jump": "<div class=\"m3-message-scroller-jump\" data-active=\"false\" aria-hidden=\"true\" data-direction=\"end\" inert=\"\"><button type=\"button\" class=\"m3-icon-button m3-icon-button--outlined m3-icon-button--s m3-icon-button--round m3-icon-button--width-default \" aria-label=\"Scroll to end\" data-dioxus-id=\"10136\" tabindex=\"-1\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-1113\" data-ready=\"true\"></span><svg viewBox=\"0 -960 960 960\" class=\"m3-icon m3-icon-button__icon\" aria-hidden=\"true\" data-icon=\"arrow_downward\"><path d=\"M450-274v-496q0-13 8.5-21.5T480-800q13 0 21.5 8.5T510-770v496l227-227q9-9 21-9t21 9q9 9 9 21t-9 21L501-181q-5 5-10 7t-11 2q-6 0-11-2t-10-7L181-459q-9-9-9-21t9-21q9-9 21-9t21 9l227 227Z\"></path></svg></button></div>",
+      "scrollHeight": 612,
+      "top": 216
+    }
+  },
+  {
+    "check": "stream peek",
+    "state": {
+      "anchor": [
+        {
+          "id": "h4",
+          "y": 247.9921875
+        },
+        {
+          "id": "h3",
+          "y": 303.9921875
+        },
+        {
+          "id": "h2",
+          "y": 359.9921875
+        },
+        {
+          "id": "h1",
+          "y": 415.9921875
+        },
+        {
+          "id": "h0",
+          "y": 471.9921875
+        },
+        {
+          "id": "question",
+          "y": 527.9921875
+        },
+        {
+          "id": "answer",
+          "y": 583.9921875
+        }
+      ],
+      "following": "false",
+      "height": 396,
+      "jump": "<div class=\"m3-message-scroller-jump\" data-active=\"true\" aria-hidden=\"false\" data-direction=\"end\"><button type=\"button\" class=\"m3-icon-button m3-icon-button--outlined m3-icon-button--s m3-icon-button--round m3-icon-button--width-default \" aria-label=\"Scroll to end\" data-dioxus-id=\"10136\" tabindex=\"0\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-1113\" data-ready=\"true\"></span><svg viewBox=\"0 -960 960 960\" class=\"m3-icon m3-icon-button__icon\" aria-hidden=\"true\" data-icon=\"arrow_downward\"><path d=\"M450-274v-496q0-13 8.5-21.5T480-800q13 0 21.5 8.5T510-770v496l227-227q9-9 21-9t21 9q9 9 9 21t-9 21L501-181q-5 5-10 7t-11 2q-6 0-11-2t-10-7L181-459q-9-9-9-21t9-21q9-9 21-9t21 9l227 227Z\"></path></svg></button></div>",
+      "scrollHeight": 612,
+      "top": 168
+    }
+  },
+  {
+    "check": "list typeahead",
+    "focus": "Themes"
+  },
+  {
+    "check": "list secondary actions",
+    "state": "Design\n\nDesign review details\n\nOpen review\nMobile\nThemes\nUndo archive\n\nArchived: true · Opened: 1\n\nType a label prefix to move focus. Swiping Rust or its Archive button performs the same reversible action."
+  },
+  {
+    "check": "list pointer swipe",
+    "state": "Design\n\nDesign review details\n\nOpen review\nMobile\nThemes\nUndo archive\n\nArchived: true · Opened: 1\n\nType a label prefix to move focus. Swiping Rust or its Archive button performs the same reversible action."
+  },
+  {
+    "check": "tab geometry",
+    "state": {
+      "first": {
+        "bottom": 671.9921875,
+        "height": 48,
+        "left": 463.1953125,
+        "right": 589.1875,
+        "top": 623.9921875,
+        "width": 125.9921875,
+        "x": 463.1953125,
+        "y": 623.9921875
+      },
+      "root": {
+        "bottom": 671.9921875,
+        "height": 48,
+        "left": 411.1953125,
+        "right": 1189.8046875,
+        "top": 623.9921875,
+        "width": 778.609375,
+        "x": 411.1953125,
+        "y": 623.9921875
+      },
+      "styles": "0px"
+    }
+  },
+  {
+    "check": "scroll tab end clamps",
+    "selected": "Collection 12"
+  },
+  {
+    "check": "scroll tab skips disabled",
+    "selected": "Collection 5"
+  },
+  {
+    "check": "RTL tab direction",
+    "selected": "Collection 6"
+  },
+  {
+    "check": "RTL panel swipe",
+    "selected": "Collection 5"
+  },
+  {
+    "check": "sidebar collapse samples",
+    "samples": [
+      {
+        "stamp": 1791888708012,
+        "state": {
+          "expanded": "true",
+          "focus": null,
+          "shells": 1,
+          "transform": "none",
+          "width": 288
+        }
+      },
+      {
+        "stamp": 1791888708032,
+        "state": {
+          "expanded": "true",
+          "focus": null,
+          "shells": 1,
+          "transform": "none",
+          "width": 288
+        }
+      },
+      {
+        "stamp": 1791888708053,
+        "state": {
+          "expanded": "true",
+          "focus": null,
+          "shells": 1,
+          "transform": "none",
+          "width": 288
+        }
+      },
+      {
+        "stamp": 1791888708060,
+        "state": {
+          "expanded": "true",
+          "focus": "Collapse workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 288
+        }
+      },
+      {
+        "stamp": 1791888708071,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 288
+        }
+      },
+      {
+        "stamp": 1791888708082,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 285.234375
+        }
+      },
+      {
+        "stamp": 1791888708089,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 278.453125
+        }
+      },
+      {
+        "stamp": 1791888708097,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 270.3515625
+        }
+      },
+      {
+        "stamp": 1791888708103,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 257.2265625
+        }
+      },
+      {
+        "stamp": 1791888708109,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 257.2265625
+        }
+      },
+      {
+        "stamp": 1791888708114,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 245.90625
+        }
+      },
+      {
+        "stamp": 1791888708119,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 245.90625
+        }
+      },
+      {
+        "stamp": 1791888708124,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 229.0078125
+        }
+      },
+      {
+        "stamp": 1791888708129,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 215.328125
+        }
+      },
+      {
+        "stamp": 1791888708134,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 215.328125
+        }
+      },
+      {
+        "stamp": 1791888708139,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 201.2421875
+        }
+      },
+      {
+        "stamp": 1791888708145,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 188.9765625
+        }
+      },
+      {
+        "stamp": 1791888708152,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 175.9921875
+        }
+      },
+      {
+        "stamp": 1791888708159,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 175.9921875
+        }
+      },
+      {
+        "stamp": 1791888708164,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 162.234375
+        }
+      },
+      {
+        "stamp": 1791888708170,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 152.578125
+        }
+      },
+      {
+        "stamp": 1791888708177,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 152.578125
+        }
+      },
+      {
+        "stamp": 1791888708183,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 139.984375
+        }
+      },
+      {
+        "stamp": 1791888708187,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 130.9921875
+        }
+      },
+      {
+        "stamp": 1791888708192,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 130.9921875
+        }
+      },
+      {
+        "stamp": 1791888708197,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 122.5
+        }
+      },
+      {
+        "stamp": 1791888708203,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 115.0390625
+        }
+      },
+      {
+        "stamp": 1791888708210,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 115.0390625
+        }
+      },
+      {
+        "stamp": 1791888708214,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 108.6796875
+        }
+      },
+      {
+        "stamp": 1791888708221,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 103.6640625
+        }
+      },
+      {
+        "stamp": 1791888708229,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 98.1328125
+        }
+      },
+      {
+        "stamp": 1791888708240,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 84.8671875
+        }
+      },
+      {
+        "stamp": 1791888708272,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80.90625
+        }
+      },
+      {
+        "stamp": 1791888708285,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 79.5859375
+        }
+      },
+      {
+        "stamp": 1791888708294,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 78.640625
+        }
+      },
+      {
+        "stamp": 1791888708303,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 77.9296875
+        }
+      },
+      {
+        "stamp": 1791888708314,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 77.4296875
+        }
+      },
+      {
+        "stamp": 1791888708322,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 77.109375
+        }
+      },
+      {
+        "stamp": 1791888708328,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 76.9296875
+        }
+      },
+      {
+        "stamp": 1791888708334,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 76.9296875
+        }
+      },
+      {
+        "stamp": 1791888708339,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 76.8515625
+        }
+      },
+      {
+        "stamp": 1791888708345,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 76.8515625
+        }
+      },
+      {
+        "stamp": 1791888708351,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 76.8515625
+        }
+      },
+      {
+        "stamp": 1791888708357,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 76.953125
+        }
+      },
+      {
+        "stamp": 1791888708364,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 77.09375
+        }
+      },
+      {
+        "stamp": 1791888708371,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 77.2421875
+        }
+      },
+      {
+        "stamp": 1791888708377,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 77.2421875
+        }
+      },
+      {
+        "stamp": 1791888708383,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 77.4765625
+        }
+      },
+      {
+        "stamp": 1791888708389,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 77.6328125
+        }
+      },
+      {
+        "stamp": 1791888708396,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 77.859375
+        }
+      },
+      {
+        "stamp": 1791888708402,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 77.859375
+        }
+      },
+      {
+        "stamp": 1791888708408,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 78.1015625
+        }
+      },
+      {
+        "stamp": 1791888708414,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 78.3125
+        }
+      },
+      {
+        "stamp": 1791888708420,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 78.515625
+        }
+      },
+      {
+        "stamp": 1791888708427,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 78.6875
+        }
+      },
+      {
+        "stamp": 1791888708433,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 78.6875
+        }
+      },
+      {
+        "stamp": 1791888708438,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 78.859375
+        }
+      },
+      {
+        "stamp": 1791888708443,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 78.859375
+        }
+      },
+      {
+        "stamp": 1791888708448,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 79.0546875
+        }
+      },
+      {
+        "stamp": 1791888708454,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 79.171875
+        }
+      },
+      {
+        "stamp": 1791888708460,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 79.171875
+        }
+      },
+      {
+        "stamp": 1791888708466,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 79.3203125
+        }
+      },
+      {
+        "stamp": 1791888708471,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 79.421875
+        }
+      },
+      {
+        "stamp": 1791888708477,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 79.515625
+        }
+      },
+      {
+        "stamp": 1791888708483,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 79.515625
+        }
+      },
+      {
+        "stamp": 1791888708489,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 79.6171875
+        }
+      },
+      {
+        "stamp": 1791888708495,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 79.703125
+        }
+      },
+      {
+        "stamp": 1791888708502,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 79.8046875
+        }
+      },
+      {
+        "stamp": 1791888708508,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 79.8046875
+        }
+      },
+      {
+        "stamp": 1791888708513,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708520,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708525,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708531,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708538,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708544,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708549,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708557,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708565,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708569,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708573,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708578,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708583,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708588,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708593,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708598,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708603,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708609,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708614,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708619,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      },
+      {
+        "stamp": 1791888708624,
+        "state": {
+          "expanded": "false",
+          "focus": "Expand workspace sidebar",
+          "shells": 1,
+          "transform": "none",
+          "width": 80
+        }
+      }
+    ]
+  },
+  {
+    "check": "controlled parent rejection",
+    "expanded": "false"
+  },
+  {
+    "check": "controlled parent accepts",
+    "expanded": "true"
+  },
+  {
+    "check": "shortcut input exclusion",
+    "expanded": "true"
+  },
+  {
+    "check": "compact focus trap",
+    "focus": "Collections",
+    "dialog": {
+      "open": true,
+      "rect": {
+        "bottom": 844,
+        "height": 844,
+        "left": 0,
+        "right": 390,
+        "top": 0,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  {
+    "check": "compact escape focus",
+    "focus": null
+  },
+  {
+    "check": "chip edit navigation removal",
+    "draft": null,
+    "focus": "People",
+    "state": "Load slow results\nLoad fast results\nFail options request\nCancel options request\nRemote projects\nLoading options…\n\nResults: 0 · Loading: true · Selected: []\n\nEditable people chips\nPeople\nCasey\nAlice\n\nBackspace on an empty draft focuses the last chip. Arrows move between chips; Delete removes; F2 edits.\n\nPeople: [\"Casey\"]"
+  },
+  {
+    "check": "async stale response after slow settles",
+    "state": "Load slow results\nLoad fast results\nFail options request\nCancel options request\nRemote projects\n\nResults: 2000 · Loading: false · Selected: []\n\nEditable people chips\nPeople\nCasey\nAlice\n\nBackspace on an empty draft focuses the last chip. Arrows move between chips; Delete removes; F2 edits.\n\nPeople: [\"Casey\"]",
+    "mounted": 25
+  },
+  {
+    "check": "virtual keyboard navigation",
+    "state": {
+      "active": "m3-choice-1387-list-option-35",
+      "exists": true,
+      "mounted": 27
+    },
+    "options": [
+      " Project 0026",
+      " Project 0027",
+      " Project 0028",
+      " Project 0029",
+      " Project 0030",
+      " Project 0031",
+      " Project 0032",
+      " Project 0033",
+      " Project 0034",
+      " Project 0035",
+      " Project 0036",
+      " Project 0037",
+      " Project 0038",
+      " Project 0039",
+      " Project 0040",
+      " Project 0041",
+      " Project 0042",
+      " Project 0043",
+      " Project 0044",
+      " Project 0045",
+      " Project 0046",
+      " Project 0047",
+      " Project 0048",
+      " Project 0049",
+      "Alice",
+      "Bob",
+      "Casey"
+    ]
+  },
+  {
+    "check": "async error selected preservation",
+    "alert": "Could not load projects. Try again.",
+    "state": "Load slow results\nLoad fast results\nFail options request\nCancel options request\nRemote projects\nCould not load projects. Try again.\n\nResults: 0 · Loading: false · Selected: [\"p35\"]\n\nEditable people chips\nPeople\nCasey\n\nBackspace on an empty draft focuses the last chip. Arrows move between chips; Delete removes; F2 edits.\n\nPeople: [\"Casey\"]"
+  },
+  {
+    "check": "async cancellation",
+    "state": "Load slow results\nLoad fast results\nFail options request\nCancel options request\nRemote projects\n\nResults: 0 · Loading: false · Selected: [\"p35\"]\n\nEditable people chips\nPeople\nCasey\n\nBackspace on an empty draft focuses the last chip. Arrows move between chips; Delete removes; F2 edits.\n\nPeople: [\"Casey\"]"
+  },
+  {
+    "check": "all seven new copy controls",
+    "results": [
+      {
+        "id": "sidebar-provider",
+        "exact": true,
+        "length": 709
+      },
+      {
+        "id": "advanced-selection",
+        "exact": true,
+        "length": 803
+      },
+      {
+        "id": "advanced-tabs",
+        "exact": true,
+        "length": 432
+      },
+      {
+        "id": "advanced-gestures",
+        "exact": true,
+        "length": 610
+      },
+      {
+        "id": "advanced-tables",
+        "exact": true,
+        "length": 722
+      },
+      {
+        "id": "advanced-lists",
+        "exact": true,
+        "length": 589
+      },
+      {
+        "id": "advanced-messages",
+        "exact": true,
+        "length": 685
+      }
+    ]
+  },
+  {
+    "check": "OS Reduce Motion enabled",
+    "sidebarTransition": "1e-05s"
+  },
+  {
+    "check": "reduced sidebar expansion",
+    "state": {
+      "transition": "1e-05s",
+      "width": 288
+    }
+  },
+  {
+    "check": "reduced sidebar collapse",
+    "state": {
+      "transition": "1e-05s",
+      "width": 80
+    }
+  },
+  {
+    "check": "reduced reorder",
+    "styles": [
+      {
+        "transform": "none",
+        "value": "Draft"
+      },
+      {
+        "transform": "none",
+        "value": "Review"
+      },
+      {
+        "transform": "none",
+        "value": "Publish"
+      }
+    ]
+  },
+  {
+    "check": "settled prepend preserving reader",
+    "before": {
+      "anchor": [
+        {
+          "id": "h3",
+          "y": 299.9921875
+        },
+        {
+          "id": "h2",
+          "y": 355.9921875
+        },
+        {
+          "id": "h1",
+          "y": 411.9921875
+        },
+        {
+          "id": "h0",
+          "y": 467.9921875
+        },
+        {
+          "id": "question",
+          "y": 523.9921875
+        },
+        {
+          "id": "answer",
+          "y": 579.9921875
+        }
+      ],
+      "following": "false",
+      "height": 396,
+      "jump": "<div class=\"m3-message-scroller-jump\" data-active=\"false\" aria-hidden=\"true\" data-direction=\"end\" inert=\"\"><button type=\"button\" class=\"m3-icon-button m3-icon-button--outlined m3-icon-button--s m3-icon-button--round m3-icon-button--width-default \" aria-label=\"Scroll to end\" data-dioxus-id=\"4259\" tabindex=\"-1\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-2150\" data-ready=\"true\"></span><svg viewBox=\"0 -960 960 960\" class=\"m3-icon m3-icon-button__icon\" aria-hidden=\"true\" data-icon=\"arrow_downward\"><path d=\"M450-274v-496q0-13 8.5-21.5T480-800q13 0 21.5 8.5T510-770v496l227-227q9-9 21-9t21 9q9 9 9 21t-9 21L501-181q-5 5-10 7t-11 2q-6 0-11-2t-10-7L181-459q-9-9-9-21t9-21q9-9 21-9t21 9l227 227Z\"></path></svg></button></div>",
+      "scrollHeight": 556,
+      "top": 160
+    },
+    "after": {
+      "anchor": [
+        {
+          "id": "h4",
+          "y": 299.9921875
+        },
+        {
+          "id": "h3",
+          "y": 355.9921875
+        },
+        {
+          "id": "h2",
+          "y": 411.9921875
+        },
+        {
+          "id": "h1",
+          "y": 467.9921875
+        },
+        {
+          "id": "h0",
+          "y": 523.9921875
+        },
+        {
+          "id": "question",
+          "y": 579.9921875
+        },
+        {
+          "id": "answer",
+          "y": 635.9921875
+        }
+      ],
+      "following": "false",
+      "height": 396,
+      "jump": "<div class=\"m3-message-scroller-jump\" data-active=\"true\" aria-hidden=\"false\" data-direction=\"end\"><button type=\"button\" class=\"m3-icon-button m3-icon-button--outlined m3-icon-button--s m3-icon-button--round m3-icon-button--width-default \" aria-label=\"Scroll to end\" data-dioxus-id=\"4259\" tabindex=\"0\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-2150\" data-ready=\"true\"></span><svg viewBox=\"0 -960 960 960\" class=\"m3-icon m3-icon-button__icon\" aria-hidden=\"true\" data-icon=\"arrow_downward\"><path d=\"M450-274v-496q0-13 8.5-21.5T480-800q13 0 21.5 8.5T510-770v496l227-227q9-9 21-9t21 9q9 9 9 21t-9 21L501-181q-5 5-10 7t-11 2q-6 0-11-2t-10-7L181-459q-9-9-9-21t9-21q9-9 21-9t21 9l227 227Z\"></path></svg></button></div>",
+      "scrollHeight": 612,
+      "top": 160
+    }
+  },
+  {
+    "check": "response larger than viewport",
+    "state": {
+      "anchor": [
+        {
+          "id": "h3",
+          "y": 223.9921875
+        },
+        {
+          "id": "h2",
+          "y": 279.9921875
+        },
+        {
+          "id": "h1",
+          "y": 335.9921875
+        },
+        {
+          "id": "h0",
+          "y": 391.9921875
+        },
+        {
+          "id": "question",
+          "y": 447.9921875
+        },
+        {
+          "id": "answer",
+          "y": 503.9921875
+        }
+      ],
+      "following": "true",
+      "height": 396,
+      "jump": "<div class=\"m3-message-scroller-jump\" data-active=\"false\" aria-hidden=\"true\" data-direction=\"end\" inert=\"\"><button type=\"button\" class=\"m3-icon-button m3-icon-button--outlined m3-icon-button--s m3-icon-button--round m3-icon-button--width-default \" aria-label=\"Scroll to end\" data-dioxus-id=\"10048\" tabindex=\"-1\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-1093\" data-ready=\"true\"></span><svg viewBox=\"0 -960 960 960\" class=\"m3-icon m3-icon-button__icon\" aria-hidden=\"true\" data-icon=\"arrow_downward\"><path d=\"M450-274v-496q0-13 8.5-21.5T480-800q13 0 21.5 8.5T510-770v496l227-227q9-9 21-9t21 9q9 9 9 21t-9 21L501-181q-5 5-10 7t-11 2q-6 0-11-2t-10-7L181-459q-9-9-9-21t9-21q9-9 21-9t21 9l227 227Z\"></path></svg></button></div>",
+      "scrollHeight": 632,
+      "top": 236
+    }
+  },
+  {
+    "check": "corrected prepend stable IDs",
+    "before": {
+      "anchor": [
+        {
+          "id": "h3",
+          "y": 299.9921875
+        },
+        {
+          "id": "h2",
+          "y": 355.9921875
+        },
+        {
+          "id": "h1",
+          "y": 411.9921875
+        },
+        {
+          "id": "h0",
+          "y": 467.9921875
+        },
+        {
+          "id": "question",
+          "y": 523.9921875
+        },
+        {
+          "id": "answer",
+          "y": 579.9921875
+        }
+      ],
+      "following": "false",
+      "height": 396,
+      "jump": "<div class=\"m3-message-scroller-jump\" data-active=\"false\" aria-hidden=\"true\" data-direction=\"end\" inert=\"\"><button type=\"button\" class=\"m3-icon-button m3-icon-button--outlined m3-icon-button--s m3-icon-button--round m3-icon-button--width-default \" aria-label=\"Scroll to end\" data-dioxus-id=\"10321\" tabindex=\"-1\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-1335\" data-ready=\"true\"></span><svg viewBox=\"0 -960 960 960\" class=\"m3-icon m3-icon-button__icon\" aria-hidden=\"true\" data-icon=\"arrow_downward\"><path d=\"M450-274v-496q0-13 8.5-21.5T480-800q13 0 21.5 8.5T510-770v496l227-227q9-9 21-9t21 9q9 9 9 21t-9 21L501-181q-5 5-10 7t-11 2q-6 0-11-2t-10-7L181-459q-9-9-9-21t9-21q9-9 21-9t21 9l227 227Z\"></path></svg></button></div>",
+      "scrollHeight": 556,
+      "top": 160
+    },
+    "after": {
+      "anchor": [
+        {
+          "id": "h4",
+          "y": 243.9921875
+        },
+        {
+          "id": "h3",
+          "y": 299.9921875
+        },
+        {
+          "id": "h2",
+          "y": 355.9921875
+        },
+        {
+          "id": "h1",
+          "y": 411.9921875
+        },
+        {
+          "id": "h0",
+          "y": 467.9921875
+        },
+        {
+          "id": "question",
+          "y": 523.9921875
+        },
+        {
+          "id": "answer",
+          "y": 579.9921875
+        }
+      ],
+      "following": "false",
+      "height": 396,
+      "jump": "<div class=\"m3-message-scroller-jump\" data-active=\"false\" aria-hidden=\"true\" data-direction=\"end\" inert=\"\"><button type=\"button\" class=\"m3-icon-button m3-icon-button--outlined m3-icon-button--s m3-icon-button--round m3-icon-button--width-default \" aria-label=\"Scroll to end\" data-dioxus-id=\"10321\" tabindex=\"-1\"><span class=\"m3-ripple\" aria-hidden=\"true\" id=\"m3-ripple-1335\" data-ready=\"true\"></span><svg viewBox=\"0 -960 960 960\" class=\"m3-icon m3-icon-button__icon\" aria-hidden=\"true\" data-icon=\"arrow_downward\"><path d=\"M450-274v-496q0-13 8.5-21.5T480-800q13 0 21.5 8.5T510-770v496l227-227q9-9 21-9t21 9q9 9 9 21t-9 21L501-181q-5 5-10 7t-11 2q-6 0-11-2t-10-7L181-459q-9-9-9-21t9-21q9-9 21-9t21 9l227 227Z\"></path></svg></button></div>",
+      "scrollHeight": 612,
+      "top": 216
+    }
+  },
+  {
+    "check": "compact surface final geometry",
+    "state": {
+      "rect": {
+        "bottom": 844,
+        "height": 844,
+        "left": 0,
+        "right": 358,
+        "top": 0,
+        "width": 358,
+        "x": 0,
+        "y": 0
+      },
+      "transform": "none"
+    }
+  },
+  {
+    "check": "compact escape final motion and focus",
+    "samples": [
+      {
+        "stamp": 1791889192926,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889192955,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -52.6538, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193109,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -285.491, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193184,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -298.394, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193197,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -319.512, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193209,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -327.947, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193222,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -341.275, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193232,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -346.427, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193246,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -353.948, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193258,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -357.764, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193276,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193289,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193300,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193309,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193321,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193332,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193342,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193355,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193366,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193376,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193390,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193409,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193429,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193443,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193458,
+        "state": {
+          "focus": "Close Pilot workspace",
+          "open": true,
+          "transform": "matrix(1, 0, 0, 1, -358, 0)"
+        }
+      },
+      {
+        "stamp": 1791889193480,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193526,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193542,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193551,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193563,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193576,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193584,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193594,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193610,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193618,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193625,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193634,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193645,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193653,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193662,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193675,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193685,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193694,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193703,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193715,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193727,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193735,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193743,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193750,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193759,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193766,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193774,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193783,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193791,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193800,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193809,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193817,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193826,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193836,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193846,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193853,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193863,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193871,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193880,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193891,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193900,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193909,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193919,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193931,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193942,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193956,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193966,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193977,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889193987,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194003,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194017,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194029,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194043,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194069,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194090,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194106,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194116,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194125,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194167,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194177,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194190,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194205,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194213,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194221,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194229,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194249,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194266,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194295,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194318,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      },
+      {
+        "stamp": 1791889194361,
+        "state": {
+          "focus": "Expand workspace sidebar",
+          "open": false,
+          "transform": "none"
+        }
+      }
+    ]
+  },
+  {
+    "check": "native move announcement final",
+    "status": "Draft moved to position 2"
+  },
+  {
+    "check": "reorder complete motion samples",
+    "samples": [
+      {
+        "stamp": 1791889213630,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 201.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 309.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213724,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, -108)",
+            "value": "Review",
+            "y": 201.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213745,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, -104.58)",
+            "value": "Review",
+            "y": 205.4117126464844
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213759,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, -87.0738)",
+            "value": "Review",
+            "y": 222.9183654785156
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213771,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, -75.1213)",
+            "value": "Review",
+            "y": 234.87091064453125
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213782,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, -50.0363)",
+            "value": "Review",
+            "y": 259.95587158203125
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213795,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, -38.2339)",
+            "value": "Review",
+            "y": 271.75823974609375
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213806,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, -27.9787)",
+            "value": "Review",
+            "y": 282.0135192871094
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213814,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, -18.0927)",
+            "value": "Review",
+            "y": 291.8995056152344
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213826,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, -10.0152)",
+            "value": "Review",
+            "y": 299.9769592285156
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213835,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 5.18214)",
+            "value": "Review",
+            "y": 315.17431640625
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213856,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 9.3615)",
+            "value": "Review",
+            "y": 319.35369873046875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213869,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 10.0687)",
+            "value": "Review",
+            "y": 320.0609436035156
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213885,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 9.73743)",
+            "value": "Review",
+            "y": 319.7296142578125
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213895,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 8.91265)",
+            "value": "Review",
+            "y": 318.90484619140625
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213906,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0.185838)",
+            "value": "Review",
+            "y": 310.17803955078125
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889213985,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, -0.965128)",
+            "value": "Review",
+            "y": 309.0270690917969
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214029,
+        "styles": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, -0.197859)",
+            "value": "Review",
+            "y": 309.7943115234375
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214106,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214133,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214141,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214170,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214184,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214194,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214231,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214246,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214262,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214275,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214293,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214317,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214331,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214346,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214359,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214387,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214412,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214427,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214435,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214442,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214455,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214466,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214479,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214624,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214637,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214647,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214655,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214665,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214676,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214686,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214697,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214705,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214715,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214728,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214738,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214748,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214757,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214767,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214777,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214787,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214798,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214808,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214815,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214823,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214831,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214841,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214849,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214859,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214869,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214882,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214894,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214905,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214918,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214929,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214939,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214949,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214959,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214967,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214988,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889214997,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215006,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215015,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215026,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215038,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215047,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215060,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215068,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215075,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215083,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215093,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215107,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215119,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215131,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215139,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215148,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215159,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      },
+      {
+        "stamp": 1791889215168,
+        "styles": [
+          {
+            "transform": "none",
+            "value": "Review",
+            "y": 309.9921875
+          },
+          {
+            "dragging": "true",
+            "transform": "none",
+            "value": "Draft",
+            "y": 201.9921875
+          },
+          {
+            "transform": "none",
+            "value": "Publish",
+            "y": 417.9921875
+          }
+        ]
+      }
+    ]
+  }
+]

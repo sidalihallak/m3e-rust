@@ -244,3 +244,35 @@ Raw data: [`tabs-samples.json`](tabs-samples.json). Screenshot: [`tabs-primary.p
    dispatches real mouse and keyboard actions, and samples computed styles while the input is
    held. The script is kept in the scratchpad and is not committed.
 3. Compare the output with [`tabs-samples.json`](tabs-samples.json).
+
+
+## Advanced behavior follow-up — 2026-10-13
+
+Scope `#advanced-tabs`. Current rendered reference: [overview](https://m3.material.io/components/tabs/overview), [specs](https://m3.material.io/components/tabs/specs), [guidelines](https://m3.material.io/components/tabs/guidelines), [accessibility](https://m3.material.io/components/tabs/accessibility).
+Actual [upstream](https://github.com/Crysta1221/shadcn-m3e/blob/c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972/packages/m3e/src/components/tabs.tsx) at `c37c0d2f6aa3a8ab0b3f195c3ce0f6a568064972`.
+
+Scrollable tabs use intrinsic labels, 52px leading offset, 24px padding and
+4px inline badge gap. Fresh geometry: first tab left463.195 minus list411.195 =
+52px, height48px. End then Right clamps at Collection12; Right from3 skips disabled4
+to5. RTL Left5→6; actual leftward RTL panel swipe6→5. TabsViewport selects an
+enabled page on release while preserving vertical gestures and control input.
+
+Viewport swipe is a commit gesture without interpolated panel dragging; no
+full morphing content transition is claimed. Scrollable/fixed endpoints differ
+intentionally: scrollable clamps; fixed preserves wrapping. Reduced scroll,
+all badge states and vertical upstream tabs remain open.
+
+### Verification and reproduction
+
+Run `./scripts/dev.sh`, wait for a successful Wasm build, reload, then open the
+listed hash route. Use actual native pointer and keyboard input. Fresh desktop
+results and sample arrays are in [advanced-behavior-samples.json](advanced-behavior-samples.json).
+All seven new copy controls matched their displayed Rust snippets exactly.
+The exported editable library and **123 usage examples** passed an offline
+`cargo check` for `wasm32-unknown-unknown` (2026-10-13, 11.99s); an existing
+unused `ChipSize` import warning remains. Final anchoring/announcement fixes were rebuilt and rechecked; see the family report.
+
+Android remains paused. Compact browser geometry is desktop responsive evidence,
+not Android touch evidence. Audible screen-reader, forced-colors, large-font,
+live-prop interruption and exhaustive variant coverage remain open. Source
+settings alone do not establish runtime behavior.
