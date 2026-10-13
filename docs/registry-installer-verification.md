@@ -51,3 +51,13 @@ WebKit. Hosted CI is pending a push; publishing and tag creation are not perform
 [Release procedure](github-registry-release.md). Archive, sums and release.json
 are in /private/tmp/m3e-release-final. The workflow prepares a draft after CI,
 checks the exact tag/version and refuses overwriting an existing published release.
+
+## First hosted CI run —2026-10-13
+
+Commit990e3c3: Pages and the Chromium/WebKit icon job passed. The source job
+passed pinned-artwork, registry and installer checks, then failed at the offline
+showcase check because async-tungstenite0.31.0 was absent from the fresh cache.
+The target-restricted prefetch did not cover the full compilation dependency set.
+CI now fetches the locked dependency set without target filtering and separately
+fetches the independent consuming app's lockfile before its offline check.
+This changes CI dependency preparation; component sources are unchanged.

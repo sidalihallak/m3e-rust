@@ -171,3 +171,11 @@ were separate concerns. Pixel checks now prevent relying on selector/href alone.
 GitHub CI additionally prepares Chromium/WebKit screenshot checks. That hosted
 job has not run yet; local evidence here is in-app WebKit, not Chromium, Android
 or native Dioxus. Variable font axes and automatic parent-fill remain out of scope.
+
+## Hosted browser confirmation —2026-10-13
+
+[CI run38439511499](https://github.com/sidalihallak/m3e-rust/actions/runs/38439511499)
+completed the icons job successfully:46 sprite/source comparisons across
+Chromium and WebKit, including live style changes. Pinned upstream checks also
+passed in its sources job. Overall CI failed separately during dependency
+prefetch/offline compilation, as described in the registry installer report.

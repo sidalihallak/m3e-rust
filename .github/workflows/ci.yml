@@ -47,7 +47,7 @@ jobs:
           python3 tests/installer.py
           git diff --exit-code -- registry/registry.json
       - name: Fetch locked dependencies
-        run: cargo fetch --locked --target wasm32-unknown-unknown
+        run: cargo fetch --locked
       - name: Check showcase
         run: cargo check --locked --offline --target wasm32-unknown-unknown
       - name: Check every independently installed entry
@@ -59,6 +59,7 @@ jobs:
           python3 scripts/m3e.py add --all --target "$RUNNER_TEMP/consumer"
           cargo check --locked --offline --target wasm32-unknown-unknown --lib --manifest-path "$RUNNER_TEMP/consumer/ui-kit/Cargo.toml"
           python3 scripts/m3e.py add button icon-button material-symbol text-field combobox dialog tabs switch card sidebar-provider data-table message-scroller theme-scope --target examples/consumer
+          cargo fetch --locked --manifest-path examples/consumer/Cargo.toml
           cargo check --locked --offline --target wasm32-unknown-unknown --manifest-path examples/consumer/Cargo.toml
       - name: Build deterministic registry archive
         run: |
