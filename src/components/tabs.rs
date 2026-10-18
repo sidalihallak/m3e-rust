@@ -100,7 +100,7 @@ pub fn Tabs(
                             r#type: "button",
                             role: "tab",
                             class: tab_class,
-                            aria_label:badge.map(|n|format!("{}, {n} notifications",item.label)),
+                            aria_label:badge.map(|n|format!("{}, {n}",item.label)),
                             "aria-selected": if is_selected { "true" } else { "false" },
                             tabindex: if is_selected { "0" } else { "-1" },
                             disabled: item.disabled,

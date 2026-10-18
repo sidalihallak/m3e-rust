@@ -58,6 +58,15 @@ pub fn SearchView(
     results: Vec<SearchResult>,
     #[props(default)] layout: SearchLayout,
     #[props(default)] class: String,
+    /// Status text with no results (default "No results"), e.g. "Searching…".
+    #[props(default)] empty_text: Option<String>,
+    /// Status text with results (default "{count} results").
+    #[props(default)] count_text: Option<String>,
+    /// Labels of the back and clear buttons (default "Close {label}",
+    /// "Clear search query") and of the results list ("Search results").
+    #[props(default)] close_label: Option<String>,
+    #[props(default)] clear_label: Option<String>,
+    #[props(default)] results_label: Option<String>,
     #[props(default)] oninput: EventHandler<String>,
     #[props(default)] onopenchange: EventHandler<bool>,
     #[props(default)] onselect: EventHandler<String>,
@@ -92,16 +101,20 @@ pub fn SearchView(
         SearchLayout::FullScreen => "full",
     };
     let count = results.len();
+    let status = if count == 0 { empty_text.unwrap_or_else(|| "No results".to_string()) } else { count_text.unwrap_or_else(|| format!("{count} results")) };
+    let close_label = close_label.unwrap_or_else(|| format!("Close {label}"));
+    let clear_label = clear_label.unwrap_or_else(|| "Clear search query".to_string());
+    let results_label = results_label.unwrap_or_else(|| "Search results".to_string());
     rsx! {dialog {id:"{id}",class:"m3-search-view {class}",aria_label:label.clone(),aria_modal:"true","data-open":open,"data-layout":kind,"data-anchor":anchor_id,"data-value":value.clone(),
         div {class:"m3-search-view__scrim",aria_hidden:"true"}
         div {class:"m3-search-view__surface",
             div {class:"m3-search-view__header",
-                button {r#type:"button",class:"m3-feedback__icon",aria_label:"Close {label}",onclick:move |_|onopenchange.call(false),super::ripple::Ripple {} Icon {icon:icons::ARROW_BACK}}
+                button {r#type:"button",class:"m3-feedback__icon",aria_label:close_label,onclick:move |_|onopenchange.call(false),super::ripple::Ripple {} Icon {icon:icons::ARROW_BACK}}
                 input {id:"{id}-input",r#type:"search",role:"combobox",aria_label:label.clone(),placeholder:label,value:value.clone(),aria_expanded:"true",aria_autocomplete:"list",aria_controls:"{id}-results",oninput:move|e|oninput.call(e.value())}
-                if !value.is_empty(){button {r#type:"button",class:"m3-feedback__icon","data-search-clear":"true",aria_label:"Clear search query",onclick:move |_|oninput.call(String::new()),super::ripple::Ripple {} Icon {icon:icons::CLOSE}}}
+                if !value.is_empty(){button {r#type:"button",class:"m3-feedback__icon","data-search-clear":"true",aria_label:clear_label,onclick:move |_|oninput.call(String::new()),super::ripple::Ripple {} Icon {icon:icons::CLOSE}}}
             }
-            p {class:"m3-search-view__status",role:"status",aria_live:"polite",if count==0 {"No results"}else{"{count} results"}}
-            div {id:"{id}-results",class:"m3-search-view__results",role:"listbox",aria_label:"Search results",tabindex:"-1",
+            p {class:"m3-search-view__status",role:"status",aria_live:"polite","{status}"}
+            div {id:"{id}-results",class:"m3-search-view__results",role:"listbox",aria_label:results_label,tabindex:"-1",
                 for (index,item) in results.into_iter().enumerate(){button {id:"{id}-result-{index}",key:"{item.value}",r#type:"button",class:"m3-search-result",role:"option",aria_selected:"false",disabled:item.disabled,tabindex:"-1",
                     onclick:move |_|{onselect.call(item.value.clone());onopenchange.call(false);},super::ripple::Ripple {},
                     if let Some(icon)=item.icon {Icon {icon}}

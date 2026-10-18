@@ -1731,7 +1731,7 @@
     "src/components/scroll_area.js": "c61108796bada80b8a701179ea89ae8bd510f4140bac65361b10a5946626f7f2",
     "src/components/scroll_area.rs": "a52953ef8d2e663246bec82ac42222327d4851b0adece0d325f1cd835175d03a",
     "src/components/search.js": "de89ab3db6ed7f50952552f17581b01ef70d00ed0996ab8d96ba7b628437c16c",
-    "src/components/search.rs": "4074d3d50d4a67baf7f7e0eacd39d7062994497dca3554e7673af65f709d313f",
+    "src/components/search.rs": "00aaeea56248e910d3fde76dfbb4284f3abcae5be20ed7d69307863d740a6a9c",
     "src/components/segmented_button.rs": "8c703344256dd75d5a493a4c0d86a3e40898b5a38d875901e322cfbf65986ae9",
     "src/components/select.rs": "1666cffbf6c565a03c83a20ec00912fdcfaed010f6fecc1e523bcde4a7dfbe76",
     "src/components/selection.js": "1493c1180d15cea469b7d89adc876d78162fca1c050c267c5ee3811799defd13",
@@ -1751,7 +1751,7 @@
     "src/components/switch.rs": "e94eed0552e57a0ea3f8765dcd847a2a490c75ce7e819c0baa82fd617b028ba6",
     "src/components/switch_drag.js": "f677ee74a5f4652b3ecfc87f580a1ed14988a4211394e5cff3afa92234e2b9e4",
     "src/components/table.rs": "1346510d24c19e219909c89c057a0d5e50d170734bc688e1d538988b231e3b43",
-    "src/components/tabs.rs": "95dc53d42c555afe51ca4df4164bcff98cef186b607f96ca7986dd590c4a74dc",
+    "src/components/tabs.rs": "fe464ea150ba90f2739a804662e75e24b4bab8e43842e1b7101046ce65a10d57",
     "src/components/text_field.rs": "672a831f37d66b6a0f8c55d2873be0eeeccd53419e29f79a68049f4b144d9215",
     "src/components/theme_scope.js": "2fc6ff8a0e586f912824cd089f13dc758f8ff3937ce764cba80c395c64c8ab07",
     "src/components/theme_scope.rs": "b530fb105fd1b69f8660a478766abe46cfbd954aa4943d52443ddd465fc3b07f",
@@ -1772,7 +1772,7 @@
     "src/shape_library.rs": "342e81f1f6f3d57d8046f6950778023b7d22e841753af10730879cbedad08a49",
     "src/theme.rs": "f1f249fc8ee920f49455db5d460e7dd1d700c5f03b1d008db9800929b558046d"
   },
-  "snapshot": "1e092e43544aae4cfa18420cafe7895f947323217d735c860cd5747c49b42f07",
+  "snapshot": "41f7341c2ce7373091a5729350558fe013a577fd8cf1e024b512cf84ce28cfc9",
   "style_order": [
     "base.css",
     "composite-motion.css",
