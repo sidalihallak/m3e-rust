@@ -31,9 +31,7 @@ pub(crate) fn use_disclosure_runtime(id: String) {
         }
     });
     use_drop(move || {
-        spawn(async move {
-            let _ = document::eval(&format!("window.__m3Disclosure?.[{id:?}]?.();")).await;
-        });
+        let _ = document::eval(&format!("window.__m3Disclosure?.[{id:?}]?.();"));
     });
 }
 

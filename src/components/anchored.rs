@@ -58,8 +58,6 @@ pub(crate) fn use_popup_runtime(
     });
     use_drop(move || {
         let id = id.clone();
-        spawn(async move {
-            let _ = document::eval(&format!("window.__m3Anchors?.[{id:?}]?.cleanup();")).await;
-        });
+        let _ = document::eval(&format!("window.__m3Anchors?.[{id:?}]?.cleanup();"));
     });
 }

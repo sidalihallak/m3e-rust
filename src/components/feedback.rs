@@ -73,9 +73,7 @@ pub fn Snackbar(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Snackbars?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Snackbars?.[{id:?}]?.();"));
         }
     });
     let duration = if action_label.is_some() || duration_ms == 0 {

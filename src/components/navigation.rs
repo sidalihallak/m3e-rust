@@ -50,9 +50,7 @@ pub(crate) fn use_navigation_keyboard(id: String) {
     });
     use_drop(move || {
         let script = format!("window.__m3Navigation?.[{id:?}]?.();");
-        spawn(async move {
-            let _ = document::eval(&script).await;
-        });
+        let _ = document::eval(&script);
     });
 }
 
@@ -153,9 +151,7 @@ pub fn ModalNavigationRail(
         let id = id.clone();
         move || {
             let script = format!("window.__m3ModalRails?.[{id:?}]?.();");
-            spawn(async move {
-                let _ = document::eval(&script).await;
-            });
+            let _ = document::eval(&script);
         }
     });
     rsx! {dialog {id:"{id}",class:"m3-modal-rail {class}",aria_modal:"true",aria_labelledby:"{id}-title","data-open":open,

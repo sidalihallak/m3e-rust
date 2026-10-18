@@ -112,9 +112,7 @@ pub fn Input(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Fields?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Fields?.[{id:?}]?.();"));
         }
     });
     rsx! {input{id,class:"m3-input m3-input--{variant} m3-input--{size} {class}",aria_label,
@@ -176,9 +174,7 @@ pub fn Textarea(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Fields?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Fields?.[{id:?}]?.();"));
         }
     });
     rsx! {textarea{id,class:"m3-input m3-input--{variant} m3-input--{size} {class}",aria_label,

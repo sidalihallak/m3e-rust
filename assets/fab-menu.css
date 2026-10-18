@@ -48,6 +48,9 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 4px;
+  /* The stack is there while closed (items fade in place): it must not take
+     taps meant for what's under it. Open items take them themselves. */
+  pointer-events: none;
 }
 
 /* Items: hidden and scaled down while closed; the nearest item springs in first. */

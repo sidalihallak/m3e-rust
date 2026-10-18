@@ -74,9 +74,7 @@ pub fn StandardButtonGroup(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3StandardGroups?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3StandardGroups?.[{id:?}]?.();"));
         }
     });
     rsx! {

@@ -21,7 +21,7 @@ pub fn Switch(
     let id=use_hook(||super::motion::next_id("m3-switch"));
     let change=use_callback(move |next|onchange.call(next));
     use_effect({let id=id.clone();move ||{let script=include_str!("switch_drag.js").replace("__ID__",&format!("{id:?}"));spawn(async move{let mut eval=document::eval(&script);while let Ok(value)=eval.recv::<bool>().await{pressed.set(false);change.call(value);}});}});
-    use_drop({let id=id.clone();move ||{spawn(async move{let _=document::eval(&format!("window.__m3SwitchDrags?.[{id:?}]?.();")).await;});}});
+    use_drop({let id=id.clone();move ||{let _ = document::eval(&format!("window.__m3SwitchDrags?.[{id:?}]?.();"));}});
     let checked_class = if checked { " m3-switch--checked" } else { "" };
     let pressed_class = if pressed() && !disabled {
         " m3-switch--pressed"

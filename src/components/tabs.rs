@@ -79,7 +79,7 @@ pub fn Tabs(
         let id = id.clone();
         move || {
             let script = format!("window.__m3TabIndicators?.[{id:?}]?.(); if (window.__m3TabIndicators) delete window.__m3TabIndicators[{id:?}];");
-            spawn(async move { let _ = document::eval(&script).await; });
+            let _ = document::eval(&script);
         }
     });
 

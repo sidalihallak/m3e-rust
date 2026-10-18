@@ -32,9 +32,7 @@ pub fn ResizablePanelGroup(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Resizable?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Resizable?.[{id:?}]?.();"));
         }
     });
     rsx! {div{id,class:"m3-resizable {class}","data-direction":if direction==PanelDirection::Horizontal{"horizontal"}else{"vertical"},"data-disabled":disabled,"data-adaptive":adaptive,{children}}}

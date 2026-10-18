@@ -71,9 +71,7 @@ pub fn Dialog(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Dialogs?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Dialogs?.[{id:?}]?.();"));
         }
     });
     rsx! {

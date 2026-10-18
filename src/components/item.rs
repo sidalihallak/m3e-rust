@@ -83,9 +83,7 @@ pub fn ItemGroup(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3ItemGroups?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3ItemGroups?.[{id:?}]?.();"));
         }
     });
     rsx! {div{id,role:if selection==ListSelection::None{"list"}else{"listbox"},aria_multiselectable:if selection==ListSelection::Multiple{Some("true")}else{None},aria_label:label,class:"m3-item-group {class}",{children}}}

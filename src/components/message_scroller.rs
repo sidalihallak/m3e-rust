@@ -126,11 +126,7 @@ pub fn MessageScroller(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ =
-                    document::eval(&format!("window.__m3MessageScrollerCleanup?.[{id:?}]?.();"))
-                        .await;
-            });
+            let _ = document::eval(&format!("window.__m3MessageScrollerCleanup?.[{id:?}]?.();"));
         }
     });
     rsx! {div{id:id.clone(),class:"m3-message-scroller {class}",style:"height:{height}","data-auto-scroll":auto_scroll,"data-margin":scroll_margin.max(0.0),"data-peek":previous_item_peek.max(0.0),"data-streaming":streaming,"data-stream-anchor":stream_anchor.unwrap_or_default(),"data-initial":match initial_position{MessageScrollPosition::Start=>"start",MessageScrollPosition::End=>"end",MessageScrollPosition::LastAnchor=>"last-anchor"},"data-threshold":edge_threshold.max(0.0),"data-preserve-prepend":preserve_prepend,

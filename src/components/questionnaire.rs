@@ -172,9 +172,7 @@ pub fn Questionnaire(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Questionnaires?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Questionnaires?.[{id:?}]?.();"));
         }
     });
     let enabled: Vec<usize> = questions

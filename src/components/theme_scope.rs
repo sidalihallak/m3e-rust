@@ -38,9 +38,7 @@ pub fn ThemeScope(
     });
     let root_id = id.clone();
     use_drop(move || {
-        spawn(async move {
-            let _ = document::eval(&format!("window.__m3ThemeModes?.[{id:?}]?.();")).await;
-        });
+        let _ = document::eval(&format!("window.__m3ThemeModes?.[{id:?}]?.();"));
     });
     let dark = match mode {
         ColorMode::Light => false,

@@ -71,9 +71,7 @@ pub fn Sheet(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Sheets?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Sheets?.[{id:?}]?.();"));
         }
     });
     let modal = variant == SheetVariant::Modal;

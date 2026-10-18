@@ -53,9 +53,7 @@ pub fn Menubar(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Menubars?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Menubars?.[{id:?}]?.();"));
         }
     });
     rsx! {div{id:"{id}",class:"m3-menubar {class}",role:"menubar",aria_label:label,"data-open-index":open().map(|i|i.to_string()),

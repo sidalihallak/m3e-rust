@@ -137,9 +137,7 @@ pub fn TimePicker(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Times?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Times?.[{id:?}]?.();"));
         }
     });
     let edit = use_callback(move |(index, raw): (usize, String)| {

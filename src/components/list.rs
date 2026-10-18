@@ -42,9 +42,7 @@ pub fn List(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Lists?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Lists?.[{id:?}]?.();"));
         }
     });
     rsx! {div {id,class:"m3-list {class}",role:if selection==ListSelection::None{"list"}else{"listbox"},aria_label,aria_multiselectable:if selection==ListSelection::Multiple{Some("true")}else{None},"data-style":if style==ListStyle::Segmented{"segmented"}else{"standard"},{children}}}

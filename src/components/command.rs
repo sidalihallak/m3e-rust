@@ -61,9 +61,7 @@ pub fn Command(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Commands?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Commands?.[{id:?}]?.();"));
         }
     });
     let terms: Vec<String> = query.split_whitespace().map(str::to_lowercase).collect();

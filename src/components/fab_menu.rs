@@ -85,16 +85,13 @@ pub fn FabMenu(
     });
     let drop_id = menu_id.clone();
     use_drop(move || {
-        spawn(async move {
-            let _ = document::eval(&format!(
+        let _ = document::eval(&format!(
                 r#"
                 const handler = window.__m3FabMenuListeners && window.__m3FabMenuListeners["{drop_id}"];
                 if (handler) document.removeEventListener("pointerdown", handler, true);
                 if (window.__m3FabMenuListeners) delete window.__m3FabMenuListeners["{drop_id}"];
                 "#
-            ))
-            .await;
-        });
+            ));
     });
 
     rsx! {

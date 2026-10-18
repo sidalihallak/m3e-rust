@@ -38,9 +38,7 @@ pub fn ScrollArea(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3ScrollAreas?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3ScrollAreas?.[{id:?}]?.();"));
         }
     });
     rsx! {div{id,class:"m3-scroll-area {class}","data-scrollbars":scrollbars.class(),style:"height:{height}",

@@ -166,9 +166,7 @@ pub fn Calendar(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Calendars?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Calendars?.[{id:?}]?.();"));
         }
     });
     let first_day = month.month_start();

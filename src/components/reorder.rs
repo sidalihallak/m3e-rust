@@ -45,9 +45,7 @@ pub fn ReorderGroup(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Reorders?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Reorders?.[{id:?}]?.();"));
         }
     });
     let order = items

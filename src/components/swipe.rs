@@ -14,8 +14,6 @@ pub(crate) fn use_swipe(id: String, events: EventHandler<i32>) {
         }
     });
     use_drop(move || {
-        spawn(async move {
-            let _ = document::eval(&format!("window.__m3Swipes?.[{id:?}]?.();")).await;
-        });
+        let _ = document::eval(&format!("window.__m3Swipes?.[{id:?}]?.();"));
     });
 }

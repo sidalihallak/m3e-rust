@@ -53,9 +53,7 @@ pub fn ImageThemePicker(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3ImageThemes?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3ImageThemes?.[{id:?}]?.();"));
         }
     });
     rsx! {div{id:id.clone(),class:"m3-image-theme {class}",aria_busy:busy(),

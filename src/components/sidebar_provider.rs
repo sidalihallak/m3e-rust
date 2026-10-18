@@ -101,10 +101,7 @@ pub fn SidebarProvider(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ =
-                    document::eval(&format!("window.__m3SidebarProviders?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3SidebarProviders?.[{id:?}]?.();"));
         }
     });
     rsx! {div{id,class:"m3-sidebar-provider {class}","data-expanded":state_expanded(),"data-compact":compact(),"data-key":persistence_key.unwrap_or_default(),"data-shortcut":keyboard_shortcut,"data-controlled":expanded.is_some(),{children}}}

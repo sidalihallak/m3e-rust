@@ -27,9 +27,7 @@ send();
         }
     });
     use_drop(move || {
-        spawn(async move {
-            let _ = document::eval(&format!("window.__m3Compact?.[{id:?}]?.();")).await;
-        });
+        let _ = document::eval(&format!("window.__m3Compact?.[{id:?}]?.();"));
     });
     compact
 }

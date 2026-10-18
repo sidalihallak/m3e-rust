@@ -104,9 +104,7 @@ pub fn Menu(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Menus?.[{id:?}]?.cleanup();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Menus?.[{id:?}]?.cleanup();"));
         }
     });
     let selection = {

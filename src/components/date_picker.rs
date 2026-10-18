@@ -328,9 +328,7 @@ fn DateTextInput(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3DateInputs?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3DateInputs?.[{id:?}]?.();"));
         }
     });
     let show_error = error && touched();

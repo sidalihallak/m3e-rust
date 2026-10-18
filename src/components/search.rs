@@ -83,9 +83,7 @@ pub fn SearchView(
     use_drop({
         let id = id.clone();
         move || {
-            spawn(async move {
-                let _ = document::eval(&format!("window.__m3Search?.[{id:?}]?.();")).await;
-            });
+            let _ = document::eval(&format!("window.__m3Search?.[{id:?}]?.();"));
         }
     });
     let kind = match layout {
