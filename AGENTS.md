@@ -4,6 +4,9 @@ This repository is a Dioxus Material 3 Expressive UI kit, porting
 [shadcn-m3e](https://github.com/Crysta1221/shadcn-m3e) with high visual and
 interaction fidelity, shipped as a normal Rust crate.
 
+Read [llms.txt](llms.txt) for the public API. Public API changes are recorded in
+[CHANGELOG.md](CHANGELOG.md), following [docs/versioning.md](docs/versioning.md).
+
 Read [the component development protocol](docs/component-development.md) before
 adding or changing a component. Apply it to **every component**, including
 follow-up fixes. Create or update that component's verification report.

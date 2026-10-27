@@ -5,6 +5,12 @@ An M3 Expressive component library for Dioxus. Import it like any Rust crate; th
 [Live preview](https://sidalihallak.github.io/m3e-rust/) ·
 [Source](https://github.com/sidalihallak/m3e-rust)
 
+## Quick start
+
+The [quick start](docs/quick-start.md) creates a Dioxus app that uses the crate in a few
+commands. The API for agents is in [llms.txt](llms.txt), and releases are listed in
+[CHANGELOG.md](CHANGELOG.md).
+
 ## Use the library
 
 Add the crate as a normal dependency and wrap the app in `ThemeProvider`:

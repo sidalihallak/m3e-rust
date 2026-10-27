@@ -2,6 +2,12 @@
 name = "m3e-rust-ui"
 version = "0.1.0"
 edition = "2024"
+rust-version = "1.97"
+description = "Material 3 Expressive components for Dioxus, with Material color themes generated from a seed color"
+repository = "https://github.com/sidalihallak/m3e-rust"
+readme = "README.md"
+keywords = ["dioxus", "material", "material-design", "ui", "components"]
+categories = ["gui", "wasm"]
 
 [dependencies]
 dioxus = { version = "0.7" }

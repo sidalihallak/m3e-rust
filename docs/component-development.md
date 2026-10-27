@@ -28,7 +28,7 @@ attributed to that source, rather than presented as a universal Material rule.
 - Use native HTML semantics where available, and correct accessible roles,
   labels, focus and keyboard activation.
 - Keep app-specific state and preview layout outside the reusable component.
-- Include required CSS and any runtime assets in the copy/install instructions.
+- Document required CSS and runtime assets. The crate bundles every component stylesheet (`src/styles.rs`), so apps need no extra files.
 - Show a real, copyable Rust usage example in the component preview. The example
   must use the current public API, and its copy control must work.
 - Implement all relevant enabled, disabled, focus, hover, pressed, selected,
