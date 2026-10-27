@@ -1,5 +1,5 @@
 /* Native controls for composites; upstream button/toggle type and shape tokens.
-   Copy with action_control.rs, icon.css and ripple.css. */
+   Used with action_control.rs, icon.css and ripple.css. */
 .m3-action {
   --ac-height: 40px; --ac-pad: 16px; --ac-icon: 20px; --ac-gap: 8px;
   --ac-type: 14px; --ac-line: 20px; --ac-weight: 500; --ac-tracking: .1px;

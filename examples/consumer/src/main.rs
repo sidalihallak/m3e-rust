@@ -4,9 +4,21 @@ use m3e_rust_ui::*;
 fn main() {
     dioxus::launch(App);
 }
+
+/// The whole library is one import plus one provider: pick a seed colour and the
+/// Material tokens, the component styles and the light/dark scheme follow from it.
 #[component]
 fn App() -> Element {
-    let mut dark = use_signal(|| false);
+    rsx! {
+        ThemeProvider {
+            default_theme: ThemeSettings { seed: 0xff006a60, ..Default::default() },
+            Consumer {}
+        }
+    }
+}
+#[component]
+fn Consumer() -> Element {
+    let mut theme = use_theme();
     let mut clicks = use_signal(|| 0usize);
     let mut dialog = use_signal(|| false);
     let mut title = use_signal(String::new);
@@ -21,12 +33,10 @@ fn App() -> Element {
             DataRow::new("r2", vec![DataCell::text("Lin"), DataCell::number(20.0)]),
         ]
     });
-    let theme = theme::ThemePreview::from_seed(0xff006a60);
-    let vars = theme::css_variables(if dark() { &theme.dark } else { &theme.light });
-    rsx! {UiStyles{}document::Stylesheet{href:asset!("/assets/app.css")}
-    div{class:"consumer",style:vars,main{
-     h1{"Installed Material 3 kit"}p{"An independent Dioxus app using registry-installed sources. No gallery or Tailwind CSS."}
-     Button{variant:ButtonVariant::Tonal,onclick:move |_|dark.set(!dark()),"Toggle consumer theme"}
+    rsx! {document::Stylesheet{href:asset!("/assets/app.css")}
+    div{class:"consumer",main{
+     h1{"Material 3 kit"}p{"An independent Dioxus app that imports the crate as a normal dependency."}
+     Button{variant:ButtonVariant::Tonal,onclick:move |_|theme.with_mut(|t| t.mode = if t.mode == ColorMode::Dark {ColorMode::Light} else {ColorMode::Dark}),"Toggle consumer theme"}
      section{id:"consumer-actions",h2{"Icons and actions"}div{class:"row",
       Button{onclick:move |_|clicks+=1,"Count click"}Button{disabled:true,"Disabled action"}
       IconButton{icon:icons::rounded::ROCKET_LAUNCH,aria_label:"Launch",onclick:move |_|clicks+=1}

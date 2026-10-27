@@ -1,7 +1,7 @@
 /*
  * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
- * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
- * M3 FAB menu. Copy with src/components/fab_menu.rs, fab.css and icon.css.
+ * Icon variants also need icon.rs, icons.rs and icon.css.
+ * M3 FAB menu. Used with src/components/fab_menu.rs, fab.css and icon.css.
  * Sources: Material Web FAB menu tokens (close button 56dp, icon 20dp, items
  * 56dp with 24dp side padding, 8dp icon-label space, 4dp between, title-medium
  * label, elevation 0 items and 3 for the close button); shadcn-m3e fab-menu.tsx

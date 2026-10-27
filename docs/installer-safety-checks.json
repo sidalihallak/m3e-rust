@@ -1,8 +1,0 @@
-{
-  "local_component_edit_preserved": true,
-  "generated_file_conflict_blocks_all_writes": true,
-  "dry_run_makes_no_change": true,
-  "directory": "/private/tmp/m3e-installer-safety-etfoumkv",
-  "preserve_output": "Installed 2 requested entries (8 modules); 14 files written. Preserved 1 local edits.\nAdd to /private/tmp/m3e-installer-safety-etfoumkv/Cargo.toml:\n[dependencies]\nm3e-rust-ui = { path = \"ui-kit\" }\nImport m3e_rust_ui::* and load UiStyles {} once. Apply semantic theme variables to an ancestor.\n",
-  "conflict_output": "m3e: Local changes conflict with this update: src/components/mod.rs. Review first; --overwrite explicitly replaces conflicting files.\n"
-}

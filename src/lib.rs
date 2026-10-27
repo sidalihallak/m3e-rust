@@ -1,6 +1,8 @@
 pub mod components;
 pub mod icons;
 pub mod loading_shapes;
+pub mod styles;
+pub use styles::{M3eStyles, component_css};
 
 pub use components::{
     Sheet, SheetSide, SheetVariant, BottomSheet, SideSheet,

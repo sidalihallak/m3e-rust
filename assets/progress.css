@@ -1,6 +1,6 @@
 /*
- * Runtime helpers: src/components/motion.rs. See docs/copy-components.md for all dependencies.
- * M3 expressive linear and circular progress. Copy with src/components/progress.rs.
+ * Runtime helpers: src/components/motion.rs.
+ * M3 expressive linear and circular progress. Used with src/components/progress.rs.
  * Sources: Material Web progress indicator tokens (flat 4dp, thick 8dp, track
  * surface-container-highest, stop dot 4dp, 4dp gap, wave amplitude 3dp,
  * wavelength 40dp, 20dp indeterminate, wavy height thickness + 6dp); upstream

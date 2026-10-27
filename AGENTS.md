@@ -2,7 +2,7 @@
 
 This repository is a Dioxus Material 3 Expressive UI kit, porting
 [shadcn-m3e](https://github.com/Crysta1221/shadcn-m3e) with high visual and
-interaction fidelity and a Rust/UI style copyable component workflow.
+interaction fidelity, shipped as a normal Rust crate.
 
 Read [the component development protocol](docs/component-development.md) before
 adding or changing a component. Apply it to **every component**, including
@@ -14,7 +14,7 @@ follow-up fixes. Create or update that component's verification report.
   `/Users/sidalihallak/Desktop/dev/rskit/crates/rskit-ui` implementation is outside
   this pilot's scope unless the user explicitly changes that instruction.
 - Use Dioxus and Rust for the component API. Use the existing Material color
-  roles and motion tokens. Keep component code and its required CSS copyable.
+  roles and motion tokens. Components are library exports used unmodified by apps; the crate bundles their CSS.
 - Read the current official Material overview, specs, guidelines and
   accessibility guidance for the component, and inspect its actual shadcn-m3e
   source. Keep source links and observed values in the verification report.

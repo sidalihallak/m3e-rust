@@ -1,7 +1,7 @@
 /*
  * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
- * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
- * M3 segmented button set. Copy with src/components/segmented_button.rs and icon.css.
+ * Icon variants also need icon.rs, icons.rs and icon.css.
+ * M3 segmented button set. Used with src/components/segmented_button.rs and icon.css.
  * Sources: the Material 3 segmented button reference (one pill with a 1dp outline,
  * 1dp dividers between items, no gaps, flat selected segments with a check) and the
  * Material Web labs outlined segmented button tokens (revision 47adb65): 40dp high,

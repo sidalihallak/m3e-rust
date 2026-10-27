@@ -1,7 +1,7 @@
 /*
  * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
- * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
- * M3 tabs. Copy with src/components/tabs.rs and icon.css.
+ * Icon variants also need icon.rs, icons.rs and icon.css.
+ * M3 tabs. Used with src/components/tabs.rs and icon.css.
  * Sources: Material Web primary navigation tab tokens (revision 47adb65): 48dp
  * container, 1dp divider in outline-variant (current official color role), 3dp active indicator with rounded top
  * corners, title-small text, 24dp icon, active label primary, inactive on-surface-variant,

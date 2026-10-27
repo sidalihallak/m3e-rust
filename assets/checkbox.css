@@ -1,7 +1,7 @@
 /*
  * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
- * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
- * M3 checkbox. Copy with src/components/checkbox.rs.
+ * Icon variants also need icon.rs, icons.rs and icon.css.
+ * M3 checkbox. Used with src/components/checkbox.rs.
  * Sources: Material Web tokens md.comp.checkbox (18dp container, 2px
  * outline, 2dp corners, 40dp state layer, 18dp icon); shadcn-m3e checkbox.tsx
  * for the stroke-draw check mark.

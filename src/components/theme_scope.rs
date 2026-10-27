@@ -84,7 +84,10 @@ pub fn ThemeProvider(
     let settings = use_signal(|| default_theme);
     use_context_provider(|| settings);
     let value = settings();
-    rsx! {ThemeScope {seed:value.seed,mode:value.mode,variant:value.variant,contrast:value.contrast,class,{children}}}
+    rsx! {
+        crate::styles::M3eStyles {}
+        ThemeScope {seed:value.seed,mode:value.mode,variant:value.variant,contrast:value.contrast,class,{children}}
+    }
 }
 
 /// Must be called below ThemeProvider. The consumer owns persistence, if desired.

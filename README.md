@@ -1,9 +1,42 @@
 # M3E Rust UI
 
-An M3 Expressive component kit for Dioxus, built on the Rust/UI registry model.
+An M3 Expressive component library for Dioxus. Import it like any Rust crate; the components are used as they are.
 
 [Live preview](https://sidalihallak.github.io/m3e-rust/) ·
 [Source](https://github.com/sidalihallak/m3e-rust)
+
+## Use the library
+
+Add the crate as a normal dependency and wrap the app in `ThemeProvider`:
+
+```toml
+[dependencies]
+m3e-rust-ui = { path = "../m3e-rust" }   # or a git/crates.io version
+```
+
+```rust
+use dioxus::prelude::*;
+use m3e_rust_ui::{Button, ThemeProvider, ThemeSettings, ColorMode};
+
+#[component]
+fn App() -> Element {
+    rsx! {
+        ThemeProvider {
+            default_theme: ThemeSettings { seed: 0xff6750a4, mode: ColorMode::System, ..Default::default() },
+            Button { "Hello" }
+        }
+    }
+}
+```
+
+- `seed` is the source colour (ARGB). The Material tokens for light and dark schemes are
+  generated from it with `material-colors`, a port of Material Color Utilities.
+- `variant` and `contrast` in `ThemeSettings` change the scheme, and `mode` picks light, dark or
+  the system setting.
+- `ThemeProvider` injects every component stylesheet, so apps link no CSS of their own.
+- Override a role by setting its `--md-sys-color-*` variable on an element inside the provider. The provider writes the roles on its own wrapper, so an override above it is replaced.
+
+The consumer example in [`examples/consumer`](examples/consumer) is a complete app that does this.
 
 Agent contributors must follow [AGENTS.md](AGENTS.md) and the
 [component development protocol](docs/component-development.md). Every
@@ -108,8 +141,8 @@ uploaded as a Pages artifact; generated build files are excluded from Git.
 Current desktop fixes and platform scope are in
 [the fidelity fix report](docs/component-fidelity-fixes.md).
 [Loading indicator evidence](docs/loading-indicator-verification.md) is recorded
-separately. Follow [the copy guide](docs/copy-components.md) for complete Rust,
-CSS, icon, shape and motion dependencies, or export an editable local library:
+separately. Each component's Rust, CSS, icon, shape and motion dependencies are part of the
+crate; the stylesheets are bundled by `ThemeProvider`. Export tooling is no longer used:
 
 ```sh
 python3 scripts/export-kit.py /path/to/my-project/ui-kit
@@ -302,22 +335,17 @@ See [family verification](docs/advanced-behavior-verification.md),
 [reordering](docs/reorder-verification.md) for desktop evidence and explicit
 platform/engine differences. Android remains paused.
 
-### Full icons and editable installation
+### Full icons
 
 All 4,301 Material Symbols names are available in rounded, outlined and sharp,
 with outlined/filled glyphs at weight400. Existing rounded constants remain
 compatible. Search and copy from the icon gallery.
 
 [Icon verification](docs/icons-verification.md) ·
-[Installer quickstart](docs/registry-installer.md) ·
-[Registry checks](docs/registry-installer-verification.md) ·
 [Independent application](docs/consumer-app-verification.md).
 
-### GitHub registry releases and CI
+### CI
 
-The source registry can live in a public or private GitHub repository.
-[Release setup and consumption](docs/github-registry-release.md) explains
-versioned archives, checksums, authenticated private access and draft releases.
-CI validates pinned icon sources, editable installation, Wasm builds and browser
+CI validates pinned icon sources, the showcase and consumer example Wasm builds, and browser
 artwork. [Conclusive icon evidence](docs/icons-artwork-verification.json) compares
 actual sprite output with direct source paths, including live style changes.

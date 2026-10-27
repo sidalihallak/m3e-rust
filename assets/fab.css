@@ -1,7 +1,7 @@
 /*
  * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
- * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
- * M3 floating action button. Copy with src/components/fab.rs and icon.css.
+ * Icon variants also need icon.rs, icons.rs and icon.css.
+ * M3 floating action button. Used with src/components/fab.rs and icon.css.
  * Sources: Material Web FAB tokens (containers 40/56/80/96dp, corners
  * 12/16/20/28dp, icons 24/24/28/36dp, state layers 0.08/0.10/0.10); elevation
  * levels from the Material elevation spec, with the ambient shadow from

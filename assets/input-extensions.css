@@ -1,4 +1,4 @@
-/* Copy with input_group.rs, input_otp.rs/js and the existing Button styles/runtime.
+/* Used with input_group.rs, input_otp.rs/js and the existing Button styles/runtime.
    Upstream c37c0d2: 56px group, 4px corner,12px addon,8px gap;
    OTP48x56px,12px corner,8px gap. Persistent adjacent labels follow M3 guidance. */
 .m3-input-group-field{border:0;margin:0;padding:0;min-width:0;width:100%}

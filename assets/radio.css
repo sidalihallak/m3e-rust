@@ -1,7 +1,7 @@
 /*
  * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
- * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
- * M3 expressive radio button. Copy with src/components/radio.rs.
+ * Icon variants also need icon.rs, icons.rs and icon.css.
+ * M3 expressive radio button. Used with src/components/radio.rs.
  * Sources: Material Web radio tokens (20dp icon, 40dp state layer, colours,
  * state layers 0.08/0.10, disabled 0.38); upstream radio-group.tsx for the
  * 20dp ring with a 2dp outline and the 10dp dot that scales on the expressive

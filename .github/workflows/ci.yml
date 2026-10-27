@@ -1,4 +1,4 @@
-name: Registry and component CI
+name: Component CI
 on:
   push:
     branches: [main]
@@ -41,36 +41,14 @@ jobs:
           "$RUNNER_TEMP/font-env/bin/python" scripts/gen-extra-icons.py "$RUNNER_TEMP/icon-reference/fonts" "$RUNNER_TEMP/icon-reference/package"
           python3 scripts/verify-icons.py "$RUNNER_TEMP/icon-reference/package"
           git diff --exit-code -- assets/material-symbols/font-extras.json
-      - name: Verify source integrity and installer safety
-        run: |
-          python3 scripts/verify-distribution.py
-          python3 tests/installer.py
-          git diff --exit-code -- registry/registry.json
       - name: Fetch locked dependencies
         run: cargo fetch --locked
       - name: Check showcase
         run: cargo check --locked --offline --target wasm32-unknown-unknown
-      - name: Check every independently installed entry
-        run: python3 scripts/verify-registry.py --cargo cargo --target-dir "$PWD/target" --report "$RUNNER_TEMP/registry-checks.json"
-      - name: Check complete install and consuming app
-        env:
-          CARGO_TARGET_DIR: ${{ github.workspace }}/target
+      - name: Check the consumer example as a normal dependency
         run: |
-          python3 scripts/m3e.py add --all --target "$RUNNER_TEMP/consumer"
-          cargo check --locked --offline --target wasm32-unknown-unknown --lib --manifest-path "$RUNNER_TEMP/consumer/ui-kit/Cargo.toml"
-          python3 scripts/m3e.py add button icon-button material-symbol text-field combobox dialog tabs switch card sidebar-provider data-table message-scroller theme-scope --target examples/consumer
           cargo fetch --locked --manifest-path examples/consumer/Cargo.toml
           cargo check --locked --offline --target wasm32-unknown-unknown --manifest-path examples/consumer/Cargo.toml
-      - name: Build deterministic registry archive
-        run: |
-          python3 scripts/package-registry.py --output "$RUNNER_TEMP/release-a"
-          python3 scripts/package-registry.py --output "$RUNNER_TEMP/release-b"
-          cmp "$RUNNER_TEMP/release-a/SHA256SUMS" "$RUNNER_TEMP/release-b/SHA256SUMS"
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: registry-checks
-          path: ${{ runner.temp }}/registry-checks.json
   icons:
     runs-on: ubuntu-latest
     timeout-minutes: 30

@@ -1,7 +1,7 @@
 /*
  * Runtime dependencies: src/components/ripple.rs, src/components/motion.rs and ripple.css.
- * Icon variants also need icon.rs, icons.rs and icon.css. See docs/copy-components.md.
- * M3 expressive icon button. Copy with src/components/icon_button.rs and icon.css.
+ * Icon variants also need icon.rs, icons.rs and icon.css.
+ * M3 expressive icon button. Used with src/components/icon_button.rs and icon.css.
  * Sources: Material Web icon button tokens (sizes 32/40/56/96/136dp, icons
  * 20/24/24/32/40dp, corners, state layers 0.08/0.10/0.10, disabled 0.10 and
  * 0.38). The press morph uses the DefaultEffects spring, from the

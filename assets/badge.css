@@ -1,5 +1,5 @@
 /*
- * M3 notification badge. Copy with src/components/badge.rs.
+ * M3 notification badge. Used with src/components/badge.rs.
  * Sources: Material Web badge tokens (revision 47adb65): 6dp error dot, 16dp large
  * badge, error and on-error colours, full corner shape, and the label-small text
  * (11/16, weight 500, 0.5px tracking) for counts. The spec has no motion for badges.

@@ -1,17 +1,27 @@
-# Independent consuming-app verification
+# Consumer example
 
-This is an ordinary Dioxus application, not a gallery module. Its application
-CSS only sets page layout; `UiStyles` supplies registry-installed component CSS.
+An ordinary Dioxus app that uses `m3e-rust-ui` as a normal Cargo dependency:
 
-From the kit checkout:
+```toml
+[dependencies]
+m3e-rust-ui = { path = "../.." }   # or the crates.io / git version
+```
+
+```rust
+use m3e_rust_ui::{ThemeProvider, ThemeSettings};
+
+rsx! {
+    ThemeProvider {
+        default_theme: ThemeSettings { seed: 0xff006a60, ..Default::default() },
+        App {}
+    }
+}
+```
+
+`ThemeProvider` injects the component styles and builds the Material scheme from the
+seed colour. Components are used as they are; no source is copied into the app.
 
 ```sh
-python3 scripts/m3e.py add button icon-button material-symbol text-field combobox dialog tabs switch card sidebar-provider data-table message-scroller theme-scope --target examples/consumer
 cd examples/consumer
 dx serve --platform web --addr 127.0.0.1 --port 8081 --open false
 ```
-
-The generated `ui-kit/` is ignored and remains editable. The app's Cargo.toml
-uses that path dependency. The consumer is checked independently from the main
-showcase. Run the installer again after updating the source registry; it preserves
-unchanged-source local edits and reports conflicts before writing.

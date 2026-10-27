@@ -1,6 +1,6 @@
 /*
- * Runtime helpers: src/components/motion.rs. See docs/copy-components.md for all dependencies.
- * M3 text field. Copy with src/components/text_field.rs and icon.css.
+ * Runtime helpers: src/components/motion.rs.
+ * M3 text field. Used with src/components/text_field.rs and icon.css.
  * Sources: Material Web filled and outlined text field tokens (revision 47adb65): 56dp
  * container, body-large input and label text, body-small label when floated, 1dp outline,
  * hover 1dp on-surface, focus primary, error colours, disabled 38% text and 12% outline,

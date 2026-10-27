@@ -1,5 +1,5 @@
 /* Material field + upstream exposed selection; 48px options satisfy M3 targets
-   (upstream minimum is 44px). Copy with help.css and composite-motion.css. */
+   (upstream minimum is 44px). Used with help.css and composite-motion.css. */
 .m3-choice {width:100%;min-width:0;display:flex;flex-direction:column;font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--md-sys-color-on-surface);}
 .m3-choice__field {position:relative;min-height:56px;border-radius:4px;box-sizing:border-box;--choice-outline:var(--md-sys-color-outline);--choice-border:1px;--choice-label:var(--md-sys-color-on-surface-variant);}
 .m3-choice__outline {position:absolute;inset:-8px 0 0;margin:0;min-width:0;padding:0 12px;border:var(--choice-border) solid var(--choice-outline);border-radius:4px;pointer-events:none;}

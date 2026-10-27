@@ -453,63 +453,8 @@ fn App() -> Element {
         document::Stylesheet { href: asset!("/assets/main.css") }
         document::Stylesheet { href: asset!("/assets/navigation.css") }
         document::Stylesheet { href: asset!("/assets/showcase.css") }
-        document::Stylesheet { href: asset!("/assets/sheet.css") }
-        document::Stylesheet { href: asset!("/assets/content.css") }
-        document::Stylesheet { href: asset!("/assets/feedback.css") }
-        document::Stylesheet { href: asset!("/assets/list.css") }
-        document::Stylesheet { href: asset!("/assets/search.css") }
-        document::Stylesheet { href: asset!("/assets/date-picker.css") }
-        document::Stylesheet { href: asset!("/assets/time-picker.css") }
-        document::Stylesheet { href: asset!("/assets/accordion.css") }
-        document::Stylesheet { href: asset!("/assets/table.css") }
-        document::Stylesheet { href: asset!("/assets/pagination.css") }
-        document::Stylesheet { href: asset!("/assets/data-table.css") }
-        document::Stylesheet { href: asset!("/assets/chart.css") }
-        document::Stylesheet { href: asset!("/assets/carousel.css") }
-        document::Stylesheet { href: asset!("/assets/command.css") }
-        document::Stylesheet { href: asset!("/assets/breadcrumb.css") }
-        document::Stylesheet { href: asset!("/assets/navigation-extensions.css") }
-        document::Stylesheet { href: asset!("/assets/input-extensions.css") }
-        document::Stylesheet { href: asset!("/assets/layout-helpers.css") }
-        document::Stylesheet { href: asset!("/assets/expression-helpers.css") }
-        document::Stylesheet { href: asset!("/assets/theme-helpers.css") }
-        document::Stylesheet { href: asset!("/assets/application-blocks.css") }
-        document::Stylesheet { href: asset!("/assets/form.css") }
-        document::Stylesheet { href: asset!("/assets/item.css") }
-        document::Stylesheet { href: asset!("/assets/toaster.css") }
-        document::Stylesheet { href: asset!("/assets/sidebar-provider.css") }
-        document::Stylesheet { href: asset!("/assets/advanced.css") }
-        document::Stylesheet { href: asset!("/assets/spinner.css") }
-        document::Stylesheet { href: asset!("/assets/toggle.css") }
+        m3e_rust_ui::M3eStyles {}
         document::Stylesheet { href: asset!("/assets/tailwind.css") }
-        document::Stylesheet { href: asset!("/assets/button.css") }
-        document::Stylesheet { href: asset!("/assets/ripple.css") }
-        document::Stylesheet { href: asset!("/assets/switch.css") }
-        document::Stylesheet { href: asset!("/assets/checkbox.css") }
-        document::Stylesheet { href: asset!("/assets/icon.css") }
-        document::Stylesheet { href: asset!("/assets/fab.css") }
-        document::Stylesheet { href: asset!("/assets/fab-menu.css") }
-        document::Stylesheet { href: asset!("/assets/icon-button.css") }
-        document::Stylesheet { href: asset!("/assets/chip.css") }
-        document::Stylesheet { href: asset!("/assets/progress.css") }
-        document::Stylesheet { href: asset!("/assets/loading-indicator.css") }
-        document::Stylesheet { href: asset!("/assets/radio.css") }
-        document::Stylesheet { href: asset!("/assets/slider.css") }
-        document::Stylesheet { href: asset!("/assets/segmented-button.css") }
-        document::Stylesheet { href: asset!("/assets/button-group.css") }
-        document::Stylesheet { href: asset!("/assets/composite-motion.css") }
-        document::Stylesheet { href: asset!("/assets/action-control.css") }
-        document::Stylesheet { href: asset!("/assets/standard-button-group.css") }
-        document::Stylesheet { href: asset!("/assets/split-button.css") }
-        document::Stylesheet { href: asset!("/assets/menu.css") }
-        document::Stylesheet { href: asset!("/assets/dialog.css") }
-        document::Stylesheet { href: asset!("/assets/help.css") }
-        document::Stylesheet { href: asset!("/assets/select.css") }
-        document::Stylesheet { href: asset!("/assets/tabs.css") }
-        document::Stylesheet { href: asset!("/assets/badge.css") }
-        document::Stylesheet { href: asset!("/assets/card.css") }
-        document::Stylesheet { href: asset!("/assets/divider.css") }
-        document::Stylesheet { href: asset!("/assets/text-field.css") }
 
         div { class: "app-shell showcase-shell", style: theme_style, "data-color-mode":if dark(){"dark"}else{"light"}, "data-catalog-open":catalog_open(),
             a {class:"showcase-skip",href:"#showcase-content","Skip to component content"}
