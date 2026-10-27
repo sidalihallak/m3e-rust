@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use m3e_rust_ui::icons;
-use m3e_rust_ui::{ConnectedButtonGroup, ConnectedButtonItem, ConnectedButtonVariant, ButtonGroupSelection, Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, ChipSize, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, SliderSize, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardActions, Divider, DividerInset, DividerOrientation, TextField, TextFieldVariant, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, IconButtonWidth, Switch};
+use m3e_rust_ui::{ConnectedButtonGroup, ConnectedButtonItem, ConnectedButtonVariant, ButtonGroupSelection, Button, ButtonShape, ButtonSize, ButtonVariant, Checkbox, Chip, ChipVariant, ChipSize, CircularProgress, Fab, FabColor, LinearProgress, LoadingIndicator, LoadingIndicatorVariant, Radio, RadioGroup, SegmentedButton, SegmentedButtonSet, Slider, SliderSize, TabItem, Tabs, TabsVariant, BadgeAnchor, Card, CardActions, Divider, DividerInset, DividerOrientation, TextField, TextFieldSize, TextFieldVariant, CardBody, CardMedia, CardVariant, NotificationBadge, FabMenu, FabMenuColor, FabMenuItem, FabSize, Icon, IconButton, IconButtonShape, IconButtonSize, IconButtonVariant, IconButtonWidth, Switch};
 
 use m3e_rust_ui::theme;
 mod theme_helpers_gallery;
@@ -438,6 +438,7 @@ fn App() -> Element {
     let mut name_value = use_signal(String::new);
     let mut email_value = use_signal(|| String::from("not-an-email"));
     let mut note_value = use_signal(String::new);
+    let mut dense_value = use_signal(|| String::from("Compact"));
     let mut search_value = use_signal(String::new);
     let mut price_value = use_signal(String::new);
     let mut menu_pick = use_signal(|| String::from("none"));
@@ -1438,7 +1439,14 @@ fn App() -> Element {
                         }
                     }
                     article { class: "demo-card field-specimen",
-                        div { class: "card-topline", span { "ICONS · PREFIX · COUNTER · MULTI-LINE" } span { class: "component-index", "D" } }
+                        div { class: "card-topline", span { "DENSE · 40DP" } span { class: "component-index", "E" } }
+                        div { class: "field-stack",
+                            TextField { label: "Dense outlined", size: TextFieldSize::Dense, value: dense_value(), oninput: move |v: String| dense_value.set(v) }
+                            TextField { label: "Dense filled", variant: TextFieldVariant::Filled, size: TextFieldSize::Dense, leading_icon: icons::FAVORITE, supporting: "Same behaviour, 40dp".to_string() }
+                        }
+                    }
+                    article { class: "demo-card field-specimen",
+                        div { class: "card-topline", span { "ICONS · PREFIX · COUNTER · MULTI-LINE" } span { class: "component-index", "F" } }
                         div { class: "field-stack",
                             TextField { label: "Search", value: search_value(), leading_icon: icons::FAVORITE, trailing_icon: icons::CLOSE, oninput: move |v: String| search_value.set(v) }
                             TextField { label: "Price", value: price_value(), input_type: "number", prefix: "$".to_string(), suffix: "USD".to_string(), supporting: "Before tax".to_string(), oninput: move |v: String| price_value.set(v) }
@@ -1447,7 +1455,9 @@ fn App() -> Element {
                     }
                     article { class: "demo-card text-field-specimen",
                         div { class: "card-topline", span { "READ ONLY · CHANGING LABEL" } }
-                        TextField { label: if renamed_field() { "Longer account reference" } else { "Reference" }, value: "REF-123", read_only: true }
+                        div { style: "padding-top: 12px;",
+                            TextField { label: if renamed_field() { "Longer account reference" } else { "Reference" }, value: "REF-123", read_only: true }
+                        }
                         button { class: "copy-code", onclick: move |_| renamed_field.toggle(), "Change field label" }
                     }
                     CodeCard { eyebrow: "COPY INTO YOUR DIOXUS APP", title: "Text field usage", code: TEXT_FIELD_USAGE }

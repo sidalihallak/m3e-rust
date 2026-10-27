@@ -35,7 +35,7 @@ pub use radio::{Radio, RadioGroup};
 pub use segmented_button::{SegmentedButton, SegmentedButtonSet};
 pub use slider::{Slider, SliderSize};
 pub use switch::Switch;
-pub use text_field::{TextField, TextFieldVariant};
+pub use text_field::{TextField, TextFieldSize, TextFieldVariant};
 pub use tabs::{TabItem, Tabs, TabsVariant};
 
 pub mod button_group;

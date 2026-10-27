@@ -288,3 +288,27 @@ Raw data: [`field-samples.json`](field-samples.json). Screenshot: [`field-sectio
 5. Repeat focused Price in dark mode. Compare current motion with
    [text-field-notch-samples.json](text-field-notch-samples.json). Older
    [field-samples.json](field-samples.json) and screenshots are historical evidence.
+
+## 8. Dense size (added)
+
+`TextFieldSize::Dense` gives a 40dp single-line field with body-medium text (14/20) and 12dp insets,
+matching the `sm` input in shadcn-m3e (`h-10 px-3 py-1 text-body-medium`). Material 3 specifies
+only the 56dp field, so dense is the upstream size, not a Material token. On coarse pointers a dense
+field grows to 48dp, as the kit's `Input` does.
+
+Multi-line fields ignore `Dense` and keep their three-line minimum.
+
+| Check (desktop, `docs/text-field-dense-samples.json`) | Default | Dense |
+| --- | --- | --- |
+| Outlined container height | 56px | 40px |
+| Input font | 16px | 14px |
+| Input text left (outlined) | 16px | 12px |
+| Label text left, same as input text | 16px | 12px |
+| Filled leading icon: input text left | 40px (leading icon) | 40px (8px inset + 20px icon + 12px gap) |
+| Focus: label floats to 12px and stays above the text | yes | yes (label 12px, outlined on the line) |
+| Typing edits the value | yes | yes (`Compact!`) |
+
+Not measured: dense on a coarse pointer (48px height) and the filled dense label position with a
+value present.
+
+Screenshot: [`text-field-dense-section.png`](text-field-dense-section.png).

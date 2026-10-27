@@ -1,0 +1,42 @@
+{
+  "regularDefault": {
+    "containerH": 56,
+    "inputFont": "16px",
+    "inputH": 24,
+    "inputTopInContainer": 16,
+    "labelFontRest": "16px",
+    "labelBottomInContainer": 40,
+    "labelLeftInContainer": 12,
+    "inputLeftInContainer": 16,
+    "classes": "m3-field m3-field--outlined"
+  },
+  "denseOutlined": {
+    "containerH": 40,
+    "inputFont": "14px",
+    "inputH": 20,
+    "inputTopInContainer": 10,
+    "labelFontRest": "12px",
+    "labelBottomInContainer": 8,
+    "labelLeftInContainer": 8,
+    "inputLeftInContainer": 12,
+    "classes": "m3-field m3-field--outlined m3-field--dense"
+  },
+  "denseFilled": {
+    "containerH": 40,
+    "inputFont": "14px",
+    "inputH": 20,
+    "inputTopInContainer": 18,
+    "labelFontRest": "14px",
+    "labelBottomInContainer": 30,
+    "labelLeftInContainer": 40,
+    "inputLeftInContainer": 40,
+    "classes": "m3-field m3-field--filled m3-field--leading m3-field--dense"
+  },
+  "denseFocusedLabel": {
+    "font": "12px",
+    "top": -8,
+    "value": "Compact"
+  },
+  "denseTyped": "Compact!",
+  "pageErrors": []
+}

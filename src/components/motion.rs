@@ -8,8 +8,11 @@ pub(crate) fn frame_loop(id: &str, body: &str) -> String {
 (() => {{
   const id = {id:?};
   window.__m3Frames = window.__m3Frames || {{}};
-  if (window.__m3Frames[id]) cancelAnimationFrame(window.__m3Frames[id]);
+  const stale = window.__m3Frames[id];
+  if (stale) {{ cancelAnimationFrame(stale.raf); clearTimeout(stale.timer); }}
   const media = matchMedia('(prefers-reduced-motion: reduce)');
+  const state = {{ raf: 0, timer: 0 }};
+  window.__m3Frames[id] = state;
   let previous = null, elapsed = 0;
   const tick = (now) => {{
     const root = document.getElementById(id);
@@ -19,15 +22,22 @@ pub(crate) fn frame_loop(id: &str, body: &str) -> String {
       if (!root && window.__m3LoadingState) delete window.__m3LoadingState[id];
       return;
     }}
+    // A hidden component (display: none, or a hidden route) does no work and wakes
+    // slowly. Its clock is reset, so the time it was hidden does not advance the animation.
+    if (root.getClientRects().length === 0) {{
+      previous = null;
+      state.timer = setTimeout(() => {{ state.raf = requestAnimationFrame(tick); }}, 250);
+      return;
+    }}
     if (previous !== null && !media.matches) elapsed += now - previous;
     previous = now;
     if (!media.matches) {{
       const ts = elapsed;
       {body}
     }}
-    window.__m3Frames[id] = requestAnimationFrame(tick);
+    state.raf = requestAnimationFrame(tick);
   }};
-  window.__m3Frames[id] = requestAnimationFrame(tick);
+  state.raf = requestAnimationFrame(tick);
 }})();
 return true;
 "#

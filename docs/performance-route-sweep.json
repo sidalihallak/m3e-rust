@@ -1,0 +1,642 @@
+[
+  {
+    "route": "foundations",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.8,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 21
+  },
+  {
+    "route": "icons",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 2.1,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 399
+  },
+  {
+    "route": "keyboard-hints",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.6,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "shape-library",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.7,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "theme-scopes",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.7,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "image-themes",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "buttons",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.6,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 107
+  },
+  {
+    "route": "command-palette",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.2,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "icon-buttons",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.6,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 146
+  },
+  {
+    "route": "fabs",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 235
+  },
+  {
+    "route": "standard-button-groups",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 139
+  },
+  {
+    "route": "connected-button-groups",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.8,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 162
+  },
+  {
+    "route": "split-buttons",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 551
+  },
+  {
+    "route": "controls",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 124
+  },
+  {
+    "route": "radios",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 89
+  },
+  {
+    "route": "sliders",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 197
+  },
+  {
+    "route": "chips",
+    "rafPerSec": 10.5,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 83
+  },
+  {
+    "route": "segmented-buttons",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.9,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 83
+  },
+  {
+    "route": "text-fields",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 2.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 129
+  },
+  {
+    "route": "input-groups",
+    "rafPerSec": 10.5,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "otp-input",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.7,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "selection-fields",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 2.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 459
+  },
+  {
+    "route": "snackbars",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 35
+  },
+  {
+    "route": "alerts",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 34
+  },
+  {
+    "route": "search",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 61
+  },
+  {
+    "route": "attachments",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.1,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 121,
+    "sectionNodes": 9
+  },
+  {
+    "route": "messages",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "message-scroller",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "questionnaire",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "form-fields",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.6,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "items",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.6,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "spinners",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 121,
+    "styleRecalcsPer2s": 121,
+    "sectionNodes": 9
+  },
+  {
+    "route": "notification-host",
+    "rafPerSec": 10.5,
+    "scriptMsPer2s": 1.2,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "toggles",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "date-pickers",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "calendars",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "time-pickers",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "accordions",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "collapsibles",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "tables",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "data-tables",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "breadcrumbs",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "menubars",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "navigation-menu",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "advanced-selection",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "advanced-tabs",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.6,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "advanced-lists",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "advanced-gestures",
+    "rafPerSec": 10.5,
+    "scriptMsPer2s": 1.6,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "advanced-tables",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "advanced-messages",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.2,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "sidebar-provider",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "sidebar-helpers",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "aspect-ratio",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "scroll-areas",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "resizable-panels",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "charts",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "carousels",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "expressive-carousels",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "markers",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "lists",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 90
+  },
+  {
+    "route": "avatars",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 32
+  },
+  {
+    "route": "loading-placeholders",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 8,
+    "sectionNodes": 18
+  },
+  {
+    "route": "empty-states",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 19
+  },
+  {
+    "route": "dialogs",
+    "rafPerSec": 10.5,
+    "scriptMsPer2s": 1.6,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 177
+  },
+  {
+    "route": "menus",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.9,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 201
+  },
+  {
+    "route": "help-and-selection",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 121
+  },
+  {
+    "route": "progress",
+    "rafPerSec": 181.5,
+    "scriptMsPer2s": 106.3,
+    "layoutsPer2s": 481,
+    "styleRecalcsPer2s": 481,
+    "sectionNodes": 127
+  },
+  {
+    "route": "badges",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 95
+  },
+  {
+    "route": "cards",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.6,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 96
+  },
+  {
+    "route": "dividers",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 40
+  },
+  {
+    "route": "bottom-sheets",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.5,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 95
+  },
+  {
+    "route": "side-sheets",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 123
+  },
+  {
+    "route": "sheets",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 48
+  },
+  {
+    "route": "navigation",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 381
+  },
+  {
+    "route": "pagination",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.2,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 9
+  },
+  {
+    "route": "app-bars",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 381
+  },
+  {
+    "route": "navigation-bars",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.3,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 381
+  },
+  {
+    "route": "navigation-rails",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 381
+  },
+  {
+    "route": "toolbars",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 2.1,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 381
+  },
+  {
+    "route": "tabs",
+    "rafPerSec": 12,
+    "scriptMsPer2s": 1.4,
+    "layoutsPer2s": 0,
+    "styleRecalcsPer2s": 0,
+    "sectionNodes": 108
+  }
+]

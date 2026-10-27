@@ -358,6 +358,11 @@ const arcPath = (start, end, gap) => {
 };
 const active = document.getElementById(id + "-active");
 const track = document.getElementById(id + "-track");
-if (active) active.setAttribute("d", wavy(0, sweep));
-if (track) track.setAttribute("d", arcPath(sweep, 360, stroke));
+// The sweep holds still for half of each cycle. Rebuild the path data only when it moves.
+const sweepLast = (window.__m3SweepLast = window.__m3SweepLast || {});
+if (sweepLast[id] !== sweep) {
+  sweepLast[id] = sweep;
+  if (active) active.setAttribute("d", wavy(0, sweep));
+  if (track) track.setAttribute("d", arcPath(sweep, 360, stroke));
+}
 "#;

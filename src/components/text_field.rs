@@ -21,6 +21,25 @@ impl TextFieldVariant {
     }
 }
 
+/// Field height. `Default` is 56dp, as Material specifies. `Dense` is 40dp with body-medium
+/// text, the compact size shadcn-m3e's `Input` offers as `sm`. On coarse pointers a dense
+/// field grows to 48dp so it stays a usable touch target, as the kit's `Input` does.
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
+pub enum TextFieldSize {
+    #[default]
+    Default,
+    Dense,
+}
+
+impl TextFieldSize {
+    const fn class(self) -> &'static str {
+        match self {
+            Self::Default => "",
+            Self::Dense => " m3-field--dense",
+        }
+    }
+}
+
 /// A 56dp text field on a native `<input>` (or `<textarea>` when `multiline`),
 /// with a label that floats above the text once the field is focused or has a value.
 ///
@@ -51,6 +70,7 @@ pub fn TextField(
     #[props(default)] suffix: Option<String>,
     #[props(default)] max_length: Option<usize>,
     #[props(default)] multiline: bool,
+    #[props(default)] size: TextFieldSize,
     #[props(default)] class: String,
     #[props(default)] oninput: EventHandler<String>,
 ) -> Element {
@@ -65,8 +85,10 @@ pub fn TextField(
     let leading_class = if leading_icon.is_some() { " m3-field--leading" } else { "" };
     let trailing_class = if trailing_icon.is_some() { " m3-field--trailing" } else { "" };
     let multiline_class = if multiline { " m3-field--multiline" } else { "" };
+    // Dense applies to single-line fields. A multi-line field keeps its three-line minimum.
+    let dense_class = if multiline { "" } else { size.class() };
     let class = format!(
-        "m3-field m3-field--{}{error_class}{disabled_class}{leading_class}{trailing_class}{multiline_class} {class}",
+        "m3-field m3-field--{}{error_class}{disabled_class}{leading_class}{trailing_class}{multiline_class}{dense_class} {class}",
         variant.class()
     );
     let has_support = supporting.is_some() || max_length.is_some();
