@@ -6,6 +6,15 @@ All notable changes to `m3e-rust-ui` are recorded here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- `ThemeProvider` injects `navigation.css`: `NavigationBar`, `NavigationRail` and
+  `ModalNavigationRail` were unstyled in apps (only the preview linked the file).
+- Element ids no longer come from a process-wide counter but from the component's scope, so a
+  server-rendered page (Dioxus fullstack) and its hydration agree on them. Before, the ids in
+  the server's HTML grew with every request and differed from the browser's, so the scripts
+  of server-rendered components (a sheet, a dialog, navigation keys) found no element.
+
 ## [0.1.0] - 2026-10-27
 
 First versioned release, distributed as a Cargo crate.

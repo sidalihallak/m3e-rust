@@ -46,7 +46,8 @@ return true;
 
 /// A unique element id for one component instance.
 pub(crate) fn next_id(prefix: &str) -> String {
-    use std::sync::atomic::{AtomicUsize, Ordering};
-    static NEXT: AtomicUsize = AtomicUsize::new(0);
-    format!("{prefix}-{}", NEXT.fetch_add(1, Ordering::Relaxed))
+    // The component's scope number, not a process-wide counter: a server render
+    // and the browser's hydration build the same tree, so the id matches on
+    // both sides. Each component asks once (from `use_hook`), with its own prefix.
+    format!("{prefix}-{}", dioxus::core::current_scope_id().0)
 }

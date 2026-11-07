@@ -452,7 +452,6 @@ fn App() -> Element {
 
     rsx! {
         document::Stylesheet { href: asset!("/assets/main.css") }
-        document::Stylesheet { href: asset!("/assets/navigation.css") }
         document::Stylesheet { href: asset!("/assets/showcase.css") }
         m3e_rust_ui::M3eStyles {}
         document::Stylesheet { href: asset!("/assets/tailwind.css") }

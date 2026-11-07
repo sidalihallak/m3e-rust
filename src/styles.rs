@@ -23,6 +23,7 @@ pub const COMPONENT_CSS: &[&str] = &[
     include_str!("../assets/carousel.css"),
     include_str!("../assets/command.css"),
     include_str!("../assets/breadcrumb.css"),
+    include_str!("../assets/navigation.css"),
     include_str!("../assets/navigation-extensions.css"),
     include_str!("../assets/input-extensions.css"),
     include_str!("../assets/layout-helpers.css"),
