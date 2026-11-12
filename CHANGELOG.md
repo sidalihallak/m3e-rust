@@ -6,6 +6,14 @@ All notable changes to `m3e-rust-ui` are recorded here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- Page templates for the Material canonical layouts, in `src/components/templates.rs`:
+  `PageLayout` (with `PageWidth`), `ListDetailLayout`, `SupportingPaneLayout`, `FeedLayout`,
+  `FormLayout`, `SettingsSection` and `SettingsItem`. They are bundled in `assets/templates.css`,
+  and the showcase lists them under Content (page layouts, list-detail and supporting pane,
+  feed and dashboards).
+
 ### Fixed
 
 - `ThemeProvider` injects `navigation.css`: `NavigationBar`, `NavigationRail` and

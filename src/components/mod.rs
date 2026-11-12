@@ -147,6 +147,9 @@ pub use kbd::{Kbd,KbdGroup};
 pub use marker::{Marker,MarkerIcon,MarkerContent,MarkerVariant};
 pub use shape::Shape;
 
+pub mod templates;
+pub use templates::{PageLayout, PageWidth, ListDetailLayout, SupportingPaneLayout, FeedLayout, FormLayout, SettingsSection, SettingsItem};
+
 pub mod theme_scope;
 pub mod image_theme;
 pub use theme_scope::{ThemeScope,ColorMode,ThemeProvider,ThemeSettings,use_theme};
