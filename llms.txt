@@ -69,6 +69,8 @@ fn App() -> Element {
   CircularProgress, LoadingIndicator, Spinner.
 - Navigation: AppBar, Toolbar, NavigationBar, NavigationRail, ModalNavigationRail, NavigationLayout,
   Tabs, Breadcrumb, Pagination, Menubar, NavigationMenu, Sidebar (SidebarProvider), Command, CommandDialog.
+- Full pages: AppPage (app bar, navigation rail from 600dp, bottom bar below), DashboardPage
+  (StatCard, ActivityEntry), SignInPage, InboxPage (MailMessage), SettingsPage, NotFoundPage.
 - Page templates: PageLayout (PageWidth), ListDetailLayout, SupportingPaneLayout, FeedLayout,
   FormLayout, SettingsSection, SettingsItem. They use window size classes: compact below 600dp,
   medium from 600dp, expanded from 840dp.

@@ -13,6 +13,10 @@ All notable changes to `m3e-rust-ui` are recorded here. The format follows
   `FormLayout`, `SettingsSection` and `SettingsItem`. They are bundled in `assets/templates.css`,
   and the showcase lists them under Content (page layouts, list-detail and supporting pane,
   feed and dashboards).
+- Complete page templates in `src/components/pages.rs`: `AppPage` (app bar, navigation rail
+  from 600dp and bottom bar below), `DashboardPage` (with `StatCard` and `ActivityEntry`),
+  `SignInPage`, `InboxPage` (with `MailMessage`), `SettingsPage` and `NotFoundPage`. Styles are in
+  `assets/pages.css`, and the showcase lists each one under Content.
 
 ### Fixed
 
