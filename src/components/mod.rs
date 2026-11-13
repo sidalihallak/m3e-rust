@@ -149,6 +149,8 @@ pub use shape::Shape;
 
 pub mod templates;
 pub use templates::{PageLayout, PageWidth, ListDetailLayout, SupportingPaneLayout, FeedLayout, FormLayout, SettingsSection, SettingsItem};
+pub mod pages;
+pub use pages::{AppPage, DashboardPage, StatCard, ActivityEntry, SignInPage, InboxPage, MailMessage, SettingsPage, NotFoundPage};
 
 pub mod theme_scope;
 pub mod image_theme;

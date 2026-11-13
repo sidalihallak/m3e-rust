@@ -1,0 +1,232 @@
+{
+  "at": "2026-11-13T13:40:28.183Z",
+  "failed": 0,
+  "results": [
+    {
+      "name": "dashboard: one app shell",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dashboard: navigation rail visible at 1280px",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dashboard: bottom bar hidden at 1280px",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dashboard: four stat tiles",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dashboard: chart bars rendered",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dashboard: headline labels the page",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dashboard: no horizontal overflow inside frame at 1280",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dashboard: rail click changes the selected destination",
+      "pass": true,
+      "detail": "Section: inbox"
+    },
+    {
+      "name": "sign-in: empty email shows a validation message",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "sign-in: short password shows the server error alert",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "sign-in: status stays signed out after an error",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "sign-in: show-password toggle reveals the password",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "sign-in: hide-password returns to masked input",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "sign-in: valid credentials update the status to signed in",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "sign-in: alert cleared after success",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "inbox: list and detail both visible at 1280px",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "inbox: three messages listed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "inbox: back control hidden at 1280px",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "inbox: unread message is marked",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "inbox: search filters to matching messages",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "inbox: empty search shows the no-match message",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "inbox: clearing search restores all messages",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "inbox: selecting a message shows its subject",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "inbox: no horizontal overflow inside frame at 1280",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "settings: profile name shown",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "settings: switch toggles",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "not found: status code shown",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "not found: action fires once on click",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "phone dashboard: bottom bar visible",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "phone dashboard: rail hidden",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "phone dashboard: bar click changes the selected destination",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "phone dashboard: frame has no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "phone sign-in: form panel fits the viewport",
+      "pass": true,
+      "detail": {
+        "x": 57,
+        "y": 944.671875,
+        "width": 276,
+        "height": 322
+      }
+    },
+    {
+      "name": "phone sign-in: frame has no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "phone inbox: list only at start",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "phone inbox: message row is at least 48px tall",
+      "pass": true,
+      "detail": {
+        "x": 57,
+        "y": 888.671875,
+        "width": 276,
+        "height": 88
+      }
+    },
+    {
+      "name": "phone inbox: tapping a message opens the detail",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "phone inbox: detail shows the tapped subject",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "phone inbox: back control returns to the list",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "phone inbox: frame has no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "phone settings: frame has no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "phone not found: frame has no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "no console errors during the run",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "consoleErrors": []
+}

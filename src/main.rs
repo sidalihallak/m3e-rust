@@ -23,6 +23,7 @@ mod navigation_extensions_gallery;
 mod input_extensions_gallery;
 mod layout_helpers_gallery;
 mod templates_gallery;
+mod pages_gallery;
 mod expression_helpers_gallery;
 mod navigation_gallery; // Material navigation and showcase catalogue.
 use m3e_rust_ui::{AppBar,NavigationRail,ModalNavigationRail};
@@ -1473,6 +1474,7 @@ fn App() -> Element {
             input_extensions_gallery::InputExtensionsGallery {active:route()}
             layout_helpers_gallery::LayoutHelpersGallery {active:route()}
             templates_gallery::TemplatesGallery {active:route()}
+            pages_gallery::PagesGallery {active:route()}
             expression_helpers_gallery::ExpressionHelpersGallery {active:route()}
             theme_helpers_gallery::ThemeHelpersGallery {active:route()}
             application_blocks_gallery::ApplicationBlocksGallery {active:route()}

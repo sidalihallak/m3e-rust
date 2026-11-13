@@ -1,0 +1,163 @@
+// Browser verification for the full page templates (127.0.0.1:8080).
+// Real pointer clicks and keyboard input; desktop 1280 and phone 390 viewports.
+const { chromium } = require('playwright');
+const fs = require('fs');
+
+const BASE = 'http://127.0.0.1:8080/';
+const OUT = process.argv[2];
+const results = [];
+const consoleErrors = [];
+const check = (name, pass, detail) => {
+  results.push({ name, pass: !!pass, detail: detail === undefined ? null : detail });
+  console.log(`${pass ? 'PASS' : 'FAIL'} ${name}${detail === undefined ? '' : ' :: ' + JSON.stringify(detail)}`);
+};
+
+async function open(page, width, height, hash) {
+  await page.setViewportSize({ width, height });
+  await page.goto('about:blank');
+  await page.goto(BASE + '#' + hash, { waitUntil: 'networkidle' });
+  await page.waitForSelector('.app-shell', { state: 'attached' });
+  await page.waitForTimeout(400);
+}
+
+const frameOverflow = (page, id) => page.evaluate((id) => {
+  const f = document.querySelector(`#${id} .template-frame`);
+  return f.scrollWidth - f.clientWidth;
+}, id);
+
+(async () => {
+  fs.mkdirSync(OUT, { recursive: true });
+  const browser = await chromium.launch();
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 }, deviceScaleFactor: 2 });
+  const page = await ctx.newPage();
+  page.on('console', m => { if (m.type() === 'error') consoleErrors.push(m.text()); });
+  page.on('pageerror', e => consoleErrors.push('pageerror: ' + e.message));
+
+  // ---------- Dashboard, desktop ----------
+  await open(page, 1280, 900, 'dashboard-page');
+  const dash = page.locator('#dashboard-page');
+  check('dashboard: one app shell', (await page.locator('.app-shell').count()) === 1);
+  check('dashboard: navigation rail visible at 1280px', await dash.locator('.m3-app-page__rail').isVisible());
+  check('dashboard: bottom bar hidden at 1280px', !(await dash.locator('.m3-app-page__bar').isVisible()));
+  check('dashboard: four stat tiles', (await dash.locator('.m3-dashboard__stats > *').count()) === 4);
+  check('dashboard: chart bars rendered', (await dash.locator('.template-bars span').count()) === 7);
+  check('dashboard: headline labels the page', (await dash.locator('.m3-page__title').textContent()).trim() === 'Overview');
+  check('dashboard: no horizontal overflow inside frame at 1280', (await frameOverflow(page, 'dashboard-page')) <= 0);
+  await dash.locator('.m3-app-page__rail').getByText('Inbox', { exact: true }).click();
+  check('dashboard: rail click changes the selected destination',
+    (await dash.locator('[role=status]').textContent()).trim() === 'Section: inbox',
+    await dash.locator('[role=status]').textContent());
+  await dash.locator('.m3-app-page__rail').getByText('Dashboard', { exact: true }).click();
+  await page.screenshot({ path: `${OUT}/desktop-dashboard.png` });
+
+  // ---------- Sign-in, desktop ----------
+  await open(page, 1280, 900, 'sign-in-page');
+  const sign = page.locator('#sign-in-page');
+  await sign.locator('form button[type=submit]').click();
+  check('sign-in: empty email shows a validation message',
+    (await sign.getByText('Enter your email address.').count()) === 1);
+  await sign.locator('input[type=email]').fill('reader@example.com');
+  await sign.locator('input[type=password]').fill('short');
+  await sign.locator('form button[type=submit]').click();
+  check('sign-in: short password shows the server error alert',
+    (await sign.locator('[role=alert]').textContent()).includes('Check your email and password.'));
+  check('sign-in: status stays signed out after an error',
+    (await sign.locator('[role=status]').textContent()).trim() === 'Not signed in.');
+  const showBtn = sign.getByRole('button', { name: 'Show password' });
+  await showBtn.click();
+  check('sign-in: show-password toggle reveals the password',
+    (await sign.locator('input[type=text]').count()) === 1 && (await sign.getByRole('button', { name: 'Hide password' }).count()) === 1);
+  await sign.getByRole('button', { name: 'Hide password' }).click();
+  check('sign-in: hide-password returns to masked input', (await sign.locator('input[type=password]').count()) === 1);
+  await sign.locator('input[type=password]').fill('longenough');
+  await sign.locator('form button[type=submit]').click();
+  check('sign-in: valid credentials update the status to signed in',
+    (await sign.locator('[role=status]').textContent()).trim() === 'Signed in.');
+  check('sign-in: alert cleared after success', (await sign.locator('[role=alert]').count()) === 0);
+  await page.screenshot({ path: `${OUT}/desktop-sign-in.png` });
+
+  // ---------- Inbox, desktop ----------
+  await open(page, 1280, 900, 'inbox-page');
+  const inbox = page.locator('#inbox-page');
+  const ld = inbox.locator('.m3-list-detail');
+  check('inbox: list and detail both visible at 1280px',
+    (await ld.locator('.m3-list-detail__list').isVisible()) && (await ld.locator('.m3-list-detail__detail').isVisible()));
+  check('inbox: three messages listed', (await inbox.locator('.m3-mail-item').count()) === 3);
+  check('inbox: back control hidden at 1280px', !(await inbox.locator('.m3-mail-detail__back').isVisible()));
+  check('inbox: unread message is marked', (await inbox.locator('.m3-mail-item[data-unread=true]').count()) === 1);
+  const search = inbox.locator('.m3-inbox__search input');
+  await search.click();
+  await search.fill('invoice');
+  check('inbox: search filters to matching messages', (await inbox.locator('.m3-mail-item').count()) === 1);
+  await search.fill('zzz');
+  check('inbox: empty search shows the no-match message', (await inbox.locator('.m3-inbox__empty').count()) === 1);
+  await search.fill('');
+  check('inbox: clearing search restores all messages', (await inbox.locator('.m3-mail-item').count()) === 3);
+  await inbox.locator('.m3-mail-item').nth(1).click();
+  check('inbox: selecting a message shows its subject',
+    (await inbox.locator('.m3-mail-detail__subject').textContent()).trim() === 'Release notes');
+  check('inbox: no horizontal overflow inside frame at 1280', (await frameOverflow(page, 'inbox-page')) <= 0);
+  await page.screenshot({ path: `${OUT}/desktop-inbox.png` });
+
+  // ---------- Settings and not found, desktop ----------
+  await open(page, 1280, 900, 'settings-page');
+  const settings = page.locator('#settings-page');
+  check('settings: profile name shown', (await settings.locator('.m3-settings__identity strong').textContent()).trim() === 'Alex Morgan');
+  const sw = settings.locator('[role=switch]').first();
+  const b = await sw.getAttribute('aria-checked');
+  await sw.click();
+  check('settings: switch toggles', (await sw.getAttribute('aria-checked')) !== b);
+
+  await open(page, 1280, 900, 'not-found-page');
+  const nf = page.locator('#not-found-page');
+  check('not found: status code shown', (await nf.locator('.m3-status-page__code').textContent()).trim() === '404');
+  await nf.getByRole('button', { name: 'Go to dashboard' }).click();
+  check('not found: action fires once on click',
+    (await nf.locator('[role=status]').textContent()).trim() === 'Recovery action used 1 time(s).');
+
+  // ---------- Phone 390 ----------
+  await open(page, 390, 844, 'dashboard-page');
+  const dashM = page.locator('#dashboard-page');
+  check('phone dashboard: bottom bar visible', await dashM.locator('.m3-app-page__bar').isVisible());
+  check('phone dashboard: rail hidden', !(await dashM.locator('.m3-app-page__rail').isVisible()));
+  await dashM.locator('.m3-app-page__bar').getByText('Settings', { exact: true }).click();
+  check('phone dashboard: bar click changes the selected destination',
+    (await dashM.locator('[role=status]').textContent()).trim() === 'Section: settings');
+  check('phone dashboard: frame has no horizontal overflow', (await frameOverflow(page, 'dashboard-page')) <= 0);
+  await page.screenshot({ path: `${OUT}/phone-dashboard.png` });
+
+  await open(page, 390, 844, 'sign-in-page');
+  const panelBox = await page.locator('#sign-in-page .m3-form__panel').boundingBox();
+  check('phone sign-in: form panel fits the viewport', panelBox && panelBox.x >= 0 && panelBox.x + panelBox.width <= 390, panelBox);
+  check('phone sign-in: frame has no horizontal overflow', (await frameOverflow(page, 'sign-in-page')) <= 0);
+
+  await open(page, 390, 844, 'inbox-page');
+  const inboxM = page.locator('#inbox-page');
+  const ldM = inboxM.locator('.m3-list-detail');
+  check('phone inbox: list only at start',
+    (await ldM.locator('.m3-list-detail__list').isVisible()) && !(await ldM.locator('.m3-list-detail__detail').isVisible()));
+  const itemBox = await inboxM.locator('.m3-mail-item').first().boundingBox();
+  check('phone inbox: message row is at least 48px tall', itemBox && itemBox.height >= 48, itemBox);
+  await inboxM.locator('.m3-mail-item').nth(2).click();
+  check('phone inbox: tapping a message opens the detail',
+    (await ldM.locator('.m3-list-detail__detail').isVisible()) && !(await ldM.locator('.m3-list-detail__list').isVisible()));
+  check('phone inbox: detail shows the tapped subject',
+    (await inboxM.locator('.m3-mail-detail__subject').textContent()).trim() === 'Invoice 2041');
+  await inboxM.locator('.m3-mail-detail__back').click();
+  check('phone inbox: back control returns to the list', await ldM.locator('.m3-list-detail__list').isVisible());
+  check('phone inbox: frame has no horizontal overflow', (await frameOverflow(page, 'inbox-page')) <= 0);
+  await page.screenshot({ path: `${OUT}/phone-inbox.png` });
+
+  await open(page, 390, 844, 'settings-page');
+  check('phone settings: frame has no horizontal overflow', (await frameOverflow(page, 'settings-page')) <= 0);
+  await open(page, 390, 844, 'not-found-page');
+  check('phone not found: frame has no horizontal overflow', (await frameOverflow(page, 'not-found-page')) <= 0);
+
+  check('no console errors during the run', consoleErrors.length === 0, consoleErrors.slice(0, 5));
+  await browser.close();
+
+  const failed = results.filter(r => !r.pass).length;
+  fs.writeFileSync(`${OUT}/pages-verification-samples.json`, JSON.stringify({ at: new Date().toISOString(), failed, results, consoleErrors }, null, 2));
+  console.log(`\n${results.length - failed}/${results.length} checks passed`);
+  process.exit(failed ? 1 : 0);
+})().catch(e => { console.error(e); process.exit(2); });
