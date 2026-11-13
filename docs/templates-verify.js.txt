@@ -1,0 +1,169 @@
+// Browser verification for the page templates preview (127.0.0.1:8080).
+// Uses real pointer clicks and keyboard input; measures layout at desktop and phone widths.
+const { chromium } = require('playwright');
+const fs = require('fs');
+
+const BASE = 'http://127.0.0.1:8080/';
+const OUT = process.argv[2];           // directory for screenshots and the JSON report
+const results = [];
+const consoleErrors = [];
+const check = (name, pass, detail) => {
+  results.push({ name, pass: !!pass, detail: detail === undefined ? null : detail });
+  console.log(`${pass ? 'PASS' : 'FAIL'} ${name}${detail === undefined ? '' : ' :: ' + JSON.stringify(detail)}`);
+};
+
+async function open(page, width, height, hash) {
+  await page.setViewportSize({ width, height });
+  await page.goto('about:blank');
+  await page.goto(BASE + '#' + hash, { waitUntil: 'networkidle' });
+  await page.waitForSelector('.app-shell', { state: 'attached' });
+  await page.waitForTimeout(400);
+}
+
+async function box(loc) {
+  const b = await loc.boundingBox();
+  return b ? { x: Math.round(b.x), y: Math.round(b.y), w: Math.round(b.width), h: Math.round(b.height) } : null;
+}
+
+(async () => {
+  fs.mkdirSync(OUT, { recursive: true });
+  const browser = await chromium.launch();
+
+  // ---------- Desktop 1280 ----------
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 }, deviceScaleFactor: 2 });
+  const page = await ctx.newPage();
+  page.on('console', m => { if (m.type() === 'error') consoleErrors.push(m.text()); });
+  page.on('pageerror', e => consoleErrors.push('pageerror: ' + e.message));
+
+  await open(page, 1280, 900, 'page-layouts');
+  check('one app shell mounted', (await page.locator('.app-shell').count()) === 1);
+  const pageSec = page.locator('#page-layouts');
+  check('page-layouts section visible', await pageSec.isVisible());
+  check('two PageLayout sections render', (await pageSec.locator('section.m3-page').count()) === 2);
+  const labelled = await page.evaluate(() => {
+    const s = document.querySelector('#page-layouts section.m3-page');
+    const id = s.getAttribute('aria-labelledby');
+    const h = document.getElementById(id);
+    return { id, tag: h && h.tagName, text: h && h.textContent.trim() };
+  });
+  check('PageLayout is labelled by its h1', labelled.tag === 'H1' && labelled.text === 'Projects', labelled);
+  const feedCols = await page.evaluate(() => {
+    const f = document.querySelector('#page-layouts .m3-feed');
+    return getComputedStyle(f).gridTemplateColumns.split(' ').length;
+  });
+  const feedW = (await box(page.locator('#page-layouts .m3-feed'))).w;
+  const expectCols = (n) => Math.min(n, Math.max(1, Math.floor((feedW + 24) / (280 + 24))));
+  check('feed columns match the container width (3 cards)', feedCols === expectCols(3), { columns: feedCols, feedW, expected: expectCols(3) });
+  const pageWidth = await box(pageSec.locator('section.m3-page').first());
+  const stdMax = await page.evaluate(() => getComputedStyle(document.querySelector('#page-layouts section.m3-page')).maxWidth);
+  check('Standard page has a 1040px maximum width', stdMax === '1040px', { maxWidth: stdMax, box: pageWidth });
+
+  // Form: real typing and a real click on the submit button.
+  const email = pageSec.locator('.m3-form input[type=email]');
+  await email.click();
+  await email.fill('reader@example.com');
+  await pageSec.locator('.m3-form button[type=submit]').click();
+  const status = await pageSec.locator('p[role=status]').textContent();
+  check('form submit shows the entered email', status.trim() === 'Signed in as reader@example.com', status);
+
+  // Settings switch: a real click changes aria-checked.
+  const sw = pageSec.locator('.m3-settings-section [role=switch]').first();
+  const before = await sw.getAttribute('aria-checked');
+  await sw.click();
+  const after = await sw.getAttribute('aria-checked');
+  check('settings switch toggles on click', before !== after, { before, after });
+
+  const settingsLabel = await page.evaluate(() => {
+    const s = document.querySelector('#page-layouts .m3-settings-section');
+    return document.getElementById(s.getAttribute('aria-labelledby')).textContent.trim();
+  });
+  check('settings section is labelled by its heading', settingsLabel === 'Notifications', settingsLabel);
+  await pageSec.locator('.m3-form').scrollIntoViewIfNeeded();
+  await page.screenshot({ path: `${OUT}/desktop-page-layouts.png`, fullPage: false, scale: 'device' });
+
+  // List-detail, desktop: both panes side by side.
+  await open(page, 1280, 900, 'list-detail-layouts');
+  const ld = page.locator('#list-detail-layouts .m3-list-detail').first();
+  const listBox = await box(ld.locator('.m3-list-detail__list'));
+  const detailBox = await box(ld.locator('.m3-list-detail__detail'));
+  check('desktop list-detail shows both panes', listBox && detailBox && listBox.w > 0 && detailBox.w > 0, { listBox, detailBox });
+  check('desktop list pane is 360px', listBox && listBox.w === 360, listBox);
+  check('desktop detail pane sits beside the list', listBox && detailBox && detailBox.x >= listBox.x + listBox.w, { listBox, detailBox });
+  check('desktop back control is hidden', !(await ld.locator('.template-back').isVisible()));
+
+  const sup = page.locator('#list-detail-layouts .m3-supporting').first();
+  const mainBox = await box(sup.locator('.m3-supporting__main'));
+  const paneBox = await box(sup.locator('.m3-supporting__pane'));
+  check('desktop supporting pane sits beside the main content', mainBox && paneBox && paneBox.x >= mainBox.x + mainBox.w, { mainBox, paneBox });
+  check('desktop supporting split is about 7:3', mainBox && paneBox && Math.abs(mainBox.w / (mainBox.w + paneBox.w) - 0.7) < 0.03, { mainBox, paneBox });
+  await page.locator('#list-detail-layouts .m3-list-detail').first().scrollIntoViewIfNeeded();
+  await page.screenshot({ path: `${OUT}/desktop-list-detail.png`, scale: 'device' });
+
+  // Feed + dashboard at desktop width.
+  await open(page, 1280, 900, 'feed-layouts');
+  const dashCols = await page.evaluate(() => getComputedStyle(document.querySelector('#feed-layouts .m3-feed')).gridTemplateColumns.split(' ').length);
+  const dashW = (await box(page.locator('#feed-layouts .m3-feed'))).w;
+  const dashExpect = Math.min(4, Math.max(1, Math.floor((dashW + 24) / (280 + 24))));
+  check('dashboard feed columns match the container width (4 cards)', dashCols === dashExpect, { columns: dashCols, dashW, expected: dashExpect });
+  const fullMax = await page.evaluate(() => getComputedStyle(document.querySelector('#feed-layouts section.m3-page')).maxWidth);
+  check('Full-width page has no maximum width of its own', fullMax === 'none', { maxWidth: fullMax });
+  const overflowDesktop = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  check('no horizontal page overflow at 1280px (feed section)', overflowDesktop <= 0, { overflowDesktop });
+
+  // ---------- Phone 390 (emulated viewport; not Android hardware) ----------
+  await open(page, 390, 844, 'list-detail-layouts');
+  const ldM = page.locator('#list-detail-layouts .m3-list-detail').first();
+  check('compact list-detail shows the list only', await ldM.locator('.m3-list-detail__list').isVisible() && !(await ldM.locator('.m3-list-detail__detail').isVisible()));
+  const items = ldM.locator('.template-list-item');
+  check('compact list has three native buttons', (await items.count()) === 3);
+  await items.nth(1).click();   // real pointer tap
+  check('selecting an item opens its detail and hides the list',
+    (await ldM.locator('.m3-list-detail__detail').isVisible()) && !(await ldM.locator('.m3-list-detail__list').isVisible()));
+  const detailTitle = await ldM.locator('.m3-list-detail__detail h3').textContent();
+  check('detail shows the selected message', detailTitle.trim() === 'Release notes', detailTitle);
+  await page.screenshot({ path: `${OUT}/phone-list-detail-detail.png`, scale: 'device' });
+  await ldM.locator('.template-back').click();  // real tap on the back control
+  check('back control returns to the list', (await ldM.locator('.m3-list-detail__list').isVisible()) && !(await ldM.locator('.m3-list-detail__detail').isVisible()));
+  check('selected item keeps aria-current after going back', (await items.nth(1).getAttribute('aria-current')) === 'true');
+
+  // Keyboard: focus an item and activate it with Enter.
+  await items.nth(2).focus();
+  await page.keyboard.press('Enter');
+  const kbTitle = await ldM.locator('.m3-list-detail__detail h3').textContent();
+  check('keyboard Enter opens the focused item', kbTitle.trim() === 'Invoice 2041', kbTitle);
+
+  const supM = page.locator('#list-detail-layouts .m3-supporting').first();
+  const mm = await box(supM.locator('.m3-supporting__main'));
+  const pm = await box(supM.locator('.m3-supporting__pane'));
+  check('phone supporting pane stacks below the main content', mm && pm && pm.y >= mm.y + mm.h, { mm, pm });
+
+  await open(page, 390, 844, 'page-layouts');
+  const feedPhone = await page.evaluate(() => getComputedStyle(document.querySelector('#page-layouts .m3-feed')).gridTemplateColumns.split(' ').length);
+  check('phone feed is a single column', feedPhone === 1, { columns: feedPhone });
+  const formBox = await box(page.locator('#page-layouts .m3-form__panel'));
+  check('phone form panel fits the 390px viewport', formBox && formBox.x >= 0 && formBox.x + formBox.w <= 390, formBox);
+  const overflowPhone = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  check('no horizontal page overflow at 390px (page-layouts)', overflowPhone <= 0, { overflowPhone });
+  await page.screenshot({ path: `${OUT}/phone-page-layouts.png`, fullPage: true, scale: 'device' });
+
+  await open(page, 390, 844, 'list-detail-layouts');
+  const overflowPhoneLD = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  check('no horizontal page overflow at 390px (list-detail)', overflowPhoneLD <= 0, { overflowPhoneLD });
+
+  await open(page, 390, 844, 'feed-layouts');
+  const overflowPhoneFeed = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  check('no horizontal page overflow at 390px (feed)', overflowPhoneFeed <= 0, { overflowPhoneFeed });
+
+  // Touch targets: list items and the back control are at least 48px high on the phone.
+  await open(page, 390, 844, 'list-detail-layouts');
+  const itemH = await box(page.locator('#list-detail-layouts .template-list-item').first());
+  check('phone list item is at least 48px tall', itemH && itemH.h >= 48, itemH);
+
+  check('no console errors during the run', consoleErrors.length === 0, consoleErrors.slice(0, 5));
+  await browser.close();
+
+  const failed = results.filter(r => !r.pass).length;
+  fs.writeFileSync(`${OUT}/templates-verification-samples.json`, JSON.stringify({ at: new Date().toISOString(), failed, results, consoleErrors }, null, 2));
+  console.log(`\n${results.length - failed}/${results.length} checks passed`);
+  process.exit(failed ? 1 : 0);
+})().catch(e => { console.error(e); process.exit(2); });

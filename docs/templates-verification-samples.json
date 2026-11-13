@@ -1,0 +1,287 @@
+{
+  "at": "2026-11-12T17:07:46.226Z",
+  "failed": 0,
+  "results": [
+    {
+      "name": "one app shell mounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "page-layouts section visible",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "two PageLayout sections render",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PageLayout is labelled by its h1",
+      "pass": true,
+      "detail": {
+        "id": "m3-page-title-486",
+        "tag": "H1",
+        "text": "Projects"
+      }
+    },
+    {
+      "name": "feed columns match the container width (3 cards)",
+      "pass": true,
+      "detail": {
+        "columns": 2,
+        "feedW": 792,
+        "expected": 2
+      }
+    },
+    {
+      "name": "Standard page has a 1040px maximum width",
+      "pass": true,
+      "detail": {
+        "maxWidth": "1040px",
+        "box": {
+          "x": 388,
+          "y": 593,
+          "w": 840,
+          "h": 292
+        }
+      }
+    },
+    {
+      "name": "form submit shows the entered email",
+      "pass": true,
+      "detail": "Signed in as reader@example.com"
+    },
+    {
+      "name": "settings switch toggles on click",
+      "pass": true,
+      "detail": {
+        "before": "true",
+        "after": "false"
+      }
+    },
+    {
+      "name": "settings section is labelled by its heading",
+      "pass": true,
+      "detail": "Notifications"
+    },
+    {
+      "name": "desktop list-detail shows both panes",
+      "pass": true,
+      "detail": {
+        "listBox": {
+          "x": 388,
+          "y": 617,
+          "w": 360,
+          "h": 480
+        },
+        "detailBox": {
+          "x": 748,
+          "y": 617,
+          "w": 480,
+          "h": 480
+        }
+      }
+    },
+    {
+      "name": "desktop list pane is 360px",
+      "pass": true,
+      "detail": {
+        "x": 388,
+        "y": 617,
+        "w": 360,
+        "h": 480
+      }
+    },
+    {
+      "name": "desktop detail pane sits beside the list",
+      "pass": true,
+      "detail": {
+        "listBox": {
+          "x": 388,
+          "y": 617,
+          "w": 360,
+          "h": 480
+        },
+        "detailBox": {
+          "x": 748,
+          "y": 617,
+          "w": 480,
+          "h": 480
+        }
+      }
+    },
+    {
+      "name": "desktop back control is hidden",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "desktop supporting pane sits beside the main content",
+      "pass": true,
+      "detail": {
+        "mainBox": {
+          "x": 404,
+          "y": 2229,
+          "w": 549,
+          "h": 96
+        },
+        "paneBox": {
+          "x": 977,
+          "y": 2229,
+          "w": 235,
+          "h": 128
+        }
+      }
+    },
+    {
+      "name": "desktop supporting split is about 7:3",
+      "pass": true,
+      "detail": {
+        "mainBox": {
+          "x": 404,
+          "y": 2229,
+          "w": 549,
+          "h": 96
+        },
+        "paneBox": {
+          "x": 977,
+          "y": 2229,
+          "w": 235,
+          "h": 128
+        }
+      }
+    },
+    {
+      "name": "dashboard feed columns match the container width (4 cards)",
+      "pass": true,
+      "detail": {
+        "columns": 2,
+        "dashW": 760,
+        "expected": 2
+      }
+    },
+    {
+      "name": "Full-width page has no maximum width of its own",
+      "pass": true,
+      "detail": {
+        "maxWidth": "none"
+      }
+    },
+    {
+      "name": "no horizontal page overflow at 1280px (feed section)",
+      "pass": true,
+      "detail": {
+        "overflowDesktop": 0
+      }
+    },
+    {
+      "name": "compact list-detail shows the list only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "compact list has three native buttons",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "selecting an item opens its detail and hides the list",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "detail shows the selected message",
+      "pass": true,
+      "detail": "Release notes"
+    },
+    {
+      "name": "back control returns to the list",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "selected item keeps aria-current after going back",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "keyboard Enter opens the focused item",
+      "pass": true,
+      "detail": "Invoice 2041"
+    },
+    {
+      "name": "phone supporting pane stacks below the main content",
+      "pass": true,
+      "detail": {
+        "mm": {
+          "x": 41,
+          "y": 1926,
+          "w": 308,
+          "h": 144
+        },
+        "pm": {
+          "x": 41,
+          "y": 2094,
+          "w": 308,
+          "h": 104
+        }
+      }
+    },
+    {
+      "name": "phone feed is a single column",
+      "pass": true,
+      "detail": {
+        "columns": 1
+      }
+    },
+    {
+      "name": "phone form panel fits the 390px viewport",
+      "pass": true,
+      "detail": {
+        "x": 57,
+        "y": 3027,
+        "w": 276,
+        "h": 317
+      }
+    },
+    {
+      "name": "no horizontal page overflow at 390px (page-layouts)",
+      "pass": true,
+      "detail": {
+        "overflowPhone": 0
+      }
+    },
+    {
+      "name": "no horizontal page overflow at 390px (list-detail)",
+      "pass": true,
+      "detail": {
+        "overflowPhoneLD": 0
+      }
+    },
+    {
+      "name": "no horizontal page overflow at 390px (feed)",
+      "pass": true,
+      "detail": {
+        "overflowPhoneFeed": 0
+      }
+    },
+    {
+      "name": "phone list item is at least 48px tall",
+      "pass": true,
+      "detail": {
+        "x": 41,
+        "y": 772,
+        "w": 308,
+        "h": 68
+      }
+    },
+    {
+      "name": "no console errors during the run",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "consoleErrors": []
+}

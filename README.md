@@ -293,6 +293,12 @@ have four copyable examples, desktop/390px evidence and95 compiling usages.
 Shape coordinate parity and actual Reduce Motion checks are recorded.
 
 
+Page templates: `PageLayout`, `ListDetailLayout`, `SupportingPaneLayout`, `FeedLayout`,
+`FormLayout`, `SettingsSection` and `SettingsItem` follow the Material canonical layouts.
+See [templates verification](docs/templates-verification.md): 33 desktop and 390px browser checks,
+with two screenshots and the raw samples. Android and screen-reader checks are not done.
+
+
 Theme helpers: scoped seed/variant/contrast roles, light/dark/system mode, a
 Dioxus ThemeProvider context and local image seed extraction. See
 [theme verification](docs/theme-scope-verification.md) and

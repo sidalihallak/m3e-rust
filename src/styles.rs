@@ -65,6 +65,7 @@ pub const COMPONENT_CSS: &[&str] = &[
     include_str!("../assets/card.css"),
     include_str!("../assets/divider.css"),
     include_str!("../assets/text-field.css"),
+    include_str!("../assets/templates.css"),
 ];
 
 /// All component CSS joined into one stylesheet.
