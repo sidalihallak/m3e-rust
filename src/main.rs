@@ -22,7 +22,7 @@ mod wayfinding_gallery;
 mod navigation_extensions_gallery;
 mod input_extensions_gallery;
 mod layout_helpers_gallery;
-use m3e_rust_ui::{CommandDialog, CommandEntry, NavigationBar, Shape, ShapeName, ThemeContrast, ThemeVariant};
+use m3e_rust_ui::{CommandDialog, CommandEntry, NavigationBar, SearchLayout, SearchResult, SearchView, Select, SelectOption, Shape, ShapeName, ThemeContrast, ThemeVariant};
 mod templates_gallery;
 mod templates_showcase;
 mod expression_helpers_gallery;
@@ -394,7 +394,7 @@ fn main() {
 
 #[component]
 fn App() -> Element {
-    let (route, scrolled, _wide) = showcase::use_route();
+    let (route, scrolled, wide) = showcase::use_route();
     let mut modal_navigation = use_signal(|| false);
     let mut catalog_open = use_signal(|| true);
     let (_, page_title, family) = showcase::page(&route());
@@ -449,6 +449,7 @@ fn App() -> Element {
     let mut theme_contrast = use_signal(|| ThemeContrast::Standard);
     let mut quick_jump_open = use_signal(|| false);
     let mut quick_jump_query = use_signal(String::new);
+    let mut mobile_catalog_open = use_signal(|| false);
     let theme = theme::ThemePreview::from_options(seed(), theme_variant(), theme_contrast());
     let quick_entries: Vec<CommandEntry> = showcase::PAGES
         .iter()
@@ -457,6 +458,21 @@ fn App() -> Element {
             group: if group == "Communication" { "Feedback".to_string() } else { group.to_string() },
             keywords: vec![slug.to_string(), group.to_lowercase()],
             ..CommandEntry::new(slug, label)
+        })
+        .collect();
+    let search_q = quick_jump_query().trim().to_lowercase();
+    let mobile_search_results: Vec<SearchResult> = showcase::PAGES
+        .iter()
+        .copied()
+        .filter(|(slug, label, group)| {
+            search_q.is_empty()
+                || label.to_lowercase().contains(&search_q)
+                || group.to_lowercase().contains(&search_q)
+                || slug.to_lowercase().contains(&search_q)
+        })
+        .map(|(slug, label, group)| SearchResult {
+            supporting: Some(if group == "Communication" { "Feedback".to_string() } else { group.to_string() }),
+            ..SearchResult::new(slug, label)
         })
         .collect();
     let mobile_nav_items: Vec<_> = showcase::destinations()
@@ -485,10 +501,12 @@ fn App() -> Element {
             AppBar {class:"showcase-header",title:"M3E Rust UI",scrolled:scrolled(),
                 leading:rsx!{span {class:"showcase-mobile-menu",IconButton {icon:icons::MENU,aria_label:"Open navigation",onclick:move |_|modal_navigation.set(true)}}},
                 trailing:rsx!{
-                    IconButton {
-                        icon: icons::SEARCH,
-                        aria_label: "Quick jump to component or template",
-                        onclick: move |_| quick_jump_open.set(true),
+                    span { id: "showcase-search-anchor",
+                        IconButton {
+                            icon: icons::SEARCH,
+                            aria_label: "Quick jump to component or template",
+                            onclick: move |_| quick_jump_open.set(true),
+                        }
                     }
                     IconButton {
                         icon: icons::PALETTE,
@@ -505,15 +523,38 @@ fn App() -> Element {
                     IconButton {icon:if dark(){icons::LIGHT_MODE}else{icons::DARK_MODE},aria_label:if dark(){"Switch to light mode"}else{"Switch to dark mode"},onclick:move |_|dark.toggle()}
                 }
             }
-            CommandDialog {
-                open: quick_jump_open(),
-                title: "Jump to component or template".to_string(),
-                description: "Search across all components, foundations, and page templates.".to_string(),
-                entries: quick_entries,
-                query: quick_jump_query(),
-                onquerychange: move |v| quick_jump_query.set(v),
-                onselect: move |slug: String| showcase::navigate(&slug),
-                onopenchange: move |v| quick_jump_open.set(v),
+            if wide() {
+                CommandDialog {
+                    open: quick_jump_open(),
+                    title: "Jump to component or template".to_string(),
+                    description: "Search across all components, foundations, and page templates.".to_string(),
+                    entries: quick_entries,
+                    query: quick_jump_query(),
+                    onquerychange: move |v| quick_jump_query.set(v),
+                    onselect: move |slug: String| showcase::navigate(&slug),
+                    onopenchange: move |v| quick_jump_open.set(v),
+                }
+            } else {
+                SearchView {
+                    anchor_id: "showcase-search-anchor".to_string(),
+                    open: quick_jump_open(),
+                    layout: SearchLayout::FullScreen,
+                    value: quick_jump_query(),
+                    label: "Search components & templates".to_string(),
+                    results: mobile_search_results.clone(),
+                    oninput: move |v| quick_jump_query.set(v),
+                    onopenchange: move |v| quick_jump_open.set(v),
+                    onselect: move |slug: String| {
+                        quick_jump_open.set(false);
+                        showcase::navigate(&slug);
+                    },
+                    onsubmit: move |_| {
+                        if let Some(first) = mobile_search_results.first() {
+                            quick_jump_open.set(false);
+                            showcase::navigate(&first.value);
+                        }
+                    },
+                }
             }
             showcase::Catalog {active:route(),open:catalog_open()}
             ModalNavigationRail {open:modal_navigation(),items:showcase::destinations(),selected:family,title:"Browse components",
@@ -523,9 +564,14 @@ fn App() -> Element {
                 div {class:"showcase-status",role:"status",aria_live:"polite","{page_title}"}
                 showcase::PageIntro {active:route()}
                 div {class:"showcase-mobile-catalog",
-                    m3e_rust_ui::NativeSelect {key:route(),label:"Component",value:route(),
-                        options:showcase::PAGES.iter().copied().filter(|p|p.2==family).map(|(slug,label,_)|m3e_rust_ui::SelectOption::new(slug,label)).collect::<Vec<_>>(),
-                        onchange:move|value:String|showcase::navigate(&value)
+                    Select {
+                        key: route(),
+                        label: "Component".to_string(),
+                        value: route(),
+                        open: mobile_catalog_open(),
+                        options: showcase::PAGES.iter().copied().filter(|p|p.2==family).map(|(slug,label,_)|SelectOption::new(slug,label)).collect::<Vec<_>>(),
+                        onchange: move |value:String| { mobile_catalog_open.set(false); showcase::navigate(&value); },
+                        onopenchange: move |v| mobile_catalog_open.set(v),
                     }
                 }
                 div {id:"showcase-examples",class:"showcase-examples-anchor"}
@@ -1644,6 +1690,7 @@ fn App() -> Element {
                 class: "showcase-mobile-nav".to_string(),
                 items: mobile_nav_items,
                 selected: family,
+                tall: true,
                 elevated: true,
                 aria_label: "Mobile navigation".to_string(),
                 onchange: move |value: String| showcase::navigate(showcase::first(&value)),

@@ -1,7 +1,7 @@
 use super::CodeCard;
 use dioxus::prelude::*;
 use m3e_rust_ui::{
-    Button, ButtonVariant, Checkbox, Icon, MaterialSymbol, NativeSelect, SelectOption, SymbolStyle,
+    Button, ButtonVariant, Checkbox, Icon, MaterialSymbol, Select, SelectOption, SymbolStyle,
     TextField, icons,
 };
 const COMPLETE_ICON_USAGE: &str = r#"use dioxus::prelude::*;
@@ -20,6 +20,7 @@ fn ProjectIcons()->Element {
 pub fn IconCatalogue() -> Element {
     let mut query = use_signal(String::new);
     let mut style = use_signal(|| SymbolStyle::Rounded);
+    let mut style_open = use_signal(|| false);
     let mut filled = use_signal(|| false);
     let mut page = use_signal(|| 0usize);
     let mut chosen = use_signal(|| "delete".to_string());
@@ -56,7 +57,7 @@ pub fn IconCatalogue() -> Element {
     }
     article{class:"demo-card m3-icon-catalogue",
       TextField{label:"Search all Material Symbols",input_type:"search",value:query(),oninput:move|v|{query.set(v);page.set(0);}}
-      div{class:"m3-icon-catalogue-controls",NativeSelect{label:"Icon style",value:style().module(),options:vec![SelectOption::new("rounded","Rounded"),SelectOption::new("outlined","Outlined"),SelectOption::new("sharp","Sharp")],onchange:move|v:String|style.set(match v.as_str(){"outlined"=>SymbolStyle::Outlined,"sharp"=>SymbolStyle::Sharp,_=>SymbolStyle::Rounded})}
+      div{class:"m3-icon-catalogue-controls",Select{label:"Icon style",value:style().module(),open:style_open(),options:vec![SelectOption::new("rounded","Rounded"),SelectOption::new("outlined","Outlined"),SelectOption::new("sharp","Sharp")],onchange:move|v:String|style.set(match v.as_str(){"outlined"=>SymbolStyle::Outlined,"sharp"=>SymbolStyle::Sharp,_=>SymbolStyle::Rounded}),onopenchange:move|v|style_open.set(v)}
        label{Checkbox{aria_label:Some("Filled".into()),checked:filled(),onchange:move|v|filled.set(v)}"Filled"}
       }
       div{class:"m3-icon-selected",MaterialSymbol{name:selected.clone(),style:style(),filled:filled(),aria_label:Some(format!("Selected {selected}"))}div {strong {"{selected}"}p {"{style().module()} · {appearance}"}}}
