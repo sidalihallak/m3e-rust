@@ -22,7 +22,7 @@ mod wayfinding_gallery;
 mod navigation_extensions_gallery;
 mod input_extensions_gallery;
 mod layout_helpers_gallery;
-use m3e_rust_ui::{Shape, ShapeName};
+use m3e_rust_ui::{CommandDialog, CommandEntry, NavigationBar, Shape, ShapeName, ThemeContrast, ThemeVariant};
 mod templates_gallery;
 mod templates_showcase;
 mod expression_helpers_gallery;
@@ -445,7 +445,24 @@ fn App() -> Element {
     let mut search_value = use_signal(String::new);
     let mut price_value = use_signal(String::new);
     let mut menu_pick = use_signal(|| String::from("none"));
-    let theme = theme::ThemePreview::from_seed(seed());
+    let mut theme_variant = use_signal(|| ThemeVariant::TonalSpot);
+    let mut theme_contrast = use_signal(|| ThemeContrast::Standard);
+    let mut quick_jump_open = use_signal(|| false);
+    let mut quick_jump_query = use_signal(String::new);
+    let theme = theme::ThemePreview::from_options(seed(), theme_variant(), theme_contrast());
+    let quick_entries: Vec<CommandEntry> = showcase::PAGES
+        .iter()
+        .copied()
+        .map(|(slug, label, group)| CommandEntry {
+            group: if group == "Communication" { "Feedback".to_string() } else { group.to_string() },
+            keywords: vec![slug.to_string(), group.to_lowercase()],
+            ..CommandEntry::new(slug, label)
+        })
+        .collect();
+    let mobile_nav_items: Vec<_> = showcase::destinations()
+        .into_iter()
+        .filter(|d| matches!(d.value.as_str(), "Foundations" | "Actions" | "Selection" | "Content" | "Templates"))
+        .collect();
     let scheme = if dark() {
         theme.dark
     } else {
@@ -469,6 +486,11 @@ fn App() -> Element {
                 leading:rsx!{span {class:"showcase-mobile-menu",IconButton {icon:icons::MENU,aria_label:"Open navigation",onclick:move |_|modal_navigation.set(true)}}},
                 trailing:rsx!{
                     IconButton {
+                        icon: icons::SEARCH,
+                        aria_label: "Quick jump to component or template",
+                        onclick: move |_| quick_jump_open.set(true),
+                    }
+                    IconButton {
                         icon: icons::PALETTE,
                         aria_label: "Cycle source color",
                         onclick: move |_| {
@@ -482,6 +504,16 @@ fn App() -> Element {
                     }
                     IconButton {icon:if dark(){icons::LIGHT_MODE}else{icons::DARK_MODE},aria_label:if dark(){"Switch to light mode"}else{"Switch to dark mode"},onclick:move |_|dark.toggle()}
                 }
+            }
+            CommandDialog {
+                open: quick_jump_open(),
+                title: "Jump to component or template".to_string(),
+                description: "Search across all components, foundations, and page templates.".to_string(),
+                entries: quick_entries,
+                query: quick_jump_query(),
+                onquerychange: move |v| quick_jump_query.set(v),
+                onselect: move |slug: String| showcase::navigate(&slug),
+                onopenchange: move |v| quick_jump_open.set(v),
             }
             showcase::Catalog {active:route(),open:catalog_open()}
             ModalNavigationRail {open:modal_navigation(),items:showcase::destinations(),selected:family,title:"Browse components",
@@ -525,6 +557,63 @@ fn App() -> Element {
                                 span { class: "seed-dot", style: format!("background: {}", theme::css_rgb(Rgb::from_u32(value))) }
                                 "{name}"
                             }
+                        }
+                    }
+                    div { class: "theme-controls-row",
+                        ConnectedButtonGroup {
+                            aria_label: Some("Scheme variant".to_string()),
+                            selection: ButtonGroupSelection::Single,
+                            selection_required: true,
+                            variant: ConnectedButtonVariant::Tonal,
+                            size: ButtonSize::ExtraSmall,
+                            items: vec![
+                                ConnectedButtonItem::new("TonalSpot"),
+                                ConnectedButtonItem::new("Expressive"),
+                                ConnectedButtonItem::new("Vibrant"),
+                                ConnectedButtonItem::new("Content"),
+                            ],
+                            selected: vec![match theme_variant() {
+                                ThemeVariant::Expressive => 1,
+                                ThemeVariant::Vibrant => 2,
+                                ThemeVariant::Content => 3,
+                                _ => 0,
+                            }],
+                            onchange: move |indices: Vec<usize>| {
+                                if let Some(&idx) = indices.first() {
+                                    theme_variant.set(match idx {
+                                        1 => ThemeVariant::Expressive,
+                                        2 => ThemeVariant::Vibrant,
+                                        3 => ThemeVariant::Content,
+                                        _ => ThemeVariant::TonalSpot,
+                                    });
+                                }
+                            },
+                        }
+                        ConnectedButtonGroup {
+                            aria_label: Some("Contrast level".to_string()),
+                            selection: ButtonGroupSelection::Single,
+                            selection_required: true,
+                            variant: ConnectedButtonVariant::Outlined,
+                            size: ButtonSize::ExtraSmall,
+                            items: vec![
+                                ConnectedButtonItem::new("Standard"),
+                                ConnectedButtonItem::new("Medium"),
+                                ConnectedButtonItem::new("High"),
+                            ],
+                            selected: vec![match theme_contrast() {
+                                ThemeContrast::Medium => 1,
+                                ThemeContrast::High => 2,
+                                ThemeContrast::Standard => 0,
+                            }],
+                            onchange: move |indices: Vec<usize>| {
+                                if let Some(&idx) = indices.first() {
+                                    theme_contrast.set(match idx {
+                                        1 => ThemeContrast::Medium,
+                                        2 => ThemeContrast::High,
+                                        _ => ThemeContrast::Standard,
+                                    });
+                                }
+                            },
                         }
                     }
                 }
@@ -1550,6 +1639,14 @@ fn App() -> Element {
             notification_gallery::NotificationGallery {active:route()}
             advanced_gallery::AdvancedGallery {active:route()}
             footer { class: "wrap footer", span { "M3E · COMPONENT PILOT" } span { "Aligned with Material 3 Expressive guidance" } }
+            }
+            NavigationBar {
+                class: "showcase-mobile-nav".to_string(),
+                items: mobile_nav_items,
+                selected: family,
+                elevated: true,
+                aria_label: "Mobile navigation".to_string(),
+                onchange: move |value: String| showcase::navigate(showcase::first(&value)),
             }
         }
     }

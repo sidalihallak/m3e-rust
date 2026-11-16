@@ -176,3 +176,7 @@
 .template-plan-features li{display:flex;align-items:center;gap:10px;font:400 14px/20px Inter,system-ui,sans-serif;--m3-icon-size:18px}
 
 @media(max-width:899px){.template-inbox-split{grid-template-columns:1fr}.template-sso-row{grid-template-columns:1fr}}
+
+.theme-controls-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.showcase-mobile-nav{display:none}
+@media(max-width:899px){.showcase-mobile-nav{display:flex;position:fixed;inset-inline:0;inset-block-end:0;z-index:20}.showcase-content{padding-bottom:96px}}

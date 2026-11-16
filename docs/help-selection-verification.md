@@ -146,3 +146,9 @@ corrects the previous dual clear/dropdown layout and records new desktop geometr
 
 Latest: [official-reference multi-selection and filled-arrow correction](multi-select-filled-alignment-verification.md)
 keeps per-chip removal and centers Select icons independently of the value baseline.
+
+
+## 2026-11-16 — Outlined choice notch clearance fix
+
+- `assets/select.css`: Added `box-sizing: border-box` on `.m3-choice` and `padding-top: 8px` on `.m3-choice:not(.m3-choice--filled)` so the `-8px` `<fieldset class="m3-choice__outline">` legend notch is accounted for in the component's own bounding box.
+- Verified on desktop browser (`http://127.0.0.1:8080/`): `0px` overlap between preceding headings/labels and outlined `Select` / `Combobox` fields in `#selection-fields` and `#advanced-selection`.

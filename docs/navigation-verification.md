@@ -96,3 +96,10 @@ unchanged. Earlier measured results above describe the previous shell.
 
 Current source checks passed; follow-up runtime verification is blocked by browser
 URL policy. These changes are implemented, not declared fully runtime verified.
+
+
+## 2026-11-16 — Top & bottom bar shadow fix
+
+- `assets/navigation.css`: Removed the drop shadow from `.m3-app-bar[data-scrolled=true]` (`box-shadow: none`), keeping the Material 3 tonal fill transition (`surface` → `surface-container`) without left-side bleed onto `.showcase-catalog`.
+- `assets/navigation.css`: Updated `.m3-nav-bar[data-elevated=true]` to cast its elevation shadow upward (`box-shadow: 0 -1px 2px #0003, 0 -2px 6px 0 #0002`) so bottom-docked navigation bars project above content instead of off the bottom edge.
+- Verified on desktop browser (`http://127.0.0.1:8080/`): `.showcase-header[data-scrolled="true"]` shifts to `rgb(243, 237, 247)` (`surface-container`) with `box-shadow: none`.

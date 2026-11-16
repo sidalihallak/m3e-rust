@@ -1,5 +1,48 @@
+use crate::CodeCard;
 use dioxus::prelude::*;
 use m3e_rust_ui::*;
+
+const LOGIN_TEMPLATE_USAGE: &str = r#"FormLayout {
+    title: "Welcome back".to_string(),
+    icon: Some(icons::PERSON),
+    description: Some("Sign in to your workspace.".to_string()),
+    TextField { label: "Work email".to_string(), input_type: "email".to_string(), value: email(), oninput: move |v| email.set(v) }
+    TextField { label: "Password".to_string(), input_type: "password".to_string(), value: password(), oninput: move |v| password.set(v) }
+    Button { button_type: ButtonType::Submit, variant: ButtonVariant::Filled, "Sign in" }
+}"#;
+
+const DASHBOARD_TEMPLATE_USAGE: &str = r#"ConnectedButtonGroup {
+    selection: ButtonGroupSelection::Single,
+    selection_required: true,
+    variant: ConnectedButtonVariant::Tonal,
+    items: vec![ConnectedButtonItem::new("7 days"), ConnectedButtonItem::new("30 days"), ConnectedButtonItem::new("90 days")],
+    selected: vec![1],
+    onchange: move |idx| timeframe.set(idx[0]),
+}
+Chart { label: "Sessions".to_string(), kind: ChartKind::Bar, series, data }"#;
+
+const INBOX_TEMPLATE_USAGE: &str = r#"ListDetailLayout {
+    show_detail: detail_open(),
+    list: rsx! { /* selectable thread list */ },
+    detail: rsx! { /* thread body, star/archive IconButtons, and quick-reply TextField */ },
+}"#;
+
+const SETTINGS_TEMPLATE_USAGE: &str = r#"SettingsSection {
+    title: "Appearance & Accessibility".to_string(),
+    SettingsItem {
+        title: "Compact density".to_string(),
+        Switch { checked: compact_density(), onchange: move |v| compact_density.set(v) }
+    }
+}"#;
+
+const PRICING_TEMPLATE_USAGE: &str = r#"ConnectedButtonGroup {
+    selection: ButtonGroupSelection::Single,
+    selection_required: true,
+    variant: ConnectedButtonVariant::Tonal,
+    items: vec![ConnectedButtonItem::new("Monthly"), ConnectedButtonItem::new("Annual · Save 20%")],
+    selected: vec![1],
+    onchange: move |idx| annual_billing.set(idx[0] == 1),
+}"#;
 
 #[derive(Clone)]
 struct InboxThread {
@@ -93,8 +136,15 @@ pub fn TemplatesShowcase(active: String) -> Element {
     let mut selected_thread = use_signal(|| 0_usize);
     let mut reply_draft = use_signal(String::new);
     let mut sent_replies = use_signal(Vec::<(usize, String)>::new);
+    let mut archive_snack = use_signal(|| false);
+    let mut archive_rev = use_signal(|| 0_u64);
 
     // Settings state
+    let mut profile_name = use_signal(|| String::from("Alex Rivera"));
+    let mut profile_role = use_signal(|| String::from("alex@material.dev · Workspace Admin"));
+    let mut profile_dialog = use_signal(|| false);
+    let mut draft_name = use_signal(|| String::from("Alex Rivera"));
+    let mut draft_role = use_signal(|| String::from("alex@material.dev · Workspace Admin"));
     let mut workspace_lang = use_signal(|| String::from("en"));
     let mut lang_open = use_signal(|| false);
     let mut compact_density = use_signal(|| false);
@@ -282,6 +332,7 @@ pub fn TemplatesShowcase(active: String) -> Element {
                         }
                     }
                 }
+                CodeCard { eyebrow: "TEMPLATE SNIPPET", title: "Sign-in & auth usage", code: LOGIN_TEMPLATE_USAGE }
             }
         }
 
@@ -425,6 +476,26 @@ pub fn TemplatesShowcase(active: String) -> Element {
                         }
                     }
                 }
+
+                article { class: "demo-card template-dash-panel",
+                    div { class: "card-topline", span { "RECENT RELEASES" } span { class: "component-index", "TABLE" } }
+                    DataTable {
+                        label: "Recent workspace releases".to_string(),
+                        columns: vec![
+                            DataColumn::new("release", "Release"),
+                            DataColumn::new("owner", "Owner"),
+                            DataColumn::new("bundle", "Bundle (KB)").numeric(),
+                            DataColumn::new("status", "Status"),
+                        ],
+                        rows: vec![
+                            DataRow::new("v0.1.4", vec![DataCell::text("v0.1.4-rc1"), DataCell::text("Mira Lin"), DataCell::formatted_number(184.0, "184 KB"), DataCell::text("Ready")]),
+                            DataRow::new("v0.1.3", vec![DataCell::text("v0.1.3"), DataCell::text("Jonah Vance"), DataCell::formatted_number(192.0, "192 KB"), DataCell::text("Deployed")]),
+                            DataRow::new("v0.1.2", vec![DataCell::text("v0.1.2"), DataCell::text("Clara Moreau"), DataCell::formatted_number(214.0, "214 KB"), DataCell::text("Deployed")]),
+                            DataRow::new("v0.1.1", vec![DataCell::text("v0.1.1"), DataCell::text("Sami Hallak"), DataCell::formatted_number(218.0, "218 KB"), DataCell::text("Archived")]),
+                        ],
+                    }
+                }
+                CodeCard { eyebrow: "TEMPLATE SNIPPET", title: "Analytics dashboard usage", code: DASHBOARD_TEMPLATE_USAGE }
             }
         }
 
@@ -521,6 +592,8 @@ pub fn TemplatesShowcase(active: String) -> Element {
                                         onclick: move |_| {
                                             let id = thread.id;
                                             threads.with_mut(|list| list.retain(|t| t.id != id));
+                                            archive_rev += 1;
+                                            archive_snack.set(true);
                                         },
                                     }
                                 }
@@ -567,6 +640,14 @@ pub fn TemplatesShowcase(active: String) -> Element {
                         }
                     }
                 }
+                Snackbar {
+                    open: archive_snack(),
+                    message: "Conversation archived.".to_string(),
+                    revision: archive_rev(),
+                    duration_ms: 4000,
+                    onopenchange: move |v| archive_snack.set(v),
+                }
+                CodeCard { eyebrow: "TEMPLATE SNIPPET", title: "Inbox workspace usage", code: INBOX_TEMPLATE_USAGE }
             }
         }
 
@@ -577,12 +658,47 @@ pub fn TemplatesShowcase(active: String) -> Element {
             hidden: active != "template-settings",
             div { class: "template-stage template-stage--narrow",
                 article { class: "template-profile-card",
-                    Avatar { label: "Alex Rivera".to_string(), size: AvatarSize::Large }
+                    Avatar { label: profile_name(), size: AvatarSize::Large }
                     div { class: "template-profile-copy",
-                        h3 { "Alex Rivera" }
-                        p { "alex@material.dev · Workspace Admin" }
+                        h3 { "{profile_name}" }
+                        p { "{profile_role}" }
                     }
-                    Button { variant: ButtonVariant::Tonal, "Edit profile" }
+                    Button {
+                        variant: ButtonVariant::Tonal,
+                        onclick: move |_| {
+                            draft_name.set(profile_name());
+                            draft_role.set(profile_role());
+                            profile_dialog.set(true);
+                        },
+                        "Edit profile"
+                    }
+                }
+                Dialog {
+                    title: "Edit profile".to_string(),
+                    description: Some("Update your display name and workspace role.".to_string()),
+                    open: profile_dialog(),
+                    onopenchange: move |v| profile_dialog.set(v),
+                    actions: Some(rsx! {
+                        Button { variant: ButtonVariant::Text, onclick: move |_| profile_dialog.set(false), "Cancel" }
+                        Button {
+                            variant: ButtonVariant::Filled,
+                            onclick: move |_| {
+                                if !draft_name().trim().is_empty() {
+                                    profile_name.set(draft_name());
+                                }
+                                if !draft_role().trim().is_empty() {
+                                    profile_role.set(draft_role());
+                                }
+                                profile_dialog.set(false);
+                                settings_saved.set(true);
+                            },
+                            "Save"
+                        }
+                    }),
+                    div { class: "template-auth-form",
+                        TextField { label: "Display name".to_string(), value: draft_name(), oninput: move |v| draft_name.set(v) }
+                        TextField { label: "Role & email".to_string(), value: draft_role(), oninput: move |v| draft_role.set(v) }
+                    }
                 }
 
                 if settings_saved() {
@@ -687,6 +803,7 @@ pub fn TemplatesShowcase(active: String) -> Element {
                         "Save preferences"
                     }
                 }
+                CodeCard { eyebrow: "TEMPLATE SNIPPET", title: "Account settings usage", code: SETTINGS_TEMPLATE_USAGE }
             }
         }
 
@@ -792,6 +909,7 @@ pub fn TemplatesShowcase(active: String) -> Element {
                         }
                     }
                 }
+                CodeCard { eyebrow: "TEMPLATE SNIPPET", title: "Plans & billing usage", code: PRICING_TEMPLATE_USAGE }
             }
         }
     }
