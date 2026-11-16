@@ -137,3 +137,7 @@
   .m3-button, .m3-button::before { transition-duration: .01ms; }
   .m3-button__ripple, .m3-button--pressed .m3-button__ripple { animation-duration: .01ms; transition-duration: .01ms; }
 }
+
+@media (pointer: coarse) {
+  .m3-button--xs, .m3-button--s { min-height: 48px; }
+}
