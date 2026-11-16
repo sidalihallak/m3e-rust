@@ -6,6 +6,8 @@ All notable changes to `m3e-rust-ui` are recorded here. The format follows
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-16
+
 ### Added
 
 - Page templates for the Material canonical layouts, in `src/components/templates.rs`:
@@ -13,6 +15,8 @@ All notable changes to `m3e-rust-ui` are recorded here. The format follows
   `FormLayout`, `SettingsSection` and `SettingsItem`. They are bundled in `assets/templates.css`,
   and the showcase lists them under Content (page layouts, list-detail and supporting pane,
   feed and dashboards).
+- Global `@media (forced-colors: active)` baseline rules in `assets/base.css` and `48px`
+  `@media (pointer: coarse)` minimum height on `XS` and `Small` `Button`s in `assets/button.css`.
 
 ### Fixed
 
@@ -22,6 +26,11 @@ All notable changes to `m3e-rust-ui` are recorded here. The format follows
   server-rendered page (Dioxus fullstack) and its hydration agree on them. Before, the ids in
   the server's HTML grew with every request and differed from the browser's, so the scripts
   of server-rendered components (a sheet, a dialog, navigation keys) found no element.
+- `AppBar` scrolled state (`data-scrolled="true"`) uses `surface-container` tonal elevation with
+  `box-shadow: none`, and `NavigationBar` (`data-elevated="true"`) casts its shadow upward.
+- Outlined `Select` / `Combobox` (`.m3-choice:not(.m3-choice--filled)`) reserves `8px` top
+  padding for its floating-label outline notch, and `prefers-reduced-motion: reduce` collapses
+  keyframe animations as well as transitions.
 
 ## [0.1.0] - 2026-10-27
 
