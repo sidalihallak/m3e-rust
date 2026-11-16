@@ -91,8 +91,9 @@ button { cursor: pointer; }
 .variant-grid .button-example { min-height: 74px; }
 .size-grid .button-example { min-height: 158px; flex: 0 0 auto; }
 .shape-samples { display: flex; align-items: center; justify-content: center; gap: 18px; min-height: 105px; padding-block: 12px; }
-.disabled-sample { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 13px 16px; border-radius: 12px; background: var(--md-sys-color-surface-container); }
-.disabled-sample p { max-width: 180px; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.disabled-sample { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; padding: 13px 16px; border-radius: 12px; background: var(--md-sys-color-surface-container); }
+.disabled-sample .button-example { flex: 0 0 auto; }
+.disabled-sample p { flex: 1 1 160px; max-width: 180px; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
 .demo-card { min-height: 191px; padding: 16px; border: 1px solid color-mix(in srgb, var(--line) 65%, transparent); border-radius: 17px; background: var(--md-sys-color-surface-container-low); }
 .card-topline { display: flex; align-items: center; justify-content: space-between; color: var(--muted); font-size: 8px; font-weight: 770; letter-spacing: .11em; }
 .component-index { display: grid; width: 21px; height: 21px; place-items: center; border: 1px solid var(--line); border-radius: 7px; font-family: ui-monospace, monospace; font-size: 9px; letter-spacing: 0; }

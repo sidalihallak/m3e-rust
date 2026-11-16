@@ -22,7 +22,9 @@ mod wayfinding_gallery;
 mod navigation_extensions_gallery;
 mod input_extensions_gallery;
 mod layout_helpers_gallery;
+use m3e_rust_ui::{Shape, ShapeName};
 mod templates_gallery;
+mod templates_showcase;
 mod expression_helpers_gallery;
 mod navigation_gallery; // Material navigation and showcase catalogue.
 use m3e_rust_ui::{AppBar,NavigationRail,ModalNavigationRail};
@@ -465,7 +467,21 @@ fn App() -> Element {
             }
             AppBar {class:"showcase-header",title:"M3E Rust UI",scrolled:scrolled(),
                 leading:rsx!{span {class:"showcase-mobile-menu",IconButton {icon:icons::MENU,aria_label:"Open navigation",onclick:move |_|modal_navigation.set(true)}}},
-                trailing:rsx!{IconButton {icon:if dark(){icons::LIGHT_MODE}else{icons::DARK_MODE},aria_label:if dark(){"Switch to light mode"}else{"Switch to dark mode"},onclick:move |_|dark.toggle()}}
+                trailing:rsx!{
+                    IconButton {
+                        icon: icons::PALETTE,
+                        aria_label: "Cycle source color",
+                        onclick: move |_| {
+                            let next = match seed() {
+                                x if x == theme::SEEDS[0].1 => theme::SEEDS[1].1,
+                                x if x == theme::SEEDS[1].1 => theme::SEEDS[2].1,
+                                _ => theme::SEEDS[0].1,
+                            };
+                            seed.set(next);
+                        }
+                    }
+                    IconButton {icon:if dark(){icons::LIGHT_MODE}else{icons::DARK_MODE},aria_label:if dark(){"Switch to light mode"}else{"Switch to dark mode"},onclick:move |_|dark.toggle()}
+                }
             }
             showcase::Catalog {active:route(),open:catalog_open()}
             ModalNavigationRail {open:modal_navigation(),items:showcase::destinations(),selected:family,title:"Browse components",
@@ -483,9 +499,23 @@ fn App() -> Element {
                 div {id:"showcase-examples",class:"showcase-examples-anchor"}
             section { class: "hero wrap", id:"foundations", hidden:route()!="foundations",
                 div { class: "hero-copy",
-                    div { class: "eyebrow", span { class: "status-dot" } "M3 EXPRESSIVE / DIOXUS" }
+                    div { class: "eyebrow", span { class: "status-dot" } "MATERIAL 3 EXPRESSIVE · DIOXUS 0.7" }
                     h1 { "Material 3." br {} "Made for Rust." }
-                    p { class: "hero-description", "Build expressive interfaces with copyable Dioxus components. Explore the color system, try each interaction, and make it your own." }
+                    p { class: "hero-description", "Build expressive interfaces with copyable Dioxus components, dynamic HCT color systems, and full-page templates." }
+                    div { class: "hero-cta-row",
+                        Button {
+                            variant: ButtonVariant::Filled,
+                            size: ButtonSize::Large,
+                            onclick: move |_| showcase::navigate("buttons"),
+                            "Get started"
+                        }
+                        Button {
+                            variant: ButtonVariant::Tonal,
+                            size: ButtonSize::Large,
+                            onclick: move |_| showcase::navigate("template-login"),
+                            "Explore templates"
+                        }
+                    }
                     div { class: "seed-row",
                         span { class: "seed-label", "SOURCE COLOR" }
                         for (name, value) in theme::SEEDS {
@@ -499,12 +529,50 @@ fn App() -> Element {
                     }
                 }
                 div { class: "hero-art",
-                    div { class: "art-ring ring-one" }
-                    div { class: "art-ring ring-two" }
-                    div { class: "art-core", "M3" }
-                    span { class: "art-label label-top", "HCT" }
-                    span { class: "art-label label-right", "TONAL PALETTES" }
-                    span { class: "art-label label-bottom", "SEMANTIC ROLES" }
+                    div { class: "hero-art-canvas",
+                        div { class: "hero-tile hero-tile--primary",
+                            Shape { name: Some(ShapeName::FourLeafClover), size: 48, class: "hero-tile-shape" }
+                            span { "HCT Color" }
+                        }
+                        div { class: "hero-tile hero-tile--secondary",
+                            Shape { name: Some(ShapeName::SoftBurst), size: 48, class: "hero-tile-shape" }
+                            span { "35 Shapes" }
+                        }
+                        div { class: "hero-tile hero-tile--tertiary",
+                            Shape { name: Some(ShapeName::Flower), size: 48, class: "hero-tile-shape" }
+                            span { "Templates" }
+                        }
+                        div { class: "hero-tile hero-tile--surface",
+                            Shape { name: Some(ShapeName::Sunny), size: 48, class: "hero-tile-shape" }
+                            span { "M3 Expressive" }
+                        }
+                    }
+                }
+            }
+
+            section { class: "wrap bento-section", hidden:route()!="foundations",
+                div { class: "section-heading",
+                    div {
+                        p { class: "eyebrow", "EXPLORE THE SYSTEM" }
+                        h2 { "Design, components & templates" }
+                    }
+                }
+                div { class: "m3-bento-grid",
+                    for (slug, title, desc, icon, tone) in [
+                        ("buttons", "Buttons & Actions", "Expressive shapes, sizes, FABs, and spring motion.", icons::TOUCH_APP, "primary"),
+                        ("template-login", "Page Templates", "Sign-in, analytics dashboard, inbox, settings & billing.", icons::DASHBOARD, "tertiary"),
+                        ("icons", "Icons & Shapes", "4,301 Material Symbols and 35 expressive shape tokens.", icons::AUTO_AWESOME, "secondary"),
+                        ("text-fields", "Selection & Inputs", "Text fields, selects, sliders, chips, and date pickers.", icons::TUNE, "primary"),
+                        ("navigation", "Navigation & Layout", "App bars, navigation rails, tabs, and adaptive panes.", icons::EXPLORE, "tertiary"),
+                        ("dialogs", "Feedback & Surfaces", "Dialogs, bottom sheets, snackbars, and progress.", icons::LAYERS, "secondary"),
+                    ] {
+                        a { class: "m3-bento-card m3-bento-card--{tone}", href: "#{slug}",
+                            div { class: "m3-bento-icon", Icon { icon } }
+                            h3 { "{title}" }
+                            p { "{desc}" }
+                            span { class: "m3-bento-arrow", Icon { icon: icons::ARROW_FORWARD } }
+                        }
+                    }
                 }
             }
 
@@ -1473,6 +1541,7 @@ fn App() -> Element {
             input_extensions_gallery::InputExtensionsGallery {active:route()}
             layout_helpers_gallery::LayoutHelpersGallery {active:route()}
             templates_gallery::TemplatesGallery {active:route()}
+            templates_showcase::TemplatesShowcase {active:route()}
             expression_helpers_gallery::ExpressionHelpersGallery {active:route()}
             theme_helpers_gallery::ThemeHelpersGallery {active:route()}
             application_blocks_gallery::ApplicationBlocksGallery {active:route()}

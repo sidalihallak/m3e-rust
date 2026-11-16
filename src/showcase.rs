@@ -85,6 +85,11 @@ pub const PAGES: &[(&str, &str, &str)] = &[
     ("navigation-rails", "Navigation rails", "Navigation"),
     ("toolbars", "Toolbars", "Navigation"),
     ("tabs", "Tabs", "Navigation"),
+    ("template-login", "Sign in & auth", "Templates"),
+    ("template-dashboard", "Analytics dashboard", "Templates"),
+    ("template-inbox", "Inbox workspace", "Templates"),
+    ("template-settings", "Account settings", "Templates"),
+    ("template-pricing", "Plans & billing", "Templates"),
 ];
 pub fn page(value: &str) -> (&'static str, &'static str, &'static str) {
     PAGES
@@ -115,6 +120,7 @@ pub fn destinations() -> Vec<NavigationDestination> {
         ("Content", icons::LAYERS, icons::LAYERS_FILL),
         ("Navigation", icons::EXPLORE, icons::EXPLORE_FILL),
         ("Scheduling", icons::CALENDAR_TODAY, icons::CALENDAR_TODAY),
+        ("Templates", icons::DASHBOARD, icons::DASHBOARD_FILL),
     ]
     .into_iter()
     .map(|(name, icon, fill)| {
@@ -241,10 +247,13 @@ pub fn PageIntro(active: String) -> Element {
         "Navigation" => {
             "Guide people through your app with adaptive navigation and a clear sense of place."
         }
+        "Templates" => {
+            "Complete Material 3 Expressive page compositions you can adapt for sign-in, dashboards, settings, and workspaces."
+        }
         _ => "Create a consistent visual language with semantic colors and Material Symbols.",
     };
     rsx! {header {class:"showcase-page-intro wrap",hidden:active=="foundations",
-        p {class:"showcase-breadcrumb","Components / " if family=="Communication" {"Feedback"}else{"{family}"}}
+        p {class:"showcase-breadcrumb",if family=="Templates" {"Templates"}else{"Components / "} if family=="Communication" {"Feedback"}else if family!="Templates" {"{family}"}}
         h1 {"{title}"}
         p {class:"showcase-page-description","{description}"}
         div {class:"showcase-page-links",a {href:"#showcase-examples","Explore examples"}a {href:"https://github.com/sidalihallak/m3e-rust",target:"_blank",rel:"noreferrer","View source ↗"}}
