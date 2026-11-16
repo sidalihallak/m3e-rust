@@ -30,7 +30,8 @@ with sync_playwright() as p:
     stem=f'{engine}-{label}-fill{int(filled)}';(out/(stem+'-sprite.png')).write_bytes(a);(out/(stem+'-source.png')).write_bytes(b)
     results.append({'engine':engine,'glyph':label,'filled':filled,'changed_pixels':changed,'dark_pixels':dark})
   for style in ['rounded','outlined','sharp']:
-   page.get_by_role('combobox',name='Icon style',exact=True).select_option(style)
+   page.get_by_role('combobox',name='Icon style',exact=True).click()
+   page.get_by_role('option',name=style.capitalize(),exact=True).click()
    page.wait_for_function('(v)=>document.querySelector(".m3-icon-selected svg").dataset.symbolStyle===v',arg=style)
    assert all(e==style for e in page.locator('.icon-specimen svg').evaluate_all('(els)=>els.map(e=>e.dataset.symbolStyle)'))
    live=page.locator('.m3-icon-artwork-pair--live');actual,expected=live.locator('svg').all()
