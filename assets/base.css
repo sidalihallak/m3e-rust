@@ -1,4 +1,10 @@
 /* Copyable foundations: component sizing and reduced motion, without gallery CSS. */
 :where([class^="m3-"],[class*=" m3-"]),:where([class^="m3-"],[class*=" m3-"]) *,:where([class^="m3-"],[class*=" m3-"])::before,:where([class^="m3-"],[class*=" m3-"])::after{box-sizing:border-box}
 :where([class^="m3-"],[class*=" m3-"]){font-family:Inter,ui-sans-serif,system-ui,sans-serif}
-@media(prefers-reduced-motion:reduce){:where([class^="m3-"],[class*=" m3-"]),:where([class^="m3-"],[class*=" m3-"]) *,:where([class^="m3-"],[class*=" m3-"])::before,:where([class^="m3-"],[class*=" m3-"])::after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+@media(prefers-reduced-motion:reduce){:where([class^="m3-"],[class*=" m3-"]),:where([class^="m3-"],[class*=" m3-"]) *,:where([class^="m3-"],[class*=" m3-"])::before,:where([class^="m3-"],[class*=" m3-"])::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+@media(forced-colors:active){
+  :where([class^="m3-"],[class*=" m3-"]):focus-visible{outline:2px solid Highlight!important;outline-offset:2px}
+  .m3-button,.m3-chip,.m3-card,.m3-connected__item,.m3-dialog,.m3-sheet,.m3-menu,.m3-nav__indicator{forced-color-adjust:auto}
+  .m3-button--outlined,.m3-card--outlined,.m3-chip,.m3-connected__item,.m3-dialog,.m3-sheet,.m3-menu,.m3-choice__outline{border-color:ButtonText!important}
+  .m3-connected__item[aria-pressed=true],.m3-chip[aria-pressed=true],.m3-nav__item[data-active=true] .m3-nav__indicator,.m3-tab[aria-selected=true]{background:Highlight!important;color:HighlightText!important;border-color:Highlight!important}
+}

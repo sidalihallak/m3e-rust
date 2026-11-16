@@ -114,3 +114,14 @@ and RTL tab example are included in the gallery.
 Remaining: audible screen-reader checks, zoom/text enlargement and forced colors,
 full RTL behavior outside the sampled components, custom-seed/state contrast,
 and Android/touch verification.
+
+
+## 2026-11-16 — Forced colors, reduced motion, 200% enlargement & variant contrast matrix
+
+- **`assets/base.css`**: Added `animation-duration: .01ms !important; animation-iteration-count: 1 !important` to the global `@media (prefers-reduced-motion: reduce)` rule, and added `@media (forced-colors: active)` baseline rules for `:focus-visible` (`2px solid Highlight`), outlined borders (`ButtonText`), and active/selected states (`Highlight` / `HighlightText`).
+- **Desktop browser verification (`http://localhost:8080/`)**:
+  - `prefers-reduced-motion: reduce`: verified `.m3-button`, `.m3-switch__thumb`, `.m3-tab`, and `.m3-dialog` collapse to `0.01ms`, and `Switch` / `Tabs` / `CommandDialog` state transitions work without animation.
+  - `forced-colors: active`: verified outlined borders, active/selected states, and `:focus-visible` outlines remain visible on `#buttons`, `#connected-button-groups`, and `#template-login`.
+  - `200%` text enlargement: verified `#foundations`, `#template-pricing`, and `#template-dashboard` wrap cleanly without text clipping or horizontal breakage.
+  - **Contrast matrix (12 combinations)**: Measured `TonalSpot`, `Expressive`, `Vibrant` × `Standard`, `High` in Light and Dark modes; all `primary/on-primary` (`6.44:1`–`18.44:1`), `surface/on-surface` (`14.31:1`–`19.97:1`), and `primary-container/on-primary-container` (`7.20:1`–`11.11:1`) pairs pass WCAG AA/AAA.
+- **Remaining gaps**: Audible screen-reader testing and physical Android/mobile touch & soft-keyboard testing remain unverified in this desktop environment.
