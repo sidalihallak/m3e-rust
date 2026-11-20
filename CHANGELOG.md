@@ -6,6 +6,15 @@ All notable changes to `m3e-rust-ui` are recorded here. The format follows
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-11-20
+
+### Fixed
+
+- Web showcase stylesheet cascade order: render `M3eStyles` before `main.css` and `showcase.css` in
+  `src/main.rs`, and qualify `.m3-nav-bar.showcase-mobile-nav` in `assets/showcase.css` so
+  `.m3-nav-bar { display: flex; position: relative; }` no longer overrides `display: none` on
+  desktop viewports or `position: fixed` on mobile viewports.
+
 ## [0.2.0] - 2026-11-20
 
 ### Changed

@@ -1697,7 +1697,7 @@ checksum = "b3bd0dd2cd90571056fdb71f6275fada10131182f84899f4b2a916e565d81d86"
 
 [[package]]
 name = "m3e-rust-ui"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "dioxus",
  "getrandom 0.3.4",

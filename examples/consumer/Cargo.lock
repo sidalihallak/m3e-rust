@@ -1705,7 +1705,7 @@ dependencies = [
 
 [[package]]
 name = "m3e-rust-ui"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "dioxus",
  "getrandom 0.3.4",
