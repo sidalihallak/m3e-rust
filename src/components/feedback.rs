@@ -81,7 +81,9 @@ pub fn Snackbar(
     } else {
         duration_ms.clamp(4000, 10000)
     };
-    rsx! {div {id:"{id}",class:"m3-snackbar {class}",role:"region",aria_label:"Notifications",aria_keyshortcuts:"Alt+G",tabindex:"-1",aria_hidden:if !open{Some("true")}else{None},inert:if !open{Some("")}else{None},
+    let native_ready = if cfg!(target_arch = "wasm32") { None } else { Some("true") };
+    let native_hidden = !cfg!(target_arch = "wasm32") && !open;
+    rsx! {div {id:"{id}",class:"m3-snackbar {class}",role:"region",aria_label:"Notifications",aria_keyshortcuts:"Alt+G",tabindex:"-1",hidden:native_hidden,"data-ready":native_ready,aria_hidden:if !open{Some("true")}else{None},inert:if !open{Some("")}else{None},
         "data-open":open,"data-message":message.clone(),"data-revision":revision,"data-duration":duration,"data-new-line":action_new_line,
         span {class:"m3-feedback__sr",role:"status",aria_live:"polite",aria_atomic:"true","data-snackbar-announcement":"true"}
         p {class:"m3-snackbar__message","{message}"}

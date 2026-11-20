@@ -30,11 +30,12 @@ pub fn Icon(
         svg {
             class,
             view_box: "0 -960 960 960",
+            fill: "currentColor",
             role,
             "aria-label": aria_label,
             "aria-hidden": hidden,
             "data-icon": icon.name,
-            path { d: icon.path }
+            path { d: icon.path, fill: "currentColor" }
         }
     }
 }

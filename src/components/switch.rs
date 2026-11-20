@@ -1,4 +1,5 @@
 use dioxus::html::input_data::MouseButton;
+use dioxus::html::NamedKey;
 use dioxus::prelude::*;
 
 /// A two-state switch built on a native `<button role="switch">`.
@@ -58,7 +59,7 @@ pub fn Switch(
             onpointercancel: move |_| pressed.set(false),
             onpointerleave: move |_| pressed.set(false),
             onkeydown: move |event| {
-                if event.key()==Key::Escape{pressed.set(false);}
+                if event.key()==Key::Named(NamedKey::Escape){pressed.set(false);}
                 if !disabled && event.code() == Code::Space && !event.is_auto_repeating() {
                     pressed.set(true);
                 }

@@ -87,14 +87,16 @@ pub fn TextField(
     let multiline_class = if multiline { " m3-field--multiline" } else { "" };
     // Dense applies to single-line fields. A multi-line field keeps its three-line minimum.
     let dense_class = if multiline { "" } else { size.class() };
+    let native_notch_class = if cfg!(target_arch = "wasm32") { "" } else { " m3-field--native-notch" };
     let class = format!(
-        "m3-field m3-field--{}{error_class}{disabled_class}{leading_class}{trailing_class}{multiline_class}{dense_class} {class}",
+        "m3-field m3-field--{}{error_class}{disabled_class}{leading_class}{trailing_class}{multiline_class}{dense_class}{native_notch_class} {class}",
         variant.class()
     );
     let has_support = supporting.is_some() || max_length.is_some();
     let counter = max_length.map(|max| format!("{length}/{max}"));
 
     // The notch is cut to the width of the floated label. A ResizeObserver tracks label and font changes.
+    #[cfg(target_arch = "wasm32")]
     use_effect({
         let id = id.clone();
         move || {
@@ -178,6 +180,7 @@ pub fn TextField(
 
 /// Sets the notch from the floated label's layout width. Viewport bounds include
 /// ancestor transforms (for example a dialog's entry scale) and under-size the gap.
+#[cfg(target_arch = "wasm32")]
 fn notch_script(id: &str) -> String {
     format!(
         r#"

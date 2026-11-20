@@ -35,9 +35,25 @@ pub fn Radio(
             span { class: "m3-radio__state", aria_hidden: "true" }
             // Ring and dot are SVG circles on a 20-unit grid: the centre stays exact
             // at any browser zoom, unlike boxes whose edges round to device pixels.
-            svg { class: "m3-radio__ring", view_box: "0 0 20 20", "aria-hidden": "true",
-                circle { class: "m3-radio__outline", cx: "10", cy: "10", r: "9" }
-                circle { class: "m3-radio__dot", cx: "10", cy: "10", r: "5" }
+            svg { class: "m3-radio__ring", view_box: "0 0 20 20", fill: "none", "aria-hidden": "true",
+                circle {
+                    class: "m3-radio__outline",
+                    cx: "10",
+                    cy: "10",
+                    r: "9",
+                    fill: "none",
+                    stroke: "currentColor",
+                    stroke_width: "2",
+                }
+                if cfg!(target_arch = "wasm32") || checked {
+                    circle {
+                        class: "m3-radio__dot",
+                        cx: "10",
+                        cy: "10",
+                        r: "5",
+                        fill: "currentColor",
+                    }
+                }
             }
         }
     }

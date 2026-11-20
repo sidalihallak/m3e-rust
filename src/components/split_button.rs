@@ -2,6 +2,7 @@ use super::action_control::ActionControl;
 use super::motion::next_id;
 use super::{ButtonSize, ButtonVariant, IconData, Menu, MenuColor, MenuEntry, MenuSelection};
 use crate::icons;
+use dioxus::html::NamedKey;
 use dioxus::prelude::*;
 
 /// M3 Expressive split action and related menu. Both halves share emphasis and
@@ -38,7 +39,7 @@ pub fn SplitButton(
     let trailing_label = trailing_label.unwrap_or_else(|| format!("More {label} options"));
     let mut last = use_signal(|| false);
     rsx! {
-        div { class: "m3-split m3-split--{size_class} {class}", role: "group", aria_label: label.clone(),
+        div { class: "m3-split m3-split--{size_class} {class}", "data-open": open, role: "group", aria_label: label.clone(),
             ActionControl { label: label.clone(), icon: leading_icon, icon_only, variant, size, disabled,
                 class: "m3-split__leading", onclick,
             }
@@ -47,8 +48,8 @@ pub fn SplitButton(
                 class: "m3-split__trailing", expanded: Some(open), controls: Some(menu_id.clone()),
                 onclick: move |_| { last.set(false); onopenchange.call(!open); },
                 onkeydown: move |e: KeyboardEvent| {
-                    if !disabled && !trailing_disabled && matches!(e.key(), Key::ArrowDown | Key::ArrowUp) {
-                        e.prevent_default(); last.set(e.key() == Key::ArrowUp); onopenchange.call(true);
+                    if !disabled && !trailing_disabled && matches!(e.key(), Key::Named(NamedKey::ArrowDown) | Key::Named(NamedKey::ArrowUp)) {
+                        e.prevent_default(); last.set(e.key() == Key::Named(NamedKey::ArrowUp)); onopenchange.call(true);
                     }
                 },
             }

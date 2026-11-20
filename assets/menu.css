@@ -50,4 +50,9 @@
 .m3-menu-panel--baseline .m3-menu-item__icon { --m3-icon-size: 24px; }
 .m3-context-region { padding: 24px; border: 1px dashed var(--md-sys-color-outline); border-radius: 12px; color: var(--md-sys-color-on-surface-variant); }
 .m3-context-region:focus-visible { outline: 3px solid var(--md-sys-color-primary); outline-offset: 3px; }
+.m3-dropdown-anchor { position: relative; display: inline-flex; align-items: center; }
+.m3-split { position: relative; }
+.m3-dropdown-anchor[data-open=true], .m3-split[data-open=true] { z-index: 120; }
+.m3-menu-backdrop { position: fixed; inset: 0; z-index: 119; background: transparent; }
+.m3-menu-panel.m3-menu-panel--native { position: absolute; z-index: 120; top: 100%; left: 0; right: auto; bottom: auto; margin-top: 4px; width: 192px; max-height: 280px; display: block; }
 @media (prefers-reduced-motion: reduce) { .m3-menu-item { transition-duration: .01ms !important; } }

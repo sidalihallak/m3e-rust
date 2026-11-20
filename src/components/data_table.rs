@@ -2,6 +2,7 @@ use super::{
     Checkbox, Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TablePagination,
     TableRow, TableSort,
 };
+use dioxus::html::NamedKey;
 use dioxus::prelude::*;
 
 #[derive(Clone, PartialEq)]
@@ -265,7 +266,7 @@ requestAnimationFrame(()=>{{if(!root.isConnected)return;const input=root.querySe
                                 if editable_columns.contains(&columns[index].key)&&!row.disabled{
                                  {let row_id=row.id.clone();let column_key=columns[index].key.clone();let numeric=columns[index].numeric;let active=editing()==Some((row_id.clone(),column_key.clone()));let save_row=row_id.clone();let save_key=column_key.clone();let save=EventHandler::new(move |_|{let text=draft();let number=if numeric{text.parse::<f64>().ok().filter(|n|n.is_finite())}else{None};if numeric&&number.is_none(){edit_error.set(true);}else{oncellchange.call(DataCellEdit{row_id:save_row.clone(),column_key:save_key.clone(),text,number});editing.set(None);}});
                                   rsx!{if active{form{class:"m3-data-table__edit",onsubmit:move |event|{event.prevent_default();save.call(());},
-                                   input{class:"m3-input m3-input--outlined","data-edit-row":row_id.clone(),"data-edit-column":column_key.clone(),r#type:"text",inputmode:if numeric{"decimal"}else{"text"},aria_label:format!("Edit {} for {}",columns[index].label,row_id),aria_invalid:edit_error(),value:draft(),oninput:move|e|{draft.set(e.value());edit_error.set(false);},onkeydown:move|e|{if e.key()==Key::Escape{editing.set(None);}}}
+                                   input{class:"m3-input m3-input--outlined","data-edit-row":row_id.clone(),"data-edit-column":column_key.clone(),r#type:"text",inputmode:if numeric{"decimal"}else{"text"},aria_label:format!("Edit {} for {}",columns[index].label,row_id),aria_invalid:edit_error(),value:draft(),oninput:move|e|{draft.set(e.value());edit_error.set(false);},onkeydown:move|e|{if e.key()==Key::Named(NamedKey::Escape){editing.set(None);}}}
                                    if edit_error(){span{role:"alert","Enter a finite number."}}
                                    button{r#type:"submit","Save cell"}
                                    button{r#type:"button",onclick:move |_|editing.set(None),"Cancel edit"}

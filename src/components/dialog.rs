@@ -76,11 +76,16 @@ pub fn Dialog(
     });
     rsx! {
         dialog { id: "{id}", class: "m3-dialog m3-dialog--{variant_class} {class}", role,
+            open: !cfg!(target_arch = "wasm32") && open,
             aria_modal: "true", aria_labelledby: "{id}-title",
             aria_describedby: if has_description { Some(format!("{id}-description")) } else { None },
             "data-open": open, "data-dismiss-outside": dismiss_on_outside,
             "data-dismiss-escape": dismiss_on_escape, "data-initial-focus": initial_focus_id,
-            div { class: "m3-dialog__scrim", aria_hidden: "true" }
+            div {
+                class: "m3-dialog__scrim",
+                aria_hidden: "true",
+                onclick: move |_| if dismiss_on_outside { onopenchange.call(false); },
+            }
             div { class: "m3-dialog__surface",
                 div { class: "m3-dialog__header",
                     if fullscreen {

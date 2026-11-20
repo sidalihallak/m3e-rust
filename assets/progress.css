@@ -74,6 +74,15 @@
 }
 .m3-linear--wavy.m3-linear--thick .m3-linear__wave { mask-image: var(--wave-thick-40); }
 .m3-linear--wavy.m3-linear--determinate .m3-linear__active { overflow: visible; }
+.m3-linear--wavy.m3-linear--determinate .m3-linear__active.m3-linear__active--svg-wave {
+  overflow: hidden;
+  border-radius: 0;
+  color: var(--linear-active);
+}
+.m3-linear__svg-wave {
+  display: block;
+  flex: 0 0 auto;
+}
 .m3-linear--wavy.m3-linear--determinate .m3-linear__active .m3-linear__wave { height: 100%; }
 .m3-linear--wavy.m3-linear--determinate .m3-linear__track { height: var(--linear-thickness); }
 
@@ -129,6 +138,12 @@
 .m3-circular--wavy { width: 48px; height: 48px; }
 .m3-circular--thick { width: 52px; height: 52px; }
 .m3-circular__svg { width: 100%; height: 100%; overflow: visible; }
+.m3-circular__track-svg {
+  position: absolute;
+  inset: 0;
+  color: var(--md-sys-color-secondary-container);
+  pointer-events: none;
+}
 .m3-circular__active { fill: none; }
 .m3-circular__track-arc { fill: none; stroke: var(--md-sys-color-secondary-container); }
 .m3-circular__wave { transform-box: view-box; transform-origin: 50% 50%; }

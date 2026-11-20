@@ -6,6 +6,39 @@ All notable changes to `m3e-rust-ui` are recorded here. The format follows
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-20
+
+### Changed
+
+- Upgraded `dioxus` dependency from `0.7` to `0.8.0-alpha.3` (including `Key::Named(NamedKey::*)`
+  keyboard handling across `Chart`, `Chip`, `DataTable`, `Menu`, `SplitButton`, and `Switch`, and
+  `current_scope_id()` formatting in `motion.rs`) to support both Web and Blitz 0.3-beta native
+  renderers (iOS, Android, Desktop).
+
+### Fixed
+
+- **Native Blitz SVG rendering**: Added explicit inline `fill="currentColor"` / `stroke="currentColor"`
+  presentation attributes to `Icon`, `MaterialSymbol`, `Checkbox`, `Radio`, and `CircularProgress`
+  (rendering the circular track arc in a sibling `<svg>` with `--md-sys-color-secondary-container`)
+  so glyphs, checkmarks, radio rings/dots, and progress tracks tint accurately without CSS SVG
+  cascade.
+- **Wavy `LinearProgress` on native**: Added an inline `<svg>` sine-wave fallback clipped by
+  `.m3-linear__active--svg-wave` for non-`wasm32` targets where CSS `mask-repeat: repeat-x` on SVG
+  data URLs is not tiled, while preserving animated CSS masks on Web.
+- **Outlined `TextField` notch on native**: Added `.m3-field--native-notch` surface masking and
+  gated the JS `ResizeObserver` effect to `wasm32` so the top outline no longer strikes through the
+  floated label on Blitz.
+- **Native overlays & dropdown menus**:
+  - `Dialog`, `AlertDialog`, `Sheet`, `BottomSheet`, and `SideSheet` now set `<dialog open>` on
+    non-`wasm32` targets, include `z-index: 100`, and wire Rust `onclick` scrim dismissal.
+  - `Menu`, `DropdownMenu`, and `SplitButton` now render as anchored Material 3 dropdowns on
+    non-`wasm32` targets (`position: absolute; top: 100%; margin-top: 4px;` with a transparent
+    click-outside backdrop, `data-open` z-index elevation, and Rust-side close on selection).
+  - `Snackbar` sets `data-ready="true"` and `hidden` directly in Rust on non-`wasm32` targets.
+- **AppBar / NavigationBar stacking & compact SegmentedButton**: Added `position: relative; z-index: 10;`
+  to `.m3-app-bar` and `.m3-nav-bar` so scrolled sibling content cannot steal pointer events, and
+  added `overflow: hidden` to `.m3-segmented__item` to prevent label bleed on narrow viewports.
+
 ## [0.1.1] - 2026-11-16
 
 ### Added

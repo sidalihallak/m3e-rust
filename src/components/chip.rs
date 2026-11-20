@@ -1,4 +1,5 @@
 use dioxus::html::input_data::MouseButton;
+use dioxus::html::NamedKey;
 use dioxus::prelude::*;
 
 use super::{Icon, IconData};
@@ -107,7 +108,7 @@ next?.focus();"#);
                 onpointercancel: move |_| pressed.set(false),
                 onpointerleave: move |_| pressed.set(false),
                 onkeydown: { let remove = remove.clone(); move |event| {
-                    if !disabled && variant == ChipVariant::Input && matches!(event.key(), Key::Backspace | Key::Delete) {
+                    if !disabled && variant == ChipVariant::Input && matches!(event.key(), Key::Named(NamedKey::Backspace) | Key::Named(NamedKey::Delete)) {
                         event.prevent_default(); remove(); return;
                     }
                     if !disabled && event.code() == Code::Space && !event.is_auto_repeating() {
@@ -135,7 +136,7 @@ next?.focus();"#);
                     "aria-label": remove_label,
                     onclick: { let remove = remove.clone(); move |_| remove() },
                     onkeydown: { let remove = remove.clone(); move |event| {
-                        if !disabled && matches!(event.key(), Key::Backspace | Key::Delete) { event.prevent_default(); remove(); }
+                        if !disabled && matches!(event.key(), Key::Named(NamedKey::Backspace) | Key::Named(NamedKey::Delete)) { event.prevent_default(); remove(); }
                     }},
                     super::ripple::Ripple {}
                     Icon { icon: icons::CLOSE, class: "m3-chip__remove-icon" }

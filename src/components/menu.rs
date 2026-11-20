@@ -2,6 +2,7 @@ use super::action_control::ActionControl;
 use super::motion::next_id;
 use super::{ButtonVariant, Icon, IconData};
 use crate::icons;
+use dioxus::html::NamedKey;
 use dioxus::prelude::*;
 
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
@@ -115,6 +116,10 @@ pub fn Menu(
             if keep_open {
                 return;
             }
+            if !cfg!(target_arch = "wasm32") {
+                onopenchange.call(false);
+                return;
+            }
             let script = format!("window.__m3Menus?.[{id:?}]?.requestClose(true);");
             spawn(async move {
                 let _ = document::eval(&script).await;
@@ -122,7 +127,7 @@ pub fn Menu(
         }
     };
     rsx! { MenuPanel { root_id: id, entries, path: vec![], anchor_id, open, color, variant,
-        aria_label, initial_focus_last, position, onselect: selection,
+        aria_label, initial_focus_last, position, onopenchange, onselect: selection,
     }}
 }
 
@@ -138,14 +143,18 @@ fn MenuPanel(
     aria_label: Option<String>,
     initial_focus_last: bool,
     position: Option<(f64, f64)>,
+    onopenchange: EventHandler<bool>,
     onselect: EventHandler<MenuSelection>,
 ) -> Element {
+    let is_root = path.is_empty();
+    if !cfg!(target_arch = "wasm32") && !(is_root && open) {
+        return rsx! {};
+    }
     let suffix = path
         .iter()
         .map(usize::to_string)
         .collect::<Vec<_>>()
         .join("-");
-    let is_root = path.is_empty();
     let panel_id = if is_root {
         root_id.clone()
     } else {
@@ -166,9 +175,18 @@ fn MenuPanel(
     } else {
         "expressive"
     };
+    let native_mode = !cfg!(target_arch = "wasm32");
+    let native_class = if native_mode { " m3-menu-panel--native" } else { "" };
     rsx! {
-        div { id: "{panel_id}", class: "m3-menu-panel m3-menu-panel--{color_class} m3-menu-panel--{variant_class}",
-            role: "menu", aria_label, "popover": "manual", tabindex: "-1",
+        if native_mode && is_root && open {
+            div {
+                class: "m3-menu-backdrop",
+                aria_hidden: "true",
+                onclick: move |_| onopenchange.call(false),
+            }
+        }
+        div { id: "{panel_id}", class: "m3-menu-panel m3-menu-panel--{color_class} m3-menu-panel--{variant_class}{native_class}",
+            role: "menu", aria_label, "popover": if native_mode { None } else { Some("manual") }, tabindex: "-1",
             "data-menu-root": "{root_id}", "data-menu-parent": parent,
             "data-anchor": anchor_id, "data-open": is_root && open,
             "data-initial-last": initial_focus_last,
@@ -221,7 +239,7 @@ fn MenuPanel(
                             }
                             if has_submenu { MenuPanel { root_id: root_id.clone(), entries: item.submenu,
                                 path: entry_path, anchor_id: String::new(), open: false, color, variant,
-                                aria_label: Some(item.label.clone()), initial_focus_last: false, position: None, onselect,
+                                aria_label: Some(item.label.clone()), initial_focus_last: false, position: None, onopenchange, onselect,
                             } }
                         }
                     }
@@ -252,17 +270,19 @@ pub fn DropdownMenu(
     let menu_id = format!("{id}-menu");
     let mut last = use_signal(|| false);
     rsx! {
-        ActionControl { id: trigger_id.clone(), label: label.clone(), icon, variant: button_variant, disabled,
-            expanded: Some(open), controls: Some(menu_id.clone()),
-            onclick: move |_| { last.set(false); onopenchange.call(!open); },
-            onkeydown: move |e: KeyboardEvent| {
-                if !disabled && matches!(e.key(), Key::ArrowDown | Key::ArrowUp) {
-                    e.prevent_default(); last.set(e.key() == Key::ArrowUp); onopenchange.call(true);
-                }
-            },
-        }
-        Menu { id: Some(menu_id.clone()), anchor_id: trigger_id.clone(), entries, open,
-            aria_label: Some(label.clone()), color, variant, initial_focus_last: last(), onopenchange, onselect,
+        div { class: "m3-dropdown-anchor", "data-open": open,
+            ActionControl { id: trigger_id.clone(), label: label.clone(), icon, variant: button_variant, disabled,
+                expanded: Some(open), controls: Some(menu_id.clone()),
+                onclick: move |_| { last.set(false); onopenchange.call(!open); },
+                onkeydown: move |e: KeyboardEvent| {
+                    if !disabled && matches!(e.key(), Key::Named(NamedKey::ArrowDown) | Key::Named(NamedKey::ArrowUp)) {
+                        e.prevent_default(); last.set(e.key() == Key::Named(NamedKey::ArrowUp)); onopenchange.call(true);
+                    }
+                },
+            }
+            Menu { id: Some(menu_id.clone()), anchor_id: trigger_id.clone(), entries, open,
+                aria_label: Some(label.clone()), color, variant, initial_focus_last: last(), onopenchange, onselect,
+            }
         }
     }
 }
@@ -287,7 +307,7 @@ pub fn ContextMenu(
             aria_haspopup: "menu", aria_expanded: open, aria_controls: menu_id.clone(),
             oncontextmenu: move |e| { e.prevent_default(); let p = e.client_coordinates(); point.set(Some((p.x,p.y))); onopenchange.call(true); },
             onkeydown: { let id = id.clone(); move |e: KeyboardEvent| {
-                if e.key() == Key::ContextMenu || (e.key() == Key::F10 && e.modifiers().shift()) {
+                if e.key() == Key::Named(NamedKey::ContextMenu) || (e.key() == Key::Named(NamedKey::F10) && e.modifiers().shift()) {
                     e.prevent_default();
                     let script = format!("const r=document.getElementById({id:?}).getBoundingClientRect(); dioxus.send([r.left+12,r.top+12]);");
                     spawn(async move { let mut eval = document::eval(&script); if let Ok(p) = eval.recv::<(f64,f64)>().await { point.set(Some(p)); onopenchange.call(true); } });

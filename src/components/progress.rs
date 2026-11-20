@@ -22,6 +22,19 @@ pub fn LinearProgress(
         Some(v) => {
             let percent = format!("{:.2}%", v * 100.0);
             let now = format!("{:.2}", v);
+            let use_svg_wave = wavy && !cfg!(target_arch = "wasm32");
+            let active_class = if use_svg_wave {
+                "m3-linear__active m3-linear__active--svg-wave"
+            } else {
+                "m3-linear__active"
+            };
+            let stroke_w = if thick { 8.0 } else { 4.0 };
+            let wave_h = stroke_w + 6.0;
+            let wave_path = if use_svg_wave {
+                Some(linear_wave_path(1200, 40.0, 3.0, wave_h / 2.0))
+            } else {
+                None
+            };
             rsx! {
                 div {
                     class: "{class} m3-linear--determinate",
@@ -30,8 +43,26 @@ pub fn LinearProgress(
                     "aria-valuemin": "0",
                     "aria-valuemax": "1",
                     "aria-valuenow": now,
-                    div { class: "m3-linear__active", style: "width: {percent};",
-                        div { class: "m3-linear__wave" }
+                    div { class: "{active_class}", style: "width: {percent};",
+                        if let Some(d) = wave_path {
+                            svg {
+                                class: "m3-linear__svg-wave",
+                                width: "1200",
+                                height: "{wave_h}",
+                                view_box: "0 0 1200 {wave_h}",
+                                fill: "none",
+                                path {
+                                    d: "{d}",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    stroke_width: "{stroke_w}",
+                                    stroke_linecap: "round",
+                                    stroke_linejoin: "round",
+                                }
+                            }
+                        } else {
+                            div { class: "m3-linear__wave" }
+                        }
                     }
                     div { class: "m3-linear__track" }
                     if v < 1.0 {
@@ -207,11 +238,14 @@ pub fn CircularProgress(
                         stroke_linecap: "round",
                     }
                 }
-                if track_visible && !indeterminate {
+            }
+            if track_visible && !indeterminate {
+                svg { class: "m3-circular__svg m3-circular__track-svg", view_box: "{vb}",
                     path {
                         class: "m3-circular__track-arc",
                         d: track,
                         fill: "none",
+                        stroke: "currentColor",
                         stroke_width: "{geo.stroke}",
                         stroke_linecap: "round",
                     }
@@ -220,6 +254,23 @@ pub fn CircularProgress(
             }
         }
     }
+}
+
+/// Generates a horizontal sine-wave SVG path spanning `width` px for native renderers
+/// where CSS `mask-repeat: repeat-x` on SVG data URLs is not tiled.
+fn linear_wave_path(width: usize, wavelength: f64, amplitude: f64, cy: f64) -> String {
+    let step = 4usize;
+    let mut d = String::with_capacity(width * 3);
+    for x in (0..=width).step_by(step) {
+        let xf = x as f64;
+        let y = cy + amplitude * (std::f64::consts::TAU * xf / wavelength).sin();
+        if x == 0 {
+            d.push_str(&format!("M{xf:.1},{y:.2}"));
+        } else {
+            d.push_str(&format!(" L{xf:.1},{y:.2}"));
+        }
+    }
+    d
 }
 
 /// Geometry of a circular indicator, in its own SVG units. The ring radius is

@@ -1,5 +1,6 @@
 /* Basic and full-screen geometry from official M3 specs; native modal behavior. */
-.m3-dialog { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: transparent; overflow: hidden; color: var(--md-sys-color-on-surface); }
+.m3-dialog { position: fixed; inset: 0; z-index: 100; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: transparent; overflow: hidden; color: var(--md-sys-color-on-surface); }
+.m3-dialog:not([open]) { display: none; }
 .m3-dialog[open] { display: flex; align-items: center; justify-content: center; }
 .m3-dialog::backdrop { background: transparent; }
 .m3-dialog__scrim { position: absolute; inset: 0; background: color-mix(in srgb, var(--md-sys-color-scrim, #000) 32%, transparent); pointer-events: auto; }

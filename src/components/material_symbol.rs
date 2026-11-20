@@ -44,10 +44,10 @@ pub fn MaterialSymbol(
     );
     rsx! {for reference in [href] {svg {
         key:"{reference}",
-        class:"m3-icon {class}",view_box:"0 -960 960 960",
+        class:"m3-icon {class}",view_box:"0 -960 960 960",fill:"currentColor",
         role:aria_label.as_ref().map(|_|"img"),"aria-hidden":if aria_label.is_none(){Some("true")}else{None},"aria-label":aria_label.clone(),
         "data-icon":name.clone(),"data-symbol-style":style.module(),"data-symbol-filled":filled,"data-symbol-valid":valid,
         // Key the entire SVG in a dynamic list to recreate its external use tree.
-        if valid {r#use {href:reference,x:"0",y:"-960",width:"960",height:"960"}} else {path {d:crate::icons::HELP.path}}
+        if valid {r#use {href:reference,x:"0",y:"-960",width:"960",height:"960",fill:"currentColor"}} else {path {d:crate::icons::HELP.path,fill:"currentColor"}}
     }}}
 }

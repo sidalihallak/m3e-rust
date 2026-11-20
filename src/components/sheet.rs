@@ -79,7 +79,13 @@ pub fn Sheet(
     let width = width.clamp(256, 400);
     let described = description.as_ref().map(|_| format!("{id}-description"));
     let content = rsx! {
-        if modal {div {class:"m3-sheet__scrim",aria_hidden:"true"}}
+        if modal {
+            div {
+                class: "m3-sheet__scrim",
+                aria_hidden: "true",
+                onclick: move |_| onopenchange.call(false),
+            }
+        }
         div {class:"m3-sheet__surface",
             if bottom&&show_handle {button {r#type:"button",class:"m3-sheet__handle","data-sheet-handle":"true",
                 aria_label:if expanded {"Collapse sheet"}else{"Expand sheet"},aria_expanded:expanded,
@@ -96,7 +102,7 @@ pub fn Sheet(
         }
     };
     if modal {
-        rsx! {dialog {id:"{id}",class:"m3-sheet {class}","data-side":side.name(),"data-modal":"true","data-open":open,"data-expanded":expanded,"data-draggable":draggable,"data-detached":detached,
+        rsx! {dialog {id:"{id}",class:"m3-sheet {class}",open:!cfg!(target_arch = "wasm32") && open,"data-side":side.name(),"data-modal":"true","data-open":open,"data-expanded":expanded,"data-draggable":draggable,"data-detached":detached,
             style:"--m3-sheet-width:{width}px",aria_modal:"true",aria_labelledby:"{id}-title",aria_describedby:described,{content}
         }}
     } else {

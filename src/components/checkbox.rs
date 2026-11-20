@@ -75,15 +75,30 @@ pub fn Checkbox(
             super::ripple::Ripple {}
             span { class: "m3-checkbox__state", aria_hidden: "true" }
             span { class: "m3-checkbox__box", aria_hidden: "true",
-                svg { class: "m3-checkbox__mark", view_box: "0 0 18 18",
-                    path {
-                        class: "m3-checkbox__check",
-                        d: "M3.5 9.2 7.2 12.8 14.6 5.4",
-                        "pathLength": "1",
+                svg {
+                    class: "m3-checkbox__mark",
+                    view_box: "0 0 18 18",
+                    fill: "none",
+                    if cfg!(target_arch = "wasm32") || (checked && !indeterminate) {
+                        path {
+                            class: "m3-checkbox__check",
+                            d: "M3.5 9.2 7.2 12.8 14.6 5.4",
+                            fill: "none",
+                            stroke: "currentColor",
+                            stroke_width: "2",
+                            stroke_linecap: "square",
+                            "pathLength": "1",
+                        }
                     }
-                    path {
-                        class: "m3-checkbox__dash",
-                        d: "M4 9h10",
+                    if cfg!(target_arch = "wasm32") || indeterminate {
+                        path {
+                            class: "m3-checkbox__dash",
+                            d: "M4 9h10",
+                            fill: "none",
+                            stroke: "currentColor",
+                            stroke_width: "2",
+                            stroke_linecap: "square",
+                        }
                     }
                 }
             }

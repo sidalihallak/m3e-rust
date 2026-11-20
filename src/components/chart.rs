@@ -1,4 +1,5 @@
 use super::motion::next_id;
+use dioxus::html::NamedKey;
 use dioxus::prelude::*;
 
 #[derive(Clone, Copy, Default, PartialEq, Eq)]
@@ -206,7 +207,7 @@ pub fn Chart(
         .unwrap_or(0.0);
     let stride = ((count as f64 / ((plotw / 55.0).floor().max(1.0))).ceil() as usize).max(1);
     rsx! {ChartContainer{label:label.clone(),description,class,
-        div{id:"{id}",class:"m3-chart__interactive",onkeydown:move|e|{if e.key()==Key::Escape{dismissed.set(true);}},
+        div{id:"{id}",class:"m3-chart__interactive",onkeydown:move|e|{if e.key()==Key::Named(NamedKey::Escape){dismissed.set(true);}},
             div{class:"m3-chart__plot",onpointerleave:move |_|hover.set(None),
                 if !valid||series.is_empty()||points.is_empty(){p{class:"m3-chart__empty",role:"status","No chart data."}}
                 else if invalid{p{class:"m3-chart__empty",role:"status","Donut values must be non-negative."}}

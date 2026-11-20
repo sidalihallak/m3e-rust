@@ -49,5 +49,7 @@ pub(crate) fn next_id(prefix: &str) -> String {
     // The component's scope number, not a process-wide counter: a server render
     // and the browser's hydration build the same tree, so the id matches on
     // both sides. Each component asks once (from `use_hook`), with its own prefix.
-    format!("{prefix}-{}", dioxus::core::current_scope_id().0)
+    let raw = format!("{:?}", dioxus::core::current_scope_id());
+    let digits: String = raw.chars().filter(|c| c.is_ascii_digit()).collect();
+    format!("{prefix}-{digits}")
 }
